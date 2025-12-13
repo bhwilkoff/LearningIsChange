@@ -1393,7 +1393,7 @@
             return div.innerHTML;
         }
 
-        function generatePost() {
+        async function generatePost() {
             const title = document.getElementById('postTitle').value.trim();
             const date = document.getElementById('postDate').value;
             const slug = getSlug();
@@ -1422,6 +1422,18 @@
             if (!title || !date) {
                 showStatus('Please fill in the title and date', 'error');
                 return;
+            }
+
+            // Check if we have GitHub credentials for fetching existing archives
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const hasGitHub = token && repo;
+            let owner, repoName;
+            if (hasGitHub) {
+                [owner, repoName] = repo.split('/');
+                console.log(`GitHub credentials found: ${owner}/${repoName}`);
+            } else {
+                console.log('No GitHub credentials - will create new archive pages without checking for existing');
             }
 
             const [year, month, day] = date.split('-');
@@ -1498,19 +1510,48 @@
                 const categoryPath = categoryParent 
                     ? `category/${categoryParent}/${categorySlug}/index.html`
                     : `category/${categorySlug}/index.html`;
+                
+                // Try to fetch existing category archive from GitHub
+                let existingCategoryHtml = null;
+                if (hasGitHub) {
+                    try {
+                        console.log(`Fetching existing category archive: ${categoryPath}`);
+                        showStatus('Fetching existing category archive...', 'info');
+                        existingCategoryHtml = await fetchFileFromGithub(owner, repoName, categoryPath, token);
+                        console.log(`Category archive fetch result: ${existingCategoryHtml ? 'Found existing' : 'Not found, will create new'}`);
+                    } catch (e) {
+                        console.error('Error fetching category archive:', e);
+                    }
+                }
+                
                 const categoryPage = createCategoryArchivePage({
-                    categorySlug, categoryParent, articleBlock
+                    categorySlug, categoryParent, articleBlock, existingHtml: existingCategoryHtml
                 });
                 generatedFiles[categoryPath] = categoryPage;
             }
 
             // Generate tag archive pages
-            tagSlugs.forEach(tagSlug => {
+            for (const tagSlug of tagSlugs) {
+                const tagPath = `tag/${tagSlug}/index.html`;
+                
+                // Try to fetch existing tag archive from GitHub
+                let existingTagHtml = null;
+                if (hasGitHub) {
+                    try {
+                        console.log(`Fetching existing tag archive: ${tagPath}`);
+                        showStatus(`Fetching existing tag archive for "${tagSlug}"...`, 'info');
+                        existingTagHtml = await fetchFileFromGithub(owner, repoName, tagPath, token);
+                        console.log(`Tag archive fetch result for "${tagSlug}": ${existingTagHtml ? 'Found existing' : 'Not found, will create new'}`);
+                    } catch (e) {
+                        console.error(`Error fetching tag archive for "${tagSlug}":`, e);
+                    }
+                }
+                
                 const tagPage = createTagArchivePage({
-                    tagSlug, articleBlock
+                    tagSlug, articleBlock, existingHtml: existingTagHtml
                 });
-                generatedFiles[`tag/${tagSlug}/index.html`] = tagPage;
-            });
+                generatedFiles[tagPath] = tagPage;
+            }
 
             // Add images
             uploadedImages.forEach(img => {
@@ -1880,7 +1921,16 @@ ${articleBlock}
         }
 
         // Create category archive page
-        function createCategoryArchivePage({ categorySlug, categoryParent, articleBlock }) {
+        function createCategoryArchivePage({ categorySlug, categoryParent, articleBlock, existingHtml }) {
+            // If we have an existing category archive, insert into it
+            console.log(`createCategoryArchivePage: existingHtml is ${existingHtml ? 'present (' + existingHtml.length + ' chars)' : 'null'}`);
+            if (existingHtml) {
+                console.log('Inserting article into existing category archive');
+                return insertArticleIntoPage(existingHtml, articleBlock);
+            }
+
+            console.log('Creating new category archive page');
+            // Otherwise create a new category archive page
             let head = siteComponents.head || '';
             head = head.replace(/<title>[^<]*<\/title>/, `<title>${categorySlug} – Learning is Change</title>`);
 
@@ -1937,7 +1987,16 @@ ${articleBlock}
         }
 
         // Create tag archive page
-        function createTagArchivePage({ tagSlug, articleBlock }) {
+        function createTagArchivePage({ tagSlug, articleBlock, existingHtml }) {
+            // If we have an existing tag archive, insert into it
+            console.log(`createTagArchivePage for "${tagSlug}": existingHtml is ${existingHtml ? 'present (' + existingHtml.length + ' chars)' : 'null'}`);
+            if (existingHtml) {
+                console.log('Inserting article into existing tag archive');
+                return insertArticleIntoPage(existingHtml, articleBlock);
+            }
+
+            console.log('Creating new tag archive page');
+            // Otherwise create a new tag archive page
             let head = siteComponents.head || '';
             head = head.replace(/<title>[^<]*<\/title>/, `<title>${tagSlug} – Learning is Change</title>`);
 
