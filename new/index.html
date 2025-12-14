@@ -2176,47 +2176,62 @@ ${articleBlock}
             return item;
         }
         
-        // Insert a new RSS item into an existing feed
+        // Insert a new RSS item into an existing feed (memory-efficient version)
         function insertItemIntoRssFeed(feedXml, newItem, maxItems = null) {
             if (!feedXml) {
                 // Create a new feed if none exists
                 return createNewRssFeed(newItem);
             }
             
-            // Update lastBuildDate
-            const newBuildDate = formatRFC822Date(new Date());
-            feedXml = feedXml.replace(
-                /<lastBuildDate>[^<]*<\/lastBuildDate>/,
-                `<lastBuildDate>${newBuildDate}</lastBuildDate>`
-            );
+            // Update lastBuildDate using indexOf instead of regex (more memory efficient)
+            const lastBuildStart = feedXml.indexOf('<lastBuildDate>');
+            const lastBuildEnd = feedXml.indexOf('</lastBuildDate>');
+            if (lastBuildStart !== -1 && lastBuildEnd !== -1) {
+                const newBuildDate = formatRFC822Date(new Date());
+                feedXml = feedXml.substring(0, lastBuildStart) + 
+                          '<lastBuildDate>' + newBuildDate + '</lastBuildDate>' + 
+                          feedXml.substring(lastBuildEnd + '</lastBuildDate>'.length);
+            }
             
-            // Find the position after the opening channel elements and before the first item
-            // We want to insert right after </generator> or before the first <item>
-            const firstItemMatch = feedXml.match(/<item>/);
-            if (firstItemMatch) {
-                const insertPos = firstItemMatch.index;
-                feedXml = feedXml.slice(0, insertPos) + newItem + '\n' + feedXml.slice(insertPos);
+            // Find the position of the first <item> tag using indexOf (not regex)
+            const firstItemPos = feedXml.indexOf('<item>');
+            if (firstItemPos !== -1) {
+                // Insert new item before the first existing item
+                feedXml = feedXml.substring(0, firstItemPos) + newItem + '\n' + feedXml.substring(firstItemPos);
             } else {
                 // No existing items, insert before </channel>
-                feedXml = feedXml.replace('</channel>', newItem + '\n  </channel>');
+                const channelEndPos = feedXml.indexOf('</channel>');
+                if (channelEndPos !== -1) {
+                    feedXml = feedXml.substring(0, channelEndPos) + newItem + '\n  ' + feedXml.substring(channelEndPos);
+                }
             }
             
             // If maxItems is specified, remove excess items from the end
-            if (maxItems) {
-                const itemMatches = feedXml.match(/<item>[\s\S]*?<\/item>/g);
-                if (itemMatches && itemMatches.length > maxItems) {
-                    // Remove items from the end
-                    const excess = itemMatches.length - maxItems;
+            // Only do this for small feeds (main feed) to avoid memory issues
+            if (maxItems && maxItems <= 100) {
+                // Count items by counting occurrences of <item> (simple, memory-efficient)
+                let itemCount = 0;
+                let pos = 0;
+                while ((pos = feedXml.indexOf('<item>', pos)) !== -1) {
+                    itemCount++;
+                    pos += 6; // length of '<item>'
+                }
+                
+                // Remove excess items from the end if needed
+                if (itemCount > maxItems) {
+                    const excess = itemCount - maxItems;
                     for (let i = 0; i < excess; i++) {
-                        const lastItemIndex = feedXml.lastIndexOf('<item>');
-                        const lastItemEndIndex = feedXml.lastIndexOf('</item>') + '</item>'.length;
-                        if (lastItemIndex !== -1) {
-                            // Also remove any whitespace/newline before the item
-                            let startIndex = lastItemIndex;
-                            while (startIndex > 0 && /\s/.test(feedXml[startIndex - 1])) {
-                                startIndex--;
+                        // Find the last <item>...</item> block
+                        const lastItemStart = feedXml.lastIndexOf('<item>');
+                        const lastItemEnd = feedXml.lastIndexOf('</item>');
+                        if (lastItemStart !== -1 && lastItemEnd !== -1) {
+                            // Find the start of whitespace before the item
+                            let startPos = lastItemStart;
+                            while (startPos > 0 && (feedXml[startPos - 1] === ' ' || feedXml[startPos - 1] === '\t' || feedXml[startPos - 1] === '\n')) {
+                                startPos--;
                             }
-                            feedXml = feedXml.slice(0, startIndex) + feedXml.slice(lastItemEndIndex);
+                            // Remove the item
+                            feedXml = feedXml.substring(0, startPos) + feedXml.substring(lastItemEnd + '</item>'.length);
                         }
                     }
                 }
