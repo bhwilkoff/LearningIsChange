@@ -2889,6 +2889,22 @@ ${firstItem}
     }
     window.testGithubConnection = testGithubConnection;
 
+    // Helper function to convert large strings to base64 without stack overflow
+    function stringToBase64(str) {
+        // Use TextEncoder to get UTF-8 bytes
+        const encoder = new TextEncoder();
+        const bytes = encoder.encode(str);
+        
+        // Convert bytes to binary string
+        // Build array of characters then join (faster than string concatenation)
+        const chars = new Array(bytes.length);
+        for (let i = 0; i < bytes.length; i++) {
+            chars[i] = String.fromCharCode(bytes[i]);
+        }
+        
+        return btoa(chars.join(''));
+    }
+
     async function publishToGithub() {
         const token = document.getElementById('githubToken').value.trim();
         const repo = document.getElementById('githubRepo').value.trim();
@@ -2992,10 +3008,9 @@ ${firstItem}
                 // For data URLs (images), extract just the base64 part
                 base64Content = content.split(',')[1];
             } else if (typeof content === 'string') {
-                // For text content (HTML files), encode to base64
-                const encoder = new TextEncoder();
-                const bytes = encoder.encode(content);
-                base64Content = btoa(String.fromCharCode(...bytes));
+                // For text content (HTML/XML files), encode to base64 in chunks
+                // to avoid stack overflow on large files
+                base64Content = stringToBase64(content);
             } else {
                 base64Content = content;
             }
