@@ -12,12 +12,24 @@
     <atom:link href="https://learningischange.com/feed/" rel="self" type="application/rss+xml" />
     <link>https://learningischange.com</link>
     <description>Learning is Change - Thoughts on education, social justice, and making a difference.</description>
-    <lastBuildDate>Sun, 14 Dec 2025 17:13:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Dec 2025 17:59:21 +0000</lastBuildDate>
     <language>en-US</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <generator>Learning is Change RSS Scanner</generator>
-    <item>
+        <item>
+      <title>A New Way To Blog</title>
+      <link>https://learningischange.com/2025/12/14/a-new-way-to-blog/</link>
+      <pubDate>Sun, 14 Dec 2025 12:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[Ben]]></dc:creator>
+      <guid isPermaLink="true">https://learningischange.com/2025/12/14/a-new-way-to-blog/</guid>
+      <category><![CDATA[blog-2]]></category>
+      <category><![CDATA[writing]]></category>
+      <category><![CDATA[wordpress]]></category>
+      <description><![CDATA[I have fully given up on running my own server. After 20 years of "owning" my own space online, I have finally moved everything over to running it on Github as static files. This is both far less complicated and far more interesting for this moment in time. I want to be able to manipulate all of my ...]]></description>
+      <content:encoded><![CDATA[<p>I have fully given up on running my own server. After 20 years of "owning" my own space online, I have finally moved everything over to running it on Github as static files. This is both far less complicated and far more interesting for this moment in time. I want to be able to manipulate all of my content via API. I want to be able to build things on top of it and pull it a whole bunch of different ways without needing Wordpress' permission to do so.</p><p><br></p><p>However, I did need to make sure that the full 20 years of Learning is Change was preserved, and for the most part, it is. I still need to figure out RSS feeds if I want to keep on making those work, but for now I'm pretty satisfied with the fact that after about a day of tinkering with Claude.AI, I was able to re-write the entire function of posting new content and updating all of the category, tag, yearly, and monthly archive pages while preserving silly things like breadcrumbs and navigation. This is the first post in the new format, and I think it looks rather nice.&nbsp;</p><p><br></p><p>I also can upload pictures and do fancy formatting. Because I have relied upon Wordpress for so many years, I really haven't thought about just what I could make this blog and my own writing space be. But, now that they are just dumb HTML files, I can do pretty much anything I want. Here is to the future of<a href="about:blank" rel="noopener noreferrer" target="_blank" style="color: rgb(0, 133, 178);">&nbsp;Learningischange.com</a>. May it become exactly what it always should be, a reflection of who I am in this moment in time. In November 2025, I wrote over 50,000 words. (Hint: I'm The Laserdisc Leftist on this list.)</p><p><br></p><p><img src="/wp-content/uploads/2025/12/CleanShot 2025-12-02 at 13.59.56@2x.png"></p>]]></content:encoded>
+    </item>
+<item>
       <title>A Blogging Device</title>
       <link>https://learningischange.com/2025/05/12/a-blogging-device/</link>
       <pubDate>Mon, 12 May 2025 12:00:00 +0000</pubDate>
@@ -5007,137 +5019,6 @@ I'm testing out what works best, to see where my "work wo...]]></description>
 				<span id="sharing-bluesky-15122" hidden="">Click to share on Bluesky (Opens in new window)</span>
 				<span>Bluesky</span>
 			</a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-113784134-15122-6937108543b85" data-src="https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=15122&amp;origin=learningischange.com&amp;obj_id=113784134-15122-6937108543b85" data-name="like-post-frame-113784134-15122-6937108543b85" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
-<div id="jp-relatedposts" class="jp-relatedposts">
-	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
-</div>											]]></content:encoded>
-    </item>
-    <item>
-      <title>Demo Time: Wonda VR for Creating robust 360 degree video experiences</title>
-      <link>https://learningischange.com/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/</link>
-      <pubDate>Tue, 18 Jun 2019 12:00:00 +0000</pubDate>
-      <dc:creator><![CDATA[Ben]]></dc:creator>
-      <guid isPermaLink="true">https://learningischange.com/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/</guid>
-      <category><![CDATA[blog-2]]></category>
-      <category><![CDATA[amc]]></category>
-      <category><![CDATA[anschutz]]></category>
-      <category><![CDATA[virtual-reality]]></category>
-      <category><![CDATA[virtual-reality-committee]]></category>
-      <description><![CDATA[Wonda VR Demo
-“Next-Gen Social Learning XR Platform” – Demo from Maria Gemayel from Wonda VR
-
-
-We have a philosophy of democratizing immersive learning.
-
-
-VR is no longer a technology that is unknown or hard to come by. 
-
-
-￼
-However, the creation tools are still really hard!
-Use Cases:
-
-Language Lea...]]></description>
-      <content:encoded><![CDATA[
-						<h1 id="toc_0"><a href="https://www.wondavr.com/">Wonda VR Demo</a></h1>
-<p>“Next-Gen Social Learning XR Platform” – Demo from <a href="https://www.wondavr.com/team_member/maria-gemayel/">Maria Gemayel</a> from Wonda VR</p>
-<ul>
-<li>
-<p>We have a philosophy of democratizing immersive learning.</p>
-</li>
-<li>
-<p>VR is no longer a technology that is unknown or hard to come by. </p>
-</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608895852805.png?w=1225" alt="">￼</p>
-<h3 id="toc_1">However, the creation tools are still really hard!</h3>
-<h2 id="toc_2">Use Cases:</h2>
-<ul>
-<li>Language Learning “Immersion Programs”</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608896455500.png?w=1225" alt="">￼</p>
-<ul>
-<li>Creative Writing
-<ul>
-<li>Capturing videos and using them to present multiple environments for storytelling</li>
-</ul>
-</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608896940569.jpg?w=1225" alt="">￼</p>
-<ul>
-<li>Leadership Training – Hearing the “internal monologue” of individual participants within a meeting</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608897354337.png?w=1225" alt="">￼</p>
-<ul>
-<li>Campus Tours</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901074316.png?w=1225" alt="">￼</p>
-<ul>
-<li>Medical Training – Branching for how to interact with patients or other roles</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901202097.png?w=1225" alt="">￼</p>
-<h2 id="toc_3">Creation Tools:</h2>
-<ul>
-<li><a href="https://youtu.be/nMaeYPWvkSo">Web-based platform</a></li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901496463.png?w=1225" alt="">￼</p>
-<ul>
-<li>Collaboration features within the web-based environment</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901652034.png?w=1225" alt="">￼</p>
-<ul>
-<li>You can also see “results” for who is watching/experiencing the sessions</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929146804.png?w=1225" alt="">￼</p>
-<ul>
-<li>Multiple viewers can see the same experience at the same time</li>
-</ul>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929370427.png?w=1225" alt="">￼</p>
-<h2 id="toc_4">Platform Availability</h2>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929486414.png?w=1225" alt="">￼</p>
-<h2 id="toc_5">Roadmap for Wonda VR</h2>
-<p><img data-recalc-dims="1" decoding="async" src="https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929642876.png?w=1225" alt="">￼</p>
-<h4 id="toc_6">I’m super intrigued by this platform, and I am excited to play around with it. I wonder how the collaboration tools work. The branching scenarios could be huge for building rapidly and creating more robust experiences.</h4>
-<p>Special thanks to <a href="https://twitter.com/maria_gemayel">@maria_gemayel</a> for conducting this demo and for helping to share the work that Wonda VR is doing to democratize Virtual Reality for students and faculty.</p>
-<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="sharing-email-15045" class="share-email sd-button share-icon no-text" href="mailto:?subject=%5BShared%20Post%5D%20Demo%20Time%3A%20Wonda%20VR%20for%20Creating%20robust%20360%20degree%20video%20experiences&amp;body=%2F2019%2F06%2F18%2Fdemo-time-wonda-vr-creating-robust-360-degree-video-experiences-3%2F&amp;share=email" target="_blank" aria-labelledby="sharing-email-15045" data-email-share-error-title="Do you have email set up?" data-email-share-error-text="If you're having problems sharing via email, you might not have email set up for your browser. You may need to create a new email yourself." data-email-share-nonce="8f0bf27a2f" data-email-share-track-url="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=email">
-				<span id="sharing-email-15045" hidden="">Click to email a link to a friend (Opens in new window)</span>
-				<span>Email</span>
-			</a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-15045" class="share-facebook sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=facebook" target="_blank" aria-labelledby="sharing-facebook-15045">
-				<span id="sharing-facebook-15045" hidden="">Click to share on Facebook (Opens in new window)</span>
-				<span>Facebook</span>
-			</a></li><li class="share-pocket"><a rel="nofollow noopener noreferrer" data-shared="sharing-pocket-15045" class="share-pocket sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=pocket" target="_blank" aria-labelledby="sharing-pocket-15045">
-				<span id="sharing-pocket-15045" hidden="">Click to share on Pocket (Opens in new window)</span>
-				<span>Pocket</span>
-			</a></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="sharing-print-15045" class="share-print sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/#print?share=print" target="_blank" aria-labelledby="sharing-print-15045">
-				<span id="sharing-print-15045" hidden="">Click to print (Opens in new window)</span>
-				<span>Print</span>
-			</a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-15045" class="share-linkedin sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=linkedin" target="_blank" aria-labelledby="sharing-linkedin-15045">
-				<span id="sharing-linkedin-15045" hidden="">Click to share on LinkedIn (Opens in new window)</span>
-				<span>LinkedIn</span>
-			</a></li><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="sharing-reddit-15045" class="share-reddit sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=reddit" target="_blank" aria-labelledby="sharing-reddit-15045">
-				<span id="sharing-reddit-15045" hidden="">Click to share on Reddit (Opens in new window)</span>
-				<span>Reddit</span>
-			</a></li><li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-15045" class="share-pinterest sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=pinterest" target="_blank" aria-labelledby="sharing-pinterest-15045">
-				<span id="sharing-pinterest-15045" hidden="">Click to share on Pinterest (Opens in new window)</span>
-				<span>Pinterest</span>
-			</a></li><li class="share-tumblr"><a rel="nofollow noopener noreferrer" data-shared="sharing-tumblr-15045" class="share-tumblr sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=tumblr" target="_blank" aria-labelledby="sharing-tumblr-15045">
-				<span id="sharing-tumblr-15045" hidden="">Click to share on Tumblr (Opens in new window)</span>
-				<span>Tumblr</span>
-			</a></li><li class="share-telegram"><a rel="nofollow noopener noreferrer" data-shared="sharing-telegram-15045" class="share-telegram sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=telegram" target="_blank" aria-labelledby="sharing-telegram-15045">
-				<span id="sharing-telegram-15045" hidden="">Click to share on Telegram (Opens in new window)</span>
-				<span>Telegram</span>
-			</a></li><li class="share-threads"><a rel="nofollow noopener noreferrer" data-shared="sharing-threads-15045" class="share-threads sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=threads" target="_blank" aria-labelledby="sharing-threads-15045">
-				<span id="sharing-threads-15045" hidden="">Click to share on Threads (Opens in new window)</span>
-				<span>Threads</span>
-			</a></li><li class="share-jetpack-whatsapp"><a rel="nofollow noopener noreferrer" data-shared="sharing-whatsapp-15045" class="share-jetpack-whatsapp sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=jetpack-whatsapp" target="_blank" aria-labelledby="sharing-whatsapp-15045">
-				<span id="sharing-whatsapp-15045" hidden="">Click to share on WhatsApp (Opens in new window)</span>
-				<span>WhatsApp</span>
-			</a></li><li class="share-mastodon"><a rel="nofollow noopener noreferrer" data-shared="sharing-mastodon-15045" class="share-mastodon sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=mastodon" target="_blank" aria-labelledby="sharing-mastodon-15045">
-				<span id="sharing-mastodon-15045" hidden="">Click to share on Mastodon (Opens in new window)</span>
-				<span>Mastodon</span>
-			</a></li><li class="share-bluesky"><a rel="nofollow noopener noreferrer" data-shared="sharing-bluesky-15045" class="share-bluesky sd-button share-icon no-text" href="/2019/06/18/demo-time-wonda-vr-creating-robust-360-degree-video-experiences-3/?share=bluesky" target="_blank" aria-labelledby="sharing-bluesky-15045">
-				<span id="sharing-bluesky-15045" hidden="">Click to share on Bluesky (Opens in new window)</span>
-				<span>Bluesky</span>
-			</a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-113784134-15045-69371085bd6c1" data-src="https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=15045&amp;origin=learningischange.com&amp;obj_id=113784134-15045-69371085bd6c1" data-name="like-post-frame-113784134-15045-69371085bd6c1" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
 <div id="jp-relatedposts" class="jp-relatedposts">
 	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
 </div>											]]></content:encoded>
