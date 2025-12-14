@@ -956,6 +956,10 @@
             <input type="checkbox" id="updateYearlyArchive" checked>
             <label for="updateYearlyArchive" style="margin: 0; font-weight: normal;">Create/update yearly archive page (/YYYY/)</label>
         </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="updateRssFeeds" checked>
+            <label for="updateRssFeeds" style="margin: 0; font-weight: normal;">Update RSS feeds (/feed/index.xml and /feed/full.xml)</label>
+        </div>
         
         <!-- GitHub Settings Collapsible -->
         <div class="collapsible-section" id="githubSettings">
@@ -1052,7 +1056,9 @@
         scripts: null,
         homepageHtml: null,
         archiveHtml: null,
-        yearlyArchiveHtml: null
+        yearlyArchiveHtml: null,
+        mainFeedXml: null,   // RSS feed with 50 most recent posts
+        fullFeedXml: null    // RSS feed with all posts
     };
 
     // Existing categories and tags (fetched from GitHub)
@@ -1268,6 +1274,8 @@
             if (siteComponents.footer) items.push('✓ Footer');
             if (siteComponents.scripts) items.push('✓ Scripts (masonry, etc.)');
             if (siteComponents.archiveHtml) items.push('✓ Archive page template');
+            if (siteComponents.mainFeedXml) items.push('✓ Main RSS feed (feed/index.xml)');
+            if (siteComponents.fullFeedXml) items.push('✓ Full RSS feed (feed/full.xml)');
             
             if (items.length > 0) {
                 list.innerHTML = items.map(item => `<li>${item}</li>`).join('');
@@ -1553,6 +1561,46 @@
                 generatedFiles[tagPath] = tagPage;
             }
 
+            // Update RSS feeds
+            const updateRssFeeds = document.getElementById('updateRssFeeds').checked;
+            if (updateRssFeeds) {
+                showStatus('Updating RSS feeds...', 'info');
+                
+                // Generate RSS item for the new post
+                const rssItem = generateRssItem({
+                    title,
+                    slug,
+                    year,
+                    month,
+                    day,
+                    content,
+                    categorySlug,
+                    categoryParent,
+                    tagSlugs
+                });
+                
+                // If we don't have feeds loaded and have GitHub access, try to fetch them
+                if (!siteComponents.mainFeedXml && hasGitHub) {
+                    try {
+                        console.log('Fetching RSS feeds from GitHub...');
+                        siteComponents.mainFeedXml = await fetchFileFromGithub(owner, repoName, 'feed/index.xml', token);
+                        siteComponents.fullFeedXml = await fetchFileFromGithub(owner, repoName, 'feed/full.xml', token);
+                    } catch (e) {
+                        console.log('Could not fetch RSS feeds:', e);
+                    }
+                }
+                
+                // Update main feed (50 items max)
+                const updatedMainFeed = insertItemIntoRssFeed(siteComponents.mainFeedXml, rssItem, 50);
+                generatedFiles['feed/index.xml'] = updatedMainFeed;
+                console.log('Updated main RSS feed (50 items max)');
+                
+                // Update full feed (no limit)
+                const updatedFullFeed = insertItemIntoRssFeed(siteComponents.fullFeedXml, rssItem, null);
+                generatedFiles['feed/full.xml'] = updatedFullFeed;
+                console.log('Updated full RSS feed');
+            }
+
             // Add images
             uploadedImages.forEach(img => {
                 const zipPath = img.path.startsWith('/') ? img.path.slice(1) : img.path;
@@ -1562,7 +1610,7 @@
             // Update file list display
             const fileList = document.getElementById('fileList');
             fileList.innerHTML = Object.keys(generatedFiles)
-                .filter(f => f.endsWith('.html'))
+                .filter(f => f.endsWith('.html') || f.endsWith('.xml'))
                 .map(f => `<li>${f}</li>`).join('');
 
             showStatus('Files generated successfully!', 'success');
@@ -2047,6 +2095,164 @@ ${articleBlock}
             el.textContent = message;
         }
 
+        // =====================
+        // RSS Feed Functions
+        // =====================
+        
+        // Escape special characters for XML
+        function escapeXml(str) {
+            if (!str) return '';
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&apos;');
+        }
+        
+        // Format date as RFC 822 (WordPress RSS format)
+        function formatRFC822Date(date) {
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            
+            const d = new Date(date);
+            const day = days[d.getUTCDay()];
+            const dateNum = String(d.getUTCDate()).padStart(2, '0');
+            const month = months[d.getUTCMonth()];
+            const year = d.getUTCFullYear();
+            const hours = String(d.getUTCHours()).padStart(2, '0');
+            const minutes = String(d.getUTCMinutes()).padStart(2, '0');
+            const seconds = String(d.getUTCSeconds()).padStart(2, '0');
+            
+            return `${day}, ${dateNum} ${month} ${year} ${hours}:${minutes}:${seconds} +0000`;
+        }
+        
+        // Generate a single RSS <item> for a new post
+        function generateRssItem({ title, slug, year, month, day, content, categorySlug, categoryParent, tagSlugs }) {
+            const siteUrl = 'https://learningischange.com';
+            const postUrl = `${siteUrl}/${year}/${month}/${day}/${slug}/`;
+            const pubDate = formatRFC822Date(new Date(`${year}-${month}-${day}T12:00:00Z`));
+            
+            // Clean content for RSS (remove scripts, styles)
+            let cleanContent = content;
+            cleanContent = cleanContent.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
+            cleanContent = cleanContent.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+            
+            // Create plain text excerpt
+            const plainText = cleanContent.replace(/<[^>]+>/g, '').trim();
+            const excerpt = plainText.substring(0, 300) + (plainText.length > 300 ? '...' : '');
+            
+            let item = `    <item>
+      <title>${escapeXml(title)}</title>
+      <link>${escapeXml(postUrl)}</link>
+      <pubDate>${pubDate}</pubDate>
+      <dc:creator><![CDATA[Ben]]></dc:creator>
+      <guid isPermaLink="true">${escapeXml(postUrl)}</guid>
+`;
+            
+            // Add category
+            if (categorySlug && categorySlug !== 'uncategorized') {
+                item += `      <category><![CDATA[${categorySlug}]]></category>\n`;
+                if (categoryParent) {
+                    item += `      <category><![CDATA[${categoryParent}]]></category>\n`;
+                }
+            }
+            
+            // Add tags
+            if (tagSlugs && tagSlugs.length > 0) {
+                tagSlugs.forEach(tag => {
+                    item += `      <category><![CDATA[${tag}]]></category>\n`;
+                });
+            }
+            
+            // Add description (excerpt)
+            item += `      <description><![CDATA[${excerpt}]]></description>\n`;
+            
+            // Add full content (WordPress style)
+            item += `      <content:encoded><![CDATA[${cleanContent}]]></content:encoded>\n`;
+            
+            item += `    </item>`;
+            
+            return item;
+        }
+        
+        // Insert a new RSS item into an existing feed
+        function insertItemIntoRssFeed(feedXml, newItem, maxItems = null) {
+            if (!feedXml) {
+                // Create a new feed if none exists
+                return createNewRssFeed(newItem);
+            }
+            
+            // Update lastBuildDate
+            const newBuildDate = formatRFC822Date(new Date());
+            feedXml = feedXml.replace(
+                /<lastBuildDate>[^<]*<\/lastBuildDate>/,
+                `<lastBuildDate>${newBuildDate}</lastBuildDate>`
+            );
+            
+            // Find the position after the opening channel elements and before the first item
+            // We want to insert right after </generator> or before the first <item>
+            const firstItemMatch = feedXml.match(/<item>/);
+            if (firstItemMatch) {
+                const insertPos = firstItemMatch.index;
+                feedXml = feedXml.slice(0, insertPos) + newItem + '\n' + feedXml.slice(insertPos);
+            } else {
+                // No existing items, insert before </channel>
+                feedXml = feedXml.replace('</channel>', newItem + '\n  </channel>');
+            }
+            
+            // If maxItems is specified, remove excess items from the end
+            if (maxItems) {
+                const itemMatches = feedXml.match(/<item>[\s\S]*?<\/item>/g);
+                if (itemMatches && itemMatches.length > maxItems) {
+                    // Remove items from the end
+                    const excess = itemMatches.length - maxItems;
+                    for (let i = 0; i < excess; i++) {
+                        const lastItemIndex = feedXml.lastIndexOf('<item>');
+                        const lastItemEndIndex = feedXml.lastIndexOf('</item>') + '</item>'.length;
+                        if (lastItemIndex !== -1) {
+                            // Also remove any whitespace/newline before the item
+                            let startIndex = lastItemIndex;
+                            while (startIndex > 0 && /\s/.test(feedXml[startIndex - 1])) {
+                                startIndex--;
+                            }
+                            feedXml = feedXml.slice(0, startIndex) + feedXml.slice(lastItemEndIndex);
+                        }
+                    }
+                }
+            }
+            
+            return feedXml;
+        }
+        
+        // Create a brand new RSS feed with just one item
+        function createNewRssFeed(firstItem) {
+            const buildDate = formatRFC822Date(new Date());
+            
+            return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+  <channel>
+    <title>Learning is Change</title>
+    <atom:link href="https://learningischange.com/feed/" rel="self" type="application/rss+xml" />
+    <link>https://learningischange.com</link>
+    <description>Learning is Change - Thoughts on education, social justice, and making a difference</description>
+    <lastBuildDate>${buildDate}</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>Learning is Change Static Post Generator</generator>
+${firstItem}
+  </channel>
+</rss>`;
+        }
+
         // GitHub fetch functions (need access to extractSiteComponents, updateExtractedInfo, etc.)
         async function fetchFileFromGithub(owner, repo, path, token) {
             try {
@@ -2144,8 +2350,32 @@ ${articleBlock}
                     fetchStatus.textContent += 'Fetching categories...';
                     await fetchExistingTaxonomies(owner, repoName, token);
                     
+                    // Fetch RSS feeds
+                    fetchStatus.textContent += 'Fetching RSS feeds...';
+                    try {
+                        const mainFeed = await fetchFileFromGithub(owner, repoName, 'feed/index.xml', token);
+                        if (mainFeed) {
+                            siteComponents.mainFeedXml = mainFeed;
+                            console.log('Loaded main RSS feed');
+                        }
+                        
+                        const fullFeed = await fetchFileFromGithub(owner, repoName, 'feed/full.xml', token);
+                        if (fullFeed) {
+                            siteComponents.fullFeedXml = fullFeed;
+                            console.log('Loaded full RSS feed');
+                        }
+                    } catch (e) {
+                        console.log('RSS feeds not found or error:', e);
+                    }
+                    
+                    // Build success message
+                    let loadedItems = ['Homepage'];
+                    if (existingCategories.length > 0) loadedItems.push(`${existingCategories.length} categories`);
+                    if (existingTags.length > 0) loadedItems.push(`${existingTags.length} tags`);
+                    if (siteComponents.mainFeedXml) loadedItems.push('RSS feeds');
+                    
                     fetchStatus.className = 'fetch-status show success';
-                    fetchStatus.textContent = `✅ Loaded: Homepage, ${existingCategories.length} categories, ${existingTags.length} tags`;
+                    fetchStatus.textContent = `✅ Loaded: ${loadedItems.join(', ')}`;
                     
                     updateExtractedInfo();
                     updateGenerateButton();
