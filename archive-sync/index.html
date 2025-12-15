@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive Sync Tool - Learning is Change</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap');
+        
+        :root {
+            --accent-1: #0085b2;
+            --accent-1-hover: #006d91;
+            --accent-2: #f42b00;
+            --headings: #333;
+            --sitetext: #555;
+            --sitebg: #fff;
+            --light-bg: #f7f7f7;
+            --border-color: #e0e0e0;
+            --success: #28a745;
+            --success-hover: #218838;
+            --warning: #ffc107;
+            --error: #dc3545;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--light-bg);
+            color: var(--sitetext);
+            line-height: 1.6;
+        }
+        
+        /* Header styling to match site */
+        .site-header {
+            background: var(--accent-1);
+            color: white;
+            padding: 25px 30px;
+            margin: -20px -20px 30px -20px;
+            border-bottom: 4px solid var(--accent-1-hover);
+        }
+        .site-header h1 {
+            margin: 0 0 5px 0;
+            font-size: 1.8em;
+            font-weight: 300;
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        .site-header .subtitle {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.95em;
+            font-weight: 300;
+        }
+        
+        h1, h2, h3 {
+            color: var(--headings);
+            font-weight: 600;
+        }
+        
+        .step {
+            background: var(--sitebg);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+        }
+        
+        .step h2 {
+            margin-top: 0;
+            color: var(--headings);
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+        
+        .step-number {
+            background: var(--accent-1);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--headings);
+            font-size: 0.95em;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            color: var(--sitetext);
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: var(--accent-1);
+            box-shadow: 0 0 0 2px rgba(0, 133, 178, 0.15);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .github-settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .github-settings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .github-settings-grid .form-group {
+            margin-bottom: 0;
+        }
+        
+        .token-input-wrapper {
+            position: relative;
+        }
+        
+        .token-input-wrapper input {
+            padding-right: 45px;
+        }
+        
+        .token-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+            color: #888;
+        }
+        
+        .token-toggle:hover {
+            color: var(--accent-1);
+        }
+        
+        .save-token-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .save-token-group input[type="checkbox"] {
+            width: 14px;
+            height: 14px;
+            accent-color: var(--accent-1);
+        }
+        
+        .save-token-group label {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+            font-weight: normal;
+        }
+        
+        .btn {
+            background: var(--accent-1);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-family: inherit;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background: var(--accent-1-hover);
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .btn-primary {
+            background: var(--accent-1);
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-1-hover);
+        }
+        
+        .btn-success {
+            background: var(--success);
+        }
+        
+        .btn-success:hover {
+            background: var(--success-hover);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .help-text {
+            font-size: 13px;
+            color: #888;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 3px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .status.show {
+            display: block;
+        }
+        
+        .status.success {
+            background: rgba(40, 167, 69, 0.1);
+            color: #155724;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+        
+        .status.error {
+            background: rgba(244, 43, 0, 0.1);
+            color: #721c24;
+            border: 1px solid rgba(244, 43, 0, 0.3);
+        }
+        
+        .status.info {
+            background: rgba(0, 133, 178, 0.1);
+            color: #004085;
+            border: 1px solid rgba(0, 133, 178, 0.3);
+        }
+        
+        .progress-container {
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .progress-container.show {
+            display: block;
+        }
+        
+        .progress-bar-wrapper {
+            background: #e9ecef;
+            border-radius: 3px;
+            height: 8px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            background: var(--accent-1);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .progress-text {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        /* Results Section */
+        .results-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .results-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .summary-card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 3px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .summary-card .number {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        
+        .summary-card .label {
+            color: var(--sitetext);
+            font-size: 0.9em;
+        }
+        
+        .summary-card.synced .number {
+            color: var(--success);
+        }
+        
+        .summary-card.out-of-sync .number {
+            color: var(--warning);
+        }
+        
+        .summary-card.total .number {
+            color: var(--accent-1);
+        }
+        
+        .select-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .select-buttons .btn {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+        
+        .archive-list {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            background: var(--sitebg);
+        }
+        
+        .archive-type-header {
+            background: var(--light-bg);
+            padding: 12px 15px;
+            font-weight: 600;
+            color: var(--accent-1);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            font-size: 0.95em;
+        }
+        
+        .archive-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            gap: 12px;
+        }
+        
+        .archive-item:last-child {
+            border-bottom: none;
+        }
+        
+        .archive-item.synced {
+            background: rgba(40, 167, 69, 0.05);
+        }
+        
+        .archive-item.out-of-sync {
+            background: rgba(255, 193, 7, 0.1);
+        }
+        
+        .archive-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--accent-1);
+        }
+        
+        .archive-item .path {
+            flex: 1;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: var(--accent-1);
+        }
+        
+        .archive-item .status-badge {
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.7em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .archive-item .status-badge.synced {
+            background: var(--success);
+            color: white;
+        }
+        
+        .archive-item .status-badge.out-of-sync {
+            background: var(--warning);
+            color: #333;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .log-output {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 15px;
+            max-height: 250px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.8;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .log-output.show {
+            display: block;
+        }
+        
+        .log-output .log-entry {
+            margin-bottom: 3px;
+        }
+        
+        .log-output .log-entry.success {
+            color: var(--success);
+        }
+        
+        .log-output .log-entry.error {
+            color: var(--error);
+        }
+        
+        .log-output .log-entry.info {
+            color: var(--sitetext);
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #888;
+            font-size: 13px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .site-footer a {
+            color: var(--accent-1);
+            text-decoration: none;
+        }
+        
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1>🔄 Archive Sync Tool</h1>
+        <p class="subtitle">Scan and fix out-of-sync sidebar content on archive pages</p>
+    </header>
+    
+    <!-- GitHub Connection -->
+    <div class="step">
+        <h2><span class="step-number">1</span> GitHub Connection</h2>
+        <p class="help-text">Connect to your GitHub repository to scan and update archive pages.</p>
+        
+        <div class="github-settings-grid">
+            <div class="form-group">
+                <label for="githubToken">Personal Access Token</label>
+                <div class="token-input-wrapper">
+                    <input type="password" id="githubToken" placeholder="github_pat_...">
+                    <button type="button" class="token-toggle" onclick="toggleToken()">👁️</button>
+                </div>
+                <div class="save-token-group">
+                    <input type="checkbox" id="saveToken">
+                    <label for="saveToken">Remember token in this browser</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="githubRepo">Repository</label>
+                <input type="text" id="githubRepo" value="bhwilkoff/LearningIsChange" placeholder="owner/repo">
+            </div>
+            <div class="form-group">
+                <label for="committerName">Committer Name</label>
+                <input type="text" id="committerName" value="Ben Wilkoff" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="committerEmail">Committer Email</label>
+                <input type="text" id="committerEmail" value="Ben@learningischange.com" placeholder="you@example.com">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scan Section -->
+    <div class="step">
+        <h2><span class="step-number">2</span> Scan Archives</h2>
+        <p class="help-text">
+            Fetch the canonical sidebar from your homepage and compare it against all category, tag, and author archive pages to find any that are out of sync.
+        </p>
+        
+        <button class="btn btn-primary" id="scanBtn" onclick="scanArchives()">
+            🔍 Scan All Archives
+        </button>
+        
+        <div class="status" id="scanStatus"></div>
+        
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">Initializing...</div>
+        </div>
+    </div>
+    
+    <!-- Results Section -->
+    <div class="step hidden" id="resultsCard">
+        <h2><span class="step-number">3</span> Scan Results</h2>
+        
+        <div class="results-summary">
+            <div class="summary-card total">
+                <div class="number" id="totalCount">0</div>
+                <div class="label">Total Archives</div>
+            </div>
+            <div class="summary-card synced">
+                <div class="number" id="syncedCount">0</div>
+                <div class="label">In Sync</div>
+            </div>
+            <div class="summary-card out-of-sync">
+                <div class="number" id="outOfSyncCount">0</div>
+                <div class="label">Out of Sync</div>
+            </div>
+        </div>
+        
+        <div class="select-buttons">
+            <button class="btn btn-secondary" onclick="selectAllOutOfSync()">Select All Out-of-Sync</button>
+            <button class="btn btn-secondary" onclick="selectNone()">Select None</button>
+        </div>
+        
+        <div class="archive-list" id="archiveList"></div>
+        
+        <div class="action-buttons">
+            <button class="btn btn-success" id="fixBtn" onclick="fixSelected()" disabled>
+                🔧 Fix Selected Archives
+            </button>
+        </div>
+        
+        <div class="log-output" id="logOutput"></div>
+    </div>
+    
+    <footer class="site-footer">
+        <p>Archive Sync Tool for <a href="https://learningischange.com">Learning is Change</a></p>
+    </footer>
+
+    <script>
+        // State
+        let canonicalSidebar = null;
+        let archiveResults = [];
+        let filesToFix = {};
+        
+        // Load saved settings
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('archiveSyncSettings');
+            if (saved) {
+                const settings = JSON.parse(saved);
+                if (settings.token) document.getElementById('githubToken').value = settings.token;
+                if (settings.repo) document.getElementById('githubRepo').value = settings.repo;
+                if (settings.name) document.getElementById('committerName').value = settings.name;
+                if (settings.email) document.getElementById('committerEmail').value = settings.email;
+                document.getElementById('saveToken').checked = true;
+            }
+        });
+        
+        function saveSettings() {
+            if (document.getElementById('saveToken').checked) {
+                localStorage.setItem('archiveSyncSettings', JSON.stringify({
+                    token: document.getElementById('githubToken').value,
+                    repo: document.getElementById('githubRepo').value,
+                    name: document.getElementById('committerName').value,
+                    email: document.getElementById('committerEmail').value
+                }));
+            } else {
+                localStorage.removeItem('archiveSyncSettings');
+            }
+        }
+        
+        function toggleToken() {
+            const input = document.getElementById('githubToken');
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+        
+        function showStatus(elementId, message, type) {
+            const el = document.getElementById(elementId);
+            el.className = `status show ${type}`;
+            el.textContent = message;
+        }
+        
+        function updateProgress(percent, text) {
+            document.getElementById('progressBar').style.width = `${percent}%`;
+            document.getElementById('progressText').textContent = text;
+        }
+        
+        function log(message, type = 'info') {
+            const logOutput = document.getElementById('logOutput');
+            logOutput.classList.add('show');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = message;
+            logOutput.appendChild(entry);
+            logOutput.scrollTop = logOutput.scrollHeight;
+        }
+        
+        function clearLog() {
+            const logOutput = document.getElementById('logOutput');
+            logOutput.innerHTML = '';
+            logOutput.classList.remove('show');
+        }
+        
+        async function fetchFile(owner, repo, path, token) {
+            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github.raw+json',
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
+            
+            if (response.ok) {
+                return await response.text();
+            } else if (response.status === 404) {
+                return null;
+            } else {
+                throw new Error(`GitHub API error: ${response.status}`);
+            }
+        }
+        
+        async function fetchDirectory(owner, repo, path, token) {
+            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github+json',
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
+            
+            if (response.ok) {
+                return await response.json();
+            } else if (response.status === 404) {
+                return null;
+            } else {
+                throw new Error(`GitHub API error: ${response.status}`);
+            }
+        }
+        
+        function extractSidebar(html) {
+            // Extract the sidebar section
+            const sidebarMatch = html.match(/<aside id="primary"[\s\S]*?<\/aside>/i);
+            return sidebarMatch ? sidebarMatch[0] : null;
+        }
+        
+        function extractArchiveLinks(sidebar) {
+            // Extract all archive month links from sidebar
+            const linkRegex = /<a href="\/(\d{4})\/(\d{2})\/"/g;
+            const links = new Set();
+            let match;
+            while ((match = linkRegex.exec(sidebar)) !== null) {
+                links.add(`${match[1]}/${match[2]}`);
+            }
+            return links;
+        }
+        
+        function compareSidebars(canonicalSidebar, pageSidebar) {
+            // Compare archive links between sidebars
+            const canonicalLinks = extractArchiveLinks(canonicalSidebar);
+            const pageLinks = extractArchiveLinks(pageSidebar);
+            
+            // Check if page has all canonical links
+            for (const link of canonicalLinks) {
+                if (!pageLinks.has(link)) {
+                    return false; // Missing a link
+                }
+            }
+            return true;
+        }
+        
+        function updateSidebarInPage(pageHtml, newSidebar) {
+            const sidebarRegex = /(<aside id="primary"[\s\S]*?<\/aside>)\s*\n?\s*<\/div><!-- #container -->/i;
+            return pageHtml.replace(sidebarRegex, `${newSidebar}\n</div><!-- #container -->`);
+        }
+        
+        async function scanArchives() {
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            
+            if (!token || !repo) {
+                showStatus('scanStatus', '❌ Please enter GitHub token and repository', 'error');
+                return;
+            }
+            
+            const [owner, repoName] = repo.split('/');
+            if (!owner || !repoName) {
+                showStatus('scanStatus', '❌ Repository format should be: owner/repo', 'error');
+                return;
+            }
+            
+            const scanBtn = document.getElementById('scanBtn');
+            scanBtn.disabled = true;
+            document.getElementById('progressContainer').classList.add('show');
+            document.getElementById('resultsCard').classList.add('hidden');
+            archiveResults = [];
+            filesToFix = {};
+            clearLog();
+            
+            try {
+                // Step 1: Fetch homepage to get canonical sidebar
+                updateProgress(5, 'Fetching homepage for canonical sidebar...');
+                const homepage = await fetchFile(owner, repoName, 'index.html', token);
+                if (!homepage) {
+                    throw new Error('Could not fetch homepage');
+                }
+                
+                canonicalSidebar = extractSidebar(homepage);
+                if (!canonicalSidebar) {
+                    throw new Error('Could not extract sidebar from homepage');
+                }
+                
+                const canonicalLinks = extractArchiveLinks(canonicalSidebar);
+                showStatus('scanStatus', `✅ Found canonical sidebar with ${canonicalLinks.size} month links`, 'success');
+                
+                // Step 2: Discover all archive pages
+                updateProgress(10, 'Discovering archive pages...');
+                const archivePaths = [];
+                
+                // Scan category directory
+                updateProgress(15, 'Scanning category archives...');
+                const categoryDir = await fetchDirectory(owner, repoName, 'category', token);
+                if (categoryDir) {
+                    for (const item of categoryDir) {
+                        if (item.type === 'dir') {
+                            // Check for nested categories
+                            const subDir = await fetchDirectory(owner, repoName, `category/${item.name}`, token);
+                            if (subDir) {
+                                const hasIndex = subDir.some(f => f.name === 'index.html');
+                                if (hasIndex) {
+                                    archivePaths.push({ type: 'category', path: `category/${item.name}/index.html`, name: item.name });
+                                }
+                                // Check for nested categories
+                                for (const subItem of subDir) {
+                                    if (subItem.type === 'dir') {
+                                        const nestedDir = await fetchDirectory(owner, repoName, `category/${item.name}/${subItem.name}`, token);
+                                        if (nestedDir && nestedDir.some(f => f.name === 'index.html')) {
+                                            archivePaths.push({ type: 'category', path: `category/${item.name}/${subItem.name}/index.html`, name: `${item.name}/${subItem.name}` });
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // Scan tag directory
+                updateProgress(25, 'Scanning tag archives...');
+                const tagDir = await fetchDirectory(owner, repoName, 'tag', token);
+                if (tagDir) {
+                    for (const item of tagDir) {
+                        if (item.type === 'dir') {
+                            const subDir = await fetchDirectory(owner, repoName, `tag/${item.name}`, token);
+                            if (subDir && subDir.some(f => f.name === 'index.html')) {
+                                archivePaths.push({ type: 'tag', path: `tag/${item.name}/index.html`, name: item.name });
+                            }
+                        }
+                    }
+                }
+                
+                // Scan author directory
+                updateProgress(35, 'Scanning author archives...');
+                const authorDir = await fetchDirectory(owner, repoName, 'author', token);
+                if (authorDir) {
+                    for (const item of authorDir) {
+                        if (item.type === 'dir') {
+                            const subDir = await fetchDirectory(owner, repoName, `author/${item.name}`, token);
+                            if (subDir && subDir.some(f => f.name === 'index.html')) {
+                                archivePaths.push({ type: 'author', path: `author/${item.name}/index.html`, name: item.name });
+                            }
+                        }
+                    }
+                }
+                
+                updateProgress(40, `Found ${archivePaths.length} archive pages. Checking each...`);
+                
+                // Step 3: Check each archive page
+                const totalPages = archivePaths.length;
+                for (let i = 0; i < archivePaths.length; i++) {
+                    const archive = archivePaths[i];
+                    const progress = 40 + Math.round((i / totalPages) * 55);
+                    updateProgress(progress, `Checking ${archive.path}... (${i + 1}/${totalPages})`);
+                    
+                    try {
+                        const pageHtml = await fetchFile(owner, repoName, archive.path, token);
+                        if (pageHtml) {
+                            const pageSidebar = extractSidebar(pageHtml);
+                            const inSync = pageSidebar ? compareSidebars(canonicalSidebar, pageSidebar) : false;
+                            
+                            archiveResults.push({
+                                ...archive,
+                                html: pageHtml,
+                                inSync: inSync
+                            });
+                        }
+                    } catch (e) {
+                        console.error(`Error checking ${archive.path}:`, e);
+                    }
+                    
+                    // Small delay to avoid rate limiting
+                    if (i % 10 === 0 && i > 0) {
+                        await new Promise(r => setTimeout(r, 100));
+                    }
+                }
+                
+                updateProgress(100, 'Scan complete!');
+                
+                // Display results
+                displayResults();
+                saveSettings();
+                
+            } catch (error) {
+                console.error('Scan error:', error);
+                showStatus('scanStatus', `❌ Error: ${error.message}`, 'error');
+            }
+            
+            scanBtn.disabled = false;
+        }
+        
+        function displayResults() {
+            const resultsCard = document.getElementById('resultsCard');
+            resultsCard.classList.remove('hidden');
+            
+            const totalCount = archiveResults.length;
+            const syncedCount = archiveResults.filter(a => a.inSync).length;
+            const outOfSyncCount = totalCount - syncedCount;
+            
+            document.getElementById('totalCount').textContent = totalCount;
+            document.getElementById('syncedCount').textContent = syncedCount;
+            document.getElementById('outOfSyncCount').textContent = outOfSyncCount;
+            
+            // Group by type
+            const byType = {
+                category: archiveResults.filter(a => a.type === 'category'),
+                tag: archiveResults.filter(a => a.type === 'tag'),
+                author: archiveResults.filter(a => a.type === 'author')
+            };
+            
+            let html = '';
+            
+            for (const [type, archives] of Object.entries(byType)) {
+                if (archives.length === 0) continue;
+                
+                const typeLabel = type.charAt(0).toUpperCase() + type.slice(1);
+                const outOfSync = archives.filter(a => !a.inSync).length;
+                html += `<div class="archive-type-header">${typeLabel} Archives (${outOfSync} out of sync)</div>`;
+                
+                // Sort: out-of-sync first
+                archives.sort((a, b) => a.inSync - b.inSync);
+                
+                for (const archive of archives) {
+                    const statusClass = archive.inSync ? 'synced' : 'out-of-sync';
+                    const statusLabel = archive.inSync ? 'Synced' : 'Out of Sync';
+                    const checked = !archive.inSync ? 'checked' : '';
+                    const disabled = archive.inSync ? 'disabled' : '';
+                    
+                    html += `
+                        <div class="archive-item ${statusClass}">
+                            <input type="checkbox" 
+                                   data-path="${archive.path}" 
+                                   ${checked} 
+                                   ${disabled}
+                                   onchange="updateFixButton()">
+                            <span class="path">${archive.path}</span>
+                            <span class="status-badge ${statusClass}">${statusLabel}</span>
+                        </div>
+                    `;
+                }
+            }
+            
+            document.getElementById('archiveList').innerHTML = html;
+            updateFixButton();
+        }
+        
+        function updateFixButton() {
+            const checkboxes = document.querySelectorAll('.archive-item input[type="checkbox"]:checked:not(:disabled)');
+            const fixBtn = document.getElementById('fixBtn');
+            fixBtn.disabled = checkboxes.length === 0;
+            fixBtn.textContent = `🔧 Fix Selected Archives (${checkboxes.length})`;
+        }
+        
+        function selectAllOutOfSync() {
+            document.querySelectorAll('.archive-item input[type="checkbox"]:not(:disabled)').forEach(cb => {
+                cb.checked = true;
+            });
+            updateFixButton();
+        }
+        
+        function selectNone() {
+            document.querySelectorAll('.archive-item input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+            updateFixButton();
+        }
+        
+        // Helper function to convert large strings to base64 without stack overflow
+        function stringToBase64(str) {
+            const encoder = new TextEncoder();
+            const bytes = encoder.encode(str);
+            const chars = new Array(bytes.length);
+            for (let i = 0; i < bytes.length; i++) {
+                chars[i] = String.fromCharCode(bytes[i]);
+            }
+            return btoa(chars.join(''));
+        }
+        
+        async function fixSelected() {
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const committerName = document.getElementById('committerName').value.trim() || 'Archive Sync Tool';
+            const committerEmail = document.getElementById('committerEmail').value.trim() || 'noreply@example.com';
+            
+            const [owner, repoName] = repo.split('/');
+            
+            const selectedPaths = Array.from(
+                document.querySelectorAll('.archive-item input[type="checkbox"]:checked:not(:disabled)')
+            ).map(cb => cb.dataset.path);
+            
+            if (selectedPaths.length === 0) {
+                return;
+            }
+            
+            const fixBtn = document.getElementById('fixBtn');
+            fixBtn.disabled = true;
+            clearLog();
+            
+            log(`Starting to fix ${selectedPaths.length} archive(s)...`, 'info');
+            
+            try {
+                const headers = {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github+json',
+                    'X-GitHub-Api-Version': '2022-11-28',
+                    'Content-Type': 'application/json'
+                };
+                
+                // Get current commit SHA
+                log('Getting current branch state...', 'info');
+                const refResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/ref/heads/main`, { headers });
+                if (!refResponse.ok) throw new Error('Failed to get branch reference');
+                const refData = await refResponse.json();
+                const currentCommitSha = refData.object.sha;
+                
+                // Get current tree
+                const commitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
+                if (!commitResponse.ok) throw new Error('Failed to get current commit');
+                const commitData = await commitResponse.json();
+                const baseTreeSha = commitData.tree.sha;
+                
+                // Create blobs for each file
+                const treeItems = [];
+                for (const path of selectedPaths) {
+                    const archive = archiveResults.find(a => a.path === path);
+                    if (!archive) continue;
+                    
+                    log(`Updating sidebar in ${path}...`, 'info');
+                    const updatedHtml = updateSidebarInPage(archive.html, canonicalSidebar);
+                    const base64Content = stringToBase64(updatedHtml);
+                    
+                    const blobResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/blobs`, {
+                        method: 'POST',
+                        headers,
+                        body: JSON.stringify({
+                            content: base64Content,
+                            encoding: 'base64'
+                        })
+                    });
+                    
+                    if (!blobResponse.ok) {
+                        log(`Failed to create blob for ${path}`, 'error');
+                        continue;
+                    }
+                    
+                    const blobData = await blobResponse.json();
+                    treeItems.push({
+                        path: path,
+                        mode: '100644',
+                        type: 'blob',
+                        sha: blobData.sha
+                    });
+                    
+                    log(`✓ Prepared ${path}`, 'success');
+                }
+                
+                if (treeItems.length === 0) {
+                    throw new Error('No files to commit');
+                }
+                
+                // Create new tree
+                log('Creating commit tree...', 'info');
+                const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/trees`, {
+                    method: 'POST',
+                    headers,
+                    body: JSON.stringify({
+                        base_tree: baseTreeSha,
+                        tree: treeItems
+                    })
+                });
+                
+                if (!treeResponse.ok) throw new Error('Failed to create tree');
+                const treeData = await treeResponse.json();
+                
+                // Create commit
+                log('Creating commit...', 'info');
+                const newCommitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits`, {
+                    method: 'POST',
+                    headers,
+                    body: JSON.stringify({
+                        message: `Sync sidebar on ${treeItems.length} archive page(s)`,
+                        tree: treeData.sha,
+                        parents: [currentCommitSha],
+                        author: {
+                            name: committerName,
+                            email: committerEmail,
+                            date: new Date().toISOString()
+                        },
+                        committer: {
+                            name: committerName,
+                            email: committerEmail,
+                            date: new Date().toISOString()
+                        }
+                    })
+                });
+                
+                if (!newCommitResponse.ok) throw new Error('Failed to create commit');
+                const newCommitData = await newCommitResponse.json();
+                
+                // Update branch reference
+                log('Updating branch...', 'info');
+                const updateRefResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/refs/heads/main`, {
+                    method: 'PATCH',
+                    headers,
+                    body: JSON.stringify({
+                        sha: newCommitData.sha,
+                        force: false
+                    })
+                });
+                
+                if (!updateRefResponse.ok) throw new Error('Failed to update branch');
+                
+                log(`✅ Successfully updated ${treeItems.length} archive page(s)!`, 'success');
+                
+                // Update UI to reflect fixed items
+                for (const path of selectedPaths) {
+                    const archive = archiveResults.find(a => a.path === path);
+                    if (archive) {
+                        archive.inSync = true;
+                        archive.html = updateSidebarInPage(archive.html, canonicalSidebar);
+                    }
+                }
+                displayResults();
+                
+            } catch (error) {
+                console.error('Fix error:', error);
+                log(`❌ Error: ${error.message}`, 'error');
+            }
+            
+            fixBtn.disabled = false;
+            updateFixButton();
+        }
+    </script>
+</body>
+</html>
