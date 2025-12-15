@@ -1767,6 +1767,19 @@
             return html;
         }
 
+        // Insert article into page AND update sidebar with new month links
+        function insertArticleAndUpdateSidebar(html, articleBlock) {
+            // First insert the article
+            let updatedHtml = insertArticleIntoPage(html, articleBlock);
+            
+            // Then update the sidebar if we have an updated one
+            if (siteComponents.sidebar) {
+                updatedHtml = updateSidebarInPage(updatedHtml, siteComponents.sidebar);
+            }
+            
+            return updatedHtml;
+        }
+
         function createPostPage_fn({ postId, title, slug, year, month, day, displayDate, isoDate, category, categoryParent, content, tagClasses, tagLinks }) {
             const tagsHtml = tagLinks ? `
                 <span class="footer-tags" itemprop="keywords">
@@ -1888,9 +1901,9 @@
         }
 
         function createArchivePage({ year, month, monthName, articleBlock }) {
-            // If we have an existing archive, insert into it
+            // If we have an existing archive, insert into it and update sidebar
             if (siteComponents.archiveHtml) {
-                return insertArticleIntoPage(siteComponents.archiveHtml, articleBlock);
+                return insertArticleAndUpdateSidebar(siteComponents.archiveHtml, articleBlock);
             }
 
             // Otherwise create a new archive page from homepage structure
@@ -1944,9 +1957,9 @@ ${articleBlock}
 
         // Create yearly archive page
         function createYearlyArchivePage({ year, articleBlock }) {
-            // If we have an existing yearly archive, insert into it
+            // If we have an existing yearly archive, insert into it and update sidebar
             if (siteComponents.yearlyArchiveHtml) {
-                return insertArticleIntoPage(siteComponents.yearlyArchiveHtml, articleBlock);
+                return insertArticleAndUpdateSidebar(siteComponents.yearlyArchiveHtml, articleBlock);
             }
 
             // Otherwise create a new yearly archive page from homepage structure
@@ -1996,11 +2009,11 @@ ${articleBlock}
 
         // Create category archive page
         function createCategoryArchivePage({ categorySlug, categoryParent, articleBlock, existingHtml }) {
-            // If we have an existing category archive, insert into it
+            // If we have an existing category archive, insert into it and update sidebar
             console.log(`createCategoryArchivePage: existingHtml is ${existingHtml ? 'present (' + existingHtml.length + ' chars)' : 'null'}`);
             if (existingHtml) {
                 console.log('Inserting article into existing category archive');
-                return insertArticleIntoPage(existingHtml, articleBlock);
+                return insertArticleAndUpdateSidebar(existingHtml, articleBlock);
             }
 
             console.log('Creating new category archive page');
@@ -2062,11 +2075,11 @@ ${articleBlock}
 
         // Create tag archive page
         function createTagArchivePage({ tagSlug, articleBlock, existingHtml }) {
-            // If we have an existing tag archive, insert into it
+            // If we have an existing tag archive, insert into it and update sidebar
             console.log(`createTagArchivePage for "${tagSlug}": existingHtml is ${existingHtml ? 'present (' + existingHtml.length + ' chars)' : 'null'}`);
             if (existingHtml) {
                 console.log('Inserting article into existing tag archive');
-                return insertArticleIntoPage(existingHtml, articleBlock);
+                return insertArticleAndUpdateSidebar(existingHtml, articleBlock);
             }
 
             console.log('Creating new tag archive page');
@@ -2117,10 +2130,10 @@ ${articleBlock}
 
         // Create/update author archive page
         function createAuthorArchivePage({ articleBlock, existingHtml }) {
-            // If we have an existing author archive, insert the new article into it
+            // If we have an existing author archive, insert the new article into it and update sidebar
             if (existingHtml) {
                 console.log('Inserting article into existing author archive');
-                return insertArticleIntoPage(existingHtml, articleBlock);
+                return insertArticleAndUpdateSidebar(existingHtml, articleBlock);
             }
 
             console.log('Creating new author archive page');
