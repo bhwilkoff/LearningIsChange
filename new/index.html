@@ -957,6 +957,10 @@
             <label for="updateYearlyArchive" style="margin: 0; font-weight: normal;">Create/update yearly archive page (/YYYY/)</label>
         </div>
         <div class="checkbox-group">
+            <input type="checkbox" id="updateAuthorArchive" checked>
+            <label for="updateAuthorArchive" style="margin: 0; font-weight: normal;">Update author archive page (/author/bhwilkoff/)</label>
+        </div>
+        <div class="checkbox-group">
             <input type="checkbox" id="updateRssFeeds" checked>
             <label for="updateRssFeeds" style="margin: 0; font-weight: normal;">Update RSS feeds (/feed/index.xml and /feed/full.xml)</label>
         </div>
@@ -1057,6 +1061,7 @@
         homepageHtml: null,
         archiveHtml: null,
         yearlyArchiveHtml: null,
+        authorArchiveHtml: null,  // Author archive page (/author/bhwilkoff/)
         mainFeedXml: null,   // RSS feed with 50 most recent posts
         fullFeedXml: null    // RSS feed with all posts
     };
@@ -1274,6 +1279,7 @@
             if (siteComponents.footer) items.push('✓ Footer');
             if (siteComponents.scripts) items.push('✓ Scripts (masonry, etc.)');
             if (siteComponents.archiveHtml) items.push('✓ Archive page template');
+            if (siteComponents.authorArchiveHtml) items.push('✓ Author archive (/author/bhwilkoff/)');
             if (siteComponents.mainFeedXml) items.push('✓ Main RSS feed (feed/index.xml)');
             if (siteComponents.fullFeedXml) items.push('✓ Full RSS feed (feed/full.xml)');
             
@@ -1511,6 +1517,26 @@
                     year, articleBlock
                 });
                 generatedFiles[`${year}/index.html`] = yearlyArchivePage;
+            }
+
+            // Create/update author archive page
+            const updateAuthorArchive = document.getElementById('updateAuthorArchive').checked;
+            if (updateAuthorArchive) {
+                // If we don't have author archive loaded and have GitHub access, try to fetch it
+                if (!siteComponents.authorArchiveHtml && hasGitHub) {
+                    try {
+                        console.log('Fetching author archive from GitHub...');
+                        showStatus('Fetching author archive...', 'info');
+                        siteComponents.authorArchiveHtml = await fetchFileFromGithub(owner, repoName, 'author/bhwilkoff/index.html', token);
+                    } catch (e) {
+                        console.log('Could not fetch author archive:', e);
+                    }
+                }
+                
+                const authorArchivePage = createAuthorArchivePage({
+                    articleBlock, existingHtml: siteComponents.authorArchiveHtml
+                });
+                generatedFiles['author/bhwilkoff/index.html'] = authorArchivePage;
             }
 
             // Generate category archive page
@@ -2089,6 +2115,56 @@ ${articleBlock}
 </html>`;
         }
 
+        // Create/update author archive page
+        function createAuthorArchivePage({ articleBlock, existingHtml }) {
+            // If we have an existing author archive, insert the new article into it
+            if (existingHtml) {
+                console.log('Inserting article into existing author archive');
+                return insertArticleIntoPage(existingHtml, articleBlock);
+            }
+
+            console.log('Creating new author archive page');
+            // Otherwise create a new author archive page
+            let head = siteComponents.head || '';
+            head = head.replace(/<title>[^<]*<\/title>/, `<title>Ben Wilkoff – Learning is Change</title>`);
+
+            return `<!DOCTYPE html>
+<html lang="en-US">
+<head>${head}</head>
+<body class="archive author author-bhwilkoff author-2">
+    ${siteComponents.header || '<div id="site-wrapper">'}
+
+    <div id="content" class="cryout">
+        <div id="container" class="two-columns-left">
+            <main id="main" class="main">
+
+                <header class="page-header pad-container" itemscope itemtype="http://schema.org/WebPageElement">
+                    <div class="author-info" itemscope itemtype="http://schema.org/Person">
+                        <div class="author-avatar" itemprop="image">
+                            <img alt="Ben Wilkoff" src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=128&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=256&d=mm&r=g 2x" class="avatar avatar-128 photo" height="128" width="128" decoding="async">
+                        </div>
+                        <h1 class="page-title author-title" itemprop="name">Ben Wilkoff</h1>
+                        <div class="author-description" itemprop="description">
+                            <span>He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</span>
+                        </div><!-- .author-description -->
+                    </div><!-- .author-info -->
+                </header><!-- .page-header -->
+
+                <div id="content-masonry" class="content-masonry" itemscope itemtype="http://schema.org/Blog">
+${articleBlock}
+                </div><!--content-masonry-->
+
+            </main><!-- #main -->
+
+            ${siteComponents.sidebar || ''}
+        </div><!-- #container -->
+
+    ${siteComponents.footer || ''}
+    ${siteComponents.scripts || ''}
+</body>
+</html>`;
+        }
+
         function showStatus(message, type) {
             const el = document.getElementById('statusMessage');
             el.className = `status ${type}`;
@@ -2361,6 +2437,18 @@ ${firstItem}
                         }
                     }
                     
+                    // Fetch author archive
+                    fetchStatus.textContent += 'Checking for author archive...';
+                    try {
+                        const authorArchiveContent = await fetchFileFromGithub(owner, repoName, 'author/bhwilkoff/index.html', token);
+                        if (authorArchiveContent) {
+                            siteComponents.authorArchiveHtml = authorArchiveContent;
+                            console.log('Loaded author archive');
+                        }
+                    } catch (e) {
+                        console.log('Author archive not found or error:', e);
+                    }
+                    
                     // Fetch existing categories and tags
                     fetchStatus.textContent += 'Fetching categories...';
                     await fetchExistingTaxonomies(owner, repoName, token);
@@ -2387,6 +2475,7 @@ ${firstItem}
                     let loadedItems = ['Homepage'];
                     if (existingCategories.length > 0) loadedItems.push(`${existingCategories.length} categories`);
                     if (existingTags.length > 0) loadedItems.push(`${existingTags.length} tags`);
+                    if (siteComponents.authorArchiveHtml) loadedItems.push('Author archive');
                     if (siteComponents.mainFeedXml) loadedItems.push('RSS feeds');
                     
                     fetchStatus.className = 'fetch-status show success';
