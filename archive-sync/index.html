@@ -537,11 +537,41 @@
     <div class="step">
         <h2><span class="step-number">2</span> Scan Archives</h2>
         <p class="help-text">
-            Fetch the canonical sidebar from your homepage and compare it against all category, tag, and author archive pages to find any that are out of sync.
+            Fetch the canonical sidebar from your homepage and compare it against all archive pages including: yearly archives, monthly archives, category archives, tag archives, author archives, and individual post pages.
         </p>
         
+        <div style="margin-bottom: 15px; padding: 15px; background: var(--light-bg); border-radius: 3px; border: 1px solid var(--border-color);">
+            <label style="margin-bottom: 10px; font-weight: 600;">Page types to scan:</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="scanYears" checked style="width: 14px; height: 14px; accent-color: var(--accent-1);">
+                    Yearly Archives
+                </label>
+                <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="scanMonths" checked style="width: 14px; height: 14px; accent-color: var(--accent-1);">
+                    Monthly Archives
+                </label>
+                <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="scanCategories" checked style="width: 14px; height: 14px; accent-color: var(--accent-1);">
+                    Category Archives
+                </label>
+                <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="scanTags" checked style="width: 14px; height: 14px; accent-color: var(--accent-1);">
+                    Tag Archives
+                </label>
+                <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="scanAuthors" checked style="width: 14px; height: 14px; accent-color: var(--accent-1);">
+                    Author Archives
+                </label>
+                <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                    <input type="checkbox" id="scanPosts" style="width: 14px; height: 14px; accent-color: var(--accent-1);">
+                    Individual Posts <span style="color: #888; font-size: 0.85em;">(slow - many pages)</span>
+                </label>
+            </div>
+        </div>
+        
         <button class="btn btn-primary" id="scanBtn" onclick="scanArchives()">
-            🔍 Scan All Archives
+            🔍 Scan Selected Page Types
         </button>
         
         <div class="status" id="scanStatus"></div>
@@ -561,7 +591,7 @@
         <div class="results-summary">
             <div class="summary-card total">
                 <div class="number" id="totalCount">0</div>
-                <div class="label">Total Archives</div>
+                <div class="label">Total Pages</div>
             </div>
             <div class="summary-card synced">
                 <div class="number" id="syncedCount">0</div>
@@ -772,25 +802,35 @@
                 updateProgress(10, 'Discovering archive pages...');
                 const archivePaths = [];
                 
+                // Get scan options
+                const scanCategories = document.getElementById('scanCategories').checked;
+                const scanTags = document.getElementById('scanTags').checked;
+                const scanAuthors = document.getElementById('scanAuthors').checked;
+                const scanYears = document.getElementById('scanYears').checked;
+                const scanMonths = document.getElementById('scanMonths').checked;
+                const scanPosts = document.getElementById('scanPosts').checked;
+                
                 // Scan category directory
-                updateProgress(15, 'Scanning category archives...');
-                const categoryDir = await fetchDirectory(owner, repoName, 'category', token);
-                if (categoryDir) {
-                    for (const item of categoryDir) {
-                        if (item.type === 'dir') {
-                            // Check for nested categories
-                            const subDir = await fetchDirectory(owner, repoName, `category/${item.name}`, token);
-                            if (subDir) {
-                                const hasIndex = subDir.some(f => f.name === 'index.html');
-                                if (hasIndex) {
-                                    archivePaths.push({ type: 'category', path: `category/${item.name}/index.html`, name: item.name });
-                                }
+                if (scanCategories) {
+                    updateProgress(10, 'Scanning category archives...');
+                    const categoryDir = await fetchDirectory(owner, repoName, 'category', token);
+                    if (categoryDir) {
+                        for (const item of categoryDir) {
+                            if (item.type === 'dir') {
                                 // Check for nested categories
-                                for (const subItem of subDir) {
-                                    if (subItem.type === 'dir') {
-                                        const nestedDir = await fetchDirectory(owner, repoName, `category/${item.name}/${subItem.name}`, token);
-                                        if (nestedDir && nestedDir.some(f => f.name === 'index.html')) {
-                                            archivePaths.push({ type: 'category', path: `category/${item.name}/${subItem.name}/index.html`, name: `${item.name}/${subItem.name}` });
+                                const subDir = await fetchDirectory(owner, repoName, `category/${item.name}`, token);
+                                if (subDir) {
+                                    const hasIndex = subDir.some(f => f.name === 'index.html');
+                                    if (hasIndex) {
+                                        archivePaths.push({ type: 'category', path: `category/${item.name}/index.html`, name: item.name });
+                                    }
+                                    // Check for nested categories
+                                    for (const subItem of subDir) {
+                                        if (subItem.type === 'dir') {
+                                            const nestedDir = await fetchDirectory(owner, repoName, `category/${item.name}/${subItem.name}`, token);
+                                            if (nestedDir && nestedDir.some(f => f.name === 'index.html')) {
+                                                archivePaths.push({ type: 'category', path: `category/${item.name}/${subItem.name}/index.html`, name: `${item.name}/${subItem.name}` });
+                                            }
                                         }
                                     }
                                 }
@@ -800,40 +840,115 @@
                 }
                 
                 // Scan tag directory
-                updateProgress(25, 'Scanning tag archives...');
-                const tagDir = await fetchDirectory(owner, repoName, 'tag', token);
-                if (tagDir) {
-                    for (const item of tagDir) {
-                        if (item.type === 'dir') {
-                            const subDir = await fetchDirectory(owner, repoName, `tag/${item.name}`, token);
-                            if (subDir && subDir.some(f => f.name === 'index.html')) {
-                                archivePaths.push({ type: 'tag', path: `tag/${item.name}/index.html`, name: item.name });
+                if (scanTags) {
+                    updateProgress(15, 'Scanning tag archives...');
+                    const tagDir = await fetchDirectory(owner, repoName, 'tag', token);
+                    if (tagDir) {
+                        for (const item of tagDir) {
+                            if (item.type === 'dir') {
+                                const subDir = await fetchDirectory(owner, repoName, `tag/${item.name}`, token);
+                                if (subDir && subDir.some(f => f.name === 'index.html')) {
+                                    archivePaths.push({ type: 'tag', path: `tag/${item.name}/index.html`, name: item.name });
+                                }
                             }
                         }
                     }
                 }
                 
                 // Scan author directory
-                updateProgress(35, 'Scanning author archives...');
-                const authorDir = await fetchDirectory(owner, repoName, 'author', token);
-                if (authorDir) {
-                    for (const item of authorDir) {
-                        if (item.type === 'dir') {
-                            const subDir = await fetchDirectory(owner, repoName, `author/${item.name}`, token);
-                            if (subDir && subDir.some(f => f.name === 'index.html')) {
-                                archivePaths.push({ type: 'author', path: `author/${item.name}/index.html`, name: item.name });
+                if (scanAuthors) {
+                    updateProgress(20, 'Scanning author archives...');
+                    const authorDir = await fetchDirectory(owner, repoName, 'author', token);
+                    if (authorDir) {
+                        for (const item of authorDir) {
+                            if (item.type === 'dir') {
+                                const subDir = await fetchDirectory(owner, repoName, `author/${item.name}`, token);
+                                if (subDir && subDir.some(f => f.name === 'index.html')) {
+                                    archivePaths.push({ type: 'author', path: `author/${item.name}/index.html`, name: item.name });
+                                }
                             }
                         }
                     }
                 }
                 
-                updateProgress(40, `Found ${archivePaths.length} archive pages. Checking each...`);
+                // Scan for yearly, monthly archives and individual posts
+                if (scanYears || scanMonths || scanPosts) {
+                    updateProgress(25, 'Scanning date-based archives...');
+                    const rootDir = await fetchDirectory(owner, repoName, '', token);
+                    if (rootDir) {
+                        // Find year directories (4 digit numbers)
+                        const yearDirs = rootDir.filter(item => item.type === 'dir' && /^\d{4}$/.test(item.name));
+                        
+                        for (const yearItem of yearDirs) {
+                            const year = yearItem.name;
+                            updateProgress(28, `Scanning ${year}...`);
+                            
+                            const yearDir = await fetchDirectory(owner, repoName, year, token);
+                            if (yearDir) {
+                                // Check for yearly archive index.html
+                                if (scanYears && yearDir.some(f => f.name === 'index.html')) {
+                                    archivePaths.push({ type: 'year', path: `${year}/index.html`, name: year });
+                                }
+                                
+                                if (scanMonths || scanPosts) {
+                                    // Find month directories (2 digit numbers)
+                                    const monthDirs = yearDir.filter(item => item.type === 'dir' && /^\d{2}$/.test(item.name));
+                                    
+                                    for (const monthItem of monthDirs) {
+                                        const month = monthItem.name;
+                                        const monthDir = await fetchDirectory(owner, repoName, `${year}/${month}`, token);
+                                        
+                                        if (monthDir) {
+                                            // Check for monthly archive index.html
+                                            if (scanMonths && monthDir.some(f => f.name === 'index.html')) {
+                                                archivePaths.push({ type: 'month', path: `${year}/${month}/index.html`, name: `${year}/${month}` });
+                                            }
+                                            
+                                            if (scanPosts) {
+                                                // Find day directories (2 digit numbers) for individual posts
+                                                const dayDirs = monthDir.filter(item => item.type === 'dir' && /^\d{2}$/.test(item.name));
+                                                
+                                                for (const dayItem of dayDirs) {
+                                                    const day = dayItem.name;
+                                                    const dayDir = await fetchDirectory(owner, repoName, `${year}/${month}/${day}`, token);
+                                                    
+                                                    if (dayDir) {
+                                                        // Find post slug directories
+                                                        const postDirs = dayDir.filter(item => item.type === 'dir');
+                                                        
+                                                        for (const postItem of postDirs) {
+                                                            const slug = postItem.name;
+                                                            const postDir = await fetchDirectory(owner, repoName, `${year}/${month}/${day}/${slug}`, token);
+                                                            
+                                                            if (postDir && postDir.some(f => f.name === 'index.html')) {
+                                                                archivePaths.push({ 
+                                                                    type: 'post', 
+                                                                    path: `${year}/${month}/${day}/${slug}/index.html`, 
+                                                                    name: slug 
+                                                                });
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // Small delay between years to avoid rate limiting
+                            await new Promise(r => setTimeout(r, 50));
+                        }
+                    }
+                }
+                
+                updateProgress(35, `Found ${archivePaths.length} pages. Checking each...`);
                 
                 // Step 3: Check each archive page
                 const totalPages = archivePaths.length;
                 for (let i = 0; i < archivePaths.length; i++) {
                     const archive = archivePaths[i];
-                    const progress = 40 + Math.round((i / totalPages) * 55);
+                    const progress = 35 + Math.round((i / totalPages) * 60);
                     updateProgress(progress, `Checking ${archive.path}... (${i + 1}/${totalPages})`);
                     
                     try {
@@ -886,9 +1001,21 @@
             
             // Group by type
             const byType = {
+                year: archiveResults.filter(a => a.type === 'year'),
+                month: archiveResults.filter(a => a.type === 'month'),
                 category: archiveResults.filter(a => a.type === 'category'),
                 tag: archiveResults.filter(a => a.type === 'tag'),
-                author: archiveResults.filter(a => a.type === 'author')
+                author: archiveResults.filter(a => a.type === 'author'),
+                post: archiveResults.filter(a => a.type === 'post')
+            };
+            
+            const typeLabels = {
+                year: 'Yearly Archives',
+                month: 'Monthly Archives',
+                category: 'Category Archives',
+                tag: 'Tag Archives',
+                author: 'Author Archives',
+                post: 'Individual Posts'
             };
             
             let html = '';
@@ -896,7 +1023,7 @@
             for (const [type, archives] of Object.entries(byType)) {
                 if (archives.length === 0) continue;
                 
-                const typeLabel = type.charAt(0).toUpperCase() + type.slice(1);
+                const typeLabel = typeLabels[type] || type.charAt(0).toUpperCase() + type.slice(1);
                 const outOfSync = archives.filter(a => !a.inSync).length;
                 html += `<div class="archive-type-header">${typeLabel} Archives (${outOfSync} out of sync)</div>`;
                 
