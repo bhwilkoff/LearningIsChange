@@ -614,6 +614,19 @@
             <button class="btn btn-success" id="fixBtn" onclick="fixSelected()" disabled>
                 🔧 Fix Selected Archives
             </button>
+            <button class="btn btn-secondary" id="stopBtn" onclick="stopBatchProcessing()" style="display: none;">
+                ⏹️ Stop After Current Batch
+            </button>
+        </div>
+        
+        <div class="batch-progress" id="batchProgress" style="display: none; margin-top: 15px; padding: 15px; background: var(--light-bg); border-radius: 3px; border: 1px solid var(--border-color);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span id="batchStatus">Processing batch 1 of 10...</span>
+                <span id="batchCount">0 / 0 pages</span>
+            </div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="batchProgressBar" style="width: 0%;"></div>
+            </div>
         </div>
         
         <div class="log-output" id="logOutput"></div>
@@ -1086,6 +1099,29 @@
             return btoa(chars.join(''));
         }
         
+        // Batch processing state
+        let stopRequested = false;
+        const BATCH_SIZE = 200; // Number of files per commit for posts
+        const ARCHIVE_BATCH_SIZE = 200; // Batch size for archive pages
+        
+        function stopBatchProcessing() {
+            stopRequested = true;
+            log('⏸️ Stop requested - will stop after current batch completes...', 'info');
+            document.getElementById('stopBtn').disabled = true;
+            document.getElementById('stopBtn').textContent = '⏳ Stopping...';
+        }
+        
+        function updateBatchProgress(current, total, batchNum, totalBatches) {
+            const batchProgress = document.getElementById('batchProgress');
+            batchProgress.style.display = 'block';
+            
+            document.getElementById('batchStatus').textContent = `Processing batch ${batchNum} of ${totalBatches}...`;
+            document.getElementById('batchCount').textContent = `${current} / ${total} pages`;
+            
+            const percent = total > 0 ? Math.round((current / total) * 100) : 0;
+            document.getElementById('batchProgressBar').style.width = `${percent}%`;
+        }
+        
         async function fixSelected() {
             const token = document.getElementById('githubToken').value.trim();
             const repo = document.getElementById('githubRepo').value.trim();
@@ -1102,26 +1138,135 @@
                 return;
             }
             
+            // Separate posts from other archive types
+            const postPaths = selectedPaths.filter(p => /^\d{4}\/\d{2}\/\d{2}\//.test(p));
+            const archivePaths = selectedPaths.filter(p => !/^\d{4}\/\d{2}\/\d{2}\//.test(p));
+            
             const fixBtn = document.getElementById('fixBtn');
+            const stopBtn = document.getElementById('stopBtn');
             fixBtn.disabled = true;
+            stopRequested = false;
             clearLog();
             
-            log(`Starting to fix ${selectedPaths.length} archive(s)...`, 'info');
+            // Show stop button if we have posts to process
+            if (postPaths.length > BATCH_SIZE) {
+                stopBtn.style.display = 'inline-flex';
+                stopBtn.disabled = false;
+                stopBtn.textContent = '⏹️ Stop After Current Batch';
+            }
+            
+            const totalFiles = selectedPaths.length;
+            let processedFiles = 0;
+            
+            log(`Starting to fix ${totalFiles} page(s)...`, 'info');
+            if (archivePaths.length > 0) {
+                log(`  • ${archivePaths.length} archive pages`, 'info');
+            }
+            if (postPaths.length > 0) {
+                log(`  • ${postPaths.length} individual posts (will process in batches of ${BATCH_SIZE})`, 'info');
+            }
+            
+            const headers = {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28',
+                'Content-Type': 'application/json'
+            };
             
             try {
-                const headers = {
-                    'Authorization': `Bearer ${token}`,
-                    'Accept': 'application/vnd.github+json',
-                    'X-GitHub-Api-Version': '2022-11-28',
-                    'Content-Type': 'application/json'
-                };
+                // Process archive pages first (in one or few batches)
+                if (archivePaths.length > 0 && !stopRequested) {
+                    const archiveBatches = [];
+                    for (let i = 0; i < archivePaths.length; i += ARCHIVE_BATCH_SIZE) {
+                        archiveBatches.push(archivePaths.slice(i, i + ARCHIVE_BATCH_SIZE));
+                    }
+                    
+                    for (let batchIndex = 0; batchIndex < archiveBatches.length && !stopRequested; batchIndex++) {
+                        const batch = archiveBatches[batchIndex];
+                        log(`\n📁 Processing archive batch ${batchIndex + 1} of ${archiveBatches.length} (${batch.length} pages)...`, 'info');
+                        
+                        const result = await processBatch(batch, owner, repoName, headers, committerName, committerEmail, 'archive');
+                        processedFiles += result.processed;
+                        
+                        updateBatchProgress(processedFiles, totalFiles, batchIndex + 1, archiveBatches.length + Math.ceil(postPaths.length / BATCH_SIZE));
+                        
+                        if (!result.success) {
+                            log(`⚠️ Batch had errors, continuing...`, 'error');
+                        }
+                        
+                        // Small delay between batches
+                        if (batchIndex < archiveBatches.length - 1) {
+                            await new Promise(r => setTimeout(r, 1000));
+                        }
+                    }
+                }
                 
+                // Process posts in smaller batches
+                if (postPaths.length > 0 && !stopRequested) {
+                    const postBatches = [];
+                    for (let i = 0; i < postPaths.length; i += BATCH_SIZE) {
+                        postBatches.push(postPaths.slice(i, i + BATCH_SIZE));
+                    }
+                    
+                    const archiveBatchCount = Math.ceil(archivePaths.length / ARCHIVE_BATCH_SIZE);
+                    
+                    for (let batchIndex = 0; batchIndex < postBatches.length && !stopRequested; batchIndex++) {
+                        const batch = postBatches[batchIndex];
+                        const overallBatchNum = archiveBatchCount + batchIndex + 1;
+                        const totalBatches = archiveBatchCount + postBatches.length;
+                        
+                        log(`\n📄 Processing post batch ${batchIndex + 1} of ${postBatches.length} (${batch.length} posts)...`, 'info');
+                        updateBatchProgress(processedFiles, totalFiles, overallBatchNum, totalBatches);
+                        
+                        const result = await processBatch(batch, owner, repoName, headers, committerName, committerEmail, 'post');
+                        processedFiles += result.processed;
+                        
+                        updateBatchProgress(processedFiles, totalFiles, overallBatchNum, totalBatches);
+                        
+                        if (!result.success) {
+                            log(`⚠️ Batch had errors, continuing...`, 'error');
+                        }
+                        
+                        // Longer delay between post batches to avoid rate limiting
+                        if (batchIndex < postBatches.length - 1 && !stopRequested) {
+                            log(`⏳ Waiting 2 seconds before next batch...`, 'info');
+                            await new Promise(r => setTimeout(r, 2000));
+                        }
+                    }
+                }
+                
+                if (stopRequested) {
+                    log(`\n⏹️ Processing stopped by user after ${processedFiles} pages.`, 'info');
+                } else {
+                    log(`\n✅ Successfully updated ${processedFiles} page(s)!`, 'success');
+                }
+                
+                // Update UI to reflect fixed items
+                displayResults();
+                
+            } catch (error) {
+                console.error('Fix error:', error);
+                log(`\n❌ Error: ${error.message}`, 'error');
+            }
+            
+            fixBtn.disabled = false;
+            stopBtn.style.display = 'none';
+            document.getElementById('batchProgress').style.display = 'none';
+            updateFixButton();
+        }
+        
+        async function processBatch(paths, owner, repoName, headers, committerName, committerEmail, batchType) {
+            let processed = 0;
+            
+            try {
                 // Get current commit SHA
-                log('Getting current branch state...', 'info');
                 const refResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/ref/heads/main`, { headers });
-                if (!refResponse.ok) throw new Error('Failed to get branch reference');
+                if (!refResponse.ok) {
+                    const errorData = await refResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to get branch reference: ${refResponse.status} - ${errorData.message || ''}`);
+                }
                 const refData = await refResponse.json();
-                const currentCommitSha = refData.object.sha;
+                let currentCommitSha = refData.object.sha;
                 
                 // Get current tree
                 const commitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
@@ -1129,47 +1274,60 @@
                 const commitData = await commitResponse.json();
                 const baseTreeSha = commitData.tree.sha;
                 
-                // Create blobs for each file
+                // Create blobs for each file in batch
                 const treeItems = [];
-                for (const path of selectedPaths) {
+                for (let i = 0; i < paths.length; i++) {
+                    const path = paths[i];
                     const archive = archiveResults.find(a => a.path === path);
                     if (!archive) continue;
                     
-                    log(`Updating sidebar in ${path}...`, 'info');
-                    const updatedHtml = updateSidebarInPage(archive.html, canonicalSidebar);
-                    const base64Content = stringToBase64(updatedHtml);
-                    
-                    const blobResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/blobs`, {
-                        method: 'POST',
-                        headers,
-                        body: JSON.stringify({
-                            content: base64Content,
-                            encoding: 'base64'
-                        })
-                    });
-                    
-                    if (!blobResponse.ok) {
-                        log(`Failed to create blob for ${path}`, 'error');
-                        continue;
+                    try {
+                        const updatedHtml = updateSidebarInPage(archive.html, canonicalSidebar);
+                        const base64Content = stringToBase64(updatedHtml);
+                        
+                        const blobResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/blobs`, {
+                            method: 'POST',
+                            headers,
+                            body: JSON.stringify({
+                                content: base64Content,
+                                encoding: 'base64'
+                            })
+                        });
+                        
+                        if (!blobResponse.ok) {
+                            const errorData = await blobResponse.json().catch(() => ({}));
+                            log(`  ⚠️ Failed to create blob for ${path}: ${errorData.message || blobResponse.status}`, 'error');
+                            continue;
+                        }
+                        
+                        const blobData = await blobResponse.json();
+                        treeItems.push({
+                            path: path,
+                            mode: '100644',
+                            type: 'blob',
+                            sha: blobData.sha
+                        });
+                        
+                        // Update local state
+                        archive.inSync = true;
+                        archive.html = updatedHtml;
+                        processed++;
+                        
+                        // Small delay every 10 blobs to avoid rate limiting
+                        if (i > 0 && i % 10 === 0) {
+                            await new Promise(r => setTimeout(r, 100));
+                        }
+                    } catch (e) {
+                        log(`  ⚠️ Error processing ${path}: ${e.message}`, 'error');
                     }
-                    
-                    const blobData = await blobResponse.json();
-                    treeItems.push({
-                        path: path,
-                        mode: '100644',
-                        type: 'blob',
-                        sha: blobData.sha
-                    });
-                    
-                    log(`✓ Prepared ${path}`, 'success');
                 }
                 
                 if (treeItems.length === 0) {
-                    throw new Error('No files to commit');
+                    log('  ℹ️ No files to commit in this batch', 'info');
+                    return { success: true, processed: 0 };
                 }
                 
                 // Create new tree
-                log('Creating commit tree...', 'info');
                 const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/trees`, {
                     method: 'POST',
                     headers,
@@ -1179,16 +1337,22 @@
                     })
                 });
                 
-                if (!treeResponse.ok) throw new Error('Failed to create tree');
+                if (!treeResponse.ok) {
+                    const errorData = await treeResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to create tree: ${errorData.message || treeResponse.status}`);
+                }
                 const treeData = await treeResponse.json();
                 
                 // Create commit
-                log('Creating commit...', 'info');
+                const commitMessage = batchType === 'post' 
+                    ? `Sync sidebar on ${treeItems.length} post page(s)`
+                    : `Sync sidebar on ${treeItems.length} archive page(s)`;
+                    
                 const newCommitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits`, {
                     method: 'POST',
                     headers,
                     body: JSON.stringify({
-                        message: `Sync sidebar on ${treeItems.length} archive page(s)`,
+                        message: commitMessage,
                         tree: treeData.sha,
                         parents: [currentCommitSha],
                         author: {
@@ -1204,11 +1368,13 @@
                     })
                 });
                 
-                if (!newCommitResponse.ok) throw new Error('Failed to create commit');
+                if (!newCommitResponse.ok) {
+                    const errorData = await newCommitResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to create commit: ${errorData.message || newCommitResponse.status}`);
+                }
                 const newCommitData = await newCommitResponse.json();
                 
                 // Update branch reference
-                log('Updating branch...', 'info');
                 const updateRefResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/refs/heads/main`, {
                     method: 'PATCH',
                     headers,
@@ -1218,27 +1384,18 @@
                     })
                 });
                 
-                if (!updateRefResponse.ok) throw new Error('Failed to update branch');
-                
-                log(`✅ Successfully updated ${treeItems.length} archive page(s)!`, 'success');
-                
-                // Update UI to reflect fixed items
-                for (const path of selectedPaths) {
-                    const archive = archiveResults.find(a => a.path === path);
-                    if (archive) {
-                        archive.inSync = true;
-                        archive.html = updateSidebarInPage(archive.html, canonicalSidebar);
-                    }
+                if (!updateRefResponse.ok) {
+                    const errorData = await updateRefResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to update branch: ${errorData.message || updateRefResponse.status}`);
                 }
-                displayResults();
+                
+                log(`  ✅ Committed ${treeItems.length} files`, 'success');
+                return { success: true, processed };
                 
             } catch (error) {
-                console.error('Fix error:', error);
-                log(`❌ Error: ${error.message}`, 'error');
+                log(`  ❌ Batch error: ${error.message}`, 'error');
+                return { success: false, processed };
             }
-            
-            fixBtn.disabled = false;
-            updateFixButton();
         }
     </script>
 </body>
