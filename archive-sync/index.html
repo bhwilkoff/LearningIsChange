@@ -1434,8 +1434,8 @@
                         
                         // Longer delay between post batches to avoid rate limiting
                         if (batchIndex < postBatches.length - 1 && !stopRequested) {
-                            log(`⏳ Waiting 2 seconds before next batch...`, 'info');
-                            await new Promise(r => setTimeout(r, 2000));
+                            log(`⏳ Waiting 5 seconds before next batch...`, 'info');
+                            await new Promise(r => setTimeout(r, 5000));
                         }
                     }
                 }
@@ -1462,24 +1462,10 @@
         
         async function processBatch(paths, owner, repoName, headers, committerName, committerEmail, batchType) {
             let processed = 0;
+            const MAX_RETRIES = 3;
             
             try {
-                // Get current commit SHA
-                const refResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/ref/heads/main`, { headers });
-                if (!refResponse.ok) {
-                    const errorData = await refResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to get branch reference: ${refResponse.status} - ${errorData.message || ''}`);
-                }
-                const refData = await refResponse.json();
-                let currentCommitSha = refData.object.sha;
-                
-                // Get current tree
-                const commitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
-                if (!commitResponse.ok) throw new Error('Failed to get current commit');
-                const commitData = await commitResponse.json();
-                const baseTreeSha = commitData.tree.sha;
-                
-                // Create blobs for each file in batch
+                // Step 1: Create blobs for all files FIRST (these don't depend on current commit SHA)
                 const treeItems = [];
                 for (let i = 0; i < paths.length; i++) {
                     const path = paths[i];
@@ -1529,78 +1515,119 @@
                 
                 if (treeItems.length === 0) {
                     log('  ℹ️ No files to commit in this batch', 'info');
-                    return { success: true, processed: 0 };
+                    return { success: true, processed: 0, committedPaths: [] };
                 }
                 
-                // Create new tree
-                const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/trees`, {
-                    method: 'POST',
-                    headers,
-                    body: JSON.stringify({
-                        base_tree: baseTreeSha,
-                        tree: treeItems
-                    })
-                });
+                log(`  📦 Created ${treeItems.length} blobs, now committing...`, 'info');
                 
-                if (!treeResponse.ok) {
-                    const errorData = await treeResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to create tree: ${errorData.message || treeResponse.status}`);
-                }
-                const treeData = await treeResponse.json();
-                
-                // Create commit
-                const commitMessage = batchType === 'post' 
-                    ? `Sync sidebar on ${treeItems.length} post page(s)`
-                    : `Sync sidebar on ${treeItems.length} archive page(s)`;
-                    
-                const newCommitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits`, {
-                    method: 'POST',
-                    headers,
-                    body: JSON.stringify({
-                        message: commitMessage,
-                        tree: treeData.sha,
-                        parents: [currentCommitSha],
-                        author: {
-                            name: committerName,
-                            email: committerEmail,
-                            date: new Date().toISOString()
-                        },
-                        committer: {
-                            name: committerName,
-                            email: committerEmail,
-                            date: new Date().toISOString()
+                // Step 2: Commit with retry logic (in case branch moved)
+                for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+                    try {
+                        // Get FRESH commit SHA right before committing
+                        const refResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/ref/heads/main`, { headers });
+                        if (!refResponse.ok) {
+                            throw new Error(`Failed to get branch reference: ${refResponse.status}`);
                         }
-                    })
-                });
-                
-                if (!newCommitResponse.ok) {
-                    const errorData = await newCommitResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to create commit: ${errorData.message || newCommitResponse.status}`);
+                        const refData = await refResponse.json();
+                        const currentCommitSha = refData.object.sha;
+                        
+                        // Get current tree
+                        const commitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
+                        if (!commitResponse.ok) throw new Error('Failed to get current commit');
+                        const commitData = await commitResponse.json();
+                        const baseTreeSha = commitData.tree.sha;
+                        
+                        // Create new tree
+                        const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/trees`, {
+                            method: 'POST',
+                            headers,
+                            body: JSON.stringify({
+                                base_tree: baseTreeSha,
+                                tree: treeItems
+                            })
+                        });
+                        
+                        if (!treeResponse.ok) {
+                            const errorData = await treeResponse.json().catch(() => ({}));
+                            throw new Error(`Failed to create tree: ${errorData.message || treeResponse.status}`);
+                        }
+                        const treeData = await treeResponse.json();
+                        
+                        // Create commit
+                        const commitMessage = batchType === 'post' 
+                            ? `Sync sidebar on ${treeItems.length} post page(s)`
+                            : `Sync sidebar on ${treeItems.length} archive page(s)`;
+                            
+                        const newCommitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits`, {
+                            method: 'POST',
+                            headers,
+                            body: JSON.stringify({
+                                message: commitMessage,
+                                tree: treeData.sha,
+                                parents: [currentCommitSha],
+                                author: {
+                                    name: committerName,
+                                    email: committerEmail,
+                                    date: new Date().toISOString()
+                                },
+                                committer: {
+                                    name: committerName,
+                                    email: committerEmail,
+                                    date: new Date().toISOString()
+                                }
+                            })
+                        });
+                        
+                        if (!newCommitResponse.ok) {
+                            const errorData = await newCommitResponse.json().catch(() => ({}));
+                            throw new Error(`Failed to create commit: ${errorData.message || newCommitResponse.status}`);
+                        }
+                        const newCommitData = await newCommitResponse.json();
+                        
+                        // Update branch reference (use force:true since we're the only one updating)
+                        const updateRefResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/refs/heads/main`, {
+                            method: 'PATCH',
+                            headers,
+                            body: JSON.stringify({
+                                sha: newCommitData.sha,
+                                force: true  // Force push - safe since this is a single-user tool
+                            })
+                        });
+                        
+                        if (!updateRefResponse.ok) {
+                            const errorData = await updateRefResponse.json().catch(() => ({}));
+                            const errorMsg = errorData.message || String(updateRefResponse.status);
+                            log(`  ⚠️ Update ref failed: "${errorMsg}" (attempt ${attempt}/${MAX_RETRIES})`, 'error');
+                            
+                            if (attempt < MAX_RETRIES) {
+                                log(`  🔄 Will retry...`, 'info');
+                                await new Promise(r => setTimeout(r, 2000));
+                                continue;
+                            }
+                            throw new Error(`Failed to update branch: ${errorMsg}`);
+                        }
+                        
+                        // Success! Mark files as synced and return
+                        const committedPaths = treeItems.map(t => t.path);
+                        markAsSynced(committedPaths);
+                        updateCacheDisplay();
+                        
+                        log(`  ✅ Committed ${treeItems.length} files`, 'success');
+                        return { success: true, processed, committedPaths };
+                        
+                    } catch (commitError) {
+                        log(`  ⚠️ Commit error on attempt ${attempt}/${MAX_RETRIES}: "${commitError.message}"`, 'error');
+                        
+                        if (attempt < MAX_RETRIES) {
+                            log(`  🔄 Will retry...`, 'info');
+                            await new Promise(r => setTimeout(r, 2000));
+                            continue;
+                        }
+                        throw commitError;
+                    }
                 }
-                const newCommitData = await newCommitResponse.json();
                 
-                // Update branch reference
-                const updateRefResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/refs/heads/main`, {
-                    method: 'PATCH',
-                    headers,
-                    body: JSON.stringify({
-                        sha: newCommitData.sha,
-                        force: false
-                    })
-                });
-                
-                if (!updateRefResponse.ok) {
-                    const errorData = await updateRefResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to update branch: ${errorData.message || updateRefResponse.status}`);
-                }
-                
-                // Mark successfully committed files as synced in cache
-                const committedPaths = treeItems.map(t => t.path);
-                markAsSynced(committedPaths);
-                updateCacheDisplay();
-                
-                log(`  ✅ Committed ${treeItems.length} files`, 'success');
-                return { success: true, processed, committedPaths };
+                throw new Error('Max retries exceeded');
                 
             } catch (error) {
                 log(`  ❌ Batch error: ${error.message}`, 'error');
