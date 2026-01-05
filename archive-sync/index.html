@@ -813,7 +813,23 @@
             logOutput.classList.remove('show');
         }
         
-        async function fetchFile(owner, repo, path, token) {
+        // Fetch file using raw.githubusercontent.com (NO API rate limits!)
+        async function fetchFileRaw(owner, repo, branch, path) {
+            const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    return await response.text();
+                }
+                return null;
+            } catch (e) {
+                console.error(`Error fetching ${path}:`, e);
+                return null;
+            }
+        }
+        
+        // Fetch file using GitHub API (only for initial homepage fetch to ensure auth works)
+        async function fetchFileAPI(owner, repo, path, token) {
             const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -831,22 +847,127 @@
             }
         }
         
-        async function fetchDirectory(owner, repo, path, token) {
-            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+        // Get entire repository tree in ONE API call
+        async function getRepoTree(owner, repo, token) {
+            // Get default branch
+            const repoResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Accept': 'application/vnd.github+json',
+                    'Accept': 'application/vnd.github.v3+json',
                     'X-GitHub-Api-Version': '2022-11-28'
                 }
             });
             
-            if (response.ok) {
-                return await response.json();
-            } else if (response.status === 404) {
-                return null;
-            } else {
-                throw new Error(`GitHub API error: ${response.status}`);
+            if (!repoResponse.ok) {
+                throw new Error(`Failed to fetch repo info: ${repoResponse.status}`);
             }
+            
+            const repoInfo = await repoResponse.json();
+            const defaultBranch = repoInfo.default_branch;
+            
+            // Get full tree recursively - this returns ALL files in ONE call!
+            const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${defaultBranch}?recursive=1`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    'X-GitHub-Api-Version': '2022-11-28'
+                }
+            });
+            
+            if (!treeResponse.ok) {
+                throw new Error(`Failed to fetch tree: ${treeResponse.status}`);
+            }
+            
+            const treeData = await treeResponse.json();
+            
+            if (treeData.truncated) {
+                log('⚠️ Repository tree was truncated (very large repo). Some files may be missed.', 'error');
+            }
+            
+            return { tree: treeData.tree, branch: defaultBranch };
+        }
+        
+        // Extract all page paths from the tree (instantaneous - no API calls!)
+        function extractPathsFromTree(tree, options) {
+            const paths = [];
+            
+            for (const item of tree) {
+                if (item.type !== 'blob' || !item.path.endsWith('index.html')) continue;
+                
+                const path = item.path;
+                
+                // Category pages: category/*/index.html or category/*/*/index.html
+                if (options.scanCategories && path.startsWith('category/')) {
+                    const parts = path.split('/');
+                    if (parts.length === 3) {
+                        paths.push({ type: 'category', path, name: parts[1] });
+                    } else if (parts.length === 4) {
+                        paths.push({ type: 'category', path, name: `${parts[1]}/${parts[2]}` });
+                    }
+                }
+                
+                // Tag pages: tag/*/index.html
+                else if (options.scanTags && path.startsWith('tag/')) {
+                    const parts = path.split('/');
+                    if (parts.length === 3) {
+                        paths.push({ type: 'tag', path, name: parts[1] });
+                    }
+                }
+                
+                // Author pages: author/*/index.html
+                else if (options.scanAuthors && path.startsWith('author/')) {
+                    const parts = path.split('/');
+                    if (parts.length === 3) {
+                        paths.push({ type: 'author', path, name: parts[1] });
+                    }
+                }
+                
+                // Date-based pages: YYYY/index.html, YYYY/MM/index.html, YYYY/MM/DD/slug/index.html
+                else if (/^\d{4}\//.test(path)) {
+                    const parts = path.split('/');
+                    
+                    // Yearly: 2024/index.html
+                    if (options.scanYears && parts.length === 2 && /^\d{4}$/.test(parts[0])) {
+                        paths.push({ type: 'year', path, name: parts[0] });
+                    }
+                    // Monthly: 2024/01/index.html
+                    else if (options.scanMonths && parts.length === 3 && /^\d{4}$/.test(parts[0]) && /^\d{2}$/.test(parts[1])) {
+                        paths.push({ type: 'month', path, name: `${parts[0]}/${parts[1]}` });
+                    }
+                    // Posts: 2024/01/15/slug/index.html
+                    else if (options.scanPosts && parts.length === 5 && /^\d{4}$/.test(parts[0]) && /^\d{2}$/.test(parts[1]) && /^\d{2}$/.test(parts[2])) {
+                        paths.push({ type: 'post', path, name: parts[3] });
+                    }
+                }
+            }
+            
+            return paths;
+        }
+        
+        // Fetch multiple files in parallel with concurrency limit
+        async function fetchFilesParallel(owner, repo, branch, paths, concurrency = 10, onProgress = null) {
+            const results = new Map();
+            let completed = 0;
+            
+            // Process in chunks of `concurrency`
+            for (let i = 0; i < paths.length; i += concurrency) {
+                const chunk = paths.slice(i, i + concurrency);
+                const promises = chunk.map(async (pathInfo) => {
+                    const content = await fetchFileRaw(owner, repo, branch, pathInfo.path);
+                    completed++;
+                    if (onProgress) onProgress(completed, paths.length);
+                    return { pathInfo, content };
+                });
+                
+                const chunkResults = await Promise.all(promises);
+                for (const { pathInfo, content } of chunkResults) {
+                    if (content) {
+                        results.set(pathInfo.path, { ...pathInfo, html: content });
+                    }
+                }
+            }
+            
+            return results;
         }
         
         function extractSidebar(html) {
@@ -909,9 +1030,10 @@
             clearLog();
             
             try {
-                // Step 1: Fetch homepage to get canonical sidebar
+                // Step 1: Fetch homepage to get canonical sidebar (using API for auth check)
                 updateProgress(5, 'Fetching homepage for canonical sidebar...');
-                const homepage = await fetchFile(owner, repoName, 'index.html', token);
+                log('📄 Fetching homepage...', 'info');
+                const homepage = await fetchFileAPI(owner, repoName, 'index.html', token);
                 if (!homepage) {
                     throw new Error('Could not fetch homepage');
                 }
@@ -934,219 +1056,113 @@
                 const cachedCount = getCacheStats();
                 showStatus('scanStatus', `✅ Found canonical sidebar with ${canonicalLinks.size} month links. ${cachedCount} files in cache.`, 'success');
                 
-                // Step 2: Discover all archive pages (or load from cache)
-                updateProgress(10, 'Discovering archive pages...');
-                let archivePaths = [];
+                // Step 2: Get entire repo tree in ONE API call
+                updateProgress(10, 'Fetching repository structure (one API call)...');
+                log('🌳 Fetching complete repository tree...', 'info');
+                const { tree, branch } = await getRepoTree(owner, repoName, token);
+                log(`✅ Got ${tree.length} items from repository tree`, 'success');
                 
-                // Get scan options
-                const scanCategories = document.getElementById('scanCategories').checked;
-                const scanTags = document.getElementById('scanTags').checked;
-                const scanAuthors = document.getElementById('scanAuthors').checked;
-                const scanYears = document.getElementById('scanYears').checked;
-                const scanMonths = document.getElementById('scanMonths').checked;
-                const scanPosts = document.getElementById('scanPosts').checked;
+                // Step 3: Extract all page paths instantly (no API calls!)
+                updateProgress(15, 'Extracting page paths from tree...');
+                const scanOptions = {
+                    scanCategories: document.getElementById('scanCategories').checked,
+                    scanTags: document.getElementById('scanTags').checked,
+                    scanAuthors: document.getElementById('scanAuthors').checked,
+                    scanYears: document.getElementById('scanYears').checked,
+                    scanMonths: document.getElementById('scanMonths').checked,
+                    scanPosts: document.getElementById('scanPosts').checked
+                };
                 
-                // Try to load cached paths first
-                const cachedProgress = loadScanProgress();
-                if (cachedProgress.paths && cachedProgress.paths.length > 0) {
-                    archivePaths = cachedProgress.paths;
-                    log(`📂 Loaded ${archivePaths.length} paths from cache`, 'info');
-                } else {
-                    // Discover all paths
-                    log('🔍 Discovering all page paths...', 'info');
-                    
-                    // Scan category directory
-                    if (scanCategories) {
-                        updateProgress(10, 'Scanning category archives...');
-                        const categoryDir = await fetchDirectory(owner, repoName, 'category', token);
-                        if (categoryDir) {
-                            for (const item of categoryDir) {
-                                if (item.type === 'dir') {
-                                    const subDir = await fetchDirectory(owner, repoName, `category/${item.name}`, token);
-                                    if (subDir) {
-                                        const hasIndex = subDir.some(f => f.name === 'index.html');
-                                        if (hasIndex) {
-                                            archivePaths.push({ type: 'category', path: `category/${item.name}/index.html`, name: item.name });
-                                        }
-                                        for (const subItem of subDir) {
-                                            if (subItem.type === 'dir') {
-                                                const nestedDir = await fetchDirectory(owner, repoName, `category/${item.name}/${subItem.name}`, token);
-                                                if (nestedDir && nestedDir.some(f => f.name === 'index.html')) {
-                                                    archivePaths.push({ type: 'category', path: `category/${item.name}/${subItem.name}/index.html`, name: `${item.name}/${subItem.name}` });
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Scan tag directory
-                    if (scanTags) {
-                        updateProgress(15, 'Scanning tag archives...');
-                        const tagDir = await fetchDirectory(owner, repoName, 'tag', token);
-                        if (tagDir) {
-                            for (const item of tagDir) {
-                                if (item.type === 'dir') {
-                                    const subDir = await fetchDirectory(owner, repoName, `tag/${item.name}`, token);
-                                    if (subDir && subDir.some(f => f.name === 'index.html')) {
-                                        archivePaths.push({ type: 'tag', path: `tag/${item.name}/index.html`, name: item.name });
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Scan author directory
-                    if (scanAuthors) {
-                        updateProgress(20, 'Scanning author archives...');
-                        const authorDir = await fetchDirectory(owner, repoName, 'author', token);
-                        if (authorDir) {
-                            for (const item of authorDir) {
-                                if (item.type === 'dir') {
-                                    const subDir = await fetchDirectory(owner, repoName, `author/${item.name}`, token);
-                                    if (subDir && subDir.some(f => f.name === 'index.html')) {
-                                        archivePaths.push({ type: 'author', path: `author/${item.name}/index.html`, name: item.name });
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Scan for yearly, monthly archives and individual posts
-                    if (scanYears || scanMonths || scanPosts) {
-                        updateProgress(25, 'Scanning date-based archives...');
-                        const rootDir = await fetchDirectory(owner, repoName, '', token);
-                        if (rootDir) {
-                            const yearDirs = rootDir.filter(item => item.type === 'dir' && /^\d{4}$/.test(item.name));
-                            
-                            for (const yearItem of yearDirs) {
-                                const year = yearItem.name;
-                                updateProgress(28, `Scanning ${year}...`);
-                                
-                                const yearDir = await fetchDirectory(owner, repoName, year, token);
-                                if (yearDir) {
-                                    if (scanYears && yearDir.some(f => f.name === 'index.html')) {
-                                        archivePaths.push({ type: 'year', path: `${year}/index.html`, name: year });
-                                    }
-                                    
-                                    if (scanMonths || scanPosts) {
-                                        const monthDirs = yearDir.filter(item => item.type === 'dir' && /^\d{2}$/.test(item.name));
-                                        
-                                        for (const monthItem of monthDirs) {
-                                            const month = monthItem.name;
-                                            const monthDir = await fetchDirectory(owner, repoName, `${year}/${month}`, token);
-                                            
-                                            if (monthDir) {
-                                                if (scanMonths && monthDir.some(f => f.name === 'index.html')) {
-                                                    archivePaths.push({ type: 'month', path: `${year}/${month}/index.html`, name: `${year}/${month}` });
-                                                }
-                                                
-                                                if (scanPosts) {
-                                                    const dayDirs = monthDir.filter(item => item.type === 'dir' && /^\d{2}$/.test(item.name));
-                                                    
-                                                    for (const dayItem of dayDirs) {
-                                                        const day = dayItem.name;
-                                                        const dayDir = await fetchDirectory(owner, repoName, `${year}/${month}/${day}`, token);
-                                                        
-                                                        if (dayDir) {
-                                                            const postDirs = dayDir.filter(item => item.type === 'dir');
-                                                            
-                                                            for (const postItem of postDirs) {
-                                                                const slug = postItem.name;
-                                                                const postDir = await fetchDirectory(owner, repoName, `${year}/${month}/${day}/${slug}`, token);
-                                                                
-                                                                if (postDir && postDir.some(f => f.name === 'index.html')) {
-                                                                    archivePaths.push({ 
-                                                                        type: 'post', 
-                                                                        path: `${year}/${month}/${day}/${slug}/index.html`, 
-                                                                        name: slug 
-                                                                    });
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                
-                                await new Promise(r => setTimeout(r, 50));
-                            }
-                        }
-                    }
-                    
-                    // Save discovered paths to cache
-                    saveScanProgress(archivePaths, 0);
-                    log(`📂 Discovered ${archivePaths.length} total pages`, 'success');
+                const allPaths = extractPathsFromTree(tree, scanOptions);
+                log(`📂 Found ${allPaths.length} pages matching your filters`, 'success');
+                
+                // Step 4: Filter out cached (already synced) files
+                const pathsToCheck = allPaths.filter(p => !isInSyncedCache(p.path));
+                const skippedCount = allPaths.length - pathsToCheck.length;
+                
+                if (skippedCount > 0) {
+                    log(`⏭️ Skipping ${skippedCount} files already marked as synced`, 'info');
                 }
                 
-                // Step 3: Check pages, skipping cached ones, stopping at MAX_OUT_OF_SYNC
-                const totalPages = archivePaths.length;
+                if (pathsToCheck.length === 0) {
+                    log('🎉 All files are already synced!', 'success');
+                    updateProgress(100, 'All files synced!');
+                    displayResults();
+                    scanBtn.disabled = false;
+                    return;
+                }
+                
+                // Limit to first batch to check
+                const pathsThisBatch = pathsToCheck.slice(0, MAX_OUT_OF_SYNC * 2); // Check 2x to find 200 out-of-sync
+                log(`\n🔍 Checking ${pathsThisBatch.length} files using raw.githubusercontent.com (no rate limits!)...`, 'info');
+                
+                // Step 5: Fetch files in parallel from raw.githubusercontent.com (NO API RATE LIMITS!)
                 let checkedCount = 0;
-                let skippedCount = 0;
                 let outOfSyncCount = 0;
+                const syncedPaths = [];
                 
-                log(`\n🔍 Checking pages (will stop after finding ${MAX_OUT_OF_SYNC} out-of-sync)...`, 'info');
+                const onProgress = (completed, total) => {
+                    const progress = 20 + Math.round((completed / total) * 70);
+                    updateProgress(progress, `Checking files: ${completed}/${total} (${outOfSyncCount} out-of-sync so far)`);
+                };
                 
-                for (let i = 0; i < archivePaths.length; i++) {
-                    const archive = archivePaths[i];
+                // Fetch in parallel batches of 20 (raw.githubusercontent.com has no rate limits)
+                const CONCURRENCY = 20;
+                for (let i = 0; i < pathsThisBatch.length && outOfSyncCount < MAX_OUT_OF_SYNC; i += CONCURRENCY) {
+                    const chunk = pathsThisBatch.slice(i, Math.min(i + CONCURRENCY, pathsThisBatch.length));
                     
-                    // Skip if already in synced cache
-                    if (isInSyncedCache(archive.path)) {
-                        skippedCount++;
-                        continue;
-                    }
+                    const promises = chunk.map(async (pathInfo) => {
+                        const content = await fetchFileRaw(owner, repoName, branch, pathInfo.path);
+                        return { pathInfo, content };
+                    });
                     
-                    // Stop if we have enough out-of-sync files
-                    if (outOfSyncCount >= MAX_OUT_OF_SYNC) {
-                        log(`\n⏸️ Found ${MAX_OUT_OF_SYNC} out-of-sync files. Stopping scan to process these first.`, 'info');
-                        saveScanProgress(archivePaths, i);
-                        break;
-                    }
+                    const results = await Promise.all(promises);
                     
-                    const progress = 35 + Math.round((i / totalPages) * 60);
-                    updateProgress(progress, `Checking ${archive.path}... (${checkedCount + skippedCount + 1}/${totalPages}, ${outOfSyncCount} out-of-sync)`);
-                    
-                    try {
-                        const pageHtml = await fetchFile(owner, repoName, archive.path, token);
-                        if (pageHtml) {
-                            const pageSidebar = extractSidebar(pageHtml);
-                            const inSync = pageSidebar ? compareSidebars(canonicalSidebar, pageSidebar) : false;
+                    for (const { pathInfo, content } of results) {
+                        if (!content) continue;
+                        
+                        checkedCount++;
+                        const pageSidebar = extractSidebar(content);
+                        const inSync = pageSidebar ? compareSidebars(canonicalSidebar, pageSidebar) : false;
+                        
+                        if (inSync) {
+                            syncedPaths.push(pathInfo.path);
+                        } else {
+                            archiveResults.push({
+                                ...pathInfo,
+                                html: content,
+                                inSync: false
+                            });
+                            outOfSyncCount++;
                             
-                            if (inSync) {
-                                // Mark as synced in cache, don't add to results
-                                markAsSynced([archive.path]);
-                            } else {
-                                // Add to results for fixing
-                                archiveResults.push({
-                                    ...archive,
-                                    html: pageHtml,
-                                    inSync: false
-                                });
-                                outOfSyncCount++;
+                            if (outOfSyncCount >= MAX_OUT_OF_SYNC) {
+                                log(`\n⏸️ Found ${MAX_OUT_OF_SYNC} out-of-sync files. Stopping to process these first.`, 'info');
+                                break;
                             }
-                            checkedCount++;
                         }
-                    } catch (e) {
-                        console.error(`Error checking ${archive.path}:`, e);
-                        log(`⚠️ Error checking ${archive.path}: ${e.message}`, 'error');
                     }
                     
-                    // Rate limiting delay
-                    if (checkedCount % 10 === 0 && checkedCount > 0) {
-                        await new Promise(r => setTimeout(r, 100));
-                    }
+                    onProgress(Math.min(i + CONCURRENCY, pathsThisBatch.length), pathsThisBatch.length);
+                }
+                
+                // Cache synced files
+                if (syncedPaths.length > 0) {
+                    markAsSynced(syncedPaths);
+                    log(`💾 Cached ${syncedPaths.length} files as synced`, 'info');
                 }
                 
                 updateProgress(100, 'Scan complete!');
                 
                 log(`\n📊 Scan Summary:`, 'info');
+                log(`   • Total pages found: ${allPaths.length}`, 'info');
                 log(`   • Skipped (cached as synced): ${skippedCount}`, 'info');
                 log(`   • Checked this run: ${checkedCount}`, 'info');
-                log(`   • Found out-of-sync: ${outOfSyncCount}`, 'info');
+                log(`   • Found in-sync: ${syncedPaths.length}`, 'info');
+                log(`   • Found out-of-sync: ${outOfSyncCount}`, 'success');
+                
+                if (pathsToCheck.length > pathsThisBatch.length) {
+                    log(`   • Remaining to check: ${pathsToCheck.length - pathsThisBatch.length}`, 'info');
+                }
                 
                 // Display results
                 displayResults();
@@ -1165,13 +1181,17 @@
             const resultsCard = document.getElementById('resultsCard');
             resultsCard.classList.remove('hidden');
             
-            const totalCount = archiveResults.length;
-            const syncedCount = archiveResults.filter(a => a.inSync).length;
-            const outOfSyncCount = totalCount - syncedCount;
+            const outOfSyncCount = archiveResults.length;
+            const cachedSyncedCount = getCacheStats();
             
-            document.getElementById('totalCount').textContent = totalCount;
-            document.getElementById('syncedCount').textContent = syncedCount;
+            document.getElementById('totalCount').textContent = outOfSyncCount + cachedSyncedCount;
+            document.getElementById('syncedCount').textContent = cachedSyncedCount;
             document.getElementById('outOfSyncCount').textContent = outOfSyncCount;
+            
+            if (outOfSyncCount === 0) {
+                document.getElementById('archiveList').innerHTML = '<div style="padding: 20px; text-align: center; color: #28a745;">🎉 All scanned files are in sync!</div>';
+                return;
+            }
             
             // Group by type
             const byType = {
@@ -1198,27 +1218,17 @@
                 if (archives.length === 0) continue;
                 
                 const typeLabel = typeLabels[type] || type.charAt(0).toUpperCase() + type.slice(1);
-                const outOfSync = archives.filter(a => !a.inSync).length;
-                html += `<div class="archive-type-header">${typeLabel} Archives (${outOfSync} out of sync)</div>`;
-                
-                // Sort: out-of-sync first
-                archives.sort((a, b) => a.inSync - b.inSync);
+                html += `<div class="archive-type-header">${typeLabel} (${archives.length} need fixing)</div>`;
                 
                 for (const archive of archives) {
-                    const statusClass = archive.inSync ? 'synced' : 'out-of-sync';
-                    const statusLabel = archive.inSync ? 'Synced' : 'Out of Sync';
-                    const checked = !archive.inSync ? 'checked' : '';
-                    const disabled = archive.inSync ? 'disabled' : '';
-                    
                     html += `
-                        <div class="archive-item ${statusClass}">
+                        <div class="archive-item out-of-sync">
                             <input type="checkbox" 
                                    data-path="${archive.path}" 
-                                   ${checked} 
-                                   ${disabled}
+                                   checked
                                    onchange="updateFixButton()">
                             <span class="path">${archive.path}</span>
-                            <span class="status-badge ${statusClass}">${statusLabel}</span>
+                            <span class="status-badge out-of-sync">Needs Fix</span>
                         </div>
                     `;
                 }
