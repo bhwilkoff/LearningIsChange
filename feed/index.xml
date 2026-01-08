@@ -12,12 +12,23 @@
     <atom:link href="https://learningischange.com/feed/" rel="self" type="application/rss+xml" />
     <link>https://learningischange.com</link>
     <description>Learning is Change - Thoughts on education, social justice, and making a difference.</description>
-    <lastBuildDate>Mon, 05 Jan 2026 16:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 21:32:58 +0000</lastBuildDate>
     <language>en-US</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <generator>Learning is Change RSS Scanner</generator>
-            <item>
+                <item>
+      <title>Seeing the real numbers</title>
+      <link>https://learningischange.com/2026/01/08/seeing-the-real-numbers/</link>
+      <pubDate>Thu, 08 Jan 2026 12:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[Ben]]></dc:creator>
+      <guid isPermaLink="true">https://learningischange.com/2026/01/08/seeing-the-real-numbers/</guid>
+      <category><![CDATA[growth]]></category>
+      <category><![CDATA[money]]></category>
+      <description><![CDATA[]]></description>
+      <content:encoded><![CDATA[<p><img src="/wp-content/uploads/2026/01/SwiftScan Jan 8, 2026 2.28 PM.jpeg"></p>]]></content:encoded>
+    </item>
+<item>
       <title>Your Favorite Band at 42</title>
       <link>https://learningischange.com/2026/01/05/your-favorite-band-at-42/</link>
       <pubDate>Mon, 05 Jan 2026 12:00:00 +0000</pubDate>
@@ -4881,87 +4892,6 @@ Share this:
 				<span id="sharing-bluesky-15173" hidden="">Click to share on Bluesky (Opens in new window)</span>
 				<span>Bluesky</span>
 			</a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-113784134-15173-693710843108a" data-src="https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=15173&amp;origin=learningischange.com&amp;obj_id=113784134-15173-693710843108a" data-name="like-post-frame-113784134-15173-693710843108a" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
-<div id="jp-relatedposts" class="jp-relatedposts">
-	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
-</div>											]]></content:encoded>
-    </item>
-    <item>
-      <title>Finally, a replacement for Hangouts on Air (that works on mobile too)!</title>
-      <link>https://learningischange.com/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/</link>
-      <pubDate>Fri, 05 Jul 2019 12:00:00 +0000</pubDate>
-      <dc:creator><![CDATA[Ben]]></dc:creator>
-      <guid isPermaLink="true">https://learningischange.com/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/</guid>
-      <category><![CDATA[uncategorized]]></category>
-      <description><![CDATA[I’ve been trying to figure out how to stream to YouTube from a mobile device for years. For a while, I was using a mobile version of Wirecast, but it was really limited and hardly ever updated (April of 2018 was the last time). And when Wes Fryer brought the imminent shutdown of Hangouts on Air to m...]]></description>
-      <content:encoded><![CDATA[
-						
-<p>I’ve been trying to figure out how to stream to YouTube from a mobile device for years. For a while, I was using a mobile version of <a href="https://apps.apple.com/us/app/wirecast-go/id987286934">Wirecast</a>, but it was really limited and hardly ever updated (April of 2018 was the last time). And when <a href="https://twitter.com/wfryer?lang=en">Wes Fryer</a> brought the <a href="https://support.google.com/youtube/answer/7083786?hl=en">imminent shutdown of Hangouts on Air </a>to my attention <a href="https://twitter.com/edtechsr/status/1144636116177489921">about a month ago</a>, I felt some further urgency to figure it out. </p>
-
-
-
-<p>Ultimately, I wanted to keep streaming to YouTube but not lose the ability to add participants and have a great video “roundtable” experience. Furthermore, though, I wanted to finally have a way to stream a video conference while on mobile. Hangouts on Air never made the jump from Desktop/Laptop-based browsers to mobile, and I think in 2019, going fully mobile is probably the best way to approach video streaming.&nbsp;</p>
-
-
-
-<p><br>After a lot of trial and error, I think I finally figured it out. Now, given my bias toward using iOS devices (iPhone and iPad), this is a solution that currently only works for those. However, <a href="https://play.google.com/store/apps/details?id=com.bemytv.screencaster&amp;hl=en_US">I did some preliminary searching</a> and it does look like there are some options for using the YouTube live streaming server (RTMP protocol) on an android device (or chromebook that can run android apps). Someone else would have to verify that, though.</p>
-
-
-
-<p><br>Regardless, here is how you set it up on iOS:</p>
-
-
-
-<ol class="wp-block-list"><li>Go to your Live Dashboard in YouTube:&nbsp;<a href="https://www.youtube.com/live_dashboard?nv=1">https://www.youtube.com/live_dashboard?nv=1</a></li><li>Scroll down until you see the Server URL and Key and Copy both of those to something you have access to on your iOS device (Google Keep, Apple Notes, etc.)</li><li>Download the <a href="https://apps.apple.com/us/app/everycord-record-broadcast/id1336328583">EveryCord App from the App Store</a> ($1.99, but it really does an amazing job and, in my opinion, is totally worth it!)</li><li>Open the app and tap the Broadcast section.</li><li>Paste in your Server and Key from your notes document.&nbsp;</li><li>Use the “settings cog” to configure your stream for audio and video.</li><li>Open Control center and long press on the Screen Record icon (Swipe down from top right corner of screen on anything iOS 12 or newer).</li><li>Select EveryCord and make sure you have microphone turned on. Press Start Broadcast – Your Live Stream is Up and Running to Youtube (but, you can go back to your dashboard link to make sure)!</li><li>Open Hangouts Meet (or any other video conferencing system you want to use) and invite your colleagues to join you.</li><li>Use your iPad/iPhone however you want, but remember, if you navigate away from Hangouts Meet, you will only get the audio and not the video sent to YouTube.</li></ol>
-
-
-
-<p>I hope that all makes sense. This may be too many steps for some folks, <strong>but</strong> it actually presents a lot more opportunity than simply having Hangouts on Air limp along any further. I mean, you now can stream anything you want from your mobile device, including a hangouts call from anywhere!<br>&nbsp;If you are looking for a full tutorial that walks through (or just shows) how to make this all work, here is a live streamed version where I demonstrate how to live stream with this process (how’s that for meta):&nbsp;</p>
-
-
-
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe title="Replacement for Hangouts on Air (A Live Tutorial)" width="1225" height="919" src="https://www.youtube.com/embed/5jnrvFAad6s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-</div><figcaption>Sorry for Low Resolution, but you get the idea!</figcaption></figure>
-<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="sharing-email-15145" class="share-email sd-button share-icon no-text" href="mailto:?subject=%5BShared%20Post%5D%20Finally%2C%20a%20replacement%20for%20Hangouts%20on%20Air%20%28that%20works%20on%20mobile%20too%29%21&amp;body=%2F2019%2F07%2F05%2Ffinally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too%2F&amp;share=email" target="_blank" aria-labelledby="sharing-email-15145" data-email-share-error-title="Do you have email set up?" data-email-share-error-text="If you're having problems sharing via email, you might not have email set up for your browser. You may need to create a new email yourself." data-email-share-nonce="ff9b73fffa" data-email-share-track-url="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=email">
-				<span id="sharing-email-15145" hidden="">Click to email a link to a friend (Opens in new window)</span>
-				<span>Email</span>
-			</a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-15145" class="share-facebook sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=facebook" target="_blank" aria-labelledby="sharing-facebook-15145">
-				<span id="sharing-facebook-15145" hidden="">Click to share on Facebook (Opens in new window)</span>
-				<span>Facebook</span>
-			</a></li><li class="share-pocket"><a rel="nofollow noopener noreferrer" data-shared="sharing-pocket-15145" class="share-pocket sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=pocket" target="_blank" aria-labelledby="sharing-pocket-15145">
-				<span id="sharing-pocket-15145" hidden="">Click to share on Pocket (Opens in new window)</span>
-				<span>Pocket</span>
-			</a></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="sharing-print-15145" class="share-print sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/#print?share=print" target="_blank" aria-labelledby="sharing-print-15145">
-				<span id="sharing-print-15145" hidden="">Click to print (Opens in new window)</span>
-				<span>Print</span>
-			</a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-15145" class="share-linkedin sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=linkedin" target="_blank" aria-labelledby="sharing-linkedin-15145">
-				<span id="sharing-linkedin-15145" hidden="">Click to share on LinkedIn (Opens in new window)</span>
-				<span>LinkedIn</span>
-			</a></li><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="sharing-reddit-15145" class="share-reddit sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=reddit" target="_blank" aria-labelledby="sharing-reddit-15145">
-				<span id="sharing-reddit-15145" hidden="">Click to share on Reddit (Opens in new window)</span>
-				<span>Reddit</span>
-			</a></li><li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-15145" class="share-pinterest sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=pinterest" target="_blank" aria-labelledby="sharing-pinterest-15145">
-				<span id="sharing-pinterest-15145" hidden="">Click to share on Pinterest (Opens in new window)</span>
-				<span>Pinterest</span>
-			</a></li><li class="share-tumblr"><a rel="nofollow noopener noreferrer" data-shared="sharing-tumblr-15145" class="share-tumblr sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=tumblr" target="_blank" aria-labelledby="sharing-tumblr-15145">
-				<span id="sharing-tumblr-15145" hidden="">Click to share on Tumblr (Opens in new window)</span>
-				<span>Tumblr</span>
-			</a></li><li class="share-telegram"><a rel="nofollow noopener noreferrer" data-shared="sharing-telegram-15145" class="share-telegram sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=telegram" target="_blank" aria-labelledby="sharing-telegram-15145">
-				<span id="sharing-telegram-15145" hidden="">Click to share on Telegram (Opens in new window)</span>
-				<span>Telegram</span>
-			</a></li><li class="share-threads"><a rel="nofollow noopener noreferrer" data-shared="sharing-threads-15145" class="share-threads sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=threads" target="_blank" aria-labelledby="sharing-threads-15145">
-				<span id="sharing-threads-15145" hidden="">Click to share on Threads (Opens in new window)</span>
-				<span>Threads</span>
-			</a></li><li class="share-jetpack-whatsapp"><a rel="nofollow noopener noreferrer" data-shared="sharing-whatsapp-15145" class="share-jetpack-whatsapp sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=jetpack-whatsapp" target="_blank" aria-labelledby="sharing-whatsapp-15145">
-				<span id="sharing-whatsapp-15145" hidden="">Click to share on WhatsApp (Opens in new window)</span>
-				<span>WhatsApp</span>
-			</a></li><li class="share-mastodon"><a rel="nofollow noopener noreferrer" data-shared="sharing-mastodon-15145" class="share-mastodon sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=mastodon" target="_blank" aria-labelledby="sharing-mastodon-15145">
-				<span id="sharing-mastodon-15145" hidden="">Click to share on Mastodon (Opens in new window)</span>
-				<span>Mastodon</span>
-			</a></li><li class="share-bluesky"><a rel="nofollow noopener noreferrer" data-shared="sharing-bluesky-15145" class="share-bluesky sd-button share-icon no-text" href="/2019/07/05/finally-a-replacement-for-hangouts-on-air-that-works-on-mobile-too/?share=bluesky" target="_blank" aria-labelledby="sharing-bluesky-15145">
-				<span id="sharing-bluesky-15145" hidden="">Click to share on Bluesky (Opens in new window)</span>
-				<span>Bluesky</span>
-			</a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-113784134-15145-69371084bb225" data-src="https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=15145&amp;origin=learningischange.com&amp;obj_id=113784134-15145-69371084bb225" data-name="like-post-frame-113784134-15145-69371084bb225" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
 <div id="jp-relatedposts" class="jp-relatedposts">
 	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
 </div>											]]></content:encoded>
