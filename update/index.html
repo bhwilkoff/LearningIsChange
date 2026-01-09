@@ -1,0 +1,3693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Update Tool - Learning is Change</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap');
+        
+        :root {
+            --accent-1: #0085b2;
+            --accent-1-hover: #006d91;
+            --accent-2: #f42b00;
+            --headings: #333;
+            --sitetext: #555;
+            --sitebg: #fff;
+            --light-bg: #f7f7f7;
+            --border-color: #e0e0e0;
+            --success: #28a745;
+            --success-hover: #218838;
+            --warning: #ffc107;
+            --danger: #dc3545;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: var(--light-bg);
+            color: var(--sitetext);
+            line-height: 1.6;
+        }
+        
+        .site-header {
+            background: var(--accent-1);
+            color: white;
+            padding: 25px 30px;
+            margin: -20px -20px 30px -20px;
+            border-bottom: 4px solid var(--accent-1-hover);
+        }
+        .site-header h1 {
+            margin: 0 0 5px 0;
+            font-size: 1.8em;
+            font-weight: 300;
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+        }
+        .site-header .subtitle {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.95em;
+            font-weight: 300;
+        }
+        
+        .main-container { max-width: 1400px; margin: 0 auto; }
+        
+        h1, h2, h3 { color: var(--headings); font-weight: 600; }
+        
+        .step {
+            background: var(--sitebg);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+        }
+        .step h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .step-number {
+            background: var(--accent-1);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--headings);
+            font-size: 0.95em;
+        }
+        
+        input[type="text"], input[type="password"], input[type="url"], textarea, select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            font-size: 15px;
+            font-family: inherit;
+            color: var(--sitetext);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-1);
+            box-shadow: 0 0 0 2px rgba(0, 133, 178, 0.15);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 700px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+        .form-group { margin-bottom: 20px; }
+        .help-text { font-size: 13px; color: #888; margin-top: 5px; }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-primary { background: var(--accent-1); color: white; }
+        .btn-primary:hover:not(:disabled) { background: var(--accent-1-hover); }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover:not(:disabled) { background: var(--success-hover); }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-danger:hover:not(:disabled) { background: #c82333; }
+        .btn-warning { background: var(--warning); color: #333; }
+        .btn-warning:hover:not(:disabled) { background: #e0a800; }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover:not(:disabled) { background: #5a6268; }
+        .btn-outline { background: transparent; border: 1px solid var(--border-color); color: var(--sitetext); }
+        .btn-outline:hover:not(:disabled) { background: var(--light-bg); }
+        .btn-sm { padding: 6px 12px; font-size: 12px; }
+        
+        /* Source Tabs */
+        .source-tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .source-tab {
+            padding: 12px 24px;
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: -2px;
+            border-radius: 3px 3px 0 0;
+        }
+        .source-tab:hover { background: #eee; }
+        .source-tab.active {
+            background: var(--sitebg);
+            border-bottom: 2px solid var(--sitebg);
+            color: var(--accent-1);
+        }
+        .source-panel {
+            display: none;
+            padding: 20px;
+            background: var(--sitebg);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 3px 3px;
+        }
+        .source-panel.active { display: block; }
+        
+        /* Editor Layout */
+        .editor-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 20px;
+            min-height: 600px;
+        }
+        @media (max-width: 1100px) {
+            .editor-layout { grid-template-columns: 1fr; }
+        }
+        
+        /* Preview Panel */
+        .preview-panel {
+            background: var(--sitebg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .preview-header {
+            padding: 12px 15px;
+            background: var(--light-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .preview-header h3 { margin: 0; font-size: 0.95em; }
+        .preview-toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        
+        .preview-content {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+        }
+        .preview-iframe-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .preview-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+        
+        .preview-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+            color: #888;
+            text-align: center;
+            padding: 40px;
+        }
+        .preview-placeholder-icon { font-size: 48px; margin-bottom: 15px; opacity: 0.5; }
+        
+        /* Rules Panel */
+        .rules-panel {
+            background: var(--sitebg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+        }
+        .rules-header {
+            padding: 12px 15px;
+            background: var(--light-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .rules-header h3 { margin: 0; font-size: 0.95em; }
+        .rules-content { flex: 1; overflow-y: auto; padding: 15px; }
+        
+        .rules-section { margin-bottom: 25px; }
+        .rules-section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .rules-section-title {
+            font-weight: 600;
+            color: var(--headings);
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .rule-list { display: flex; flex-direction: column; gap: 8px; }
+        .rule-item {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 10px 12px;
+        }
+        .rule-item.removal { border-left: 3px solid var(--danger); }
+        .rule-item.addition { border-left: 3px solid var(--success); }
+        .rule-item.update { border-left: 3px solid var(--warning); }
+        .rule-item-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        .rule-item-content { flex: 1; min-width: 0; }
+        .rule-item-selector {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--accent-1);
+            word-break: break-all;
+        }
+        .rule-item-type { font-size: 11px; color: #888; margin-top: 4px; }
+        .rule-item-preview { 
+            font-size: 11px; 
+            color: var(--sitetext); 
+            margin-top: 4px;
+            font-style: italic;
+            word-break: break-word;
+        }
+        .rule-item-actions { display: flex; gap: 4px; }
+        .rule-item-btn {
+            padding: 4px 8px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: #888;
+            border-radius: 3px;
+        }
+        .rule-item-btn:hover { background: rgba(0,0,0,0.1); color: var(--sitetext); }
+        .rule-item-btn.delete:hover { color: var(--danger); }
+        
+        .empty-rules {
+            color: #888;
+            font-size: 13px;
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal {
+            background: var(--sitebg);
+            border-radius: 5px;
+            width: 90%;
+            max-width: 550px;
+            max-height: 90vh;
+            overflow: auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .modal-header h3 { margin: 0; font-size: 1.1em; }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+        }
+        .modal-close:hover { color: var(--sitetext); }
+        .modal-body { padding: 20px; }
+        .modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        
+        /* Selection Mode Options */
+        .selection-mode-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .selection-mode-option {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .selection-mode-option:hover { border-color: var(--accent-1); }
+        .selection-mode-option.active {
+            border-color: var(--accent-1);
+            background: rgba(0, 133, 178, 0.1);
+        }
+        .selection-mode-option-icon { font-size: 24px; margin-bottom: 5px; }
+        .selection-mode-option-label { font-size: 12px; font-weight: 600; }
+        
+        /* Insertion Options */
+        .insertion-options { display: flex; gap: 10px; margin-bottom: 15px; }
+        .insertion-option {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .insertion-option:hover { border-color: var(--success); }
+        .insertion-option.active {
+            border-color: var(--success);
+            background: rgba(40, 167, 69, 0.1);
+        }
+        
+        /* Selected Element Display */
+        .selected-element-display {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+        .selected-element-label {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .selected-element-selector {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--accent-1);
+            word-break: break-all;
+        }
+        .selected-element-preview {
+            margin-top: 10px;
+            padding: 10px;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            border-radius: 3px;
+            max-height: 100px;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        
+        /* Status */
+        .status {
+            padding: 12px 15px;
+            border-radius: 3px;
+            margin-top: 15px;
+            display: none;
+            font-size: 14px;
+        }
+        .status.show { display: block; }
+        .status.success {
+            background: rgba(40, 167, 69, 0.1);
+            color: #155724;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+        .status.error {
+            background: rgba(244, 43, 0, 0.1);
+            color: #721c24;
+            border: 1px solid rgba(244, 43, 0, 0.3);
+        }
+        .status.info {
+            background: rgba(0, 133, 178, 0.1);
+            color: #004085;
+            border: 1px solid rgba(0, 133, 178, 0.3);
+        }
+        
+        /* Summary Stats */
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-card-value { font-size: 2em; font-weight: 600; color: var(--accent-1); }
+        .stat-card-label { font-size: 12px; color: #888; margin-top: 5px; }
+        .stat-card.danger .stat-card-value { color: var(--danger); }
+        .stat-card.success .stat-card-value { color: var(--success); }
+        .stat-card.warning .stat-card-value { color: var(--warning); }
+        
+        /* Execute Section */
+        .execute-options {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 700px) {
+            .execute-options { grid-template-columns: 1fr; }
+        }
+        .execute-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .execute-progress {
+            margin-top: 25px;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+        }
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .progress-header span {
+            font-weight: 600;
+            color: var(--headings);
+        }
+        .progress-bar-wrapper {
+            background: #e9ecef;
+            border-radius: 4px;
+            height: 24px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, var(--accent-1), var(--success));
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            .progress-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+        .progress-stat {
+            text-align: center;
+            padding: 10px;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+        }
+        .progress-stat-value {
+            display: block;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--accent-1);
+        }
+        .progress-stat-label {
+            font-size: 11px;
+            color: #888;
+        }
+        .progress-log {
+            max-height: 200px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+        .progress-log .log-entry {
+            margin-bottom: 4px;
+            padding: 2px 0;
+        }
+        .progress-log .log-entry.error { color: var(--danger); }
+        .progress-log .log-entry.success { color: var(--success); }
+        .progress-log .log-entry.info { color: var(--accent-1); }
+        .progress-log .log-entry.warning { color: var(--warning); }
+        
+        .execute-results {
+            margin-top: 25px;
+        }
+        .execute-results-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+        .execute-results-header.success {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            color: #155724;
+        }
+        .execute-results-header.error {
+            background: rgba(220, 53, 69, 0.1);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            color: #721c24;
+        }
+        .results-icon { font-size: 2em; }
+        .results-message { font-size: 1.1em; font-weight: 600; }
+        .results-details {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .results-stat {
+            padding: 10px 15px;
+            background: var(--light-bg);
+            border-radius: 3px;
+        }
+        .results-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* Queue-based Execution UI */
+        .execute-phase {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .execute-phase h4 {
+            margin: 0 0 10px 0;
+            color: var(--headings);
+        }
+        .phase-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+        }
+        .phase-status-icon { font-size: 1.2em; }
+        .phase-status.complete {
+            background: rgba(40, 167, 69, 0.1);
+            border-color: rgba(40, 167, 69, 0.3);
+        }
+        .phase-status.complete .phase-status-icon::before { content: '✅'; }
+        .phase-status.error {
+            background: rgba(220, 53, 69, 0.1);
+            border-color: rgba(220, 53, 69, 0.3);
+        }
+        
+        .download-progress, .upload-progress {
+            margin-top: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .queue-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            .queue-stats { grid-template-columns: repeat(2, 1fr); }
+        }
+        .queue-stat {
+            text-align: center;
+            padding: 15px 10px;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+        }
+        .queue-stat-value {
+            display: block;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: var(--accent-1);
+        }
+        .queue-stat-label {
+            font-size: 11px;
+            color: #888;
+            margin-top: 4px;
+        }
+        .queue-stat.uploaded .queue-stat-value { color: var(--success); }
+        .queue-stat.errors .queue-stat-value { color: var(--danger); }
+        
+        .queue-controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            .queue-controls { flex-direction: column; }
+        }
+        .queue-controls .form-group { margin-bottom: 0; }
+        
+        .queue-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .rate-limit-info {
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 3px;
+            color: #856404;
+            font-size: 13px;
+        }
+        
+        .commit-summary {
+            padding: 15px;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .batch-controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            .batch-controls { flex-direction: column; }
+        }
+        .batch-controls .form-group { 
+            flex: 1;
+            margin-bottom: 0; 
+        }
+        
+        .process-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .process-progress {
+            padding: 15px;
+            background: white;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-warning {
+            background: var(--warning);
+            color: #333;
+        }
+        .btn-warning:hover {
+            background: #e0a800;
+        }
+        
+        /* Token Input */
+        .token-wrapper { position: relative; }
+        .token-wrapper input { padding-right: 40px; }
+        .token-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #888;
+        }
+        .token-toggle:hover { color: var(--accent-1); }
+        
+        /* File Input */
+        .file-input-wrapper { position: relative; display: inline-block; width: 100%; }
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .file-input-display {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .file-input-display:hover { border-color: var(--accent-1); }
+        .file-input-display.has-file {
+            border-color: var(--success);
+            background: rgba(40, 167, 69, 0.05);
+        }
+        
+        .html-textarea {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .range-marker-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        /* Selection Banner */
+        .selection-banner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--accent-1);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            z-index: 1001;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .selection-banner.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .selection-banner .btn { background: white; color: var(--accent-1); }
+        
+        /* Currently Selected Display in Preview */
+        .current-selection-info {
+            padding: 10px 15px;
+            background: #fff3cd;
+            border-bottom: 1px solid #ffc107;
+            font-size: 13px;
+            display: none;
+        }
+        .current-selection-info.active { display: block; }
+        .current-selection-info code {
+            background: rgba(0,0,0,0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        /* Preview Mode Toggle */
+        .preview-mode-toggle {
+            display: flex;
+            background: var(--border-color);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .preview-mode-btn {
+            padding: 6px 12px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--sitetext);
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .preview-mode-btn.active {
+            background: var(--accent-1);
+            color: white;
+        }
+        .preview-mode-btn.active.preview-applied {
+            background: var(--success);
+        }
+        .preview-mode-btn:hover:not(.active) {
+            background: #d0d0d0;
+        }
+        .preview-mode-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Rules Applied Indicator */
+        .rules-applied-banner {
+            padding: 8px 15px;
+            background: rgba(40, 167, 69, 0.15);
+            border-bottom: 1px solid var(--success);
+            font-size: 12px;
+            color: var(--success);
+            font-weight: 600;
+            display: none;
+        }
+        .rules-applied-banner.active { display: block; }
+        
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #888;
+            font-size: 13px;
+            border-top: 1px solid var(--border-color);
+        }
+        .site-footer a { color: var(--accent-1); text-decoration: none; }
+        .site-footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1>🔧 Mass Update Tool</h1>
+        <p class="subtitle">Visually select and remove elements, fix links, and add content across your entire static site</p>
+    </header>
+    
+    <div class="main-container">
+        <!-- Step 1: GitHub Connection -->
+        <div class="step">
+            <h2><span class="step-number">1</span> Connect to GitHub</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="githubToken">Personal Access Token</label>
+                    <div class="token-wrapper">
+                        <input type="password" id="githubToken" placeholder="github_pat_...">
+                        <button type="button" class="token-toggle" onclick="toggleTokenVisibility()">👁️</button>
+                    </div>
+                    <div class="help-text">Token needs "Contents" read/write permission</div>
+                </div>
+                <div class="form-group">
+                    <label for="githubRepo">Repository</label>
+                    <input type="text" id="githubRepo" value="bhwilkoff/LearningIsChange" placeholder="owner/repo">
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="testConnection()">🔗 Test Connection</button>
+            <div class="status" id="connectionStatus"></div>
+        </div>
+        
+        <!-- Step 2: Load Example Page -->
+        <div class="step">
+            <h2><span class="step-number">2</span> Load Example Page</h2>
+            <p class="help-text">Load an example page to visually select elements. The page will render with full styling from the live site.</p>
+            
+            <div class="source-tabs">
+                <button class="source-tab active" onclick="switchSourceTab('github')">📂 From GitHub</button>
+                <button class="source-tab" onclick="switchSourceTab('url')">🔗 From URL</button>
+                <button class="source-tab" onclick="switchSourceTab('upload')">📤 Upload File</button>
+            </div>
+            
+            <div class="source-panel active" id="panel-github">
+                <div class="form-group">
+                    <label for="githubPath">File Path in Repository</label>
+                    <input type="text" id="githubPath" placeholder="/2024/01/15/example-post/">
+                    <div class="help-text">Enter the path (index.html is added automatically). Example: /2025/05/12/my-oldest-sons-last-week-of-high-school/</div>
+                </div>
+                <button class="btn btn-primary" onclick="loadFromGithub()">Load from GitHub</button>
+            </div>
+            
+            <div class="source-panel" id="panel-url">
+                <div class="form-group">
+                    <label for="pageUrl">Page URL</label>
+                    <input type="url" id="pageUrl" placeholder="https://learningischange.com/2024/01/15/example-post/">
+                    <div class="help-text">Enter the full URL of the page</div>
+                </div>
+                <button class="btn btn-primary" onclick="loadFromUrl()">Load from URL</button>
+            </div>
+            
+            <div class="source-panel" id="panel-upload">
+                <div class="form-group">
+                    <label>Upload HTML File</label>
+                    <div class="file-input-wrapper">
+                        <div class="file-input-display" id="fileInputDisplay">
+                            <span>📄</span>
+                            <span id="fileInputText">Click to select a file or drag & drop</span>
+                        </div>
+                        <input type="file" id="fileInput" accept=".html,.htm" onchange="handleFileUpload(event)">
+                    </div>
+                    <div class="help-text">Note: Uploaded files will use learningischange.com for CSS/images</div>
+                </div>
+            </div>
+            
+            <div class="status" id="loadStatus"></div>
+        </div>
+        
+        <!-- Step 3: Visual Editor -->
+        <div class="step">
+            <h2><span class="step-number">3</span> Define Update Rules</h2>
+            
+            <div class="editor-layout">
+                <!-- Preview Panel -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <h3>📄 Page Preview</h3>
+                        <div class="preview-toolbar">
+                            <div class="preview-mode-toggle">
+                                <button class="preview-mode-btn active" onclick="setPreviewMode('original')" id="previewModeOriginal">
+                                    📄 Original
+                                </button>
+                                <button class="preview-mode-btn" onclick="setPreviewMode('applied')" id="previewModeApplied" disabled>
+                                    ✨ With Rules Applied
+                                </button>
+                            </div>
+                            <button class="btn btn-sm btn-primary" onclick="startSelection()" id="selectBtn" disabled>
+                                🎯 Select Element
+                            </button>
+                            <button class="btn btn-sm btn-secondary" onclick="clearSelection()" id="clearBtn" style="display: none;">
+                                ✖ Clear
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rules-applied-banner" id="rulesAppliedBanner">
+                        ✅ Preview showing page WITH rules applied — <span id="rulesAppliedSummary"></span>
+                    </div>
+                    <div class="current-selection-info" id="currentSelectionInfo">
+                        <strong>Selected:</strong> <code id="currentSelectionSelector"></code>
+                        <button class="btn btn-sm btn-success" onclick="useSelectedElement()" style="margin-left: 10px;">Use This Element</button>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-placeholder" id="previewPlaceholder">
+                            <div class="preview-placeholder-icon">📄</div>
+                            <div>Load an example page to begin</div>
+                            <div class="help-text">Use Step 2 above to load a page</div>
+                        </div>
+                        <div class="preview-iframe-container" id="previewContainer" style="display: none;">
+                            <iframe id="previewIframe" class="preview-iframe"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rules Panel -->
+                <div class="rules-panel">
+                    <div class="rules-header">
+                        <h3>📋 Update Rules</h3>
+                    </div>
+                    <div class="rules-content">
+                        <!-- Removals Section -->
+                        <div class="rules-section">
+                            <div class="rules-section-header">
+                                <div class="rules-section-title">
+                                    <span>✂️</span> Removals
+                                </div>
+                                <button class="btn btn-sm btn-danger" onclick="openAddRuleModal('removal')">+ Add</button>
+                            </div>
+                            <div class="rule-list" id="removalRules">
+                                <div class="empty-rules">No removal rules defined yet</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Additions Section -->
+                        <div class="rules-section">
+                            <div class="rules-section-header">
+                                <div class="rules-section-title">
+                                    <span>➕</span> Additions
+                                </div>
+                                <button class="btn btn-sm btn-success" onclick="openAddRuleModal('addition')">+ Add</button>
+                            </div>
+                            <div class="rule-list" id="additionRules">
+                                <div class="empty-rules">No addition rules defined yet</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Updates Section -->
+                        <div class="rules-section">
+                            <div class="rules-section-header">
+                                <div class="rules-section-title">
+                                    <span>✏️</span> Text Updates
+                                </div>
+                                <button class="btn btn-sm btn-warning" onclick="openAddRuleModal('update')">+ Add</button>
+                            </div>
+                            <div class="rule-list" id="updateRules">
+                                <div class="empty-rules">No update rules defined yet</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Actions -->
+                        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                            <button class="btn btn-secondary btn-sm" onclick="exportRules()" style="width: 100%; margin-bottom: 8px;">
+                                💾 Export Rules (JSON)
+                            </button>
+                            <button class="btn btn-outline btn-sm" onclick="importRules()" style="width: 100%;">
+                                📥 Import Rules
+                            </button>
+                            <input type="file" id="importRulesInput" accept=".json" style="display: none;" onchange="handleImportRules(event)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 4: Preview & Scan -->
+        <div class="step">
+            <h2><span class="step-number">4</span> Preview Changes</h2>
+            <p class="help-text">Scan your repository to see how many files would be affected.</p>
+            
+            <div class="form-group">
+                <label for="filePattern">File Pattern (optional)</label>
+                <input type="text" id="filePattern" placeholder="Leave empty for all HTML files, or enter like /20*/ for posts only">
+            </div>
+            
+            <button class="btn btn-primary" onclick="scanRepository()" id="scanBtn" disabled>
+                🔍 Scan Repository
+            </button>
+            
+            <div class="status" id="scanStatus"></div>
+            
+            <div id="scanResults" style="display: none; margin-top: 20px;">
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-card-value" id="statTotalFiles">0</div>
+                        <div class="stat-card-label">Total HTML Files</div>
+                    </div>
+                    <div class="stat-card danger">
+                        <div class="stat-card-value" id="statAffectedFiles">0</div>
+                        <div class="stat-card-label">Files Affected</div>
+                    </div>
+                    <div class="stat-card danger">
+                        <div class="stat-card-value" id="statRemovals">0</div>
+                        <div class="stat-card-label">Removals</div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-card-value" id="statAdditions">0</div>
+                        <div class="stat-card-label">Additions</div>
+                    </div>
+                    <div class="stat-card warning">
+                        <div class="stat-card-value" id="statUpdates">0</div>
+                        <div class="stat-card-label">Updates</div>
+                    </div>
+                </div>
+                
+                <h4>Sample Affected Files:</h4>
+                <div id="sampleFiles"></div>
+            </div>
+        </div>
+        
+        <!-- Step 5: Execute -->
+        <div class="step" id="executeStep" style="display: none;">
+            <h2><span class="step-number">5</span> Execute Changes</h2>
+            <p class="help-text">Process files in batches, queue changes, then commit. Progress is saved - you can resume across sessions.</p>
+            
+            <!-- Processing Controls -->
+            <div class="execute-phase" id="processingPhase">
+                <h4>📥 Process Files in Batches</h4>
+                
+                <div class="batch-controls">
+                    <div class="form-group">
+                        <label for="batchSize">Files per Batch</label>
+                        <select id="batchSize">
+                            <option value="50">50 (safest)</option>
+                            <option value="100" selected>100 (recommended)</option>
+                            <option value="200">200 (faster)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="batchDelay">Delay Between Files (ms)</label>
+                        <input type="number" id="batchDelay" value="50" min="0" max="500" step="10">
+                    </div>
+                </div>
+                
+                <div class="queue-stats" id="processStats">
+                    <div class="queue-stat">
+                        <span class="queue-stat-value" id="statTotalFiles">0</span>
+                        <span class="queue-stat-label">Total Files</span>
+                    </div>
+                    <div class="queue-stat">
+                        <span class="queue-stat-value" id="statProcessed">0</span>
+                        <span class="queue-stat-label">Processed</span>
+                    </div>
+                    <div class="queue-stat uploaded">
+                        <span class="queue-stat-value" id="statQueued">0</span>
+                        <span class="queue-stat-label">Changed (Queued)</span>
+                    </div>
+                    <div class="queue-stat">
+                        <span class="queue-stat-value" id="statSkipped">0</span>
+                        <span class="queue-stat-label">Unchanged</span>
+                    </div>
+                </div>
+                
+                <div class="process-actions">
+                    <button class="btn btn-primary" id="processBatchBtn" onclick="processNextBatch()">
+                        ▶️ Process Next Batch
+                    </button>
+                    <button class="btn btn-success" id="processAllBtn" onclick="processAllBatches()">
+                        🚀 Process All (Auto)
+                    </button>
+                    <button class="btn btn-warning" id="stopProcessBtn" onclick="stopProcessing()" style="display: none;">
+                        ⏸️ Stop
+                    </button>
+                    <button class="btn btn-secondary" onclick="resetProgress()">
+                        🔄 Reset Progress
+                    </button>
+                </div>
+                
+                <div class="process-progress" id="processProgress" style="display: none;">
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="processProgressBar"></div>
+                    </div>
+                    <div class="progress-text" id="processProgressText">Ready</div>
+                </div>
+                
+                <div class="rate-limit-info" id="rateLimitInfo" style="display: none;">
+                    ⚠️ <span id="rateLimitText"></span>
+                </div>
+            </div>
+            
+            <!-- Upload Queue -->
+            <div class="execute-phase" id="uploadPhase" style="display: none;">
+                <h4>📤 Upload Changed Files</h4>
+                
+                <div class="queue-stats">
+                    <div class="queue-stat">
+                        <span class="queue-stat-value" id="uploadPending">0</span>
+                        <span class="queue-stat-label">Pending Upload</span>
+                    </div>
+                    <div class="queue-stat uploaded">
+                        <span class="queue-stat-value" id="uploadComplete">0</span>
+                        <span class="queue-stat-label">Blobs Created</span>
+                    </div>
+                    <div class="queue-stat errors">
+                        <span class="queue-stat-value" id="uploadErrors">0</span>
+                        <span class="queue-stat-label">Errors</span>
+                    </div>
+                </div>
+                
+                <div class="batch-controls">
+                    <div class="form-group">
+                        <label for="uploadDelay">Delay Between Uploads (ms)</label>
+                        <input type="number" id="uploadDelay" value="150" min="50" max="1000" step="50">
+                        <div class="help-text">Higher = slower but safer. 150ms ≈ 400/min</div>
+                    </div>
+                </div>
+                
+                <div class="process-actions">
+                    <button class="btn btn-success" id="startUploadBtn" onclick="startBlobUpload()">
+                        🚀 Upload All Blobs
+                    </button>
+                    <button class="btn btn-warning" id="pauseUploadBtn" onclick="pauseBlobUpload()" style="display: none;">
+                        ⏸️ Pause
+                    </button>
+                    <button class="btn btn-primary" id="resumeUploadBtn" onclick="startBlobUpload()" style="display: none;">
+                        ▶️ Resume
+                    </button>
+                </div>
+                
+                <div class="process-progress" id="uploadProgress" style="display: none;">
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="uploadProgressBar"></div>
+                    </div>
+                    <div class="progress-text" id="uploadProgressText">Ready</div>
+                </div>
+            </div>
+            
+            <!-- Commit Phase -->
+            <div class="execute-phase" id="commitPhase" style="display: none;">
+                <h4>✅ Create Commit</h4>
+                
+                <div class="form-group">
+                    <label for="commitMessage">Commit Message</label>
+                    <input type="text" id="commitMessage" placeholder="Mass update: description">
+                </div>
+                
+                <div class="commit-summary" id="commitSummary">
+                    0 files ready to commit
+                </div>
+                
+                <button class="btn btn-success" id="createCommitBtn" onclick="createFinalCommit()">
+                    📝 Create Commit
+                </button>
+            </div>
+            
+            <!-- Results -->
+            <div class="execute-results" id="executeResults" style="display: none;">
+                <div class="execute-results-header success" id="resultsHeader">
+                    <span class="results-icon">✅</span>
+                    <span class="results-message" id="resultsMessage">Changes applied successfully!</span>
+                </div>
+                <div class="results-details">
+                    <div class="results-stat">
+                        <strong id="resultFilesChanged">0</strong> files updated
+                    </div>
+                    <div class="results-stat">
+                        <strong id="resultCommitSha">-</strong>
+                    </div>
+                </div>
+                <div class="results-actions">
+                    <a class="btn btn-primary" id="viewCommitLink" href="#" target="_blank">
+                        🔗 View Commit on GitHub
+                    </a>
+                    <button class="btn btn-secondary" onclick="fullReset()">
+                        🔄 Start Over
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Log -->
+            <div class="progress-log" id="executeLog" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+    
+    <!-- Selection Banner -->
+    <div class="selection-banner" id="selectionBanner">
+        <span>🎯 Click on an element in the preview to select it</span>
+        <button class="btn btn-sm" onclick="cancelSelection()">Cancel (Esc)</button>
+    </div>
+    
+    <!-- Add Rule Modal -->
+    <div class="modal-overlay" id="addRuleModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Removal Rule</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Selection Mode (for removals) -->
+                <div id="selectionModeSection">
+                    <label>Selection Mode</label>
+                    <div class="selection-mode-options">
+                        <div class="selection-mode-option active" onclick="setSelectionMode('single')" data-mode="single">
+                            <div class="selection-mode-option-icon">☝️</div>
+                            <div class="selection-mode-option-label">Single Element</div>
+                        </div>
+                        <div class="selection-mode-option" onclick="setSelectionMode('all')" data-mode="all">
+                            <div class="selection-mode-option-icon">📑</div>
+                            <div class="selection-mode-option-label">All Matching</div>
+                        </div>
+                        <div class="selection-mode-option" onclick="setSelectionMode('range')" data-mode="range">
+                            <div class="selection-mode-option-icon">📏</div>
+                            <div class="selection-mode-option-label">Range/Markers</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Insertion Position (for additions) -->
+                <div id="insertionPositionSection" style="display: none;">
+                    <label>Insertion Position</label>
+                    <div class="insertion-options">
+                        <div class="insertion-option active" onclick="setInsertionPosition('before')" data-position="before">
+                            ⬆️ Before
+                        </div>
+                        <div class="insertion-option" onclick="setInsertionPosition('after')" data-position="after">
+                            ⬇️ After
+                        </div>
+                        <div class="insertion-option" onclick="setInsertionPosition('replace')" data-position="replace">
+                            🔄 Replace
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CSS Selector Input -->
+                <div class="form-group" id="selectorSection">
+                    <label for="ruleSelector">CSS Selector</label>
+                    <input type="text" id="ruleSelector" placeholder=".share-buttons, #comments, .social-links">
+                    <div class="help-text">Enter a CSS selector manually, or select an element from the preview first</div>
+                </div>
+                
+                <!-- Range Markers -->
+                <div class="form-group" id="rangeMarkersSection" style="display: none;">
+                    <label>HTML Comment Markers</label>
+                    <div class="range-marker-inputs">
+                        <input type="text" id="rangeStart" placeholder="Start: &lt;!-- BEGIN SHARE -->">
+                        <input type="text" id="rangeEnd" placeholder="End: &lt;!-- END SHARE -->">
+                    </div>
+                    <div class="help-text">Remove everything between these markers (inclusive)</div>
+                </div>
+                
+                <!-- HTML Content (for additions) -->
+                <div class="form-group" id="htmlContentSection" style="display: none;">
+                    <label for="htmlContent">HTML Content to Insert</label>
+                    <textarea id="htmlContent" class="html-textarea" placeholder="<div class='new-element'>Your HTML here</div>"></textarea>
+                </div>
+                
+                <!-- Update Mode Options (for updates) -->
+                <div id="updateModeSection" style="display: none;">
+                    <label>Update Type</label>
+                    <div class="selection-mode-options">
+                        <div class="selection-mode-option active" onclick="setUpdateMode('text')" data-update-mode="text">
+                            <div class="selection-mode-option-icon">📝</div>
+                            <div class="selection-mode-option-label">Replace Text</div>
+                        </div>
+                        <div class="selection-mode-option" onclick="setUpdateMode('html')" data-update-mode="html">
+                            <div class="selection-mode-option-icon">🔧</div>
+                            <div class="selection-mode-option-label">Replace HTML</div>
+                        </div>
+                        <div class="selection-mode-option" onclick="setUpdateMode('find-replace')" data-update-mode="find-replace">
+                            <div class="selection-mode-option-icon">🔍</div>
+                            <div class="selection-mode-option-label">Find & Replace</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Original Text (for updates - shown from selection) -->
+                <div class="form-group" id="originalTextSection" style="display: none;">
+                    <label>Original Text (from selected element)</label>
+                    <textarea id="originalText" class="html-textarea" style="min-height: 80px; background: #f8f9fa;" readonly></textarea>
+                    <div class="help-text">This is the current content of the selected element</div>
+                </div>
+                
+                <!-- New Text (for updates) -->
+                <div class="form-group" id="newTextSection" style="display: none;">
+                    <label for="newText">New Text</label>
+                    <textarea id="newText" class="html-textarea" style="min-height: 80px;" placeholder="Enter the new text content"></textarea>
+                </div>
+                
+                <!-- Find/Replace fields (for find-replace mode) -->
+                <div id="findReplaceSection" style="display: none;">
+                    <div class="form-group">
+                        <label for="findText">Find Text</label>
+                        <input type="text" id="findText" placeholder="Text to find...">
+                    </div>
+                    <div class="form-group">
+                        <label for="replaceText">Replace With</label>
+                        <input type="text" id="replaceText" placeholder="Replacement text...">
+                    </div>
+                    <div class="help-text">Find and replace text within matching elements</div>
+                </div>
+                
+                <!-- Selected Element Preview -->
+                <div class="selected-element-display" id="selectedElementDisplay" style="display: none;">
+                    <div class="selected-element-label">Selected Element</div>
+                    <div class="selected-element-selector" id="selectedElementSelector"></div>
+                    <div class="selected-element-preview" id="selectedElementPreview"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="saveRule()" id="saveRuleBtn">Add Rule</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        Mass Update Tool for <a href="https://learningischange.com">Learning is Change</a><br>
+        Phase 1: Visual element selection and rule definition
+    </footer>
+
+    <script>
+        // ==========================================
+        // State
+        // ==========================================
+        let state = {
+            connected: false,
+            pageLoaded: false,
+            pageHtml: '',
+            baseUrl: 'https://learningischange.com/',
+            rules: { removals: [], additions: [], updates: [] },
+            currentRuleType: 'removal',
+            selectionMode: 'single',
+            insertionPosition: 'after',
+            updateMode: 'text',
+            isSelecting: false,
+            selectedElement: null,
+            previewMode: 'original',
+            // Execution state
+            scannedFiles: [],      // List of all HTML files from scan
+            filePattern: '',       // Pattern used for filtering
+            isExecuting: false,
+            shouldStop: false,
+            executionStats: {
+                scanned: 0,
+                changed: 0,
+                skipped: 0,
+                errors: 0
+            }
+        };
+        
+        // ==========================================
+        // GitHub Connection
+        // ==========================================
+        function toggleTokenVisibility() {
+            const input = document.getElementById('githubToken');
+            const btn = document.querySelector('.token-toggle');
+            input.type = input.type === 'password' ? 'text' : 'password';
+            btn.textContent = input.type === 'password' ? '👁️' : '🙈';
+        }
+        
+        async function testConnection() {
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            
+            if (!token || !repo) {
+                showStatus('connectionStatus', 'Please enter both token and repository', 'error');
+                return;
+            }
+            
+            const [owner, repoName] = repo.split('/');
+            if (!owner || !repoName) {
+                showStatus('connectionStatus', 'Repository format should be: owner/repo', 'error');
+                return;
+            }
+            
+            showStatus('connectionStatus', 'Testing connection...', 'info');
+            
+            try {
+                const response = await fetch(`https://api.github.com/repos/${owner}/${repoName}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    state.connected = true;
+                    showStatus('connectionStatus', `✅ Connected to ${data.full_name}`, 'success');
+                    document.getElementById('scanBtn').disabled = false;
+                    saveSettings();
+                } else if (response.status === 401) {
+                    showStatus('connectionStatus', '❌ Invalid token', 'error');
+                } else if (response.status === 404) {
+                    showStatus('connectionStatus', '❌ Repository not found', 'error');
+                } else {
+                    showStatus('connectionStatus', `❌ Error: ${response.status}`, 'error');
+                }
+            } catch (error) {
+                showStatus('connectionStatus', `❌ Connection error: ${error.message}`, 'error');
+            }
+        }
+        
+        function saveSettings() {
+            localStorage.setItem('massUpdateSettings', JSON.stringify({
+                repo: document.getElementById('githubRepo').value,
+                token: document.getElementById('githubToken').value
+            }));
+        }
+        
+        function loadSettings() {
+            const saved = localStorage.getItem('massUpdateSettings');
+            if (saved) {
+                const settings = JSON.parse(saved);
+                if (settings.token) document.getElementById('githubToken').value = settings.token;
+                if (settings.repo) document.getElementById('githubRepo').value = settings.repo;
+            }
+        }
+        
+        // ==========================================
+        // Source Tabs
+        // ==========================================
+        function switchSourceTab(tab) {
+            document.querySelectorAll('.source-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.source-panel').forEach(p => p.classList.remove('active'));
+            document.querySelector(`.source-tab[onclick*="${tab}"]`).classList.add('active');
+            document.getElementById(`panel-${tab}`).classList.add('active');
+        }
+        
+        // ==========================================
+        // Page Loading
+        // ==========================================
+        
+        // Normalize path - auto-append index.html for directory paths
+        function normalizePath(path) {
+            let cleanPath = path.trim();
+            if (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
+            if (cleanPath.endsWith('/')) cleanPath = cleanPath.slice(0, -1);
+            
+            // Check if path looks like a directory (no file extension in last segment)
+            const lastSegment = cleanPath.split('/').pop();
+            if (!lastSegment.includes('.')) {
+                cleanPath += '/index.html';
+            }
+            return cleanPath;
+        }
+        
+        async function loadFromGithub() {
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const path = document.getElementById('githubPath').value.trim();
+            
+            if (!token || !repo) {
+                showStatus('loadStatus', 'Please connect to GitHub first (Step 1)', 'error');
+                return;
+            }
+            
+            if (!path) {
+                showStatus('loadStatus', 'Please enter a file path', 'error');
+                return;
+            }
+            
+            const [owner, repoName] = repo.split('/');
+            const cleanPath = normalizePath(path);
+            
+            showStatus('loadStatus', `Loading ${cleanPath} from GitHub...`, 'info');
+            
+            try {
+                const response = await fetch(`https://api.github.com/repos/${owner}/${repoName}/contents/${cleanPath}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.raw+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const html = await response.text();
+                    loadPageIntoPreview(html);
+                    showStatus('loadStatus', `✅ Page loaded: ${cleanPath}`, 'success');
+                } else if (response.status === 404) {
+                    showStatus('loadStatus', `❌ File not found: ${cleanPath}`, 'error');
+                } else {
+                    showStatus('loadStatus', `❌ Error: ${response.status}`, 'error');
+                }
+            } catch (error) {
+                showStatus('loadStatus', `❌ Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Normalize URL - ensure it ends with index.html or a file
+        function normalizeUrl(url) {
+            try {
+                const urlObj = new URL(url);
+                let pathname = urlObj.pathname;
+                
+                // Check if pathname looks like a directory (no file extension in last segment)
+                const lastSegment = pathname.split('/').filter(s => s).pop() || '';
+                if (!lastSegment.includes('.')) {
+                    // Add trailing slash if missing, then index.html
+                    if (!pathname.endsWith('/')) {
+                        pathname += '/';
+                    }
+                    pathname += 'index.html';
+                    urlObj.pathname = pathname;
+                }
+                
+                return urlObj.toString();
+            } catch (e) {
+                return url;
+            }
+        }
+        
+        async function loadFromUrl() {
+            let url = document.getElementById('pageUrl').value.trim();
+            
+            if (!url) {
+                showStatus('loadStatus', 'Please enter a URL', 'error');
+                return;
+            }
+            
+            if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                url = 'https://' + url;
+            }
+            
+            // Normalize the URL to include index.html if needed
+            url = normalizeUrl(url);
+            
+            showStatus('loadStatus', `Loading ${url}...`, 'info');
+            
+            try {
+                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+                const response = await fetch(proxyUrl);
+                
+                if (response.ok) {
+                    const html = await response.text();
+                    const urlObj = new URL(url);
+                    state.baseUrl = urlObj.origin + '/';
+                    loadPageIntoPreview(html);
+                    showStatus('loadStatus', `✅ Page loaded: ${url}`, 'success');
+                } else {
+                    showStatus('loadStatus', `❌ Failed to fetch URL: ${response.status}`, 'error');
+                }
+            } catch (error) {
+                showStatus('loadStatus', `❌ Error: ${error.message}`, 'error');
+            }
+        }
+        
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const display = document.getElementById('fileInputDisplay');
+            const text = document.getElementById('fileInputText');
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                loadPageIntoPreview(e.target.result);
+                display.classList.add('has-file');
+                text.textContent = file.name;
+                showStatus('loadStatus', '✅ File loaded', 'success');
+            };
+            reader.onerror = () => {
+                showStatus('loadStatus', '❌ Error reading file', 'error');
+            };
+            reader.readAsText(file);
+        }
+        
+        function loadPageIntoPreview(html) {
+            state.pageHtml = html;
+            state.pageLoaded = true;
+            state.previewMode = 'original';
+            
+            // Hide placeholder, show preview
+            document.getElementById('previewPlaceholder').style.display = 'none';
+            document.getElementById('previewContainer').style.display = 'block';
+            
+            // Inject base tag for proper CSS/image loading
+            const baseTag = `<base href="${state.baseUrl}">`;
+            let modifiedHtml = html;
+            
+            // Insert base tag after <head> if it exists
+            if (modifiedHtml.includes('<head>')) {
+                modifiedHtml = modifiedHtml.replace('<head>', '<head>\n' + baseTag);
+            } else if (modifiedHtml.includes('<head ')) {
+                modifiedHtml = modifiedHtml.replace(/<head([^>]*)>/, '<head$1>\n' + baseTag);
+            } else {
+                // Prepend base tag at the beginning
+                modifiedHtml = baseTag + modifiedHtml;
+            }
+            
+            // Inject selection script
+            modifiedHtml = injectSelectionScript(modifiedHtml);
+            
+            // Load into iframe using srcdoc for better security
+            const iframe = document.getElementById('previewIframe');
+            iframe.srcdoc = modifiedHtml;
+            
+            // Enable selection button
+            document.getElementById('selectBtn').disabled = false;
+            
+            // Enable preview button if there are rules
+            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0;
+            document.getElementById('previewModeApplied').disabled = !hasRules;
+            
+            // Reset preview mode toggle
+            document.getElementById('previewModeOriginal').classList.add('active');
+            document.getElementById('previewModeApplied').classList.remove('active', 'preview-applied');
+            document.getElementById('rulesAppliedBanner').classList.remove('active');
+            
+            // Setup message listener for iframe communication
+            setupIframeCommunication();
+        }
+        
+        function injectSelectionScript(html) {
+            const script = `
+<style id="mass-update-styles">
+    .mass-update-hover {
+        outline: 3px solid #0085b2 !important;
+        outline-offset: 2px !important;
+        background-color: rgba(0, 133, 178, 0.15) !important;
+        cursor: crosshair !important;
+    }
+    .mass-update-selected {
+        outline: 3px solid #dc3545 !important;
+        outline-offset: 2px !important;
+        background-color: rgba(220, 53, 69, 0.15) !important;
+    }
+</style>
+<script id="mass-update-script">
+(function() {
+    let selectionEnabled = false;
+    let hoveredElement = null;
+    let selectedElement = null;
+    
+    // Listen for messages from parent
+    window.addEventListener('message', function(e) {
+        if (e.data.action === 'enableSelection') {
+            selectionEnabled = true;
+            document.body.style.cursor = 'crosshair';
+        } else if (e.data.action === 'disableSelection') {
+            selectionEnabled = false;
+            document.body.style.cursor = '';
+            if (hoveredElement) {
+                hoveredElement.classList.remove('mass-update-hover');
+                hoveredElement = null;
+            }
+        } else if (e.data.action === 'clearSelection') {
+            if (selectedElement) {
+                selectedElement.classList.remove('mass-update-selected');
+                selectedElement = null;
+            }
+        }
+    });
+    
+    // Generate a CSS selector for an element
+    function generateSelector(el) {
+        if (!el || el === document.body || el === document.documentElement) return 'body';
+        
+        // Try ID first
+        if (el.id) {
+            return '#' + CSS.escape(el.id);
+        }
+        
+        // Try class names (filter out our own classes)
+        const classes = Array.from(el.classList)
+            .filter(c => !c.startsWith('mass-update-'))
+            .map(c => CSS.escape(c));
+        
+        if (classes.length > 0) {
+            const selector = el.tagName.toLowerCase() + '.' + classes.join('.');
+            // Check uniqueness
+            try {
+                const matches = document.querySelectorAll(selector);
+                if (matches.length === 1) return selector;
+                if (matches.length <= 5) return selector; // Still useful
+            } catch (e) {}
+        }
+        
+        // Build a path
+        let path = [];
+        let current = el;
+        
+        while (current && current !== document.body && path.length < 5) {
+            let part = current.tagName.toLowerCase();
+            
+            if (current.id) {
+                path.unshift('#' + CSS.escape(current.id));
+                break;
+            }
+            
+            const currentClasses = Array.from(current.classList)
+                .filter(c => !c.startsWith('mass-update-'))
+                .slice(0, 2);
+            
+            if (currentClasses.length > 0) {
+                part += '.' + currentClasses.map(c => CSS.escape(c)).join('.');
+            }
+            
+            path.unshift(part);
+            current = current.parentElement;
+        }
+        
+        return path.join(' > ');
+    }
+    
+    // Get a preview of the element's HTML
+    function getPreview(el) {
+        const html = el.outerHTML;
+        if (html.length > 300) {
+            return html.substring(0, 300) + '...';
+        }
+        return html;
+    }
+    
+    // Mouseover handler
+    document.addEventListener('mouseover', function(e) {
+        if (!selectionEnabled) return;
+        
+        const target = e.target;
+        if (target === document.body || target === document.documentElement) return;
+        if (target.id === 'mass-update-styles' || target.id === 'mass-update-script') return;
+        
+        if (hoveredElement && hoveredElement !== target) {
+            hoveredElement.classList.remove('mass-update-hover');
+        }
+        
+        target.classList.add('mass-update-hover');
+        hoveredElement = target;
+        
+        // Send hover info to parent
+        window.parent.postMessage({
+            type: 'hover',
+            selector: generateSelector(target),
+            tagName: target.tagName.toLowerCase()
+        }, '*');
+    }, true);
+    
+    // Mouseout handler
+    document.addEventListener('mouseout', function(e) {
+        if (!selectionEnabled) return;
+        if (e.target === hoveredElement) {
+            e.target.classList.remove('mass-update-hover');
+            hoveredElement = null;
+        }
+    }, true);
+    
+    // Click handler
+    document.addEventListener('click', function(e) {
+        if (!selectionEnabled) return;
+        
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        const target = e.target;
+        if (target === document.body || target === document.documentElement) return;
+        
+        // Clear previous selection
+        if (selectedElement) {
+            selectedElement.classList.remove('mass-update-selected');
+        }
+        
+        // Remove hover class, add selected class
+        target.classList.remove('mass-update-hover');
+        target.classList.add('mass-update-selected');
+        selectedElement = target;
+        
+        // Send selection to parent
+        window.parent.postMessage({
+            type: 'selected',
+            selector: generateSelector(target),
+            tagName: target.tagName.toLowerCase(),
+            preview: getPreview(target),
+            text: target.textContent.trim(),
+            html: target.innerHTML,
+            classList: Array.from(target.classList).filter(c => !c.startsWith('mass-update-')).join(' '),
+            id: target.id || ''
+        }, '*');
+        
+        return false;
+    }, true);
+    
+    // Prevent all default click behaviors when selecting
+    document.addEventListener('click', function(e) {
+        if (selectionEnabled) {
+            e.preventDefault();
+            return false;
+        }
+    }, false);
+    
+    // Signal that the script is ready
+    window.parent.postMessage({ type: 'ready' }, '*');
+})();
+<\/script>`;
+            
+            // Insert before </body> or at end
+            if (html.includes('</body>')) {
+                return html.replace('</body>', script + '\n</body>');
+            } else {
+                return html + script;
+            }
+        }
+        
+        function setupIframeCommunication() {
+            // Remove old listener if exists
+            if (window.iframeMessageHandler) {
+                window.removeEventListener('message', window.iframeMessageHandler);
+            }
+            
+            window.iframeMessageHandler = function(event) {
+                const data = event.data;
+                
+                if (data.type === 'ready') {
+                    console.log('Iframe selection script ready');
+                }
+                
+                if (data.type === 'hover') {
+                    // Could show hover info somewhere
+                }
+                
+                if (data.type === 'selected') {
+                    state.selectedElement = data;
+                    
+                    // Update UI to show selection
+                    document.getElementById('currentSelectionInfo').classList.add('active');
+                    document.getElementById('currentSelectionSelector').textContent = data.selector;
+                    document.getElementById('clearBtn').style.display = 'inline-flex';
+                    
+                    // If modal is open, update it
+                    if (document.getElementById('addRuleModal').classList.contains('active')) {
+                        document.getElementById('ruleSelector').value = data.selector;
+                        document.getElementById('selectedElementDisplay').style.display = 'block';
+                        document.getElementById('selectedElementSelector').textContent = data.selector;
+                        document.getElementById('selectedElementPreview').textContent = data.preview;
+                    }
+                }
+            };
+            
+            window.addEventListener('message', window.iframeMessageHandler);
+        }
+        
+        // ==========================================
+        // Selection Control
+        // ==========================================
+        function startSelection() {
+            state.isSelecting = true;
+            document.getElementById('selectionBanner').classList.add('active');
+            document.getElementById('selectBtn').textContent = '🎯 Selecting...';
+            document.getElementById('selectBtn').classList.remove('btn-primary');
+            document.getElementById('selectBtn').classList.add('btn-danger');
+            
+            // Tell iframe to enable selection
+            const iframe = document.getElementById('previewIframe');
+            iframe.contentWindow.postMessage({ action: 'enableSelection' }, '*');
+        }
+        
+        function cancelSelection() {
+            endSelection();
+        }
+        
+        function endSelection() {
+            state.isSelecting = false;
+            document.getElementById('selectionBanner').classList.remove('active');
+            document.getElementById('selectBtn').textContent = '🎯 Select Element';
+            document.getElementById('selectBtn').classList.remove('btn-danger');
+            document.getElementById('selectBtn').classList.add('btn-primary');
+            
+            // Tell iframe to disable selection
+            const iframe = document.getElementById('previewIframe');
+            if (iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ action: 'disableSelection' }, '*');
+            }
+        }
+        
+        function clearSelection() {
+            state.selectedElement = null;
+            document.getElementById('currentSelectionInfo').classList.remove('active');
+            document.getElementById('clearBtn').style.display = 'none';
+            
+            // Tell iframe to clear selection
+            const iframe = document.getElementById('previewIframe');
+            if (iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ action: 'clearSelection' }, '*');
+            }
+        }
+        
+        function useSelectedElement() {
+            if (state.selectedElement) {
+                // Open the removal modal with this selector
+                openAddRuleModal('removal');
+                document.getElementById('ruleSelector').value = state.selectedElement.selector;
+                document.getElementById('selectedElementDisplay').style.display = 'block';
+                document.getElementById('selectedElementSelector').textContent = state.selectedElement.selector;
+                document.getElementById('selectedElementPreview').textContent = state.selectedElement.preview;
+            }
+        }
+        
+        // Escape key to cancel selection
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (state.isSelecting) {
+                    cancelSelection();
+                }
+                if (document.getElementById('addRuleModal').classList.contains('active')) {
+                    closeModal();
+                }
+            }
+        });
+        
+        // ==========================================
+        // Rule Management
+        // ==========================================
+        function openAddRuleModal(type) {
+            state.currentRuleType = type;
+            
+            document.getElementById('addRuleModal').classList.add('active');
+            
+            // Set modal title
+            const titles = {
+                removal: 'Add Removal Rule',
+                addition: 'Add Addition Rule',
+                update: 'Add Text Update Rule'
+            };
+            document.getElementById('modalTitle').textContent = titles[type] || 'Add Rule';
+            
+            // Show/hide sections based on rule type
+            document.getElementById('selectionModeSection').style.display = type === 'removal' ? 'block' : 'none';
+            document.getElementById('insertionPositionSection').style.display = type === 'addition' ? 'block' : 'none';
+            document.getElementById('htmlContentSection').style.display = type === 'addition' ? 'block' : 'none';
+            document.getElementById('updateModeSection').style.display = type === 'update' ? 'block' : 'none';
+            document.getElementById('originalTextSection').style.display = type === 'update' ? 'block' : 'none';
+            document.getElementById('newTextSection').style.display = type === 'update' && state.updateMode !== 'find-replace' ? 'block' : 'none';
+            document.getElementById('findReplaceSection').style.display = type === 'update' && state.updateMode === 'find-replace' ? 'block' : 'none';
+            document.getElementById('selectorSection').style.display = type !== 'removal' || state.selectionMode !== 'range' ? 'block' : 'none';
+            
+            // Reset form but keep selector if we have a selection
+            const currentSelector = state.selectedElement ? state.selectedElement.selector : '';
+            document.getElementById('ruleSelector').value = currentSelector;
+            document.getElementById('rangeStart').value = '';
+            document.getElementById('rangeEnd').value = '';
+            document.getElementById('htmlContent').value = '';
+            document.getElementById('originalText').value = state.selectedElement ? (state.selectedElement.text || state.selectedElement.preview || '') : '';
+            document.getElementById('newText').value = '';
+            document.getElementById('findText').value = '';
+            document.getElementById('replaceText').value = '';
+            
+            if (state.selectedElement) {
+                document.getElementById('selectedElementDisplay').style.display = 'block';
+                document.getElementById('selectedElementSelector').textContent = state.selectedElement.selector;
+                document.getElementById('selectedElementPreview').textContent = state.selectedElement.preview || '';
+            } else {
+                document.getElementById('selectedElementDisplay').style.display = 'none';
+            }
+            
+            setSelectionMode('single');
+            setInsertionPosition('before');
+            setUpdateMode('text');
+            
+            // Update button styling based on type
+            const btnStyles = {
+                removal: { text: 'Add Removal Rule', class: 'btn btn-danger' },
+                addition: { text: 'Add Addition Rule', class: 'btn btn-success' },
+                update: { text: 'Add Update Rule', class: 'btn btn-warning' }
+            };
+            document.getElementById('saveRuleBtn').textContent = btnStyles[type]?.text || 'Add Rule';
+            document.getElementById('saveRuleBtn').className = btnStyles[type]?.class || 'btn btn-primary';
+        }
+        
+        function closeModal() {
+            document.getElementById('addRuleModal').classList.remove('active');
+        }
+        
+        function setSelectionMode(mode) {
+            state.selectionMode = mode;
+            document.querySelectorAll('.selection-mode-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.mode === mode);
+            });
+            document.getElementById('rangeMarkersSection').style.display = mode === 'range' ? 'block' : 'none';
+            document.getElementById('selectorSection').style.display = mode === 'range' ? 'none' : 'block';
+        }
+        
+        function setInsertionPosition(position) {
+            state.insertionPosition = position;
+            document.querySelectorAll('.insertion-option').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.position === position);
+            });
+        }
+        
+        function setUpdateMode(mode) {
+            state.updateMode = mode;
+            document.querySelectorAll('[data-update-mode]').forEach(opt => {
+                opt.classList.toggle('active', opt.dataset.updateMode === mode);
+            });
+            
+            // Show/hide appropriate fields
+            document.getElementById('originalTextSection').style.display = mode !== 'find-replace' ? 'block' : 'none';
+            document.getElementById('newTextSection').style.display = mode !== 'find-replace' ? 'block' : 'none';
+            document.getElementById('findReplaceSection').style.display = mode === 'find-replace' ? 'block' : 'none';
+        }
+        
+        function saveRule() {
+            const type = state.currentRuleType;
+            
+            let rule = { id: Date.now(), type: type };
+            
+            if (type === 'removal') {
+                if (state.selectionMode === 'range') {
+                    const start = document.getElementById('rangeStart').value.trim();
+                    const end = document.getElementById('rangeEnd').value.trim();
+                    if (!start || !end) {
+                        alert('Please enter both start and end markers');
+                        return;
+                    }
+                    rule.mode = 'range';
+                    rule.startMarker = start;
+                    rule.endMarker = end;
+                    rule.displayText = `${start} ... ${end}`;
+                } else {
+                    const selector = document.getElementById('ruleSelector').value.trim();
+                    if (!selector) {
+                        alert('Please enter a CSS selector or select an element');
+                        return;
+                    }
+                    rule.mode = state.selectionMode;
+                    rule.selector = selector;
+                    rule.displayText = selector;
+                }
+                state.rules.removals.push(rule);
+            } else if (type === 'addition') {
+                const selector = document.getElementById('ruleSelector').value.trim();
+                const htmlContent = document.getElementById('htmlContent').value.trim();
+                
+                if (!selector) {
+                    alert('Please enter a CSS selector for the target element');
+                    return;
+                }
+                if (!htmlContent) {
+                    alert('Please enter HTML content to insert');
+                    return;
+                }
+                
+                rule.selector = selector;
+                rule.position = state.insertionPosition;
+                rule.content = htmlContent;
+                rule.displayText = `${state.insertionPosition} ${selector}`;
+                
+                state.rules.additions.push(rule);
+            } else if (type === 'update') {
+                const selector = document.getElementById('ruleSelector').value.trim();
+                
+                if (!selector) {
+                    alert('Please enter a CSS selector for the target element');
+                    return;
+                }
+                
+                rule.selector = selector;
+                rule.updateMode = state.updateMode;
+                
+                if (state.updateMode === 'find-replace') {
+                    const findText = document.getElementById('findText').value;
+                    const replaceText = document.getElementById('replaceText').value;
+                    
+                    if (!findText) {
+                        alert('Please enter text to find');
+                        return;
+                    }
+                    
+                    rule.findText = findText;
+                    rule.replaceText = replaceText;
+                    rule.displayText = `"${findText.substring(0, 20)}${findText.length > 20 ? '...' : ''}" → "${replaceText.substring(0, 20)}${replaceText.length > 20 ? '...' : ''}"`;
+                } else {
+                    const originalText = document.getElementById('originalText').value;
+                    const newText = document.getElementById('newText').value;
+                    
+                    if (!newText) {
+                        alert('Please enter the new text');
+                        return;
+                    }
+                    
+                    rule.originalText = originalText;
+                    rule.newText = newText;
+                    rule.displayText = `${selector}: "${originalText.substring(0, 15)}..." → "${newText.substring(0, 15)}..."`;
+                }
+                
+                state.rules.updates.push(rule);
+            }
+            
+            renderRules();
+            closeModal();
+            clearSelection();
+        }
+        
+        function deleteRule(type, id) {
+            if (type === 'removal') {
+                state.rules.removals = state.rules.removals.filter(r => r.id !== id);
+            } else if (type === 'addition') {
+                state.rules.additions = state.rules.additions.filter(r => r.id !== id);
+            } else if (type === 'update') {
+                state.rules.updates = state.rules.updates.filter(r => r.id !== id);
+            }
+            renderRules();
+        }
+        
+        function renderRules() {
+            // Render removals
+            const removalList = document.getElementById('removalRules');
+            if (state.rules.removals.length === 0) {
+                removalList.innerHTML = '<div class="empty-rules">No removal rules defined yet</div>';
+            } else {
+                removalList.innerHTML = state.rules.removals.map(rule => `
+                    <div class="rule-item removal">
+                        <div class="rule-item-header">
+                            <div class="rule-item-content">
+                                <div class="rule-item-selector">${escapeHtml(rule.displayText)}</div>
+                                <div class="rule-item-type">${rule.mode === 'range' ? 'Range/Markers' : rule.mode === 'all' ? 'All Matching' : 'Single Element'}</div>
+                            </div>
+                            <div class="rule-item-actions">
+                                <button class="rule-item-btn delete" onclick="deleteRule('removal', ${rule.id})" title="Delete">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            // Render additions
+            const additionList = document.getElementById('additionRules');
+            if (state.rules.additions.length === 0) {
+                additionList.innerHTML = '<div class="empty-rules">No addition rules defined yet</div>';
+            } else {
+                additionList.innerHTML = state.rules.additions.map(rule => `
+                    <div class="rule-item addition">
+                        <div class="rule-item-header">
+                            <div class="rule-item-content">
+                                <div class="rule-item-selector">${escapeHtml(rule.selector)}</div>
+                                <div class="rule-item-type">${rule.position.charAt(0).toUpperCase() + rule.position.slice(1)} element</div>
+                            </div>
+                            <div class="rule-item-actions">
+                                <button class="rule-item-btn delete" onclick="deleteRule('addition', ${rule.id})" title="Delete">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            // Render updates
+            const updateList = document.getElementById('updateRules');
+            if (state.rules.updates.length === 0) {
+                updateList.innerHTML = '<div class="empty-rules">No update rules defined yet</div>';
+            } else {
+                updateList.innerHTML = state.rules.updates.map(rule => `
+                    <div class="rule-item update">
+                        <div class="rule-item-header">
+                            <div class="rule-item-content">
+                                <div class="rule-item-selector">${escapeHtml(rule.selector)}</div>
+                                <div class="rule-item-type">${rule.updateMode === 'find-replace' ? 'Find & Replace' : rule.updateMode === 'html' ? 'Replace HTML' : 'Replace Text'}</div>
+                                <div class="rule-item-preview">${escapeHtml(rule.displayText)}</div>
+                            </div>
+                            <div class="rule-item-actions">
+                                <button class="rule-item-btn delete" onclick="deleteRule('update', ${rule.id})" title="Delete">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            // Enable/disable scan button and preview button
+            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0;
+            document.getElementById('scanBtn').disabled = !state.connected || !hasRules;
+            
+            // Enable/disable preview button
+            const previewAppliedBtn = document.getElementById('previewModeApplied');
+            previewAppliedBtn.disabled = !state.pageLoaded || !hasRules;
+            
+            // If we're in applied mode and rules changed, refresh the preview
+            if (state.previewMode === 'applied' && hasRules) {
+                showAppliedPreview();
+            } else if (state.previewMode === 'applied' && !hasRules) {
+                // Switch back to original if no rules left
+                setPreviewMode('original');
+            }
+        }
+        
+        // ==========================================
+        // Preview Mode Functions
+        // ==========================================
+        function setPreviewMode(mode) {
+            state.previewMode = mode;
+            
+            // Update toggle buttons
+            document.getElementById('previewModeOriginal').classList.toggle('active', mode === 'original');
+            document.getElementById('previewModeApplied').classList.toggle('active', mode === 'applied');
+            
+            // Add special class for applied mode
+            if (mode === 'applied') {
+                document.getElementById('previewModeApplied').classList.add('preview-applied');
+            }
+            
+            // Update banner
+            document.getElementById('rulesAppliedBanner').classList.toggle('active', mode === 'applied');
+            
+            // Load appropriate content
+            if (mode === 'original') {
+                showOriginalPreview();
+            } else {
+                showAppliedPreview();
+            }
+        }
+        
+        function showOriginalPreview() {
+            if (!state.pageLoaded || !state.pageHtml) return;
+            
+            // Reload the original HTML
+            const baseTag = `<base href="${state.baseUrl}">`;
+            let modifiedHtml = state.pageHtml;
+            
+            if (modifiedHtml.includes('<head>')) {
+                modifiedHtml = modifiedHtml.replace('<head>', '<head>\n' + baseTag);
+            } else if (modifiedHtml.includes('<head ')) {
+                modifiedHtml = modifiedHtml.replace(/<head([^>]*)>/, '<head$1>\n' + baseTag);
+            } else {
+                modifiedHtml = baseTag + modifiedHtml;
+            }
+            
+            modifiedHtml = injectSelectionScript(modifiedHtml);
+            
+            const iframe = document.getElementById('previewIframe');
+            iframe.srcdoc = modifiedHtml;
+        }
+        
+        function showAppliedPreview() {
+            if (!state.pageLoaded || !state.pageHtml) return;
+            
+            // Apply rules to the HTML
+            let processedHtml = state.pageHtml;
+            let removalCount = 0;
+            let additionCount = 0;
+            let updateCount = 0;
+            
+            // Apply removal rules
+            for (const rule of state.rules.removals) {
+                if (rule.mode === 'range') {
+                    // Handle range/marker removals
+                    const result = removeByMarkers(processedHtml, rule.startMarker, rule.endMarker);
+                    if (result.count > 0) {
+                        processedHtml = result.html;
+                        removalCount += result.count;
+                    }
+                } else {
+                    // Handle CSS selector removals
+                    const result = removeBySelector(processedHtml, rule.selector, rule.mode);
+                    if (result.count > 0) {
+                        processedHtml = result.html;
+                        removalCount += result.count;
+                    }
+                }
+            }
+            
+            // Apply addition rules
+            for (const rule of state.rules.additions) {
+                const result = addContent(processedHtml, rule.selector, rule.position, rule.content);
+                if (result.count > 0) {
+                    processedHtml = result.html;
+                    additionCount += result.count;
+                }
+            }
+            
+            // Apply update rules
+            for (const rule of state.rules.updates) {
+                const result = updateContent(processedHtml, rule);
+                if (result.count > 0) {
+                    processedHtml = result.html;
+                    updateCount += result.count;
+                }
+            }
+            
+            // Update summary
+            const summaryParts = [];
+            if (removalCount > 0) summaryParts.push(`${removalCount} removal(s)`);
+            if (additionCount > 0) summaryParts.push(`${additionCount} addition(s)`);
+            if (updateCount > 0) summaryParts.push(`${updateCount} update(s)`);
+            document.getElementById('rulesAppliedSummary').textContent = summaryParts.join(', ') || 'No changes';
+            
+            // Inject base tag
+            const baseTag = `<base href="${state.baseUrl}">`;
+            if (processedHtml.includes('<head>')) {
+                processedHtml = processedHtml.replace('<head>', '<head>\n' + baseTag);
+            } else if (processedHtml.includes('<head ')) {
+                processedHtml = processedHtml.replace(/<head([^>]*)>/, '<head$1>\n' + baseTag);
+            } else {
+                processedHtml = baseTag + processedHtml;
+            }
+            
+            // DON'T inject selection script for applied preview - just show the result
+            // Add a simple style to highlight where changes were made
+            const highlightStyle = `
+            <style id="preview-highlight-style">
+                .mass-update-added {
+                    outline: 2px dashed #28a745 !important;
+                    outline-offset: 2px !important;
+                    background-color: rgba(40, 167, 69, 0.1) !important;
+                }
+                .mass-update-modified {
+                    outline: 2px dashed #ffc107 !important;
+                    outline-offset: 2px !important;
+                    background-color: rgba(255, 193, 7, 0.15) !important;
+                }
+            </style>`;
+            
+            if (processedHtml.includes('</head>')) {
+                processedHtml = processedHtml.replace('</head>', highlightStyle + '\n</head>');
+            }
+            
+            const iframe = document.getElementById('previewIframe');
+            iframe.srcdoc = processedHtml;
+        }
+        
+        function removeByMarkers(html, startMarker, endMarker) {
+            let count = 0;
+            let result = html;
+            
+            // Escape special regex characters in markers
+            const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const startEscaped = escapeRegex(startMarker);
+            const endEscaped = escapeRegex(endMarker);
+            
+            // Create regex to match from start to end marker (including markers)
+            const regex = new RegExp(startEscaped + '[\\s\\S]*?' + endEscaped, 'gi');
+            
+            result = result.replace(regex, () => {
+                count++;
+                return '<!-- REMOVED BY MASS UPDATE TOOL -->';
+            });
+            
+            return { html: result, count };
+        }
+        
+        function removeBySelector(html, selector, mode) {
+            let count = 0;
+            
+            try {
+                // Parse HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Find elements
+                const elements = doc.querySelectorAll(selector);
+                
+                if (mode === 'single' && elements.length > 0) {
+                    // Remove only the first one
+                    elements[0].remove();
+                    count = 1;
+                } else {
+                    // Remove all matching
+                    elements.forEach(el => {
+                        el.remove();
+                        count++;
+                    });
+                }
+                
+                // Serialize back to HTML using outerHTML (preserves styles properly)
+                // Get the doctype if it exists
+                let doctype = '';
+                if (doc.doctype) {
+                    doctype = '<!DOCTYPE ' + doc.doctype.name + '>\n';
+                } else {
+                    doctype = '<!DOCTYPE html>\n';
+                }
+                
+                let result = doctype + doc.documentElement.outerHTML;
+                
+                return { html: result, count };
+            } catch (e) {
+                console.error('Error removing by selector:', e);
+                return { html, count: 0 };
+            }
+        }
+        
+        function addContent(html, selector, position, content) {
+            let count = 0;
+            
+            try {
+                // Parse HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Find target element(s)
+                const elements = doc.querySelectorAll(selector);
+                
+                elements.forEach(el => {
+                    // Create a wrapper to parse the new content
+                    const wrapper = doc.createElement('div');
+                    wrapper.innerHTML = content;
+                    
+                    // Mark added content for highlighting
+                    Array.from(wrapper.children).forEach(child => {
+                        child.classList.add('mass-update-added');
+                    });
+                    
+                    if (position === 'before') {
+                        // Insert before the element
+                        while (wrapper.firstChild) {
+                            el.parentNode.insertBefore(wrapper.firstChild, el);
+                        }
+                        count++;
+                    } else if (position === 'after') {
+                        // Insert after the element
+                        let insertPoint = el.nextSibling;
+                        while (wrapper.firstChild) {
+                            el.parentNode.insertBefore(wrapper.firstChild, insertPoint);
+                        }
+                        count++;
+                    } else if (position === 'replace') {
+                        // Replace the element
+                        while (wrapper.firstChild) {
+                            el.parentNode.insertBefore(wrapper.firstChild, el);
+                        }
+                        el.remove();
+                        count++;
+                    }
+                });
+                
+                // Serialize back to HTML using outerHTML (preserves styles properly)
+                let doctype = '';
+                if (doc.doctype) {
+                    doctype = '<!DOCTYPE ' + doc.doctype.name + '>\n';
+                } else {
+                    doctype = '<!DOCTYPE html>\n';
+                }
+                
+                let result = doctype + doc.documentElement.outerHTML;
+                
+                return { html: result, count };
+            } catch (e) {
+                console.error('Error adding content:', e);
+                return { html, count: 0 };
+            }
+        }
+        
+        function updateContent(html, rule) {
+            let count = 0;
+            
+            try {
+                // Parse HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Find target elements
+                const elements = doc.querySelectorAll(rule.selector);
+                
+                elements.forEach(el => {
+                    if (rule.updateMode === 'find-replace') {
+                        // Find and replace text within the element
+                        const originalHtml = el.innerHTML;
+                        const newHtml = originalHtml.split(rule.findText).join(rule.replaceText);
+                        
+                        if (originalHtml !== newHtml) {
+                            el.innerHTML = newHtml;
+                            el.classList.add('mass-update-modified');
+                            count++;
+                        }
+                    } else if (rule.updateMode === 'html') {
+                        // Replace the entire innerHTML
+                        el.innerHTML = rule.newText;
+                        el.classList.add('mass-update-modified');
+                        count++;
+                    } else {
+                        // Replace text content only (preserves child structure for simple cases)
+                        // For simple elements with just text, replace textContent
+                        if (el.children.length === 0 || rule.originalText) {
+                            // Check if the text matches what we expect
+                            const currentText = el.textContent.trim();
+                            const expectedText = (rule.originalText || '').trim();
+                            
+                            if (!expectedText || currentText === expectedText || currentText.includes(expectedText)) {
+                                el.textContent = rule.newText;
+                                el.classList.add('mass-update-modified');
+                                count++;
+                            }
+                        }
+                    }
+                });
+                
+                // Serialize back to HTML using outerHTML (preserves styles properly)
+                let doctype = '';
+                if (doc.doctype) {
+                    doctype = '<!DOCTYPE ' + doc.doctype.name + '>\n';
+                } else {
+                    doctype = '<!DOCTYPE html>\n';
+                }
+                
+                let result = doctype + doc.documentElement.outerHTML;
+                
+                return { html: result, count };
+            } catch (e) {
+                console.error('Error updating content:', e);
+                return { html, count: 0 };
+            }
+        }
+        
+        function exportRules() {
+            const data = JSON.stringify(state.rules, null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'mass-update-rules.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        function importRules() {
+            document.getElementById('importRulesInput').click();
+        }
+        
+        function handleImportRules(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const imported = JSON.parse(e.target.result);
+                    if (imported.removals) {
+                        state.rules.removals = [...state.rules.removals, ...imported.removals];
+                    }
+                    if (imported.additions) {
+                        state.rules.additions = [...state.rules.additions, ...imported.additions];
+                    }
+                    if (imported.updates) {
+                        state.rules.updates = [...state.rules.updates, ...imported.updates];
+                    }
+                    state.rules.removals.forEach((r, i) => r.id = Date.now() + i);
+                    state.rules.additions.forEach((r, i) => r.id = Date.now() + 1000 + i);
+                    state.rules.updates.forEach((r, i) => r.id = Date.now() + 2000 + i);
+                    renderRules();
+                    alert('Rules imported successfully!');
+                } catch (err) {
+                    alert('Error importing rules: ' + err.message);
+                }
+            };
+            reader.readAsText(file);
+            event.target.value = '';
+        }
+        
+        // ==========================================
+        // Repository Scanning
+        // ==========================================
+        async function scanRepository() {
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const pattern = document.getElementById('filePattern').value.trim();
+            
+            if (!token || !repo) {
+                showStatus('scanStatus', 'Please connect to GitHub first', 'error');
+                return;
+            }
+            
+            if (state.rules.removals.length === 0 && state.rules.additions.length === 0 && state.rules.updates.length === 0) {
+                showStatus('scanStatus', 'Please define at least one rule first', 'error');
+                return;
+            }
+            
+            const [owner, repoName] = repo.split('/');
+            
+            showStatus('scanStatus', 'Fetching repository tree...', 'info');
+            document.getElementById('scanBtn').disabled = true;
+            
+            try {
+                const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/trees/main?recursive=1`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github+json'
+                    }
+                });
+                
+                if (!treeResponse.ok) throw new Error(`Failed to fetch tree: ${treeResponse.status}`);
+                
+                const treeData = await treeResponse.json();
+                
+                let htmlFiles = treeData.tree.filter(item => 
+                    item.type === 'blob' && 
+                    (item.path.endsWith('.html') || item.path.endsWith('.htm'))
+                );
+                
+                if (pattern) {
+                    const regex = new RegExp(pattern.replace(/\*/g, '.*'));
+                    htmlFiles = htmlFiles.filter(item => regex.test(item.path));
+                }
+                
+                // Store for execution phase
+                state.scannedFiles = htmlFiles;
+                state.filePattern = pattern;
+                
+                showStatus('scanStatus', `Found ${htmlFiles.length} HTML files. Analyzing sample...`, 'info');
+                
+                const sampleSize = Math.min(10, htmlFiles.length);
+                const sampleFiles = [];
+                const sampleIndices = new Set();
+                
+                while (sampleIndices.size < sampleSize) {
+                    sampleIndices.add(Math.floor(Math.random() * htmlFiles.length));
+                }
+                
+                let totalRemovals = 0;
+                let totalAdditions = 0;
+                let totalUpdates = 0;
+                let affectedCount = 0;
+                
+                for (const index of sampleIndices) {
+                    const file = htmlFiles[index];
+                    
+                    try {
+                        const contentResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/contents/${file.path}`, {
+                            headers: {
+                                'Authorization': `Bearer ${token}`,
+                                'Accept': 'application/vnd.github.raw+json'
+                            }
+                        });
+                        
+                        if (contentResponse.ok) {
+                            const html = await contentResponse.text();
+                            const analysis = analyzeFile(html, file.path);
+                            
+                            if (analysis.removals > 0 || analysis.additions > 0 || analysis.updates > 0) {
+                                affectedCount++;
+                                sampleFiles.push({ path: file.path, ...analysis });
+                            }
+                            
+                            totalRemovals += analysis.removals;
+                            totalAdditions += analysis.additions;
+                            totalUpdates += analysis.updates;
+                        }
+                    } catch (e) {
+                        console.error(`Error analyzing ${file.path}:`, e);
+                    }
+                }
+                
+                const estimatedAffected = Math.round((affectedCount / sampleSize) * htmlFiles.length);
+                const estimatedRemovals = Math.round((totalRemovals / sampleSize) * htmlFiles.length);
+                const estimatedAdditions = Math.round((totalAdditions / sampleSize) * htmlFiles.length);
+                const estimatedUpdates = Math.round((totalUpdates / sampleSize) * htmlFiles.length);
+                
+                document.getElementById('scanResults').style.display = 'block';
+                document.getElementById('statTotalFiles').textContent = htmlFiles.length.toLocaleString();
+                document.getElementById('statAffectedFiles').textContent = `~${estimatedAffected.toLocaleString()}`;
+                document.getElementById('statRemovals').textContent = `~${estimatedRemovals.toLocaleString()}`;
+                document.getElementById('statAdditions').textContent = `~${estimatedAdditions.toLocaleString()}`;
+                document.getElementById('statUpdates').textContent = `~${estimatedUpdates.toLocaleString()}`;
+                
+                const sampleContainer = document.getElementById('sampleFiles');
+                sampleContainer.innerHTML = sampleFiles.map(file => `
+                    <div style="padding: 10px; background: var(--light-bg); border: 1px solid var(--border-color); border-radius: 3px; margin-bottom: 8px;">
+                        <div style="font-family: monospace; font-size: 13px; color: var(--accent-1);">${file.path}</div>
+                        <div style="font-size: 12px; color: #888; margin-top: 4px;">
+                            ${file.removals > 0 ? `<span style="color: var(--danger);">✂️ ${file.removals} removal(s)</span>` : ''}
+                            ${file.additions > 0 ? `<span style="color: var(--success); margin-left: 10px;">➕ ${file.additions} addition(s)</span>` : ''}
+                            ${file.updates > 0 ? `<span style="color: var(--warning); margin-left: 10px;">✏️ ${file.updates} update(s)</span>` : ''}
+                        </div>
+                    </div>
+                `).join('') || '<div style="color: #888; font-style: italic;">No affected files in sample</div>';
+                
+                // Show execute step if there are affected files
+                if (estimatedAffected > 0) {
+                    document.getElementById('executeStep').style.display = 'block';
+                    // Set default commit message
+                    const ruleDescriptions = [];
+                    if (state.rules.removals.length > 0) ruleDescriptions.push(`${state.rules.removals.length} removal(s)`);
+                    if (state.rules.additions.length > 0) ruleDescriptions.push(`${state.rules.additions.length} addition(s)`);
+                    if (state.rules.updates.length > 0) ruleDescriptions.push(`${state.rules.updates.length} update(s)`);
+                    document.getElementById('commitMessage').value = `Mass update: ${ruleDescriptions.join(', ')}`;
+                    
+                    // Initialize stats display
+                    initDB().then(() => updateStats());
+                }
+                
+                showStatus('scanStatus', `✅ Scan complete. Estimated ${estimatedAffected.toLocaleString()} files affected.`, 'success');
+                
+            } catch (error) {
+                showStatus('scanStatus', `❌ Error: ${error.message}`, 'error');
+            }
+            
+            document.getElementById('scanBtn').disabled = false;
+        }
+        
+        function analyzeFile(html, path) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            let removals = 0;
+            let additions = 0;
+            let updates = 0;
+            
+            for (const rule of state.rules.removals) {
+                if (rule.mode === 'range') {
+                    if (html.includes(rule.startMarker) && html.includes(rule.endMarker)) {
+                        removals++;
+                    }
+                } else {
+                    try {
+                        const matches = doc.querySelectorAll(rule.selector);
+                        if (rule.mode === 'single') {
+                            removals += matches.length > 0 ? 1 : 0;
+                        } else {
+                            removals += matches.length;
+                        }
+                    } catch (e) {}
+                }
+            }
+            
+            for (const rule of state.rules.additions) {
+                try {
+                    const matches = doc.querySelectorAll(rule.selector);
+                    additions += matches.length > 0 ? 1 : 0;
+                } catch (e) {}
+            }
+            
+            for (const rule of state.rules.updates) {
+                try {
+                    const matches = doc.querySelectorAll(rule.selector);
+                    if (rule.updateMode === 'find-replace') {
+                        // Check if any matching elements contain the text to find
+                        matches.forEach(el => {
+                            if (el.innerHTML.includes(rule.findText)) {
+                                updates++;
+                            }
+                        });
+                    } else {
+                        updates += matches.length;
+                    }
+                } catch (e) {}
+            }
+            
+            return { removals, additions, updates };
+        }
+        
+        // ==========================================
+        // Execution Functions (Batch-Based)
+        // ==========================================
+        
+        // IndexedDB for queue persistence
+        let db = null;
+        const DB_NAME = 'MassUpdateQueue';
+        const DB_VERSION = 2;
+        
+        // Processing state
+        let isProcessing = false;
+        let shouldStopProcessing = false;
+        let isUploading = false;
+        let shouldStopUploading = false;
+        
+        async function initDB() {
+            return new Promise((resolve, reject) => {
+                const request = indexedDB.open(DB_NAME, DB_VERSION);
+                
+                request.onerror = () => reject(request.error);
+                request.onsuccess = () => {
+                    db = request.result;
+                    resolve(db);
+                };
+                
+                request.onupgradeneeded = (event) => {
+                    const database = event.target.result;
+                    
+                    // Store for files pending blob upload (changed files)
+                    if (!database.objectStoreNames.contains('pendingFiles')) {
+                        database.createObjectStore('pendingFiles', { keyPath: 'path' });
+                    }
+                    
+                    // Store for uploaded blobs (path -> sha)
+                    if (!database.objectStoreNames.contains('uploadedBlobs')) {
+                        database.createObjectStore('uploadedBlobs', { keyPath: 'path' });
+                    }
+                    
+                    // Store for tracking processed file paths
+                    if (!database.objectStoreNames.contains('processedPaths')) {
+                        database.createObjectStore('processedPaths', { keyPath: 'path' });
+                    }
+                    
+                    // Store for metadata
+                    if (!database.objectStoreNames.contains('metadata')) {
+                        database.createObjectStore('metadata', { keyPath: 'key' });
+                    }
+                };
+            });
+        }
+        
+        async function clearAllStores() {
+            if (!db) await initDB();
+            
+            const tx = db.transaction(['pendingFiles', 'uploadedBlobs', 'processedPaths', 'metadata'], 'readwrite');
+            tx.objectStore('pendingFiles').clear();
+            tx.objectStore('uploadedBlobs').clear();
+            tx.objectStore('processedPaths').clear();
+            tx.objectStore('metadata').clear();
+            
+            return new Promise((resolve, reject) => {
+                tx.oncomplete = resolve;
+                tx.onerror = () => reject(tx.error);
+            });
+        }
+        
+        async function getStoreCount(storeName) {
+            if (!db) await initDB();
+            
+            const tx = db.transaction([storeName], 'readonly');
+            const request = tx.objectStore(storeName).count();
+            
+            return new Promise((resolve, reject) => {
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        async function addToStore(storeName, item) {
+            if (!db) await initDB();
+            
+            const tx = db.transaction([storeName], 'readwrite');
+            tx.objectStore(storeName).put(item);
+            
+            return new Promise((resolve, reject) => {
+                tx.oncomplete = resolve;
+                tx.onerror = () => reject(tx.error);
+            });
+        }
+        
+        async function getFromStore(storeName, key) {
+            if (!db) await initDB();
+            
+            const tx = db.transaction([storeName], 'readonly');
+            const request = tx.objectStore(storeName).get(key);
+            
+            return new Promise((resolve, reject) => {
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        async function getAllFromStore(storeName) {
+            if (!db) await initDB();
+            
+            const tx = db.transaction([storeName], 'readonly');
+            const request = tx.objectStore(storeName).getAll();
+            
+            return new Promise((resolve, reject) => {
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        async function removeFromStore(storeName, key) {
+            if (!db) await initDB();
+            
+            const tx = db.transaction([storeName], 'readwrite');
+            tx.objectStore(storeName).delete(key);
+            
+            return new Promise((resolve, reject) => {
+                tx.oncomplete = resolve;
+                tx.onerror = () => reject(tx.error);
+            });
+        }
+        
+        async function isPathProcessed(path) {
+            const result = await getFromStore('processedPaths', path);
+            return !!result;
+        }
+        
+        async function markPathProcessed(path) {
+            await addToStore('processedPaths', { path });
+        }
+        
+        function execLog(message, type = 'info') {
+            const log = document.getElementById('executeLog');
+            if (!log) return;
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+        }
+        
+        function stringToBase64(str) {
+            const encoder = new TextEncoder();
+            const bytes = encoder.encode(str);
+            const chars = new Array(bytes.length);
+            for (let i = 0; i < bytes.length; i++) {
+                chars[i] = String.fromCharCode(bytes[i]);
+            }
+            return btoa(chars.join(''));
+        }
+        
+        function applyRulesToHtml(html) {
+            let processedHtml = html;
+            let hasChanges = false;
+            
+            for (const rule of state.rules.removals) {
+                if (rule.mode === 'range') {
+                    const result = removeByMarkers(processedHtml, rule.startMarker, rule.endMarker);
+                    if (result.count > 0) {
+                        processedHtml = result.html;
+                        hasChanges = true;
+                    }
+                } else {
+                    const result = removeBySelector(processedHtml, rule.selector, rule.mode);
+                    if (result.count > 0) {
+                        processedHtml = result.html;
+                        hasChanges = true;
+                    }
+                }
+            }
+            
+            for (const rule of state.rules.additions) {
+                const result = addContentClean(processedHtml, rule.selector, rule.position, rule.content);
+                if (result.count > 0) {
+                    processedHtml = result.html;
+                    hasChanges = true;
+                }
+            }
+            
+            for (const rule of state.rules.updates) {
+                const result = updateContentClean(processedHtml, rule);
+                if (result.count > 0) {
+                    processedHtml = result.html;
+                    hasChanges = true;
+                }
+            }
+            
+            return { html: processedHtml, changed: hasChanges };
+        }
+        
+        function addContentClean(html, selector, position, content) {
+            let count = 0;
+            
+            try {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const elements = doc.querySelectorAll(selector);
+                
+                elements.forEach(el => {
+                    const wrapper = doc.createElement('div');
+                    wrapper.innerHTML = content;
+                    
+                    if (position === 'before') {
+                        while (wrapper.firstChild) {
+                            el.parentNode.insertBefore(wrapper.firstChild, el);
+                        }
+                        count++;
+                    } else if (position === 'after') {
+                        let insertPoint = el.nextSibling;
+                        while (wrapper.firstChild) {
+                            el.parentNode.insertBefore(wrapper.firstChild, insertPoint);
+                        }
+                        count++;
+                    } else if (position === 'replace') {
+                        while (wrapper.firstChild) {
+                            el.parentNode.insertBefore(wrapper.firstChild, el);
+                        }
+                        el.remove();
+                        count++;
+                    }
+                });
+                
+                let doctype = doc.doctype ? '<!DOCTYPE ' + doc.doctype.name + '>\n' : '<!DOCTYPE html>\n';
+                return { html: doctype + doc.documentElement.outerHTML, count };
+            } catch (e) {
+                return { html, count: 0 };
+            }
+        }
+        
+        function updateContentClean(html, rule) {
+            let count = 0;
+            
+            try {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const elements = doc.querySelectorAll(rule.selector);
+                
+                elements.forEach(el => {
+                    if (rule.updateMode === 'find-replace') {
+                        const originalHtml = el.innerHTML;
+                        const newHtml = originalHtml.split(rule.findText).join(rule.replaceText);
+                        if (originalHtml !== newHtml) {
+                            el.innerHTML = newHtml;
+                            count++;
+                        }
+                    } else if (rule.updateMode === 'html') {
+                        el.innerHTML = rule.newText;
+                        count++;
+                    } else {
+                        if (el.children.length === 0 || rule.originalText) {
+                            const currentText = el.textContent.trim();
+                            const expectedText = (rule.originalText || '').trim();
+                            if (!expectedText || currentText === expectedText || currentText.includes(expectedText)) {
+                                el.textContent = rule.newText;
+                                count++;
+                            }
+                        }
+                    }
+                });
+                
+                let doctype = doc.doctype ? '<!DOCTYPE ' + doc.doctype.name + '>\n' : '<!DOCTYPE html>\n';
+                return { html: doctype + doc.documentElement.outerHTML, count };
+            } catch (e) {
+                return { html, count: 0 };
+            }
+        }
+        
+        async function updateStats() {
+            const processed = await getStoreCount('processedPaths');
+            const pending = await getStoreCount('pendingFiles');
+            const uploaded = await getStoreCount('uploadedBlobs');
+            
+            const total = state.scannedFiles?.length || 0;
+            const skipped = processed - pending - uploaded;
+            
+            document.getElementById('statTotalFiles').textContent = total;
+            document.getElementById('statProcessed').textContent = processed;
+            document.getElementById('statQueued').textContent = pending + uploaded;
+            document.getElementById('statSkipped').textContent = Math.max(0, skipped);
+            
+            // Update upload stats
+            document.getElementById('uploadPending').textContent = pending;
+            document.getElementById('uploadComplete').textContent = uploaded;
+            
+            // Show upload phase if we have pending files
+            if (pending > 0 || uploaded > 0) {
+                document.getElementById('uploadPhase').style.display = 'block';
+            }
+            
+            // Show commit phase if all pending are uploaded
+            if (pending === 0 && uploaded > 0) {
+                document.getElementById('commitPhase').style.display = 'block';
+                document.getElementById('commitSummary').textContent = `${uploaded} files ready to commit`;
+            }
+        }
+        
+        async function processNextBatch() {
+            if (isProcessing) return;
+            
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const batchSize = parseInt(document.getElementById('batchSize').value);
+            const delay = parseInt(document.getElementById('batchDelay').value) || 50;
+            
+            if (!token || !repo) {
+                alert('Please connect to GitHub first');
+                return;
+            }
+            
+            if (!state.scannedFiles || state.scannedFiles.length === 0) {
+                alert('Please scan the repository first');
+                return;
+            }
+            
+            const [owner, repoName] = repo.split('/');
+            await initDB();
+            
+            isProcessing = true;
+            shouldStopProcessing = false;
+            
+            document.getElementById('processBatchBtn').disabled = true;
+            document.getElementById('processAllBtn').disabled = true;
+            document.getElementById('processProgress').style.display = 'block';
+            
+            const progressBar = document.getElementById('processProgressBar');
+            const progressText = document.getElementById('processProgressText');
+            const rateLimitInfo = document.getElementById('rateLimitInfo');
+            
+            const headers = {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/vnd.github.raw+json',
+                'X-GitHub-Api-Version': '2022-11-28'
+            };
+            
+            let processed = 0;
+            let changed = 0;
+            let skipped = 0;
+            let errors = 0;
+            
+            // Find unprocessed files
+            const unprocessedFiles = [];
+            for (const file of state.scannedFiles) {
+                if (!(await isPathProcessed(file.path))) {
+                    unprocessedFiles.push(file);
+                    if (unprocessedFiles.length >= batchSize) break;
+                }
+            }
+            
+            if (unprocessedFiles.length === 0) {
+                execLog('All files have been processed!', 'success');
+                isProcessing = false;
+                document.getElementById('processBatchBtn').disabled = false;
+                document.getElementById('processAllBtn').disabled = false;
+                await updateStats();
+                return;
+            }
+            
+            execLog(`Processing batch of ${unprocessedFiles.length} files...`, 'info');
+            
+            for (let i = 0; i < unprocessedFiles.length; i++) {
+                if (shouldStopProcessing) {
+                    execLog('Processing stopped by user', 'warning');
+                    break;
+                }
+                
+                const file = unprocessedFiles[i];
+                progressBar.style.width = `${((i + 1) / unprocessedFiles.length) * 100}%`;
+                progressText.textContent = `Processing ${i + 1}/${unprocessedFiles.length}: ${file.path}`;
+                
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${owner}/${repoName}/contents/${file.path}`, {
+                        headers
+                    });
+                    
+                    // Check rate limit
+                    const remaining = response.headers.get('x-ratelimit-remaining');
+                    if (remaining) {
+                        const remainingNum = parseInt(remaining);
+                        if (remainingNum < 100) {
+                            rateLimitInfo.style.display = 'block';
+                            document.getElementById('rateLimitText').textContent = 
+                                `Only ${remaining} API calls remaining! Consider pausing.`;
+                        } else if (remainingNum < 500) {
+                            rateLimitInfo.style.display = 'block';
+                            document.getElementById('rateLimitText').textContent = 
+                                `${remaining} API calls remaining`;
+                        } else {
+                            rateLimitInfo.style.display = 'none';
+                        }
+                    }
+                    
+                    if (response.status === 403 || response.status === 429) {
+                        execLog('Rate limit hit! Stopping batch.', 'error');
+                        const resetTime = response.headers.get('x-ratelimit-reset');
+                        if (resetTime) {
+                            const resetDate = new Date(parseInt(resetTime) * 1000);
+                            execLog(`Rate limit resets at ${resetDate.toLocaleTimeString()}`, 'info');
+                        }
+                        break;
+                    }
+                    
+                    if (!response.ok) {
+                        errors++;
+                        await markPathProcessed(file.path);
+                        continue;
+                    }
+                    
+                    const html = await response.text();
+                    const result = applyRulesToHtml(html);
+                    
+                    if (result.changed) {
+                        await addToStore('pendingFiles', { path: file.path, content: result.html });
+                        changed++;
+                    } else {
+                        skipped++;
+                    }
+                    
+                    await markPathProcessed(file.path);
+                    processed++;
+                    
+                    // Delay between requests
+                    if (delay > 0 && i < unprocessedFiles.length - 1) {
+                        await new Promise(r => setTimeout(r, delay));
+                    }
+                    
+                } catch (e) {
+                    execLog(`Error: ${file.path}: ${e.message}`, 'error');
+                    errors++;
+                    await markPathProcessed(file.path);
+                }
+            }
+            
+            execLog(`Batch complete: ${processed} processed, ${changed} changed, ${skipped} unchanged, ${errors} errors`, 'success');
+            
+            isProcessing = false;
+            document.getElementById('processBatchBtn').disabled = false;
+            document.getElementById('processAllBtn').disabled = false;
+            
+            await updateStats();
+        }
+        
+        async function processAllBatches() {
+            if (isProcessing) return;
+            
+            document.getElementById('stopProcessBtn').style.display = 'inline-flex';
+            document.getElementById('processBatchBtn').style.display = 'none';
+            document.getElementById('processAllBtn').style.display = 'none';
+            
+            shouldStopProcessing = false;
+            
+            while (!shouldStopProcessing) {
+                const processedCount = await getStoreCount('processedPaths');
+                const totalFiles = state.scannedFiles?.length || 0;
+                
+                if (processedCount >= totalFiles) {
+                    execLog('All files processed!', 'success');
+                    break;
+                }
+                
+                await processNextBatch();
+                
+                if (shouldStopProcessing) break;
+                
+                // Small delay between batches
+                await new Promise(r => setTimeout(r, 500));
+            }
+            
+            document.getElementById('stopProcessBtn').style.display = 'none';
+            document.getElementById('processBatchBtn').style.display = 'inline-flex';
+            document.getElementById('processAllBtn').style.display = 'inline-flex';
+        }
+        
+        function stopProcessing() {
+            shouldStopProcessing = true;
+            execLog('Stopping after current file...', 'warning');
+        }
+        
+        async function resetProgress() {
+            if (!confirm('Reset all progress? This will clear the queue and start over.')) return;
+            
+            await clearAllStores();
+            await updateStats();
+            
+            document.getElementById('uploadPhase').style.display = 'none';
+            document.getElementById('commitPhase').style.display = 'none';
+            document.getElementById('processProgress').style.display = 'none';
+            document.getElementById('uploadProgress').style.display = 'none';
+            document.getElementById('rateLimitInfo').style.display = 'none';
+            document.getElementById('executeLog').innerHTML = '';
+            
+            execLog('Progress reset', 'info');
+        }
+        
+        async function startBlobUpload() {
+            if (isUploading) return;
+            
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const delay = parseInt(document.getElementById('uploadDelay').value) || 150;
+            
+            const [owner, repoName] = repo.split('/');
+            
+            isUploading = true;
+            shouldStopUploading = false;
+            
+            document.getElementById('startUploadBtn').style.display = 'none';
+            document.getElementById('pauseUploadBtn').style.display = 'inline-flex';
+            document.getElementById('resumeUploadBtn').style.display = 'none';
+            document.getElementById('uploadProgress').style.display = 'block';
+            
+            const progressBar = document.getElementById('uploadProgressBar');
+            const progressText = document.getElementById('uploadProgressText');
+            const rateLimitInfo = document.getElementById('rateLimitInfo');
+            
+            const headers = {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28',
+                'Content-Type': 'application/json'
+            };
+            
+            let errorCount = 0;
+            
+            execLog(`Starting blob upload with ${delay}ms delay...`, 'info');
+            
+            while (isUploading && !shouldStopUploading) {
+                const pendingFiles = await getAllFromStore('pendingFiles');
+                
+                if (pendingFiles.length === 0) {
+                    execLog('All blobs uploaded!', 'success');
+                    break;
+                }
+                
+                const file = pendingFiles[0];
+                const uploaded = await getStoreCount('uploadedBlobs');
+                const total = pendingFiles.length + uploaded;
+                const progress = (uploaded / total) * 100;
+                
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `Uploading ${uploaded + 1}/${total}: ${file.path}`;
+                
+                try {
+                    const base64Content = stringToBase64(file.content);
+                    
+                    let success = false;
+                    
+                    for (let attempt = 1; attempt <= 3; attempt++) {
+                        const blobResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/blobs`, {
+                            method: 'POST',
+                            headers,
+                            body: JSON.stringify({
+                                content: base64Content,
+                                encoding: 'base64'
+                            })
+                        });
+                        
+                        const remaining = blobResponse.headers.get('x-ratelimit-remaining');
+                        if (remaining && parseInt(remaining) < 100) {
+                            rateLimitInfo.style.display = 'block';
+                            document.getElementById('rateLimitText').textContent = 
+                                `Low rate limit: ${remaining} remaining. Consider pausing.`;
+                        }
+                        
+                        if (blobResponse.status === 403 || blobResponse.status === 429) {
+                            execLog('Rate limited. Pausing uploads...', 'warning');
+                            shouldStopUploading = true;
+                            break;
+                        }
+                        
+                        if (blobResponse.ok) {
+                            const blobData = await blobResponse.json();
+                            await addToStore('uploadedBlobs', { path: file.path, sha: blobData.sha });
+                            await removeFromStore('pendingFiles', file.path);
+                            success = true;
+                            break;
+                        }
+                        
+                        if (attempt < 3) {
+                            await new Promise(r => setTimeout(r, 1000 * attempt));
+                        }
+                    }
+                    
+                    if (!success && !shouldStopUploading) {
+                        errorCount++;
+                        document.getElementById('uploadErrors').textContent = errorCount;
+                        execLog(`Failed: ${file.path}`, 'error');
+                        await removeFromStore('pendingFiles', file.path);
+                    }
+                    
+                } catch (e) {
+                    execLog(`Error: ${file.path}: ${e.message}`, 'error');
+                    errorCount++;
+                    document.getElementById('uploadErrors').textContent = errorCount;
+                    await removeFromStore('pendingFiles', file.path);
+                }
+                
+                await updateStats();
+                
+                if (!shouldStopUploading && isUploading) {
+                    await new Promise(r => setTimeout(r, delay));
+                }
+            }
+            
+            isUploading = false;
+            
+            if (shouldStopUploading) {
+                document.getElementById('pauseUploadBtn').style.display = 'none';
+                document.getElementById('resumeUploadBtn').style.display = 'inline-flex';
+                progressText.textContent = 'Paused';
+            } else {
+                document.getElementById('startUploadBtn').style.display = 'inline-flex';
+                document.getElementById('pauseUploadBtn').style.display = 'none';
+                
+                const pending = await getStoreCount('pendingFiles');
+                if (pending === 0) {
+                    const uploaded = await getStoreCount('uploadedBlobs');
+                    progressBar.style.width = '100%';
+                    progressText.textContent = 'All blobs uploaded!';
+                    document.getElementById('commitPhase').style.display = 'block';
+                    document.getElementById('commitSummary').textContent = `${uploaded} files ready to commit`;
+                }
+            }
+        }
+        
+        function pauseBlobUpload() {
+            shouldStopUploading = true;
+            execLog('Pausing uploads...', 'info');
+        }
+        
+        async function createFinalCommit() {
+            const token = document.getElementById('githubToken').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const commitMessage = document.getElementById('commitMessage').value.trim() || 'Mass update via tool';
+            
+            const [owner, repoName] = repo.split('/');
+            
+            document.getElementById('createCommitBtn').disabled = true;
+            
+            const headers = {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28',
+                'Content-Type': 'application/json'
+            };
+            
+            try {
+                execLog('Getting current branch state...', 'info');
+                
+                const refResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/ref/heads/main`, { headers });
+                if (!refResponse.ok) throw new Error('Failed to get branch reference');
+                const refData = await refResponse.json();
+                const currentCommitSha = refData.object.sha;
+                
+                const commitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
+                if (!commitResponse.ok) throw new Error('Failed to get current commit');
+                const commitData = await commitResponse.json();
+                const baseTreeSha = commitData.tree.sha;
+                
+                const uploadedBlobs = await getAllFromStore('uploadedBlobs');
+                const treeItems = uploadedBlobs.map(blob => ({
+                    path: blob.path,
+                    mode: '100644',
+                    type: 'blob',
+                    sha: blob.sha
+                }));
+                
+                // Create tree with retry logic
+                let treeData = null;
+                for (let attempt = 1; attempt <= 5; attempt++) {
+                    execLog(`Creating tree with ${treeItems.length} files... (attempt ${attempt}/5)`, 'info');
+                    
+                    const treeResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/trees`, {
+                        method: 'POST',
+                        headers,
+                        body: JSON.stringify({
+                            base_tree: baseTreeSha,
+                            tree: treeItems
+                        })
+                    });
+                    
+                    if (treeResponse.ok) {
+                        treeData = await treeResponse.json();
+                        break;
+                    }
+                    
+                    const errorText = await treeResponse.text();
+                    execLog(`Tree creation attempt ${attempt} failed: ${treeResponse.status} - ${errorText.substring(0, 100)}`, 'warning');
+                    
+                    if (attempt < 5) {
+                        const waitTime = attempt * 2000; // 2s, 4s, 6s, 8s
+                        execLog(`Waiting ${waitTime/1000}s before retry...`, 'info');
+                        await new Promise(r => setTimeout(r, waitTime));
+                    }
+                }
+                
+                if (!treeData) {
+                    throw new Error('Failed to create tree after 5 attempts');
+                }
+                
+                // Create commit with retry logic
+                let newCommitData = null;
+                for (let attempt = 1; attempt <= 3; attempt++) {
+                    execLog('Creating commit...', 'info');
+                    
+                    const newCommitResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/commits`, {
+                        method: 'POST',
+                        headers,
+                        body: JSON.stringify({
+                            message: commitMessage,
+                            tree: treeData.sha,
+                            parents: [currentCommitSha]
+                        })
+                    });
+                    
+                    if (newCommitResponse.ok) {
+                        newCommitData = await newCommitResponse.json();
+                        break;
+                    }
+                    
+                    if (attempt < 3) {
+                        execLog(`Commit attempt ${attempt} failed, retrying...`, 'warning');
+                        await new Promise(r => setTimeout(r, 2000));
+                    }
+                }
+                
+                if (!newCommitData) {
+                    throw new Error('Failed to create commit after 3 attempts');
+                }
+                
+                // Update branch with retry logic
+                let branchUpdated = false;
+                for (let attempt = 1; attempt <= 3; attempt++) {
+                    execLog('Updating branch...', 'info');
+                    
+                    const updateRefResponse = await fetch(`https://api.github.com/repos/${owner}/${repoName}/git/refs/heads/main`, {
+                        method: 'PATCH',
+                        headers,
+                        body: JSON.stringify({
+                            sha: newCommitData.sha,
+                            force: false
+                        })
+                    });
+                    
+                    if (updateRefResponse.ok) {
+                        branchUpdated = true;
+                        break;
+                    }
+                    
+                    if (attempt < 3) {
+                        execLog(`Branch update attempt ${attempt} failed, retrying...`, 'warning');
+                        await new Promise(r => setTimeout(r, 2000));
+                    }
+                }
+                
+                if (!branchUpdated) {
+                    throw new Error('Failed to update branch after 3 attempts');
+                }
+                
+                execLog(`✅ Commit created: ${newCommitData.sha.substring(0, 7)}`, 'success');
+                
+                // Show results
+                document.getElementById('executeResults').style.display = 'block';
+                document.getElementById('resultsHeader').className = 'execute-results-header success';
+                document.querySelector('.results-icon').textContent = '✅';
+                document.getElementById('resultsMessage').textContent = 'Changes applied successfully!';
+                document.getElementById('resultFilesChanged').textContent = treeItems.length;
+                document.getElementById('resultCommitSha').textContent = `Commit: ${newCommitData.sha.substring(0, 7)}`;
+                document.getElementById('viewCommitLink').href = `https://github.com/${owner}/${repoName}/commit/${newCommitData.sha}`;
+                document.getElementById('viewCommitLink').style.display = 'inline-flex';
+                
+                // Clear only the blob stores, keep processed paths for reference
+                const tx = db.transaction(['pendingFiles', 'uploadedBlobs'], 'readwrite');
+                tx.objectStore('pendingFiles').clear();
+                tx.objectStore('uploadedBlobs').clear();
+                
+            } catch (error) {
+                execLog(`Error: ${error.message}`, 'error');
+                alert(`Error creating commit: ${error.message}`);
+            }
+            
+            document.getElementById('createCommitBtn').disabled = false;
+        }
+        
+        async function fullReset() {
+            await clearAllStores();
+            
+            document.getElementById('executeResults').style.display = 'none';
+            document.getElementById('uploadPhase').style.display = 'none';
+            document.getElementById('commitPhase').style.display = 'none';
+            document.getElementById('processProgress').style.display = 'none';
+            document.getElementById('uploadProgress').style.display = 'none';
+            document.getElementById('rateLimitInfo').style.display = 'none';
+            document.getElementById('executeLog').innerHTML = '';
+            
+            await updateStats();
+        }
+        
+        // Utilities
+        // ==========================================
+        function showStatus(elementId, message, type) {
+            const el = document.getElementById(elementId);
+            el.className = `status show ${type}`;
+            el.textContent = message;
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // ==========================================
+        // Initialize
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSettings();
+            renderRules();
+        });
+    </script>
+</body>
+</html>
