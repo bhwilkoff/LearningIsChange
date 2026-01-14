@@ -1,0 +1,7102 @@
+{
+  "categories": {
+    "count": 44,
+    "items": {
+      "videos": {
+        "name": "Video Posts",
+        "slug": "videos",
+        "url": "/category/videos/"
+      },
+      "recs": {
+        "name": "Recommendations",
+        "slug": "recs",
+        "url": "/category/recs/"
+      },
+      "blogging-projects": {
+        "name": "Blogging Projects",
+        "slug": "blogging-projects",
+        "url": "/category/blogging-projects/"
+      },
+      "uncategorized": {
+        "name": "Uncategorized",
+        "slug": "uncategorized",
+        "url": "/category/uncategorized/"
+      },
+      "blog-2": {
+        "name": "Blog 2",
+        "slug": "blog-2",
+        "url": "/category/blog-2/"
+      },
+      "lesson-plans": {
+        "name": "Lesson Plans",
+        "slug": "lesson-plans",
+        "url": "/category/lesson-plans/"
+      },
+      "classroom-resources": {
+        "name": "Classroom Resources",
+        "slug": "classroom-resources",
+        "url": "/category/classroom-resources/"
+      },
+      "questions": {
+        "name": "Questions",
+        "slug": "questions",
+        "url": "/category/questions/"
+      },
+      "curated-lists": {
+        "name": "Curated Lists",
+        "slug": "curated-lists",
+        "url": "/category/curated-lists/"
+      },
+      "ben-wilkoff": {
+        "name": "Ben Wilkoff",
+        "slug": "ben-wilkoff",
+        "url": "/category/ben-wilkoff/"
+      },
+      "im-learning": {
+        "name": "Im Learning",
+        "slug": "im-learning",
+        "url": "/category/im-learning/"
+      },
+      "using": {
+        "name": "Using",
+        "slug": "using",
+        "url": "/category/using/"
+      },
+      "learning-is-change-list": {
+        "name": "Learning Is Change List",
+        "slug": "learning-is-change-list",
+        "url": "/category/learning-is-change-list/"
+      },
+      "etmooc": {
+        "name": "/blog/category/etmooc/",
+        "slug": "etmooc",
+        "url": "/blog/category/etmooc/"
+      },
+      "badges": {
+        "name": "http://budtheteacher.com/blog/category/badges/",
+        "slug": "badges",
+        "url": "http://budtheteacher.com/blog/category/badges/"
+      },
+      "project-roundtable": {
+        "name": "Project Roundtable",
+        "slug": "project-roundtable",
+        "url": "/category/project-roundtable/"
+      },
+      "c4c15": {
+        "name": "C4c15",
+        "slug": "c4c15",
+        "url": "/category/c4c15/"
+      },
+      "soft-skills-arent-innate": {
+        "name": "Soft skills arenât innateâ¦ â Starr Sackstein, MJE, NBCT",
+        "slug": "soft-skills-arent-innate",
+        "url": "http://starrsackstein.com/category/soft-skills-arent-innate/"
+      },
+      "askbenw": {
+        "name": "Askbenw",
+        "slug": "askbenw",
+        "url": "/category/askbenw/"
+      },
+      "lifewidelearning16": {
+        "name": "Lifewidelearning16",
+        "slug": "lifewidelearning16",
+        "url": "/category/lifewidelearning16/"
+      },
+      "whoisaps": {
+        "name": "Whoisaps",
+        "slug": "whoisaps",
+        "url": "/category/whoisaps/"
+      },
+      "personalized-learning": {
+        "name": "Personalized Learning",
+        "slug": "personalized-learning",
+        "url": "/category/personalized-learning/"
+      },
+      "newsletter-archive": {
+        "name": "Newsletter Archive",
+        "slug": "newsletter-archive",
+        "url": "/category/newsletter-archive/"
+      },
+      "growth": {
+        "name": "growth",
+        "slug": "growth",
+        "url": "/category/growth/"
+      },
+      "learning": {
+        "name": "Learning",
+        "slug": "learning",
+        "url": "/category/learning/"
+      },
+      "stories": {
+        "name": "Stories",
+        "slug": "stories",
+        "url": "/category/stories/"
+      },
+      "thinking": {
+        "name": "Thinking",
+        "slug": "thinking",
+        "url": "/category/thinking/"
+      },
+      "apple-pencil": {
+        "name": "Apple Pencil",
+        "slug": "apple-pencil",
+        "url": "/category/apple-pencil/"
+      },
+      "bujo": {
+        "name": "Bujo",
+        "slug": "bujo",
+        "url": "/category/bujo/"
+      },
+      "bullet-journals": {
+        "name": "Bullet Journals",
+        "slug": "bullet-journals",
+        "url": "/category/bullet-journals/"
+      },
+      "productivity": {
+        "name": "Productivity",
+        "slug": "productivity",
+        "url": "/category/productivity/"
+      },
+      "inspiration": {
+        "name": "Inspiration",
+        "slug": "inspiration",
+        "url": "/category/inspiration/"
+      },
+      "music": {
+        "name": "Music",
+        "slug": "music",
+        "url": "/category/music/"
+      },
+      "unsubscribe": {
+        "name": "Unsubscribe",
+        "slug": "unsubscribe",
+        "url": "/category/unsubscribe/"
+      },
+      "holacracy": {
+        "name": "holacracy",
+        "slug": "holacracy",
+        "url": "/category/holacracy/"
+      },
+      "org-structure": {
+        "name": "Org Structure",
+        "slug": "org-structure",
+        "url": "/category/org-structure/"
+      },
+      "humanity": {
+        "name": "Humanity",
+        "slug": "humanity",
+        "url": "/category/humanity/"
+      },
+      "metaphors": {
+        "name": "Metaphors",
+        "slug": "metaphors",
+        "url": "/category/metaphors/"
+      },
+      "cultures-of-thinking": {
+        "name": "Cultures of Thinking",
+        "slug": "cultures-of-thinking",
+        "url": "/category/cultures-of-thinking/"
+      },
+      "digpins": {
+        "name": "Digpins",
+        "slug": "digpins",
+        "url": "/category/digpins/"
+      },
+      "politics": {
+        "name": "Politics",
+        "slug": "politics",
+        "url": "/category/politics/"
+      },
+      "Typewriter": {
+        "name": "Typewriter",
+        "slug": "Typewriter",
+        "url": "/category/Typewriter/"
+      },
+      "family": {
+        "name": "family",
+        "slug": "family",
+        "url": "/category/family/"
+      },
+      "movies": {
+        "name": "movies",
+        "slug": "movies",
+        "url": "/category/movies/"
+      }
+    }
+  },
+  "tags": {
+    "count": 1374,
+    "items": {
+      "teaching-theory": {
+        "name": "Teaching Theory",
+        "slug": "teaching-theory",
+        "url": "/tag/teaching-theory/"
+      },
+      "resources": {
+        "name": "Resources",
+        "slug": "resources",
+        "url": "/tag/resources/"
+      },
+      "technology-in-the-classroom": {
+        "name": "Technology in the Classroom",
+        "slug": "technology-in-the-classroom",
+        "url": "/tag/technology-in-the-classroom/"
+      },
+      "reflection": {
+        "name": "Reflection",
+        "slug": "reflection",
+        "url": "/tag/reflection/"
+      },
+      "professional-development": {
+        "name": "Professional Development",
+        "slug": "professional-development",
+        "url": "/tag/professional-development/"
+      },
+      "the-weekly-authentic": {
+        "name": "The Weekly Authentic",
+        "slug": "the-weekly-authentic",
+        "url": "/tag/the-weekly-authentic/"
+      },
+      "the-ripe-environment": {
+        "name": "The Ripe Environment",
+        "slug": "the-ripe-environment",
+        "url": "/tag/the-ripe-environment/"
+      },
+      "ypulsemashup2007": {
+        "name": "YpulseMashup2007",
+        "slug": "ypulsemashup2007",
+        "url": "/tag/ypulsemashup2007/"
+      },
+      "nacol": {
+        "name": "NACOL",
+        "slug": "nacol",
+        "url": "/tag/nacol/"
+      },
+      "vss2007": {
+        "name": "VSS2007",
+        "slug": "vss2007",
+        "url": "/tag/vss2007/"
+      },
+      "VSS2007": {
+        "name": "VSS2007",
+        "slug": "VSS2007",
+        "url": "http://technorati.com/tag/VSS2007"
+      },
+      "learning-20": {
+        "name": "Learning 2.0",
+        "slug": "learning-20",
+        "url": "/tag/learning-20/"
+      },
+      "lic-podcast": {
+        "name": "LiC Podcast",
+        "slug": "lic-podcast",
+        "url": "/tag/lic-podcast/"
+      },
+      "podcast-education-learning20-edtech-education20-schoo": {
+        "name": "Podcast Education Learning2.0 Edtech Education2.0 Schoo",
+        "slug": "podcast-education-learning20-edtech-education20-schoo",
+        "url": "/tag/podcast-education-learning20-edtech-education20-schoo/"
+      },
+      "365-questions": {
+        "name": "365 questions",
+        "slug": "365-questions",
+        "url": "/tag/365-questions/"
+      },
+      "annotate": {
+        "name": "annotate",
+        "slug": "annotate",
+        "url": "/tag/annotate/"
+      },
+      "author": {
+        "name": "author",
+        "slug": "author",
+        "url": "/tag/author/"
+      },
+      "backchannel": {
+        "name": "backchannel",
+        "slug": "backchannel",
+        "url": "/tag/backchannel/"
+      },
+      "book": {
+        "name": "book",
+        "slug": "book",
+        "url": "/tag/book/"
+      },
+      "cade": {
+        "name": "cade",
+        "slug": "cade",
+        "url": "/tag/cade/"
+      },
+      "convert": {
+        "name": "convert",
+        "slug": "convert",
+        "url": "/tag/convert/"
+      },
+      "cores": {
+        "name": "cores",
+        "slug": "cores",
+        "url": "/tag/cores/"
+      },
+      "discover": {
+        "name": "discover",
+        "slug": "discover",
+        "url": "/tag/discover/"
+      },
+      "discovery": {
+        "name": "discovery",
+        "slug": "discovery",
+        "url": "/tag/discovery/"
+      },
+      "edu": {
+        "name": "edu",
+        "slug": "edu",
+        "url": "/tag/edu/"
+      },
+      "educause": {
+        "name": "EDUCAUSE",
+        "slug": "educause",
+        "url": "/tag/educause/"
+      },
+      "eli": {
+        "name": "ELI",
+        "slug": "eli",
+        "url": "/tag/eli/"
+      },
+      "fil": {
+        "name": "fil",
+        "slug": "fil",
+        "url": "/tag/fil/"
+      },
+      "firefox": {
+        "name": "firefox",
+        "slug": "firefox",
+        "url": "/tag/firefox/"
+      },
+      "form": {
+        "name": "form",
+        "slug": "form",
+        "url": "/tag/form/"
+      },
+      "google": {
+        "name": "google",
+        "slug": "google",
+        "url": "/tag/google/"
+      },
+      "help": {
+        "name": "help",
+        "slug": "help",
+        "url": "/tag/help/"
+      },
+      "ict": {
+        "name": "ict",
+        "slug": "ict",
+        "url": "/tag/ict/"
+      },
+      "illustration": {
+        "name": "illustration",
+        "slug": "illustration",
+        "url": "/tag/illustration/"
+      },
+      "image": {
+        "name": "image",
+        "slug": "image",
+        "url": "/tag/image/"
+      },
+      "images": {
+        "name": "images",
+        "slug": "images",
+        "url": "/tag/images/"
+      },
+      "information": {
+        "name": "information",
+        "slug": "information",
+        "url": "/tag/information/"
+      },
+      "library": {
+        "name": "library",
+        "slug": "library",
+        "url": "/tag/library/"
+      },
+      "ning": {
+        "name": "ning",
+        "slug": "ning",
+        "url": "/tag/ning/"
+      },
+      "nota": {
+        "name": "nota",
+        "slug": "nota",
+        "url": "/tag/nota/"
+      },
+      "objects": {
+        "name": "objects",
+        "slug": "objects",
+        "url": "/tag/objects/"
+      },
+      "pd": {
+        "name": "pd",
+        "slug": "pd",
+        "url": "/tag/pd/"
+      },
+      "pdf": {
+        "name": "pdf",
+        "slug": "pdf",
+        "url": "/tag/pdf/"
+      },
+      "pho": {
+        "name": "pho",
+        "slug": "pho",
+        "url": "/tag/pho/"
+      },
+      "photo": {
+        "name": "photo",
+        "slug": "photo",
+        "url": "/tag/photo/"
+      },
+      "picture": {
+        "name": "picture",
+        "slug": "picture",
+        "url": "/tag/picture/"
+      },
+      "plan": {
+        "name": "plan",
+        "slug": "plan",
+        "url": "/tag/plan/"
+      },
+      "ple": {
+        "name": "ple",
+        "slug": "ple",
+        "url": "http://slideshare.net/tag/ple"
+      },
+      "preview": {
+        "name": "preview",
+        "slug": "preview",
+        "url": "/tag/preview/"
+      },
+      "read": {
+        "name": "read",
+        "slug": "read",
+        "url": "/tag/read/"
+      },
+      "review": {
+        "name": "review",
+        "slug": "review",
+        "url": "/tag/review/"
+      },
+      "rip": {
+        "name": "rip",
+        "slug": "rip",
+        "url": "/tag/rip/"
+      },
+      "search": {
+        "name": "search",
+        "slug": "search",
+        "url": "/tag/search/"
+      },
+      "share": {
+        "name": "share",
+        "slug": "share",
+        "url": "/tag/share/"
+      },
+      "sl": {
+        "name": "SL",
+        "slug": "sl",
+        "url": "/tag/sl/"
+      },
+      "slides": {
+        "name": "slides",
+        "slug": "slides",
+        "url": "/tag/slides/"
+      },
+      "slideshare": {
+        "name": "slideshare",
+        "slug": "slideshare",
+        "url": "/tag/slideshare/"
+      },
+      "style": {
+        "name": "style",
+        "slug": "style",
+        "url": "/tag/style/"
+      },
+      "teaching": {
+        "name": "teaching",
+        "slug": "teaching",
+        "url": "/tag/teaching/"
+      },
+      "ted": {
+        "name": "TED",
+        "slug": "ted",
+        "url": "/tag/ted/"
+      },
+      "test": {
+        "name": "test",
+        "slug": "test",
+        "url": "/tag/test/"
+      },
+      "text": {
+        "name": "text",
+        "slug": "text",
+        "url": "/tag/text/"
+      },
+      "upload": {
+        "name": "upload",
+        "slug": "upload",
+        "url": "/tag/upload/"
+      },
+      "url": {
+        "name": "url",
+        "slug": "url",
+        "url": "/tag/url/"
+      },
+      "vision": {
+        "name": "Vision",
+        "slug": "vision",
+        "url": "/tag/vision/"
+      },
+      "wid": {
+        "name": "wid",
+        "slug": "wid",
+        "url": "/tag/wid/"
+      },
+      "wp": {
+        "name": "WP",
+        "slug": "wp",
+        "url": "/tag/wp/"
+      },
+      "maus2": {
+        "name": "All Logins that can be eliminated, should be",
+        "slug": "maus2",
+        "url": "http://www.slideshare.net/tag/maus2"
+      },
+      "olco5": {
+        "name": "olco5",
+        "slug": "olco5",
+        "url": "http://www.scribd.com/tag/olco5"
+      },
+      "add": {
+        "name": "ADD",
+        "slug": "add",
+        "url": "/tag/add/"
+      },
+      "animation": {
+        "name": "animation",
+        "slug": "animation",
+        "url": "/tag/animation/"
+      },
+      "app": {
+        "name": "app",
+        "slug": "app",
+        "url": "/tag/app/"
+      },
+      "blog": {
+        "name": "blog",
+        "slug": "blog",
+        "url": "/tag/blog/"
+      },
+      "blogger": {
+        "name": "blogger",
+        "slug": "blogger",
+        "url": "/tag/blogger/"
+      },
+      "blogging": {
+        "name": "blogging",
+        "slug": "blogging",
+        "url": "/tag/blogging/"
+      },
+      "brain": {
+        "name": "brain",
+        "slug": "brain",
+        "url": "/tag/brain/"
+      },
+      "change": {
+        "name": "Change",
+        "slug": "change",
+        "url": "/tag/change/"
+      },
+      "changes": {
+        "name": "changes",
+        "slug": "changes",
+        "url": "/tag/changes/"
+      },
+      "choice": {
+        "name": "choice",
+        "slug": "choice",
+        "url": "/tag/choice/"
+      },
+      "cop": {
+        "name": "CoP",
+        "slug": "cop",
+        "url": "/tag/cop/"
+      },
+      "copy": {
+        "name": "copy",
+        "slug": "copy",
+        "url": "/tag/copy/"
+      },
+      "guide": {
+        "name": "guide",
+        "slug": "guide",
+        "url": "/tag/guide/"
+      },
+      "learning": {
+        "name": "Learning",
+        "slug": "learning",
+        "url": "/tag/learning/"
+      },
+      "microblog": {
+        "name": "microblog",
+        "slug": "microblog",
+        "url": "/tag/microblog/"
+      },
+      "microblogging": {
+        "name": "microblogging",
+        "slug": "microblogging",
+        "url": "/tag/microblogging/"
+      },
+      "movie": {
+        "name": "movie",
+        "slug": "movie",
+        "url": "/tag/movie/"
+      },
+      "music": {
+        "name": "music",
+        "slug": "music",
+        "url": "/tag/music/"
+      },
+      "ompl": {
+        "name": "ompl",
+        "slug": "ompl",
+        "url": "/tag/ompl/"
+      },
+      "project": {
+        "name": "project",
+        "slug": "project",
+        "url": "/tag/project/"
+      },
+      "sat": {
+        "name": "SAT",
+        "slug": "sat",
+        "url": "/tag/sat/"
+      },
+      "sound": {
+        "name": "sound",
+        "slug": "sound",
+        "url": "/tag/sound/"
+      },
+      "thinking": {
+        "name": "thinking",
+        "slug": "thinking",
+        "url": "/tag/thinking/"
+      },
+      "video": {
+        "name": "video",
+        "slug": "video",
+        "url": "/tag/video/"
+      },
+      "word": {
+        "name": "word",
+        "slug": "word",
+        "url": "/tag/word/"
+      },
+      "words": {
+        "name": "words",
+        "slug": "words",
+        "url": "/tag/words/"
+      },
+      "elearning": {
+        "name": "elearning",
+        "slug": "elearning",
+        "url": "http://technorati.com/tag/elearning"
+      },
+      "elearning.rss": {
+        "name": "Link for tagging on youtube",
+        "slug": "elearning.rss",
+        "url": "http://www.youtube.com/rss/tag/elearning.rss"
+      },
+      "douglas": {
+        "name": "douglas",
+        "slug": "douglas",
+        "url": "http://slideshare.net/tag/douglas"
+      },
+      "county": {
+        "name": "county",
+        "slug": "county",
+        "url": "http://slideshare.net/tag/county"
+      },
+      "pln": {
+        "name": "pln",
+        "slug": "pln",
+        "url": "/tag/pln/"
+      },
+      "edtech": {
+        "name": "edtech",
+        "slug": "edtech",
+        "url": "/tag/edtech/"
+      },
+      "response": {
+        "name": "response",
+        "slug": "response",
+        "url": "http://technorati.com/tag/response"
+      },
+      "online": {
+        "name": "online",
+        "slug": "online",
+        "url": "/tag/online/"
+      },
+      "professional%20development": {
+        "name": "professional development",
+        "slug": "professional%20development",
+        "url": "http://technorati.com/tag/professional%20development"
+      },
+      "paulbogush": {
+        "name": "paulbogush",
+        "slug": "paulbogush",
+        "url": "http://technorati.com/tag/paulbogush"
+      },
+      "questions": {
+        "name": "365 Questions",
+        "slug": "questions",
+        "url": "/tag/questions/"
+      },
+      "augmented-reality": {
+        "name": "Augmented Reality",
+        "slug": "augmented-reality",
+        "url": "/tag/augmented-reality/"
+      },
+      "education": {
+        "name": "education",
+        "slug": "education",
+        "url": "/tag/education/"
+      },
+      "the-future": {
+        "name": "The Future",
+        "slug": "the-future",
+        "url": "/tag/the-future/"
+      },
+      "coming-of-age": {
+        "name": "coming of age",
+        "slug": "coming-of-age",
+        "url": "/tag/coming-of-age/"
+      },
+      "internet": {
+        "name": "internet",
+        "slug": "internet",
+        "url": "/tag/internet/"
+      },
+      "iran-election": {
+        "name": "Iran Election",
+        "slug": "iran-election",
+        "url": "/tag/iran-election/"
+      },
+      "memes": {
+        "name": "memes",
+        "slug": "memes",
+        "url": "/tag/memes/"
+      },
+      "shared-experience": {
+        "name": "shared experience",
+        "slug": "shared-experience",
+        "url": "/tag/shared-experience/"
+      },
+      "tv": {
+        "name": "tv",
+        "slug": "tv",
+        "url": "/tag/tv/"
+      },
+      "blogs": {
+        "name": "blogs",
+        "slug": "blogs",
+        "url": "/tag/blogs/"
+      },
+      "business": {
+        "name": "business",
+        "slug": "business",
+        "url": "/tag/business/"
+      },
+      "critical-mass": {
+        "name": "critical mass",
+        "slug": "critical-mass",
+        "url": "/tag/critical-mass/"
+      },
+      "wikis": {
+        "name": "wikis",
+        "slug": "wikis",
+        "url": "/tag/wikis/"
+      },
+      "following": {
+        "name": "following",
+        "slug": "following",
+        "url": "/tag/following/"
+      },
+      "friends": {
+        "name": "friends",
+        "slug": "friends",
+        "url": "/tag/friends/"
+      },
+      "network": {
+        "name": "network",
+        "slug": "network",
+        "url": "/tag/network/"
+      },
+      "noise": {
+        "name": "noise",
+        "slug": "noise",
+        "url": "/tag/noise/"
+      },
+      "social-networking": {
+        "name": "social-networking",
+        "slug": "social-networking",
+        "url": "/tag/social-networking/"
+      },
+      "twitter": {
+        "name": "twitter",
+        "slug": "twitter",
+        "url": "/tag/twitter/"
+      },
+      "reframability": {
+        "name": "Reframability",
+        "slug": "reframability",
+        "url": "/tag/reframability/"
+      },
+      "scalability": {
+        "name": "Scalability",
+        "slug": "scalability",
+        "url": "/tag/scalability/"
+      },
+      "startup": {
+        "name": "startup",
+        "slug": "startup",
+        "url": "/tag/startup/"
+      },
+      "sustainability": {
+        "name": "Sustainability",
+        "slug": "sustainability",
+        "url": "/tag/sustainability/"
+      },
+      "Learning%20Twitter%20Scalability": {
+        "name": "Learning Twitter Scalability",
+        "slug": "Learning%20Twitter%20Scalability",
+        "url": "http://technorati.com/tag/Learning%20Twitter%20Scalability"
+      },
+      "Sustainability": {
+        "name": "Sustainability",
+        "slug": "Sustainability",
+        "url": "http://technorati.com/tag/Sustainability"
+      },
+      "Reframability": {
+        "name": "Reframability",
+        "slug": "Reframability",
+        "url": "http://technorati.com/tag/Reframability"
+      },
+      "Startup": {
+        "name": "Startup",
+        "slug": "Startup",
+        "url": "http://technorati.com/tag/Startup"
+      },
+      "bdnt": {
+        "name": "bdnt",
+        "slug": "bdnt",
+        "url": "http://technorati.com/tag/bdnt"
+      },
+      "startups": {
+        "name": "startups",
+        "slug": "startups",
+        "url": "/tag/startups/"
+      },
+      "digital-footprint": {
+        "name": "digital footprint",
+        "slug": "digital-footprint",
+        "url": "/tag/digital-footprint/"
+      },
+      "legacy": {
+        "name": "Legacy",
+        "slug": "legacy",
+        "url": "/tag/legacy/"
+      },
+      "web-2-0-suicide-machine": {
+        "name": "Web 2.0 Suicide Machine",
+        "slug": "web-2-0-suicide-machine",
+        "url": "/tag/web-2-0-suicide-machine/"
+      },
+      "aardvark": {
+        "name": "aardvark",
+        "slug": "aardvark",
+        "url": "/tag/aardvark/"
+      },
+      "answers": {
+        "name": "answers",
+        "slug": "answers",
+        "url": "/tag/answers/"
+      },
+      "hunch": {
+        "name": "hunch",
+        "slug": "hunch",
+        "url": "/tag/hunch/"
+      },
+      "quora": {
+        "name": "quora",
+        "slug": "quora",
+        "url": "/tag/quora/"
+      },
+      "wiki": {
+        "name": "wiki",
+        "slug": "wiki",
+        "url": "/tag/wiki/"
+      },
+      "kipp": {
+        "name": "kipp",
+        "slug": "kipp",
+        "url": "/tag/kipp/"
+      },
+      "names": {
+        "name": "names",
+        "slug": "names",
+        "url": "/tag/names/"
+      },
+      "boxee": {
+        "name": "boxee",
+        "slug": "boxee",
+        "url": "/tag/boxee/"
+      },
+      "ces": {
+        "name": "ces",
+        "slug": "ces",
+        "url": "/tag/ces/"
+      },
+      "ebook": {
+        "name": "ebook",
+        "slug": "ebook",
+        "url": "/tag/ebook/"
+      },
+      "entourage-edge": {
+        "name": "entourage edge",
+        "slug": "entourage-edge",
+        "url": "/tag/entourage-edge/"
+      },
+      "screens": {
+        "name": "screens",
+        "slug": "screens",
+        "url": "/tag/screens/"
+      },
+      "slate": {
+        "name": "slate",
+        "slug": "slate",
+        "url": "/tag/slate/"
+      },
+      "smart-phone": {
+        "name": "smart phone",
+        "slug": "smart-phone",
+        "url": "/tag/smart-phone/"
+      },
+      "tablet": {
+        "name": "tablet",
+        "slug": "tablet",
+        "url": "/tag/tablet/"
+      },
+      "david-wiley": {
+        "name": "David Wiley",
+        "slug": "david-wiley",
+        "url": "/tag/david-wiley/"
+      },
+      "foss": {
+        "name": "FOSS",
+        "slug": "foss",
+        "url": "/tag/foss/"
+      },
+      "free-open-source-software": {
+        "name": "Free Open Source Software",
+        "slug": "free-open-source-software",
+        "url": "/tag/free-open-source-software/"
+      },
+      "george-siemens": {
+        "name": "George Siemens",
+        "slug": "george-siemens",
+        "url": "/tag/george-siemens/"
+      },
+      "jim-groom": {
+        "name": "Jim Groom",
+        "slug": "jim-groom",
+        "url": "/tag/jim-groom/"
+      },
+      "open": {
+        "name": "open",
+        "slug": "open",
+        "url": "/tag/open/"
+      },
+      "open-education": {
+        "name": "Open Education",
+        "slug": "open-education",
+        "url": "/tag/open-education/"
+      },
+      "open-source": {
+        "name": "open source",
+        "slug": "open-source",
+        "url": "/tag/open-source/"
+      },
+      "stephen-downes": {
+        "name": "Stephen Downes",
+        "slug": "stephen-downes",
+        "url": "/tag/stephen-downes/"
+      },
+      "beta": {
+        "name": "beta",
+        "slug": "beta",
+        "url": "/tag/beta/"
+      },
+      "games": {
+        "name": "games",
+        "slug": "games",
+        "url": "/tag/games/"
+      },
+      "jazz-jackrabbit": {
+        "name": "Jazz Jackrabbit",
+        "slug": "jazz-jackrabbit",
+        "url": "/tag/jazz-jackrabbit/"
+      },
+      "software-release-life-cycle": {
+        "name": "Software release life cycle",
+        "slug": "software-release-life-cycle",
+        "url": "/tag/software-release-life-cycle/"
+      },
+      "software-testing": {
+        "name": "Software testing",
+        "slug": "software-testing",
+        "url": "/tag/software-testing/"
+      },
+      "testing": {
+        "name": "testing",
+        "slug": "testing",
+        "url": "/tag/testing/"
+      },
+      "unreal": {
+        "name": "Unreal",
+        "slug": "unreal",
+        "url": "/tag/unreal/"
+      },
+      "user-interface": {
+        "name": "User interface",
+        "slug": "user-interface",
+        "url": "/tag/user-interface/"
+      },
+      "video-games": {
+        "name": "video games",
+        "slug": "video-games",
+        "url": "/tag/video-games/"
+      },
+      "action": {
+        "name": "action",
+        "slug": "action",
+        "url": "/tag/action/"
+      },
+      "advertising": {
+        "name": "advertising",
+        "slug": "advertising",
+        "url": "/tag/advertising/"
+      },
+      "cause": {
+        "name": "cause",
+        "slug": "cause",
+        "url": "/tag/cause/"
+      },
+      "entrepreneur": {
+        "name": "Entrepreneur",
+        "slug": "entrepreneur",
+        "url": "/tag/entrepreneur/"
+      },
+      "pay-per-click-advertising": {
+        "name": "Pay-Per-Click Advertising",
+        "slug": "pay-per-click-advertising",
+        "url": "/tag/pay-per-click-advertising/"
+      },
+      "promotion": {
+        "name": "Promotion",
+        "slug": "promotion",
+        "url": "/tag/promotion/"
+      },
+      "services": {
+        "name": "services",
+        "slug": "services",
+        "url": "/tag/services/"
+      },
+      "teacher": {
+        "name": "teacher",
+        "slug": "teacher",
+        "url": "/tag/teacher/"
+      },
+      "web-design-and-development": {
+        "name": "Web Design and Development",
+        "slug": "web-design-and-development",
+        "url": "/tag/web-design-and-development/"
+      },
+      "youtube": {
+        "name": "youtube",
+        "slug": "youtube",
+        "url": "/tag/youtube/"
+      },
+      "doctor-of-philosophy": {
+        "name": "Doctor of Philosophy",
+        "slug": "doctor-of-philosophy",
+        "url": "/tag/doctor-of-philosophy/"
+      },
+      "doctorate": {
+        "name": "Doctorate",
+        "slug": "doctorate",
+        "url": "/tag/doctorate/"
+      },
+      "email": {
+        "name": "email",
+        "slug": "email",
+        "url": "/tag/email/"
+      },
+      "employment": {
+        "name": "Employment",
+        "slug": "employment",
+        "url": "/tag/employment/"
+      },
+      "expert": {
+        "name": "Expert",
+        "slug": "expert",
+        "url": "/tag/expert/"
+      },
+      "experts": {
+        "name": "experts",
+        "slug": "experts",
+        "url": "/tag/experts/"
+      },
+      "justification": {
+        "name": "justification",
+        "slug": "justification",
+        "url": "/tag/justification/"
+      },
+      "knowledge": {
+        "name": "knowledge",
+        "slug": "knowledge",
+        "url": "/tag/knowledge/"
+      },
+      "research": {
+        "name": "research",
+        "slug": "research",
+        "url": "/tag/research/"
+      },
+      "wikipedia": {
+        "name": "wikipedia",
+        "slug": "wikipedia",
+        "url": "/tag/wikipedia/"
+      },
+      "creating": {
+        "name": "creating",
+        "slug": "creating",
+        "url": "/tag/creating/"
+      },
+      "digital-habits": {
+        "name": "digital habits",
+        "slug": "digital-habits",
+        "url": "/tag/digital-habits/"
+      },
+      "habits": {
+        "name": "habits",
+        "slug": "habits",
+        "url": "/tag/habits/"
+      },
+      "tweetbook": {
+        "name": "tweetbook",
+        "slug": "tweetbook",
+        "url": "/tag/tweetbook/"
+      },
+      "work": {
+        "name": "work",
+        "slug": "work",
+        "url": "/tag/work/"
+      },
+      "hacks": {
+        "name": "hacks",
+        "slug": "hacks",
+        "url": "/tag/hacks/"
+      },
+      "insourcing": {
+        "name": "insourcing",
+        "slug": "insourcing",
+        "url": "/tag/insourcing/"
+      },
+      "outsourcing": {
+        "name": "outsourcing",
+        "slug": "outsourcing",
+        "url": "/tag/outsourcing/"
+      },
+      "productivity": {
+        "name": "productivity",
+        "slug": "productivity",
+        "url": "/tag/productivity/"
+      },
+      "schools": {
+        "name": "schools",
+        "slug": "schools",
+        "url": "/tag/schools/"
+      },
+      "selfsourcing": {
+        "name": "selfsourcing",
+        "slug": "selfsourcing",
+        "url": "/tag/selfsourcing/"
+      },
+      "earthquake": {
+        "name": "Earthquake",
+        "slug": "earthquake",
+        "url": "/tag/earthquake/"
+      },
+      "fabhome": {
+        "name": "Fab@home",
+        "slug": "fabhome",
+        "url": "/tag/fabhome/"
+      },
+      "haiti": {
+        "name": "Haiti",
+        "slug": "haiti",
+        "url": "/tag/haiti/"
+      },
+      "humblefacture": {
+        "name": "Humblefacture",
+        "slug": "humblefacture",
+        "url": "/tag/humblefacture/"
+      },
+      "manufacturing": {
+        "name": "Manufacturing",
+        "slug": "manufacturing",
+        "url": "/tag/manufacturing/"
+      },
+      "open-source-housing": {
+        "name": "open source housing",
+        "slug": "open-source-housing",
+        "url": "/tag/open-source-housing/"
+      },
+      "relief": {
+        "name": "Relief",
+        "slug": "relief",
+        "url": "/tag/relief/"
+      },
+      "tragedy": {
+        "name": "tragedy",
+        "slug": "tragedy",
+        "url": "/tag/tragedy/"
+      },
+      "water-purification": {
+        "name": "water purification",
+        "slug": "water-purification",
+        "url": "/tag/water-purification/"
+      },
+      "google-cant-answer": {
+        "name": "google can't answer",
+        "slug": "google-cant-answer",
+        "url": "/tag/google-cant-answer/"
+      },
+      "platform": {
+        "name": "platform",
+        "slug": "platform",
+        "url": "/tag/platform/"
+      },
+      "basecamp": {
+        "name": "basecamp",
+        "slug": "basecamp",
+        "url": "/tag/basecamp/"
+      },
+      "gantt": {
+        "name": "gantt",
+        "slug": "gantt",
+        "url": "/tag/gantt/"
+      },
+      "issues": {
+        "name": "issues",
+        "slug": "issues",
+        "url": "/tag/issues/"
+      },
+      "personal": {
+        "name": "Personal",
+        "slug": "personal",
+        "url": "/tag/personal/"
+      },
+      "problems": {
+        "name": "problems",
+        "slug": "problems",
+        "url": "/tag/problems/"
+      },
+      "project-management": {
+        "name": "project management",
+        "slug": "project-management",
+        "url": "/tag/project-management/"
+      },
+      "reports": {
+        "name": "reports",
+        "slug": "reports",
+        "url": "/tag/reports/"
+      },
+      "tracker": {
+        "name": "tracker",
+        "slug": "tracker",
+        "url": "/tag/tracker/"
+      },
+      "metaphors": {
+        "name": "metaphors",
+        "slug": "metaphors",
+        "url": "/tag/metaphors/"
+      },
+      "movies": {
+        "name": "movies",
+        "slug": "movies",
+        "url": "/tag/movies/"
+      },
+      "social-media": {
+        "name": "social-media",
+        "slug": "social-media",
+        "url": "/tag/social-media/"
+      },
+      "audience": {
+        "name": "audience",
+        "slug": "audience",
+        "url": "/tag/audience/"
+      },
+      "authenticity": {
+        "name": "authenticity",
+        "slug": "authenticity",
+        "url": "/tag/authenticity/"
+      },
+      "eric-ries": {
+        "name": "eric ries",
+        "slug": "eric-ries",
+        "url": "/tag/eric-ries/"
+      },
+      "lean-startups": {
+        "name": "lean startups",
+        "slug": "lean-startups",
+        "url": "/tag/lean-startups/"
+      },
+      "pursuit": {
+        "name": "pursuit",
+        "slug": "pursuit",
+        "url": "/tag/pursuit/"
+      },
+      "steve-blank": {
+        "name": "steve blank",
+        "slug": "steve-blank",
+        "url": "/tag/steve-blank/"
+      },
+      "development": {
+        "name": "development",
+        "slug": "development",
+        "url": "/tag/development/"
+      },
+      "farmville": {
+        "name": "farmville",
+        "slug": "farmville",
+        "url": "/tag/farmville/"
+      },
+      "ghetto-testing": {
+        "name": "ghetto testing",
+        "slug": "ghetto-testing",
+        "url": "/tag/ghetto-testing/"
+      },
+      "iteration": {
+        "name": "iteration",
+        "slug": "iteration",
+        "url": "/tag/iteration/"
+      },
+      "teachers": {
+        "name": "teachers",
+        "slug": "teachers",
+        "url": "/tag/teachers/"
+      },
+      "app-store": {
+        "name": "app store",
+        "slug": "app-store",
+        "url": "/tag/app-store/"
+      },
+      "iphone": {
+        "name": "iPhone",
+        "slug": "iphone",
+        "url": "/tag/iphone/"
+      },
+      "ustream": {
+        "name": "ustream",
+        "slug": "ustream",
+        "url": "/tag/ustream/"
+      },
+      "widgets": {
+        "name": "widgets",
+        "slug": "widgets",
+        "url": "/tag/widgets/"
+      },
+      "creative-commons": {
+        "name": "creative commons",
+        "slug": "creative-commons",
+        "url": "/tag/creative-commons/"
+      },
+      "degrees-of-separation": {
+        "name": "degrees of separation",
+        "slug": "degrees-of-separation",
+        "url": "/tag/degrees-of-separation/"
+      },
+      "neighbors": {
+        "name": "neighbors",
+        "slug": "neighbors",
+        "url": "/tag/neighbors/"
+      },
+      "permission": {
+        "name": "permission",
+        "slug": "permission",
+        "url": "/tag/permission/"
+      },
+      "viral-videos": {
+        "name": "viral videos",
+        "slug": "viral-videos",
+        "url": "/tag/viral-videos/"
+      },
+      "diagrams": {
+        "name": "diagrams",
+        "slug": "diagrams",
+        "url": "/tag/diagrams/"
+      },
+      "facebook": {
+        "name": "facebook",
+        "slug": "facebook",
+        "url": "/tag/facebook/"
+      },
+      "outrage": {
+        "name": "Outrage",
+        "slug": "outrage",
+        "url": "/tag/outrage/"
+      },
+      "personal-responsibility": {
+        "name": "personal responsibility",
+        "slug": "personal-responsibility",
+        "url": "/tag/personal-responsibility/"
+      },
+      "privacy": {
+        "name": "privacy",
+        "slug": "privacy",
+        "url": "/tag/privacy/"
+      },
+      "privacy-settings": {
+        "name": "Privacy Settings",
+        "slug": "privacy-settings",
+        "url": "/tag/privacy-settings/"
+      },
+      "regret": {
+        "name": "Regret",
+        "slug": "regret",
+        "url": "/tag/regret/"
+      },
+      "community": {
+        "name": "community",
+        "slug": "community",
+        "url": "/tag/community/"
+      },
+      "creation": {
+        "name": "creation",
+        "slug": "creation",
+        "url": "/tag/creation/"
+      },
+      "dear-john": {
+        "name": "dear john",
+        "slug": "dear-john",
+        "url": "/tag/dear-john/"
+      },
+      "firing": {
+        "name": "firing",
+        "slug": "firing",
+        "url": "/tag/firing/"
+      },
+      "hope": {
+        "name": "Hope",
+        "slug": "hope",
+        "url": "/tag/hope/"
+      },
+      "personal-ad": {
+        "name": "personal ad",
+        "slug": "personal-ad",
+        "url": "/tag/personal-ad/"
+      },
+      "achievement": {
+        "name": "achievement",
+        "slug": "achievement",
+        "url": "/tag/achievement/"
+      },
+      "connecting": {
+        "name": "connecting",
+        "slug": "connecting",
+        "url": "/tag/connecting/"
+      },
+      "goals": {
+        "name": "goals",
+        "slug": "goals",
+        "url": "/tag/goals/"
+      },
+      "life": {
+        "name": "life",
+        "slug": "life",
+        "url": "/tag/life/"
+      },
+      "linkedin": {
+        "name": "linkedin",
+        "slug": "linkedin",
+        "url": "/tag/linkedin/"
+      },
+      "moving-ahead": {
+        "name": "moving ahead",
+        "slug": "moving-ahead",
+        "url": "/tag/moving-ahead/"
+      },
+      "social-networks": {
+        "name": "Social Networks",
+        "slug": "social-networks",
+        "url": "/tag/social-networks/"
+      },
+      "success": {
+        "name": "success",
+        "slug": "success",
+        "url": "/tag/success/"
+      },
+      "treading-water": {
+        "name": "Treading water",
+        "slug": "treading-water",
+        "url": "/tag/treading-water/"
+      },
+      "tweeting": {
+        "name": "tweeting",
+        "slug": "tweeting",
+        "url": "/tag/tweeting/"
+      },
+      "graveyard": {
+        "name": "graveyard",
+        "slug": "graveyard",
+        "url": "/tag/graveyard/"
+      },
+      "paying": {
+        "name": "paying",
+        "slug": "paying",
+        "url": "/tag/paying/"
+      },
+      "price": {
+        "name": "price",
+        "slug": "price",
+        "url": "/tag/price/"
+      },
+      "web-20": {
+        "name": "web 2.0",
+        "slug": "web-20",
+        "url": "/tag/web-20/"
+      },
+      "being-right": {
+        "name": "being right",
+        "slug": "being-right",
+        "url": "/tag/being-right/"
+      },
+      "being-wrong": {
+        "name": "being wrong",
+        "slug": "being-wrong",
+        "url": "/tag/being-wrong/"
+      },
+      "data": {
+        "name": "data",
+        "slug": "data",
+        "url": "/tag/data/"
+      },
+      "decisions": {
+        "name": "decisions",
+        "slug": "decisions",
+        "url": "/tag/decisions/"
+      },
+      "right": {
+        "name": "right",
+        "slug": "right",
+        "url": "/tag/right/"
+      },
+      "wrong": {
+        "name": "wrong",
+        "slug": "wrong",
+        "url": "/tag/wrong/"
+      },
+      "deadpool": {
+        "name": "the shells of formerly great web services.",
+        "slug": "deadpool",
+        "url": "http://www.techcrunch.com/tag/deadpool/"
+      },
+      "educon": {
+        "name": "educon",
+        "slug": "educon",
+        "url": "/tag/educon/"
+      },
+      "educon22": {
+        "name": "educon22",
+        "slug": "educon22",
+        "url": "/tag/educon22/"
+      },
+      "innovation": {
+        "name": "innovation",
+        "slug": "innovation",
+        "url": "/tag/innovation/"
+      },
+      "inspiration": {
+        "name": "inspiration",
+        "slug": "inspiration",
+        "url": "/tag/inspiration/"
+      },
+      "trees": {
+        "name": "trees",
+        "slug": "trees",
+        "url": "/tag/trees/"
+      },
+      "content": {
+        "name": "content",
+        "slug": "content",
+        "url": "/tag/content/"
+      },
+      "foursquare": {
+        "name": "foursquare",
+        "slug": "foursquare",
+        "url": "/tag/foursquare/"
+      },
+      "gowalla": {
+        "name": "gowalla",
+        "slug": "gowalla",
+        "url": "/tag/gowalla/"
+      },
+      "location": {
+        "name": "location",
+        "slug": "location",
+        "url": "/tag/location/"
+      },
+      "educon-2-2": {
+        "name": "educon 2.2",
+        "slug": "educon-2-2",
+        "url": "/tag/educon-2-2/"
+      },
+      "presence": {
+        "name": "presence",
+        "slug": "presence",
+        "url": "/tag/presence/"
+      },
+      "present": {
+        "name": "present",
+        "slug": "present",
+        "url": "/tag/present/"
+      },
+      "diving": {
+        "name": "diving",
+        "slug": "diving",
+        "url": "/tag/diving/"
+      },
+      "happiness": {
+        "name": "happiness",
+        "slug": "happiness",
+        "url": "/tag/happiness/"
+      },
+      "ideals": {
+        "name": "ideals",
+        "slug": "ideals",
+        "url": "/tag/ideals/"
+      },
+      "assumptions": {
+        "name": "assumptions",
+        "slug": "assumptions",
+        "url": "/tag/assumptions/"
+      },
+      "web-applications": {
+        "name": "web applications",
+        "slug": "web-applications",
+        "url": "/tag/web-applications/"
+      },
+      "web-services": {
+        "name": "web services",
+        "slug": "web-services",
+        "url": "/tag/web-services/"
+      },
+      "budget-cuts": {
+        "name": "budget cuts",
+        "slug": "budget-cuts",
+        "url": "/tag/budget-cuts/"
+      },
+      "cutbacks": {
+        "name": "cutbacks",
+        "slug": "cutbacks",
+        "url": "/tag/cutbacks/"
+      },
+      "district": {
+        "name": "district",
+        "slug": "district",
+        "url": "/tag/district/"
+      },
+      "fired": {
+        "name": "fired",
+        "slug": "fired",
+        "url": "/tag/fired/"
+      },
+      "let-go": {
+        "name": "let go",
+        "slug": "let-go",
+        "url": "/tag/let-go/"
+      },
+      "shortfall": {
+        "name": "shortfall",
+        "slug": "shortfall",
+        "url": "/tag/shortfall/"
+      },
+      "beliefs": {
+        "name": "beliefs",
+        "slug": "beliefs",
+        "url": "/tag/beliefs/"
+      },
+      "do": {
+        "name": "Do",
+        "slug": "do",
+        "url": "/tag/do/"
+      },
+      "false": {
+        "name": "false",
+        "slug": "false",
+        "url": "/tag/false/"
+      },
+      "inaction": {
+        "name": "inaction",
+        "slug": "inaction",
+        "url": "/tag/inaction/"
+      },
+      "obama": {
+        "name": "obama",
+        "slug": "obama",
+        "url": "/tag/obama/"
+      },
+      "sense-of-security": {
+        "name": "sense of security",
+        "slug": "sense-of-security",
+        "url": "/tag/sense-of-security/"
+      },
+      "distribution": {
+        "name": "distribution",
+        "slug": "distribution",
+        "url": "/tag/distribution/"
+      },
+      "ipad": {
+        "name": "ipad",
+        "slug": "ipad",
+        "url": "/tag/ipad/"
+      },
+      "kindle": {
+        "name": "kindle",
+        "slug": "kindle",
+        "url": "/tag/kindle/"
+      },
+      "method": {
+        "name": "method",
+        "slug": "method",
+        "url": "/tag/method/"
+      },
+      "mode": {
+        "name": "mode",
+        "slug": "mode",
+        "url": "/tag/mode/"
+      },
+      "realization": {
+        "name": "realization",
+        "slug": "realization",
+        "url": "/tag/realization/"
+      },
+      "color": {
+        "name": "color",
+        "slug": "color",
+        "url": "/tag/color/"
+      },
+      "graphic-design": {
+        "name": "graphic design",
+        "slug": "graphic-design",
+        "url": "/tag/graphic-design/"
+      },
+      "marketing": {
+        "name": "marketing",
+        "slug": "marketing",
+        "url": "/tag/marketing/"
+      },
+      "microsoft": {
+        "name": "microsoft",
+        "slug": "microsoft",
+        "url": "/tag/microsoft/"
+      },
+      "competition": {
+        "name": "competition",
+        "slug": "competition",
+        "url": "/tag/competition/"
+      },
+      "docs": {
+        "name": "Docs",
+        "slug": "docs",
+        "url": "/tag/docs/"
+      },
+      "google-docs": {
+        "name": "google docs",
+        "slug": "google-docs",
+        "url": "/tag/google-docs/"
+      },
+      "indexing": {
+        "name": "indexing",
+        "slug": "indexing",
+        "url": "/tag/indexing/"
+      },
+      "news": {
+        "name": "news",
+        "slug": "news",
+        "url": "/tag/news/"
+      },
+      "collaboration": {
+        "name": "collaboration",
+        "slug": "collaboration",
+        "url": "/tag/collaboration/"
+      },
+      "google-buzz": {
+        "name": "google buzz",
+        "slug": "google-buzz",
+        "url": "/tag/google-buzz/"
+      },
+      "infrastructure": {
+        "name": "infrastructure",
+        "slug": "infrastructure",
+        "url": "/tag/infrastructure/"
+      },
+      "vigilantism": {
+        "name": "vigilantism",
+        "slug": "vigilantism",
+        "url": "/tag/vigilantism/"
+      },
+      "flickr": {
+        "name": "flickr",
+        "slug": "flickr",
+        "url": "/tag/flickr/"
+      },
+      "karl-fisch": {
+        "name": "karl fisch",
+        "slug": "karl-fisch",
+        "url": "/tag/karl-fisch/"
+      },
+      "process": {
+        "name": "process",
+        "slug": "process",
+        "url": "/tag/process/"
+      },
+      "product": {
+        "name": "product",
+        "slug": "product",
+        "url": "/tag/product/"
+      },
+      "products": {
+        "name": "products",
+        "slug": "products",
+        "url": "/tag/products/"
+      },
+      "3-reasons-why-students-should-be-using-dropbox-as-a-study-tool": {
+        "name": "3 Reasons Why Students Should Be Using Dropbox",
+        "slug": "3-reasons-why-students-should-be-using-dropbox-as-a-study-tool",
+        "url": "http://www.makeuseof.com/tag/3-reasons-why-students-should-be-using-dropbox-as-a-study-tool/"
+      },
+      "commenting": {
+        "name": "commenting",
+        "slug": "commenting",
+        "url": "/tag/commenting/"
+      },
+      "delurking": {
+        "name": "delurking",
+        "slug": "delurking",
+        "url": "/tag/delurking/"
+      },
+      "framing": {
+        "name": "framing",
+        "slug": "framing",
+        "url": "/tag/framing/"
+      },
+      "participation": {
+        "name": "participation",
+        "slug": "participation",
+        "url": "/tag/participation/"
+      },
+      "buzz": {
+        "name": "Buzz",
+        "slug": "buzz",
+        "url": "/tag/buzz/"
+      },
+      "spam": {
+        "name": "spam",
+        "slug": "spam",
+        "url": "/tag/spam/"
+      },
+      "fragile": {
+        "name": "fragile",
+        "slug": "fragile",
+        "url": "/tag/fragile/"
+      },
+      "perpetual": {
+        "name": "perpetual",
+        "slug": "perpetual",
+        "url": "/tag/perpetual/"
+      },
+      "presentations": {
+        "name": "presentations",
+        "slug": "presentations",
+        "url": "/tag/presentations/"
+      },
+      "renewable": {
+        "name": "renewable",
+        "slug": "renewable",
+        "url": "/tag/renewable/"
+      },
+      "steadfast": {
+        "name": "steadfast",
+        "slug": "steadfast",
+        "url": "/tag/steadfast/"
+      },
+      "short": {
+        "name": "short",
+        "slug": "short",
+        "url": "/tag/short/"
+      },
+      "terse": {
+        "name": "terse",
+        "slug": "terse",
+        "url": "/tag/terse/"
+      },
+      "truth": {
+        "name": "truth",
+        "slug": "truth",
+        "url": "/tag/truth/"
+      },
+      "business-models": {
+        "name": "business models",
+        "slug": "business-models",
+        "url": "/tag/business-models/"
+      },
+      "customers": {
+        "name": "customers",
+        "slug": "customers",
+        "url": "/tag/customers/"
+      },
+      "freemium": {
+        "name": "freemium",
+        "slug": "freemium",
+        "url": "/tag/freemium/"
+      },
+      "engagement": {
+        "name": "engagement",
+        "slug": "engagement",
+        "url": "/tag/engagement/"
+      },
+      "hubs": {
+        "name": "hubs",
+        "slug": "hubs",
+        "url": "/tag/hubs/"
+      },
+      "learning-network": {
+        "name": "learning network",
+        "slug": "learning-network",
+        "url": "/tag/learning-network/"
+      },
+      "reliance": {
+        "name": "reliance",
+        "slug": "reliance",
+        "url": "/tag/reliance/"
+      },
+      "buildings": {
+        "name": "buildings",
+        "slug": "buildings",
+        "url": "/tag/buildings/"
+      },
+      "nebraska": {
+        "name": "Nebraska",
+        "slug": "nebraska",
+        "url": "/tag/nebraska/"
+      },
+      "offices": {
+        "name": "offices",
+        "slug": "offices",
+        "url": "/tag/offices/"
+      },
+      "spaces": {
+        "name": "spaces",
+        "slug": "spaces",
+        "url": "/tag/spaces/"
+      },
+      "empathy": {
+        "name": "empathy",
+        "slug": "empathy",
+        "url": "/tag/empathy/"
+      },
+      "shoes": {
+        "name": "shoes",
+        "slug": "shoes",
+        "url": "/tag/shoes/"
+      },
+      "swapping": {
+        "name": "swapping",
+        "slug": "swapping",
+        "url": "/tag/swapping/"
+      },
+      "connection": {
+        "name": "connection",
+        "slug": "connection",
+        "url": "/tag/connection/"
+      },
+      "safety": {
+        "name": "safety",
+        "slug": "safety",
+        "url": "/tag/safety/"
+      },
+      "social-network": {
+        "name": "social network",
+        "slug": "social-network",
+        "url": "/tag/social-network/"
+      },
+      "vulnerability": {
+        "name": "vulnerability",
+        "slug": "vulnerability",
+        "url": "/tag/vulnerability/"
+      },
+      "colearning": {
+        "name": "colearning",
+        "slug": "colearning",
+        "url": "/tag/colearning/"
+      },
+      "follow": {
+        "name": "follow",
+        "slug": "follow",
+        "url": "/tag/follow/"
+      },
+      "unfollow": {
+        "name": "unfollow",
+        "slug": "unfollow",
+        "url": "/tag/unfollow/"
+      },
+      "workflows": {
+        "name": "workflows",
+        "slug": "workflows",
+        "url": "/tag/workflows/"
+      },
+      "networks": {
+        "name": "networks",
+        "slug": "networks",
+        "url": "/tag/networks/"
+      },
+      "board-of-directors": {
+        "name": "board of directors",
+        "slug": "board-of-directors",
+        "url": "/tag/board-of-directors/"
+      },
+      "people": {
+        "name": "People",
+        "slug": "people",
+        "url": "/tag/people/"
+      },
+      "planning": {
+        "name": "planning",
+        "slug": "planning",
+        "url": "/tag/planning/"
+      },
+      "prevail": {
+        "name": "prevail",
+        "slug": "prevail",
+        "url": "/tag/prevail/"
+      },
+      "debate": {
+        "name": "debate",
+        "slug": "debate",
+        "url": "/tag/debate/"
+      },
+      "health-care": {
+        "name": "health care",
+        "slug": "health-care",
+        "url": "/tag/health-care/"
+      },
+      "ideas": {
+        "name": "ideas",
+        "slug": "ideas",
+        "url": "/tag/ideas/"
+      },
+      "measure": {
+        "name": "measure",
+        "slug": "measure",
+        "url": "/tag/measure/"
+      },
+      "ratings": {
+        "name": "ratings",
+        "slug": "ratings",
+        "url": "/tag/ratings/"
+      },
+      "value": {
+        "name": "value",
+        "slug": "value",
+        "url": "/tag/value/"
+      },
+      "cloud-computing": {
+        "name": "cloud computing",
+        "slug": "cloud-computing",
+        "url": "/tag/cloud-computing/"
+      },
+      "social-search": {
+        "name": "social search",
+        "slug": "social-search",
+        "url": "/tag/social-search/"
+      },
+      "esu13": {
+        "name": "esu13",
+        "slug": "esu13",
+        "url": "/tag/esu13/"
+      },
+      "openness": {
+        "name": "Openness",
+        "slug": "openness",
+        "url": "/tag/openness/"
+      },
+      "space-between": {
+        "name": "space between",
+        "slug": "space-between",
+        "url": "/tag/space-between/"
+      },
+      "tangible": {
+        "name": "tangible",
+        "slug": "tangible",
+        "url": "/tag/tangible/"
+      },
+      "techstars": {
+        "name": "techstars",
+        "slug": "techstars",
+        "url": "/tag/techstars/"
+      },
+      "weezer": {
+        "name": "weezer",
+        "slug": "weezer",
+        "url": "/tag/weezer/"
+      },
+      "answers-com": {
+        "name": "answers.com",
+        "slug": "answers-com",
+        "url": "/tag/answers-com/"
+      },
+      "cloud": {
+        "name": "cloud",
+        "slug": "cloud",
+        "url": "/tag/cloud/"
+      },
+      "yahoo-answers": {
+        "name": "yahoo answers",
+        "slug": "yahoo-answers",
+        "url": "/tag/yahoo-answers/"
+      },
+      "application": {
+        "name": "application",
+        "slug": "application",
+        "url": "/tag/application/"
+      },
+      "future": {
+        "name": "future",
+        "slug": "future",
+        "url": "/tag/future/"
+      },
+      "grants": {
+        "name": "grants",
+        "slug": "grants",
+        "url": "/tag/grants/"
+      },
+      "judgement": {
+        "name": "judgement",
+        "slug": "judgement",
+        "url": "/tag/judgement/"
+      },
+      "yearly-review": {
+        "name": "yearly review",
+        "slug": "yearly-review",
+        "url": "/tag/yearly-review/"
+      },
+      "crowdsource": {
+        "name": "crowdsource",
+        "slug": "crowdsource",
+        "url": "/tag/crowdsource/"
+      },
+      "local": {
+        "name": "local",
+        "slug": "local",
+        "url": "/tag/local/"
+      },
+      "resource": {
+        "name": "resource",
+        "slug": "resource",
+        "url": "/tag/resource/"
+      },
+      "source": {
+        "name": "source",
+        "slug": "source",
+        "url": "/tag/source/"
+      },
+      "comments": {
+        "name": "comments",
+        "slug": "comments",
+        "url": "/tag/comments/"
+      },
+      "disqus": {
+        "name": "disqus",
+        "slug": "disqus",
+        "url": "/tag/disqus/"
+      },
+      "renewal": {
+        "name": "renewal",
+        "slug": "renewal",
+        "url": "/tag/renewal/"
+      },
+      "will-richardson": {
+        "name": "will richardson",
+        "slug": "will-richardson",
+        "url": "/tag/will-richardson/"
+      },
+      "belief": {
+        "name": "belief",
+        "slug": "belief",
+        "url": "/tag/belief/"
+      },
+      "first-drafts": {
+        "name": "first drafts",
+        "slug": "first-drafts",
+        "url": "/tag/first-drafts/"
+      },
+      "partnerships": {
+        "name": "partnerships",
+        "slug": "partnerships",
+        "url": "/tag/partnerships/"
+      },
+      "finding": {
+        "name": "finding",
+        "slug": "finding",
+        "url": "/tag/finding/"
+      },
+      "personals": {
+        "name": "personals",
+        "slug": "personals",
+        "url": "/tag/personals/"
+      },
+      "serendipity": {
+        "name": "serendipity",
+        "slug": "serendipity",
+        "url": "/tag/serendipity/"
+      },
+      "space": {
+        "name": "space",
+        "slug": "space",
+        "url": "/tag/space/"
+      },
+      "want-ads": {
+        "name": "want ads",
+        "slug": "want-ads",
+        "url": "/tag/want-ads/"
+      },
+      "better": {
+        "name": "Better",
+        "slug": "better",
+        "url": "/tag/better/"
+      },
+      "techstars-for-a-day": {
+        "name": "techstars for a day",
+        "slug": "techstars-for-a-day",
+        "url": "/tag/techstars-for-a-day/"
+      },
+      "bikes": {
+        "name": "bikes",
+        "slug": "bikes",
+        "url": "/tag/bikes/"
+      },
+      "branding": {
+        "name": "branding",
+        "slug": "branding",
+        "url": "/tag/branding/"
+      },
+      "gravity": {
+        "name": "gravity",
+        "slug": "gravity",
+        "url": "/tag/gravity/"
+      },
+      "open-spokes": {
+        "name": "open spokes",
+        "slug": "open-spokes",
+        "url": "/tag/open-spokes/"
+      },
+      "openspokes": {
+        "name": "OpenSpokes",
+        "slug": "openspokes",
+        "url": "/tag/openspokes/"
+      },
+      "disruptive-technology": {
+        "name": "disruptive technology",
+        "slug": "disruptive-technology",
+        "url": "/tag/disruptive-technology/"
+      },
+      "predictions": {
+        "name": "predictions",
+        "slug": "predictions",
+        "url": "/tag/predictions/"
+      },
+      "reading": {
+        "name": "reading",
+        "slug": "reading",
+        "url": "/tag/reading/"
+      },
+      "answer": {
+        "name": "answer",
+        "slug": "answer",
+        "url": "/tag/answer/"
+      },
+      "family": {
+        "name": "family",
+        "slug": "family",
+        "url": "/tag/family/"
+      },
+      "breadwinner": {
+        "name": "breadwinner",
+        "slug": "breadwinner",
+        "url": "/tag/breadwinner/"
+      },
+      "male": {
+        "name": "male",
+        "slug": "male",
+        "url": "/tag/male/"
+      },
+      "obligations": {
+        "name": "obligations",
+        "slug": "obligations",
+        "url": "/tag/obligations/"
+      },
+      "responsibilities": {
+        "name": "responsibilities",
+        "slug": "responsibilities",
+        "url": "/tag/responsibilities/"
+      },
+      "job-description": {
+        "name": "job description",
+        "slug": "job-description",
+        "url": "/tag/job-description/"
+      },
+      "time": {
+        "name": "time",
+        "slug": "time",
+        "url": "/tag/time/"
+      },
+      "time-theft": {
+        "name": "time theft",
+        "slug": "time-theft",
+        "url": "/tag/time-theft/"
+      },
+      "getting-things-done": {
+        "name": "getting things done",
+        "slug": "getting-things-done",
+        "url": "/tag/getting-things-done/"
+      },
+      "design": {
+        "name": "design",
+        "slug": "design",
+        "url": "/tag/design/"
+      },
+      "ego": {
+        "name": "ego",
+        "slug": "ego",
+        "url": "/tag/ego/"
+      },
+      "okgo": {
+        "name": "okgo",
+        "slug": "okgo",
+        "url": "/tag/okgo/"
+      },
+      "rube-goldberg": {
+        "name": "rube goldberg",
+        "slug": "rube-goldberg",
+        "url": "/tag/rube-goldberg/"
+      },
+      "think-big": {
+        "name": "think big",
+        "slug": "think-big",
+        "url": "/tag/think-big/"
+      },
+      "virality": {
+        "name": "virality",
+        "slug": "virality",
+        "url": "/tag/virality/"
+      },
+      "bio": {
+        "name": "bio",
+        "slug": "bio",
+        "url": "/tag/bio/"
+      },
+      "profiles": {
+        "name": "profiles",
+        "slug": "profiles",
+        "url": "/tag/profiles/"
+      },
+      "special": {
+        "name": "special",
+        "slug": "special",
+        "url": "/tag/special/"
+      },
+      "communities": {
+        "name": "communities",
+        "slug": "communities",
+        "url": "/tag/communities/"
+      },
+      "dadlabs": {
+        "name": "dadlabs",
+        "slug": "dadlabs",
+        "url": "/tag/dadlabs/"
+      },
+      "geeks": {
+        "name": "geeks",
+        "slug": "geeks",
+        "url": "/tag/geeks/"
+      },
+      "passion": {
+        "name": "passion",
+        "slug": "passion",
+        "url": "/tag/passion/"
+      },
+      "paternity": {
+        "name": "paternity",
+        "slug": "paternity",
+        "url": "/tag/paternity/"
+      },
+      "values": {
+        "name": "values",
+        "slug": "values",
+        "url": "/tag/values/"
+      },
+      "barcodes": {
+        "name": "barcodes",
+        "slug": "barcodes",
+        "url": "/tag/barcodes/"
+      },
+      "connections": {
+        "name": "connections",
+        "slug": "connections",
+        "url": "/tag/connections/"
+      },
+      "relationships": {
+        "name": "relationships",
+        "slug": "relationships",
+        "url": "/tag/relationships/"
+      },
+      "stickybits": {
+        "name": "stickybits",
+        "slug": "stickybits",
+        "url": "/tag/stickybits/"
+      },
+      "tagging": {
+        "name": "tagging",
+        "slug": "tagging",
+        "url": "/tag/tagging/"
+      },
+      "accomplishments": {
+        "name": "accomplishments",
+        "slug": "accomplishments",
+        "url": "/tag/accomplishments/"
+      },
+      "birthday": {
+        "name": "birthday",
+        "slug": "birthday",
+        "url": "/tag/birthday/"
+      },
+      "events": {
+        "name": "events",
+        "slug": "events",
+        "url": "/tag/events/"
+      },
+      "notches": {
+        "name": "notches",
+        "slug": "notches",
+        "url": "/tag/notches/"
+      },
+      "notches-in-belt": {
+        "name": "notches in belt",
+        "slug": "notches-in-belt",
+        "url": "/tag/notches-in-belt/"
+      },
+      "dad": {
+        "name": "Dad",
+        "slug": "dad",
+        "url": "/tag/dad/"
+      },
+      "daddyblogs": {
+        "name": "daddyblogs",
+        "slug": "daddyblogs",
+        "url": "/tag/daddyblogs/"
+      },
+      "daughter": {
+        "name": "daughter",
+        "slug": "daughter",
+        "url": "/tag/daughter/"
+      },
+      "growing": {
+        "name": "growing",
+        "slug": "growing",
+        "url": "/tag/growing/"
+      },
+      "mommyblogs": {
+        "name": "mommyblogs",
+        "slug": "mommyblogs",
+        "url": "/tag/mommyblogs/"
+      },
+      "software": {
+        "name": "software",
+        "slug": "software",
+        "url": "/tag/software/"
+      },
+      "christmas-story": {
+        "name": "christmas story",
+        "slug": "christmas-story",
+        "url": "/tag/christmas-story/"
+      },
+      "dares": {
+        "name": "dares",
+        "slug": "dares",
+        "url": "/tag/dares/"
+      },
+      "triple-dog-dare": {
+        "name": "triple dog dare",
+        "slug": "triple-dog-dare",
+        "url": "/tag/triple-dog-dare/"
+      },
+      "facts": {
+        "name": "facts",
+        "slug": "facts",
+        "url": "/tag/facts/"
+      },
+      "hootsuite": {
+        "name": "Hootsuite",
+        "slug": "hootsuite",
+        "url": "/tag/hootsuite/"
+      },
+      "twitterfeed": {
+        "name": "Twitterfeed",
+        "slug": "twitterfeed",
+        "url": "/tag/twitterfeed/"
+      },
+      "contact-management": {
+        "name": "contact management",
+        "slug": "contact-management",
+        "url": "/tag/contact-management/"
+      },
+      "contacts": {
+        "name": "contacts",
+        "slug": "contacts",
+        "url": "/tag/contacts/"
+      },
+      "crm": {
+        "name": "CRM",
+        "slug": "crm",
+        "url": "/tag/crm/"
+      },
+      "gist": {
+        "name": "Gist",
+        "slug": "gist",
+        "url": "/tag/gist/"
+      },
+      "creativity": {
+        "name": "creativity",
+        "slug": "creativity",
+        "url": "/tag/creativity/"
+      },
+      "hacking": {
+        "name": "hacking",
+        "slug": "hacking",
+        "url": "/tag/hacking/"
+      },
+      "ignite": {
+        "name": "ignite",
+        "slug": "ignite",
+        "url": "/tag/ignite/"
+      },
+      "machines": {
+        "name": "machines",
+        "slug": "machines",
+        "url": "/tag/machines/"
+      },
+      "radical": {
+        "name": "radical",
+        "slug": "radical",
+        "url": "/tag/radical/"
+      },
+      "reverse-engineering": {
+        "name": "reverse engineering",
+        "slug": "reverse-engineering",
+        "url": "/tag/reverse-engineering/"
+      },
+      "radical-use": {
+        "name": "radical use",
+        "slug": "radical-use",
+        "url": "/tag/radical-use/"
+      },
+      "techcrunch": {
+        "name": "techcrunch",
+        "slug": "techcrunch",
+        "url": "/tag/techcrunch/"
+      },
+      "terms-of-service": {
+        "name": "terms of service",
+        "slug": "terms-of-service",
+        "url": "/tag/terms-of-service/"
+      },
+      "toothbrush": {
+        "name": "toothbrush",
+        "slug": "toothbrush",
+        "url": "/tag/toothbrush/"
+      },
+      "toothbrushes": {
+        "name": "toothbrushes",
+        "slug": "toothbrushes",
+        "url": "/tag/toothbrushes/"
+      },
+      "aviary": {
+        "name": "aviary",
+        "slug": "aviary",
+        "url": "/tag/aviary/"
+      },
+      "bitami": {
+        "name": "bitami",
+        "slug": "bitami",
+        "url": "/tag/bitami/"
+      },
+      "etsy": {
+        "name": "etsy",
+        "slug": "etsy",
+        "url": "/tag/etsy/"
+      },
+      "foodzie": {
+        "name": "foodzie",
+        "slug": "foodzie",
+        "url": "/tag/foodzie/"
+      },
+      "footnote": {
+        "name": "footnote",
+        "slug": "footnote",
+        "url": "/tag/footnote/"
+      },
+      "sla": {
+        "name": "sla",
+        "slug": "sla",
+        "url": "/tag/sla/"
+      },
+      "big-ideas": {
+        "name": "big ideas",
+        "slug": "big-ideas",
+        "url": "/tag/big-ideas/"
+      },
+      "darling": {
+        "name": "darling",
+        "slug": "darling",
+        "url": "/tag/darling/"
+      },
+      "digg": {
+        "name": "digg",
+        "slug": "digg",
+        "url": "/tag/digg/"
+      },
+      "media-darlings": {
+        "name": "media darlings",
+        "slug": "media-darlings",
+        "url": "/tag/media-darlings/"
+      },
+      "rainmakers": {
+        "name": "rainmakers",
+        "slug": "rainmakers",
+        "url": "/tag/rainmakers/"
+      },
+      "cell-phones": {
+        "name": "cell phones",
+        "slug": "cell-phones",
+        "url": "/tag/cell-phones/"
+      },
+      "cellphones": {
+        "name": "cellphones",
+        "slug": "cellphones",
+        "url": "/tag/cellphones/"
+      },
+      "communication": {
+        "name": "communication",
+        "slug": "communication",
+        "url": "/tag/communication/"
+      },
+      "computers": {
+        "name": "computers",
+        "slug": "computers",
+        "url": "/tag/computers/"
+      },
+      "devices": {
+        "name": "devices",
+        "slug": "devices",
+        "url": "/tag/devices/"
+      },
+      "ownership": {
+        "name": "ownership",
+        "slug": "ownership",
+        "url": "/tag/ownership/"
+      },
+      "play": {
+        "name": "play",
+        "slug": "play",
+        "url": "/tag/play/"
+      },
+      "apple-tv": {
+        "name": "Apple TV",
+        "slug": "apple-tv",
+        "url": "/tag/apple-tv/"
+      },
+      "boy-meets-world": {
+        "name": "Boy meets world",
+        "slug": "boy-meets-world",
+        "url": "/tag/boy-meets-world/"
+      },
+      "paradigm": {
+        "name": "paradigm",
+        "slug": "paradigm",
+        "url": "/tag/paradigm/"
+      },
+      "companies": {
+        "name": "companies",
+        "slug": "companies",
+        "url": "/tag/companies/"
+      },
+      "guerrilla-marketing": {
+        "name": "Guerrilla marketing",
+        "slug": "guerrilla-marketing",
+        "url": "/tag/guerrilla-marketing/"
+      },
+      "nonprofits": {
+        "name": "nonprofits",
+        "slug": "nonprofits",
+        "url": "/tag/nonprofits/"
+      },
+      "beta-testing": {
+        "name": "beta testing",
+        "slug": "beta-testing",
+        "url": "/tag/beta-testing/"
+      },
+      "organization": {
+        "name": "organization",
+        "slug": "organization",
+        "url": "/tag/organization/"
+      },
+      "project-tracking": {
+        "name": "project tracking",
+        "slug": "project-tracking",
+        "url": "/tag/project-tracking/"
+      },
+      "version-control": {
+        "name": "version control",
+        "slug": "version-control",
+        "url": "/tag/version-control/"
+      },
+      "chemistry": {
+        "name": "Chemistry",
+        "slug": "chemistry",
+        "url": "/tag/chemistry/"
+      },
+      "language": {
+        "name": "language",
+        "slug": "language",
+        "url": "/tag/language/"
+      },
+      "metadata": {
+        "name": "Metadata",
+        "slug": "metadata",
+        "url": "/tag/metadata/"
+      },
+      "microsoft-live-labs-pivot": {
+        "name": "Microsoft Live Labs Pivot",
+        "slug": "microsoft-live-labs-pivot",
+        "url": "/tag/microsoft-live-labs-pivot/"
+      },
+      "negotiation": {
+        "name": "negotiation",
+        "slug": "negotiation",
+        "url": "/tag/negotiation/"
+      },
+      "non-negotiables": {
+        "name": "non-negotiables",
+        "slug": "non-negotiables",
+        "url": "/tag/non-negotiables/"
+      },
+      "periodic-table": {
+        "name": "Periodic table",
+        "slug": "periodic-table",
+        "url": "/tag/periodic-table/"
+      },
+      "financial-services": {
+        "name": "Financial services",
+        "slug": "financial-services",
+        "url": "/tag/financial-services/"
+      },
+      "investing": {
+        "name": "Investing",
+        "slug": "investing",
+        "url": "/tag/investing/"
+      },
+      "investment": {
+        "name": "investment",
+        "slug": "investment",
+        "url": "/tag/investment/"
+      },
+      "market-liquidity": {
+        "name": "Market liquidity",
+        "slug": "market-liquidity",
+        "url": "/tag/market-liquidity/"
+      },
+      "money": {
+        "name": "money",
+        "slug": "money",
+        "url": "/tag/money/"
+      },
+      "net-worth": {
+        "name": "Net worth",
+        "slug": "net-worth",
+        "url": "/tag/net-worth/"
+      },
+      "rate-of-return": {
+        "name": "Rate of return",
+        "slug": "rate-of-return",
+        "url": "/tag/rate-of-return/"
+      },
+      "valuation": {
+        "name": "valuation",
+        "slug": "valuation",
+        "url": "/tag/valuation/"
+      },
+      "ask-an-expert": {
+        "name": "Ask an Expert",
+        "slug": "ask-an-expert",
+        "url": "/tag/ask-an-expert/"
+      },
+      "programming": {
+        "name": "programming",
+        "slug": "programming",
+        "url": "/tag/programming/"
+      },
+      "pyramid": {
+        "name": "pyramid",
+        "slug": "pyramid",
+        "url": "/tag/pyramid/"
+      },
+      "pyramid-scheme": {
+        "name": "Pyramid scheme",
+        "slug": "pyramid-scheme",
+        "url": "/tag/pyramid-scheme/"
+      },
+      "scheme": {
+        "name": "Scheme",
+        "slug": "scheme",
+        "url": "/tag/scheme/"
+      },
+      "standing-on-the-shoulders-of-giants": {
+        "name": "Standing on the shoulders of giants",
+        "slug": "standing-on-the-shoulders-of-giants",
+        "url": "/tag/standing-on-the-shoulders-of-giants/"
+      },
+      "computer-monitor": {
+        "name": "Computer monitor",
+        "slug": "computer-monitor",
+        "url": "/tag/computer-monitor/"
+      },
+      "ipod": {
+        "name": "ipod",
+        "slug": "ipod",
+        "url": "/tag/ipod/"
+      },
+      "mobile-phone": {
+        "name": "Mobile phone",
+        "slug": "mobile-phone",
+        "url": "/tag/mobile-phone/"
+      },
+      "real-estate": {
+        "name": "Real estate",
+        "slug": "real-estate",
+        "url": "/tag/real-estate/"
+      },
+      "search-engines": {
+        "name": "Search Engines",
+        "slug": "search-engines",
+        "url": "/tag/search-engines/"
+      },
+      "searching": {
+        "name": "Searching",
+        "slug": "searching",
+        "url": "/tag/searching/"
+      },
+      "802-11": {
+        "name": "802.11",
+        "slug": "802-11",
+        "url": "/tag/802-11/"
+      },
+      "bandwidth": {
+        "name": "bandwidth",
+        "slug": "bandwidth",
+        "url": "/tag/bandwidth/"
+      },
+      "data-communications": {
+        "name": "Data Communications",
+        "slug": "data-communications",
+        "url": "/tag/data-communications/"
+      },
+      "hotspot": {
+        "name": "Hotspot",
+        "slug": "hotspot",
+        "url": "/tag/hotspot/"
+      },
+      "smartphone": {
+        "name": "Smartphone",
+        "slug": "smartphone",
+        "url": "/tag/smartphone/"
+      },
+      "wireless": {
+        "name": "wireless",
+        "slug": "wireless",
+        "url": "/tag/wireless/"
+      },
+      "wireless-network": {
+        "name": "Wireless network",
+        "slug": "wireless-network",
+        "url": "/tag/wireless-network/"
+      },
+      "apple": {
+        "name": "apple",
+        "slug": "apple",
+        "url": "/tag/apple/"
+      },
+      "ipod-classic": {
+        "name": "IPod Classic",
+        "slug": "ipod-classic",
+        "url": "/tag/ipod-classic/"
+      },
+      "ipod-touch": {
+        "name": "iPod touch",
+        "slug": "ipod-touch",
+        "url": "/tag/ipod-touch/"
+      },
+      "technology": {
+        "name": "technology",
+        "slug": "technology",
+        "url": "/tag/technology/"
+      },
+      "touchscreen": {
+        "name": "Touchscreen",
+        "slug": "touchscreen",
+        "url": "/tag/touchscreen/"
+      },
+      "activism": {
+        "name": "Activism",
+        "slug": "activism",
+        "url": "/tag/activism/"
+      },
+      "friendster": {
+        "name": "Friendster",
+        "slug": "friendster",
+        "url": "/tag/friendster/"
+      },
+      "groups": {
+        "name": "groups",
+        "slug": "groups",
+        "url": "/tag/groups/"
+      },
+      "teams": {
+        "name": "teams",
+        "slug": "teams",
+        "url": "/tag/teams/"
+      },
+      "guitar": {
+        "name": "guitar",
+        "slug": "guitar",
+        "url": "/tag/guitar/"
+      },
+      "high-school": {
+        "name": "High school",
+        "slug": "high-school",
+        "url": "/tag/high-school/"
+      },
+      "online-communities": {
+        "name": "Online Communities",
+        "slug": "online-communities",
+        "url": "/tag/online-communities/"
+      },
+      "yelp": {
+        "name": "Yelp",
+        "slug": "yelp",
+        "url": "/tag/yelp/"
+      },
+      "catcher-in-the-rye": {
+        "name": "Catcher in the Rye",
+        "slug": "catcher-in-the-rye",
+        "url": "/tag/catcher-in-the-rye/"
+      },
+      "novel": {
+        "name": "Novel",
+        "slug": "novel",
+        "url": "/tag/novel/"
+      },
+      "products-and-services": {
+        "name": "Products and Services",
+        "slug": "products-and-services",
+        "url": "/tag/products-and-services/"
+      },
+      "stranger": {
+        "name": "Stranger",
+        "slug": "stranger",
+        "url": "/tag/stranger/"
+      },
+      "advice": {
+        "name": "Advice",
+        "slug": "advice",
+        "url": "/tag/advice/"
+      },
+      "approval": {
+        "name": "approval",
+        "slug": "approval",
+        "url": "/tag/approval/"
+      },
+      "cheese": {
+        "name": "Cheese",
+        "slug": "cheese",
+        "url": "/tag/cheese/"
+      },
+      "delizios": {
+        "name": "delizios",
+        "slug": "delizios",
+        "url": "/tag/delizios/"
+      },
+      "egg": {
+        "name": "Egg",
+        "slug": "egg",
+        "url": "/tag/egg/"
+      },
+      "prove": {
+        "name": "prove",
+        "slug": "prove",
+        "url": "/tag/prove/"
+      },
+      "quiche": {
+        "name": "Quiche",
+        "slug": "quiche",
+        "url": "/tag/quiche/"
+      },
+      "salt": {
+        "name": "Salt",
+        "slug": "salt",
+        "url": "/tag/salt/"
+      },
+      "web-development": {
+        "name": "Web development",
+        "slug": "web-development",
+        "url": "/tag/web-development/"
+      },
+      "google-analytics": {
+        "name": "Google Analytics",
+        "slug": "google-analytics",
+        "url": "/tag/google-analytics/"
+      },
+      "identity": {
+        "name": "identity",
+        "slug": "identity",
+        "url": "/tag/identity/"
+      },
+      "vanity": {
+        "name": "vanity",
+        "slug": "vanity",
+        "url": "/tag/vanity/"
+      },
+      "website": {
+        "name": "website",
+        "slug": "website",
+        "url": "/tag/website/"
+      },
+      "baseball": {
+        "name": "Baseball",
+        "slug": "baseball",
+        "url": "/tag/baseball/"
+      },
+      "cal-ripken": {
+        "name": "Cal Ripken",
+        "slug": "cal-ripken",
+        "url": "/tag/cal-ripken/"
+      },
+      "cal-ripken-jr-play-ball": {
+        "name": "Cal Ripken Jr.: Play Ball!",
+        "slug": "cal-ripken-jr-play-ball",
+        "url": "/tag/cal-ripken-jr-play-ball/"
+      },
+      "hit": {
+        "name": "Hit",
+        "slug": "hit",
+        "url": "/tag/hit/"
+      },
+      "honus-wagner": {
+        "name": "Honus Wagner",
+        "slug": "honus-wagner",
+        "url": "/tag/honus-wagner/"
+      },
+      "run-batted-in": {
+        "name": "Run batted in",
+        "slug": "run-batted-in",
+        "url": "/tag/run-batted-in/"
+      },
+      "sports": {
+        "name": "sports",
+        "slug": "sports",
+        "url": "/tag/sports/"
+      },
+      "statistics": {
+        "name": "statistics",
+        "slug": "statistics",
+        "url": "/tag/statistics/"
+      },
+      "bullying": {
+        "name": "bullying",
+        "slug": "bullying",
+        "url": "/tag/bullying/"
+      },
+      "florida": {
+        "name": "Florida",
+        "slug": "florida",
+        "url": "/tag/florida/"
+      },
+      "middle-school": {
+        "name": "Middle school",
+        "slug": "middle-school",
+        "url": "/tag/middle-school/"
+      },
+      "social-network-service": {
+        "name": "Social network service",
+        "slug": "social-network-service",
+        "url": "/tag/social-network-service/"
+      },
+      "violence-and-abuse": {
+        "name": "Violence and Abuse",
+        "slug": "violence-and-abuse",
+        "url": "/tag/violence-and-abuse/"
+      },
+      "youth": {
+        "name": "youth",
+        "slug": "youth",
+        "url": "/tag/youth/"
+      },
+      "child": {
+        "name": "Child",
+        "slug": "child",
+        "url": "/tag/child/"
+      },
+      "costume": {
+        "name": "Costume",
+        "slug": "costume",
+        "url": "/tag/costume/"
+      },
+      "halloween": {
+        "name": "Halloween",
+        "slug": "halloween",
+        "url": "/tag/halloween/"
+      },
+      "holiday": {
+        "name": "Holiday",
+        "slug": "holiday",
+        "url": "/tag/holiday/"
+      },
+      "metaphor": {
+        "name": "metaphor",
+        "slug": "metaphor",
+        "url": "/tag/metaphor/"
+      },
+      "parties": {
+        "name": "Parties",
+        "slug": "parties",
+        "url": "/tag/parties/"
+      },
+      "projects": {
+        "name": "projects",
+        "slug": "projects",
+        "url": "/tag/projects/"
+      },
+      "recreation": {
+        "name": "Recreation",
+        "slug": "recreation",
+        "url": "/tag/recreation/"
+      },
+      "trick-or-treat": {
+        "name": "Trick or Treat",
+        "slug": "trick-or-treat",
+        "url": "/tag/trick-or-treat/"
+      },
+      "basement": {
+        "name": "Basement",
+        "slug": "basement",
+        "url": "/tag/basement/"
+      },
+      "boys": {
+        "name": "boys",
+        "slug": "boys",
+        "url": "/tag/boys/"
+      },
+      "charter-school": {
+        "name": "Charter school",
+        "slug": "charter-school",
+        "url": "/tag/charter-school/"
+      },
+      "digging": {
+        "name": "digging",
+        "slug": "digging",
+        "url": "/tag/digging/"
+      },
+      "house": {
+        "name": "house",
+        "slug": "house",
+        "url": "/tag/house/"
+      },
+      "mountain": {
+        "name": "Mountain",
+        "slug": "mountain",
+        "url": "/tag/mountain/"
+      },
+      "ohio": {
+        "name": "Ohio",
+        "slug": "ohio",
+        "url": "/tag/ohio/"
+      },
+      "soil": {
+        "name": "Soil",
+        "slug": "soil",
+        "url": "/tag/soil/"
+      },
+      "united-states": {
+        "name": "United States",
+        "slug": "united-states",
+        "url": "/tag/united-states/"
+      },
+      "embarrassment": {
+        "name": "embarrassment",
+        "slug": "embarrassment",
+        "url": "/tag/embarrassment/"
+      },
+      "falsetto": {
+        "name": "Falsetto",
+        "slug": "falsetto",
+        "url": "/tag/falsetto/"
+      },
+      "folding-chair": {
+        "name": "Folding chair",
+        "slug": "folding-chair",
+        "url": "/tag/folding-chair/"
+      },
+      "heavy-metal-music": {
+        "name": "Heavy metal music",
+        "slug": "heavy-metal-music",
+        "url": "/tag/heavy-metal-music/"
+      },
+      "memory": {
+        "name": "memory",
+        "slug": "memory",
+        "url": "/tag/memory/"
+      },
+      "singing": {
+        "name": "Singing",
+        "slug": "singing",
+        "url": "/tag/singing/"
+      },
+      "billiard-ball": {
+        "name": "Billiard ball",
+        "slug": "billiard-ball",
+        "url": "/tag/billiard-ball/"
+      },
+      "billiard-table": {
+        "name": "Billiard table",
+        "slug": "billiard-table",
+        "url": "/tag/billiard-table/"
+      },
+      "bumper-pool": {
+        "name": "bumper pool",
+        "slug": "bumper-pool",
+        "url": "/tag/bumper-pool/"
+      },
+      "cue-sports": {
+        "name": "Cue sports",
+        "slug": "cue-sports",
+        "url": "/tag/cue-sports/"
+      },
+      "game": {
+        "name": "game",
+        "slug": "game",
+        "url": "/tag/game/"
+      },
+      "leraning": {
+        "name": "leraning",
+        "slug": "leraning",
+        "url": "/tag/leraning/"
+      },
+      "pool": {
+        "name": "Pool",
+        "slug": "pool",
+        "url": "/tag/pool/"
+      },
+      "shopping": {
+        "name": "shopping",
+        "slug": "shopping",
+        "url": "/tag/shopping/"
+      },
+      "sport": {
+        "name": "Sport",
+        "slug": "sport",
+        "url": "/tag/sport/"
+      },
+      "itunes": {
+        "name": "iTunes",
+        "slug": "itunes",
+        "url": "/tag/itunes/"
+      },
+      "saved-by-the-bell": {
+        "name": "Saved by the Bell",
+        "slug": "saved-by-the-bell",
+        "url": "/tag/saved-by-the-bell/"
+      },
+      "television": {
+        "name": "television",
+        "slug": "television",
+        "url": "/tag/television/"
+      },
+      "video-game": {
+        "name": "Video game",
+        "slug": "video-game",
+        "url": "/tag/video-game/"
+      },
+      "viral-video": {
+        "name": "Viral video",
+        "slug": "viral-video",
+        "url": "/tag/viral-video/"
+      },
+      "arts": {
+        "name": "arts",
+        "slug": "arts",
+        "url": "/tag/arts/"
+      },
+      "fiction": {
+        "name": "Fiction",
+        "slug": "fiction",
+        "url": "/tag/fiction/"
+      },
+      "nonfiction": {
+        "name": "Nonfiction",
+        "slug": "nonfiction",
+        "url": "/tag/nonfiction/"
+      },
+      "online-writing": {
+        "name": "Online Writing",
+        "slug": "online-writing",
+        "url": "/tag/online-writing/"
+      },
+      "plot": {
+        "name": "Plot",
+        "slug": "plot",
+        "url": "/tag/plot/"
+      },
+      "school": {
+        "name": "school",
+        "slug": "school",
+        "url": "/tag/school/"
+      },
+      "storytelling": {
+        "name": "storytelling",
+        "slug": "storytelling",
+        "url": "/tag/storytelling/"
+      },
+      "chemicals": {
+        "name": "Chemicals",
+        "slug": "chemicals",
+        "url": "/tag/chemicals/"
+      },
+      "entrepreneurs": {
+        "name": "entrepreneurs",
+        "slug": "entrepreneurs",
+        "url": "/tag/entrepreneurs/"
+      },
+      "lifehacker": {
+        "name": "lifehacker",
+        "slug": "lifehacker",
+        "url": "/tag/lifehacker/"
+      },
+      "manufactured-product": {
+        "name": "Manufactured Product",
+        "slug": "manufactured-product",
+        "url": "/tag/manufactured-product/"
+      },
+      "polymers": {
+        "name": "Polymers",
+        "slug": "polymers",
+        "url": "/tag/polymers/"
+      },
+      "rubber": {
+        "name": "Rubber",
+        "slug": "rubber",
+        "url": "/tag/rubber/"
+      },
+      "rubber-band": {
+        "name": "Rubber band",
+        "slug": "rubber-band",
+        "url": "/tag/rubber-band/"
+      },
+      "antiques": {
+        "name": "Antiques",
+        "slug": "antiques",
+        "url": "/tag/antiques/"
+      },
+      "concrete": {
+        "name": "Concrete",
+        "slug": "concrete",
+        "url": "/tag/concrete/"
+      },
+      "document": {
+        "name": "document",
+        "slug": "document",
+        "url": "/tag/document/"
+      },
+      "knowledge-management": {
+        "name": "Knowledge Management",
+        "slug": "knowledge-management",
+        "url": "/tag/knowledge-management/"
+      },
+      "question": {
+        "name": "Question",
+        "slug": "question",
+        "url": "/tag/question/"
+      },
+      "typewriter": {
+        "name": "Typewriter",
+        "slug": "typewriter",
+        "url": "/tag/typewriter/"
+      },
+      "health": {
+        "name": "health",
+        "slug": "health",
+        "url": "/tag/health/"
+      },
+      "human": {
+        "name": "Human",
+        "slug": "human",
+        "url": "/tag/human/"
+      },
+      "imaging": {
+        "name": "Imaging",
+        "slug": "imaging",
+        "url": "/tag/imaging/"
+      },
+      "medicine": {
+        "name": "Medicine",
+        "slug": "medicine",
+        "url": "/tag/medicine/"
+      },
+      "morning-sickness": {
+        "name": "Morning sickness",
+        "slug": "morning-sickness",
+        "url": "/tag/morning-sickness/"
+      },
+      "pregnancy": {
+        "name": "Pregnancy",
+        "slug": "pregnancy",
+        "url": "/tag/pregnancy/"
+      },
+      "ultrasonography": {
+        "name": "Ultrasonography",
+        "slug": "ultrasonography",
+        "url": "/tag/ultrasonography/"
+      },
+      "crowdsourcing": {
+        "name": "Crowdsourcing",
+        "slug": "crowdsourcing",
+        "url": "/tag/crowdsourcing/"
+      },
+      "gmail": {
+        "name": "gmail",
+        "slug": "gmail",
+        "url": "/tag/gmail/"
+      },
+      "google-doc": {
+        "name": "Google Doc",
+        "slug": "google-doc",
+        "url": "/tag/google-doc/"
+      },
+      "myspace": {
+        "name": "myspace",
+        "slug": "myspace",
+        "url": "/tag/myspace/"
+      },
+      "beowulf": {
+        "name": "Beowulf",
+        "slug": "beowulf",
+        "url": "/tag/beowulf/"
+      },
+      "college": {
+        "name": "college",
+        "slug": "college",
+        "url": "/tag/college/"
+      },
+      "english-poetry": {
+        "name": "English poetry",
+        "slug": "english-poetry",
+        "url": "/tag/english-poetry/"
+      },
+      "literature": {
+        "name": "literature",
+        "slug": "literature",
+        "url": "/tag/literature/"
+      },
+      "showing-up": {
+        "name": "showing up",
+        "slug": "showing-up",
+        "url": "/tag/showing-up/"
+      },
+      "ai": {
+        "name": "AI",
+        "slug": "ai",
+        "url": "/tag/ai/"
+      },
+      "al-michaels": {
+        "name": "Al Michaels",
+        "slug": "al-michaels",
+        "url": "/tag/al-michaels/"
+      },
+      "google-maps": {
+        "name": "Google Maps",
+        "slug": "google-maps",
+        "url": "/tag/google-maps/"
+      },
+      "simulation": {
+        "name": "simulation",
+        "slug": "simulation",
+        "url": "/tag/simulation/"
+      },
+      "web-search-engine": {
+        "name": "Web search engine",
+        "slug": "web-search-engine",
+        "url": "/tag/web-search-engine/"
+      },
+      "chain-reaction": {
+        "name": "Chain reaction",
+        "slug": "chain-reaction",
+        "url": "/tag/chain-reaction/"
+      },
+      "domino-effect": {
+        "name": "Domino effect",
+        "slug": "domino-effect",
+        "url": "/tag/domino-effect/"
+      },
+      "dominoes": {
+        "name": "Dominoes",
+        "slug": "dominoes",
+        "url": "/tag/dominoes/"
+      },
+      "groupware": {
+        "name": "Groupware",
+        "slug": "groupware",
+        "url": "/tag/groupware/"
+      },
+      "lotus-notes": {
+        "name": "Lotus Notes",
+        "slug": "lotus-notes",
+        "url": "/tag/lotus-notes/"
+      },
+      "recreation-and-sports": {
+        "name": "Recreation and Sports",
+        "slug": "recreation-and-sports",
+        "url": "/tag/recreation-and-sports/"
+      },
+      "stories": {
+        "name": "stories",
+        "slug": "stories",
+        "url": "/tag/stories/"
+      },
+      "energy": {
+        "name": "energy",
+        "slug": "energy",
+        "url": "/tag/energy/"
+      },
+      "fear": {
+        "name": "Fear",
+        "slug": "fear",
+        "url": "/tag/fear/"
+      },
+      "fortune-500": {
+        "name": "Fortune 500",
+        "slug": "fortune-500",
+        "url": "/tag/fortune-500/"
+      },
+      "leadership": {
+        "name": "Leadership",
+        "slug": "leadership",
+        "url": "/tag/leadership/"
+      },
+      "peer-pressure": {
+        "name": "Peer pressure",
+        "slug": "peer-pressure",
+        "url": "/tag/peer-pressure/"
+      },
+      "retirement": {
+        "name": "retirement",
+        "slug": "retirement",
+        "url": "/tag/retirement/"
+      },
+      "status-quo": {
+        "name": "Status quo",
+        "slug": "status-quo",
+        "url": "/tag/status-quo/"
+      },
+      "art": {
+        "name": "art",
+        "slug": "art",
+        "url": "/tag/art/"
+      },
+      "graffiti": {
+        "name": "graffiti",
+        "slug": "graffiti",
+        "url": "/tag/graffiti/"
+      },
+      "hip-hop": {
+        "name": "Hip-Hop",
+        "slug": "hip-hop",
+        "url": "/tag/hip-hop/"
+      },
+      "image-galleries": {
+        "name": "Image Galleries",
+        "slug": "image-galleries",
+        "url": "/tag/image-galleries/"
+      },
+      "social-studies": {
+        "name": "Social Studies",
+        "slug": "social-studies",
+        "url": "/tag/social-studies/"
+      },
+      "subcultures": {
+        "name": "Subcultures",
+        "slug": "subcultures",
+        "url": "/tag/subcultures/"
+      },
+      "company": {
+        "name": "Company",
+        "slug": "company",
+        "url": "/tag/company/"
+      },
+      "glove-compartment": {
+        "name": "Glove compartment",
+        "slug": "glove-compartment",
+        "url": "/tag/glove-compartment/"
+      },
+      "mindquilt": {
+        "name": "mindquilt",
+        "slug": "mindquilt",
+        "url": "/tag/mindquilt/"
+      },
+      "science-fiction": {
+        "name": "Science fiction",
+        "slug": "science-fiction",
+        "url": "/tag/science-fiction/"
+      },
+      "bill-gates": {
+        "name": "Bill Gates",
+        "slug": "bill-gates",
+        "url": "/tag/bill-gates/"
+      },
+      "history": {
+        "name": "history",
+        "slug": "history",
+        "url": "/tag/history/"
+      },
+      "pioneers": {
+        "name": "Pioneers",
+        "slug": "pioneers",
+        "url": "/tag/pioneers/"
+      },
+      "science-leadership-academy": {
+        "name": "Science Leadership Academy",
+        "slug": "science-leadership-academy",
+        "url": "/tag/science-leadership-academy/"
+      },
+      "slagates": {
+        "name": "slagates",
+        "slug": "slagates",
+        "url": "/tag/slagates/"
+      },
+      "closed": {
+        "name": "closed",
+        "slug": "closed",
+        "url": "/tag/closed/"
+      },
+      "doors": {
+        "name": "doors",
+        "slug": "doors",
+        "url": "/tag/doors/"
+      },
+      "ben-folds-five": {
+        "name": "Ben Folds Five",
+        "slug": "ben-folds-five",
+        "url": "/tag/ben-folds-five/"
+      },
+      "benfolds": {
+        "name": "BenFolds",
+        "slug": "benfolds",
+        "url": "/tag/benfolds/"
+      },
+      "humor": {
+        "name": "humor",
+        "slug": "humor",
+        "url": "/tag/humor/"
+      },
+      "naked-baby-photos": {
+        "name": "Naked Baby Photos",
+        "slug": "naked-baby-photos",
+        "url": "/tag/naked-baby-photos/"
+      },
+      "charlie-and-the-chocolate-factory": {
+        "name": "Charlie and the Chocolate Factory",
+        "slug": "charlie-and-the-chocolate-factory",
+        "url": "/tag/charlie-and-the-chocolate-factory/"
+      },
+      "chocolate-factory": {
+        "name": "Chocolate Factory",
+        "slug": "chocolate-factory",
+        "url": "/tag/chocolate-factory/"
+      },
+      "gene-wilder": {
+        "name": "Gene Wilder",
+        "slug": "gene-wilder",
+        "url": "/tag/gene-wilder/"
+      },
+      "grandpa-joe": {
+        "name": "Grandpa Joe",
+        "slug": "grandpa-joe",
+        "url": "/tag/grandpa-joe/"
+      },
+      "kansas-city": {
+        "name": "Kansas City",
+        "slug": "kansas-city",
+        "url": "/tag/kansas-city/"
+      },
+      "needs": {
+        "name": "needs",
+        "slug": "needs",
+        "url": "/tag/needs/"
+      },
+      "privilege": {
+        "name": "privilege",
+        "slug": "privilege",
+        "url": "/tag/privilege/"
+      },
+      "wants": {
+        "name": "wants",
+        "slug": "wants",
+        "url": "/tag/wants/"
+      },
+      "willy-wonka-the-chocolate-factory": {
+        "name": "Willy Wonka & the Chocolate Factory",
+        "slug": "willy-wonka-the-chocolate-factory",
+        "url": "/tag/willy-wonka-the-chocolate-factory/"
+      },
+      "anxiety": {
+        "name": "Anxiety",
+        "slug": "anxiety",
+        "url": "/tag/anxiety/"
+      },
+      "cubicles": {
+        "name": "cubicles",
+        "slug": "cubicles",
+        "url": "/tag/cubicles/"
+      },
+      "divorce": {
+        "name": "Divorce",
+        "slug": "divorce",
+        "url": "/tag/divorce/"
+      },
+      "furniture": {
+        "name": "Furniture",
+        "slug": "furniture",
+        "url": "/tag/furniture/"
+      },
+      "home": {
+        "name": "Home",
+        "slug": "home",
+        "url": "/tag/home/"
+      },
+      "office-politics": {
+        "name": "office politics",
+        "slug": "office-politics",
+        "url": "/tag/office-politics/"
+      },
+      "office-space": {
+        "name": "office space",
+        "slug": "office-space",
+        "url": "/tag/office-space/"
+      },
+      "solid-wood": {
+        "name": "Solid wood",
+        "slug": "solid-wood",
+        "url": "/tag/solid-wood/"
+      },
+      "virginia-woolf": {
+        "name": "Virginia Woolf",
+        "slug": "virginia-woolf",
+        "url": "/tag/virginia-woolf/"
+      },
+      "who-moved-my-cheese": {
+        "name": "who moved my cheese",
+        "slug": "who-moved-my-cheese",
+        "url": "/tag/who-moved-my-cheese/"
+      },
+      "circus": {
+        "name": "Circus",
+        "slug": "circus",
+        "url": "/tag/circus/"
+      },
+      "cleveland-clinic": {
+        "name": "Cleveland Clinic",
+        "slug": "cleveland-clinic",
+        "url": "/tag/cleveland-clinic/"
+      },
+      "clowns": {
+        "name": "Clowns",
+        "slug": "clowns",
+        "url": "/tag/clowns/"
+      },
+      "hospital": {
+        "name": "Hospital",
+        "slug": "hospital",
+        "url": "/tag/hospital/"
+      },
+      "action-figure": {
+        "name": "Action figure",
+        "slug": "action-figure",
+        "url": "/tag/action-figure/"
+      },
+      "google-chrome": {
+        "name": "Google Chrome",
+        "slug": "google-chrome",
+        "url": "/tag/google-chrome/"
+      },
+      "iphone-3g": {
+        "name": "iPhone 3G",
+        "slug": "iphone-3g",
+        "url": "/tag/iphone-3g/"
+      },
+      "multi-tasking": {
+        "name": "multi-tasking",
+        "slug": "multi-tasking",
+        "url": "/tag/multi-tasking/"
+      },
+      "english-language": {
+        "name": "English language",
+        "slug": "english-language",
+        "url": "/tag/english-language/"
+      },
+      "hearing": {
+        "name": "Hearing",
+        "slug": "hearing",
+        "url": "/tag/hearing/"
+      },
+      "musical-theatre": {
+        "name": "Musical theatre",
+        "slug": "musical-theatre",
+        "url": "/tag/musical-theatre/"
+      },
+      "world-view": {
+        "name": "World view",
+        "slug": "world-view",
+        "url": "/tag/world-view/"
+      },
+      "writing": {
+        "name": "writing",
+        "slug": "writing",
+        "url": "/tag/writing/"
+      },
+      "addiction": {
+        "name": "addiction",
+        "slug": "addiction",
+        "url": "/tag/addiction/"
+      },
+      "cancer": {
+        "name": "Cancer",
+        "slug": "cancer",
+        "url": "/tag/cancer/"
+      },
+      "mothers-day": {
+        "name": "mother's day",
+        "slug": "mothers-day",
+        "url": "/tag/mothers-day/"
+      },
+      "specific-substances": {
+        "name": "Specific Substances",
+        "slug": "specific-substances",
+        "url": "/tag/specific-substances/"
+      },
+      "substance-abuse": {
+        "name": "Substance Abuse",
+        "slug": "substance-abuse",
+        "url": "/tag/substance-abuse/"
+      },
+      "tobacco": {
+        "name": "Tobacco",
+        "slug": "tobacco",
+        "url": "/tag/tobacco/"
+      },
+      "tobacco-smoking": {
+        "name": "Tobacco smoking",
+        "slug": "tobacco-smoking",
+        "url": "/tag/tobacco-smoking/"
+      },
+      "casual": {
+        "name": "Casual",
+        "slug": "casual",
+        "url": "/tag/casual/"
+      },
+      "clothing": {
+        "name": "Clothing",
+        "slug": "clothing",
+        "url": "/tag/clothing/"
+      },
+      "cocktails": {
+        "name": "cocktails",
+        "slug": "cocktails",
+        "url": "/tag/cocktails/"
+      },
+      "dining": {
+        "name": "dining",
+        "slug": "dining",
+        "url": "/tag/dining/"
+      },
+      "dress": {
+        "name": "dress",
+        "slug": "dress",
+        "url": "/tag/dress/"
+      },
+      "formal": {
+        "name": "formal",
+        "slug": "formal",
+        "url": "/tag/formal/"
+      },
+      "intercourse": {
+        "name": "intercourse",
+        "slug": "intercourse",
+        "url": "/tag/intercourse/"
+      },
+      "jeans": {
+        "name": "Jeans",
+        "slug": "jeans",
+        "url": "/tag/jeans/"
+      },
+      "men": {
+        "name": "Men",
+        "slug": "men",
+        "url": "/tag/men/"
+      },
+      "suit": {
+        "name": "Suit",
+        "slug": "suit",
+        "url": "/tag/suit/"
+      },
+      "trousers": {
+        "name": "Trousers",
+        "slug": "trousers",
+        "url": "/tag/trousers/"
+      },
+      "filesharing": {
+        "name": "Filesharing",
+        "slug": "filesharing",
+        "url": "/tag/filesharing/"
+      },
+      "iphone-os": {
+        "name": "iPhone OS",
+        "slug": "iphone-os",
+        "url": "/tag/iphone-os/"
+      },
+      "kazaa": {
+        "name": "Kazaa",
+        "slug": "kazaa",
+        "url": "/tag/kazaa/"
+      },
+      "microsoft-windows-ce": {
+        "name": "Microsoft Windows CE",
+        "slug": "microsoft-windows-ce",
+        "url": "/tag/microsoft-windows-ce/"
+      },
+      "mp3": {
+        "name": "MP3",
+        "slug": "mp3",
+        "url": "/tag/mp3/"
+      },
+      "napster": {
+        "name": "Napster",
+        "slug": "napster",
+        "url": "/tag/napster/"
+      },
+      "spin-doctors": {
+        "name": "Spin Doctors",
+        "slug": "spin-doctors",
+        "url": "/tag/spin-doctors/"
+      },
+      "10-websites-download-older-versions-software": {
+        "name": "10 Websites To Download Older Versions Of Software",
+        "slug": "10-websites-download-older-versions-software",
+        "url": "http://www.makeuseof.com/tag/10-websites-download-older-versions-software/"
+      },
+      "australia": {
+        "name": "Australia",
+        "slug": "australia",
+        "url": "/tag/australia/"
+      },
+      "denver": {
+        "name": "Denver",
+        "slug": "denver",
+        "url": "/tag/denver/"
+      },
+      "fathers": {
+        "name": "fathers",
+        "slug": "fathers",
+        "url": "/tag/fathers/"
+      },
+      "heart-rhythm-society": {
+        "name": "Heart Rhythm Society",
+        "slug": "heart-rhythm-society",
+        "url": "/tag/heart-rhythm-society/"
+      },
+      "nepotism": {
+        "name": "nepotism",
+        "slug": "nepotism",
+        "url": "/tag/nepotism/"
+      },
+      "parenting": {
+        "name": "Parenting",
+        "slug": "parenting",
+        "url": "/tag/parenting/"
+      },
+      "physician": {
+        "name": "Physician",
+        "slug": "physician",
+        "url": "/tag/physician/"
+      },
+      "spain": {
+        "name": "Spain",
+        "slug": "spain",
+        "url": "/tag/spain/"
+      },
+      "elle": {
+        "name": "Elle",
+        "slug": "elle",
+        "url": "/tag/elle/"
+      },
+      "film": {
+        "name": "film",
+        "slug": "film",
+        "url": "/tag/film/"
+      },
+      "hotel": {
+        "name": "Hotel",
+        "slug": "hotel",
+        "url": "/tag/hotel/"
+      },
+      "insanity": {
+        "name": "Insanity",
+        "slug": "insanity",
+        "url": "/tag/insanity/"
+      },
+      "kristen-stewart": {
+        "name": "Kristen Stewart",
+        "slug": "kristen-stewart",
+        "url": "/tag/kristen-stewart/"
+      },
+      "robert-pattinson": {
+        "name": "Robert Pattinson",
+        "slug": "robert-pattinson",
+        "url": "/tag/robert-pattinson/"
+      },
+      "3-ninjas": {
+        "name": "3 ninjas",
+        "slug": "3-ninjas",
+        "url": "/tag/3-ninjas/"
+      },
+      "child-welfare": {
+        "name": "Child Welfare",
+        "slug": "child-welfare",
+        "url": "/tag/child-welfare/"
+      },
+      "consumer-information": {
+        "name": "Consumer Information",
+        "slug": "consumer-information",
+        "url": "/tag/consumer-information/"
+      },
+      "newsies": {
+        "name": "newsies",
+        "slug": "newsies",
+        "url": "/tag/newsies/"
+      },
+      "philanthropy": {
+        "name": "Philanthropy",
+        "slug": "philanthropy",
+        "url": "/tag/philanthropy/"
+      },
+      "shut-up": {
+        "name": "Shut Up",
+        "slug": "shut-up",
+        "url": "/tag/shut-up/"
+      },
+      "diaspora": {
+        "name": "Diaspora",
+        "slug": "diaspora",
+        "url": "/tag/diaspora/"
+      },
+      "peer-to-peer": {
+        "name": "Peer-to-peer",
+        "slug": "peer-to-peer",
+        "url": "/tag/peer-to-peer/"
+      },
+      "google-map": {
+        "name": "Google Map",
+        "slug": "google-map",
+        "url": "/tag/google-map/"
+      },
+      "last-fm": {
+        "name": "Last.fm",
+        "slug": "last-fm",
+        "url": "/tag/last-fm/"
+      },
+      "macy": {
+        "name": "Macy",
+        "slug": "macy",
+        "url": "/tag/macy/"
+      },
+      "reunion": {
+        "name": "Reunion",
+        "slug": "reunion",
+        "url": "/tag/reunion/"
+      },
+      "get-up-kids": {
+        "name": "Get Up Kids",
+        "slug": "get-up-kids",
+        "url": "/tag/get-up-kids/"
+      },
+      "independent-music": {
+        "name": "Independent music",
+        "slug": "independent-music",
+        "url": "/tag/independent-music/"
+      },
+      "luck": {
+        "name": "Luck",
+        "slug": "luck",
+        "url": "/tag/luck/"
+      },
+      "muscle": {
+        "name": "Muscle",
+        "slug": "muscle",
+        "url": "/tag/muscle/"
+      },
+      "punk-rock": {
+        "name": "Punk rock",
+        "slug": "punk-rock",
+        "url": "/tag/punk-rock/"
+      },
+      "automobile": {
+        "name": "Automobile",
+        "slug": "automobile",
+        "url": "/tag/automobile/"
+      },
+      "collecting": {
+        "name": "Collecting",
+        "slug": "collecting",
+        "url": "/tag/collecting/"
+      },
+      "models": {
+        "name": "Models",
+        "slug": "models",
+        "url": "/tag/models/"
+      },
+      "rail": {
+        "name": "Rail",
+        "slug": "rail",
+        "url": "/tag/rail/"
+      },
+      "single-track": {
+        "name": "Single track",
+        "slug": "single-track",
+        "url": "/tag/single-track/"
+      },
+      "train": {
+        "name": "Train",
+        "slug": "train",
+        "url": "/tag/train/"
+      },
+      "transport": {
+        "name": "Transport",
+        "slug": "transport",
+        "url": "/tag/transport/"
+      },
+      "elementary-school": {
+        "name": "Elementary school",
+        "slug": "elementary-school",
+        "url": "/tag/elementary-school/"
+      },
+      "public-broadcasting-service": {
+        "name": "Public Broadcasting Service",
+        "slug": "public-broadcasting-service",
+        "url": "/tag/public-broadcasting-service/"
+      },
+      "reality": {
+        "name": "Reality",
+        "slug": "reality",
+        "url": "/tag/reality/"
+      },
+      "slim-goodbody": {
+        "name": "Slim Goodbody",
+        "slug": "slim-goodbody",
+        "url": "/tag/slim-goodbody/"
+      },
+      "adamsavage": {
+        "name": "AdamSavage",
+        "slug": "adamsavage",
+        "url": "/tag/adamsavage/"
+      },
+      "ads": {
+        "name": "Ads",
+        "slug": "ads",
+        "url": "/tag/ads/"
+      },
+      "discovery-channel": {
+        "name": "Discovery Channel",
+        "slug": "discovery-channel",
+        "url": "/tag/discovery-channel/"
+      },
+      "food-and-related-products": {
+        "name": "Food and Related Products",
+        "slug": "food-and-related-products",
+        "url": "/tag/food-and-related-products/"
+      },
+      "jamie-hyneman": {
+        "name": "Jamie Hyneman",
+        "slug": "jamie-hyneman",
+        "url": "/tag/jamie-hyneman/"
+      },
+      "mythbusters": {
+        "name": "MythBusters",
+        "slug": "mythbusters",
+        "url": "/tag/mythbusters/"
+      },
+      "product-placement": {
+        "name": "Product placement",
+        "slug": "product-placement",
+        "url": "/tag/product-placement/"
+      },
+      "mass-media": {
+        "name": "Mass media",
+        "slug": "mass-media",
+        "url": "/tag/mass-media/"
+      },
+      "virtual-community": {
+        "name": "Virtual community",
+        "slug": "virtual-community",
+        "url": "/tag/virtual-community/"
+      },
+      "advocacy-groups": {
+        "name": "Advocacy Groups",
+        "slug": "advocacy-groups",
+        "url": "/tag/advocacy-groups/"
+      },
+      "childcare": {
+        "name": "Childcare",
+        "slug": "childcare",
+        "url": "/tag/childcare/"
+      },
+      "children-youth-and-family": {
+        "name": "Children Youth and Family",
+        "slug": "children-youth-and-family",
+        "url": "/tag/children-youth-and-family/"
+      },
+      "queue-area": {
+        "name": "Queue area",
+        "slug": "queue-area",
+        "url": "/tag/queue-area/"
+      },
+      "turns": {
+        "name": "Turns",
+        "slug": "turns",
+        "url": "/tag/turns/"
+      },
+      "fitness": {
+        "name": "Fitness",
+        "slug": "fitness",
+        "url": "/tag/fitness/"
+      },
+      "health-club": {
+        "name": "Health club",
+        "slug": "health-club",
+        "url": "/tag/health-club/"
+      },
+      "physical-exercise": {
+        "name": "Physical exercise",
+        "slug": "physical-exercise",
+        "url": "/tag/physical-exercise/"
+      },
+      "treadmill": {
+        "name": "Treadmill",
+        "slug": "treadmill",
+        "url": "/tag/treadmill/"
+      },
+      "weight-loss": {
+        "name": "Weight loss",
+        "slug": "weight-loss",
+        "url": "/tag/weight-loss/"
+      },
+      "database-maintenance": {
+        "name": "Database Maintenance",
+        "slug": "database-maintenance",
+        "url": "/tag/database-maintenance/"
+      },
+      "e-mail-address": {
+        "name": "E-mail address",
+        "slug": "e-mail-address",
+        "url": "/tag/e-mail-address/"
+      },
+      "junk-food": {
+        "name": "Junk food",
+        "slug": "junk-food",
+        "url": "/tag/junk-food/"
+      },
+      "list-management": {
+        "name": "List Management",
+        "slug": "list-management",
+        "url": "/tag/list-management/"
+      },
+      "mail": {
+        "name": "mail",
+        "slug": "mail",
+        "url": "/tag/mail/"
+      },
+      "notification": {
+        "name": "notification",
+        "slug": "notification",
+        "url": "/tag/notification/"
+      },
+      "servers": {
+        "name": "Servers",
+        "slug": "servers",
+        "url": "/tag/servers/"
+      },
+      "crafts": {
+        "name": "Crafts",
+        "slug": "crafts",
+        "url": "/tag/crafts/"
+      },
+      "final-examination": {
+        "name": "Final examination",
+        "slug": "final-examination",
+        "url": "/tag/final-examination/"
+      },
+      "glass": {
+        "name": "Glass",
+        "slug": "glass",
+        "url": "/tag/glass/"
+      },
+      "materials": {
+        "name": "Materials",
+        "slug": "materials",
+        "url": "/tag/materials/"
+      },
+      "mourning": {
+        "name": "Mourning",
+        "slug": "mourning",
+        "url": "/tag/mourning/"
+      },
+      "starbucks": {
+        "name": "Starbucks",
+        "slug": "starbucks",
+        "url": "/tag/starbucks/"
+      },
+      "breakfast-club": {
+        "name": "Breakfast Club",
+        "slug": "breakfast-club",
+        "url": "/tag/breakfast-club/"
+      },
+      "foot": {
+        "name": "Foot",
+        "slug": "foot",
+        "url": "/tag/foot/"
+      },
+      "graduation": {
+        "name": "graduation",
+        "slug": "graduation",
+        "url": "/tag/graduation/"
+      },
+      "relfections": {
+        "name": "relfections",
+        "slug": "relfections",
+        "url": "/tag/relfections/"
+      },
+      "speech": {
+        "name": "speech",
+        "slug": "speech",
+        "url": "/tag/speech/"
+      },
+      "valedictorian": {
+        "name": "Valedictorian",
+        "slug": "valedictorian",
+        "url": "/tag/valedictorian/"
+      },
+      "google-wave": {
+        "name": "Google Wave",
+        "slug": "google-wave",
+        "url": "/tag/google-wave/"
+      },
+      "point-and-click": {
+        "name": "Point-and-click",
+        "slug": "point-and-click",
+        "url": "/tag/point-and-click/"
+      },
+      "apps": {
+        "name": "apps",
+        "slug": "apps",
+        "url": "/tag/apps/"
+      },
+      "dropbox": {
+        "name": "Dropbox",
+        "slug": "dropbox",
+        "url": "/tag/dropbox/"
+      },
+      "robert-frost": {
+        "name": "Robert Frost",
+        "slug": "robert-frost",
+        "url": "/tag/robert-frost/"
+      },
+      "cleveland": {
+        "name": "Cleveland",
+        "slug": "cleveland",
+        "url": "/tag/cleveland/"
+      },
+      "national-basketball-association": {
+        "name": "National Basketball Association",
+        "slug": "national-basketball-association",
+        "url": "/tag/national-basketball-association/"
+      },
+      "spelling-bee": {
+        "name": "Spelling bee",
+        "slug": "spelling-bee",
+        "url": "/tag/spelling-bee/"
+      },
+      "word-games": {
+        "name": "Word Games",
+        "slug": "word-games",
+        "url": "/tag/word-games/"
+      },
+      "adventure-game": {
+        "name": "Adventure game",
+        "slug": "adventure-game",
+        "url": "/tag/adventure-game/"
+      },
+      "full-throttle-1995-video-game": {
+        "name": "Full Throttle (1995 video game)",
+        "slug": "full-throttle-1995-video-game",
+        "url": "/tag/full-throttle-1995-video-game/"
+      },
+      "nerf": {
+        "name": "Nerf",
+        "slug": "nerf",
+        "url": "/tag/nerf/"
+      },
+      "sega": {
+        "name": "Sega",
+        "slug": "sega",
+        "url": "/tag/sega/"
+      },
+      "sonic-the-hedgehog": {
+        "name": "Sonic the Hedgehog",
+        "slug": "sonic-the-hedgehog",
+        "url": "/tag/sonic-the-hedgehog/"
+      },
+      "apple-inc": {
+        "name": "Apple Inc.",
+        "slug": "apple-inc",
+        "url": "/tag/apple-inc/"
+      },
+      "ibm": {
+        "name": "IBM",
+        "slug": "ibm",
+        "url": "/tag/ibm/"
+      },
+      "lucent-technologies": {
+        "name": "Lucent Technologies",
+        "slug": "lucent-technologies",
+        "url": "/tag/lucent-technologies/"
+      },
+      "oracle": {
+        "name": "oracle",
+        "slug": "oracle",
+        "url": "/tag/oracle/"
+      },
+      "oracle-corporation": {
+        "name": "Oracle Corporation",
+        "slug": "oracle-corporation",
+        "url": "/tag/oracle-corporation/"
+      },
+      "harrison-bergeron": {
+        "name": "Harrison Bergeron",
+        "slug": "harrison-bergeron",
+        "url": "/tag/harrison-bergeron/"
+      },
+      "hocus-pocus": {
+        "name": "Hocus Pocus",
+        "slug": "hocus-pocus",
+        "url": "/tag/hocus-pocus/"
+      },
+      "kurt-vonnegut": {
+        "name": "kurt-vonnegut",
+        "slug": "kurt-vonnegut",
+        "url": "/tag/kurt-vonnegut/"
+      },
+      "short-story": {
+        "name": "Short story",
+        "slug": "short-story",
+        "url": "/tag/short-story/"
+      },
+      "slaughterhouse-five": {
+        "name": "Slaughterhouse-Five",
+        "slug": "slaughterhouse-five",
+        "url": "/tag/slaughterhouse-five/"
+      },
+      "google-reader": {
+        "name": "google reader",
+        "slug": "google-reader",
+        "url": "/tag/google-reader/"
+      },
+      "steve-jobs": {
+        "name": "Steve Jobs",
+        "slug": "steve-jobs",
+        "url": "/tag/steve-jobs/"
+      },
+      "flowr": {
+        "name": "Flowr",
+        "slug": "flowr",
+        "url": "/tag/flowr/"
+      },
+      "google-apps": {
+        "name": "google apps",
+        "slug": "google-apps",
+        "url": "/tag/google-apps/"
+      },
+      "social-software": {
+        "name": "Social software",
+        "slug": "social-software",
+        "url": "/tag/social-software/"
+      },
+      "yammer": {
+        "name": "Yammer",
+        "slug": "yammer",
+        "url": "/tag/yammer/"
+      },
+      "chat": {
+        "name": "chat",
+        "slug": "chat",
+        "url": "/tag/chat/"
+      },
+      "internet-marketing": {
+        "name": "Internet Marketing",
+        "slug": "internet-marketing",
+        "url": "/tag/internet-marketing/"
+      },
+      "launch": {
+        "name": "launch",
+        "slug": "launch",
+        "url": "/tag/launch/"
+      },
+      "marketing-and-advertising": {
+        "name": "Marketing and Advertising",
+        "slug": "marketing-and-advertising",
+        "url": "/tag/marketing-and-advertising/"
+      },
+      "nielsen-ratings": {
+        "name": "Nielsen ratings",
+        "slug": "nielsen-ratings",
+        "url": "/tag/nielsen-ratings/"
+      },
+      "webcam": {
+        "name": "webcam",
+        "slug": "webcam",
+        "url": "/tag/webcam/"
+      },
+      "homework-help": {
+        "name": "Homework Help",
+        "slug": "homework-help",
+        "url": "/tag/homework-help/"
+      },
+      "math": {
+        "name": "math",
+        "slug": "math",
+        "url": "/tag/math/"
+      },
+      "mathematics": {
+        "name": "mathematics",
+        "slug": "mathematics",
+        "url": "/tag/mathematics/"
+      },
+      "reading-process": {
+        "name": "Reading (process)",
+        "slug": "reading-process",
+        "url": "/tag/reading-process/"
+      },
+      "sixth-grade": {
+        "name": "Sixth grade",
+        "slug": "sixth-grade",
+        "url": "/tag/sixth-grade/"
+      },
+      "teaching-resources": {
+        "name": "Teaching Resources",
+        "slug": "teaching-resources",
+        "url": "/tag/teaching-resources/"
+      },
+      "beauty": {
+        "name": "Beauty",
+        "slug": "beauty",
+        "url": "/tag/beauty/"
+      },
+      "hand-games": {
+        "name": "Hand Games",
+        "slug": "hand-games",
+        "url": "/tag/hand-games/"
+      },
+      "scissors": {
+        "name": "Scissors",
+        "slug": "scissors",
+        "url": "/tag/scissors/"
+      },
+      "tools-and-equipment": {
+        "name": "Tools and Equipment",
+        "slug": "tools-and-equipment",
+        "url": "/tag/tools-and-equipment/"
+      },
+      "videoconferencing": {
+        "name": "videoconferencing",
+        "slug": "videoconferencing",
+        "url": "/tag/videoconferencing/"
+      },
+      "archos": {
+        "name": "Archos",
+        "slug": "archos",
+        "url": "/tag/archos/"
+      },
+      "creative": {
+        "name": "creative",
+        "slug": "creative",
+        "url": "/tag/creative/"
+      },
+      "dell": {
+        "name": "Dell",
+        "slug": "dell",
+        "url": "/tag/dell/"
+      },
+      "shoppingnotes": {
+        "name": "ShoppingNotes",
+        "slug": "shoppingnotes",
+        "url": "/tag/shoppingnotes/"
+      },
+      "cde": {
+        "name": "cde",
+        "slug": "cde",
+        "url": "/tag/cde/"
+      },
+      "interview": {
+        "name": "interview",
+        "slug": "interview",
+        "url": "/tag/interview/"
+      },
+      "online-learning": {
+        "name": "online learning",
+        "slug": "online-learning",
+        "url": "/tag/online-learning/"
+      },
+      "consultant": {
+        "name": "Consultant",
+        "slug": "consultant",
+        "url": "/tag/consultant/"
+      },
+      "management": {
+        "name": "management",
+        "slug": "management",
+        "url": "/tag/management/"
+      },
+      "political-power": {
+        "name": "Political power",
+        "slug": "political-power",
+        "url": "/tag/political-power/"
+      },
+      "pride": {
+        "name": "Pride",
+        "slug": "pride",
+        "url": "/tag/pride/"
+      },
+      "curriculum": {
+        "name": "curriculum",
+        "slug": "curriculum",
+        "url": "/tag/curriculum/"
+      },
+      "e-learning": {
+        "name": "e-learning",
+        "slug": "e-learning",
+        "url": "/tag/e-learning/"
+      },
+      "iste10": {
+        "name": "Iste10",
+        "slug": "iste10",
+        "url": "/tag/iste10/"
+      },
+      "networking": {
+        "name": "networking",
+        "slug": "networking",
+        "url": "/tag/networking/"
+      },
+      "lbc10": {
+        "name": "#lbc10",
+        "slug": "lbc10",
+        "url": "/tag/lbc10/"
+      },
+      "browsers": {
+        "name": "browsers",
+        "slug": "browsers",
+        "url": "/tag/browsers/"
+      },
+      "clients": {
+        "name": "Clients",
+        "slug": "clients",
+        "url": "/tag/clients/"
+      },
+      "internet-explorer": {
+        "name": "Internet Explorer",
+        "slug": "internet-explorer",
+        "url": "/tag/internet-explorer/"
+      },
+      "internet-explorer-6": {
+        "name": "Internet Explorer 6",
+        "slug": "internet-explorer-6",
+        "url": "/tag/internet-explorer-6/"
+      },
+      "keynote": {
+        "name": "keynote",
+        "slug": "keynote",
+        "url": "/tag/keynote/"
+      },
+      "presentation": {
+        "name": "presentation",
+        "slug": "presentation",
+        "url": "/tag/presentation/"
+      },
+      "www": {
+        "name": "WWW",
+        "slug": "www",
+        "url": "/tag/www/"
+      },
+      "lbc10-iste10": {
+        "name": "lbc10. #iste10",
+        "slug": "lbc10-iste10",
+        "url": "/tag/lbc10-iste10/"
+      },
+      "multimedia": {
+        "name": "Multimedia",
+        "slug": "multimedia",
+        "url": "/tag/multimedia/"
+      },
+      "personal-learning-networks": {
+        "name": "Personal Learning Networks",
+        "slug": "personal-learning-networks",
+        "url": "/tag/personal-learning-networks/"
+      },
+      "streaming-media": {
+        "name": "Streaming media",
+        "slug": "streaming-media",
+        "url": "/tag/streaming-media/"
+      },
+      "conferences": {
+        "name": "conferences",
+        "slug": "conferences",
+        "url": "/tag/conferences/"
+      },
+      "dormitory": {
+        "name": "Dormitory",
+        "slug": "dormitory",
+        "url": "/tag/dormitory/"
+      },
+      "happy-hour": {
+        "name": "Happy hour",
+        "slug": "happy-hour",
+        "url": "/tag/happy-hour/"
+      },
+      "roleplaying": {
+        "name": "Roleplaying",
+        "slug": "roleplaying",
+        "url": "/tag/roleplaying/"
+      },
+      "selfishness": {
+        "name": "selfishness",
+        "slug": "selfishness",
+        "url": "/tag/selfishness/"
+      },
+      "content-management": {
+        "name": "Content Management",
+        "slug": "content-management",
+        "url": "/tag/content-management/"
+      },
+      "content-management-system": {
+        "name": "Content management system",
+        "slug": "content-management-system",
+        "url": "/tag/content-management-system/"
+      },
+      "site-management": {
+        "name": "Site Management",
+        "slug": "site-management",
+        "url": "/tag/site-management/"
+      },
+      "vendors": {
+        "name": "vendors",
+        "slug": "vendors",
+        "url": "/tag/vendors/"
+      },
+      "arts-and-entertainment": {
+        "name": "Arts and Entertainment",
+        "slug": "arts-and-entertainment",
+        "url": "/tag/arts-and-entertainment/"
+      },
+      "carnival": {
+        "name": "Carnival",
+        "slug": "carnival",
+        "url": "/tag/carnival/"
+      },
+      "christianity": {
+        "name": "Christianity",
+        "slug": "christianity",
+        "url": "/tag/christianity/"
+      },
+      "evangelists": {
+        "name": "evangelists",
+        "slug": "evangelists",
+        "url": "/tag/evangelists/"
+      },
+      "events-and-festivals": {
+        "name": "Events and Festivals",
+        "slug": "events-and-festivals",
+        "url": "/tag/events-and-festivals/"
+      },
+      "festival": {
+        "name": "Festival",
+        "slug": "festival",
+        "url": "/tag/festival/"
+      },
+      "list-of-tugs-episodes": {
+        "name": "List of TUGS episodes",
+        "slug": "list-of-tugs-episodes",
+        "url": "/tag/list-of-tugs-episodes/"
+      },
+      "performing-arts": {
+        "name": "Performing Arts",
+        "slug": "performing-arts",
+        "url": "/tag/performing-arts/"
+      },
+      "religion-and-spirituality": {
+        "name": "Religion and Spirituality",
+        "slug": "religion-and-spirituality",
+        "url": "/tag/religion-and-spirituality/"
+      },
+      "mind-map": {
+        "name": "Mind map",
+        "slug": "mind-map",
+        "url": "/tag/mind-map/"
+      },
+      "possibilities": {
+        "name": "possibilities",
+        "slug": "possibilities",
+        "url": "/tag/possibilities/"
+      },
+      "rock-music": {
+        "name": "Rock music",
+        "slug": "rock-music",
+        "url": "/tag/rock-music/"
+      },
+      "tmbg": {
+        "name": "Tmbg",
+        "slug": "tmbg",
+        "url": "/tag/tmbg/"
+      },
+      "indie": {
+        "name": "indie",
+        "slug": "indie",
+        "url": "/tag/indie/"
+      },
+      "patches": {
+        "name": "patches",
+        "slug": "patches",
+        "url": "/tag/patches/"
+      },
+      "backup": {
+        "name": "backup",
+        "slug": "backup",
+        "url": "/tag/backup/"
+      },
+      "hard-disk-drive": {
+        "name": "Hard disk drive",
+        "slug": "hard-disk-drive",
+        "url": "/tag/hard-disk-drive/"
+      },
+      "sharing": {
+        "name": "sharing",
+        "slug": "sharing",
+        "url": "/tag/sharing/"
+      },
+      "sync": {
+        "name": "sync",
+        "slug": "sync",
+        "url": "/tag/sync/"
+      },
+      "4th-of-july": {
+        "name": "4th of July",
+        "slug": "4th-of-july",
+        "url": "/tag/4th-of-july/"
+      },
+      "childhood": {
+        "name": "childhood",
+        "slug": "childhood",
+        "url": "/tag/childhood/"
+      },
+      "entertainment": {
+        "name": "entertainment",
+        "slug": "entertainment",
+        "url": "/tag/entertainment/"
+      },
+      "equipment": {
+        "name": "Equipment",
+        "slug": "equipment",
+        "url": "/tag/equipment/"
+      },
+      "fireworks": {
+        "name": "Fireworks",
+        "slug": "fireworks",
+        "url": "/tag/fireworks/"
+      },
+      "graphics": {
+        "name": "graphics",
+        "slug": "graphics",
+        "url": "/tag/graphics/"
+      },
+      "pyrotechnics": {
+        "name": "Pyrotechnics",
+        "slug": "pyrotechnics",
+        "url": "/tag/pyrotechnics/"
+      },
+      "vector-based": {
+        "name": "Vector Based",
+        "slug": "vector-based",
+        "url": "/tag/vector-based/"
+      },
+      "4-best-sites-10gb-free-online-storage": {
+        "name": "4 Best Sites To Get 10GB Free Online Backup & Storage",
+        "slug": "4-best-sites-10gb-free-online-storage",
+        "url": "http://www.makeuseof.com/tag/4-best-sites-10gb-free-online-storage/"
+      },
+      "get-10gb-of-free-storage-instantly-share-files-on-the-go-with-quanp": {
+        "name": "Get 10GB of Free Storage Instantly & Share Files on the Go with quanp",
+        "slug": "get-10gb-of-free-storage-instantly-share-files-on-the-go-with-quanp",
+        "url": "http://www.makeuseof.com/tag/get-10gb-of-free-storage-instantly-share-files-on-the-go-with-quanp/"
+      },
+      "equation": {
+        "name": "Equation",
+        "slug": "equation",
+        "url": "/tag/equation/"
+      },
+      "standardized-test": {
+        "name": "Standardized test",
+        "slug": "standardized-test",
+        "url": "/tag/standardized-test/"
+      },
+      "typesetting": {
+        "name": "Typesetting",
+        "slug": "typesetting",
+        "url": "/tag/typesetting/"
+      },
+      "credit-card": {
+        "name": "Credit card",
+        "slug": "credit-card",
+        "url": "/tag/credit-card/"
+      },
+      "merchant-services": {
+        "name": "Merchant Services",
+        "slug": "merchant-services",
+        "url": "/tag/merchant-services/"
+      },
+      "online-game": {
+        "name": "Online game",
+        "slug": "online-game",
+        "url": "/tag/online-game/"
+      },
+      "virtual-economy": {
+        "name": "Virtual economy",
+        "slug": "virtual-economy",
+        "url": "/tag/virtual-economy/"
+      },
+      "virtual-reality": {
+        "name": "Virtual Reality",
+        "slug": "virtual-reality",
+        "url": "/tag/virtual-reality/"
+      },
+      "virtual-world": {
+        "name": "Virtual world",
+        "slug": "virtual-world",
+        "url": "/tag/virtual-world/"
+      },
+      "andy-greenwald": {
+        "name": "Andy greenwald",
+        "slug": "andy-greenwald",
+        "url": "/tag/andy-greenwald/"
+      },
+      "cbgb": {
+        "name": "CBGB",
+        "slug": "cbgb",
+        "url": "/tag/cbgb/"
+      },
+      "chris-carrabba": {
+        "name": "Chris Carrabba",
+        "slug": "chris-carrabba",
+        "url": "/tag/chris-carrabba/"
+      },
+      "dashboard-confessional": {
+        "name": "Dashboard Confessional",
+        "slug": "dashboard-confessional",
+        "url": "/tag/dashboard-confessional/"
+      },
+      "manhattan": {
+        "name": "Manhattan",
+        "slug": "manhattan",
+        "url": "/tag/manhattan/"
+      },
+      "new-york-city": {
+        "name": "New York City",
+        "slug": "new-york-city",
+        "url": "/tag/new-york-city/"
+      },
+      "sincerity": {
+        "name": "sincerity",
+        "slug": "sincerity",
+        "url": "/tag/sincerity/"
+      },
+      "sport-utility-vehicle": {
+        "name": "Sport utility vehicle",
+        "slug": "sport-utility-vehicle",
+        "url": "/tag/sport-utility-vehicle/"
+      },
+      "american": {
+        "name": "American",
+        "slug": "american",
+        "url": "/tag/american/"
+      },
+      "bokonon": {
+        "name": "Bokonon",
+        "slug": "bokonon",
+        "url": "/tag/bokonon/"
+      },
+      "drama": {
+        "name": "drama",
+        "slug": "drama",
+        "url": "/tag/drama/"
+      },
+      "religion": {
+        "name": "religion",
+        "slug": "religion",
+        "url": "/tag/religion/"
+      },
+      "world-literature": {
+        "name": "World Literature",
+        "slug": "world-literature",
+        "url": "/tag/world-literature/"
+      },
+      "science-in-society": {
+        "name": "Science in Society",
+        "slug": "science-in-society",
+        "url": "/tag/science-in-society/"
+      },
+      "skeptical-inquiry": {
+        "name": "Skeptical Inquiry",
+        "slug": "skeptical-inquiry",
+        "url": "/tag/skeptical-inquiry/"
+      },
+      "skepticism": {
+        "name": "Skepticism",
+        "slug": "skepticism",
+        "url": "/tag/skepticism/"
+      },
+      "you-drive-me-crazy": {
+        "name": "(You Drive Me) Crazy",
+        "slug": "you-drive-me-crazy",
+        "url": "/tag/you-drive-me-crazy/"
+      },
+      "colored-eggs": {
+        "name": "colored eggs",
+        "slug": "colored-eggs",
+        "url": "/tag/colored-eggs/"
+      },
+      "elementary": {
+        "name": "elementary",
+        "slug": "elementary",
+        "url": "/tag/elementary/"
+      },
+      "online-tools": {
+        "name": "Online Tools",
+        "slug": "online-tools",
+        "url": "/tag/online-tools/"
+      },
+      "trial-and-error": {
+        "name": "Trial and error",
+        "slug": "trial-and-error",
+        "url": "/tag/trial-and-error/"
+      },
+      "web-application": {
+        "name": "Web application",
+        "slug": "web-application",
+        "url": "/tag/web-application/"
+      },
+      "boredom": {
+        "name": "boredom",
+        "slug": "boredom",
+        "url": "/tag/boredom/"
+      },
+      "classroom": {
+        "name": "classroom",
+        "slug": "classroom",
+        "url": "/tag/classroom/"
+      },
+      "educators": {
+        "name": "educators",
+        "slug": "educators",
+        "url": "/tag/educators/"
+      },
+      "k-through-12": {
+        "name": "K through 12",
+        "slug": "k-through-12",
+        "url": "/tag/k-through-12/"
+      },
+      "observation": {
+        "name": "observation",
+        "slug": "observation",
+        "url": "/tag/observation/"
+      },
+      "student": {
+        "name": "student",
+        "slug": "student",
+        "url": "/tag/student/"
+      },
+      "band-aid": {
+        "name": "Band-Aid",
+        "slug": "band-aid",
+        "url": "/tag/band-aid/"
+      },
+      "conditions-and-diseases": {
+        "name": "Conditions and Diseases",
+        "slug": "conditions-and-diseases",
+        "url": "/tag/conditions-and-diseases/"
+      },
+      "immune-disorders": {
+        "name": "Immune Disorders",
+        "slug": "immune-disorders",
+        "url": "/tag/immune-disorders/"
+      },
+      "musical-ensemble": {
+        "name": "Musical ensemble",
+        "slug": "musical-ensemble",
+        "url": "/tag/musical-ensemble/"
+      },
+      "robitussin": {
+        "name": "Robitussin",
+        "slug": "robitussin",
+        "url": "/tag/robitussin/"
+      },
+      "triaminic": {
+        "name": "Triaminic",
+        "slug": "triaminic",
+        "url": "/tag/triaminic/"
+      },
+      "bizarre": {
+        "name": "Bizarre",
+        "slug": "bizarre",
+        "url": "/tag/bizarre/"
+      },
+      "dice": {
+        "name": "Dice",
+        "slug": "dice",
+        "url": "/tag/dice/"
+      },
+      "toilet-paper": {
+        "name": "Toilet paper",
+        "slug": "toilet-paper",
+        "url": "/tag/toilet-paper/"
+      },
+      "toilets": {
+        "name": "Toilets",
+        "slug": "toilets",
+        "url": "/tag/toilets/"
+      },
+      "chagrin-falls": {
+        "name": "Chagrin Falls",
+        "slug": "chagrin-falls",
+        "url": "/tag/chagrin-falls/"
+      },
+      "fishing": {
+        "name": "Fishing",
+        "slug": "fishing",
+        "url": "/tag/fishing/"
+      },
+      "freezing": {
+        "name": "Freezing",
+        "slug": "freezing",
+        "url": "/tag/freezing/"
+      },
+      "ice": {
+        "name": "Ice",
+        "slug": "ice",
+        "url": "/tag/ice/"
+      },
+      "idea": {
+        "name": "Idea",
+        "slug": "idea",
+        "url": "/tag/idea/"
+      },
+      "river": {
+        "name": "River",
+        "slug": "river",
+        "url": "/tag/river/"
+      },
+      "water": {
+        "name": "water",
+        "slug": "water",
+        "url": "/tag/water/"
+      },
+      "death": {
+        "name": "Death",
+        "slug": "death",
+        "url": "/tag/death/"
+      },
+      "end-of-life": {
+        "name": "End-of-Life",
+        "slug": "end-of-life",
+        "url": "/tag/end-of-life/"
+      },
+      "right-to-die": {
+        "name": "Right to die",
+        "slug": "right-to-die",
+        "url": "/tag/right-to-die/"
+      },
+      "road": {
+        "name": "Road",
+        "slug": "road",
+        "url": "/tag/road/"
+      },
+      "roads-and-highways": {
+        "name": "Roads and Highways",
+        "slug": "roads-and-highways",
+        "url": "/tag/roads-and-highways/"
+      },
+      "house-tv-series": {
+        "name": "House (TV series)",
+        "slug": "house-tv-series",
+        "url": "/tag/house-tv-series/"
+      },
+      "surgery": {
+        "name": "Surgery",
+        "slug": "surgery",
+        "url": "/tag/surgery/"
+      },
+      "books": {
+        "name": "books",
+        "slug": "books",
+        "url": "/tag/books/"
+      },
+      "e-book": {
+        "name": "E-book",
+        "slug": "e-book",
+        "url": "/tag/e-book/"
+      },
+      "epub": {
+        "name": "EPUB",
+        "slug": "epub",
+        "url": "/tag/epub/"
+      },
+      "literacy": {
+        "name": "literacy",
+        "slug": "literacy",
+        "url": "/tag/literacy/"
+      },
+      "the-great-gatsby": {
+        "name": "The Great Gatsby",
+        "slug": "the-great-gatsby",
+        "url": "/tag/the-great-gatsby/"
+      },
+      "docs-google-com": {
+        "name": "docs.google.com",
+        "slug": "docs-google-com",
+        "url": "/tag/docs-google-com/"
+      },
+      "national-security": {
+        "name": "National security",
+        "slug": "national-security",
+        "url": "/tag/national-security/"
+      },
+      "secrecy": {
+        "name": "Secrecy",
+        "slug": "secrecy",
+        "url": "/tag/secrecy/"
+      },
+      "web-page": {
+        "name": "Web page",
+        "slug": "web-page",
+        "url": "/tag/web-page/"
+      },
+      "wikileaks": {
+        "name": "Wikileaks",
+        "slug": "wikileaks",
+        "url": "/tag/wikileaks/"
+      },
+      "blowout-preventer": {
+        "name": "Blowout preventer",
+        "slug": "blowout-preventer",
+        "url": "/tag/blowout-preventer/"
+      },
+      "colorado": {
+        "name": "Colorado",
+        "slug": "colorado",
+        "url": "/tag/colorado/"
+      },
+      "energy-development": {
+        "name": "Energy development",
+        "slug": "energy-development",
+        "url": "/tag/energy-development/"
+      },
+      "oil-well": {
+        "name": "Oil well",
+        "slug": "oil-well",
+        "url": "/tag/oil-well/"
+      },
+      "asterisk": {
+        "name": "Asterisk",
+        "slug": "asterisk",
+        "url": "/tag/asterisk/"
+      },
+      "light": {
+        "name": "Light",
+        "slug": "light",
+        "url": "/tag/light/"
+      },
+      "publishing": {
+        "name": "publishing",
+        "slug": "publishing",
+        "url": "/tag/publishing/"
+      },
+      "pulp-and-paper": {
+        "name": "Pulp and Paper",
+        "slug": "pulp-and-paper",
+        "url": "/tag/pulp-and-paper/"
+      },
+      "browser-based": {
+        "name": "Browser Based",
+        "slug": "browser-based",
+        "url": "/tag/browser-based/"
+      },
+      "tic-tac-toe": {
+        "name": "Tic-tac-toe",
+        "slug": "tic-tac-toe",
+        "url": "/tag/tic-tac-toe/"
+      },
+      "use-case": {
+        "name": "Use case",
+        "slug": "use-case",
+        "url": "/tag/use-case/"
+      },
+      "food-and-drink-related": {
+        "name": "Food and Drink Related",
+        "slug": "food-and-drink-related",
+        "url": "/tag/food-and-drink-related/"
+      },
+      "imitations": {
+        "name": "Imitations",
+        "slug": "imitations",
+        "url": "/tag/imitations/"
+      },
+      "pepper": {
+        "name": "Pepper",
+        "slug": "pepper",
+        "url": "/tag/pepper/"
+      },
+      "soda": {
+        "name": "Soda",
+        "slug": "soda",
+        "url": "/tag/soda/"
+      },
+      "soft-drink": {
+        "name": "Soft drink",
+        "slug": "soft-drink",
+        "url": "/tag/soft-drink/"
+      },
+      "canada": {
+        "name": "canada",
+        "slug": "canada",
+        "url": "/tag/canada/"
+      },
+      "nursing": {
+        "name": "Nursing",
+        "slug": "nursing",
+        "url": "/tag/nursing/"
+      },
+      "nursing-school": {
+        "name": "Nursing school",
+        "slug": "nursing-school",
+        "url": "/tag/nursing-school/"
+      },
+      "netflix": {
+        "name": "Netflix",
+        "slug": "netflix",
+        "url": "/tag/netflix/"
+      },
+      "security": {
+        "name": "security",
+        "slug": "security",
+        "url": "/tag/security/"
+      },
+      "viral-marketing": {
+        "name": "Viral marketing",
+        "slug": "viral-marketing",
+        "url": "/tag/viral-marketing/"
+      },
+      "air-cooled": {
+        "name": "Air Cooled",
+        "slug": "air-cooled",
+        "url": "/tag/air-cooled/"
+      },
+      "thing": {
+        "name": "Thing",
+        "slug": "thing",
+        "url": "/tag/thing/"
+      },
+      "business-and-economy": {
+        "name": "Business and Economy",
+        "slug": "business-and-economy",
+        "url": "/tag/business-and-economy/"
+      },
+      "inkscape": {
+        "name": "Inkscape",
+        "slug": "inkscape",
+        "url": "/tag/inkscape/"
+      },
+      "thought": {
+        "name": "Thought",
+        "slug": "thought",
+        "url": "/tag/thought/"
+      },
+      "time-management": {
+        "name": "Time management",
+        "slug": "time-management",
+        "url": "/tag/time-management/"
+      },
+      "windows": {
+        "name": "windows",
+        "slug": "windows",
+        "url": "/tag/windows/"
+      },
+      "album": {
+        "name": "Album",
+        "slug": "album",
+        "url": "/tag/album/"
+      },
+      "compact-disc": {
+        "name": "Compact Disc",
+        "slug": "compact-disc",
+        "url": "/tag/compact-disc/"
+      },
+      "itunes-store": {
+        "name": "ITunes Store",
+        "slug": "itunes-store",
+        "url": "/tag/itunes-store/"
+      },
+      "recordings": {
+        "name": "Recordings",
+        "slug": "recordings",
+        "url": "/tag/recordings/"
+      },
+      "dream": {
+        "name": "Dream",
+        "slug": "dream",
+        "url": "/tag/dream/"
+      },
+      "psychology": {
+        "name": "Psychology",
+        "slug": "psychology",
+        "url": "/tag/psychology/"
+      },
+      "social-sciences": {
+        "name": "Social Sciences",
+        "slug": "social-sciences",
+        "url": "/tag/social-sciences/"
+      },
+      "hackers-film": {
+        "name": "Hackers (film)",
+        "slug": "hackers-film",
+        "url": "/tag/hackers-film/"
+      },
+      "user-computing": {
+        "name": "User (computing)",
+        "slug": "user-computing",
+        "url": "/tag/user-computing/"
+      },
+      "working-time": {
+        "name": "Working time",
+        "slug": "working-time",
+        "url": "/tag/working-time/"
+      },
+      "google-voice": {
+        "name": "Google Voice",
+        "slug": "google-voice",
+        "url": "/tag/google-voice/"
+      },
+      "skype": {
+        "name": "skype",
+        "slug": "skype",
+        "url": "/tag/skype/"
+      },
+      "telephone-number": {
+        "name": "Telephone number",
+        "slug": "telephone-number",
+        "url": "/tag/telephone-number/"
+      },
+      "voice-over-ip": {
+        "name": "Voice over IP",
+        "slug": "voice-over-ip",
+        "url": "/tag/voice-over-ip/"
+      },
+      "bicycle": {
+        "name": "Bicycle",
+        "slug": "bicycle",
+        "url": "/tag/bicycle/"
+      },
+      "bisexuality": {
+        "name": "Bisexuality",
+        "slug": "bisexuality",
+        "url": "/tag/bisexuality/"
+      },
+      "gay-lesbian-and-bisexual": {
+        "name": "Gay Lesbian and Bisexual",
+        "slug": "gay-lesbian-and-bisexual",
+        "url": "/tag/gay-lesbian-and-bisexual/"
+      },
+      "heterosexuality": {
+        "name": "Heterosexuality",
+        "slug": "heterosexuality",
+        "url": "/tag/heterosexuality/"
+      },
+      "homosexuality": {
+        "name": "Homosexuality",
+        "slug": "homosexuality",
+        "url": "/tag/homosexuality/"
+      },
+      "unicycle": {
+        "name": "Unicycle",
+        "slug": "unicycle",
+        "url": "/tag/unicycle/"
+      },
+      "beer": {
+        "name": "beer",
+        "slug": "beer",
+        "url": "/tag/beer/"
+      },
+      "brewery": {
+        "name": "Brewery",
+        "slug": "brewery",
+        "url": "/tag/brewery/"
+      },
+      "drink": {
+        "name": "Drink",
+        "slug": "drink",
+        "url": "/tag/drink/"
+      },
+      "food": {
+        "name": "food",
+        "slug": "food",
+        "url": "/tag/food/"
+      },
+      "new-belgium": {
+        "name": "New Belgium",
+        "slug": "new-belgium",
+        "url": "/tag/new-belgium/"
+      },
+      "new-belgium-brewing-company": {
+        "name": "New Belgium Brewing Company",
+        "slug": "new-belgium-brewing-company",
+        "url": "/tag/new-belgium-brewing-company/"
+      },
+      "reddit": {
+        "name": "Reddit",
+        "slug": "reddit",
+        "url": "/tag/reddit/"
+      },
+      "john-mccain": {
+        "name": "John McCain",
+        "slug": "john-mccain",
+        "url": "/tag/john-mccain/"
+      },
+      "law": {
+        "name": "law",
+        "slug": "law",
+        "url": "/tag/law/"
+      },
+      "board-game": {
+        "name": "Board game",
+        "slug": "board-game",
+        "url": "/tag/board-game/"
+      },
+      "chess": {
+        "name": "Chess",
+        "slug": "chess",
+        "url": "/tag/chess/"
+      },
+      "glossary-of-chess": {
+        "name": "Glossary of chess",
+        "slug": "glossary-of-chess",
+        "url": "/tag/glossary-of-chess/"
+      },
+      "toys-and-games": {
+        "name": "Toys and Games",
+        "slug": "toys-and-games",
+        "url": "/tag/toys-and-games/"
+      },
+      "aol": {
+        "name": "aol",
+        "slug": "aol",
+        "url": "/tag/aol/"
+      },
+      "microsd": {
+        "name": "MicroSD",
+        "slug": "microsd",
+        "url": "/tag/microsd/"
+      },
+      "operating-system": {
+        "name": "Operating system",
+        "slug": "operating-system",
+        "url": "/tag/operating-system/"
+      },
+      "ubuntu": {
+        "name": "ubuntu",
+        "slug": "ubuntu",
+        "url": "/tag/ubuntu/"
+      },
+      "amazon-com": {
+        "name": "Amazon.com",
+        "slug": "amazon-com",
+        "url": "/tag/amazon-com/"
+      },
+      "amway-and-quixtar": {
+        "name": "Amway and Quixtar",
+        "slug": "amway-and-quixtar",
+        "url": "/tag/amway-and-quixtar/"
+      },
+      "opportunities": {
+        "name": "Opportunities",
+        "slug": "opportunities",
+        "url": "/tag/opportunities/"
+      },
+      "opposing-views": {
+        "name": "Opposing Views",
+        "slug": "opposing-views",
+        "url": "/tag/opposing-views/"
+      },
+      "baby": {
+        "name": "Baby",
+        "slug": "baby",
+        "url": "/tag/baby/"
+      },
+      "children": {
+        "name": "children",
+        "slug": "children",
+        "url": "/tag/children/"
+      },
+      "diaper": {
+        "name": "Diaper",
+        "slug": "diaper",
+        "url": "/tag/diaper/"
+      },
+      "disposable": {
+        "name": "Disposable",
+        "slug": "disposable",
+        "url": "/tag/disposable/"
+      },
+      "gdiapers": {
+        "name": "Gdiapers",
+        "slug": "gdiapers",
+        "url": "/tag/gdiapers/"
+      },
+      "toilet-training": {
+        "name": "Toilet training",
+        "slug": "toilet-training",
+        "url": "/tag/toilet-training/"
+      },
+      "instant-messaging": {
+        "name": "Instant Messaging",
+        "slug": "instant-messaging",
+        "url": "/tag/instant-messaging/"
+      },
+      "zemanta": {
+        "name": "Zemanta",
+        "slug": "zemanta",
+        "url": "/tag/zemanta/"
+      },
+      "black-and-white": {
+        "name": "Black-and-white",
+        "slug": "black-and-white",
+        "url": "/tag/black-and-white/"
+      },
+      "business-services": {
+        "name": "Business Services",
+        "slug": "business-services",
+        "url": "/tag/business-services/"
+      },
+      "clocks-and-timers": {
+        "name": "Clocks and Timers",
+        "slug": "clocks-and-timers",
+        "url": "/tag/clocks-and-timers/"
+      },
+      "personal-information-managers": {
+        "name": "Personal Information Managers",
+        "slug": "personal-information-managers",
+        "url": "/tag/personal-information-managers/"
+      },
+      "shareware": {
+        "name": "Shareware",
+        "slug": "shareware",
+        "url": "/tag/shareware/"
+      },
+      "supplies-and-equipment": {
+        "name": "Supplies and Equipment",
+        "slug": "supplies-and-equipment",
+        "url": "/tag/supplies-and-equipment/"
+      },
+      "breakfast": {
+        "name": "Breakfast",
+        "slug": "breakfast",
+        "url": "/tag/breakfast/"
+      },
+      "chocolate-chip": {
+        "name": "Chocolate chip",
+        "slug": "chocolate-chip",
+        "url": "/tag/chocolate-chip/"
+      },
+      "coffee": {
+        "name": "coffee",
+        "slug": "coffee",
+        "url": "/tag/coffee/"
+      },
+      "cooking": {
+        "name": "Cooking",
+        "slug": "cooking",
+        "url": "/tag/cooking/"
+      },
+      "granola": {
+        "name": "Granola",
+        "slug": "granola",
+        "url": "/tag/granola/"
+      },
+      "pancake": {
+        "name": "Pancake",
+        "slug": "pancake",
+        "url": "/tag/pancake/"
+      },
+      "waffle": {
+        "name": "Waffle",
+        "slug": "waffle",
+        "url": "/tag/waffle/"
+      },
+      "cave-surveying": {
+        "name": "Cave Surveying",
+        "slug": "cave-surveying",
+        "url": "/tag/cave-surveying/"
+      },
+      "caving": {
+        "name": "Caving",
+        "slug": "caving",
+        "url": "/tag/caving/"
+      },
+      "man-cave": {
+        "name": "Man Cave",
+        "slug": "man-cave",
+        "url": "/tag/man-cave/"
+      },
+      "outdoors": {
+        "name": "Outdoors",
+        "slug": "outdoors",
+        "url": "/tag/outdoors/"
+      },
+      "software-packages": {
+        "name": "Software Packages",
+        "slug": "software-packages",
+        "url": "/tag/software-packages/"
+      },
+      "dr-seuss": {
+        "name": "Dr. Seuss",
+        "slug": "dr-seuss",
+        "url": "/tag/dr-seuss/"
+      },
+      "programs": {
+        "name": "programs",
+        "slug": "programs",
+        "url": "/tag/programs/"
+      },
+      "panorama": {
+        "name": "panorama",
+        "slug": "panorama",
+        "url": "/tag/panorama/"
+      },
+      "long-term-complications-of-standing": {
+        "name": "Long-term complications of standing",
+        "slug": "long-term-complications-of-standing",
+        "url": "/tag/long-term-complications-of-standing/"
+      },
+      "personal-and-class-pages": {
+        "name": "Personal and Class Pages",
+        "slug": "personal-and-class-pages",
+        "url": "/tag/personal-and-class-pages/"
+      },
+      "adolf-hitler": {
+        "name": "Adolf Hitler",
+        "slug": "adolf-hitler",
+        "url": "/tag/adolf-hitler/"
+      },
+      "ethics": {
+        "name": "ethics",
+        "slug": "ethics",
+        "url": "/tag/ethics/"
+      },
+      "eugenics": {
+        "name": "Eugenics",
+        "slug": "eugenics",
+        "url": "/tag/eugenics/"
+      },
+      "genetics": {
+        "name": "Genetics",
+        "slug": "genetics",
+        "url": "/tag/genetics/"
+      },
+      "freedom-of-speech": {
+        "name": "Freedom of speech",
+        "slug": "freedom-of-speech",
+        "url": "/tag/freedom-of-speech/"
+      },
+      "microsoft-sharepoint": {
+        "name": "Microsoft SharePoint",
+        "slug": "microsoft-sharepoint",
+        "url": "/tag/microsoft-sharepoint/"
+      },
+      "virginia": {
+        "name": "Virginia",
+        "slug": "virginia",
+        "url": "/tag/virginia/"
+      },
+      "annotation": {
+        "name": "annotation",
+        "slug": "annotation",
+        "url": "/tag/annotation/"
+      },
+      "microsoft-office": {
+        "name": "Microsoft Office",
+        "slug": "microsoft-office",
+        "url": "/tag/microsoft-office/"
+      },
+      "microsoft-online-services": {
+        "name": "Microsoft Online Services",
+        "slug": "microsoft-online-services",
+        "url": "/tag/microsoft-online-services/"
+      },
+      "office-web-apps": {
+        "name": "Office Web Apps",
+        "slug": "office-web-apps",
+        "url": "/tag/office-web-apps/"
+      },
+      "portable-document-format": {
+        "name": "Portable Document Format",
+        "slug": "portable-document-format",
+        "url": "/tag/portable-document-format/"
+      },
+      "cabinets": {
+        "name": "Cabinets",
+        "slug": "cabinets",
+        "url": "/tag/cabinets/"
+      },
+      "dremel": {
+        "name": "Dremel",
+        "slug": "dremel",
+        "url": "/tag/dremel/"
+      },
+      "home-improvement": {
+        "name": "Home improvement",
+        "slug": "home-improvement",
+        "url": "/tag/home-improvement/"
+      },
+      "kitchen": {
+        "name": "Kitchen",
+        "slug": "kitchen",
+        "url": "/tag/kitchen/"
+      },
+      "sand": {
+        "name": "Sand",
+        "slug": "sand",
+        "url": "/tag/sand/"
+      },
+      "sandpaper": {
+        "name": "Sandpaper",
+        "slug": "sandpaper",
+        "url": "/tag/sandpaper/"
+      },
+      "wood": {
+        "name": "Wood",
+        "slug": "wood",
+        "url": "/tag/wood/"
+      },
+      "project-365": {
+        "name": "Project 365",
+        "slug": "project-365",
+        "url": "/tag/project-365/"
+      },
+      "tools": {
+        "name": "tools",
+        "slug": "tools",
+        "url": "/tag/tools/"
+      },
+      "cameras-ios-capture": {
+        "name": "cameras ios capture",
+        "slug": "cameras-ios-capture",
+        "url": "/tag/cameras-ios-capture/"
+      },
+      "sales": {
+        "name": "Sales",
+        "slug": "sales",
+        "url": "/tag/sales/"
+      },
+      "faq": {
+        "name": "FAQ",
+        "slug": "faq",
+        "url": "/tag/faq/"
+      },
+      "faqs-help-and-tutorials": {
+        "name": "FAQs Help and Tutorials",
+        "slug": "faqs-help-and-tutorials",
+        "url": "/tag/faqs-help-and-tutorials/"
+      },
+      "individual-group-faqs": {
+        "name": "Individual Group FAQs",
+        "slug": "individual-group-faqs",
+        "url": "/tag/individual-group-faqs/"
+      },
+      "button": {
+        "name": "button",
+        "slug": "button",
+        "url": "/tag/button/"
+      },
+      "incineration": {
+        "name": "Incineration",
+        "slug": "incineration",
+        "url": "/tag/incineration/"
+      },
+      "leading": {
+        "name": "Leading",
+        "slug": "leading",
+        "url": "/tag/leading/"
+      },
+      "writers-resources": {
+        "name": "Writers Resources",
+        "slug": "writers-resources",
+        "url": "/tag/writers-resources/"
+      },
+      "cat": {
+        "name": "Cat",
+        "slug": "cat",
+        "url": "/tag/cat/"
+      },
+      "couch": {
+        "name": "Couch",
+        "slug": "couch",
+        "url": "/tag/couch/"
+      },
+      "cushion": {
+        "name": "Cushion",
+        "slug": "cushion",
+        "url": "/tag/cushion/"
+      },
+      "leather": {
+        "name": "Leather",
+        "slug": "leather",
+        "url": "/tag/leather/"
+      },
+      "living-room": {
+        "name": "Living room",
+        "slug": "living-room",
+        "url": "/tag/living-room/"
+      },
+      "closed-ended-question": {
+        "name": "Closed-ended question",
+        "slug": "closed-ended-question",
+        "url": "/tag/closed-ended-question/"
+      },
+      "essays-and-manifestos": {
+        "name": "Essays and Manifestos",
+        "slug": "essays-and-manifestos",
+        "url": "/tag/essays-and-manifestos/"
+      },
+      "christmas": {
+        "name": "Christmas",
+        "slug": "christmas",
+        "url": "/tag/christmas/"
+      },
+      "christmas-music": {
+        "name": "Christmas music",
+        "slug": "christmas-music",
+        "url": "/tag/christmas-music/"
+      },
+      "holidays": {
+        "name": "Holidays",
+        "slug": "holidays",
+        "url": "/tag/holidays/"
+      },
+      "ornaments": {
+        "name": "Ornaments",
+        "slug": "ornaments",
+        "url": "/tag/ornaments/"
+      },
+      "seventh-grade": {
+        "name": "Seventh grade",
+        "slug": "seventh-grade",
+        "url": "/tag/seventh-grade/"
+      },
+      "sister-in-law": {
+        "name": "Sister-in-law",
+        "slug": "sister-in-law",
+        "url": "/tag/sister-in-law/"
+      },
+      "tree": {
+        "name": "Tree",
+        "slug": "tree",
+        "url": "/tag/tree/"
+      },
+      "google-books": {
+        "name": "Google Books",
+        "slug": "google-books",
+        "url": "/tag/google-books/"
+      },
+      "handhelds": {
+        "name": "Handhelds",
+        "slug": "handhelds",
+        "url": "/tag/handhelds/"
+      },
+      "smartphones": {
+        "name": "Smartphones",
+        "slug": "smartphones",
+        "url": "/tag/smartphones/"
+      },
+      "digital-rights-management": {
+        "name": "Digital Rights Management",
+        "slug": "digital-rights-management",
+        "url": "/tag/digital-rights-management/"
+      },
+      "dvd": {
+        "name": "dvd",
+        "slug": "dvd",
+        "url": "/tag/dvd/"
+      },
+      "handbrake": {
+        "name": "Handbrake",
+        "slug": "handbrake",
+        "url": "/tag/handbrake/"
+      },
+      "ripping": {
+        "name": "Ripping",
+        "slug": "ripping",
+        "url": "/tag/ripping/"
+      },
+      "vhs": {
+        "name": "VHS",
+        "slug": "vhs",
+        "url": "/tag/vhs/"
+      },
+      "bookmark-world-wide-web": {
+        "name": "Bookmark (World Wide Web)",
+        "slug": "bookmark-world-wide-web",
+        "url": "/tag/bookmark-world-wide-web/"
+      },
+      "delicious": {
+        "name": "delicious",
+        "slug": "delicious",
+        "url": "/tag/delicious/"
+      },
+      "diigo": {
+        "name": "diigo",
+        "slug": "diigo",
+        "url": "/tag/diigo/"
+      },
+      "yahoo": {
+        "name": "yahoo",
+        "slug": "yahoo",
+        "url": "/tag/yahoo/"
+      },
+      "zootool": {
+        "name": "ZooTool",
+        "slug": "zootool",
+        "url": "/tag/zootool/"
+      },
+      "add-ins-and-utilities": {
+        "name": "Add-ins and Utilities",
+        "slug": "add-ins-and-utilities",
+        "url": "/tag/add-ins-and-utilities/"
+      },
+      "application-programming-interface": {
+        "name": "Application programming interface",
+        "slug": "application-programming-interface",
+        "url": "/tag/application-programming-interface/"
+      },
+      "database": {
+        "name": "database",
+        "slug": "database",
+        "url": "/tag/database/"
+      },
+      "front-and-back-ends": {
+        "name": "Front and back ends",
+        "slug": "front-and-back-ends",
+        "url": "/tag/front-and-back-ends/"
+      },
+      "microsoft-access": {
+        "name": "Microsoft Access",
+        "slug": "microsoft-access",
+        "url": "/tag/microsoft-access/"
+      },
+      "ben-wilkoff": {
+        "name": "Ben Wilkoff",
+        "slug": "ben-wilkoff",
+        "url": "/tag/ben-wilkoff/"
+      },
+      "ux": {
+        "name": "ux",
+        "slug": "ux",
+        "url": "/tag/ux/"
+      },
+      "savebigbird": {
+        "name": "SaveBigBird",
+        "slug": "savebigbird",
+        "url": "/tag/savebigbird/"
+      },
+      "photography": {
+        "name": "photography",
+        "slug": "photography",
+        "url": "/tag/photography/"
+      },
+      "pictures": {
+        "name": "pictures",
+        "slug": "pictures",
+        "url": "/tag/pictures/"
+      },
+      "etmooc": {
+        "name": "etmooc",
+        "slug": "etmooc",
+        "url": "/tag/etmooc/"
+      },
+      "dailycreate": {
+        "name": "DailyCreate",
+        "slug": "dailycreate",
+        "url": "/tag/dailycreate/"
+      },
+      "ds106": {
+        "name": "ds106",
+        "slug": "ds106",
+        "url": "/tag/ds106/"
+      },
+      "edcmooc": {
+        "name": "edcmooc",
+        "slug": "edcmooc",
+        "url": "/tag/edcmooc/"
+      },
+      "etmoo": {
+        "name": "etmoo",
+        "slug": "etmoo",
+        "url": "/tag/etmoo/"
+      },
+      "weekly-book-summary": {
+        "name": "http://kidblog.org/DentonDynamos/tag/weekly-book-summary/",
+        "slug": "weekly-book-summary",
+        "url": "http://kidblog.org/DentonDynamos/tag/weekly-book-summary/"
+      },
+      "gafe": {
+        "name": "gafe",
+        "slug": "gafe",
+        "url": "/tag/gafe/"
+      },
+      "edchat": {
+        "name": "edchat",
+        "slug": "edchat",
+        "url": "/tag/edchat/"
+      },
+      "rhisomaticlearning": {
+        "name": "rhisomaticlearning",
+        "slug": "rhisomaticlearning",
+        "url": "/tag/rhisomaticlearning/"
+      },
+      "ipdx13": {
+        "name": "ipdx13",
+        "slug": "ipdx13",
+        "url": "/tag/ipdx13/"
+      },
+      "penandpaperworkssometimes": {
+        "name": "PenAndPaperWorksSometimes",
+        "slug": "penandpaperworkssometimes",
+        "url": "/tag/penandpaperworkssometimes/"
+      },
+      "sometimesiforget": {
+        "name": "SometimesIForget",
+        "slug": "sometimesiforget",
+        "url": "/tag/sometimesiforget/"
+      },
+      "reflectivepractice": {
+        "name": "reflectivepractice",
+        "slug": "reflectivepractice",
+        "url": "/tag/reflectivepractice/"
+      },
+      "goobric": {
+        "name": "Goobric",
+        "slug": "goobric",
+        "url": "/tag/goobric/"
+      },
+      "blendedlearning": {
+        "name": "blendedlearning",
+        "slug": "blendedlearning",
+        "url": "/tag/blendedlearning/"
+      },
+      "thankyou": {
+        "name": "ThankYou",
+        "slug": "thankyou",
+        "url": "/tag/thankyou/"
+      },
+      "geniushour": {
+        "name": "GeniusHour",
+        "slug": "geniushour",
+        "url": "/tag/geniushour/"
+      },
+      "googleapps": {
+        "name": "GoogleApps",
+        "slug": "googleapps",
+        "url": "/tag/googleapps/"
+      },
+      "googleappsfored": {
+        "name": "GoogleAppsForEd",
+        "slug": "googleappsfored",
+        "url": "/tag/googleappsfored/"
+      },
+      "dpsk12": {
+        "name": "dpsk12",
+        "slug": "dpsk12",
+        "url": "/tag/dpsk12/"
+      },
+      "tieleadership": {
+        "name": "tieleadership",
+        "slug": "tieleadership",
+        "url": "/tag/tieleadership/"
+      },
+      "tieco13": {
+        "name": "tieco13",
+        "slug": "tieco13",
+        "url": "/tag/tieco13/"
+      },
+      "gtachi": {
+        "name": "gtachi",
+        "slug": "gtachi",
+        "url": "/tag/gtachi/"
+      },
+      "googleplustips": {
+        "name": "GooglePlusTips",
+        "slug": "googleplustips",
+        "url": "/tag/googleplustips/"
+      },
+      "hangoutphonecalls": {
+        "name": "HangoutPhoneCalls",
+        "slug": "hangoutphonecalls",
+        "url": "/tag/hangoutphonecalls/"
+      },
+      "hangoutssidebar": {
+        "name": "HangoutsSidebar",
+        "slug": "hangoutssidebar",
+        "url": "/tag/hangoutssidebar/"
+      },
+      "hangoutstips": {
+        "name": "HangoutsTips",
+        "slug": "hangoutstips",
+        "url": "/tag/hangoutstips/"
+      },
+      "teamdavinci": {
+        "name": "TeamDaVinci",
+        "slug": "teamdavinci",
+        "url": "/tag/teamdavinci/"
+      },
+      "technologyineducation": {
+        "name": "technologyineducation",
+        "slug": "technologyineducation",
+        "url": "/tag/technologyineducation/"
+      },
+      "personalizedlearning": {
+        "name": "personalizedlearning",
+        "slug": "personalizedlearning",
+        "url": "/tag/personalizedlearning/"
+      },
+      "ntchat": {
+        "name": "ntchat",
+        "slug": "ntchat",
+        "url": "/tag/ntchat/"
+      },
+      "giesummit": {
+        "name": "GIEsummit",
+        "slug": "giesummit",
+        "url": "/tag/giesummit/"
+      },
+      "connectedclassrooms": {
+        "name": "ConnectedClassrooms",
+        "slug": "connectedclassrooms",
+        "url": "/tag/connectedclassrooms/"
+      },
+      "virtualfieldtrip": {
+        "name": "VirtualFieldTrip",
+        "slug": "virtualfieldtrip",
+        "url": "/tag/virtualfieldtrip/"
+      },
+      "hangoutsonair": {
+        "name": "hangoutsonair",
+        "slug": "hangoutsonair",
+        "url": "/tag/hangoutsonair/"
+      },
+      "throughglass": {
+        "name": "throughglass",
+        "slug": "throughglass",
+        "url": "/tag/throughglass/"
+      },
+      "edcampdenver": {
+        "name": "edcampDenver",
+        "slug": "edcampdenver",
+        "url": "/tag/edcampdenver/"
+      },
+      "codecombat": {
+        "name": "CodeCombat",
+        "slug": "codecombat",
+        "url": "/tag/codecombat/"
+      },
+      "cartoon": {
+        "name": "Cartoon",
+        "slug": "cartoon",
+        "url": "/tag/cartoon/"
+      },
+      "digitalstorytellingisnotdead": {
+        "name": "DigitalStorytellingIsNotDead",
+        "slug": "digitalstorytellingisnotdead",
+        "url": "/tag/digitalstorytellingisnotdead/"
+      },
+      "ilearnfrom": {
+        "name": "ILearnFrom",
+        "slug": "ilearnfrom",
+        "url": "/tag/ilearnfrom/"
+      },
+      "digitallearningday": {
+        "name": "DigitalLearningDay",
+        "slug": "digitallearningday",
+        "url": "/tag/digitallearningday/"
+      },
+      "professionaldevelopment": {
+        "name": "ProfessionalDevelopment",
+        "slug": "professionaldevelopment",
+        "url": "/tag/professionaldevelopment/"
+      },
+      "chromeos": {
+        "name": "ChromeOS",
+        "slug": "chromeos",
+        "url": "/tag/chromeos/"
+      },
+      "coedchat": {
+        "name": "coedchat",
+        "slug": "coedchat",
+        "url": "/tag/coedchat/"
+      },
+      "nextgenlearning": {
+        "name": "nextgenlearning",
+        "slug": "nextgenlearning",
+        "url": "/tag/nextgenlearning/"
+      },
+      "install-linux-chromebook": {
+        "name": "How to Install Linux on a Chromebook",
+        "slug": "install-linux-chromebook",
+        "url": "http://www.makeuseof.com/tag/install-linux-chromebook/"
+      },
+      "ice14": {
+        "name": "ice14",
+        "slug": "ice14",
+        "url": "/tag/ice14/"
+      },
+      "sxswedu": {
+        "name": "sxswedu",
+        "slug": "sxswedu",
+        "url": "/tag/sxswedu/"
+      },
+      "googledocs": {
+        "name": "googledocs",
+        "slug": "googledocs",
+        "url": "/tag/googledocs/"
+      },
+      "tutorial": {
+        "name": "tutorial",
+        "slug": "tutorial",
+        "url": "/tag/tutorial/"
+      },
+      "googledrive": {
+        "name": "GoogleDrive",
+        "slug": "googledrive",
+        "url": "/tag/googledrive/"
+      },
+      "linktoilet": {
+        "name": "linktoilet",
+        "slug": "linktoilet",
+        "url": "/tag/linktoilet/"
+      },
+      "linktoilets": {
+        "name": "linktoilets",
+        "slug": "linktoilets",
+        "url": "/tag/linktoilets/"
+      },
+      "2minpd": {
+        "name": "2minPD",
+        "slug": "2minpd",
+        "url": "/tag/2minpd/"
+      },
+      "postcardselfies": {
+        "name": "PostcardSelfies",
+        "slug": "postcardselfies",
+        "url": "/tag/postcardselfies/"
+      },
+      "innedco14": {
+        "name": "innedco14",
+        "slug": "innedco14",
+        "url": "/tag/innedco14/"
+      },
+      "edcampdenve": {
+        "name": "EdCampDenve",
+        "slug": "edcampdenve",
+        "url": "/tag/edcampdenve/"
+      },
+      "postcardmemes": {
+        "name": "postcardmemes",
+        "slug": "postcardmemes",
+        "url": "/tag/postcardmemes/"
+      },
+      "trustteachers": {
+        "name": "TrustTeachers",
+        "slug": "trustteachers",
+        "url": "/tag/trustteachers/"
+      },
+      "hangoutpost": {
+        "name": "hangoutpost",
+        "slug": "hangoutpost",
+        "url": "/tag/hangoutpost/"
+      },
+      "innedcomemes": {
+        "name": "InnEdCoMemes",
+        "slug": "innedcomemes",
+        "url": "/tag/innedcomemes/"
+      },
+      "feedly": {
+        "name": "Feedly",
+        "slug": "feedly",
+        "url": "/tag/feedly/"
+      },
+      "coloetc": {
+        "name": "coloetc",
+        "slug": "coloetc",
+        "url": "/tag/coloetc/"
+      },
+      "googlect": {
+        "name": "googlect",
+        "slug": "googlect",
+        "url": "/tag/googlect/"
+      },
+      "googleedu": {
+        "name": "GoogleEDU",
+        "slug": "googleedu",
+        "url": "/tag/googleedu/"
+      },
+      "iste2014": {
+        "name": "ISTE2014",
+        "slug": "iste2014",
+        "url": "/tag/iste2014/"
+      },
+      "sixsecondscience": {
+        "name": "sixsecondscience",
+        "slug": "sixsecondscience",
+        "url": "/tag/sixsecondscience/"
+      },
+      "chrome": {
+        "name": "Chrome",
+        "slug": "chrome",
+        "url": "/tag/chrome/"
+      },
+      "mac": {
+        "name": "mac",
+        "slug": "mac",
+        "url": "/tag/mac/"
+      },
+      "osx": {
+        "name": "osx",
+        "slug": "osx",
+        "url": "/tag/osx/"
+      },
+      "c4c15": {
+        "name": "C4C15",
+        "slug": "c4c15",
+        "url": "/tag/c4c15/"
+      },
+      "hwy21": {
+        "name": "hwy21",
+        "slug": "hwy21",
+        "url": "/tag/hwy21/"
+      },
+      "askbenw": {
+        "name": "AskBenW",
+        "slug": "askbenw",
+        "url": "/tag/askbenw/"
+      },
+      "personalized": {
+        "name": "personalized",
+        "slug": "personalized",
+        "url": "/tag/personalized/"
+      },
+      "ce15": {
+        "name": "CE15",
+        "slug": "ce15",
+        "url": "/tag/ce15/"
+      },
+      "cem15": {
+        "name": "CEM15",
+        "slug": "cem15",
+        "url": "/tag/cem15/"
+      },
+      "projco": {
+        "name": "ProjCO",
+        "slug": "projco",
+        "url": "/tag/projco/"
+      },
+      "iste2016": {
+        "name": "ISTE2016",
+        "slug": "iste2016",
+        "url": "/tag/iste2016/"
+      },
+      "observeme": {
+        "name": "ObserveMe",
+        "slug": "observeme",
+        "url": "/tag/observeme/"
+      },
+      "enjoy": {
+        "name": "Enjoy",
+        "slug": "enjoy",
+        "url": "/tag/enjoy/"
+      },
+      "lastminute": {
+        "name": "LastMinute",
+        "slug": "lastminute",
+        "url": "/tag/lastminute/"
+      },
+      "gsuiteedu": {
+        "name": "GSuiteEdu",
+        "slug": "gsuiteedu",
+        "url": "/tag/gsuiteedu/"
+      },
+      "refleciton": {
+        "name": "Refleciton",
+        "slug": "refleciton",
+        "url": "/tag/refleciton/"
+      },
+      "digital-identity": {
+        "name": "digital identity",
+        "slug": "digital-identity",
+        "url": "/tag/digital-identity/"
+      },
+      "digpins": {
+        "name": "DigPINS",
+        "slug": "digpins",
+        "url": "/tag/digpins/"
+      },
+      "authority": {
+        "name": "Authority",
+        "slug": "authority",
+        "url": "/tag/authority/"
+      },
+      "higher-education": {
+        "name": "Higher Education",
+        "slug": "higher-education",
+        "url": "/tag/higher-education/"
+      },
+      "pedagogy": {
+        "name": "pedagogy",
+        "slug": "pedagogy",
+        "url": "/tag/pedagogy/"
+      },
+      "scholarship": {
+        "name": "scholarship",
+        "slug": "scholarship",
+        "url": "/tag/scholarship/"
+      },
+      "amc": {
+        "name": "AMC",
+        "slug": "amc",
+        "url": "/tag/amc/"
+      },
+      "anschutz": {
+        "name": "Anschutz",
+        "slug": "anschutz",
+        "url": "/tag/anschutz/"
+      },
+      "virtual-reality-committee": {
+        "name": "Virtual Reality Committee",
+        "slug": "virtual-reality-committee",
+        "url": "/tag/virtual-reality-committee/"
+      },
+      "ios": {
+        "name": "ios",
+        "slug": "ios",
+        "url": "/tag/ios/"
+      },
+      "markdown": {
+        "name": "Markdown",
+        "slug": "markdown",
+        "url": "/tag/markdown/"
+      },
+      "priviledge": {
+        "name": "Priviledge",
+        "slug": "priviledge",
+        "url": "/tag/priviledge/"
+      },
+      "decorations": {
+        "name": "decorations",
+        "slug": "decorations",
+        "url": "/tag/decorations/"
+      },
+      "xmas": {
+        "name": "Xmas",
+        "slug": "xmas",
+        "url": "/tag/xmas/"
+      },
+      "apushistory?_d=secCgYIASAHKAESPgo8diVWmxqSqSgAqQ3ktKTnooepegkgookpn0i%2F0af8JkWzAH%2FuVI%2FZCp%2BM5dmTCUHDS%2FsPBDPHsd%2BTqB0AGgA%3D&checksum=4189f82a08c2a2cd04254f5aa89e88f62e8c9b8329289d8d7e04dcb69ebad414&language=en&name=apushistory&sec_user_id=MS4wLjABAAAAXI6lL0dplNe4Odjdc-6ni_JTQiS9OOSjTn2rD8lmsYSNW94jNCMpCG7Esg3tQXOL&share_app_id=1233&share_challenge_id=1634347033249798&share_link_id=87D8A4CB-5347-4E28-BDE9-B481C1721572&source=h5_m&tt_from=more&u_code=dlggg2lk51e5f8&user_id=7028616648111784965&utm_campaign=client_share&utm_medium=ios&utm_source=more&_r=1": {
+        "name": "The entire #APUSH hashtag on TikTok",
+        "slug": "apushistory?_d=secCgYIASAHKAESPgo8diVWmxqSqSgAqQ3ktKTnooepegkgookpn0i%2F0af8JkWzAH%2FuVI%2FZCp%2BM5dmTCUHDS%2FsPBDPHsd%2BTqB0AGgA%3D&checksum=4189f82a08c2a2cd04254f5aa89e88f62e8c9b8329289d8d7e04dcb69ebad414&language=en&name=apushistory&sec_user_id=MS4wLjABAAAAXI6lL0dplNe4Odjdc-6ni_JTQiS9OOSjTn2rD8lmsYSNW94jNCMpCG7Esg3tQXOL&share_app_id=1233&share_challenge_id=1634347033249798&share_link_id=87D8A4CB-5347-4E28-BDE9-B481C1721572&source=h5_m&tt_from=more&u_code=dlggg2lk51e5f8&user_id=7028616648111784965&utm_campaign=client_share&utm_medium=ios&utm_source=more&_r=1",
+        "url": "https://www.tiktok.com/tag/apushistory?_d=secCgYIASAHKAESPgo8diVWmxqSqSgAqQ3ktKTnooepegkgookpn0i%2F0af8JkWzAH%2FuVI%2FZCp%2BM5dmTCUHDS%2FsPBDPHsd%2BTqB0AGgA%3D&checksum=4189f82a08c2a2cd04254f5aa89e88f62e8c9b8329289d8d7e04dcb69ebad414&language=en&name=apushistory&sec_user_id=MS4wLjABAAAAXI6lL0dplNe4Odjdc-6ni_JTQiS9OOSjTn2rD8lmsYSNW94jNCMpCG7Esg3tQXOL&share_app_id=1233&share_challenge_id=1634347033249798&share_link_id=87D8A4CB-5347-4E28-BDE9-B481C1721572&source=h5_m&tt_from=more&u_code=dlggg2lk51e5f8&user_id=7028616648111784965&utm_campaign=client_share&utm_medium=ios&utm_source=more&_r=1"
+      },
+      "digital-graveyard": {
+        "name": "Digital Graveyard",
+        "slug": "digital-graveyard",
+        "url": "/tag/digital-graveyard/"
+      },
+      "looking-back": {
+        "name": "Looking Back",
+        "slug": "looking-back",
+        "url": "/tag/looking-back/"
+      },
+      "night": {
+        "name": "Night",
+        "slug": "night",
+        "url": "/tag/night/"
+      },
+      "democracy": {
+        "name": "democracy",
+        "slug": "democracy",
+        "url": "/tag/democracy/"
+      },
+      "despotism": {
+        "name": "despotism",
+        "slug": "despotism",
+        "url": "/tag/despotism/"
+      },
+      "politics": {
+        "name": "politics",
+        "slug": "politics",
+        "url": "/tag/politics/"
+      },
+      "voting-rights": {
+        "name": "voting rights",
+        "slug": "voting-rights",
+        "url": "/tag/voting-rights/"
+      },
+      "conversation": {
+        "name": "conversation",
+        "slug": "conversation",
+        "url": "/tag/conversation/"
+      },
+      "past": {
+        "name": "Past",
+        "slug": "past",
+        "url": "/tag/past/"
+      },
+      "vinyl": {
+        "name": "vinyl",
+        "slug": "vinyl",
+        "url": "/tag/vinyl/"
+      },
+      "regency": {
+        "name": "Regency",
+        "slug": "regency",
+        "url": "/tag/regency/"
+      },
+      "victoian": {
+        "name": "Victoian",
+        "slug": "victoian",
+        "url": "/tag/victoian/"
+      },
+      "littleton": {
+        "name": "littleton",
+        "slug": "littleton",
+        "url": "/tag/littleton/"
+      },
+      "parental-consent": {
+        "name": "parental consent",
+        "slug": "parental-consent",
+        "url": "/tag/parental-consent/"
+      },
+      "public-schools": {
+        "name": "public schools",
+        "slug": "public-schools",
+        "url": "/tag/public-schools/"
+      },
+      "vaccines": {
+        "name": "Vaccines",
+        "slug": "vaccines",
+        "url": "/tag/vaccines/"
+      },
+      "banned-books": {
+        "name": "Banned Books",
+        "slug": "banned-books",
+        "url": "/tag/banned-books/"
+      },
+      "holocaust": {
+        "name": "Holocaust",
+        "slug": "holocaust",
+        "url": "/tag/holocaust/"
+      },
+      "maus": {
+        "name": "Maus",
+        "slug": "maus",
+        "url": "/tag/maus/"
+      },
+      "anti-racist": {
+        "name": "anti-racist",
+        "slug": "anti-racist",
+        "url": "/tag/anti-racist/"
+      },
+      "blm": {
+        "name": "BLM",
+        "slug": "blm",
+        "url": "/tag/blm/"
+      },
+      "bourgeois": {
+        "name": "bourgeois",
+        "slug": "bourgeois",
+        "url": "/tag/bourgeois/"
+      },
+      "oppression": {
+        "name": "Oppression",
+        "slug": "oppression",
+        "url": "/tag/oppression/"
+      },
+      "course-hero": {
+        "name": "course hero",
+        "slug": "course-hero",
+        "url": "/tag/course-hero/"
+      },
+      "edmodo": {
+        "name": "edmodo",
+        "slug": "edmodo",
+        "url": "/tag/edmodo/"
+      },
+      "public-education": {
+        "name": "public education",
+        "slug": "public-education",
+        "url": "/tag/public-education/"
+      },
+      "forgiveness": {
+        "name": "Forgiveness",
+        "slug": "forgiveness",
+        "url": "/tag/forgiveness/"
+      },
+      "kindness": {
+        "name": "Kindness",
+        "slug": "kindness",
+        "url": "/tag/kindness/"
+      },
+      "moving-forward": {
+        "name": "Moving Forward",
+        "slug": "moving-forward",
+        "url": "/tag/moving-forward/"
+      },
+      "documentary": {
+        "name": "documentary",
+        "slug": "documentary",
+        "url": "/tag/documentary/"
+      },
+      "fascism": {
+        "name": "Fascism",
+        "slug": "fascism",
+        "url": "/tag/fascism/"
+      },
+      "rebellion": {
+        "name": "rebellion",
+        "slug": "rebellion",
+        "url": "/tag/rebellion/"
+      },
+      "the-youth": {
+        "name": "the youth",
+        "slug": "the-youth",
+        "url": "/tag/the-youth/"
+      },
+      "agency": {
+        "name": "Agency",
+        "slug": "agency",
+        "url": "/tag/agency/"
+      },
+      "cameras-in-classrooms": {
+        "name": "Cameras in Classrooms",
+        "slug": "cameras-in-classrooms",
+        "url": "/tag/cameras-in-classrooms/"
+      },
+      "crt": {
+        "name": "CRT",
+        "slug": "crt",
+        "url": "/tag/crt/"
+      },
+      "parents": {
+        "name": "parents",
+        "slug": "parents",
+        "url": "/tag/parents/"
+      },
+      "students": {
+        "name": "students",
+        "slug": "students",
+        "url": "/tag/students/"
+      },
+      "surveillance": {
+        "name": "Surveillance",
+        "slug": "surveillance",
+        "url": "/tag/surveillance/"
+      },
+      "inquiry": {
+        "name": "inquiry",
+        "slug": "inquiry",
+        "url": "/tag/inquiry/"
+      },
+      "mastery": {
+        "name": "Mastery",
+        "slug": "mastery",
+        "url": "/tag/mastery/"
+      },
+      "apple-pay": {
+        "name": "Apple Pay",
+        "slug": "apple-pay",
+        "url": "/tag/apple-pay/"
+      },
+      "banking": {
+        "name": "Banking",
+        "slug": "banking",
+        "url": "/tag/banking/"
+      },
+      "hoa": {
+        "name": "HOA",
+        "slug": "hoa",
+        "url": "/tag/hoa/"
+      },
+      "shoveling-snow": {
+        "name": "Shoveling snow",
+        "slug": "shoveling-snow",
+        "url": "/tag/shoveling-snow/"
+      },
+      "dishes": {
+        "name": "Dishes",
+        "slug": "dishes",
+        "url": "/tag/dishes/"
+      },
+      "domesticity": {
+        "name": "domesticity",
+        "slug": "domesticity",
+        "url": "/tag/domesticity/"
+      },
+      "life-hacks": {
+        "name": "Life Hacks",
+        "slug": "life-hacks",
+        "url": "/tag/life-hacks/"
+      },
+      "super-bowl": {
+        "name": "Super Bowl",
+        "slug": "super-bowl",
+        "url": "/tag/super-bowl/"
+      },
+      "free-speech": {
+        "name": "Free Speech",
+        "slug": "free-speech",
+        "url": "/tag/free-speech/"
+      },
+      "blockchain": {
+        "name": "blockchain",
+        "slug": "blockchain",
+        "url": "/tag/blockchain/"
+      },
+      "crypto": {
+        "name": "crypto",
+        "slug": "crypto",
+        "url": "/tag/crypto/"
+      },
+      "cryptocoins": {
+        "name": "cryptocoins",
+        "slug": "cryptocoins",
+        "url": "/tag/cryptocoins/"
+      },
+      "nft": {
+        "name": "nft",
+        "slug": "nft",
+        "url": "/tag/nft/"
+      },
+      "commentary": {
+        "name": "Commentary",
+        "slug": "commentary",
+        "url": "/tag/commentary/"
+      },
+      "critique": {
+        "name": "Critique",
+        "slug": "critique",
+        "url": "/tag/critique/"
+      },
+      "modern-internet": {
+        "name": "Modern Internet",
+        "slug": "modern-internet",
+        "url": "/tag/modern-internet/"
+      },
+      "pandemic": {
+        "name": "Pandemic",
+        "slug": "pandemic",
+        "url": "/tag/pandemic/"
+      },
+      "video-essays": {
+        "name": "Video Essays",
+        "slug": "video-essays",
+        "url": "/tag/video-essays/"
+      },
+      "humanity": {
+        "name": "humanity",
+        "slug": "humanity",
+        "url": "/tag/humanity/"
+      },
+      "putin": {
+        "name": "Putin",
+        "slug": "putin",
+        "url": "/tag/putin/"
+      },
+      "russia": {
+        "name": "russia",
+        "slug": "russia",
+        "url": "/tag/russia/"
+      },
+      "ukraine": {
+        "name": "Ukraine",
+        "slug": "ukraine",
+        "url": "/tag/ukraine/"
+      },
+      "war": {
+        "name": "war",
+        "slug": "war",
+        "url": "/tag/war/"
+      },
+      "war-crimes": {
+        "name": "War crimes",
+        "slug": "war-crimes",
+        "url": "/tag/war-crimes/"
+      },
+      "crimes-against-humanity": {
+        "name": "Crimes Against Humanity",
+        "slug": "crimes-against-humanity",
+        "url": "/tag/crimes-against-humanity/"
+      },
+      "camp": {
+        "name": "camp",
+        "slug": "camp",
+        "url": "/tag/camp/"
+      },
+      "kids": {
+        "name": "kids",
+        "slug": "kids",
+        "url": "/tag/kids/"
+      },
+      "summer": {
+        "name": "summer",
+        "slug": "summer",
+        "url": "/tag/summer/"
+      },
+      "brennan-lee-mulligan": {
+        "name": "Brennan Lee Mulligan",
+        "slug": "brennan-lee-mulligan",
+        "url": "/tag/brennan-lee-mulligan/"
+      },
+      "dimension-20": {
+        "name": "Dimension 20",
+        "slug": "dimension-20",
+        "url": "/tag/dimension-20/"
+      },
+      "hank-green": {
+        "name": "Hank Green",
+        "slug": "hank-green",
+        "url": "/tag/hank-green/"
+      },
+      "study-hall": {
+        "name": "Study Hall",
+        "slug": "study-hall",
+        "url": "/tag/study-hall/"
+      },
+      "vlogbrothers": {
+        "name": "Vlogbrothers",
+        "slug": "vlogbrothers",
+        "url": "/tag/vlogbrothers/"
+      },
+      "exercise": {
+        "name": "exercise",
+        "slug": "exercise",
+        "url": "/tag/exercise/"
+      },
+      "walking": {
+        "name": "walking",
+        "slug": "walking",
+        "url": "/tag/walking/"
+      },
+      "election": {
+        "name": "election",
+        "slug": "election",
+        "url": "/tag/election/"
+      },
+      "information-literacy": {
+        "name": "Information Literacy",
+        "slug": "information-literacy",
+        "url": "/tag/information-literacy/"
+      },
+      "mental-health": {
+        "name": "Mental Health",
+        "slug": "mental-health",
+        "url": "/tag/mental-health/"
+      },
+      "wordpress": {
+        "name": "wordpress",
+        "slug": "wordpress",
+        "url": "/tag/wordpress/"
+      },
+      "band": {
+        "name": "band",
+        "slug": "band",
+        "url": "/tag/band/"
+      },
+      "distraction": {
+        "name": "distraction",
+        "slug": "distraction",
+        "url": "/tag/distraction/"
+      }
+    }
+  }
+}

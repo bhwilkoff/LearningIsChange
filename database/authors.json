@@ -1,0 +1,19 @@
+{
+  "count": 2,
+  "authors": {
+    "bhwilkoff": {
+      "name": "Ben Wilkoff",
+      "slug": "bhwilkoff",
+      "url": "/author/bhwilkoff/",
+      "avatar": "",
+      "bio": ""
+    },
+    "user": {
+      "name": "user",
+      "slug": "user",
+      "url": "/author/user/",
+      "avatar": "",
+      "bio": ""
+    }
+  }
+}

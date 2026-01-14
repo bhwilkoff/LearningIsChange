@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "max_entries": 1000,
+  "changes": [
+    {
+      "id": "1768419558716",
+      "timestamp": "2026-01-14T19:39:18.716Z",
+      "tool": "database-generator",
+      "operation": "initial_generation",
+      "affected_files": 6224,
+      "description": "Initial database generation",
+      "summary": {
+        "posts_created": 5729,
+        "pages_created": 495,
+        "categories_found": 44,
+        "tags_found": 1374
+      }
+    }
+  ]
+}
