@@ -1,0 +1,966 @@
+{
+  "year": 2024,
+  "count": 10,
+  "posts": [
+    {
+      "id": 5855,
+      "wp_post_id": 23467,
+      "title": "Day: June 5, 2024",
+      "slug": "index.html",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "",
+        "bio": ""
+      },
+      "date_published": "2024-06-05T12:00:00Z",
+      "date_published_gmt": "2024-06-05T12:00:00Z",
+      "date_modified": "2024-06-05T20:04:12+00:00",
+      "date_modified_gmt": "2024-06-05T20:04:12+00:00",
+      "content": "",
+      "content_filtered": "",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2024/06/05/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Uncategorized",
+          "slug": "uncategorized",
+          "url": "/category/uncategorized/"
+        }
+      ],
+      "tags": [],
+      "path": "2024/06/05/index.html",
+      "url": "https://learningischange.com/2024/06/05/",
+      "word_count": 0,
+      "reading_time_minutes": 0,
+      "content_hash": "0",
+      "images": [],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:31.173Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5856,
+      "wp_post_id": 23467,
+      "title": "Writing to Have Written",
+      "slug": "writing-to-have-written",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
+        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
+      },
+      "date_published": "2024-06-05T12:00:00Z",
+      "date_published_gmt": "2024-06-05T12:00:00Z",
+      "date_modified": "2024-06-05T20:04:12+00:00",
+      "date_modified_gmt": "2024-06-05T20:04:12+00:00",
+      "content": "<figure class=\"wp-block-image size-full is-style-rounded\"><img data-recalc-dims=\"1\" fetchpriority=\"high\" decoding=\"async\" width=\"1225\" height=\"689\" data-attachment-id=\"23469\" data-permalink=\"/2024/06/05/writing-to-have-written/pexels-photo-3631711/\" data-orig-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?fit=1880%2C1058&amp;ssl=1\" data-orig-size=\"1880,1058\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;Photo by Suzy Hazelwood on &lt;a href=\\&quot;https:\\/\\/www.pexels.com\\/photo\\/rewrite-edit-text-on-a-typewriter-3631711\\/\\&quot; rel=\\&quot;nofollow\\&quot;&gt;Pexels.com&lt;\\/a&gt;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;rewrite edit text on a typewriter&quot;,&quot;orientation&quot;:&quot;0&quot;}\" data-image-title=\"pexels-photo-3631711\" data-image-description=\"\" data-image-caption=\"&lt;p&gt;Photo by Suzy Hazelwood on &lt;a href=&quot;https://www.pexels.com/photo/rewrite-edit-text-on-a-typewriter-3631711/&quot; rel=&quot;nofollow&quot;&gt;Pexels.com&lt;/a&gt;&lt;/p&gt;\n\" data-medium-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?fit=300%2C169&amp;ssl=1\" data-large-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?fit=1024%2C576&amp;ssl=1\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=1225%2C689&amp;ssl=1\" alt=\"rewrite edit text on a typewriter\" class=\"wp-image-23469\" srcset=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?w=1880&amp;ssl=1 1880w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=888%2C500&amp;ssl=1 888w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=1320%2C743&amp;ssl=1 1320w\" sizes=\"(max-width: 1225px) 100vw, 1225px\"><figcaption class=\"wp-element-caption\">Photo by Suzy Hazelwood on <a href=\"https://www.pexels.com/photo/rewrite-edit-text-on-a-typewriter-3631711/\" rel=\"nofollow\">Pexels.com</a></figcaption></figure>\n\n\n\n<p>I deeply believe in the idea that no one actually wants to write a book. </p>\n\n\n\n<p>They want to HAVE WRITTEN a book.</p>\n\n\n\n<p>They want the destination more than the process. They want the comfort and resolution that comes from having completed the work. They do not revel the toil. They do not want the discomfort that comes from unresolved characters or un-researched topics. </p>\n\n\n\n<p>And when I say them, I really mean me too. I too do not want the process to be so daunting and to cause so much frustration and to feel like it will never end. I too will shy away from large projects, knowing that they are very likely never to reach their conclusion. </p>\n\n\n\n<p>And yet, the writing process is where the best bits of learning are. They it is were the most compelling art lives. It is also where the joy of figuring out who you are can be found. And so, I must trust that somewhere in there, a final work will reside. That there will be enough love and wonder and growth in the middle to help guide the way to the end. </p>\n\n\n\n<p>You see: I am in process.</p>\n\n\n\n<p>Of writing a book. Of starting a podcast. Of saving a marriage. Of going on international travel. Of building a life. </p>\n\n\n\n<p>I want to HAVE LIVED. But, I also want to BE ALIVE.</p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-23467-693710709d6c9\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=23467&amp;origin=learningischange.com&amp;obj_id=113784134-23467-693710709d6c9\" data-name=\"like-post-frame-113784134-23467-693710709d6c9\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
+      "content_filtered": "Photo by Suzy Hazelwood on Pexels.com I deeply believe in the idea that no one actually wants to write a book. They want to HAVE WRITTEN a book. They want the destination more than the process. They want the comfort and resolution that comes from having completed the work. They do not revel the toil. They do not want the discomfort that comes from unresolved characters or un-researched topics. And when I say them, I really mean me too. I too do not want the process to be so daunting and to cause so much frustration and to feel like it will never end. I too will shy away from large projects, knowing that they are very likely never to reach their conclusion. And yet, the writing process is where the best bits of learning are. They it is were the most compelling art lives. It is also where the joy of figuring out who you are can be found. And so, I must trust that somewhere in there, a final work will reside. That there will be enough love and wonder and growth in the middle to help guide the way to the end. You see: I am in process. Of writing a book. Of starting a podcast. Of saving a marriage. Of going on international travel. Of building a life. I want to HAVE LIVED. But, I also want to BE ALIVE.",
+      "excerpt": "Photo by Suzy Hazelwood on Pexels.com I deeply believe in the idea that no one actually wants to write a book. They want to HAVE WRITTEN a book. They want the destination more than the process. They w...",
+      "guid": "https://learningischange.com/2024/06/05/writing-to-have-written/",
+      "comment_status": "open",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Uncategorized",
+          "slug": "uncategorized",
+          "url": "/category/uncategorized/"
+        }
+      ],
+      "tags": [],
+      "path": "2024/06/05/writing-to-have-written/index.html",
+      "url": "https://learningischange.com/2024/06/05/writing-to-have-written/",
+      "word_count": 234,
+      "reading_time_minutes": 2,
+      "content_hash": "-33cda726",
+      "images": [
+        "https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=1225%2C689&ssl=1"
+      ],
+      "links": {
+        "internal": [],
+        "external": [
+          "https://www.pexels.com/photo/rewrite-edit-text-on-a-typewriter-3631711/"
+        ]
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:31.460Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5857,
+      "wp_post_id": 23472,
+      "title": "Day: June 6, 2024",
+      "slug": "index.html",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "",
+        "bio": ""
+      },
+      "date_published": "2024-06-06T12:00:00Z",
+      "date_published_gmt": "2024-06-06T12:00:00Z",
+      "date_modified": "2024-06-06T18:45:10+00:00",
+      "date_modified_gmt": "2024-06-06T18:45:10+00:00",
+      "content": "",
+      "content_filtered": "",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2024/06/06/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Learning",
+          "slug": "learning",
+          "url": "/category/learning/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "camp",
+          "slug": "camp",
+          "url": "/tag/camp/"
+        },
+        {
+          "name": "children",
+          "slug": "children",
+          "url": "/tag/children/"
+        },
+        {
+          "name": "kids",
+          "slug": "kids",
+          "url": "/tag/kids/"
+        },
+        {
+          "name": "Learning",
+          "slug": "learning",
+          "url": "/tag/learning/"
+        },
+        {
+          "name": "summer",
+          "slug": "summer",
+          "url": "/tag/summer/"
+        },
+        {
+          "name": "video games",
+          "slug": "video-games",
+          "url": "/tag/video-games/"
+        }
+      ],
+      "path": "2024/06/06/index.html",
+      "url": "https://learningischange.com/2024/06/06/",
+      "word_count": 0,
+      "reading_time_minutes": 0,
+      "content_hash": "0",
+      "images": [],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:31.729Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5858,
+      "wp_post_id": 23472,
+      "title": "Summer Camp in 2024",
+      "slug": "summer-camp-in-2024",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
+        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
+      },
+      "date_published": "2024-06-06T12:00:00Z",
+      "date_published_gmt": "2024-06-06T12:00:00Z",
+      "date_modified": "2024-06-06T18:45:10+00:00",
+      "date_modified_gmt": "2024-06-06T18:45:10+00:00",
+      "content": "<figure data-carousel-extra=\"{&quot;blog_id&quot;:1,&quot;permalink&quot;:&quot;\\/2024\\/06\\/06\\/summer-camp-in-2024\\/&quot;}\" class=\"wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-1 is-layout-flex wp-block-gallery-is-layout-flex\">\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" fetchpriority=\"high\" decoding=\"async\" width=\"1024\" height=\"768\" data-attachment-id=\"23471\" data-permalink=\"/img_4052/\" data-orig-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?fit=2000%2C1500&amp;ssl=1\" data-orig-size=\"2000,1500\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;1.78&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 15 Pro&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1717502421&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6.7649998656528&quot;,&quot;iso&quot;:&quot;800&quot;,&quot;shutter_speed&quot;:&quot;0.027777777777778&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}\" data-image-title=\"img_4052\" data-image-description=\"\" data-image-caption=\"\" data-medium-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?fit=300%2C225&amp;ssl=1\" data-large-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?fit=1024%2C768&amp;ssl=1\" data-id=\"23471\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=1024%2C768&amp;ssl=1\" alt=\"\" class=\"wp-image-23471\" srcset=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=1024%2C768&amp;ssl=1 1024w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=1536%2C1152&amp;ssl=1 1536w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=667%2C500&amp;ssl=1 667w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=1320%2C990&amp;ssl=1 1320w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?w=2000&amp;ssl=1 2000w\" sizes=\"(max-width: 1024px) 100vw, 1024px\"><figcaption class=\"wp-element-caption\">Super Smash Bros. camp</figcaption></figure>\n</figure>\n\n\n\n<p>Every summer, our children are out of school. And yet, I am not out of work over the summer. You can see the problem this poses for getting work done.</p>\n\n\n\n<p>So, every summer, our kids are involved in various âcampsâ and âactivitiesâ that will help me to get work done. This summer is a little different because our 15 and 17 year old boys are both fully engaged by work (Lifeguard and Art Camp counselor, respectively). So, the only activities we must organize ourselves are camps for our 10 year old.</p>\n\n\n\n<p>And wouldnât you know it, he had some ideas about the kinds of camps he wanted this year. While there are still plenty of soccer, swimming, nature, and other sports camps. One of the activities that he is most excited about is a camp that is dedicated to playing Super Smash Bros. with other excited tweens. </p>\n\n\n\n<p>So, I wanted to spend a little time reflecting upon that choice.</p>\n\n\n\n<p>Super Smash Bros. is a game full of animated fighting that is anything but violent. It is silly. It is strange. But, most of all, it is entertaining. It is something that you can play or watch and enjoy just as much. It is fun to root for (or against!) your friends and it is easy to get caught up in the lore of each of the characters (of which many come from other Nintendo properties with huge followings).</p>\n\n\n\n<p>For each day of this 5-day long camp, our 10-year-old plays a video game for three hours. It is something we would typically not do at home. While we donât have hard and fast rules about screen time, we donât tend to let any of our kids play video games for multiple hours in a row. And yet, I donât have any issues with our son doing just that within this setting. </p>\n\n\n\n<p>I think that is because of just how collaborative he is within this environment. Much like he is when he is playing soccer or jumping on a trampoline, he is almost constantly talking while he is playing the game. In fact, I observed a significant amount of conversation before, during, and after each match. There was good-natured trash talk and genuine question asking. There was competitive conversation and team-building words of encouragement. I believe this is why it makes sense for the camp to exist. </p>\n\n\n\n<p>My 10 year old needs more opportunities to be with people he doesnât (previously) know, engaged in a collaborative effort. That is the core of what a summer activity is all about, and this one fits the bill perfectly. The âscreen timeâ required for the activity is superfluous. It is about the community that he has built that will last beyond the week. We know each of the kids usernames to keep it going even after the summer is over, which is not something I can say for any sports camp he has enjoyed. </p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-23472-693710705e20e\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=23472&amp;origin=learningischange.com&amp;obj_id=113784134-23472-693710705e20e\" data-name=\"like-post-frame-113784134-23472-693710705e20e\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
+      "content_filtered": "Super Smash Bros. camp Every summer, our children are out of school. And yet, I am not out of work over the summer. You can see the problem this poses for getting work done. So, every summer, our kids are involved in various âcampsâ and âactivitiesâ that will help me to get work done. This summer is a little different because our 15 and 17 year old boys are both fully engaged by work (Lifeguard and Art Camp counselor, respectively). So, the only activities we must organize ourselves are camps for our 10 year old. And wouldnât you know it, he had some ideas about the kinds of camps he wanted this year. While there are still plenty of soccer, swimming, nature, and other sports camps. One of the activities that he is most excited about is a camp that is dedicated to playing Super Smash Bros. with other excited tweens. So, I wanted to spend a little time reflecting upon that choice. Super Smash Bros. is a game full of animated fighting that is anything but violent. It is silly. It is strange. But, most of all, it is entertaining. It is something that you can play or watch and enjoy just as much. It is fun to root for (or against!) your friends and it is easy to get caught up in the lore of each of the characters (of which many come from other Nintendo properties with huge followings). For each day of this 5-day long camp, our 10-year-old plays a video game for three hours. It is something we would typically not do at home. While we donât have hard and fast rules about screen time, we donât tend to let any of our kids play video games for multiple hours in a row. And yet, I donât have any issues with our son doing just that within this setting. I think that is because of just how collaborative he is within this environment. Much like he is when he is playing soccer or jumping on a trampoline, he is almost constantly talking while he is playing the game. In fact, I observed a significant amount of conversation before, during, and after each match. There was good-natured trash talk and genuine question asking. There was competitive conversation and team-building words of encouragement. I believe this is why it makes sense for the camp to exist. My 10 year old needs more opportunities to be with people he doesnât (previously) know, engaged in a collaborative effort. That is the core of what a summer activity is all about, and this one fits the bill perfectly. The âscreen timeâ required for the activity is superfluous. It is about the community that he has built that will last beyond the week. We know each of the kids usernames to keep it going even after the summer is over, which is not something I can say for any sports camp he has enjoyed.",
+      "excerpt": "Super Smash Bros. camp Every summer, our children are out of school. And yet, I am not out of work over the summer. You can see the problem this poses for getting work done. So, every summer, our kids...",
+      "guid": "https://learningischange.com/2024/06/06/summer-camp-in-2024/",
+      "comment_status": "open",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Learning",
+          "slug": "learning",
+          "url": "/category/learning/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "camp",
+          "slug": "camp",
+          "url": "/tag/camp/"
+        },
+        {
+          "name": "children",
+          "slug": "children",
+          "url": "/tag/children/"
+        },
+        {
+          "name": "kids",
+          "slug": "kids",
+          "url": "/tag/kids/"
+        },
+        {
+          "name": "Learning",
+          "slug": "learning",
+          "url": "/tag/learning/"
+        },
+        {
+          "name": "summer",
+          "slug": "summer",
+          "url": "/tag/summer/"
+        },
+        {
+          "name": "video games",
+          "slug": "video-games",
+          "url": "/tag/video-games/"
+        }
+      ],
+      "path": "2024/06/06/summer-camp-in-2024/index.html",
+      "url": "https://learningischange.com/2024/06/06/summer-camp-in-2024/",
+      "word_count": 493,
+      "reading_time_minutes": 3,
+      "content_hash": "520ae6e",
+      "images": [
+        "https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=1024%2C768&ssl=1"
+      ],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:32.004Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5859,
+      "wp_post_id": 23488,
+      "title": "Day: June 7, 2024",
+      "slug": "index.html",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "",
+        "bio": ""
+      },
+      "date_published": "2024-06-07T12:00:00Z",
+      "date_published_gmt": "2024-06-07T12:00:00Z",
+      "date_modified": "2024-06-07T16:58:02+00:00",
+      "date_modified_gmt": "2024-06-07T16:58:02+00:00",
+      "content": "",
+      "content_filtered": "",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2024/06/07/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Humanity",
+          "slug": "humanity",
+          "url": "/category/humanity/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Brennan Lee Mulligan",
+          "slug": "brennan-lee-mulligan",
+          "url": "/tag/brennan-lee-mulligan/"
+        },
+        {
+          "name": "college",
+          "slug": "college",
+          "url": "/tag/college/"
+        },
+        {
+          "name": "Dimension 20",
+          "slug": "dimension-20",
+          "url": "/tag/dimension-20/"
+        },
+        {
+          "name": "education",
+          "slug": "education",
+          "url": "/tag/education/"
+        },
+        {
+          "name": "Hank Green",
+          "slug": "hank-green",
+          "url": "/tag/hank-green/"
+        },
+        {
+          "name": "Study Hall",
+          "slug": "study-hall",
+          "url": "/tag/study-hall/"
+        },
+        {
+          "name": "video",
+          "slug": "video",
+          "url": "/tag/video/"
+        },
+        {
+          "name": "Vlogbrothers",
+          "slug": "vlogbrothers",
+          "url": "/tag/vlogbrothers/"
+        }
+      ],
+      "path": "2024/06/07/index.html",
+      "url": "https://learningischange.com/2024/06/07/",
+      "word_count": 0,
+      "reading_time_minutes": 0,
+      "content_hash": "0",
+      "images": [],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:32.267Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5860,
+      "wp_post_id": 23488,
+      "title": "The Path Not Taken",
+      "slug": "the-path-not-taken",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
+        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
+      },
+      "date_published": "2024-06-07T12:00:00Z",
+      "date_published_gmt": "2024-06-07T12:00:00Z",
+      "date_modified": "2024-06-07T16:58:02+00:00",
+      "date_modified_gmt": "2024-06-07T16:58:02+00:00",
+      "content": "<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\n<iframe title=\"How DnD Became a Career: Brennan Lee Mulliganâs College Journey\" width=\"1225\" height=\"689\" src=\"https://www.youtube.com/embed/F572OcpTcKY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"\"></iframe>\n</div></figure>\n\n\n\n<p>I am such an enormous fan of the work that John and Hank Green are doing to help democratize education. From <a href=\"https://thecrashcourse.com/\">Crash Course</a> to <a href=\"https://gostudyhall.com/\">Study Hall</a>, they are constantly looking for ways to make engaging learning opportunities for the broadest group of people possible. </p>\n\n\n\n<p>And then they drop something like this video. In it, Hank is interviewing another of the most prolific creators in the world of online video and fantasy storytelling, Brennan Lee Mulligan. But, the interview is mostly about the paths that Brennan took through his educational journey. </p>\n\n\n\n<p>The best part about hearing this story is knowing just how unconventional it is, and yet just how successful he has become in spite of (or, because of) his unconventional approach to learning and growth. His story is deeply resonant. He was a precocious kid. He tried to power through his education and leverage the âofficial pathsâ laid out for him by others. But, he also started camps and led small groups of people in his roleplaying efforts. He interned and bartended. He won $50,000 on âWho Wants to be a Millionaire.â He started writing for one part of College Humor and then became a much bigger part of it. </p>\n\n\n\n<p>It is the story of paths taken and choices made. He would do things differently if he could, but he doesnât regret his choices. All of the things he has done up to this point have made him into the man he is today. That is a startlingly refreshing take. </p>\n\n\n\n<p>We are all the sum total of our paths not taken. We have branched off infinitely until we find ourselves here. You donât get to see what the other branches would have had in store for us, but we do get to enjoy the view from this idiosyncratic perch. It is a spot that no one else could have found. And it should be celebrated.</p>\n\n\n\n<p>I encourage you to watch this interview and to understand that your journey is just as precarious as it is precious. You may not be Brennan Lee Mulligan, but you are someone with just as many decisions and just as many paths not taken. We should embrace the diversity of life within your own story, and we can learn as much as we can from others as we do so.</p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-23488-6937107020369\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=23488&amp;origin=learningischange.com&amp;obj_id=113784134-23488-6937107020369\" data-name=\"like-post-frame-113784134-23488-6937107020369\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
+      "content_filtered": "I am such an enormous fan of the work that John and Hank Green are doing to help democratize education. From Crash Course to Study Hall, they are constantly looking for ways to make engaging learning opportunities for the broadest group of people possible. And then they drop something like this video. In it, Hank is interviewing another of the most prolific creators in the world of online video and fantasy storytelling, Brennan Lee Mulligan. But, the interview is mostly about the paths that Brennan took through his educational journey. The best part about hearing this story is knowing just how unconventional it is, and yet just how successful he has become in spite of (or, because of) his unconventional approach to learning and growth. His story is deeply resonant. He was a precocious kid. He tried to power through his education and leverage the âofficial pathsâ laid out for him by others. But, he also started camps and led small groups of people in his roleplaying efforts. He interned and bartended. He won $50,000 on âWho Wants to be a Millionaire.â He started writing for one part of College Humor and then became a much bigger part of it. It is the story of paths taken and choices made. He would do things differently if he could, but he doesnât regret his choices. All of the things he has done up to this point have made him into the man he is today. That is a startlingly refreshing take. We are all the sum total of our paths not taken. We have branched off infinitely until we find ourselves here. You donât get to see what the other branches would have had in store for us, but we do get to enjoy the view from this idiosyncratic perch. It is a spot that no one else could have found. And it should be celebrated. I encourage you to watch this interview and to understand that your journey is just as precarious as it is precious. You may not be Brennan Lee Mulligan, but you are someone with just as many decisions and just as many paths not taken. We should embrace the diversity of life within your own story, and we can learn as much as we can from others as we do so.",
+      "excerpt": "I am such an enormous fan of the work that John and Hank Green are doing to help democratize education. From Crash Course to Study Hall, they are constantly looking for ways to make engaging learning ...",
+      "guid": "https://learningischange.com/2024/06/07/the-path-not-taken/",
+      "comment_status": "open",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "humanity",
+          "slug": "humanity",
+          "url": "/category/humanity/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Brennan Lee Mulligan",
+          "slug": "brennan-lee-mulligan",
+          "url": "/tag/brennan-lee-mulligan/"
+        },
+        {
+          "name": "college",
+          "slug": "college",
+          "url": "/tag/college/"
+        },
+        {
+          "name": "Dimension 20",
+          "slug": "dimension-20",
+          "url": "/tag/dimension-20/"
+        },
+        {
+          "name": "education",
+          "slug": "education",
+          "url": "/tag/education/"
+        },
+        {
+          "name": "Hank Green",
+          "slug": "hank-green",
+          "url": "/tag/hank-green/"
+        },
+        {
+          "name": "Study Hall",
+          "slug": "study-hall",
+          "url": "/tag/study-hall/"
+        },
+        {
+          "name": "video",
+          "slug": "video",
+          "url": "/tag/video/"
+        },
+        {
+          "name": "Vlogbrothers",
+          "slug": "vlogbrothers",
+          "url": "/tag/vlogbrothers/"
+        }
+      ],
+      "path": "2024/06/07/the-path-not-taken/index.html",
+      "url": "https://learningischange.com/2024/06/07/the-path-not-taken/",
+      "word_count": 385,
+      "reading_time_minutes": 2,
+      "content_hash": "21095bb1",
+      "images": [],
+      "links": {
+        "internal": [],
+        "external": [
+          "https://thecrashcourse.com/",
+          "https://gostudyhall.com/"
+        ]
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:32.538Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5861,
+      "wp_post_id": 23506,
+      "title": "Go for a Walk",
+      "slug": "go-for-a-walk",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
+        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
+      },
+      "date_published": "2024-06-12T12:00:00Z",
+      "date_published_gmt": "2024-06-12T12:00:00Z",
+      "date_modified": "2024-06-12T19:47:08+00:00",
+      "date_modified_gmt": "2024-06-12T19:47:08+00:00",
+      "content": "<figure class=\"wp-block-image size-large\"><img data-recalc-dims=\"1\" fetchpriority=\"high\" decoding=\"async\" width=\"1024\" height=\"768\" data-attachment-id=\"23504\" data-permalink=\"/img_4097/\" data-orig-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?fit=2000%2C1500&amp;ssl=1\" data-orig-size=\"2000,1500\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;1.78&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 15 Pro&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1717964689&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6.7649998656528&quot;,&quot;iso&quot;:&quot;500&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}\" data-image-title=\"img_4097\" data-image-description=\"\" data-image-caption=\"\" data-medium-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?fit=300%2C225&amp;ssl=1\" data-large-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?fit=1024%2C768&amp;ssl=1\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=1024%2C768&amp;ssl=1\" alt=\"\" class=\"wp-image-23504\" srcset=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=1024%2C768&amp;ssl=1 1024w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=1536%2C1152&amp;ssl=1 1536w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=667%2C500&amp;ssl=1 667w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=1320%2C990&amp;ssl=1 1320w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?w=2000&amp;ssl=1 2000w\" sizes=\"(max-width: 1024px) 100vw, 1024px\"><figcaption class=\"wp-element-caption\">My nightly walk.</figcaption></figure>\n\n\n\n<p>I have taken to walking our dog at night after the temperature dips just enough to make the evening air inviting. I started trying to listen to podcasts during my constitutional, but I found that I was just getting angry or tired, so I switched to music that I know and love. </p>\n\n\n\n<p>As <a href=\"https://www.peteyswebsite.com/\">Petey</a> or <a href=\"https://www.bleachersmusic.com/\">Bleachers</a> or <a href=\"https://benkweller.com/\">Ben Kweller</a> blast in my headphones, Iâm struck by just how incredible it is to feel in control of all of my limbs. To walk, to breathe, and to see the beauty that is all around me. Even if it is just suburbia. Even if the moment is <a href=\"https://projects.fivethirtyeight.com/polls/president-general/2024/national/\">politically fraught</a>. Even if there are plenty of things to worry about in my family or my work. The nightly walk is enough.</p>\n\n\n\n<p>It is enough to show me that there is still so much of existence that feels achingly perfect. I would say that it feels like a miracle, but I donât believe in miracles. It is more than that. More than just some unexplainable mystery, it feels so quintessentially human. Like, I am most myself, most human while I am perambulating upon this small bit of soil. </p>\n\n\n\n<p>And all I have to do is notice and appreciate. So I do.</p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-23506-6937106fd29ee\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=23506&amp;origin=learningischange.com&amp;obj_id=113784134-23506-6937106fd29ee\" data-name=\"like-post-frame-113784134-23506-6937106fd29ee\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
+      "content_filtered": "My nightly walk. I have taken to walking our dog at night after the temperature dips just enough to make the evening air inviting. I started trying to listen to podcasts during my constitutional, but I found that I was just getting angry or tired, so I switched to music that I know and love. As Petey or Bleachers or Ben Kweller blast in my headphones, Iâm struck by just how incredible it is to feel in control of all of my limbs. To walk, to breathe, and to see the beauty that is all around me. Even if it is just suburbia. Even if the moment is politically fraught. Even if there are plenty of things to worry about in my family or my work. The nightly walk is enough. It is enough to show me that there is still so much of existence that feels achingly perfect. I would say that it feels like a miracle, but I donât believe in miracles. It is more than that. More than just some unexplainable mystery, it feels so quintessentially human. Like, I am most myself, most human while I am perambulating upon this small bit of soil. And all I have to do is notice and appreciate. So I do.",
+      "excerpt": "My nightly walk. I have taken to walking our dog at night after the temperature dips just enough to make the evening air inviting. I started trying to listen to podcasts during my constitutional, but ...",
+      "guid": "https://learningischange.com/2024/06/12/go-for-a-walk/",
+      "comment_status": "open",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "humanity",
+          "slug": "humanity",
+          "url": "/category/humanity/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Colorado",
+          "slug": "colorado",
+          "url": "/tag/colorado/"
+        },
+        {
+          "name": "exercise",
+          "slug": "exercise",
+          "url": "/tag/exercise/"
+        },
+        {
+          "name": "Reflection",
+          "slug": "reflection",
+          "url": "/tag/reflection/"
+        },
+        {
+          "name": "walking",
+          "slug": "walking",
+          "url": "/tag/walking/"
+        }
+      ],
+      "path": "2024/06/12/go-for-a-walk/index.html",
+      "url": "https://learningischange.com/2024/06/12/go-for-a-walk/",
+      "word_count": 210,
+      "reading_time_minutes": 2,
+      "content_hash": "-322a8e66",
+      "images": [
+        "https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=1024%2C768&ssl=1"
+      ],
+      "links": {
+        "internal": [],
+        "external": [
+          "https://www.peteyswebsite.com/",
+          "https://www.bleachersmusic.com/",
+          "https://benkweller.com/",
+          "https://projects.fivethirtyeight.com/polls/president-general/2024/national/"
+        ]
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:32.819Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5862,
+      "wp_post_id": 23506,
+      "title": "Day: June 12, 2024",
+      "slug": "index.html",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "",
+        "bio": ""
+      },
+      "date_published": "2024-06-12T12:00:00Z",
+      "date_published_gmt": "2024-06-12T12:00:00Z",
+      "date_modified": "2024-06-12T19:47:08+00:00",
+      "date_modified_gmt": "2024-06-12T19:47:08+00:00",
+      "content": "",
+      "content_filtered": "",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2024/06/12/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Humanity",
+          "slug": "humanity",
+          "url": "/category/humanity/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Colorado",
+          "slug": "colorado",
+          "url": "/tag/colorado/"
+        },
+        {
+          "name": "exercise",
+          "slug": "exercise",
+          "url": "/tag/exercise/"
+        },
+        {
+          "name": "Reflection",
+          "slug": "reflection",
+          "url": "/tag/reflection/"
+        },
+        {
+          "name": "walking",
+          "slug": "walking",
+          "url": "/tag/walking/"
+        }
+      ],
+      "path": "2024/06/12/index.html",
+      "url": "https://learningischange.com/2024/06/12/",
+      "word_count": 0,
+      "reading_time_minutes": 0,
+      "content_hash": "0",
+      "images": [],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:33.076Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5863,
+      "wp_post_id": 23756,
+      "title": "Day: July 21, 2024",
+      "slug": "index.html",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "",
+        "bio": ""
+      },
+      "date_published": "2024-07-21T12:00:00Z",
+      "date_published_gmt": "2024-07-21T12:00:00Z",
+      "date_modified": "2024-07-21T17:27:56+00:00",
+      "date_modified_gmt": "2024-07-21T17:27:56+00:00",
+      "content": "",
+      "content_filtered": "",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2024/07/21/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Politics",
+          "slug": "politics",
+          "url": "/category/politics/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "election",
+          "slug": "election",
+          "url": "/tag/election/"
+        },
+        {
+          "name": "Information Literacy",
+          "slug": "information-literacy",
+          "url": "/tag/information-literacy/"
+        },
+        {
+          "name": "Mental Health",
+          "slug": "mental-health",
+          "url": "/tag/mental-health/"
+        },
+        {
+          "name": "news",
+          "slug": "news",
+          "url": "/tag/news/"
+        }
+      ],
+      "path": "2024/07/21/index.html",
+      "url": "https://learningischange.com/2024/07/21/",
+      "word_count": 0,
+      "reading_time_minutes": 0,
+      "content_hash": "0",
+      "images": [],
+      "links": {
+        "internal": [],
+        "external": []
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:33.345Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    },
+    {
+      "id": 5864,
+      "wp_post_id": 23756,
+      "title": "On Not Reading the News",
+      "slug": "on-not-reading-the-news",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/",
+        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
+        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 17 and 19). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
+      },
+      "date_published": "2024-07-21T12:00:00Z",
+      "date_published_gmt": "2024-07-21T12:00:00Z",
+      "date_modified": "2024-07-21T17:27:56+00:00",
+      "date_modified_gmt": "2024-07-21T17:27:56+00:00",
+      "content": "<figure class=\"wp-block-image size-large\"><img data-recalc-dims=\"1\" fetchpriority=\"high\" decoding=\"async\" width=\"1225\" height=\"1701\" data-attachment-id=\"23779\" data-permalink=\"/jon-tyson-xmmsdtigsfo-unsplash-2/\" data-orig-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?fit=1718%2C2386&amp;ssl=1\" data-orig-size=\"1718,2386\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}\" data-image-title=\"jon-tyson-XmMsdtiGSfo-unsplash\" data-image-description=\"\" data-image-caption=\"\" data-medium-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?fit=216%2C300&amp;ssl=1\" data-large-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?fit=737%2C1024&amp;ssl=1\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=1225%2C1701&amp;ssl=1\" alt=\"\" class=\"wp-image-23779\" srcset=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?w=1718&amp;ssl=1 1718w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=216%2C300&amp;ssl=1 216w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=737%2C1024&amp;ssl=1 737w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=768%2C1067&amp;ssl=1 768w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=1106%2C1536&amp;ssl=1 1106w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=1475%2C2048&amp;ssl=1 1475w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=360%2C500&amp;ssl=1 360w, https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=1320%2C1833&amp;ssl=1 1320w\" sizes=\"(max-width: 1225px) 100vw, 1225px\"></figure>\n\n\n\n<p>I used to read the news. At all times of the day and night. I used to perseverate upon every new headline and breaking story. For years I did this. And I wasnât really sure how to stop. I knew that it wasnât healthy for me. I knew that it wasnât âlife affirmingâ or giving me much hope for the future, and yet I did it. Constantly.</p>\n\n\n\n<p>For a long time I thought I did it because I wanted to know what other people think, but that wasnât quite the truth. Instead, I read the news religiously because I wanted to know what <em>I thought</em>. I wanted to see all of the takes on the dayâs information and simply understand it enough to form a coherent opinion. And yet, these coherent opinions didnât make me happy. They didnât bring new relationships into my life or deepen the ones that I already have. Rather, these coherent opinions crowded out my days.</p>\n\n\n\n<p>They stopped me from having time to read any long work of fiction. They halted my ability to see other people as anything other than someone playing for the Red team or the Blue team. They made me disregard the fact that we are all just trying to survive in a modern world filled with infinite distractions. My opinions about the news, even more than the news itself, were the reason why I couldnât sleep at night. They are the reason why I was considering moving to a different country. They are the reason why I was so incredibly angry all the time.</p>\n\n\n\n<p>But, Iâm not reading the news right now. At least, not most of the time. I read <a href=\"https://nymag.com/intelligencer/article/trump-rally-shooting-live-updates.html\">a single article</a> about the attempted assassination of Donald Trump. I read <a href=\"https://joycevance.substack.com/p/a-bad-decision?publication_id=607357&amp;post_id=146636404&amp;triggerShare=true&amp;isFreemail=true&amp;r=hbo1&amp;triedRedirect=true\">a single newsletter analysis</a> on the dismissal of the confidential documents case in Florida. I watched <a href=\"https://www.youtube.com/watch?v=u8yL3I_6Oco&amp;t=598s\">a single video of Jon Stewart</a> attempting to explain the madness that was the RNC.</p>\n\n\n\n<p>I havenât scrolled Twitter or Threads. I havenât looked at TikTok or Instagram Reels. I havenât looked up the latest poll numbers or tried to wade into the waters of âwill he or wonât heâ drop out of the race (Joe Biden, if that wasnât clear). I havenât tried to learn more about the ways in which the wind is blowing or about any number of tragedies happening around the world. </p>\n\n\n\n<p>And I have, thus far, successfully convinced myself that doing this isnât putting my head in the sand.</p>\n\n\n\n<p>I am not reading the news and I am not forming coherent opinions about it because it was slowly killing me. I was dying from the exposure to the constant stream of information. I was drowning in the flood of hot takes and factoids that only seem to matter for the moment during which they have been uttered. I was filling all of the small moments of my life with little doses of poison, building up more tolerance to take more and more inside me. </p>\n\n\n\n<p>And I donât want to die, at least not like that. So, I will engage when I able and when I can actually do something good for myself and others. I will absolutely vote and volunteer my time. I still plan to work as an Election Judge this November (having had an incredible time doing so for the primary just a few weeks ago). I will still engage with my kids or my partner or my friends as they try to sort out their own political conundrums.</p>\n\n\n\n<p>But, I will not be reading the news. I will not be consuming every word of commentary from the curated sources that I have been building for years. Not because there arenât things worth fighting for in this election and not because I want to just âlet whatever happens happen.â No, I will not be reading the news because it isnât good for me. Not healthy and not valuable. </p>\n\n\n\n<p>I am living in a post-news world, and for the moment, it feels kind of okay. Who knew?</p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-23756-6937106f939ee\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=23756&amp;origin=learningischange.com&amp;obj_id=113784134-23756-6937106f939ee\" data-name=\"like-post-frame-113784134-23756-6937106f939ee\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
+      "content_filtered": "I used to read the news. At all times of the day and night. I used to perseverate upon every new headline and breaking story. For years I did this. And I wasnât really sure how to stop. I knew that it wasnât healthy for me. I knew that it wasnât âlife affirmingâ or giving me much hope for the future, and yet I did it. Constantly. For a long time I thought I did it because I wanted to know what other people think, but that wasnât quite the truth. Instead, I read the news religiously because I wanted to know what I thought. I wanted to see all of the takes on the dayâs information and simply understand it enough to form a coherent opinion. And yet, these coherent opinions didnât make me happy. They didnât bring new relationships into my life or deepen the ones that I already have. Rather, these coherent opinions crowded out my days. They stopped me from having time to read any long work of fiction. They halted my ability to see other people as anything other than someone playing for the Red team or the Blue team. They made me disregard the fact that we are all just trying to survive in a modern world filled with infinite distractions. My opinions about the news, even more than the news itself, were the reason why I couldnât sleep at night. They are the reason why I was considering moving to a different country. They are the reason why I was so incredibly angry all the time. But, Iâm not reading the news right now. At least, not most of the time. I read a single article about the attempted assassination of Donald Trump. I read a single newsletter analysis on the dismissal of the confidential documents case in Florida. I watched a single video of Jon Stewart attempting to explain the madness that was the RNC. I havenât scrolled Twitter or Threads. I havenât looked at TikTok or Instagram Reels. I havenât looked up the latest poll numbers or tried to wade into the waters of âwill he or wonât heâ drop out of the race (Joe Biden, if that wasnât clear). I havenât tried to learn more about the ways in which the wind is blowing or about any number of tragedies happening around the world. And I have, thus far, successfully convinced myself that doing this isnât putting my head in the sand. I am not reading the news and I am not forming coherent opinions about it because it was slowly killing me. I was dying from the exposure to the constant stream of information. I was drowning in the flood of hot takes and factoids that only seem to matter for the moment during which they have been uttered. I was filling all of the small moments of my life with little doses of poison, building up more tolerance to take more and more inside me. And I donât want to die, at least not like that. So, I will engage when I able and when I can actually do something good for myself and others. I will absolutely vote and volunteer my time. I still plan to work as an Election Judge this November (having had an incredible time doing so for the primary just a few weeks ago). I will still engage with my kids or my partner or my friends as they try to sort out their own political conundrums. But, I will not be reading the news. I will not be consuming every word of commentary from the curated sources that I have been building for years. Not because there arenât things worth fighting for in this election and not because I want to just âlet whatever happens happen.â No, I will not be reading the news because it isnât good for me. Not healthy and not valuable. I am living in a post-news world, and for the moment, it feels kind of okay. Who knew?",
+      "excerpt": "I used to read the news. At all times of the day and night. I used to perseverate upon every new headline and breaking story. For years I did this. And I wasnât really sure how to stop. I knew that ...",
+      "guid": "https://learningischange.com/2024/07/21/on-not-reading-the-news/",
+      "comment_status": "open",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Video Posts",
+          "slug": "videos",
+          "url": "/category/videos/"
+        },
+        {
+          "name": "Recommendations",
+          "slug": "recs",
+          "url": "/category/recs/"
+        },
+        {
+          "name": "Blogging Projects",
+          "slug": "blogging-projects",
+          "url": "/category/blogging-projects/"
+        },
+        {
+          "name": "Politics",
+          "slug": "politics",
+          "url": "/category/politics/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "election",
+          "slug": "election",
+          "url": "/tag/election/"
+        },
+        {
+          "name": "Information Literacy",
+          "slug": "information-literacy",
+          "url": "/tag/information-literacy/"
+        },
+        {
+          "name": "Mental Health",
+          "slug": "mental-health",
+          "url": "/tag/mental-health/"
+        },
+        {
+          "name": "news",
+          "slug": "news",
+          "url": "/tag/news/"
+        }
+      ],
+      "path": "2024/07/21/on-not-reading-the-news/index.html",
+      "url": "https://learningischange.com/2024/07/21/on-not-reading-the-news/",
+      "word_count": 671,
+      "reading_time_minutes": 4,
+      "content_hash": "-617408a1",
+      "images": [
+        "https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=1225%2C1701&ssl=1"
+      ],
+      "links": {
+        "internal": [],
+        "external": [
+          "https://nymag.com/intelligencer/article/trump-rally-shooting-live-updates.html",
+          "https://joycevance.substack.com/p/a-bad-decision?publication_id=607357&post_id=146636404&triggerShare=true&isFreemail=true&r=hbo1&triedRedirect=true",
+          "https://www.youtube.com/watch?v=u8yL3I_6Oco&t=598s"
+        ]
+      },
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "history": [
+        {
+          "date": "2026-01-14T19:37:33.681Z",
+          "action": "created",
+          "tool": "database-generator",
+          "changes": [
+            "initial-scan"
+          ],
+          "notes": "Initial database generation"
+        }
+      ]
+    }
+  ]
+}
