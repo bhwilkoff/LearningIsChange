@@ -466,9 +466,21 @@
                     <label for="categorySelect">Select Category</label>
                     <select id="categorySelect"><option value="">-- Select a category --</option></select>
                 </div>
-                <div class="tag-input-wrapper">
-                    <input type="text" id="newCategory" placeholder="Or create new category...">
-                    <button class="btn btn-secondary" onclick="addNewCategory()">+ Add</button>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-light);">
+                    <label style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">Or create new category:</label>
+                    <div class="form-grid" style="margin-top: 10px;">
+                        <div class="form-group">
+                            <label for="newCategoryParent">Parent (optional)</label>
+                            <select id="newCategoryParent"><option value="">— No parent (top-level) —</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="newCategory">Category Name</label>
+                            <div class="tag-input-wrapper" style="margin-top: 0;">
+                                <input type="text" id="newCategory" placeholder="New category name...">
+                                <button class="btn btn-secondary" onclick="addNewCategory()">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="selectedCategory" class="tag-selector"></div>
             </div>
@@ -762,7 +774,20 @@
         }
         
         function getEditorContent() {
-            return document.getElementById('editor-content').innerHTML;
+            // Clone the editor content to avoid modifying the DOM
+            const editor = document.getElementById('editor-content');
+            const clone = editor.cloneNode(true);
+            
+            // Replace base64 images with their final paths
+            clone.querySelectorAll('img.inserted-image').forEach(img => {
+                if (img.dataset.finalPath) {
+                    img.src = img.dataset.finalPath;
+                    img.removeAttribute('data-final-path');
+                    img.classList.remove('inserted-image');
+                }
+            });
+            
+            return clone.innerHTML;
         }
         
         function getEditorText() {
@@ -827,19 +852,103 @@
         
         function populateCategories() {
             const select = document.getElementById('categorySelect');
+            const parentSelect = document.getElementById('newCategoryParent');
+            
             select.innerHTML = '<option value="">-- Select a category --</option>';
+            parentSelect.innerHTML = '<option value="">— No parent (top-level) —</option>';
+            
             const categories = Object.values(database.taxonomies.categories?.items || {});
-            categories.sort((a, b) => a.name.localeCompare(b.name));
+            
+            // Build lookup maps by both ID and slug
+            const categoryById = {};
+            const categoryBySlug = {};
+            
             categories.forEach(cat => {
-                const opt = document.createElement('option');
-                opt.value = cat.slug;
-                opt.textContent = cat.name;
-                opt.dataset.name = cat.name;
-                select.appendChild(opt);
+                const catData = { ...cat, children: [] };
+                if (cat.id) categoryById[cat.id] = catData;
+                if (cat.slug) categoryBySlug[cat.slug] = catData;
             });
+            
+            // Organize into parent-child relationships
+            const rootCategories = [];
+            
+            categories.forEach(cat => {
+                const catData = categoryBySlug[cat.slug];
+                if (!catData) return;
+                
+                // Check for parent - could be ID (number) or slug (string)
+                let parentCat = null;
+                if (cat.parent) {
+                    // Try as ID first, then as slug
+                    parentCat = categoryById[cat.parent] || categoryBySlug[cat.parent];
+                }
+                
+                if (parentCat) {
+                    parentCat.children.push(catData);
+                    catData.parentSlug = parentCat.slug;
+                    catData.parentName = parentCat.name;
+                } else {
+                    rootCategories.push(catData);
+                }
+            });
+            
+            // Sort alphabetically
+            rootCategories.sort((a, b) => a.name.localeCompare(b.name));
+            
+            // Recursive function to build full path
+            function getFullPath(cat) {
+                if (cat.parentSlug) {
+                    const parent = categoryBySlug[cat.parentSlug];
+                    if (parent) {
+                        return getFullPath(parent) + '/' + cat.slug;
+                    }
+                }
+                return cat.slug;
+            }
+            
+            // Recursive function to add options with indentation
+            function addCategoryOptions(cats, depth = 0) {
+                cats.forEach(cat => {
+                    const fullPath = getFullPath(cat);
+                    
+                    // Main category selector
+                    const opt = document.createElement('option');
+                    opt.value = cat.slug;
+                    const indent = '— '.repeat(depth);
+                    opt.textContent = indent + cat.name;
+                    opt.dataset.name = cat.name;
+                    opt.dataset.parent = cat.parentSlug || '';
+                    opt.dataset.parentName = cat.parentName || '';
+                    opt.dataset.fullPath = fullPath;
+                    select.appendChild(opt);
+                    
+                    // Parent category selector (for creating new nested categories)
+                    const parentOpt = document.createElement('option');
+                    parentOpt.value = cat.slug;
+                    parentOpt.textContent = indent + cat.name;
+                    parentOpt.dataset.name = cat.name;
+                    parentSelect.appendChild(parentOpt);
+                    
+                    // Add children with increased depth
+                    if (cat.children && cat.children.length > 0) {
+                        cat.children.sort((a, b) => a.name.localeCompare(b.name));
+                        addCategoryOptions(cat.children, depth + 1);
+                    }
+                });
+            }
+            
+            addCategoryOptions(rootCategories);
+            
             select.addEventListener('change', function() {
                 if (this.value) {
-                    selectedCategory = { slug: this.value, name: this.options[this.selectedIndex].dataset.name };
+                    const opt = this.options[this.selectedIndex];
+                    selectedCategory = { 
+                        slug: this.value, 
+                        name: opt.dataset.name,
+                        parent: opt.dataset.parent || null,
+                        parentName: opt.dataset.parentName || null,
+                        fullPath: opt.dataset.fullPath || this.value
+                    };
                     updateSelectedCategory();
                 }
             });
@@ -892,9 +1001,14 @@
         
         function updateSelectedCategory() {
             const container = document.getElementById('selectedCategory');
-            container.innerHTML = selectedCategory 
-                ? `<span class="tag-chip selected">${selectedCategory.name} <span onclick="removeCategory()" style="cursor:pointer; margin-left:5px;">×</span></span>` 
-                : '';
+            if (selectedCategory) {
+                const displayName = selectedCategory.parentName 
+                    ? `${selectedCategory.parentName} › ${selectedCategory.name}` 
+                    : selectedCategory.name;
+                container.innerHTML = `<span class="tag-chip selected">${displayName} <span onclick="removeCategory()" style="cursor:pointer; margin-left:5px;">×</span></span>`;
+            } else {
+                container.innerHTML = '';
+            }
         }
         
         function removeCategory() {
@@ -905,11 +1019,24 @@
         
         function addNewCategory() {
             const input = document.getElementById('newCategory');
+            const parentSelect = document.getElementById('newCategoryParent');
             const name = input.value.trim();
             if (!name) return;
-            selectedCategory = { slug: LiCAdmin.slugify(name), name };
+            
+            const slug = LiCAdmin.slugify(name);
+            const parentSlug = parentSelect.value || null;
+            const parentName = parentSlug ? parentSelect.options[parentSelect.selectedIndex].dataset.name : null;
+            
+            selectedCategory = { 
+                slug, 
+                name,
+                parent: parentSlug,
+                parentName: parentName,
+                fullPath: parentSlug ? `${parentSlug}/${slug}` : slug
+            };
             updateSelectedCategory();
             input.value = '';
+            parentSelect.value = '';
         }
         
         function addTag() {
@@ -979,10 +1106,51 @@
             const img = uploadedImages[idx];
             const date = document.getElementById('postDate').value;
             const [year, month] = date.split('-');
-            const imgUrl = `/wp-content/uploads/${year}/${month}/${img.name}`;
-            const imgHtml = `<img src="${imgUrl}" alt="${img.name}">`;
-            document.getElementById('editor-content').focus();
-            document.execCommand('insertHTML', false, imgHtml);
+            const finalPath = `/wp-content/uploads/${year}/${month}/${img.name}`;
+            
+            const editor = document.getElementById('editor-content');
+            editor.focus();
+            
+            // Create image element with base64 preview for editing
+            // Store final path in data attribute for generation
+            const imgEl = document.createElement('img');
+            imgEl.src = img.preview; // Use base64 preview so it displays in editor
+            imgEl.alt = img.name;
+            imgEl.dataset.finalPath = finalPath; // Store real path for later
+            imgEl.style.maxWidth = '100%';
+            imgEl.style.height = 'auto';
+            imgEl.style.display = 'block';
+            imgEl.style.margin = '1em 0';
+            imgEl.className = 'inserted-image';
+            
+            // Get current selection
+            const selection = window.getSelection();
+            
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                
+                // Check if selection is within editor
+                if (editor.contains(range.commonAncestorContainer)) {
+                    range.deleteContents();
+                    range.insertNode(imgEl);
+                    
+                    // Move cursor after image
+                    range.setStartAfter(imgEl);
+                    range.setEndAfter(imgEl);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                } else {
+                    // Selection not in editor, append to end
+                    editor.appendChild(imgEl);
+                }
+            } else {
+                // No selection, append to end
+                editor.appendChild(imgEl);
+            }
+            
+            // Add a line break after for continued typing
+            const br = document.createElement('br');
+            imgEl.after(br);
         }
         
         function removeImage(idx) {
@@ -1062,9 +1230,10 @@
                 updateProgress(70, 'Updating category/tag archives...');
                 
                 if (document.getElementById('updateCategoryArchive').checked && selectedCategory) {
+                    const catPath = selectedCategory.fullPath || selectedCategory.slug;
                     const catArchive = await generateCategoryArchive(selectedCategory, { title, date, slug, excerpt, postUrl, tags: selectedTags });
-                    generatedFiles[`category/${selectedCategory.slug}/index.html`] = catArchive;
-                    log(`✓ Generated category archive: category/${selectedCategory.slug}/`, 'success');
+                    generatedFiles[`category/${catPath}/index.html`] = catArchive;
+                    log(`✓ Generated category archive: category/${catPath}/`, 'success');
                 }
                 
                 if (document.getElementById('updateTagArchives').checked && selectedTags.length > 0) {
@@ -1089,6 +1258,7 @@
             const { title, date, content, category, tags, year, month, day, slug } = data;
             const dateFormatted = LiCAdmin.formatDate(date);
             const tagsHtml = tags.map(t => `<a href="/tag/${t.slug}/" rel="tag">${t.name}</a>`).join(', ');
+            const categoryPath = category ? (category.fullPath || category.slug) : '';
             
             return `<!DOCTYPE html>
 <html lang="en-US">
@@ -1104,7 +1274,7 @@
     </header>
     
     <div id="breadcrumbs">
-        <a href="/">Home</a> › ${category ? `<a href="/category/${category.slug}/">${category.name}</a> › ` : ''}${title}
+        <a href="/">Home</a> › ${category ? `<a href="/category/${categoryPath}/">${category.name}</a> › ` : ''}${title}
     </div>
     
     <main>
@@ -1115,7 +1285,7 @@
             </div>
             <div class="entry-content">${content}</div>
             <footer class="entry-footer">
-                ${category ? `Posted in <a href="/category/${category.slug}/">${category.name}</a>` : ''}
+                ${category ? `Posted in <a href="/category/${categoryPath}/">${category.name}</a>` : ''}
                 ${tags.length > 0 ? ` • Tagged ${tagsHtml}` : ''}
             </footer>
         </article>
@@ -1159,7 +1329,19 @@
         
         async function generateCategoryArchive(category, newPost) {
             const postsHtml = generatePostExcerptHtml({ title: newPost.title, url: newPost.postUrl, date_published: newPost.date, excerpt: newPost.excerpt });
-            return generateArchivePageHtml({ title: `Category: ${category.name}`, breadcrumb: `<a href="/">Home</a> › ${category.name}`, content: postsHtml });
+            
+            // Build breadcrumb with parent if present
+            let breadcrumb = '<a href="/">Home</a>';
+            if (category.parent && category.parentName) {
+                breadcrumb += ` › <a href="/category/${category.parent}/">${category.parentName}</a>`;
+            }
+            breadcrumb += ` › ${category.name}`;
+            
+            return generateArchivePageHtml({ 
+                title: `Category: ${category.name}`, 
+                breadcrumb: breadcrumb, 
+                content: postsHtml 
+            });
         }
         
         async function generateTagArchive(tag, newPost) {
