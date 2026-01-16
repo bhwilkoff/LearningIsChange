@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Generator – Learning is Change</title>
+    <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #0085b2;
+            --accent-hover: #006a8e;
+            --accent-light: rgba(0, 133, 178, 0.1);
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-muted: #999;
+            --bg-primary: #fff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #eef1f3;
+            --border-color: #ddd;
+            --border-light: #eee;
+            --success: #28a745;
+            --warning: #f0ad4e;
+            --error: #d9534f;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+        
+        #masthead { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); }
+        
+        #site-header-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        #branding { display: flex; align-items: center; gap: 15px; }
+        #site-title { font-size: 1.8rem; font-weight: 700; margin: 0; }
+        #site-title a { color: var(--text-primary); text-decoration: none; }
+        #site-title a:hover { color: var(--accent); }
+        #site-description { color: var(--text-secondary); font-size: 0.95rem; font-style: italic; font-family: 'Lora', Georgia, serif; }
+        
+        .header-nav { display: flex; gap: 25px; }
+        .header-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        .header-nav a:hover { color: var(--accent); }
+        
+        #header-image-main {
+            height: 200px;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background-image: url('https://learningischange.com/wp-content/uploads/2016/07/cropped-14747.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        #header-image-main::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+        }
+        
+        .page-title-overlay {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .page-title-overlay h1 { font-size: 2.2rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3); margin-bottom: 5px; }
+        .page-title-overlay p { font-family: 'Lora', Georgia, serif; font-style: italic; opacity: 0.9; }
+        
+        #breadcrumbs-container { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 12px 20px; }
+        #breadcrumbs { max-width: 1200px; margin: 0 auto; font-size: 0.9rem; color: var(--text-muted); }
+        #breadcrumbs a { color: var(--accent); text-decoration: none; }
+        #breadcrumbs a:hover { text-decoration: underline; }
+        #breadcrumbs .separator { margin: 0 8px; color: var(--border-color); }
+        
+        #content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+        
+        @media (max-width: 900px) { #content { grid-template-columns: 1fr; } }
+        
+        main { background: var(--bg-primary); border-radius: 4px; box-shadow: var(--shadow); }
+        .article-inner { padding: 30px; }
+        
+        .section { margin-bottom: 30px; }
+        .section:last-child { margin-bottom: 0; }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-light);
+        }
+        
+        .section-header h2 { font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+        .section-icon { font-size: 1.2rem; }
+        
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group label { font-weight: 600; font-size: 0.9rem; color: var(--text-secondary); }
+        .form-group input, .form-group select {
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+        .form-group input[type="password"] { font-family: monospace; letter-spacing: 2px; }
+        
+        .info-box {
+            background: var(--accent-light);
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            border-radius: 0 4px 4px 0;
+            margin: 20px 0;
+        }
+        .info-box h4 { color: var(--accent); font-size: 0.95rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .info-box p { color: var(--text-secondary); font-size: 0.9rem; margin: 0; line-height: 1.6; }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning);
+            padding: 15px 20px;
+            border-radius: 0 4px 4px 0;
+            margin: 20px 0;
+        }
+        .warning-box h4 { color: #856404; font-size: 0.95rem; margin-bottom: 6px; }
+        .warning-box p { color: #856404; font-size: 0.9rem; margin: 0; }
+        
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover:not(:disabled) { background: var(--accent-hover); box-shadow: var(--shadow); }
+        .btn-secondary { background: var(--bg-tertiary); color: var(--text-primary); }
+        .btn-secondary:hover:not(:disabled) { background: var(--border-color); }
+        .btn-warning { background: var(--warning); color: #333; }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        
+        .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .phase-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+        .phase-badge.active { background: var(--accent); color: #fff; animation: pulse 2s infinite; }
+        .phase-badge.paused { background: var(--warning); color: #333; }
+        .phase-badge.error { background: var(--error); color: #fff; }
+        
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+        
+        .progress-bar-container { background: var(--bg-tertiary); border-radius: 10px; height: 20px; overflow: hidden; margin-bottom: 20px; }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #3498db);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+            min-width: 35px;
+        }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; }
+        .stat-card { background: var(--bg-secondary); padding: 15px; border-radius: 4px; text-align: center; border: 1px solid var(--border-light); }
+        .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--accent); line-height: 1.2; }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+        
+        /* Rate Limit Timer */
+        .rate-limit-timer {
+            background: #fff3cd;
+            border: 2px solid var(--warning);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .rate-limit-timer h3 { color: #856404; margin-bottom: 10px; }
+        .rate-limit-timer .countdown { font-size: 2.5rem; font-weight: 700; color: var(--accent); font-family: monospace; }
+        .rate-limit-timer p { color: #856404; margin-top: 10px; font-size: 0.9rem; }
+        .rate-limit-timer .btn-group { justify-content: center; margin-top: 15px; }
+        
+        .log-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+        .log-entry { padding: 2px 0; border-bottom: 1px solid var(--border-light); }
+        .log-entry:last-child { border-bottom: none; }
+        .log-entry.info { color: var(--text-secondary); }
+        .log-entry.success { color: var(--success); }
+        .log-entry.warning { color: var(--warning); }
+        .log-entry.error { color: var(--error); }
+        .log-entry.highlight { color: var(--accent); font-weight: 600; }
+        .log-timestamp { color: var(--text-muted); margin-right: 10px; font-size: 0.8rem; }
+        
+        .output-files { display: grid; gap: 12px; }
+        .output-file {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+        }
+        .output-file-icon { font-size: 1.8rem; }
+        .output-file-info { flex: 1; }
+        .output-file-name { font-weight: 600; color: var(--text-primary); font-size: 0.95rem; }
+        .output-file-size { font-size: 0.85rem; color: var(--text-muted); }
+        .download-btn { padding: 8px 16px; font-size: 0.85rem; }
+        
+        .tabs { display: flex; gap: 5px; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; }
+        .tab {
+            padding: 10px 18px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-family: inherit;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s;
+        }
+        .tab:hover { color: var(--text-primary); }
+        .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        .schema-preview {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            padding: 20px;
+            max-height: 400px;
+            overflow: auto;
+        }
+        .schema-preview pre {
+            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 0;
+            color: var(--text-primary);
+        }
+        
+        #sidebar { display: flex; flex-direction: column; gap: 25px; }
+        .widget { background: var(--bg-primary); border-radius: 4px; box-shadow: var(--shadow); padding: 20px; }
+        .widget h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-light); }
+        .widget ul { list-style: none; padding: 0; margin: 0; }
+        .widget li { padding: 8px 0; border-bottom: 1px solid var(--border-light); font-size: 0.9rem; }
+        .widget li:last-child { border-bottom: none; }
+        .widget a { color: var(--accent); text-decoration: none; }
+        .widget a:hover { text-decoration: underline; }
+        .widget p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+        
+        footer { background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 40px; }
+        footer a { color: var(--accent); text-decoration: none; }
+        
+        .hidden { display: none !important; }
+        
+        @media (max-width: 600px) {
+            #site-header-main { flex-direction: column; text-align: center; gap: 15px; }
+            .header-nav { justify-content: center; }
+            .form-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header id="masthead">
+        <div id="site-header-main">
+            <div id="branding">
+                <div id="site-text">
+                    <h1 id="site-title"><a href="https://learningischange.com">Learning is Change</a></h1>
+                    <span id="site-description">Tools & Utilities</span>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="https://learningischange.com">← Back to Site</a>
+                <a href="https://github.com/bhwilkoff/LearningIsChange">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="header-image-main">
+        <div class="page-title-overlay">
+            <h1>📚 Database Generator</h1>
+            <p>Create a searchable database from your static site</p>
+        </div>
+    </div>
+
+    <div id="breadcrumbs-container">
+        <div id="breadcrumbs">
+            <a href="https://learningischange.com">Home</a>
+            <span class="separator">›</span>
+            <a href="#">Tools</a>
+            <span class="separator">›</span>
+            <span>Database Generator</span>
+        </div>
+    </div>
+
+    <div id="content">
+        <main>
+            <article class="article-inner">
+                
+                <section class="section">
+                    <div class="section-header">
+                        <span class="section-icon">⚙️</span>
+                        <h2>Configuration</h2>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="githubToken">GitHub Personal Access Token</label>
+                            <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="repoOwner">Repository Owner</label>
+                            <input type="text" id="repoOwner" value="bhwilkoff" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="repoName">Repository Name</label>
+                            <input type="text" id="repoName" value="LearningIsChange" placeholder="repo-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch">Branch</label>
+                            <input type="text" id="branch" value="main" placeholder="main">
+                        </div>
+                        <div class="form-group">
+                            <label for="siteUrl">Site URL</label>
+                            <input type="text" id="siteUrl" value="https://learningischange.com" placeholder="https://example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="outputMode">Output Mode</label>
+                            <select id="outputMode">
+                                <option value="download">Download Files Locally</option>
+                                <option value="commit">Commit to Repository</option>
+                                <option value="both">Both Download and Commit</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h4>ℹ️ How This Works</h4>
+                        <p>This tool scans your GitHub Pages repository, extracts metadata from all HTML files (posts, pages, archives), and generates a JSON database plus a SQLite file for client-side search. Posts are detected by their URL pattern (YYYY/MM/DD/slug/) and HTML classes. Categories and tags are extracted from article classes and page links.</p>
+                    </div>
+                    
+                    <div class="warning-box" id="resumeNotice" style="display: none;">
+                        <h4>⚡ Previous Session Found</h4>
+                        <p>You have a previous session with <span id="resumeCount">0</span> files already processed. Click "Resume" to continue, or "Start Fresh" to begin again.</p>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-primary" id="startBtn" onclick="startGeneration()">
+                            🚀 Start Generation
+                        </button>
+                        <button class="btn btn-warning" id="resumeBtn" onclick="resumeGeneration()" style="display: none;">
+                            ▶️ Resume
+                        </button>
+                        <button class="btn btn-secondary" id="pauseBtn" onclick="togglePause()" disabled>
+                            ⏸️ Pause
+                        </button>
+                        <button class="btn btn-secondary" id="resetBtn" onclick="resetGenerator()">
+                            🔄 Reset
+                        </button>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-header">
+                        <span class="section-icon">📊</span>
+                        <h2>Progress</h2>
+                    </div>
+                    
+                    <div class="progress-header">
+                        <span>Status: <span class="phase-badge" id="phaseIndicator">Idle</span></span>
+                        <span id="rateLimitInfo" style="font-size: 0.85rem; color: var(--text-muted);"></span>
+                    </div>
+                    
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar" style="width: 0%">0%</div>
+                    </div>
+                    
+                    <!-- Rate Limit Timer -->
+                    <div class="rate-limit-timer hidden" id="rateLimitTimer">
+                        <h3>⏳ API Rate Limit Reached</h3>
+                        <div class="countdown" id="countdownDisplay">00:00:00</div>
+                        <p>The GitHub API limit (5,000 requests/hour) has been reached. The tool will automatically resume when the limit resets, or you can resume manually.</p>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" onclick="resumeGeneration()">▶️ Resume Now</button>
+                            <button class="btn btn-secondary" onclick="cancelAutoResume()">❌ Cancel Auto-Resume</button>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="statFilesScanned">0</div>
+                            <div class="stat-label">Files Scanned</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statPosts">0</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statPages">0</div>
+                            <div class="stat-label">Pages</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statCategories">0</div>
+                            <div class="stat-label">Categories</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statTags">0</div>
+                            <div class="stat-label">Tags</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statErrors">0</div>
+                            <div class="stat-label">Errors</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-header">
+                        <span class="section-icon">📝</span>
+                        <h2>Activity Log</h2>
+                    </div>
+                    <div class="log-container" id="logContainer"></div>
+                </section>
+
+                <section class="section hidden" id="outputSection">
+                    <div class="section-header">
+                        <span class="section-icon">📦</span>
+                        <h2>Generated Files</h2>
+                    </div>
+                    
+                    <div class="btn-group" style="margin-bottom: 20px;">
+                        <button class="btn btn-primary" id="commitBtn" onclick="manualCommit()">
+                            📤 Commit to GitHub
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadAllFiles()">
+                            ⬇️ Download All Files
+                        </button>
+                    </div>
+                    
+                    <div class="tabs">
+                        <button class="tab active" onclick="showTab('files', this)">Files</button>
+                        <button class="tab" onclick="showTab('preview', this)">Preview</button>
+                        <button class="tab" onclick="showTab('schema', this)">Schema</button>
+                    </div>
+                    
+                    <div id="filesTab" class="tab-content active">
+                        <div class="output-files" id="outputFiles"></div>
+                    </div>
+                    
+                    <div id="previewTab" class="tab-content">
+                        <div class="schema-preview">
+                            <pre id="dataPreview">Select a file to preview its contents...</pre>
+                        </div>
+                    </div>
+                    
+                    <div id="schemaTab" class="tab-content">
+                        <div class="schema-preview">
+                            <pre id="schemaContent"></pre>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+        </main>
+
+        <aside id="sidebar">
+            <div class="widget">
+                <h3>About This Tool</h3>
+                <p>The Database Generator creates a file-based database from your static GitHub Pages site, enabling features like search that typically require a dynamic server.</p>
+                <p style="margin-top: 10px;"><strong>Rate Limits:</strong> GitHub allows 5,000 API requests/hour. Large repos may require multiple sessions with automatic pause/resume.</p>
+            </div>
+            
+            <div class="widget">
+                <h3>Generated Files</h3>
+                <ul>
+                    <li><strong>manifest.json</strong> – Master index</li>
+                    <li><strong>posts/YYYY.json</strong> – Posts by year</li>
+                    <li><strong>pages.json</strong> – Static pages</li>
+                    <li><strong>taxonomies.json</strong> – Categories & tags</li>
+                    <li><strong>search.db</strong> – SQLite for search</li>
+                </ul>
+            </div>
+            
+            <div class="widget">
+                <h3>Related Tools</h3>
+                <ul>
+                    <li><a href="https://learningischange.com/update/">Mass Updater</a></li>
+                    <li><a href="https://learningischange.com/new/">Post Generator</a></li>
+                    <li><a href="https://learningischange.com/rss-creator/">RSS Creator</a></li>
+                    <li><a href="https://learningischange.com/archive-sync/">Archive Sync</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Database Generator for <a href="https://learningischange.com">Learning is Change</a> • Built with Claude AI</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    
+    <script>
+        // ============================================
+        // STATE & CONFIG
+        // ============================================
+        
+        const DB_NAME = 'LiCDatabaseGenerator';
+        const DB_VERSION = 1;
+        const STORE_NAME = 'generatorState';
+        
+        const state = {
+            isRunning: false,
+            isPaused: false,
+            isRateLimited: false,
+            phase: 'idle',
+            currentIndex: 0,
+            htmlFiles: [],
+            rateLimitReset: null,
+            autoResumeTimer: null,
+            stats: {
+                filesScanned: 0,
+                posts: 0,
+                pages: 0,
+                categories: new Set(),
+                tags: new Set(),
+                errors: 0
+            },
+            database: {
+                manifest: null,
+                posts: {},
+                pages: [],
+                authors: {},
+                taxonomies: { categories: {}, tags: {} },
+                changelog: []
+            },
+            generatedFiles: {},
+            sqliteDb: null
+        };
+        
+        const postSchema = {
+            id: null, wp_post_id: null, title: '', slug: '', type: 'post', status: 'publish',
+            author: { name: '', slug: '', url: '', avatar: '', bio: '' },
+            date_published: null, date_published_gmt: null,
+            date_modified: null, date_modified_gmt: null,
+            content: '', content_filtered: '', excerpt: '', guid: '',
+            comment_status: 'open', comment_count: 0,
+            categories: [], tags: [],
+            path: '', url: '', word_count: 0, reading_time_minutes: 0,
+            content_hash: '', images: [], links: { internal: [], external: [] },
+            schema_type: 'Article', publisher: '', history: []
+        };
+        
+        // ============================================
+        // IndexedDB PERSISTENCE
+        // ============================================
+        
+        function openDB() {
+            return new Promise((resolve, reject) => {
+                const request = indexedDB.open(DB_NAME, DB_VERSION);
+                request.onerror = () => reject(request.error);
+                request.onsuccess = () => resolve(request.result);
+                request.onupgradeneeded = (event) => {
+                    const db = event.target.result;
+                    if (!db.objectStoreNames.contains(STORE_NAME)) {
+                        db.createObjectStore(STORE_NAME);
+                    }
+                };
+            });
+        }
+        
+        async function saveState() {
+            try {
+                const db = await openDB();
+                const tx = db.transaction(STORE_NAME, 'readwrite');
+                const store = tx.objectStore(STORE_NAME);
+                
+                // Convert Sets to Arrays for storage
+                const saveData = {
+                    currentIndex: state.currentIndex,
+                    htmlFiles: state.htmlFiles,
+                    stats: {
+                        ...state.stats,
+                        categories: Array.from(state.stats.categories),
+                        tags: Array.from(state.stats.tags)
+                    },
+                    database: state.database,
+                    rateLimitReset: state.rateLimitReset,
+                    idCounter: idCounter,
+                    savedAt: new Date().toISOString()
+                };
+                
+                store.put(saveData, 'currentSession');
+                await tx.complete;
+            } catch (err) {
+                console.error('Failed to save state:', err);
+            }
+        }
+        
+        async function loadState() {
+            try {
+                const db = await openDB();
+                const tx = db.transaction(STORE_NAME, 'readonly');
+                const store = tx.objectStore(STORE_NAME);
+                
+                return new Promise((resolve, reject) => {
+                    const request = store.get('currentSession');
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(request.error);
+                });
+            } catch (err) {
+                console.error('Failed to load state:', err);
+                return null;
+            }
+        }
+        
+        async function clearSavedState() {
+            try {
+                const db = await openDB();
+                const tx = db.transaction(STORE_NAME, 'readwrite');
+                const store = tx.objectStore(STORE_NAME);
+                store.delete('currentSession');
+            } catch (err) {
+                console.error('Failed to clear state:', err);
+            }
+        }
+        
+        // ============================================
+        // LOGGING & UI
+        // ============================================
+        
+        function log(message, type = 'info') {
+            const container = document.getElementById('logContainer');
+            const timestamp = new Date().toLocaleTimeString();
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.innerHTML = `<span class="log-timestamp">[${timestamp}]</span>${message}`;
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+        }
+        
+        function updateStats() {
+            document.getElementById('statFilesScanned').textContent = state.stats.filesScanned;
+            document.getElementById('statPosts').textContent = state.stats.posts;
+            document.getElementById('statPages').textContent = state.stats.pages;
+            document.getElementById('statCategories').textContent = state.stats.categories.size;
+            document.getElementById('statTags').textContent = state.stats.tags.size;
+            document.getElementById('statErrors').textContent = state.stats.errors;
+        }
+        
+        function updateProgress(percent, phase = null) {
+            const bar = document.getElementById('progressBar');
+            bar.style.width = `${percent}%`;
+            bar.textContent = `${Math.round(percent)}%`;
+            
+            if (phase) {
+                state.phase = phase;
+                const indicator = document.getElementById('phaseIndicator');
+                indicator.textContent = phase;
+                indicator.className = 'phase-badge';
+                if (state.isRunning && !state.isPaused && !state.isRateLimited) {
+                    indicator.classList.add('active');
+                } else if (state.isRateLimited) {
+                    indicator.classList.add('paused');
+                }
+            }
+        }
+        
+        function updateRateLimitInfo(remaining, limit, reset) {
+            const info = document.getElementById('rateLimitInfo');
+            info.textContent = `API: ${remaining}/${limit} remaining`;
+        }
+        
+        // ============================================
+        // RATE LIMIT TIMER
+        // ============================================
+        
+        function showRateLimitTimer(resetTime) {
+            state.isRateLimited = true;
+            state.rateLimitReset = resetTime;
+            
+            document.getElementById('rateLimitTimer').classList.remove('hidden');
+            document.getElementById('phaseIndicator').textContent = 'Rate Limited';
+            document.getElementById('phaseIndicator').className = 'phase-badge paused';
+            
+            updateCountdown();
+            
+            // Start countdown interval
+            state.autoResumeTimer = setInterval(() => {
+                const remaining = updateCountdown();
+                if (remaining <= 0) {
+                    cancelAutoResume();
+                    log('Rate limit reset! Auto-resuming...', 'highlight');
+                    resumeGeneration();
+                }
+            }, 1000);
+            
+            saveState();
+        }
+        
+        function updateCountdown() {
+            const now = Date.now();
+            const resetTime = state.rateLimitReset * 1000; // Convert to ms
+            const remaining = Math.max(0, resetTime - now);
+            
+            const hours = Math.floor(remaining / (1000 * 60 * 60));
+            const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdownDisplay').textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            return remaining;
+        }
+        
+        function cancelAutoResume() {
+            if (state.autoResumeTimer) {
+                clearInterval(state.autoResumeTimer);
+                state.autoResumeTimer = null;
+            }
+            document.getElementById('rateLimitTimer').classList.add('hidden');
+        }
+        
+        // ============================================
+        // GITHUB API WITH RATE LIMIT HANDLING
+        // ============================================
+        
+        async function githubAPI(endpoint, options = {}) {
+            const token = document.getElementById('githubToken').value;
+            const response = await fetch(`https://api.github.com${endpoint}`, {
+                ...options,
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Accept': 'application/vnd.github.v3+json',
+                    ...options.headers
+                }
+            });
+            
+            // Extract rate limit headers
+            const remaining = parseInt(response.headers.get('x-ratelimit-remaining') || '5000');
+            const limit = parseInt(response.headers.get('x-ratelimit-limit') || '5000');
+            const reset = parseInt(response.headers.get('x-ratelimit-reset') || '0');
+            
+            updateRateLimitInfo(remaining, limit, reset);
+            
+            if (response.status === 403 || response.status === 429) {
+                const rateLimitRemaining = response.headers.get('x-ratelimit-remaining');
+                if (rateLimitRemaining === '0') {
+                    const error = new Error('RATE_LIMITED');
+                    error.resetTime = reset;
+                    throw error;
+                }
+            }
+            
+            if (!response.ok) {
+                throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+            }
+            
+            return response.json();
+        }
+        
+        async function getRepoTree() {
+            const owner = document.getElementById('repoOwner').value;
+            const repo = document.getElementById('repoName').value;
+            const branch = document.getElementById('branch').value;
+            
+            log('Fetching repository tree...', 'info');
+            const data = await githubAPI(`/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`);
+            return data.tree;
+        }
+        
+        async function getFileContent(path) {
+            const owner = document.getElementById('repoOwner').value;
+            const repo = document.getElementById('repoName').value;
+            const branch = document.getElementById('branch').value;
+            
+            const data = await githubAPI(`/repos/${owner}/${repo}/contents/${path}?ref=${branch}`);
+            return atob(data.content);
+        }
+        
+        // ============================================
+        // HTML PARSING - FIXED FOR PROPER DETECTION
+        // ============================================
+        
+        function parsePostFromHTML(html, path) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const siteUrl = document.getElementById('siteUrl').value;
+            
+            const post = JSON.parse(JSON.stringify(postSchema));
+            
+            // ======= DETECT POST TYPE =======
+            // Method 1: Check URL pattern for dated posts (YYYY/MM/DD/slug/)
+            // NOTE: GitHub paths DON'T have leading slash, so pattern is ^(\d{4})/...
+            const dateMatch = path.match(/^(\d{4})\/(\d{2})\/(\d{2})\/([^\/]+)/);
+            
+            // Method 2: Check body classes
+            const body = doc.querySelector('body');
+            const bodyClasses = body ? Array.from(body.classList) : [];
+            const isSinglePost = bodyClasses.includes('single-post') || bodyClasses.includes('single');
+            const isSinglePage = bodyClasses.includes('page') && !bodyClasses.includes('single-post');
+            
+            // Method 3: Check article classes
+            const article = doc.querySelector('article[id^="post-"]');
+            let articleIsPost = false;
+            let articleIsPage = false;
+            let wpPostId = null;
+            
+            if (article) {
+                const idMatch = article.id.match(/post-(\d+)/);
+                wpPostId = idMatch ? parseInt(idMatch[1]) : null;
+                articleIsPost = article.classList.contains('type-post');
+                articleIsPage = article.classList.contains('type-page');
+                if (article.classList.contains('status-publish')) post.status = 'publish';
+            }
+            
+            // Generate a unique ID using counter (more reliable than WordPress IDs which may have duplicates)
+            post.id = getNextId();
+            post.wp_post_id = wpPostId; // Store original WordPress ID separately
+            
+            // Determine type: Posts have date pattern OR type-post class OR single-post body class
+            if (dateMatch || articleIsPost || isSinglePost) {
+                post.type = 'post';
+            } else if (articleIsPage || isSinglePage) {
+                post.type = 'page';
+            } else {
+                // Default: if path looks like a date structure, it's a post
+                post.type = dateMatch ? 'post' : 'page';
+            }
+            
+            // ======= EXTRACT DATE =======
+            if (dateMatch) {
+                const [, year, month, day, slug] = dateMatch;
+                post.slug = slug;
+                post.date_published = `${year}-${month}-${day}T12:00:00Z`;
+                post.date_published_gmt = post.date_published;
+            } else {
+                // For pages, try to get slug from path
+                const slugMatch = path.match(/([^\/]+)\/index\.html$/);
+                post.slug = slugMatch ? slugMatch[1] : path.replace(/\//g, '-').replace(/\.html$/, '');
+                
+                // Try to get date from meta or time element
+                const timeEl = doc.querySelector('time[datetime]');
+                if (timeEl) {
+                    post.date_published = timeEl.getAttribute('datetime');
+                    post.date_published_gmt = post.date_published;
+                }
+            }
+            
+            // ======= TITLE =======
+            const titleEl = doc.querySelector('.entry-title, h1.entry-title, h1[itemprop="headline"], article h1');
+            post.title = titleEl ? titleEl.textContent.trim() : post.slug.replace(/-/g, ' ');
+            
+            // ======= MODIFIED DATE =======
+            const modifiedTime = doc.querySelector('time.updated[datetime], time[itemprop="dateModified"], meta[property="article:modified_time"]');
+            if (modifiedTime) {
+                post.date_modified = modifiedTime.getAttribute('datetime') || modifiedTime.getAttribute('content');
+            } else {
+                post.date_modified = post.date_published;
+            }
+            post.date_modified_gmt = post.date_modified;
+            
+            // ======= AUTHOR =======
+            const authorLink = doc.querySelector('.author.vcard a, .entry-meta .author a, [itemprop="author"] a, a[rel="author"]');
+            if (authorLink) {
+                post.author.name = authorLink.textContent.trim();
+                post.author.url = authorLink.getAttribute('href') || '';
+                const authorSlugMatch = post.author.url.match(/\/author\/([^\/]+)/);
+                post.author.slug = authorSlugMatch ? authorSlugMatch[1] : post.author.name.toLowerCase().replace(/\s+/g, '-');
+            }
+            
+            const authorBio = doc.querySelector('.author-description span, .author-bio, [itemprop="author"] [itemprop="description"]');
+            if (authorBio) post.author.bio = authorBio.textContent.trim();
+            
+            const authorAvatar = doc.querySelector('.author-avatar img, .author-info img, .avatar');
+            if (authorAvatar) post.author.avatar = authorAvatar.getAttribute('src') || '';
+            
+            // ======= CONTENT =======
+            const contentEl = doc.querySelector('.entry-content, [itemprop="articleBody"], article .content');
+            if (contentEl) {
+                post.content = contentEl.innerHTML.trim();
+                post.content_filtered = contentEl.textContent.trim()
+                    .replace(/\s+/g, ' ')
+                    .replace(/Share this:.*$/s, '')
+                    .replace(/Like this:.*$/s, '')
+                    .trim();
+                
+                const words = post.content_filtered.split(/\s+/).filter(w => w.length > 0);
+                post.word_count = words.length;
+                post.reading_time_minutes = Math.ceil(post.word_count / 200);
+                
+                const images = contentEl.querySelectorAll('img');
+                post.images = Array.from(images).map(img => img.getAttribute('src')).filter(Boolean);
+                
+                const links = contentEl.querySelectorAll('a[href]');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && (href.startsWith('/') || href.includes('learningischange.com'))) {
+                        post.links.internal.push(href);
+                    } else if (href && href.startsWith('http')) {
+                        post.links.external.push(href);
+                    }
+                });
+            }
+            
+            post.excerpt = post.content_filtered ? post.content_filtered.substring(0, 200) : '';
+            if (post.content_filtered && post.content_filtered.length > 200) post.excerpt += '...';
+            
+            // ======= CATEGORIES - MULTIPLE DETECTION METHODS =======
+            const seenCats = new Set();
+            
+            // Method 1: Links with /category/ in href
+            doc.querySelectorAll('a[href*="/category/"]').forEach(link => {
+                const href = link.getAttribute('href') || '';
+                // Match /category/slug/ or /category/parent/child/
+                const catMatch = href.match(/\/category\/([^\/]+)(?:\/([^\/]+))?\/?$/);
+                if (catMatch) {
+                    // If there are two segments, first is parent, second is child
+                    const parentSlug = catMatch[2] ? catMatch[1] : null;
+                    const slug = catMatch[2] || catMatch[1];
+                    
+                    if (!seenCats.has(slug)) {
+                        seenCats.add(slug);
+                        const name = link.textContent.trim();
+                        if (name && name.length < 100) { // Sanity check
+                            post.categories.push({ 
+                                name: name, 
+                                slug: slug, 
+                                url: href,
+                                parent: parentSlug
+                            });
+                        }
+                    }
+                }
+            });
+            
+            // Method 2: Article class names (category-xxx)
+            if (article) {
+                Array.from(article.classList).forEach(cls => {
+                    const match = cls.match(/^category-(.+)$/);
+                    if (match && !seenCats.has(match[1])) {
+                        seenCats.add(match[1]);
+                        post.categories.push({ 
+                            name: match[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), 
+                            slug: match[1], 
+                            url: `/category/${match[1]}/` 
+                        });
+                    }
+                });
+            }
+            
+            // Method 3: Body class names (category-xxx)
+            bodyClasses.forEach(cls => {
+                const match = cls.match(/^category-(.+)$/);
+                if (match && !seenCats.has(match[1])) {
+                    seenCats.add(match[1]);
+                    post.categories.push({ 
+                        name: match[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), 
+                        slug: match[1], 
+                        url: `/category/${match[1]}/` 
+                    });
+                }
+            });
+            
+            // ======= TAGS - MULTIPLE DETECTION METHODS =======
+            const seenTags = new Set();
+            
+            // Method 1: Links with /tag/ in href
+            doc.querySelectorAll('a[href*="/tag/"]').forEach(link => {
+                const href = link.getAttribute('href') || '';
+                const tagMatch = href.match(/\/tag\/([^\/]+)/);
+                if (tagMatch && !seenTags.has(tagMatch[1])) {
+                    seenTags.add(tagMatch[1]);
+                    const name = link.textContent.trim();
+                    if (name && name.length < 100) {
+                        post.tags.push({ name: name, slug: tagMatch[1], url: href });
+                    }
+                }
+            });
+            
+            // Method 2: Links with rel="tag"
+            doc.querySelectorAll('a[rel="tag"]').forEach(link => {
+                const href = link.getAttribute('href') || '';
+                const tagMatch = href.match(/\/tag\/([^\/]+)/);
+                if (tagMatch && !seenTags.has(tagMatch[1])) {
+                    seenTags.add(tagMatch[1]);
+                    post.tags.push({ name: link.textContent.trim(), slug: tagMatch[1], url: href });
+                }
+            });
+            
+            // Method 3: Article class names (tag-xxx)
+            if (article) {
+                Array.from(article.classList).forEach(cls => {
+                    const match = cls.match(/^tag-(.+)$/);
+                    if (match && !seenTags.has(match[1])) {
+                        seenTags.add(match[1]);
+                        post.tags.push({ 
+                            name: match[1].replace(/-/g, ' '), 
+                            slug: match[1], 
+                            url: `/tag/${match[1]}/` 
+                        });
+                    }
+                });
+            }
+            
+            // Method 4: Body class names (tag-xxx)
+            bodyClasses.forEach(cls => {
+                const match = cls.match(/^tag-(.+)$/);
+                if (match && !seenTags.has(match[1])) {
+                    seenTags.add(match[1]);
+                    post.tags.push({ 
+                        name: match[1].replace(/-/g, ' '), 
+                        slug: match[1], 
+                        url: `/tag/${match[1]}/` 
+                    });
+                }
+            });
+            
+            // ======= FINALIZE =======
+            post.path = path;
+            post.url = siteUrl + '/' + path.replace(/index\.html$/, '');
+            post.guid = post.url;
+            
+            const commentsSection = doc.querySelector('#comments, .comments-area');
+            post.comment_status = commentsSection ? 'open' : 'closed';
+            post.comment_count = doc.querySelectorAll('.comment').length;
+            
+            const publisher = doc.querySelector('[itemprop="publisher"] [itemprop="name"]');
+            post.publisher = publisher ? (publisher.getAttribute('content') || publisher.textContent) : 'Learning is Change';
+            
+            post.content_hash = hashString(post.content || '');
+            
+            post.history = [{
+                date: new Date().toISOString(),
+                action: 'created',
+                tool: 'database-generator',
+                changes: ['initial-scan'],
+                notes: 'Initial database generation'
+            }];
+            
+            return post;
+        }
+        
+        function hashString(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return hash.toString(16);
+        }
+        
+        // Simple counter for unique IDs (resets each session, but IDs are only used internally)
+        let idCounter = 1;
+        function getNextId() {
+            return idCounter++;
+        }
+        
+        // ============================================
+        // MAIN GENERATION LOGIC
+        // ============================================
+        
+        async function startGeneration(fromIndex = 0) {
+            if (state.isRunning) return;
+            
+            const token = document.getElementById('githubToken').value;
+            if (!token) {
+                log('Please enter a GitHub token', 'error');
+                return;
+            }
+            
+            state.isRunning = true;
+            state.isPaused = false;
+            state.isRateLimited = false;
+            cancelAutoResume();
+            
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('resumeBtn').style.display = 'none';
+            document.getElementById('resumeNotice').style.display = 'none';
+            document.getElementById('pauseBtn').disabled = false;
+            
+            try {
+                // Only fetch tree if starting fresh
+                if (fromIndex === 0 || state.htmlFiles.length === 0) {
+                    updateProgress(5, 'Fetching repository...');
+                    const tree = await getRepoTree();
+                    log(`Found ${tree.length} items in repository`, 'success');
+                    
+                    state.htmlFiles = tree.filter(item => {
+                        if (item.type !== 'blob' || !item.path.endsWith('index.html')) return false;
+                        // Skip year/month archive pages
+                        if (item.path.match(/^\d{4}\/index\.html$/)) return false;
+                        if (item.path.match(/^\d{4}\/\d{2}\/index\.html$/)) return false;
+                        // Skip taxonomy and special pages
+                        if (item.path.startsWith('category/')) return false;
+                        if (item.path.startsWith('tag/')) return false;
+                        if (item.path.startsWith('author/')) return false;
+                        if (item.path.startsWith('wp-')) return false;
+                        if (item.path.startsWith('page/')) return false;
+                        if (item.path === 'index.html') return false;
+                        return true;
+                    });
+                    
+                    log(`Found ${state.htmlFiles.length} content files to process`, 'highlight');
+                }
+                
+                state.currentIndex = fromIndex;
+                updateProgress(10, 'Processing files...');
+                
+                for (let i = fromIndex; i < state.htmlFiles.length; i++) {
+                    state.currentIndex = i;
+                    
+                    if (state.isPaused) {
+                        log('Generation paused by user', 'warning');
+                        saveState();
+                        while (state.isPaused && state.isRunning) {
+                            await new Promise(r => setTimeout(r, 500));
+                        }
+                        if (!state.isRunning) break;
+                        log('Generation resumed', 'success');
+                    }
+                    
+                    const file = state.htmlFiles[i];
+                    const progress = 10 + (i / state.htmlFiles.length) * 60;
+                    updateProgress(progress, `Processing ${i + 1}/${state.htmlFiles.length}: ${file.path.substring(0, 35)}...`);
+                    
+                    try {
+                        const content = await getFileContent(file.path);
+                        const post = parsePostFromHTML(content, file.path);
+                        
+                        state.stats.filesScanned++;
+                        
+                        // Determine if it's a post (has date) or page
+                        if (post.type === 'post' && post.date_published) {
+                            const year = post.date_published.substring(0, 4);
+                            if (!state.database.posts[year]) state.database.posts[year] = [];
+                            state.database.posts[year].push(post);
+                            state.stats.posts++;
+                            
+                            post.categories.forEach(cat => {
+                                state.stats.categories.add(cat.slug);
+                                // Preserve parent info and track count
+                                if (!state.database.taxonomies.categories[cat.slug]) {
+                                    state.database.taxonomies.categories[cat.slug] = { ...cat, count: 0 };
+                                }
+                                state.database.taxonomies.categories[cat.slug].count++;
+                                // Update parent if found
+                                if (cat.parent) {
+                                    state.database.taxonomies.categories[cat.slug].parent = cat.parent;
+                                }
+                            });
+                            post.tags.forEach(tag => {
+                                state.stats.tags.add(tag.slug);
+                                // Track tag count
+                                if (!state.database.taxonomies.tags[tag.slug]) {
+                                    state.database.taxonomies.tags[tag.slug] = { ...tag, count: 0 };
+                                }
+                                state.database.taxonomies.tags[tag.slug].count++;
+                            });
+                            
+                            if (post.author.slug) {
+                                state.database.authors[post.author.slug] = post.author;
+                            }
+                            
+                            const catCount = post.categories.length;
+                            const tagCount = post.tags.length;
+                            log(`✓ Post: ${post.title.substring(0, 40)}... [${catCount} cats, ${tagCount} tags]`, 'success');
+                        } else {
+                            state.database.pages.push(post);
+                            state.stats.pages++;
+                            log(`✓ Page: ${post.title.substring(0, 50)}...`, 'info');
+                        }
+                        
+                        updateStats();
+                        
+                        // Save state periodically (every 50 files)
+                        if (i % 50 === 0) {
+                            await saveState();
+                        }
+                        
+                        // Small delay to be nice to GitHub
+                        await new Promise(r => setTimeout(r, 50));
+                        
+                    } catch (err) {
+                        if (err && err.message === 'RATE_LIMITED') {
+                            log(`⚠️ Rate limit reached at file ${i + 1}/${state.htmlFiles.length}`, 'warning');
+                            log(`Will resume automatically when limit resets...`, 'warning');
+                            await saveState();
+                            showRateLimitTimer(err.resetTime);
+                            return; // Exit but don't clean up - we'll resume
+                        }
+                        
+                        state.stats.errors++;
+                        const errorMsg = err?.message || err?.toString() || 'Unknown error';
+                        log(`✗ Error: ${file.path}: ${errorMsg}`, 'error');
+                        console.error('File processing error:', err);
+                        updateStats();
+                    }
+                }
+                
+                // If we got here, we're done!
+                await finishGeneration();
+                
+            } catch (err) {
+                if (err.message === 'RATE_LIMITED') {
+                    log(`⚠️ Rate limit reached during initial fetch`, 'warning');
+                    await saveState();
+                    showRateLimitTimer(err.resetTime);
+                    return;
+                }
+                const errorMsg = err.message || err.toString() || JSON.stringify(err) || 'Unknown error';
+                log(`Fatal error: ${errorMsg}`, 'error');
+                console.error('Full error:', err);
+                state.isRunning = false;
+                document.getElementById('startBtn').disabled = false;
+                document.getElementById('pauseBtn').disabled = true;
+            }
+        }
+        
+        async function resumeGeneration() {
+            cancelAutoResume();
+            state.isRateLimited = false;
+            document.getElementById('rateLimitTimer').classList.add('hidden');
+            
+            log(`Resuming from file ${state.currentIndex + 1}...`, 'highlight');
+            await startGeneration(state.currentIndex);
+        }
+        
+        async function finishGeneration() {
+            updateProgress(75, 'Generating manifest...');
+            state.database.manifest = generateManifest();
+            log('Generated manifest.json', 'success');
+            
+            updateProgress(80, 'Creating SQLite database...');
+            await generateSQLiteDatabase();
+            log('Generated search.db', 'success');
+            
+            updateProgress(85, 'Preparing files...');
+            await prepareOutputFiles();
+            
+            // Check output mode
+            const outputMode = document.getElementById('outputMode').value;
+            
+            if (outputMode === 'commit' || outputMode === 'both') {
+                updateProgress(90, 'Committing to GitHub...');
+                const commitSuccess = await commitToGitHub();
+                if (!commitSuccess && outputMode === 'commit') {
+                    log('⚠️ Commit failed. You can still download files manually.', 'warning');
+                }
+            }
+            
+            updateProgress(100, 'Complete!');
+            log('🎉 Database generation complete!', 'highlight');
+            log(`Summary: ${state.stats.posts} posts, ${state.stats.pages} pages, ${state.stats.categories.size} categories, ${state.stats.tags.size} tags`, 'highlight');
+            
+            if (outputMode === 'download' || outputMode === 'both') {
+                log('Files are ready for download below.', 'info');
+            }
+            if (outputMode === 'commit' || outputMode === 'both') {
+                log(`View your files at: https://github.com/${document.getElementById('repoOwner').value}/${document.getElementById('repoName').value}/tree/${document.getElementById('branch').value}/database`, 'info');
+            }
+            
+            document.getElementById('outputSection').classList.remove('hidden');
+            displayOutputFiles();
+            displaySchema();
+            
+            // Clear saved state since we're done
+            await clearSavedState();
+            
+            state.isRunning = false;
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+        }
+        
+        function generateManifest() {
+            const siteUrl = document.getElementById('siteUrl').value;
+            const shards = {};
+            
+            for (const [year, posts] of Object.entries(state.database.posts)) {
+                shards[year] = { count: posts.length, hash: hashString(JSON.stringify(posts)) };
+            }
+            
+            return {
+                version: '1.0',
+                generated: new Date().toISOString(),
+                generator: 'LearningIsChange Database Generator v1.0',
+                site: { name: 'Learning is Change', url: siteUrl, description: 'My name is Ben Wilkoff, and I Teach. And Learn. A Lot.' },
+                stats: {
+                    total_posts: state.stats.posts,
+                    total_pages: state.stats.pages,
+                    total_categories: state.stats.categories.size,
+                    total_tags: state.stats.tags.size,
+                    total_authors: Object.keys(state.database.authors).length,
+                    date_range: { earliest: getEarliestDate(), latest: getLatestDate() },
+                    last_modified: new Date().toISOString()
+                },
+                shards: { posts: shards },
+                files: {
+                    manifest: 'database/manifest.json',
+                    pages: 'database/pages.json',
+                    authors: 'database/authors.json',
+                    taxonomies: 'database/taxonomies.json',
+                    changelog: 'database/changelog.json',
+                    search_db: 'database/search.db',
+                    posts_dir: 'database/posts/'
+                }
+            };
+        }
+        
+        function getEarliestDate() {
+            const years = Object.keys(state.database.posts).sort();
+            if (years.length === 0) return null;
+            const posts = state.database.posts[years[0]];
+            if (!posts || posts.length === 0) return null;
+            return posts.sort((a, b) => (a.date_published || '').localeCompare(b.date_published || ''))[0]?.date_published;
+        }
+        
+        function getLatestDate() {
+            const years = Object.keys(state.database.posts).sort().reverse();
+            if (years.length === 0) return null;
+            const posts = state.database.posts[years[0]];
+            if (!posts || posts.length === 0) return null;
+            return posts.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''))[0]?.date_published;
+        }
+        
+        async function generateSQLiteDatabase() {
+            const SQL = await initSqlJs({
+                locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}`
+            });
+            
+            const db = new SQL.Database();
+            
+            // Create main tables - use AUTOINCREMENT to avoid ID conflicts
+            db.run(`
+                CREATE TABLE posts (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT, wp_post_id INTEGER, title TEXT NOT NULL, slug TEXT NOT NULL,
+                    type TEXT DEFAULT 'post', status TEXT DEFAULT 'publish',
+                    author_name TEXT, author_slug TEXT, date_published TEXT, date_modified TEXT,
+                    excerpt TEXT, content_plain TEXT, url TEXT, path TEXT,
+                    word_count INTEGER DEFAULT 0, reading_time INTEGER DEFAULT 0,
+                    comment_count INTEGER DEFAULT 0, content_hash TEXT
+                );
+                CREATE TABLE categories (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, slug TEXT UNIQUE NOT NULL, url TEXT);
+                CREATE TABLE tags (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, slug TEXT UNIQUE NOT NULL, url TEXT);
+                CREATE TABLE post_categories (post_id INTEGER, category_slug TEXT, PRIMARY KEY (post_id, category_slug));
+                CREATE TABLE post_tags (post_id INTEGER, tag_slug TEXT, PRIMARY KEY (post_id, tag_slug));
+                CREATE INDEX idx_posts_date ON posts(date_published);
+                CREATE INDEX idx_posts_type ON posts(type);
+                CREATE INDEX idx_posts_author ON posts(author_slug);
+                CREATE INDEX idx_posts_title ON posts(title);
+                CREATE INDEX idx_posts_wp_id ON posts(wp_post_id);
+                CREATE INDEX idx_posts_path ON posts(path);
+            `);
+            
+            // Try to create FTS table (FTS4 first, then FTS3, then skip if not available)
+            let ftsAvailable = false;
+            try {
+                db.run(`CREATE VIRTUAL TABLE posts_fts USING fts4(title, excerpt, content_plain, tokenize=porter)`);
+                ftsAvailable = true;
+                log('FTS4 full-text search enabled', 'info');
+            } catch (e1) {
+                try {
+                    db.run(`CREATE VIRTUAL TABLE posts_fts USING fts3(title, excerpt, content_plain)`);
+                    ftsAvailable = true;
+                    log('FTS3 full-text search enabled', 'info');
+                } catch (e2) {
+                    log('Full-text search not available, using LIKE queries instead', 'warning');
+                }
+            }
+            
+            // Track post path to new ID mapping for relationships
+            const pathToId = new Map();
+            let insertedCount = 0;
+            
+            // Insert posts - let SQLite handle ID auto-increment
+            for (const posts of Object.values(state.database.posts)) {
+                for (const post of posts) {
+                    try {
+                        const wpId = post.wp_post_id || post.id || null;
+                        const title = post.title || 'Untitled';
+                        const slug = post.slug || 'untitled';
+                        const authorName = post.author?.name || '';
+                        const authorSlug = post.author?.slug || '';
+                        const content = (post.content_filtered || '').substring(0, 10000);
+                        
+                        db.run(`INSERT INTO posts (wp_post_id, title, slug, type, status, author_name, author_slug, date_published, date_modified, excerpt, content_plain, url, path, word_count, reading_time, comment_count, content_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                            [wpId, title, slug, post.type || 'post', post.status || 'publish', authorName, authorSlug, post.date_published, post.date_modified, post.excerpt || '', content, post.url || '', post.path || '', post.word_count || 0, post.reading_time_minutes || 0, post.comment_count || 0, post.content_hash || '']);
+                        
+                        // Get auto-generated ID
+                        const newId = db.exec("SELECT last_insert_rowid()")[0].values[0][0];
+                        pathToId.set(post.path, newId);
+                        insertedCount++;
+                        
+                        if (ftsAvailable) {
+                            db.run(`INSERT INTO posts_fts (rowid, title, excerpt, content_plain) VALUES (?, ?, ?, ?)`,
+                                [newId, title, post.excerpt || '', content]);
+                        }
+                    } catch (err) {
+                        console.error('Error inserting post:', post.path, err);
+                    }
+                }
+            }
+            
+            // Insert pages
+            for (const page of state.database.pages) {
+                try {
+                    const wpId = page.wp_post_id || page.id || null;
+                    const title = page.title || 'Untitled';
+                    const slug = page.slug || 'untitled';
+                    const authorName = page.author?.name || '';
+                    const authorSlug = page.author?.slug || '';
+                    const content = (page.content_filtered || '').substring(0, 10000);
+                    
+                    db.run(`INSERT INTO posts (wp_post_id, title, slug, type, status, author_name, author_slug, date_published, date_modified, excerpt, content_plain, url, path, word_count, reading_time, comment_count, content_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                        [wpId, title, slug, 'page', page.status || 'publish', authorName, authorSlug, page.date_published, page.date_modified, page.excerpt || '', content, page.url || '', page.path || '', page.word_count || 0, page.reading_time_minutes || 0, page.comment_count || 0, page.content_hash || '']);
+                    
+                    const newId = db.exec("SELECT last_insert_rowid()")[0].values[0][0];
+                    pathToId.set(page.path, newId);
+                    insertedCount++;
+                    
+                    if (ftsAvailable) {
+                        db.run(`INSERT INTO posts_fts (rowid, title, excerpt, content_plain) VALUES (?, ?, ?, ?)`,
+                            [newId, title, page.excerpt || '', content]);
+                    }
+                } catch (err) {
+                    console.error('Error inserting page:', page.path, err);
+                }
+            }
+            
+            log(`Inserted ${insertedCount} posts/pages into SQLite`, 'info');
+            
+            // Insert taxonomies
+            for (const cat of Object.values(state.database.taxonomies.categories)) {
+                try {
+                    db.run(`INSERT OR IGNORE INTO categories (name, slug, url) VALUES (?, ?, ?)`, [cat.name || '', cat.slug || '', cat.url || '']);
+                } catch (err) {
+                    console.error('Error inserting category:', cat.slug, err);
+                }
+            }
+            
+            for (const tag of Object.values(state.database.taxonomies.tags)) {
+                try {
+                    db.run(`INSERT OR IGNORE INTO tags (name, slug, url) VALUES (?, ?, ?)`, [tag.name || '', tag.slug || '', tag.url || '']);
+                } catch (err) {
+                    console.error('Error inserting tag:', tag.slug, err);
+                }
+            }
+            
+            // Insert relationships using path-based ID lookup
+            for (const posts of Object.values(state.database.posts)) {
+                for (const post of posts) {
+                    const postId = pathToId.get(post.path);
+                    if (!postId) continue;
+                    
+                    for (const cat of (post.categories || [])) {
+                        try {
+                            db.run(`INSERT OR IGNORE INTO post_categories (post_id, category_slug) VALUES (?, ?)`, [postId, cat.slug]);
+                        } catch (err) {}
+                    }
+                    for (const tag of (post.tags || [])) {
+                        try {
+                            db.run(`INSERT OR IGNORE INTO post_tags (post_id, tag_slug) VALUES (?, ?)`, [postId, tag.slug]);
+                        } catch (err) {}
+                    }
+                }
+            }
+            
+            db.run(`VACUUM`);
+            
+            state.sqliteDb = db.export();
+            log(`SQLite database size: ${(state.sqliteDb.length / 1024).toFixed(2)} KB`, 'info');
+        }
+        
+        async function prepareOutputFiles() {
+            state.generatedFiles = {};
+            state.generatedFiles['database/manifest.json'] = JSON.stringify(state.database.manifest, null, 2);
+            
+            for (const [year, posts] of Object.entries(state.database.posts)) {
+                state.generatedFiles[`database/posts/${year}.json`] = JSON.stringify({ year: parseInt(year), count: posts.length, posts: posts }, null, 2);
+            }
+            
+            state.generatedFiles['database/pages.json'] = JSON.stringify({ count: state.database.pages.length, pages: state.database.pages }, null, 2);
+            state.generatedFiles['database/authors.json'] = JSON.stringify({ count: Object.keys(state.database.authors).length, authors: state.database.authors }, null, 2);
+            state.generatedFiles['database/taxonomies.json'] = JSON.stringify({
+                categories: { count: Object.keys(state.database.taxonomies.categories).length, items: state.database.taxonomies.categories },
+                tags: { count: Object.keys(state.database.taxonomies.tags).length, items: state.database.taxonomies.tags }
+            }, null, 2);
+            
+            state.generatedFiles['database/changelog.json'] = JSON.stringify({
+                version: '1.0', max_entries: 1000,
+                changes: [{ 
+                    id: Date.now().toString(), 
+                    timestamp: new Date().toISOString(), 
+                    tool: 'database-generator', 
+                    operation: 'initial_generation', 
+                    affected_files: state.stats.posts + state.stats.pages, 
+                    description: 'Initial database generation', 
+                    summary: { 
+                        posts_created: state.stats.posts, 
+                        pages_created: state.stats.pages, 
+                        categories_found: state.stats.categories.size, 
+                        tags_found: state.stats.tags.size 
+                    }
+                }]
+            }, null, 2);
+            
+            if (state.sqliteDb) state.generatedFiles['database/search.db'] = state.sqliteDb;
+        }
+        
+        // ============================================
+        // GITHUB COMMIT FUNCTIONALITY
+        // ============================================
+        
+        async function commitToGitHub() {
+            const owner = document.getElementById('repoOwner').value;
+            const repo = document.getElementById('repoName').value;
+            const branch = document.getElementById('branch').value;
+            const token = document.getElementById('githubToken').value;
+            
+            const files = Object.entries(state.generatedFiles);
+            log(`Committing ${files.length} files to GitHub...`, 'highlight');
+            
+            try {
+                // Step 1: Get the current commit SHA for the branch
+                log('Getting current branch reference...', 'info');
+                const refData = await githubAPI(`/repos/${owner}/${repo}/git/refs/heads/${branch}`);
+                const currentCommitSha = refData.object.sha;
+                
+                // Step 2: Get the current commit to find its tree
+                const commitData = await githubAPI(`/repos/${owner}/${repo}/git/commits/${currentCommitSha}`);
+                const baseTreeSha = commitData.tree.sha;
+                
+                // Step 3: Create blobs for each file
+                log('Creating file blobs...', 'info');
+                const treeItems = [];
+                
+                for (let i = 0; i < files.length; i++) {
+                    const [path, content] = files[i];
+                    const isText = typeof content === 'string';
+                    
+                    updateProgress(90 + (i / files.length) * 5, `Uploading: ${path}...`);
+                    
+                    // Create blob
+                    const blobData = await githubAPI(`/repos/${owner}/${repo}/git/blobs`, {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            content: isText ? btoa(unescape(encodeURIComponent(content))) : arrayBufferToBase64(content),
+                            encoding: 'base64'
+                        })
+                    });
+                    
+                    treeItems.push({
+                        path: path,
+                        mode: '100644',
+                        type: 'blob',
+                        sha: blobData.sha
+                    });
+                    
+                    log(`  ✓ Uploaded ${path}`, 'info');
+                }
+                
+                // Step 4: Create a new tree
+                log('Creating new tree...', 'info');
+                const newTreeData = await githubAPI(`/repos/${owner}/${repo}/git/trees`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        base_tree: baseTreeSha,
+                        tree: treeItems
+                    })
+                });
+                
+                // Step 5: Create a new commit
+                log('Creating commit...', 'info');
+                const commitMessage = `Update database files\n\nGenerated by Database Generator\n- ${state.stats.posts} posts\n- ${state.stats.pages} pages\n- ${state.stats.categories.size} categories\n- ${state.stats.tags.size} tags`;
+                
+                const newCommitData = await githubAPI(`/repos/${owner}/${repo}/git/commits`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        message: commitMessage,
+                        tree: newTreeData.sha,
+                        parents: [currentCommitSha]
+                    })
+                });
+                
+                // Step 6: Update the branch reference
+                log('Updating branch reference...', 'info');
+                await githubAPI(`/repos/${owner}/${repo}/git/refs/heads/${branch}`, {
+                    method: 'PATCH',
+                    body: JSON.stringify({
+                        sha: newCommitData.sha
+                    })
+                });
+                
+                log(`✅ Successfully committed ${files.length} files to ${owner}/${repo}`, 'success');
+                log(`Commit SHA: ${newCommitData.sha.substring(0, 7)}`, 'info');
+                
+                return true;
+                
+            } catch (err) {
+                const errorMsg = err?.message || err?.toString() || 'Unknown error';
+                log(`❌ Failed to commit: ${errorMsg}`, 'error');
+                console.error('Commit error:', err);
+                return false;
+            }
+        }
+        
+        // Helper to convert Uint8Array to base64
+        function arrayBufferToBase64(buffer) {
+            let binary = '';
+            const bytes = new Uint8Array(buffer);
+            for (let i = 0; i < bytes.byteLength; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return btoa(binary);
+        }
+        
+        // Manual commit button handler
+        async function manualCommit() {
+            const btn = document.getElementById('commitBtn');
+            const originalText = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Committing...';
+            
+            try {
+                const success = await commitToGitHub();
+                if (success) {
+                    btn.innerHTML = '✅ Committed!';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    btn.innerHTML = '❌ Failed - Try Again';
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                log(`Commit error: ${err?.message || err}`, 'error');
+                btn.innerHTML = '❌ Failed - Try Again';
+                btn.disabled = false;
+            }
+        }
+        
+        function displayOutputFiles() {
+            const container = document.getElementById('outputFiles');
+            container.innerHTML = '';
+            
+            for (const [path, content] of Object.entries(state.generatedFiles)) {
+                const isText = typeof content === 'string';
+                const size = isText ? content.length : content.length;
+                const sizeStr = size > 1024 ? `${(size / 1024).toFixed(2)} KB` : `${size} B`;
+                
+                const fileDiv = document.createElement('div');
+                fileDiv.className = 'output-file';
+                fileDiv.innerHTML = `
+                    <span class="output-file-icon">${path.endsWith('.db') ? '🗄️' : '📄'}</span>
+                    <div class="output-file-info">
+                        <div class="output-file-name">${path}</div>
+                        <div class="output-file-size">${sizeStr}</div>
+                    </div>
+                    <button class="btn btn-secondary download-btn" onclick="downloadFile('${path}')">⬇️ Download</button>
+                `;
+                container.appendChild(fileDiv);
+            }
+            
+            const allBtn = document.createElement('div');
+            allBtn.className = 'output-file';
+            allBtn.style.background = 'var(--accent-light)';
+            allBtn.innerHTML = `
+                <span class="output-file-icon">📦</span>
+                <div class="output-file-info">
+                    <div class="output-file-name">Download All Files</div>
+                    <div class="output-file-size">Individual downloads</div>
+                </div>
+                <button class="btn btn-primary download-btn" onclick="downloadAllFiles()">⬇️ Download All</button>
+            `;
+            container.appendChild(allBtn);
+        }
+        
+        function displaySchema() {
+            document.getElementById('schemaContent').textContent = JSON.stringify(postSchema, null, 2);
+        }
+        
+        function downloadFile(path) {
+            const content = state.generatedFiles[path];
+            const isText = typeof content === 'string';
+            const blob = isText ? new Blob([content], { type: 'application/json' }) : new Blob([content], { type: 'application/x-sqlite3' });
+            
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = path.split('/').pop();
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+        async function downloadAllFiles() {
+            log('Downloading files...', 'info');
+            for (const path of Object.keys(state.generatedFiles)) {
+                downloadFile(path);
+                await new Promise(r => setTimeout(r, 500));
+            }
+            log('All files downloaded!', 'success');
+        }
+        
+        // ============================================
+        // UI CONTROLS
+        // ============================================
+        
+        function togglePause() {
+            state.isPaused = !state.isPaused;
+            const btn = document.getElementById('pauseBtn');
+            btn.textContent = state.isPaused ? '▶️ Resume' : '⏸️ Pause';
+            
+            const indicator = document.getElementById('phaseIndicator');
+            if (state.isPaused) {
+                indicator.textContent = 'Paused';
+                indicator.className = 'phase-badge paused';
+            }
+        }
+        
+        async function resetGenerator() {
+            state.isRunning = false;
+            state.isPaused = false;
+            state.isRateLimited = false;
+            state.phase = 'idle';
+            state.currentIndex = 0;
+            state.htmlFiles = [];
+            state.stats = { filesScanned: 0, posts: 0, pages: 0, categories: new Set(), tags: new Set(), errors: 0 };
+            state.database = { manifest: null, posts: {}, pages: [], authors: {}, taxonomies: { categories: {}, tags: {} }, changelog: [] };
+            state.generatedFiles = {};
+            state.sqliteDb = null;
+            
+            // Reset ID counter
+            idCounter = 1;
+            
+            cancelAutoResume();
+            await clearSavedState();
+            
+            updateStats();
+            updateProgress(0, 'Idle');
+            document.getElementById('logContainer').innerHTML = '';
+            document.getElementById('outputSection').classList.add('hidden');
+            document.getElementById('rateLimitTimer').classList.add('hidden');
+            document.getElementById('resumeNotice').style.display = 'none';
+            document.getElementById('resumeBtn').style.display = 'none';
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('startBtn').textContent = '🚀 Start Generation';
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').textContent = '⏸️ Pause';
+            document.getElementById('rateLimitInfo').textContent = '';
+            
+            log('Generator reset', 'info');
+        }
+        
+        function showTab(tabName, btn) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            
+            if (tabName === 'preview') {
+                const sampleYear = Object.keys(state.database.posts)[0];
+                if (sampleYear && state.database.posts[sampleYear] && state.database.posts[sampleYear][0]) {
+                    document.getElementById('dataPreview').textContent = JSON.stringify(state.database.posts[sampleYear][0], null, 2);
+                }
+            }
+        }
+        
+        // ============================================
+        // INITIALIZATION
+        // ============================================
+        
+        async function init() {
+            log('Database Generator ready.', 'info');
+            
+            // Check for saved state
+            try {
+                const savedState = await loadState();
+                if (savedState && savedState.currentIndex > 0) {
+                    // Validate saved state has required fields
+                    if (!savedState.htmlFiles || !Array.isArray(savedState.htmlFiles)) {
+                        log('Saved state is corrupted (missing htmlFiles). Please reset and start fresh.', 'warning');
+                        return;
+                    }
+                    
+                    // Restore state defensively
+                    state.currentIndex = savedState.currentIndex || 0;
+                    state.htmlFiles = savedState.htmlFiles || [];
+                    state.stats = {
+                        filesScanned: savedState.stats?.filesScanned || 0,
+                        posts: savedState.stats?.posts || 0,
+                        pages: savedState.stats?.pages || 0,
+                        categories: new Set(savedState.stats?.categories || []),
+                        tags: new Set(savedState.stats?.tags || []),
+                        errors: savedState.stats?.errors || 0
+                    };
+                    state.database = savedState.database || { manifest: null, posts: {}, pages: [], authors: {}, taxonomies: { categories: {}, tags: {} }, changelog: [] };
+                    state.rateLimitReset = savedState.rateLimitReset;
+                    
+                    // Restore ID counter - estimate if not saved
+                    idCounter = savedState.idCounter || (savedState.stats?.filesScanned || 0) + 1;
+                    
+                    updateStats();
+                    
+                    // Show resume notice
+                    document.getElementById('resumeNotice').style.display = 'block';
+                    document.getElementById('resumeCount').textContent = savedState.currentIndex;
+                    document.getElementById('resumeBtn').style.display = 'inline-flex';
+                    document.getElementById('startBtn').textContent = '🔄 Start Fresh';
+                    
+                    log(`Found previous session: ${savedState.currentIndex} files processed. Click Resume to continue.`, 'highlight');
+                    
+                    // Check if rate limit timer should be shown
+                    if (savedState.rateLimitReset && savedState.rateLimitReset * 1000 > Date.now()) {
+                        showRateLimitTimer(savedState.rateLimitReset);
+                    }
+                }
+            } catch (err) {
+                console.error('Error loading saved state:', err);
+                log('Could not load previous session. Starting fresh.', 'warning');
+            }
+        }
+        
+        // Start initialization
+        init();
+    </script>
+</body>
+</html>

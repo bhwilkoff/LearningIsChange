@@ -574,6 +574,8 @@
                         <label class="checkbox-label"><input type="checkbox" id="updateYearArchive" checked> Create/update yearly archive</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateCategoryArchive" checked> Update category archive</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateTagArchives" checked> Update tag archives</label>
+                        <label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feed</label>
+                        <label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database shard</label>
                     </div>
                 </div>
             </div>
@@ -582,6 +584,7 @@
                 <div class="card-title">🚀 Generate & Publish</div>
                 <div class="btn-group">
                     <button class="btn btn-primary" id="generateBtn" onclick="generatePost()">📝 Generate Post</button>
+                    <button class="btn btn-secondary hidden" id="downloadBtn" onclick="downloadFiles()">💾 Download Files</button>
                     <button class="btn btn-success hidden" id="publishBtn" onclick="publishToGitHub()">🚀 Publish to GitHub</button>
                 </div>
                 <div class="progress-section hidden" id="progressSection">
@@ -613,7 +616,10 @@
                 <p>3. Add relevant tags</p>
                 <p>4. Upload images if needed</p>
                 <p>5. Write your content</p>
-                <p>6. Generate, then Publish</p>
+                <p>6. Generate, then Publish or Download</p>
+                <p style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted); font-style: italic;">
+                    Note: Category parent/child relationships depend on data in the database. Re-run the Database Generator to update taxonomy hierarchies and tag counts.
+                </p>
             </div>
             
             <div class="widget">
@@ -957,10 +963,30 @@
         function populatePopularTags() {
             const container = document.getElementById('popularTags');
             const tags = Object.values(database.taxonomies.tags?.items || {});
-            tags.sort((a, b) => (b.count || 0) - (a.count || 0));
-            container.innerHTML = tags.slice(0, 20).map(tag => 
-                `<span class="tag-chip" onclick="addTagFromPopular('${tag.slug}', '${tag.name.replace(/'/g, "\\'")}')">${tag.name}</span>`
-            ).join('');
+            
+            // Check if tags have count data
+            const hasCountData = tags.some(t => typeof t.count === 'number' && t.count > 0);
+            
+            if (hasCountData) {
+                // Sort by count (most used first)
+                tags.sort((a, b) => (b.count || 0) - (a.count || 0));
+            } else {
+                // Fallback: sort alphabetically
+                tags.sort((a, b) => a.name.localeCompare(b.name));
+            }
+            
+            container.innerHTML = tags.slice(0, 20).map(tag => {
+                const countLabel = hasCountData && tag.count ? ` (${tag.count})` : '';
+                return `<span class="tag-chip" onclick="addTagFromPopular('${tag.slug}', '${tag.name.replace(/'/g, "\\'")}')">${tag.name}${countLabel}</span>`;
+            }).join('');
+            
+            // Add a note if counts aren't available
+            if (tags.length > 0 && !hasCountData) {
+                const note = document.createElement('p');
+                note.style.cssText = 'font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; font-style: italic;';
+                note.textContent = '(Re-run Database Generator to enable sorting by popularity)';
+                container.appendChild(note);
+            }
         }
         
         // ============================================
@@ -1206,14 +1232,14 @@
                 generatedFiles[`${postPath}/index.html`] = postHtml;
                 log(`✓ Generated post: ${postPath}/index.html`, 'success');
                 
-                updateProgress(30, 'Processing images...');
+                updateProgress(20, 'Processing images...');
                 for (const img of uploadedImages) {
                     const imgPath = `wp-content/uploads/${year}/${month}/${img.name}`;
                     generatedFiles[imgPath] = { content: img.data, isBase64: true };
                     log(`✓ Prepared image: ${imgPath}`, 'success');
                 }
                 
-                updateProgress(50, 'Generating archives...');
+                updateProgress(35, 'Generating archives...');
                 
                 if (document.getElementById('updateMonthArchive').checked) {
                     const monthArchive = await generateMonthArchive(year, month, { title, date, slug, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
@@ -1227,7 +1253,7 @@
                     log(`✓ Generated year archive: ${year}/`, 'success');
                 }
                 
-                updateProgress(70, 'Updating category/tag archives...');
+                updateProgress(50, 'Updating category/tag archives...');
                 
                 if (document.getElementById('updateCategoryArchive').checked && selectedCategory) {
                     const catPath = selectedCategory.fullPath || selectedCategory.slug;
@@ -1244,8 +1270,29 @@
                     }
                 }
                 
+                updateProgress(65, 'Updating RSS feed...');
+                
+                if (document.getElementById('updateRssFeed').checked) {
+                    const rssUpdate = await generateRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
+                    if (rssUpdate) {
+                        generatedFiles['feed/index.xml'] = rssUpdate;
+                        log(`✓ Updated RSS feed: feed/index.xml`, 'success');
+                    }
+                }
+                
+                updateProgress(80, 'Updating database...');
+                
+                if (document.getElementById('updateDatabase').checked) {
+                    const dbUpdate = await generateDatabaseUpdate({ title, date, slug, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags, year });
+                    if (dbUpdate) {
+                        generatedFiles[`database/posts/${year}.json`] = dbUpdate;
+                        log(`✓ Updated database shard: database/posts/${year}.json`, 'success');
+                    }
+                }
+                
                 updateProgress(100, 'Generation complete!');
-                log(`🎉 Generated ${Object.keys(generatedFiles).length} files. Ready to publish!`, 'success');
+                log(`🎉 Generated ${Object.keys(generatedFiles).length} files. Ready to publish or download!`, 'success');
+                document.getElementById('downloadBtn').classList.remove('hidden');
                 document.getElementById('publishBtn').classList.remove('hidden');
                 
             } catch (e) {
@@ -1369,6 +1416,211 @@
 </html>`;
         }
         
+        // ============================================
+        // RSS FEED UPDATE
+        // ============================================
+        async function generateRssFeedUpdate(newPost) {
+            try {
+                // Fetch existing RSS feed
+                const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/feed/index.xml`);
+                if (!response.ok) {
+                    log('Could not fetch existing RSS feed, creating new one', 'info');
+                    return generateNewRssFeed(newPost);
+                }
+                
+                const existingRss = await response.text();
+                
+                // Create new item XML
+                const pubDate = new Date(newPost.date + 'T12:00:00Z').toUTCString();
+                const categories = [];
+                if (newPost.category) {
+                    categories.push(`<category><![CDATA[${newPost.category.name}]]></category>`);
+                }
+                newPost.tags.forEach(tag => {
+                    categories.push(`<category><![CDATA[${tag.name}]]></category>`);
+                });
+                
+                const newItem = `<item>
+      <title>${escapeXml(newPost.title)}</title>
+      <link>${newPost.postUrl}</link>
+      <pubDate>${pubDate}</pubDate>
+      <dc:creator><![CDATA[Ben]]></dc:creator>
+      <guid isPermaLink="true">${newPost.postUrl}</guid>
+      ${categories.join('\n      ')}
+      <description><![CDATA[${newPost.excerpt}]]></description>
+      <content:encoded><![CDATA[${newPost.content}]]></content:encoded>
+    </item>`;
+                
+                // Update lastBuildDate
+                const now = new Date().toUTCString();
+                let updatedRss = existingRss.replace(
+                    /<lastBuildDate>.*?<\/lastBuildDate>/,
+                    `<lastBuildDate>${now}</lastBuildDate>`
+                );
+                
+                // Insert new item after <generator> tag
+                const insertPoint = updatedRss.indexOf('</generator>');
+                if (insertPoint !== -1) {
+                    const insertAfter = updatedRss.indexOf('>', insertPoint) + 1;
+                    updatedRss = updatedRss.slice(0, insertAfter) + '\n                            ' + newItem + updatedRss.slice(insertAfter);
+                } else {
+                    // Fallback: insert before first <item>
+                    const firstItem = updatedRss.indexOf('<item>');
+                    if (firstItem !== -1) {
+                        updatedRss = updatedRss.slice(0, firstItem) + newItem + '\n' + updatedRss.slice(firstItem);
+                    }
+                }
+                
+                return updatedRss;
+            } catch (e) {
+                console.error('RSS update error:', e);
+                log(`⚠️ Could not update RSS feed: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        function generateNewRssFeed(newPost) {
+            const pubDate = new Date(newPost.date + 'T12:00:00Z').toUTCString();
+            const now = new Date().toUTCString();
+            const categories = [];
+            if (newPost.category) {
+                categories.push(`<category><![CDATA[${newPost.category.name}]]></category>`);
+            }
+            newPost.tags.forEach(tag => {
+                categories.push(`<category><![CDATA[${tag.name}]]></category>`);
+            });
+            
+            return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+  <channel>
+    <title>Learning is Change</title>
+    <atom:link href="https://learningischange.com/feed/" rel="self" type="application/rss+xml" />
+    <link>https://learningischange.com</link>
+    <description>Learning is Change - Thoughts on education, social justice, and making a difference.</description>
+    <lastBuildDate>${now}</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>Learning is Change Post Generator</generator>
+    <item>
+      <title>${escapeXml(newPost.title)}</title>
+      <link>${newPost.postUrl}</link>
+      <pubDate>${pubDate}</pubDate>
+      <dc:creator><![CDATA[Ben]]></dc:creator>
+      <guid isPermaLink="true">${newPost.postUrl}</guid>
+      ${categories.join('\n      ')}
+      <description><![CDATA[${newPost.excerpt}]]></description>
+      <content:encoded><![CDATA[${newPost.content}]]></content:encoded>
+    </item>
+  </channel>
+</rss>`;
+        }
+        
+        function escapeXml(text) {
+            return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+        }
+        
+        // ============================================
+        // DATABASE UPDATE
+        // ============================================
+        async function generateDatabaseUpdate(newPost) {
+            try {
+                // Fetch existing year shard
+                let existingShard = { year: parseInt(newPost.year), post_count: 0, posts: [] };
+                
+                try {
+                    const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/posts/${newPost.year}.json`);
+                    if (response.ok) {
+                        existingShard = await response.json();
+                    }
+                } catch (e) {
+                    log(`Creating new shard for year ${newPost.year}`, 'info');
+                }
+                
+                // Create new post entry
+                const newPostEntry = {
+                    title: newPost.title,
+                    url: newPost.postUrl.replace('https://learningischange.com', ''),
+                    date_published: newPost.date,
+                    excerpt: newPost.excerpt,
+                    categories: newPost.category ? [newPost.category.slug] : [],
+                    tags: newPost.tags.map(t => t.slug),
+                    content_preview: newPost.excerpt
+                };
+                
+                // Add to beginning of posts array (newest first)
+                existingShard.posts.unshift(newPostEntry);
+                existingShard.post_count = existingShard.posts.length;
+                
+                return JSON.stringify(existingShard, null, 2);
+            } catch (e) {
+                console.error('Database update error:', e);
+                log(`⚠️ Could not update database: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        // ============================================
+        // DOWNLOAD FILES
+        // ============================================
+        function downloadFiles() {
+            const fileList = Object.entries(generatedFiles);
+            if (fileList.length === 0) {
+                alert('No files generated yet!');
+                return;
+            }
+            
+            log(`Preparing ${fileList.length} files for download...`, 'info');
+            
+            // Download each file with staggered timing
+            fileList.forEach(([path, content], index) => {
+                setTimeout(() => {
+                    let fileContent = content;
+                    let mimeType = 'text/html';
+                    let filename = path.replace(/\//g, '_');
+                    
+                    if (typeof content === 'object' && content.isBase64) {
+                        // Binary file (image)
+                        const byteString = atob(content.content);
+                        const ab = new ArrayBuffer(byteString.length);
+                        const ia = new Uint8Array(ab);
+                        for (let i = 0; i < byteString.length; i++) {
+                            ia[i] = byteString.charCodeAt(i);
+                        }
+                        const blob = new Blob([ab], { type: 'image/jpeg' });
+                        triggerDownload(blob, filename);
+                        return;
+                    }
+                    
+                    if (path.endsWith('.json')) mimeType = 'application/json';
+                    if (path.endsWith('.xml')) mimeType = 'application/xml';
+                    
+                    const blob = new Blob([fileContent], { type: mimeType });
+                    triggerDownload(blob, filename);
+                }, index * 300); // Stagger downloads
+            });
+            
+            log(`✓ Started downloading ${fileList.length} files`, 'success');
+        }
+        
+        function triggerDownload(blob, filename) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
         // ============================================
         // PUBLISH
         // ============================================
