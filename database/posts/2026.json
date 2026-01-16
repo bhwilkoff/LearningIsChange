@@ -3,6 +3,20 @@
   "count": 5,
   "posts": [
     {
+      "title": "We aren't so far.",
+      "url": "/2026/01/16/we-arent-so-far/",
+      "date_published": "2026-01-16",
+      "excerpt": "",
+      "categories": [
+        "politics"
+      ],
+      "tags": [
+        "typewriter",
+        "fascism"
+      ],
+      "content_preview": ""
+    },
+    {
       "id": 5873,
       "wp_post_id": 28018,
       "title": "Learning is Change",
@@ -357,5 +371,6 @@
         }
       ]
     }
-  ]
+  ],
+  "post_count": 6
 }
