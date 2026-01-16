@@ -28,21 +28,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/category/ben-wilkoff/"
@@ -63,7 +48,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:09.083Z",
+          "date": "2026-01-16T18:53:05.840Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -99,21 +84,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/category/ben-wilkoff/"
@@ -134,7 +104,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:09.346Z",
+          "date": "2026-01-16T18:53:06.327Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [

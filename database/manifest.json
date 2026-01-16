@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-01-14T19:39:14.847Z",
+  "generated": "2026-01-16T18:56:54.909Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -9,97 +9,97 @@
   },
   "stats": {
     "total_posts": 5729,
-    "total_pages": 495,
-    "total_categories": 44,
-    "total_tags": 1374,
+    "total_pages": 497,
+    "total_categories": 38,
+    "total_tags": 1361,
     "total_authors": 2,
     "date_range": {
       "earliest": "2005-04-20T12:00:00Z",
       "latest": "2026-01-14T12:00:00Z"
     },
-    "last_modified": "2026-01-14T19:39:14.849Z"
+    "last_modified": "2026-01-16T18:56:54.911Z"
   },
   "shards": {
     "posts": {
       "2005": {
         "count": 2,
-        "hash": "24e23c36"
+        "hash": "-107f522c"
       },
       "2006": {
         "count": 191,
-        "hash": "5a4fb949"
+        "hash": "-3037abeb"
       },
       "2007": {
         "count": 468,
-        "hash": "7cb9492f"
+        "hash": "-7b28171b"
       },
       "2008": {
         "count": 226,
-        "hash": "-1c246a43"
+        "hash": "2da79ef1"
       },
       "2009": {
         "count": 269,
-        "hash": "-491ae4f9"
+        "hash": "-2ef79823"
       },
       "2010": {
         "count": 689,
-        "hash": "5c739461"
+        "hash": "-30ec1587"
       },
       "2011": {
         "count": 287,
-        "hash": "684f4508"
+        "hash": "18f14a75"
       },
       "2012": {
         "count": 274,
-        "hash": "4bba62b7"
+        "hash": "27f6bfcd"
       },
       "2013": {
         "count": 1140,
-        "hash": "-6a49f876"
+        "hash": "-6998bfe2"
       },
       "2014": {
         "count": 1180,
-        "hash": "-66f0dc18"
+        "hash": "27a4ca2f"
       },
       "2015": {
         "count": 445,
-        "hash": "13eeb972"
+        "hash": "314e3962"
       },
       "2016": {
         "count": 254,
-        "hash": "-3963a1a6"
+        "hash": "bb495d8"
       },
       "2017": {
         "count": 130,
-        "hash": "-44714ae2"
+        "hash": "-168dd825"
       },
       "2018": {
         "count": 54,
-        "hash": "-3edfa910"
+        "hash": "-fb5bbda"
       },
       "2019": {
         "count": 25,
-        "hash": "1c89e74"
+        "hash": "-6dbd555b"
       },
       "2021": {
         "count": 2,
-        "hash": "267255ca"
+        "hash": "53a5e551"
       },
       "2022": {
         "count": 74,
-        "hash": "66183b66"
+        "hash": "-542a87cf"
       },
       "2024": {
         "count": 10,
-        "hash": "55176f45"
+        "hash": "-746fbd2"
       },
       "2025": {
         "count": 4,
-        "hash": "-95e4d94"
+        "hash": "2412c47a"
       },
       "2026": {
         "count": 5,
-        "hash": "-f7c8dcf"
+        "hash": "-2f5236ab"
       }
     }
   },

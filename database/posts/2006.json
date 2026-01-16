@@ -28,21 +28,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -50,7 +35,7 @@
       ],
       "tags": [
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -69,7 +54,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:11.009Z",
+          "date": "2026-01-16T18:21:42.480Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -105,29 +90,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -146,7 +116,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:11.301Z",
+          "date": "2026-01-16T18:21:42.746Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -182,22 +152,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -217,7 +172,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:11.572Z",
+          "date": "2026-01-16T18:21:42.986Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -253,21 +208,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -288,7 +228,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:11.858Z",
+          "date": "2026-01-16T18:21:43.218Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -324,21 +264,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -346,12 +271,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -370,7 +295,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:12.167Z",
+          "date": "2026-01-16T18:21:43.477Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -406,34 +331,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -454,7 +364,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:12.436Z",
+          "date": "2026-01-16T18:21:43.714Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -490,21 +400,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -512,7 +407,7 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         }
@@ -531,7 +426,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:12.705Z",
+          "date": "2026-01-16T18:21:43.952Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -567,29 +462,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         }
@@ -610,7 +490,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:12.990Z",
+          "date": "2026-01-16T18:21:44.239Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -646,29 +526,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         }
@@ -690,7 +555,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:13.262Z",
+          "date": "2026-01-16T18:21:44.474Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -726,21 +591,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -748,7 +598,7 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         }
@@ -767,7 +617,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:13.565Z",
+          "date": "2026-01-16T18:21:44.730Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -803,21 +653,6 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -825,12 +660,12 @@
       ],
       "tags": [
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -849,7 +684,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:13.840Z",
+          "date": "2026-01-16T18:21:44.995Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -885,21 +720,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -907,12 +727,12 @@
       ],
       "tags": [
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -931,7 +751,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:14.136Z",
+          "date": "2026-01-16T18:21:45.268Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -967,21 +787,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -989,12 +794,12 @@
       ],
       "tags": [
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -1018,7 +823,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:14.526Z",
+          "date": "2026-01-16T18:21:45.530Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1054,21 +859,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1076,12 +866,12 @@
       ],
       "tags": [
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -1100,7 +890,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:14.810Z",
+          "date": "2026-01-16T18:21:45.767Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1136,21 +926,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1158,12 +933,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -1186,7 +961,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:15.094Z",
+          "date": "2026-01-16T18:21:46.023Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1222,21 +997,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1244,12 +1004,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -1268,7 +1028,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:15.421Z",
+          "date": "2026-01-16T18:21:46.270Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1304,21 +1064,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1339,7 +1084,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:15.711Z",
+          "date": "2026-01-16T18:21:46.521Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1374,21 +1119,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
         {
           "name": "Uncategorized",
           "slug": "uncategorized",
@@ -1428,7 +1158,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:15.981Z",
+          "date": "2026-01-16T18:21:46.782Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1464,21 +1194,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -1504,7 +1219,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:16.250Z",
+          "date": "2026-01-16T18:21:47.055Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1540,26 +1255,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -1587,7 +1282,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:16.523Z",
+          "date": "2026-01-16T18:21:47.288Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1623,21 +1318,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1645,7 +1325,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -1664,7 +1344,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:16.804Z",
+          "date": "2026-01-16T18:21:47.560Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1700,21 +1380,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1722,7 +1387,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -1741,7 +1406,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:17.088Z",
+          "date": "2026-01-16T18:21:47.826Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1777,21 +1442,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1799,12 +1449,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -1823,7 +1473,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:17.377Z",
+          "date": "2026-01-16T18:21:48.097Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1859,21 +1509,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1881,12 +1516,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -1911,7 +1546,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:17.652Z",
+          "date": "2026-01-16T18:21:48.334Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1947,26 +1582,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -1994,7 +1609,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:17.919Z",
+          "date": "2026-01-16T18:21:48.569Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2030,21 +1645,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -2052,7 +1652,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -2071,7 +1671,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:18.194Z",
+          "date": "2026-01-16T18:21:48.819Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2107,21 +1707,6 @@
       "comment_count": 7,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -2129,7 +1714,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -2153,7 +1738,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:18.506Z",
+          "date": "2026-01-16T18:21:49.079Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2189,26 +1774,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2239,7 +1804,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:18.795Z",
+          "date": "2026-01-16T18:21:49.346Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2275,21 +1840,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2315,7 +1865,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:19.079Z",
+          "date": "2026-01-16T18:21:49.591Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2351,26 +1901,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2403,7 +1933,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:19.355Z",
+          "date": "2026-01-16T18:21:49.818Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2439,21 +1969,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2479,7 +1994,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:19.630Z",
+          "date": "2026-01-16T18:21:50.073Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2515,26 +2030,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2565,7 +2060,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:19.912Z",
+          "date": "2026-01-16T18:21:50.298Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2601,21 +2096,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2641,7 +2121,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:20.191Z",
+          "date": "2026-01-16T18:21:50.558Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2677,26 +2157,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2725,7 +2185,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:20.460Z",
+          "date": "2026-01-16T18:21:50.851Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2761,21 +2221,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -2801,7 +2246,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:20.742Z",
+          "date": "2026-01-16T18:21:51.079Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2837,21 +2282,6 @@
       "comment_count": 5,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -2859,7 +2289,7 @@
       ],
       "tags": [
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -2880,7 +2310,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:21.031Z",
+          "date": "2026-01-16T18:21:51.330Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2916,21 +2346,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -2938,7 +2353,7 @@
       ],
       "tags": [
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -2957,7 +2372,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:21.293Z",
+          "date": "2026-01-16T18:21:51.587Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2993,26 +2408,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3044,7 +2439,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:21.567Z",
+          "date": "2026-01-16T18:21:51.835Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3080,21 +2475,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -3102,7 +2482,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         },
@@ -3126,7 +2506,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:21.843Z",
+          "date": "2026-01-16T18:21:52.094Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3162,21 +2542,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -3184,7 +2549,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -3216,7 +2581,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:22.107Z",
+          "date": "2026-01-16T18:21:52.324Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3252,21 +2617,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -3274,7 +2624,7 @@
       ],
       "tags": [
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         }
@@ -3311,7 +2661,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:22.373Z",
+          "date": "2026-01-16T18:21:52.562Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3346,26 +2696,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -3409,7 +2739,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:22.658Z",
+          "date": "2026-01-16T18:21:52.796Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3445,21 +2775,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3485,7 +2800,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:22.929Z",
+          "date": "2026-01-16T18:21:53.059Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3520,26 +2835,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -3591,7 +2886,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:23.225Z",
+          "date": "2026-01-16T18:21:53.295Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3627,21 +2922,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3667,7 +2947,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:23.512Z",
+          "date": "2026-01-16T18:21:53.552Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3703,26 +2983,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3748,7 +3008,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:23.781Z",
+          "date": "2026-01-16T18:21:53.780Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3784,21 +3044,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3824,7 +3069,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:24.048Z",
+          "date": "2026-01-16T18:21:54.014Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3860,26 +3105,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3908,7 +3133,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:24.332Z",
+          "date": "2026-01-16T18:21:54.251Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3944,21 +3169,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -3984,7 +3194,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:24.614Z",
+          "date": "2026-01-16T18:21:54.503Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4019,26 +3229,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -4076,7 +3266,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:24.913Z",
+          "date": "2026-01-16T18:21:54.761Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4112,21 +3302,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -4134,17 +3309,17 @@
       ],
       "tags": [
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         },
@@ -4168,7 +3343,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:25.185Z",
+          "date": "2026-01-16T18:21:55.064Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4204,21 +3379,6 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -4226,7 +3386,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -4245,7 +3405,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:25.468Z",
+          "date": "2026-01-16T18:21:55.300Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4281,21 +3441,6 @@
       "comment_count": 3,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -4303,17 +3448,17 @@
       ],
       "tags": [
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -4334,7 +3479,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:25.782Z",
+          "date": "2026-01-16T18:21:55.552Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4370,26 +3515,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4418,7 +3543,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:26.053Z",
+          "date": "2026-01-16T18:21:55.823Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4454,21 +3579,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4500,7 +3610,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:26.317Z",
+          "date": "2026-01-16T18:21:56.079Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4536,21 +3646,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -4558,7 +3653,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -4577,7 +3672,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:26.590Z",
+          "date": "2026-01-16T18:21:56.338Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4613,26 +3708,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4661,7 +3736,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:26.864Z",
+          "date": "2026-01-16T18:21:56.589Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4697,21 +3772,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4737,7 +3797,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:27.133Z",
+          "date": "2026-01-16T18:21:56.846Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4773,26 +3833,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4821,7 +3861,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:27.413Z",
+          "date": "2026-01-16T18:21:57.114Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4857,21 +3897,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4897,7 +3922,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:27.684Z",
+          "date": "2026-01-16T18:21:57.367Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4933,26 +3958,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -4986,7 +3991,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:27.963Z",
+          "date": "2026-01-16T18:21:57.603Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5022,21 +4027,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5062,7 +4052,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:28.238Z",
+          "date": "2026-01-16T18:21:57.870Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5098,21 +4088,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -5120,7 +4095,7 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
@@ -5144,7 +4119,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:28.510Z",
+          "date": "2026-01-16T18:21:58.148Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5180,21 +4155,6 @@
       "comment_count": 3,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -5202,7 +4162,7 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         }
@@ -5233,7 +4193,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:28.790Z",
+          "date": "2026-01-16T18:21:58.385Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5269,21 +4229,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -5291,12 +4236,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         }
@@ -5317,7 +4262,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:29.056Z",
+          "date": "2026-01-16T18:21:58.637Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5353,26 +4298,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5404,7 +4329,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:29.325Z",
+          "date": "2026-01-16T18:21:58.904Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5440,21 +4365,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5480,7 +4390,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:29.603Z",
+          "date": "2026-01-16T18:21:59.130Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5516,26 +4426,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5566,7 +4456,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:29.878Z",
+          "date": "2026-01-16T18:21:59.375Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5602,21 +4492,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5642,7 +4517,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:30.147Z",
+          "date": "2026-01-16T18:21:59.631Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5678,26 +4553,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5730,7 +4585,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:30.431Z",
+          "date": "2026-01-16T18:21:59.878Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5766,21 +4621,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5806,7 +4646,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:30.706Z",
+          "date": "2026-01-16T18:22:00.138Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5842,26 +4682,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5892,7 +4712,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:31.015Z",
+          "date": "2026-01-16T18:22:00.419Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5928,21 +4748,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -5968,7 +4773,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:31.284Z",
+          "date": "2026-01-16T18:22:00.682Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6004,26 +4809,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6054,7 +4839,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:31.548Z",
+          "date": "2026-01-16T18:22:00.956Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6090,26 +4875,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6138,7 +4903,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:31.835Z",
+          "date": "2026-01-16T18:22:01.219Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6174,21 +4939,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6220,7 +4970,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:32.098Z",
+          "date": "2026-01-16T18:22:01.495Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6256,21 +5006,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -6278,7 +5013,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -6307,7 +5042,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:32.388Z",
+          "date": "2026-01-16T18:22:01.731Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6343,26 +5078,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6391,7 +5106,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:32.665Z",
+          "date": "2026-01-16T18:22:01.984Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6426,21 +5141,6 @@
       "comment_status": "closed",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -6478,7 +5178,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:32.937Z",
+          "date": "2026-01-16T18:22:02.247Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6514,21 +5214,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -6536,12 +5221,12 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -6563,7 +5248,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:33.209Z",
+          "date": "2026-01-16T18:22:02.515Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6599,26 +5284,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6646,7 +5311,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:33.498Z",
+          "date": "2026-01-16T18:22:02.796Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6682,21 +5347,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6722,7 +5372,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:33.759Z",
+          "date": "2026-01-16T18:22:03.149Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6758,26 +5408,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6806,7 +5436,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:34.031Z",
+          "date": "2026-01-16T18:22:03.378Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6842,26 +5472,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6889,7 +5499,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:34.349Z",
+          "date": "2026-01-16T18:22:03.632Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6925,21 +5535,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -6965,7 +5560,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:34.616Z",
+          "date": "2026-01-16T18:22:03.887Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7001,26 +5596,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -7054,7 +5629,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:34.885Z",
+          "date": "2026-01-16T18:22:04.129Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7090,21 +5665,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -7130,7 +5690,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:35.164Z",
+          "date": "2026-01-16T18:22:04.370Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7165,26 +5725,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -7223,7 +5763,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:35.440Z",
+          "date": "2026-01-16T18:22:04.635Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7259,21 +5799,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -7281,17 +5806,17 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         }
@@ -7317,7 +5842,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:35.717Z",
+          "date": "2026-01-16T18:22:04.879Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7353,21 +5878,6 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -7375,7 +5885,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -7397,7 +5907,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:35.987Z",
+          "date": "2026-01-16T18:22:05.125Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7433,21 +5943,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -7455,17 +5950,17 @@
       ],
       "tags": [
         {
-          "name": "Resources",
+          "name": "resources",
           "slug": "resources",
           "url": "/tag/resources/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         },
@@ -7494,7 +5989,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:36.269Z",
+          "date": "2026-01-16T18:22:05.379Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7530,21 +6025,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -7552,7 +6032,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -7574,7 +6054,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:36.545Z",
+          "date": "2026-01-16T18:22:05.637Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7610,26 +6090,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -7655,7 +6115,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:36.818Z",
+          "date": "2026-01-16T18:22:05.880Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7691,26 +6151,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -7744,7 +6184,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:37.089Z",
+          "date": "2026-01-16T18:22:06.135Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7780,21 +6220,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -7820,7 +6245,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:37.357Z",
+          "date": "2026-01-16T18:22:06.403Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7855,26 +6280,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -7915,7 +6320,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:37.652Z",
+          "date": "2026-01-16T18:22:06.648Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7951,21 +6356,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -7991,7 +6381,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:37.924Z",
+          "date": "2026-01-16T18:22:06.956Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8027,26 +6417,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8077,7 +6447,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:38.208Z",
+          "date": "2026-01-16T18:22:07.232Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8113,21 +6483,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8153,7 +6508,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:38.469Z",
+          "date": "2026-01-16T18:22:07.483Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8189,26 +6544,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8239,7 +6574,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:38.775Z",
+          "date": "2026-01-16T18:22:07.721Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8275,21 +6610,6 @@
       "comment_count": 3,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -8297,7 +6617,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -8320,7 +6640,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:39.050Z",
+          "date": "2026-01-16T18:22:07.997Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8356,21 +6676,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -8378,7 +6683,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         },
@@ -8402,7 +6707,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:39.338Z",
+          "date": "2026-01-16T18:22:08.314Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8438,26 +6743,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8483,7 +6768,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:39.625Z",
+          "date": "2026-01-16T18:22:08.563Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8519,21 +6804,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -8541,7 +6811,7 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         }
@@ -8560,7 +6830,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:39.902Z",
+          "date": "2026-01-16T18:22:08.820Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8596,26 +6866,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8646,7 +6896,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:40.206Z",
+          "date": "2026-01-16T18:22:09.059Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8682,21 +6932,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8722,7 +6957,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:40.571Z",
+          "date": "2026-01-16T18:22:09.317Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8757,26 +6992,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -8814,7 +7029,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:40.834Z",
+          "date": "2026-01-16T18:22:09.596Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8850,21 +7065,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8890,7 +7090,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:41.105Z",
+          "date": "2026-01-16T18:22:09.853Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8926,26 +7126,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -8977,7 +7157,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:41.389Z",
+          "date": "2026-01-16T18:22:10.106Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9013,21 +7193,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9053,7 +7218,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:41.652Z",
+          "date": "2026-01-16T18:22:10.364Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9089,26 +7254,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9140,7 +7285,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:41.925Z",
+          "date": "2026-01-16T18:22:10.694Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9176,21 +7321,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9216,7 +7346,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:42.193Z",
+          "date": "2026-01-16T18:22:10.953Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9252,26 +7382,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9304,7 +7414,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:42.473Z",
+          "date": "2026-01-16T18:22:11.194Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9340,21 +7450,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9380,7 +7475,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:42.734Z",
+          "date": "2026-01-16T18:22:11.440Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9416,26 +7511,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9468,7 +7543,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:43.010Z",
+          "date": "2026-01-16T18:22:11.702Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9504,21 +7579,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9544,7 +7604,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:43.288Z",
+          "date": "2026-01-16T18:22:11.962Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9580,26 +7640,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9610,13 +7650,7 @@
           "url": "/category/uncategorized/"
         }
       ],
-      "tags": [
-        {
-          "name": "my Weekly Authentics",
-          "slug": "the-weekly-authentic",
-          "url": "//yongesonne.edublogs.org/tag/the-weekly-authentic/"
-        }
-      ],
+      "tags": [],
       "path": "2006/10/04/100406/index.html",
       "url": "https://learningischange.com/2006/10/04/100406/",
       "word_count": 161,
@@ -9634,7 +7668,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:43.574Z",
+          "date": "2026-01-16T18:22:12.212Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9670,21 +7704,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9710,7 +7729,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:43.838Z",
+          "date": "2026-01-16T18:22:12.456Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9746,21 +7765,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -9768,7 +7772,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -9787,7 +7791,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:44.110Z",
+          "date": "2026-01-16T18:22:12.695Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9823,21 +7827,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -9845,7 +7834,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -9864,7 +7853,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:44.378Z",
+          "date": "2026-01-16T18:22:12.952Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9900,26 +7889,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -9948,7 +7917,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:44.652Z",
+          "date": "2026-01-16T18:22:13.238Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9984,26 +7953,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10037,7 +7986,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:44.934Z",
+          "date": "2026-01-16T18:22:13.508Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10073,21 +8022,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10113,7 +8047,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:45.200Z",
+          "date": "2026-01-16T18:22:13.765Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10149,26 +8083,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10196,7 +8110,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:45.478Z",
+          "date": "2026-01-16T18:22:14.032Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10232,21 +8146,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10272,7 +8171,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:45.749Z",
+          "date": "2026-01-16T18:22:14.278Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10308,26 +8207,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10360,7 +8239,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:46.017Z",
+          "date": "2026-01-16T18:22:14.529Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10396,21 +8275,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10436,7 +8300,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:46.279Z",
+          "date": "2026-01-16T18:22:14.783Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10472,26 +8336,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10519,7 +8363,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:46.541Z",
+          "date": "2026-01-16T18:22:15.042Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10555,29 +8399,14 @@
       "comment_count": 3,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -10596,7 +8425,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:46.812Z",
+          "date": "2026-01-16T18:22:15.388Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10632,21 +8461,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10678,7 +8492,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:47.093Z",
+          "date": "2026-01-16T18:22:15.620Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10714,26 +8528,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10761,7 +8555,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:47.358Z",
+          "date": "2026-01-16T18:22:15.849Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10797,29 +8591,14 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -10846,7 +8625,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:47.635Z",
+          "date": "2026-01-16T18:22:16.101Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10882,21 +8661,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -10928,7 +8692,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:47.919Z",
+          "date": "2026-01-16T18:22:16.367Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10963,26 +8727,6 @@
       "comment_status": "open",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
@@ -11019,7 +8763,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:48.185Z",
+          "date": "2026-01-16T18:22:16.638Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11055,21 +8799,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11095,7 +8824,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:48.505Z",
+          "date": "2026-01-16T18:22:16.896Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11131,21 +8860,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -11153,7 +8867,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -11172,7 +8886,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:48.764Z",
+          "date": "2026-01-16T18:22:17.147Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11208,29 +8922,14 @@
       "comment_count": 4,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -11252,7 +8951,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:49.037Z",
+          "date": "2026-01-16T18:22:17.436Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11288,26 +8987,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11335,7 +9014,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:49.316Z",
+          "date": "2026-01-16T18:22:17.704Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11371,21 +9050,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11411,7 +9075,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:49.580Z",
+          "date": "2026-01-16T18:22:17.949Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11447,26 +9111,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11496,7 +9140,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:49.872Z",
+          "date": "2026-01-16T18:22:18.195Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11532,21 +9176,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11572,7 +9201,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:50.160Z",
+          "date": "2026-01-16T18:22:18.447Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11608,26 +9237,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11655,7 +9264,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:50.418Z",
+          "date": "2026-01-16T18:22:18.694Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11691,21 +9300,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11731,7 +9325,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:50.681Z",
+          "date": "2026-01-16T18:22:18.932Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11767,29 +9361,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -11827,7 +9406,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:50.962Z",
+          "date": "2026-01-16T18:22:19.266Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11863,21 +9442,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -11885,7 +9449,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -11904,7 +9468,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:51.244Z",
+          "date": "2026-01-16T18:22:19.497Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11940,26 +9504,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -11989,7 +9533,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:51.509Z",
+          "date": "2026-01-16T18:22:19.756Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12025,21 +9569,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12071,7 +9600,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:51.790Z",
+          "date": "2026-01-16T18:22:19.996Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12107,29 +9636,14 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -12148,7 +9662,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:52.066Z",
+          "date": "2026-01-16T18:22:20.235Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12184,26 +9698,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12238,7 +9732,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:52.343Z",
+          "date": "2026-01-16T18:22:20.477Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12274,21 +9768,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12314,7 +9793,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:52.599Z",
+          "date": "2026-01-16T18:22:20.811Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12350,26 +9829,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12402,7 +9861,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:52.875Z",
+          "date": "2026-01-16T18:22:21.067Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12438,21 +9897,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12478,7 +9922,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:53.148Z",
+          "date": "2026-01-16T18:22:21.309Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12514,26 +9958,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12562,7 +9986,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:53.417Z",
+          "date": "2026-01-16T18:22:21.555Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12598,29 +10022,14 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -12639,7 +10048,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:53.695Z",
+          "date": "2026-01-16T18:22:21.799Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12675,21 +10084,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12721,7 +10115,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:53.965Z",
+          "date": "2026-01-16T18:22:22.042Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12757,26 +10151,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12805,7 +10179,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:54.251Z",
+          "date": "2026-01-16T18:22:22.281Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12841,21 +10215,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -12887,7 +10246,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:54.546Z",
+          "date": "2026-01-16T18:22:22.535Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12923,29 +10282,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -12969,7 +10313,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:54.819Z",
+          "date": "2026-01-16T18:22:22.829Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13005,26 +10349,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13054,7 +10378,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:55.096Z",
+          "date": "2026-01-16T18:22:23.095Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13090,21 +10414,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13130,7 +10439,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:55.366Z",
+          "date": "2026-01-16T18:22:23.346Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13166,26 +10475,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13215,7 +10504,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:55.635Z",
+          "date": "2026-01-16T18:22:23.586Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13251,21 +10540,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13291,7 +10565,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:55.906Z",
+          "date": "2026-01-16T18:22:23.899Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13327,26 +10601,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13374,7 +10628,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:56.195Z",
+          "date": "2026-01-16T18:22:24.134Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13410,21 +10664,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13450,7 +10689,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:56.466Z",
+          "date": "2026-01-16T18:22:24.378Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13486,26 +10725,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13535,7 +10754,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:56.746Z",
+          "date": "2026-01-16T18:22:24.646Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13571,21 +10790,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13611,7 +10815,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:57.016Z",
+          "date": "2026-01-16T18:22:24.877Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13647,26 +10851,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13696,7 +10880,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:57.303Z",
+          "date": "2026-01-16T18:22:25.128Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13732,21 +10916,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13772,7 +10941,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:57.566Z",
+          "date": "2026-01-16T18:22:25.355Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13808,26 +10977,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13853,7 +11002,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:57.842Z",
+          "date": "2026-01-16T18:22:25.593Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13889,21 +11038,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -13929,7 +11063,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:58.128Z",
+          "date": "2026-01-16T18:22:25.848Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13965,26 +11099,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14012,7 +11126,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:58.403Z",
+          "date": "2026-01-16T18:22:26.092Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14048,21 +11162,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14094,7 +11193,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:58.696Z",
+          "date": "2026-01-16T18:22:26.339Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14130,29 +11229,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -14173,7 +11257,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:58.966Z",
+          "date": "2026-01-16T18:22:26.583Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14209,26 +11293,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14257,7 +11321,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:59.261Z",
+          "date": "2026-01-16T18:22:26.842Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14293,21 +11357,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14333,7 +11382,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:59.527Z",
+          "date": "2026-01-16T18:22:27.076Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14369,26 +11418,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14416,7 +11445,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:50:59.806Z",
+          "date": "2026-01-16T18:22:27.338Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14452,21 +11481,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14492,7 +11506,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:00.091Z",
+          "date": "2026-01-16T18:22:27.597Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14528,26 +11542,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14578,7 +11572,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:00.370Z",
+          "date": "2026-01-16T18:22:27.843Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14614,21 +11608,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14654,7 +11633,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:00.650Z",
+          "date": "2026-01-16T18:22:28.091Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14690,21 +11669,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -14712,22 +11676,22 @@
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         },
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -14746,7 +11710,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:00.929Z",
+          "date": "2026-01-16T18:22:28.321Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14782,44 +11746,29 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "Professional Development",
+          "name": "professional development",
           "slug": "professional-development",
           "url": "/tag/professional-development/"
         },
         {
-          "name": "Teaching Theory",
+          "name": "teaching theory",
           "slug": "teaching-theory",
           "url": "/tag/teaching-theory/"
         },
         {
-          "name": "Technology in the Classroom",
+          "name": "technology in the classroom",
           "slug": "technology-in-the-classroom",
           "url": "/tag/technology-in-the-classroom/"
         },
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -14840,7 +11789,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:01.230Z",
+          "date": "2026-01-16T18:22:28.567Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14876,26 +11825,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -14927,7 +11856,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:01.510Z",
+          "date": "2026-01-16T18:22:28.819Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14963,21 +11892,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -15003,7 +11917,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:01.799Z",
+          "date": "2026-01-16T18:22:29.071Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15039,26 +11953,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -15091,7 +11985,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:02.070Z",
+          "date": "2026-01-16T18:22:29.328Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15127,29 +12021,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -15168,7 +12047,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:02.340Z",
+          "date": "2026-01-16T18:22:29.572Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15204,21 +12083,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -15226,7 +12090,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -15245,7 +12109,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:02.630Z",
+          "date": "2026-01-16T18:22:29.831Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15281,21 +12145,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -15303,7 +12152,7 @@
       ],
       "tags": [
         {
-          "name": "The Weekly Authentic",
+          "name": "the weekly authentic",
           "slug": "the-weekly-authentic",
           "url": "/tag/the-weekly-authentic/"
         }
@@ -15324,7 +12173,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:02.921Z",
+          "date": "2026-01-16T18:22:30.064Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15360,26 +12209,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -15407,7 +12236,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:03.188Z",
+          "date": "2026-01-16T18:22:30.297Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15443,21 +12272,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -15483,7 +12297,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:03.455Z",
+          "date": "2026-01-16T18:22:30.592Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15519,26 +12333,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Classroom Resources",
-          "slug": "classroom-resources",
-          "url": "/category/classroom-resources/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -15566,7 +12360,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:03.729Z",
+          "date": "2026-01-16T18:22:30.896Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15602,21 +12396,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
           "url": "/category/lesson-plans/"
@@ -15642,7 +12421,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T18:51:03.997Z",
+          "date": "2026-01-16T18:22:31.158Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [

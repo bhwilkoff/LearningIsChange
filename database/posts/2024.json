@@ -28,21 +28,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -63,7 +48,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:31.173Z",
+          "date": "2026-01-16T18:53:44.353Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -99,21 +84,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -138,7 +108,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:31.460Z",
+          "date": "2026-01-16T18:53:44.843Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -174,21 +144,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Learning",
           "slug": "learning",
           "url": "/category/learning/"
@@ -211,7 +166,7 @@
           "url": "/tag/kids/"
         },
         {
-          "name": "Learning",
+          "name": "learning",
           "slug": "learning",
           "url": "/tag/learning/"
         },
@@ -240,7 +195,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:31.729Z",
+          "date": "2026-01-16T18:53:45.317Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -276,21 +231,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Learning",
           "slug": "learning",
           "url": "/category/learning/"
@@ -313,7 +253,7 @@
           "url": "/tag/kids/"
         },
         {
-          "name": "Learning",
+          "name": "learning",
           "slug": "learning",
           "url": "/tag/learning/"
         },
@@ -344,7 +284,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:32.004Z",
+          "date": "2026-01-16T18:53:45.803Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -380,21 +320,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
@@ -402,7 +327,7 @@
       ],
       "tags": [
         {
-          "name": "Brennan Lee Mulligan",
+          "name": "brennan lee mulligan",
           "slug": "brennan-lee-mulligan",
           "url": "/tag/brennan-lee-mulligan/"
         },
@@ -412,7 +337,7 @@
           "url": "/tag/college/"
         },
         {
-          "name": "Dimension 20",
+          "name": "dimension 20",
           "slug": "dimension-20",
           "url": "/tag/dimension-20/"
         },
@@ -422,12 +347,12 @@
           "url": "/tag/education/"
         },
         {
-          "name": "Hank Green",
+          "name": "hank green",
           "slug": "hank-green",
           "url": "/tag/hank-green/"
         },
         {
-          "name": "Study Hall",
+          "name": "study hall",
           "slug": "study-hall",
           "url": "/tag/study-hall/"
         },
@@ -437,7 +362,7 @@
           "url": "/tag/video/"
         },
         {
-          "name": "Vlogbrothers",
+          "name": "vlogbrothers",
           "slug": "vlogbrothers",
           "url": "/tag/vlogbrothers/"
         }
@@ -456,7 +381,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:32.267Z",
+          "date": "2026-01-16T18:53:46.286Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -492,29 +417,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "humanity",
+          "name": "Humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
       ],
       "tags": [
         {
-          "name": "Brennan Lee Mulligan",
+          "name": "brennan lee mulligan",
           "slug": "brennan-lee-mulligan",
           "url": "/tag/brennan-lee-mulligan/"
         },
@@ -524,7 +434,7 @@
           "url": "/tag/college/"
         },
         {
-          "name": "Dimension 20",
+          "name": "dimension 20",
           "slug": "dimension-20",
           "url": "/tag/dimension-20/"
         },
@@ -534,12 +444,12 @@
           "url": "/tag/education/"
         },
         {
-          "name": "Hank Green",
+          "name": "hank green",
           "slug": "hank-green",
           "url": "/tag/hank-green/"
         },
         {
-          "name": "Study Hall",
+          "name": "study hall",
           "slug": "study-hall",
           "url": "/tag/study-hall/"
         },
@@ -549,7 +459,7 @@
           "url": "/tag/video/"
         },
         {
-          "name": "Vlogbrothers",
+          "name": "vlogbrothers",
           "slug": "vlogbrothers",
           "url": "/tag/vlogbrothers/"
         }
@@ -571,7 +481,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:32.538Z",
+          "date": "2026-01-16T18:53:46.774Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -607,29 +517,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "humanity",
+          "name": "Humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
       ],
       "tags": [
         {
-          "name": "Colorado",
+          "name": "colorado",
           "slug": "colorado",
           "url": "/tag/colorado/"
         },
@@ -639,7 +534,7 @@
           "url": "/tag/exercise/"
         },
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -670,7 +565,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:32.819Z",
+          "date": "2026-01-16T18:53:47.274Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -706,21 +601,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
@@ -728,7 +608,7 @@
       ],
       "tags": [
         {
-          "name": "Colorado",
+          "name": "colorado",
           "slug": "colorado",
           "url": "/tag/colorado/"
         },
@@ -738,7 +618,7 @@
           "url": "/tag/exercise/"
         },
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -762,7 +642,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:33.076Z",
+          "date": "2026-01-16T18:53:47.733Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -798,21 +678,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Politics",
           "slug": "politics",
           "url": "/category/politics/"
@@ -825,12 +690,12 @@
           "url": "/tag/election/"
         },
         {
-          "name": "Information Literacy",
+          "name": "information literacy",
           "slug": "information-literacy",
           "url": "/tag/information-literacy/"
         },
         {
-          "name": "Mental Health",
+          "name": "mental health",
           "slug": "mental-health",
           "url": "/tag/mental-health/"
         },
@@ -854,7 +719,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:33.345Z",
+          "date": "2026-01-16T18:53:48.225Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -890,21 +755,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Politics",
           "slug": "politics",
           "url": "/category/politics/"
@@ -917,12 +767,12 @@
           "url": "/tag/election/"
         },
         {
-          "name": "Information Literacy",
+          "name": "information literacy",
           "slug": "information-literacy",
           "url": "/tag/information-literacy/"
         },
         {
-          "name": "Mental Health",
+          "name": "mental health",
           "slug": "mental-health",
           "url": "/tag/mental-health/"
         },
@@ -952,7 +802,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:33.681Z",
+          "date": "2026-01-16T18:53:48.725Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
