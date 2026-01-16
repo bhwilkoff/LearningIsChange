@@ -28,22 +28,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "blog-2",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -60,7 +45,7 @@
           "url": "/tag/distraction/"
         },
         {
-          "name": "social-media",
+          "name": "social media",
           "slug": "social-media",
           "url": "/tag/social-media/"
         }
@@ -81,7 +66,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:36.175Z",
+          "date": "2026-01-16T18:53:53.145Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -117,22 +102,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "movies",
+          "name": "Movies",
           "slug": "movies",
           "url": "/category/movies/"
         }
@@ -165,7 +135,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:35.901Z",
+          "date": "2026-01-16T18:53:52.650Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -201,29 +171,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "family",
+          "name": "Family",
           "slug": "family",
           "url": "/category/family/"
         }
       ],
       "tags": [
         {
-          "name": "kurt-vonnegut",
+          "name": "kurt vonnegut",
           "slug": "kurt-vonnegut",
           "url": "/tag/kurt-vonnegut/"
         },
@@ -249,7 +204,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:35.631Z",
+          "date": "2026-01-16T18:53:52.157Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -285,22 +240,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "growth",
+          "name": "Growth",
           "slug": "growth",
           "url": "/category/growth/"
         }
@@ -328,7 +268,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:35.345Z",
+          "date": "2026-01-16T18:53:51.676Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -363,21 +303,6 @@
       "comment_status": "closed",
       "comment_count": 0,
       "categories": [
-        {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
         {
           "name": "Typewriter",
           "slug": "Typewriter",
@@ -422,7 +347,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:35.075Z",
+          "date": "2026-01-16T18:53:51.178Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [

@@ -28,21 +28,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -63,7 +48,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:01.684Z",
+          "date": "2026-01-16T18:52:53.067Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -99,21 +84,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -136,7 +106,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:01.987Z",
+          "date": "2026-01-16T18:52:53.566Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -172,21 +142,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -207,7 +162,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:02.254Z",
+          "date": "2026-01-16T18:52:54.037Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -243,21 +198,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -280,7 +220,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:02.550Z",
+          "date": "2026-01-16T18:52:54.512Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -316,21 +256,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
@@ -343,7 +268,7 @@
           "url": "/tag/digital-identity/"
         },
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         }
@@ -362,7 +287,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:02.826Z",
+          "date": "2026-01-16T18:52:54.972Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -398,22 +323,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "DigPINS",
+          "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
         }
@@ -425,7 +335,7 @@
           "url": "/tag/digital-identity/"
         },
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         }
@@ -472,7 +382,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:03.205Z",
+          "date": "2026-01-16T18:52:55.487Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -508,22 +418,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "DigPINS",
+          "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
         },
@@ -540,7 +435,7 @@
       ],
       "tags": [
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         }
@@ -572,7 +467,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:03.512Z",
+          "date": "2026-01-16T18:52:55.992Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -608,21 +503,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
@@ -640,7 +520,7 @@
       ],
       "tags": [
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         }
@@ -659,7 +539,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:03.823Z",
+          "date": "2026-01-16T18:52:56.469Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -695,22 +575,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "DigPINS",
+          "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
         },
@@ -727,17 +592,17 @@
       ],
       "tags": [
         {
-          "name": "Authority",
+          "name": "authority",
           "slug": "authority",
           "url": "/tag/authority/"
         },
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         },
         {
-          "name": "Higher Education",
+          "name": "higher education",
           "slug": "higher-education",
           "url": "/tag/higher-education/"
         },
@@ -769,7 +634,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:04.114Z",
+          "date": "2026-01-16T18:52:56.961Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -805,21 +670,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
@@ -837,17 +687,17 @@
       ],
       "tags": [
         {
-          "name": "Authority",
+          "name": "authority",
           "slug": "authority",
           "url": "/tag/authority/"
         },
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         },
         {
-          "name": "Higher Education",
+          "name": "higher education",
           "slug": "higher-education",
           "url": "/tag/higher-education/"
         },
@@ -871,7 +721,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:04.393Z",
+          "date": "2026-01-16T18:52:57.462Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -907,29 +757,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "DigPINS",
+          "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
         }
       ],
       "tags": [
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         },
@@ -987,7 +822,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:04.668Z",
+          "date": "2026-01-16T18:52:57.961Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1023,21 +858,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Digpins",
           "slug": "digpins",
           "url": "/category/digpins/"
@@ -1045,7 +865,7 @@
       ],
       "tags": [
         {
-          "name": "DigPINS",
+          "name": "digpins",
           "slug": "digpins",
           "url": "/tag/digpins/"
         },
@@ -1069,7 +889,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:04.932Z",
+          "date": "2026-01-16T18:52:58.458Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1105,22 +925,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1137,7 +942,7 @@
           "url": "/tag/ipad/"
         },
         {
-          "name": "Learning",
+          "name": "learning",
           "slug": "learning",
           "url": "/tag/learning/"
         }
@@ -1162,7 +967,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:05.205Z",
+          "date": "2026-01-16T18:52:58.921Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1198,21 +1003,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -1230,7 +1020,7 @@
           "url": "/tag/ipad/"
         },
         {
-          "name": "Learning",
+          "name": "learning",
           "slug": "learning",
           "url": "/tag/learning/"
         }
@@ -1249,7 +1039,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:05.477Z",
+          "date": "2026-01-16T18:52:59.395Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1285,44 +1075,29 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "AMC",
+          "name": "amc",
           "slug": "amc",
           "url": "/tag/amc/"
         },
         {
-          "name": "Anschutz",
+          "name": "anschutz",
           "slug": "anschutz",
           "url": "/tag/anschutz/"
         },
         {
-          "name": "Virtual Reality",
+          "name": "virtual reality",
           "slug": "virtual-reality",
           "url": "/tag/virtual-reality/"
         },
         {
-          "name": "Virtual Reality Committee",
+          "name": "virtual reality committee",
           "slug": "virtual-reality-committee",
           "url": "/tag/virtual-reality-committee/"
         }
@@ -1359,7 +1134,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:05.744Z",
+          "date": "2026-01-16T18:52:59.877Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1395,21 +1170,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -1417,22 +1177,22 @@
       ],
       "tags": [
         {
-          "name": "AMC",
+          "name": "amc",
           "slug": "amc",
           "url": "/tag/amc/"
         },
         {
-          "name": "Anschutz",
+          "name": "anschutz",
           "slug": "anschutz",
           "url": "/tag/anschutz/"
         },
         {
-          "name": "Virtual Reality",
+          "name": "virtual reality",
           "slug": "virtual-reality",
           "url": "/tag/virtual-reality/"
         },
         {
-          "name": "Virtual Reality Committee",
+          "name": "virtual reality committee",
           "slug": "virtual-reality-committee",
           "url": "/tag/virtual-reality-committee/"
         },
@@ -1461,7 +1221,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:06.044Z",
+          "date": "2026-01-16T18:53:00.343Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1497,22 +1257,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1524,7 +1269,7 @@
           "url": "/tag/ios/"
         },
         {
-          "name": "Markdown",
+          "name": "markdown",
           "slug": "markdown",
           "url": "/tag/markdown/"
         }
@@ -1552,7 +1297,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:06.321Z",
+          "date": "2026-01-16T18:53:00.889Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1588,21 +1333,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/category/ben-wilkoff/"
@@ -1615,12 +1345,12 @@
       ],
       "tags": [
         {
-          "name": "Priviledge",
+          "name": "priviledge",
           "slug": "priviledge",
           "url": "/tag/priviledge/"
         },
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -1646,7 +1376,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:06.595Z",
+          "date": "2026-01-16T18:53:01.412Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1682,21 +1412,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/category/ben-wilkoff/"
@@ -1709,12 +1424,12 @@
       ],
       "tags": [
         {
-          "name": "Priviledge",
+          "name": "priviledge",
           "slug": "priviledge",
           "url": "/tag/priviledge/"
         },
         {
-          "name": "Reflection",
+          "name": "reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -1738,7 +1453,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:06.883Z",
+          "date": "2026-01-16T18:53:01.880Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1774,21 +1489,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1817,7 +1517,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:07.149Z",
+          "date": "2026-01-16T18:53:02.396Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1853,21 +1553,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Uncategorized",
           "slug": "uncategorized",
           "url": "/category/uncategorized/"
@@ -1888,7 +1573,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:07.424Z",
+          "date": "2026-01-16T18:53:02.901Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1924,22 +1609,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1961,7 +1631,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:07.692Z",
+          "date": "2026-01-16T18:53:03.376Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1997,21 +1667,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -2032,7 +1687,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:07.962Z",
+          "date": "2026-01-16T18:53:03.842Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2068,22 +1723,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
-          "name": "Blog",
+          "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -2112,7 +1752,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:08.246Z",
+          "date": "2026-01-16T18:53:04.378Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2148,21 +1788,6 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Video Posts",
-          "slug": "videos",
-          "url": "/category/videos/"
-        },
-        {
-          "name": "Recommendations",
-          "slug": "recs",
-          "url": "/category/recs/"
-        },
-        {
-          "name": "Blogging Projects",
-          "slug": "blogging-projects",
-          "url": "/category/blogging-projects/"
-        },
-        {
           "name": "Blog 2",
           "slug": "blog-2",
           "url": "/category/blog-2/"
@@ -2188,7 +1813,7 @@
       "publisher": "Learning is Change",
       "history": [
         {
-          "date": "2026-01-14T19:37:08.530Z",
+          "date": "2026-01-16T18:53:04.854Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
