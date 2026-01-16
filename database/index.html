@@ -973,28 +973,17 @@
             // ======= CATEGORIES - MULTIPLE DETECTION METHODS =======
             const seenCats = new Set();
             
-            // Method 1: Links with /category/ in href
-            doc.querySelectorAll('a[href*="/category/"]').forEach(link => {
-                const href = link.getAttribute('href') || '';
-                // Match /category/slug/ or /category/parent/child/
-                const catMatch = href.match(/\/category\/([^\/]+)(?:\/([^\/]+))?\/?$/);
-                if (catMatch) {
-                    // If there are two segments, first is parent, second is child
-                    const parentSlug = catMatch[2] ? catMatch[1] : null;
-                    const slug = catMatch[2] || catMatch[1];
-                    
-                    if (!seenCats.has(slug)) {
-                        seenCats.add(slug);
-                        const name = link.textContent.trim();
-                        if (name && name.length < 100) { // Sanity check
-                            post.categories.push({ 
-                                name: name, 
-                                slug: slug, 
-                                url: href,
-                                parent: parentSlug
-                            });
-                        }
-                    }
+            // Method 1: Body class names (MOST RELIABLE for single posts)
+            // Format: category-{slug}
+            bodyClasses.forEach(cls => {
+                const match = cls.match(/^category-(.+)$/);
+                if (match && !seenCats.has(match[1])) {
+                    seenCats.add(match[1]);
+                    post.categories.push({ 
+                        name: match[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), 
+                        slug: match[1], 
+                        url: `/category/${match[1]}/` 
+                    });
                 }
             });
             
@@ -1013,46 +1002,68 @@
                 });
             }
             
-            // Method 3: Body class names (category-xxx)
-            bodyClasses.forEach(cls => {
-                const match = cls.match(/^category-(.+)$/);
-                if (match && !seenCats.has(match[1])) {
-                    seenCats.add(match[1]);
-                    post.categories.push({ 
-                        name: match[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), 
-                        slug: match[1], 
-                        url: `/category/${match[1]}/` 
-                    });
-                }
+            // Method 3: Category links ONLY within post metadata areas (not navigation)
+            // Look for links in .entry-meta, .post-meta, .cat-links, footer areas, etc.
+            const metaSelectors = [
+                '.entry-meta a[href*="/category/"]',
+                '.post-meta a[href*="/category/"]',
+                '.cat-links a[href*="/category/"]',
+                '.entry-footer a[href*="/category/"]',
+                'article footer a[href*="/category/"]',
+                '.post-categories a[href*="/category/"]',
+                // Breadcrumb links that show the category
+                '.breadcrumbs a[href*="/category/"]',
+                '.entry-crumbs a[href*="/category/"]'
+            ];
+            
+            metaSelectors.forEach(selector => {
+                doc.querySelectorAll(selector).forEach(link => {
+                    // Skip if link is inside a nav or menu element
+                    if (link.closest('nav') || link.closest('.menu') || link.closest('#site-navigation')) {
+                        return;
+                    }
+                    
+                    const href = link.getAttribute('href') || '';
+                    // Match /category/slug/ or /category/parent/child/
+                    const catMatch = href.match(/\/category\/([^\/]+)(?:\/([^\/]+))?\/?$/);
+                    if (catMatch) {
+                        const parentSlug = catMatch[2] ? catMatch[1] : null;
+                        const slug = catMatch[2] || catMatch[1];
+                        
+                        if (!seenCats.has(slug)) {
+                            seenCats.add(slug);
+                            const name = link.textContent.trim();
+                            if (name && name.length < 100) {
+                                post.categories.push({ 
+                                    name: name, 
+                                    slug: slug, 
+                                    url: href,
+                                    parent: parentSlug
+                                });
+                            }
+                        }
+                    }
+                });
             });
             
             // ======= TAGS - MULTIPLE DETECTION METHODS =======
             const seenTags = new Set();
             
-            // Method 1: Links with /tag/ in href
-            doc.querySelectorAll('a[href*="/tag/"]').forEach(link => {
-                const href = link.getAttribute('href') || '';
-                const tagMatch = href.match(/\/tag\/([^\/]+)/);
-                if (tagMatch && !seenTags.has(tagMatch[1])) {
-                    seenTags.add(tagMatch[1]);
-                    const name = link.textContent.trim();
-                    if (name && name.length < 100) {
-                        post.tags.push({ name: name, slug: tagMatch[1], url: href });
-                    }
+            // Method 1: Body class names (MOST RELIABLE)
+            // Format: tag-{slug}
+            bodyClasses.forEach(cls => {
+                const match = cls.match(/^tag-(.+)$/);
+                if (match && !seenTags.has(match[1])) {
+                    seenTags.add(match[1]);
+                    post.tags.push({ 
+                        name: match[1].replace(/-/g, ' '), 
+                        slug: match[1], 
+                        url: `/tag/${match[1]}/` 
+                    });
                 }
             });
             
-            // Method 2: Links with rel="tag"
-            doc.querySelectorAll('a[rel="tag"]').forEach(link => {
-                const href = link.getAttribute('href') || '';
-                const tagMatch = href.match(/\/tag\/([^\/]+)/);
-                if (tagMatch && !seenTags.has(tagMatch[1])) {
-                    seenTags.add(tagMatch[1]);
-                    post.tags.push({ name: link.textContent.trim(), slug: tagMatch[1], url: href });
-                }
-            });
-            
-            // Method 3: Article class names (tag-xxx)
+            // Method 2: Article class names (tag-xxx)
             if (article) {
                 Array.from(article.classList).forEach(cls => {
                     const match = cls.match(/^tag-(.+)$/);
@@ -1067,17 +1078,44 @@
                 });
             }
             
-            // Method 4: Body class names (tag-xxx)
-            bodyClasses.forEach(cls => {
-                const match = cls.match(/^tag-(.+)$/);
-                if (match && !seenTags.has(match[1])) {
-                    seenTags.add(match[1]);
-                    post.tags.push({ 
-                        name: match[1].replace(/-/g, ' '), 
-                        slug: match[1], 
-                        url: `/tag/${match[1]}/` 
-                    });
+            // Method 3: Links with rel="tag" (reliable, WordPress standard)
+            doc.querySelectorAll('a[rel="tag"]').forEach(link => {
+                // Skip if inside navigation
+                if (link.closest('nav') || link.closest('.menu') || link.closest('#site-navigation')) {
+                    return;
                 }
+                const href = link.getAttribute('href') || '';
+                const tagMatch = href.match(/\/tag\/([^\/]+)/);
+                if (tagMatch && !seenTags.has(tagMatch[1])) {
+                    seenTags.add(tagMatch[1]);
+                    post.tags.push({ name: link.textContent.trim(), slug: tagMatch[1], url: href });
+                }
+            });
+            
+            // Method 4: Tag links within post metadata areas only
+            const tagMetaSelectors = [
+                '.entry-meta a[href*="/tag/"]',
+                '.post-meta a[href*="/tag/"]',
+                '.tags-links a[href*="/tag/"]',
+                '.entry-footer a[href*="/tag/"]',
+                'article footer a[href*="/tag/"]',
+                '.post-tags a[href*="/tag/"]'
+            ];
+            
+            tagMetaSelectors.forEach(selector => {
+                doc.querySelectorAll(selector).forEach(link => {
+                    if (link.closest('nav') || link.closest('.menu')) return;
+                    
+                    const href = link.getAttribute('href') || '';
+                    const tagMatch = href.match(/\/tag\/([^\/]+)/);
+                    if (tagMatch && !seenTags.has(tagMatch[1])) {
+                        seenTags.add(tagMatch[1]);
+                        const name = link.textContent.trim();
+                        if (name && name.length < 100) {
+                            post.tags.push({ name: name, slug: tagMatch[1], url: href });
+                        }
+                    }
+                });
             });
             
             // ======= FINALIZE =======
