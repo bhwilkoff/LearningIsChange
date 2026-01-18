@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Console – Learning is Change</title>
+    <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #1abc9c;
+            --accent-hover: #16a085;
+            --accent-light: rgba(26, 188, 156, 0.1);
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-muted: #999;
+            --bg-primary: #fff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #eef1f3;
+            --border-color: #ddd;
+            --border-light: #eee;
+            --success: #28a745;
+            --warning: #f0ad4e;
+            --error: #d9534f;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+        
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        #masthead { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); }
+        
+        #site-header-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        #branding { display: flex; align-items: center; gap: 15px; }
+        #site-title { font-size: 1.8rem; font-weight: 700; margin: 0; }
+        #site-title a { color: var(--text-primary); text-decoration: none; }
+        #site-title a:hover { color: var(--accent); }
+        #site-description { color: var(--text-secondary); font-size: 0.95rem; font-style: italic; font-family: 'Lora', Georgia, serif; }
+        
+        .header-nav { display: flex; gap: 25px; }
+        .header-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .header-nav a:hover { color: var(--accent); }
+        
+        #header-image-main {
+            height: 180px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            position: relative;
+        }
+        
+        .page-title-overlay {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .page-title-overlay h1 { font-size: 2rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2); margin-bottom: 5px; }
+        .page-title-overlay p { font-family: 'Lora', Georgia, serif; font-style: italic; opacity: 0.9; }
+        
+        #breadcrumbs-container { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 12px 20px; }
+        #breadcrumbs { max-width: 1200px; margin: 0 auto; font-size: 0.9rem; color: var(--text-muted); }
+        #breadcrumbs a { color: var(--accent); }
+        #breadcrumbs .separator { margin: 0 8px; color: var(--border-color); }
+        
+        #content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+        
+        @media (max-width: 900px) { #content { grid-template-columns: 1fr; } }
+        
+        main { display: flex; flex-direction: column; gap: 25px; }
+        
+        .card {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Search Box */
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
+        }
+        
+        .search-btn {
+            padding: 15px 30px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .search-btn:hover { background: var(--accent-hover); }
+        
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .filter-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        
+        .filter-group select, .filter-group input {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            min-width: 150px;
+        }
+        
+        /* Results */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .results-count {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        
+        .results-count strong {
+            color: var(--accent);
+        }
+        
+        .result-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .result-item:last-child { border-bottom: none; }
+        
+        .result-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+        
+        .result-title a {
+            color: inherit;
+        }
+        
+        .result-title a:hover {
+            color: var(--accent);
+        }
+        
+        .result-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        .result-meta span {
+            margin-right: 15px;
+        }
+        
+        .result-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .result-excerpt mark {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+        
+        .result-tags {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .tag.category {
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+        
+        /* Sidebar */
+        #sidebar { display: flex; flex-direction: column; gap: 20px; }
+        
+        .widget {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+        }
+        
+        .widget h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-light);
+        }
+        
+        .widget ul { list-style: none; }
+        .widget li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .widget li:last-child { border-bottom: none; }
+        
+        .widget .count {
+            background: var(--bg-tertiary);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .stat-mini {
+            text-align: center;
+            padding: 15px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-mini:last-child { margin-bottom: 0; }
+        
+        .stat-mini .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .stat-mini .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        /* Loading & Empty States */
+        .loading, .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+        
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        .empty-state .icon { font-size: 3rem; margin-bottom: 15px; }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+        
+        .pagination button {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .pagination button:hover { background: var(--bg-tertiary); }
+        .pagination button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        footer {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-light);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header id="masthead">
+        <div id="site-header-main">
+            <div id="branding">
+                <div id="site-text">
+                    <h1 id="site-title"><a href="https://learningischange.com">Learning is Change</a></h1>
+                    <span id="site-description">Admin Tools</span>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <a href="/admin/">← Dashboard</a>
+                <a href="https://learningischange.com">View Site</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="header-image-main">
+        <div class="page-title-overlay">
+            <h1>🔍 Search Console</h1>
+            <p>Test and explore your site's search database</p>
+        </div>
+    </div>
+
+    <div id="breadcrumbs-container">
+        <div id="breadcrumbs">
+            <a href="https://learningischange.com">Home</a>
+            <span class="separator">›</span>
+            <a href="/admin/">Admin</a>
+            <span class="separator">›</span>
+            <span>Search Console</span>
+        </div>
+    </div>
+
+    <div id="content">
+        <main>
+            <!-- Search Box -->
+            <div class="card">
+                <div class="card-title">🔎 Search</div>
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search posts, pages, and content..." autofocus>
+                    <button class="search-btn" onclick="performSearch()">Search</button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Type</label>
+                        <select id="filterType">
+                            <option value="">All Types</option>
+                            <option value="post">Posts</option>
+                            <option value="page">Pages</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select id="filterCategory">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Year</label>
+                        <select id="filterYear">
+                            <option value="">All Years</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort By</label>
+                        <select id="sortBy">
+                            <option value="relevance">Relevance</option>
+                            <option value="date-desc">Newest First</option>
+                            <option value="date-asc">Oldest First</option>
+                            <option value="title">Title A-Z</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results -->
+            <div class="card">
+                <div class="results-header">
+                    <div class="card-title" style="margin-bottom: 0; border: none; padding: 0;">📋 Results</div>
+                    <div class="results-count" id="resultsCount"></div>
+                </div>
+                <div id="resultsContainer">
+                    <div class="empty-state">
+                        <div class="icon">🔍</div>
+                        <p>Enter a search term to find posts and pages</p>
+                    </div>
+                </div>
+                <div class="pagination" id="pagination" style="display: none;"></div>
+            </div>
+        </main>
+
+        <aside id="sidebar">
+            <div class="widget">
+                <h3>📊 Database Stats</h3>
+                <div class="stat-mini">
+                    <div class="value" id="statTotalPosts">—</div>
+                    <div class="label">Total Posts</div>
+                </div>
+                <div class="stat-mini">
+                    <div class="value" id="statTotalPages">—</div>
+                    <div class="label">Total Pages</div>
+                </div>
+            </div>
+            
+            <div class="widget">
+                <h3>📁 Top Categories</h3>
+                <ul id="topCategories">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+            
+            <div class="widget">
+                <h3>🏷️ Popular Tags</h3>
+                <ul id="topTags">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+            
+            <div class="widget">
+                <h3>ℹ️ About</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    This console searches your site's database directly. Results are instant because all data is pre-indexed.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Search Console for <a href="https://learningischange.com">Learning is Change</a></p>
+    </footer>
+
+    <script>
+        /**
+         * Learning is Change - Admin Tools Common Module
+         */
+        const LiCAdmin = (function() {
+            'use strict';
+            
+            const CONFIG = {
+                STORAGE_KEY: 'lic_admin_settings',
+                DATABASE_CACHE_KEY: 'lic_database_cache',
+                DEFAULT_REPO_OWNER: 'bhwilkoff',
+                DEFAULT_REPO_NAME: 'LearningIsChange',
+                DEFAULT_BRANCH: 'main',
+                DEFAULT_COMMITTER_NAME: 'Ben Wilkoff',
+                DEFAULT_COMMITTER_EMAIL: 'Ben@learningischange.com',
+                SITE_URL: 'https://learningischange.com',
+                DATABASE_PATH: '/database',
+                CACHE_DURATION: 5 * 60 * 1000,
+            };
+            
+            function getSettings() {
+                try {
+                    const stored = localStorage.getItem(CONFIG.STORAGE_KEY);
+                    if (stored) return JSON.parse(stored);
+                } catch (e) { console.error('Error loading settings:', e); }
+                return {
+                    githubToken: '', repoOwner: CONFIG.DEFAULT_REPO_OWNER, repoName: CONFIG.DEFAULT_REPO_NAME,
+                    branch: CONFIG.DEFAULT_BRANCH, committerName: CONFIG.DEFAULT_COMMITTER_NAME,
+                    committerEmail: CONFIG.DEFAULT_COMMITTER_EMAIL, rememberToken: false
+                };
+            }
+            
+            function saveSettings(settings) {
+                try {
+                    const toSave = { ...settings };
+                    if (!settings.rememberToken) toSave.githubToken = '';
+                    localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(toSave));
+                    return true;
+                } catch (e) { return false; }
+            }
+            
+            let databaseCache = null, databaseCacheTime = 0;
+            
+            async function fetchDatabase(forceRefresh = false) {
+                const now = Date.now();
+                if (!forceRefresh && databaseCache && (now - databaseCacheTime) < CONFIG.CACHE_DURATION) return databaseCache;
+                
+                if (!forceRefresh) {
+                    try {
+                        const cached = localStorage.getItem(CONFIG.DATABASE_CACHE_KEY);
+                        if (cached) {
+                            const { data, timestamp } = JSON.parse(cached);
+                            if ((now - timestamp) < CONFIG.CACHE_DURATION) {
+                                databaseCache = data; databaseCacheTime = timestamp; return data;
+                            }
+                        }
+                    } catch (e) {}
+                }
+                
+                const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
+                const manifestRes = await fetch(`${baseUrl}/manifest.json`);
+                if (!manifestRes.ok) throw new Error('Failed to fetch manifest');
+                const manifest = await manifestRes.json();
+                
+                const taxRes = await fetch(`${baseUrl}/taxonomies.json`);
+                const taxonomies = taxRes.ok ? await taxRes.json() : { categories: { items: {} }, tags: { items: {} } };
+                
+                const authRes = await fetch(`${baseUrl}/authors.json`);
+                const authors = authRes.ok ? await authRes.json() : { authors: {} };
+                
+                const pagesRes = await fetch(`${baseUrl}/pages.json`);
+                const pages = pagesRes.ok ? await pagesRes.json() : { pages: [] };
+                
+                const database = {
+                    manifest, taxonomies, authors: authors.authors || {}, pages: pages.pages || [],
+                    posts: {}, _shards: manifest.shards?.posts || {}
+                };
+                
+                databaseCache = database; databaseCacheTime = now;
+                try { localStorage.setItem(CONFIG.DATABASE_CACHE_KEY, JSON.stringify({ data: database, timestamp: now })); } catch (e) {}
+                return database;
+            }
+            
+            async function fetchPostsByYear(year) {
+                const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
+                try {
+                    const res = await fetch(`${baseUrl}/posts/${year}.json`);
+                    if (!res.ok) return [];
+                    const data = await res.json();
+                    return data.posts || [];
+                } catch (e) { return []; }
+            }
+            
+            function formatDate(dateString) {
+                if (!dateString) return '';
+                return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+            
+            function formatNumber(num) { return num.toLocaleString(); }
+            
+            return { CONFIG, getSettings, saveSettings, fetchDatabase, fetchPostsByYear, formatDate, formatNumber };
+        })();
+    </script>
+    <script>
+        // State
+        let allPosts = [];
+        let filteredResults = [];
+        let currentPage = 1;
+        const resultsPerPage = 20;
+        let database = null;
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Enter key triggers search
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') performSearch();
+            });
+            
+            // Load database
+            await loadDatabase();
+        });
+        
+        async function loadDatabase() {
+            try {
+                database = await LiCAdmin.fetchDatabase();
+                
+                // Update stats
+                document.getElementById('statTotalPosts').textContent = LiCAdmin.formatNumber(database.manifest.stats.total_posts);
+                document.getElementById('statTotalPages').textContent = LiCAdmin.formatNumber(database.manifest.stats.total_pages);
+                
+                // Populate year filter
+                const yearSelect = document.getElementById('filterYear');
+                const years = Object.keys(database._shards).sort().reverse();
+                years.forEach(year => {
+                    const opt = document.createElement('option');
+                    opt.value = year;
+                    opt.textContent = year;
+                    yearSelect.appendChild(opt);
+                });
+                
+                // Populate category filter
+                const catSelect = document.getElementById('filterCategory');
+                const categories = Object.values(database.taxonomies.categories?.items || {});
+                categories.sort((a, b) => a.name.localeCompare(b.name)).forEach(cat => {
+                    const opt = document.createElement('option');
+                    opt.value = cat.slug;
+                    opt.textContent = cat.name;
+                    catSelect.appendChild(opt);
+                });
+                
+                // Display top categories
+                displayTopCategories(categories);
+                
+                // Display top tags
+                const tags = Object.values(database.taxonomies.tags?.items || {});
+                displayTopTags(tags);
+                
+                // Load all posts for searching
+                await loadAllPosts();
+                
+            } catch (e) {
+                console.error('Error loading database:', e);
+                document.getElementById('resultsContainer').innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">⚠️</div>
+                        <p>Failed to load database: ${e.message}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        async function loadAllPosts() {
+            const years = Object.keys(database._shards).sort().reverse();
+            allPosts = [];
+            
+            for (const year of years) {
+                const posts = await LiCAdmin.fetchPostsByYear(year);
+                allPosts.push(...posts);
+            }
+            
+            // Add pages
+            if (database.pages && database.pages.length > 0) {
+                allPosts.push(...database.pages.map(p => ({ ...p, type: 'page' })));
+            }
+            
+            console.log(`Loaded ${allPosts.length} items for search`);
+        }
+        
+        function displayTopCategories(categories) {
+            const container = document.getElementById('topCategories');
+            const sorted = [...categories].sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, 10);
+            
+            if (sorted.length === 0) {
+                container.innerHTML = '<li>No categories found</li>';
+                return;
+            }
+            
+            container.innerHTML = sorted.map(cat => `
+                <li>
+                    <a href="#" onclick="searchCategory('${cat.slug}'); return false;">${cat.name}</a>
+                </li>
+            `).join('');
+        }
+        
+        function displayTopTags(tags) {
+            const container = document.getElementById('topTags');
+            const sorted = [...tags].sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, 10);
+            
+            if (sorted.length === 0) {
+                container.innerHTML = '<li>No tags found</li>';
+                return;
+            }
+            
+            container.innerHTML = sorted.map(tag => `
+                <li>
+                    <a href="#" onclick="searchTag('${tag.slug}'); return false;">${tag.name}</a>
+                </li>
+            `).join('');
+        }
+        
+        function searchCategory(slug) {
+            document.getElementById('filterCategory').value = slug;
+            document.getElementById('searchInput').value = '';
+            performSearch();
+        }
+        
+        function searchTag(slug) {
+            document.getElementById('searchInput').value = `tag:${slug}`;
+            performSearch();
+        }
+        
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            const typeFilter = document.getElementById('filterType').value;
+            const categoryFilter = document.getElementById('filterCategory').value;
+            const yearFilter = document.getElementById('filterYear').value;
+            const sortBy = document.getElementById('sortBy').value;
+            
+            currentPage = 1;
+            
+            // Filter posts
+            filteredResults = allPosts.filter(post => {
+                // Type filter
+                if (typeFilter && post.type !== typeFilter) return false;
+                
+                // Category filter
+                if (categoryFilter) {
+                    const postCats = (post.categories || []).map(c => c.slug);
+                    if (!postCats.includes(categoryFilter)) return false;
+                }
+                
+                // Year filter
+                if (yearFilter && post.date_published) {
+                    const postYear = post.date_published.substring(0, 4);
+                    if (postYear !== yearFilter) return false;
+                }
+                
+                // Text search
+                if (query) {
+                    // Check for tag: prefix
+                    if (query.startsWith('tag:')) {
+                        const tagSlug = query.substring(4);
+                        const postTags = (post.tags || []).map(t => t.slug);
+                        return postTags.includes(tagSlug);
+                    }
+                    
+                    const searchFields = [
+                        post.title || '',
+                        post.content_filtered || '',
+                        post.excerpt || '',
+                        (post.categories || []).map(c => c.name).join(' '),
+                        (post.tags || []).map(t => t.name).join(' ')
+                    ].join(' ').toLowerCase();
+                    
+                    // Simple relevance: check if all words are present
+                    const words = query.split(/\s+/).filter(w => w.length > 1);
+                    const allWordsMatch = words.every(word => searchFields.includes(word));
+                    if (!allWordsMatch) return false;
+                    
+                    // Add relevance score for sorting
+                    post._relevance = words.reduce((score, word) => {
+                        if ((post.title || '').toLowerCase().includes(word)) score += 10;
+                        if ((post.excerpt || '').toLowerCase().includes(word)) score += 5;
+                        return score;
+                    }, 0);
+                }
+                
+                return true;
+            });
+            
+            // Sort results
+            switch (sortBy) {
+                case 'relevance':
+                    if (query) {
+                        filteredResults.sort((a, b) => (b._relevance || 0) - (a._relevance || 0));
+                    } else {
+                        filteredResults.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''));
+                    }
+                    break;
+                case 'date-desc':
+                    filteredResults.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''));
+                    break;
+                case 'date-asc':
+                    filteredResults.sort((a, b) => (a.date_published || '').localeCompare(b.date_published || ''));
+                    break;
+                case 'title':
+                    filteredResults.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+                    break;
+            }
+            
+            displayResults();
+        }
+        
+        function displayResults() {
+            const container = document.getElementById('resultsContainer');
+            const countEl = document.getElementById('resultsCount');
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            
+            if (filteredResults.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">😕</div>
+                        <p>No results found. Try different search terms or filters.</p>
+                    </div>
+                `;
+                countEl.textContent = '';
+                document.getElementById('pagination').style.display = 'none';
+                return;
+            }
+            
+            // Pagination
+            const totalPages = Math.ceil(filteredResults.length / resultsPerPage);
+            const startIndex = (currentPage - 1) * resultsPerPage;
+            const endIndex = Math.min(startIndex + resultsPerPage, filteredResults.length);
+            const pageResults = filteredResults.slice(startIndex, endIndex);
+            
+            countEl.innerHTML = `Showing <strong>${startIndex + 1}-${endIndex}</strong> of <strong>${filteredResults.length}</strong> results`;
+            
+            container.innerHTML = pageResults.map(post => {
+                let excerpt = post.excerpt || (post.content_filtered || '').substring(0, 200);
+                if (excerpt.length >= 200) excerpt += '...';
+                
+                // Highlight search terms in excerpt
+                if (query && !query.startsWith('tag:')) {
+                    const words = query.split(/\s+/).filter(w => w.length > 1);
+                    words.forEach(word => {
+                        const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+                        excerpt = excerpt.replace(regex, '<mark>$1</mark>');
+                    });
+                }
+                
+                const categories = (post.categories || []).map(c => 
+                    `<span class="tag category">${c.name}</span>`
+                ).join('');
+                
+                const tags = (post.tags || []).slice(0, 5).map(t => 
+                    `<span class="tag">${t.name}</span>`
+                ).join('');
+                
+                return `
+                    <div class="result-item">
+                        <div class="result-title">
+                            <a href="${post.url}" target="_blank">${post.title || 'Untitled'}</a>
+                        </div>
+                        <div class="result-meta">
+                            <span>📅 ${LiCAdmin.formatDate(post.date_published)}</span>
+                            <span>📄 ${post.type || 'post'}</span>
+                            ${post.word_count ? `<span>📝 ${post.word_count} words</span>` : ''}
+                        </div>
+                        <div class="result-excerpt">${excerpt}</div>
+                        ${categories || tags ? `<div class="result-tags">${categories}${tags}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+            
+            // Render pagination
+            renderPagination(totalPages);
+        }
+        
+        function renderPagination(totalPages) {
+            const container = document.getElementById('pagination');
+            
+            if (totalPages <= 1) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'flex';
+            
+            let html = '';
+            
+            // Previous button
+            html += `<button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>`;
+            
+            // Page numbers
+            const maxButtons = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
+            let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+            
+            if (endPage - startPage < maxButtons - 1) {
+                startPage = Math.max(1, endPage - maxButtons + 1);
+            }
+            
+            if (startPage > 1) {
+                html += `<button onclick="goToPage(1)">1</button>`;
+                if (startPage > 2) html += `<button disabled>...</button>`;
+            }
+            
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button onclick="goToPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
+            }
+            
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) html += `<button disabled>...</button>`;
+                html += `<button onclick="goToPage(${totalPages})">${totalPages}</button>`;
+            }
+            
+            // Next button
+            html += `<button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>Next →</button>`;
+            
+            container.innerHTML = html;
+        }
+        
+        function goToPage(page) {
+            currentPage = page;
+            displayResults();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function escapeRegex(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+    </script>
+</body>
+</html>
