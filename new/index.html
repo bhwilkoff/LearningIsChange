@@ -572,10 +572,11 @@
                     <div class="settings-body open" id="outputBody">
                         <label class="checkbox-label"><input type="checkbox" id="updateMonthArchive" checked> Create/update monthly archive</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateYearArchive" checked> Create/update yearly archive</label>
+                        <label class="checkbox-label"><input type="checkbox" id="updateHomepage" checked> Update homepage</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateCategoryArchive" checked> Update category archive</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateTagArchives" checked> Update tag archives</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateAuthorArchive" checked> Update author archive</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feed</label>
+                        <label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feeds (index.xml & full.xml)</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database shard</label>
                     </div>
                 </div>
@@ -1445,6 +1446,16 @@
                     log(`✓ Updated year archive: ${year}/`, 'success');
                 }
                 
+                updateProgress(45, 'Updating homepage...');
+                
+                if (document.getElementById('updateHomepage').checked) {
+                    const homepageUpdate = await generateHomepageUpdate(newPostData);
+                    if (homepageUpdate) {
+                        generatedFiles['index.html'] = homepageUpdate;
+                        log(`✓ Updated homepage: index.html`, 'success');
+                    }
+                }
+                
                 updateProgress(50, 'Updating category/tag archives...');
                 
                 if (document.getElementById('updateCategoryArchive').checked && selectedCategory) {
@@ -1470,13 +1481,21 @@
                     log(`✓ Updated author archive: author/bhwilkoff/`, 'success');
                 }
                 
-                updateProgress(65, 'Updating RSS feed...');
+                updateProgress(65, 'Updating RSS feeds...');
                 
                 if (document.getElementById('updateRssFeed').checked) {
+                    // Update summary feed (feed/index.xml)
                     const rssUpdate = await generateRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
                     if (rssUpdate) {
                         generatedFiles['feed/index.xml'] = rssUpdate;
                         log(`✓ Updated RSS feed: feed/index.xml`, 'success');
+                    }
+                    
+                    // Update full content feed (feed/full.xml)
+                    const fullRssUpdate = await generateFullRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
+                    if (fullRssUpdate) {
+                        generatedFiles['feed/full.xml'] = fullRssUpdate;
+                        log(`✓ Updated RSS feed: feed/full.xml`, 'success');
                     }
                 }
                 
@@ -1504,93 +1523,141 @@
         function generatePostHtml(data) {
             const { title, date, content, category, tags, year, month, day, slug } = data;
             const dateFormatted = LiCAdmin.formatDate(date);
-            const tagsHtml = tags.map(t => `<a href="/tag/${t.slug}/" rel="tag">${t.name}</a>`).join(', ');
+            const postUrl = `/${year}/${month}/${day}/${slug}/`;
             const categoryPath = category ? (category.fullPath || category.slug) : '';
-            const categoryHtml = category ? `<span class="cat-links">Posted in <a href="/category/${categoryPath}/">${category.name}</a></span>` : '';
-            const tagsFooterHtml = tags.length > 0 ? `<span class="tags-links">Tagged ${tagsHtml}</span>` : '';
             
-            // Build breadcrumb
-            let breadcrumb = '<a href="/">Home</a>';
+            // Build tags HTML for entry-meta (with icons like the real site)
+            const tagsMetaHtml = tags.length > 0 ? 
+                `<span class="footer-tags" itemprop="keywords">
+                    <i class="icon-tag icon-metas" title="Tagged"></i>&nbsp;${tags.map(t => `<a href="/tag/${t.slug}/" rel="tag">${t.name}</a>`).join(', ')}
+                </span>` : '';
+            
+            // Build breadcrumb (matches Fluida theme format)
+            let breadcrumbHtml = `<a href="/" title="Home"><i class="blicon-home2"></i><span class="screen-reader-text">Home</span></a>`;
             if (category) {
                 if (category.parent && category.parentName) {
-                    breadcrumb += ` <span class="separator">›</span> <a href="/category/${category.parent}/">${category.parentName}</a>`;
+                    breadcrumbHtml += `<i class="icon-angle-right"></i> <a href="/category/${category.parent}/">${category.parentName}</a>`;
                 }
-                breadcrumb += ` <span class="separator">›</span> <a href="/category/${categoryPath}/">${category.name}</a>`;
+                breadcrumbHtml += `<i class="icon-angle-right"></i> <a href="/category/${categoryPath}/">${category.name}</a>`;
             }
-            breadcrumb += ` <span class="separator">›</span> ${title}`;
+            breadcrumbHtml += `<i class="icon-angle-right"></i> <span class="current">${title}</span>`;
             
             // If we have site components, use them for a properly styled page
             if (siteComponents.head && siteComponents.header) {
                 return `<!DOCTYPE html>
-<html lang="en-US">
-<head>
+<html lang="en-US"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>${title} – Learning is Change</title>
 ${siteComponents.head}
-    <title>${title} – Learning is Change</title>
+<link rel="canonical" href="https://learningischange.com${postUrl}">
 </head>
-<body class="single single-post postid-new single-format-standard${category ? ` category-${category.slug}` : ''}">
+<body class="single single-post postid-new single-format-standard hentry${category ? ` category-${category.slug}` : ''}${tags.map(t => ` tag-${t.slug}`).join('')}">
     <div id="site-wrapper">
         ${siteComponents.header}
-        
-        <div id="header-image-main" style="background-image: url('/wp-content/uploads/2016/07/cropped-14747.jpg');">
-            <div class="title-on-header">
-                <h1>${title}</h1>
+
+        <div id="header-image-main">
+            <div id="header-image-main-inside">
+                <div class="header-image" style="background-image: url(https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-14747.jpg?resize=1843%2C250&ssl=1)"></div>
             </div>
         </div>
-        
-        <div id="breadcrumbs-container">
-            <div id="breadcrumbs">${breadcrumb}</div>
+
+    </header><!-- #masthead -->
+
+    <div id="breadcrumbs-container" class="cryout two-columns-left">
+        <div id="breadcrumbs-container-inside">
+            <div id="breadcrumbs">
+                <nav id="breadcrumbs-nav">${breadcrumbHtml}</nav>
+            </div>
         </div>
-        
-        <div id="content">
-            <main id="main">
-                <article id="post-new" class="post type-post status-publish format-standard hentry${category ? ` category-${category.slug}` : ''}${tags.map(t => ` tag-${t.slug}`).join('')}">
-                    <header class="entry-header">
-                        <h1 class="entry-title">${title}</h1>
-                        <div class="entry-meta">
-                            <span class="posted-on">
-                                <time class="entry-date published" datetime="${date}">${dateFormatted}</time>
-                            </span>
-                            <span class="byline">
-                                <span class="author vcard">
-                                    <a class="url fn n" href="/author/bhwilkoff/">Ben Wilkoff</a>
+    </div>
+
+    <div id="content" class="cryout">
+        <div id="container" class="two-columns-left">
+            <main id="main" class="main">
+                <article id="post-new" class="post-new post type-post status-publish format-standard hentry${category ? ` category-${category.slug}` : ''}${tags.map(t => ` tag-${t.slug}`).join('')}" itemscope itemtype="http://schema.org/Article" itemprop="mainEntity">
+                    <div class="schema-image"></div>
+
+                    <div class="article-inner">
+                        <header>
+                            <h1 class="entry-title" itemprop="headline">${title}</h1>
+                            <div class="entry-meta">
+                                <span class="author vcard" itemscope itemtype="http://schema.org/Person" itemprop="author">
+                                    <em>By</em>
+                                    <a class="url fn n" rel="author" href="/author/bhwilkoff/" title="View all posts by Ben Wilkoff" itemprop="url">
+                                        <em itemprop="name">Ben Wilkoff</em>
+                                    </a>
                                 </span>
-                            </span>
+                                <span class="onDate date">
+                                    <i class="icon-time icon-metas" title="Date"></i>
+                                    <time class="published" datetime="${date}T12:00:00+00:00" itemprop="datePublished">${dateFormatted}</time>
+                                    <time class="updated" datetime="${date}T12:00:00+00:00" itemprop="dateModified">${dateFormatted}</time>
+                                </span>
+                                ${tagsMetaHtml}
+                            </div>
+                        </header>
+
+                        <div class="entry-content" itemprop="articleBody">
+                            ${content}
                         </div>
-                    </header>
-                    
-                    <div class="entry-content">
-                        ${content}
+
+                        <div class="author-info" itemscope itemtype="http://schema.org/Person" itemprop="author">
+                            <h2 class="page-title">Author: <strong itemprop="name">Ben Wilkoff</strong></h2>
+                            <div class="author-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                <img alt="" src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g" srcset="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=160&d=mm&r=g 2x" class="avatar avatar-80 photo" height="80" width="80" itemprop="url" decoding="async">
+                            </div>
+                            <div class="author-description" itemprop="description">
+                                <span>He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 17 and 19). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</span>
+                                <div class="author-link">
+                                    <a href="/author/bhwilkoff/" itemprop="url">View all posts by Ben Wilkoff <span class="meta-nav">→</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="entry-meta"></footer>
+
+                        <nav id="nav-below" class="navigation" role="navigation">
+                            <div class="nav-previous"></div>
+                            <div class="nav-next"></div>
+                        </nav>
+
+                        <section id="comments"></section>
+
+                        <span class="schema-publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                            <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url" content="/">
+                            </span>
+                            <meta itemprop="name" content="Learning is Change">
+                        </span>
+                        <link itemprop="mainEntityOfPage" href="${postUrl}">
                     </div>
-                    
-                    <footer class="entry-footer">
-                        ${categoryHtml}
-                        ${tagsFooterHtml}
-                    </footer>
                 </article>
-                
-                <div class="author-box">
-                    <div class="author-avatar">
-                        <img src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g" alt="Ben Wilkoff">
-                    </div>
-                    <div class="author-info">
-                        <h3 class="author-name">Ben Wilkoff</h3>
-                        <p class="author-bio">He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</p>
-                        <a href="/author/bhwilkoff/">View all posts by Ben Wilkoff →</a>
-                    </div>
-                </div>
             </main>
-            
+
             ${siteComponents.sidebar || ''}
         </div>
-        
-        ${siteComponents.footer || '<footer id="colophon"><p>Ben Wilkoff has been blogging since 2004. He has learned so much since then.</p><p>Powered by GitHub and Love of Writing.</p></footer>'}
     </div>
+
+    <aside id="colophon" itemscope itemtype="http://schema.org/WPSideBar">
+        <div id="colophon-inside" class="footer-three"></div>
+    </aside>
+
+    <footer id="footer" class="cryout" itemscope itemtype="http://schema.org/WPFooter">
+        <div id="footer-inside">
+            <a id="toTop"><span class="screen-reader-text">Back to Top</span><i class="icon-back2top"></i></a>
+            <div id="site-copyright">Ben Wilkoff has been blogging since 2004. He has learned so much since then.</div>
+            <div style="display:block;float:right;clear: right;font-size: .9em;">Powered by Github and Love of Writing.</div>
+        </div>
+    </footer>
+
+    </div><!-- site-wrapper -->
     ${siteComponents.scripts || ''}
 </body>
 </html>`;
             }
             
-            // Fallback to minimal post page
+            // Fallback to minimal post page (when no site components available)
             return `<!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -1598,32 +1665,59 @@ ${siteComponents.head}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} – Learning is Change</title>
     <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
+    <link rel="canonical" href="https://learningischange.com${postUrl}">
 </head>
 <body class="single single-post">
     <header id="masthead">
-        <h1><a href="/">Learning is Change</a></h1>
+        <div id="site-text">
+            <div id="site-title"><a href="/" rel="home">Learning is Change</a></div>
+            <span id="site-description">My name is Ben Wilkoff, and I Teach. And Learn. A Lot.</span>
+        </div>
     </header>
     
-    <div id="breadcrumbs">
-        <a href="/">Home</a> › ${category ? `<a href="/category/${categoryPath}/">${category.name}</a> › ` : ''}${title}
+    <div id="breadcrumbs-container">
+        <div id="breadcrumbs">
+            <nav id="breadcrumbs-nav">
+                <a href="/">Home</a> › ${category ? `<a href="/category/${categoryPath}/">${category.name}</a> › ` : ''}${title}
+            </nav>
+        </div>
     </div>
     
-    <main>
-        <article>
-            <h1 class="entry-title">${title}</h1>
-            <div class="entry-meta">
-                <time datetime="${date}">${dateFormatted}</time> by <a href="/author/bhwilkoff/">Ben Wilkoff</a>
-            </div>
-            <div class="entry-content">${content}</div>
-            <footer class="entry-footer">
-                ${category ? `Posted in <a href="/category/${categoryPath}/">${category.name}</a>` : ''}
-                ${tags.length > 0 ? ` • Tagged ${tagsHtml}` : ''}
-            </footer>
-        </article>
-    </main>
+    <div id="content">
+        <main id="main">
+            <article class="post type-post status-publish format-standard hentry">
+                <div class="article-inner">
+                    <header>
+                        <h1 class="entry-title">${title}</h1>
+                        <div class="entry-meta">
+                            <span class="author vcard">By <a href="/author/bhwilkoff/">Ben Wilkoff</a></span>
+                            <span class="onDate date">
+                                <time class="published" datetime="${date}">${dateFormatted}</time>
+                            </span>
+                            ${tags.length > 0 ? `<span class="footer-tags">Tagged ${tags.map(t => `<a href="/tag/${t.slug}/" rel="tag">${t.name}</a>`).join(', ')}</span>` : ''}
+                        </div>
+                    </header>
+
+                    <div class="entry-content">${content}</div>
+
+                    <div class="author-info">
+                        <h2 class="page-title">Author: <strong>Ben Wilkoff</strong></h2>
+                        <div class="author-avatar">
+                            <img src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g" alt="Ben Wilkoff" width="80" height="80">
+                        </div>
+                        <div class="author-description">
+                            <span>He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit. He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</span>
+                            <div class="author-link"><a href="/author/bhwilkoff/">View all posts by Ben Wilkoff →</a></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
     
-    <footer>
-        <p>Powered by GitHub and Love of Writing.</p>
+    <footer id="footer">
+        <div id="site-copyright">Ben Wilkoff has been blogging since 2004. He has learned so much since then.</div>
+        <div>Powered by GitHub and Love of Writing.</div>
     </footer>
 </body>
 </html>`;
@@ -1798,6 +1892,24 @@ ${siteComponents.head}
                 content: postsHtml,
                 isAuthor: true
             });
+        }
+        
+        async function generateHomepageUpdate(newPost) {
+            // Use the homepage we already fetched for site components
+            if (!siteComponents.homepageHtml) {
+                log(`  → No homepage loaded, skipping homepage update`, 'info');
+                return null;
+            }
+            
+            log(`  → Inserting new post into homepage`, 'info');
+            const articleHtml = createArticleBlock(newPost);
+            let updatedHtml = insertArticleIntoPage(siteComponents.homepageHtml, articleHtml);
+            
+            // Update sidebar with new month if needed
+            const [year, month] = newPost.date.split('-');
+            updatedHtml = updateSidebarInPage(updatedHtml, year, month);
+            
+            return updatedHtml;
         }
         
         function generatePostExcerptHtml(post) {
@@ -1992,6 +2104,111 @@ ${siteComponents.head}
         
         function escapeXml(text) {
             return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+        }
+        
+        // Full RSS Feed Update (feed/full.xml)
+        async function generateFullRssFeedUpdate(newPost) {
+            try {
+                // Fetch existing full RSS feed
+                const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/feed/full.xml`);
+                if (!response.ok) {
+                    log('Could not fetch existing full RSS feed, creating new one', 'info');
+                    return generateNewFullRssFeed(newPost);
+                }
+                
+                const existingRss = await response.text();
+                
+                // Create new item XML (full content version)
+                const pubDate = new Date(newPost.date + 'T12:00:00Z').toUTCString();
+                const categories = [];
+                if (newPost.category) {
+                    categories.push(`<category><![CDATA[${newPost.category.name}]]></category>`);
+                }
+                newPost.tags.forEach(tag => {
+                    categories.push(`<category><![CDATA[${tag.name}]]></category>`);
+                });
+                
+                const newItem = `<item>
+      <title>${escapeXml(newPost.title)}</title>
+      <link>${newPost.postUrl}</link>
+      <pubDate>${pubDate}</pubDate>
+      <dc:creator><![CDATA[Ben Wilkoff]]></dc:creator>
+      <guid isPermaLink="true">${newPost.postUrl}</guid>
+      ${categories.join('\n      ')}
+      <description><![CDATA[${newPost.content}]]></description>
+      <content:encoded><![CDATA[${newPost.content}]]></content:encoded>
+    </item>`;
+                
+                // Update lastBuildDate
+                const now = new Date().toUTCString();
+                let updatedRss = existingRss.replace(
+                    /<lastBuildDate>.*?<\/lastBuildDate>/,
+                    `<lastBuildDate>${now}</lastBuildDate>`
+                );
+                
+                // Insert new item after <generator> tag
+                const insertPoint = updatedRss.indexOf('</generator>');
+                if (insertPoint !== -1) {
+                    const insertAfter = updatedRss.indexOf('>', insertPoint) + 1;
+                    updatedRss = updatedRss.slice(0, insertAfter) + '\n                            ' + newItem + updatedRss.slice(insertAfter);
+                } else {
+                    // Fallback: insert before first <item>
+                    const firstItem = updatedRss.indexOf('<item>');
+                    if (firstItem !== -1) {
+                        updatedRss = updatedRss.slice(0, firstItem) + newItem + '\n' + updatedRss.slice(firstItem);
+                    }
+                }
+                
+                return updatedRss;
+            } catch (e) {
+                console.error('Full RSS update error:', e);
+                log(`⚠️ Could not update full RSS feed: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        function generateNewFullRssFeed(newPost) {
+            const pubDate = new Date(newPost.date + 'T12:00:00Z').toUTCString();
+            const now = new Date().toUTCString();
+            const categories = [];
+            if (newPost.category) {
+                categories.push(`<category><![CDATA[${newPost.category.name}]]></category>`);
+            }
+            newPost.tags.forEach(tag => {
+                categories.push(`<category><![CDATA[${tag.name}]]></category>`);
+            });
+            
+            return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+>
+  <channel>
+    <title>Learning is Change - Full Content Feed</title>
+    <atom:link href="https://learningischange.com/feed/full.xml" rel="self" type="application/rss+xml" />
+    <link>https://learningischange.com</link>
+    <description>Learning is Change - Full content feed with complete post text.</description>
+    <lastBuildDate>${now}</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>Learning is Change Post Generator</generator>
+    <item>
+      <title>${escapeXml(newPost.title)}</title>
+      <link>${newPost.postUrl}</link>
+      <pubDate>${pubDate}</pubDate>
+      <dc:creator><![CDATA[Ben Wilkoff]]></dc:creator>
+      <guid isPermaLink="true">${newPost.postUrl}</guid>
+      ${categories.join('\n      ')}
+      <description><![CDATA[${newPost.content}]]></description>
+      <content:encoded><![CDATA[${newPost.content}]]></content:encoded>
+    </item>
+  </channel>
+</rss>`;
         }
         
         // ============================================
