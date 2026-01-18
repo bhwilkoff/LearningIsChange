@@ -577,7 +577,7 @@
                         <label class="checkbox-label"><input type="checkbox" id="updateTagArchives" checked> Update tag archives</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateAuthorArchive" checked> Update author archive</label>
                         <label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feeds (index.xml & full.xml)</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database shard</label>
+                        <label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database (posts, taxonomies, manifest, search, changelog)</label>
                     </div>
                 </div>
             </div>
@@ -841,38 +841,70 @@
             return siteComponents;
         }
         
-        // Create article HTML block for archive pages
+        // Create article HTML block for archive pages (homepage, month, year, category, tag, author)
+        // This matches the actual WordPress/Fluida theme structure
         function createArticleBlock(post) {
-            const dateFormatted = LiCAdmin.formatDate(post.date);
-            const categoryHtml = post.category ? 
-                `<span class="cat-links">Posted in <a href="/category/${post.category.fullPath || post.category.slug}/">${post.category.name}</a></span>` : '';
-            const tagsHtml = post.tags && post.tags.length > 0 ?
-                `<span class="tags-links">Tagged ${post.tags.map(t => `<a href="/tag/${t.slug}/" rel="tag">${t.name}</a>`).join(', ')}</span>` : '';
+            const dateFormatted = LiCAdmin.formatDate(post.date || post.date_published);
+            const dateISO = (post.date || post.date_published) + 'T12:00:00+00:00';
+            const postUrl = post.url || post.postUrl;
+            
+            // Build category class
+            const categoryClass = post.category ? ` category-${post.category.slug}` : '';
+            
+            // Build tag classes
+            const tagClasses = (post.tags && post.tags.length > 0) ? 
+                post.tags.map(t => ` tag-${t.slug}`).join('') : '';
+            
+            // Build tags HTML for entry-meta
+            const tagsHtml = (post.tags && post.tags.length > 0) ?
+                `<span class="footer-tags" itemprop="keywords">
+                    <i class="icon-tag icon-metas" title="Tagged"></i> ${post.tags.map(t => `<a href="/tag/${t.slug}/" rel="tag">${t.name}</a>`).join(', ')}
+                </span>` : '';
+            
+            // Use full content, not excerpt
+            const contentHtml = post.content || post.excerpt || '';
             
             return `
-                <article class="post type-post status-publish format-standard hentry${post.category ? ` category-${post.category.slug}` : ''}">
-                    <header class="entry-header">
-                        <h2 class="entry-title"><a href="${post.url}" rel="bookmark">${post.title}</a></h2>
-                        <div class="entry-meta">
-                            <span class="posted-on">
-                                <time class="entry-date published" datetime="${post.date}">${dateFormatted}</time>
-                            </span>
-                            <span class="byline">
-                                <span class="author vcard">
-                                    <a class="url fn n" href="/author/bhwilkoff/">Ben Wilkoff</a>
-                                </span>
-                            </span>
-                        </div>
-                    </header>
-                    <div class="entry-summary">
-                        <p>${post.excerpt}</p>
-                    </div>
-                    <footer class="entry-footer">
-                        ${categoryHtml}
-                        ${tagsHtml}
-                        <a href="${post.url}" class="more-link">Continue reading →</a>
-                    </footer>
-                </article>`;
+<article id="post-new" class="hentry post-new post type-post status-publish format-standard${categoryClass}${tagClasses}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+    <div class="article-inner">
+    <header class="entry-header">
+        
+        <h2 class="entry-title" itemprop="headline"><a href="${postUrl}" itemprop="mainEntityOfPage" rel="bookmark">${post.title}</a></h2>
+        <div class="entry-meta">
+            <span class="author vcard" itemscope itemtype="http://schema.org/Person" itemprop="author">
+            <em>By</em>
+            <a class="url fn n" rel="author" href="/author/bhwilkoff/" title="View all posts by Ben Wilkoff" itemprop="url">
+                <em itemprop="name">Ben Wilkoff</em>
+            </a>
+        </span>
+        <span class="onDate date">
+            <i class="icon-time icon-metas" title="Date"></i>
+            <time class="published" datetime="${dateISO}" itemprop="datePublished">${dateFormatted}</time>
+            <time class="updated" datetime="${dateISO}" itemprop="dateModified">${dateFormatted}</time>
+        </span>
+        ${tagsHtml}
+        </div><!-- .entry-meta -->
+
+    </header><!-- .entry-header -->
+
+    
+        <div class="entry-content" itemprop="articleBody">
+            ${contentHtml}
+        </div><!-- .entry-content -->
+
+        
+    
+    <span class="schema-publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="/">
+        </span>
+        <meta itemprop="name" content="Learning is Change">
+    </span>
+    <link itemprop="mainEntityOfPage" href="${postUrl}">
+    </div><!-- .article-inner -->
+</article><!-- #post-new -->
+`;
         }
         
         // Insert new article into existing archive page HTML
@@ -920,16 +952,38 @@
             const archiveLink = `<li><a href="/${year}/${month}/">${monthName} ${year}</a></li>`;
             
             // Check if this month already exists in sidebar
-            if (pageHtml.includes(`/${year}/${month}/`)) {
+            if (pageHtml.includes(`/${year}/${month}/"`)) {
                 return pageHtml; // Already has this month
             }
             
-            // Try to find archives list and add new month at top
-            const archivesListRegex = /<ul[^>]*class="[^"]*archives[^"]*"[^>]*>/i;
-            const match = pageHtml.match(archivesListRegex);
-            if (match) {
-                const insertPos = pageHtml.indexOf(match[0]) + match[0].length;
-                return pageHtml.slice(0, insertPos) + '\n' + archiveLink + pageHtml.slice(insertPos);
+            // Try multiple patterns to find the archives list
+            const patterns = [
+                // WordPress block archives widget
+                /<ul[^>]*class="[^"]*wp-block-archives[^"]*"[^>]*>/i,
+                // Traditional archives widget
+                /<ul[^>]*class="[^"]*archives[^"]*"[^>]*>/i,
+                // Widget archive section
+                /<section[^>]*widget_archive[^>]*>[\s\S]*?<ul[^>]*>/i
+            ];
+            
+            for (const pattern of patterns) {
+                const match = pageHtml.match(pattern);
+                if (match) {
+                    const insertPos = pageHtml.indexOf(match[0]) + match[0].length;
+                    return pageHtml.slice(0, insertPos) + archiveLink + '\n' + pageHtml.slice(insertPos);
+                }
+            }
+            
+            // Fallback: try to find any <ul> inside widget_archive section
+            const widgetIdx = pageHtml.indexOf('widget_archive');
+            if (widgetIdx !== -1) {
+                const ulIdx = pageHtml.indexOf('<ul', widgetIdx);
+                if (ulIdx !== -1 && ulIdx < widgetIdx + 500) {
+                    const ulEndIdx = pageHtml.indexOf('>', ulIdx);
+                    if (ulEndIdx !== -1) {
+                        return pageHtml.slice(0, ulEndIdx + 1) + archiveLink + '\n' + pageHtml.slice(ulEndIdx + 1);
+                    }
+                }
             }
             
             return pageHtml;
@@ -1424,7 +1478,7 @@
                 
                 // Create the new post data object for archive insertion
                 const newPostData = { 
-                    title, date, slug, excerpt, 
+                    title, date, slug, excerpt, content,
                     url: postUrl, 
                     category: selectedCategory, 
                     tags: selectedTags 
@@ -1502,10 +1556,39 @@
                 updateProgress(80, 'Updating database...');
                 
                 if (document.getElementById('updateDatabase').checked) {
+                    // Update posts shard
                     const dbUpdate = await generateDatabaseUpdate({ title, date, slug, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags, year });
                     if (dbUpdate) {
                         generatedFiles[`database/posts/${year}.json`] = dbUpdate;
                         log(`✓ Updated database shard: database/posts/${year}.json`, 'success');
+                    }
+                    
+                    // Update taxonomies
+                    const taxonomiesUpdate = await generateTaxonomiesUpdate({ category: selectedCategory, tags: selectedTags });
+                    if (taxonomiesUpdate) {
+                        generatedFiles['database/taxonomies.json'] = taxonomiesUpdate;
+                        log(`✓ Updated taxonomies: database/taxonomies.json`, 'success');
+                    }
+                    
+                    // Update manifest
+                    const manifestUpdate = await generateManifestUpdate({ year, category: selectedCategory, tags: selectedTags });
+                    if (manifestUpdate) {
+                        generatedFiles['database/manifest.json'] = manifestUpdate;
+                        log(`✓ Updated manifest: database/manifest.json`, 'success');
+                    }
+                    
+                    // Update search index
+                    const searchUpdate = await generateSearchUpdate({ title, date, slug, excerpt, postUrl, category: selectedCategory, tags: selectedTags, year });
+                    if (searchUpdate) {
+                        generatedFiles['database/search.json'] = searchUpdate;
+                        log(`✓ Updated search index: database/search.json`, 'success');
+                    }
+                    
+                    // Update changelog
+                    const changelogUpdate = await generateChangelogUpdate({ title, postUrl, category: selectedCategory, tags: selectedTags });
+                    if (changelogUpdate) {
+                        generatedFiles['database/changelog.json'] = changelogUpdate;
+                        log(`✓ Updated changelog: database/changelog.json`, 'success');
                     }
                 }
                 
@@ -1754,8 +1837,10 @@ ${siteComponents.head}
             posts.unshift({ 
                 title: newPost.title, 
                 url: newPost.url, 
+                date: newPost.date,
                 date_published: newPost.date, 
                 excerpt: newPost.excerpt,
+                content: newPost.content,
                 category: newPost.category,
                 tags: newPost.tags
             });
@@ -1766,7 +1851,9 @@ ${siteComponents.head}
             return generateArchivePageHtml({ 
                 title, 
                 breadcrumb: `<a href="/">Home</a> › <a href="/${year}/">${year}</a> › ${monthNames[parseInt(month) - 1]}`, 
-                content: postsHtml 
+                content: postsHtml,
+                year: year,
+                month: month
             });
         }
         
@@ -1795,26 +1882,32 @@ ${siteComponents.head}
                 posts.unshift({ 
                     title: newPost.title, 
                     url: newPost.url, 
+                    date: newPost.date,
                     date_published: newPost.date, 
                     excerpt: newPost.excerpt,
+                    content: newPost.content,
                     category: newPost.category,
                     tags: newPost.tags
                 });
             }
-            posts.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''));
+            posts.sort((a, b) => (b.date_published || b.date || '').localeCompare(a.date_published || a.date || ''));
             
             const postsHtml = posts.slice(0, 50).map(p => createArticleBlock(p)).join('\n');
             
+            const [postYear, postMonth] = newPost.date.split('-');
             return generateArchivePageHtml({ 
                 title: year, 
                 breadcrumb: `<a href="/">Home</a> › ${year}`, 
-                content: postsHtml 
+                content: postsHtml,
+                year: postYear,
+                month: postMonth
             });
         }
         
         async function generateCategoryArchive(category, newPost) {
             const catPath = category.fullPath || category.slug;
             const archivePath = `category/${catPath}/index.html`;
+            const [year, month] = newPost.date.split('-');
             
             // Try to fetch existing archive page from GitHub
             const existingHtml = await LiCAdmin.fetchFileFromGithub(archivePath);
@@ -1823,7 +1916,10 @@ ${siteComponents.head}
                 // Insert new article into existing page
                 log(`  → Fetched existing category/${catPath}/ archive, inserting new post`, 'info');
                 const articleHtml = createArticleBlock(newPost);
-                return insertArticleIntoPage(existingHtml, articleHtml);
+                let updatedHtml = insertArticleIntoPage(existingHtml, articleHtml);
+                // Update sidebar with new month if needed
+                updatedHtml = updateSidebarInPage(updatedHtml, year, month);
+                return updatedHtml;
             }
             
             // No existing page - create new one
@@ -1841,12 +1937,15 @@ ${siteComponents.head}
             return generateArchivePageHtml({ 
                 title: `Category: ${category.name}`, 
                 breadcrumb: breadcrumb, 
-                content: postsHtml 
+                content: postsHtml,
+                year: year,
+                month: month
             });
         }
         
         async function generateTagArchive(tag, newPost) {
             const archivePath = `tag/${tag.slug}/index.html`;
+            const [year, month] = newPost.date.split('-');
             
             // Try to fetch existing archive page from GitHub
             const existingHtml = await LiCAdmin.fetchFileFromGithub(archivePath);
@@ -1855,7 +1954,10 @@ ${siteComponents.head}
                 // Insert new article into existing page
                 log(`  → Fetched existing tag/${tag.slug}/ archive, inserting new post`, 'info');
                 const articleHtml = createArticleBlock(newPost);
-                return insertArticleIntoPage(existingHtml, articleHtml);
+                let updatedHtml = insertArticleIntoPage(existingHtml, articleHtml);
+                // Update sidebar with new month if needed
+                updatedHtml = updateSidebarInPage(updatedHtml, year, month);
+                return updatedHtml;
             }
             
             // No existing page - create new one
@@ -1865,12 +1967,15 @@ ${siteComponents.head}
             return generateArchivePageHtml({ 
                 title: `Tag: ${tag.name}`, 
                 breadcrumb: `<a href="/">Home</a> › Tag: ${tag.name}`, 
-                content: postsHtml 
+                content: postsHtml,
+                year: year,
+                month: month
             });
         }
         
         async function generateAuthorArchive(newPost) {
             const archivePath = 'author/bhwilkoff/index.html';
+            const [year, month] = newPost.date.split('-');
             
             // Try to fetch existing author archive page from GitHub
             const existingHtml = await LiCAdmin.fetchFileFromGithub(archivePath);
@@ -1879,7 +1984,10 @@ ${siteComponents.head}
                 // Insert new article into existing page
                 log(`  → Fetched existing author/bhwilkoff/ archive, inserting new post`, 'info');
                 const articleHtml = createArticleBlock(newPost);
-                return insertArticleIntoPage(existingHtml, articleHtml);
+                let updatedHtml = insertArticleIntoPage(existingHtml, articleHtml);
+                // Update sidebar with new month if needed
+                updatedHtml = updateSidebarInPage(updatedHtml, year, month);
+                return updatedHtml;
             }
             
             // No existing page - create new one
@@ -1890,7 +1998,9 @@ ${siteComponents.head}
                 title: `Author: Ben Wilkoff`, 
                 breadcrumb: `<a href="/">Home</a> › Author: Ben Wilkoff`, 
                 content: postsHtml,
-                isAuthor: true
+                isAuthor: true,
+                year: year,
+                month: month
             });
         }
         
@@ -1930,6 +2040,32 @@ ${siteComponents.head}
                     </div>
                 </div>` : '';
             
+            // Update sidebar with new month if year/month provided
+            let sidebarHtml = siteComponents.sidebar || '';
+            if (data.year && data.month && sidebarHtml) {
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                const monthName = monthNames[parseInt(data.month) - 1];
+                const archiveLink = `<li><a href="/${data.year}/${data.month}/">${monthName} ${data.year}</a></li>`;
+                
+                // Check if this month already exists in sidebar
+                if (!sidebarHtml.includes(`/${data.year}/${data.month}/"`)) {
+                    // Try to find the archives list and insert new month at top
+                    const patterns = [
+                        /(<ul[^>]*class="[^"]*wp-block-archives[^"]*"[^>]*>)/i,
+                        /(<ul[^>]*class="[^"]*archives[^"]*"[^>]*>)/i
+                    ];
+                    
+                    for (const pattern of patterns) {
+                        const match = sidebarHtml.match(pattern);
+                        if (match) {
+                            const insertPos = sidebarHtml.indexOf(match[0]) + match[0].length;
+                            sidebarHtml = sidebarHtml.slice(0, insertPos) + archiveLink + '\n' + sidebarHtml.slice(insertPos);
+                            break;
+                        }
+                    }
+                }
+            }
+            
             // If we have site components from homepage, use them for a styled page
             if (siteComponents.head && siteComponents.header) {
                 return `<!DOCTYPE html>
@@ -1964,7 +2100,7 @@ ${siteComponents.head}
                 </div>
             </main>
             
-            ${siteComponents.sidebar || ''}
+            ${sidebarHtml}
         </div>
         
         ${siteComponents.footer || '<footer id="colophon"><p>Powered by GitHub and Love of Writing.</p></footer>'}
@@ -2239,14 +2375,200 @@ ${siteComponents.head}
                     content_preview: newPost.excerpt
                 };
                 
-                // Add to beginning of posts array (newest first)
-                existingShard.posts.unshift(newPostEntry);
+                // Check if post already exists (by URL) and update or add
+                const existingIdx = existingShard.posts.findIndex(p => p.url === newPostEntry.url);
+                if (existingIdx >= 0) {
+                    existingShard.posts[existingIdx] = newPostEntry;
+                } else {
+                    existingShard.posts.unshift(newPostEntry);
+                }
                 existingShard.post_count = existingShard.posts.length;
                 
                 return JSON.stringify(existingShard, null, 2);
             } catch (e) {
                 console.error('Database update error:', e);
                 log(`⚠️ Could not update database: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        async function generateTaxonomiesUpdate(newPost) {
+            try {
+                let taxonomies = { categories: { items: {} }, tags: { items: {} } };
+                
+                try {
+                    const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/taxonomies.json`);
+                    if (response.ok) {
+                        taxonomies = await response.json();
+                    }
+                } catch (e) {
+                    log(`Creating new taxonomies file`, 'info');
+                }
+                
+                // Update category count
+                if (newPost.category) {
+                    const catSlug = newPost.category.slug;
+                    if (!taxonomies.categories.items[catSlug]) {
+                        taxonomies.categories.items[catSlug] = {
+                            name: newPost.category.name,
+                            slug: catSlug,
+                            count: 0,
+                            parent: newPost.category.parent || null
+                        };
+                    }
+                    taxonomies.categories.items[catSlug].count++;
+                }
+                
+                // Update tag counts
+                for (const tag of newPost.tags) {
+                    if (!taxonomies.tags.items[tag.slug]) {
+                        taxonomies.tags.items[tag.slug] = {
+                            name: tag.name,
+                            slug: tag.slug,
+                            count: 0
+                        };
+                    }
+                    taxonomies.tags.items[tag.slug].count++;
+                }
+                
+                return JSON.stringify(taxonomies, null, 2);
+            } catch (e) {
+                console.error('Taxonomies update error:', e);
+                log(`⚠️ Could not update taxonomies: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        async function generateManifestUpdate(newPost) {
+            try {
+                let manifest = {
+                    version: "2.0",
+                    generated: new Date().toISOString(),
+                    stats: { total_posts: 0, total_categories: 0, total_tags: 0 },
+                    shards: { posts: {} }
+                };
+                
+                try {
+                    const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/manifest.json`);
+                    if (response.ok) {
+                        manifest = await response.json();
+                    }
+                } catch (e) {
+                    log(`Creating new manifest file`, 'info');
+                }
+                
+                // Update stats
+                manifest.stats.total_posts++;
+                manifest.generated = new Date().toISOString();
+                
+                // Ensure year shard is recorded
+                if (!manifest.shards.posts[newPost.year]) {
+                    manifest.shards.posts[newPost.year] = {
+                        file: `posts/${newPost.year}.json`,
+                        count: 0
+                    };
+                }
+                manifest.shards.posts[newPost.year].count++;
+                
+                // Update category count if new category
+                if (newPost.category) {
+                    // This is a rough count - actual count comes from taxonomies.json
+                }
+                
+                // Update tag count
+                if (newPost.tags && newPost.tags.length > 0) {
+                    // This is a rough count - actual count comes from taxonomies.json
+                }
+                
+                return JSON.stringify(manifest, null, 2);
+            } catch (e) {
+                console.error('Manifest update error:', e);
+                log(`⚠️ Could not update manifest: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        async function generateSearchUpdate(newPost) {
+            try {
+                let searchIndex = { posts: [] };
+                
+                try {
+                    const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/search.json`);
+                    if (response.ok) {
+                        searchIndex = await response.json();
+                    }
+                } catch (e) {
+                    log(`Creating new search index`, 'info');
+                }
+                
+                // Create search entry with keywords
+                const searchEntry = {
+                    title: newPost.title,
+                    url: newPost.postUrl.replace('https://learningischange.com', ''),
+                    date: newPost.date,
+                    excerpt: newPost.excerpt,
+                    categories: newPost.category ? [newPost.category.name] : [],
+                    tags: newPost.tags.map(t => t.name),
+                    // Create searchable text (lowercase, for simple text matching)
+                    keywords: [
+                        newPost.title.toLowerCase(),
+                        newPost.excerpt.toLowerCase(),
+                        ...(newPost.category ? [newPost.category.name.toLowerCase()] : []),
+                        ...newPost.tags.map(t => t.name.toLowerCase())
+                    ].join(' ')
+                };
+                
+                // Add to beginning (newest first)
+                const existingIdx = searchIndex.posts.findIndex(p => p.url === searchEntry.url);
+                if (existingIdx >= 0) {
+                    searchIndex.posts[existingIdx] = searchEntry;
+                } else {
+                    searchIndex.posts.unshift(searchEntry);
+                }
+                
+                return JSON.stringify(searchIndex, null, 2);
+            } catch (e) {
+                console.error('Search index update error:', e);
+                log(`⚠️ Could not update search index: ${e.message}`, 'error');
+                return null;
+            }
+        }
+        
+        async function generateChangelogUpdate(newPost) {
+            try {
+                let changelog = { entries: [] };
+                
+                try {
+                    const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/changelog.json`);
+                    if (response.ok) {
+                        changelog = await response.json();
+                    }
+                } catch (e) {
+                    log(`Creating new changelog`, 'info');
+                }
+                
+                // Create changelog entry
+                const changeEntry = {
+                    timestamp: new Date().toISOString(),
+                    action: 'post_created',
+                    title: newPost.title,
+                    url: newPost.postUrl.replace('https://learningischange.com', ''),
+                    category: newPost.category ? newPost.category.name : null,
+                    tags: newPost.tags.map(t => t.name)
+                };
+                
+                // Add to beginning (newest first)
+                changelog.entries.unshift(changeEntry);
+                
+                // Keep only last 100 entries
+                if (changelog.entries.length > 100) {
+                    changelog.entries = changelog.entries.slice(0, 100);
+                }
+                
+                return JSON.stringify(changelog, null, 2);
+            } catch (e) {
+                console.error('Changelog update error:', e);
+                log(`⚠️ Could not update changelog: ${e.message}`, 'error');
                 return null;
             }
         }
