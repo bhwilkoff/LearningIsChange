@@ -821,16 +821,22 @@
                 siteComponents.header = header.outerHTML;
             }
             
-            // Extract sidebar
-            const sidebar = doc.querySelector('#sidebar') || doc.querySelector('aside');
+            // Extract sidebar - Fluida theme uses #primary for the sidebar
+            const sidebar = doc.querySelector('#primary') || doc.querySelector('aside.widget-area') || doc.querySelector('#sidebar') || doc.querySelector('aside');
             if (sidebar) {
                 siteComponents.sidebar = sidebar.outerHTML;
             }
             
             // Extract footer
-            const footer = doc.querySelector('#colophon') || doc.querySelector('footer');
+            const footer = doc.querySelector('#footer') || doc.querySelector('footer#footer');
             if (footer) {
                 siteComponents.footer = footer.outerHTML;
+            }
+            
+            // Extract colophon (separate from footer in Fluida)
+            const colophon = doc.querySelector('#colophon');
+            if (colophon) {
+                siteComponents.colophon = colophon.outerHTML;
             }
             
             // Extract scripts (at end of body)
@@ -1848,7 +1854,7 @@ ${siteComponents.head}
             // Generate article blocks
             const postsHtml = posts.map(p => createArticleBlock(p)).join('\n');
             
-            return generateArchivePageHtml({ 
+            return await generateArchivePageHtml({ 
                 title, 
                 breadcrumb: `<a href="/">Home</a> › <a href="/${year}/">${year}</a> › ${monthNames[parseInt(month) - 1]}`, 
                 content: postsHtml,
@@ -1895,7 +1901,7 @@ ${siteComponents.head}
             const postsHtml = posts.slice(0, 50).map(p => createArticleBlock(p)).join('\n');
             
             const [postYear, postMonth] = newPost.date.split('-');
-            return generateArchivePageHtml({ 
+            return await generateArchivePageHtml({ 
                 title: year, 
                 breadcrumb: `<a href="/">Home</a> › ${year}`, 
                 content: postsHtml,
@@ -1934,7 +1940,7 @@ ${siteComponents.head}
             }
             breadcrumb += ` › ${category.name}`;
             
-            return generateArchivePageHtml({ 
+            return await generateArchivePageHtml({ 
                 title: `Category: ${category.name}`, 
                 breadcrumb: breadcrumb, 
                 content: postsHtml,
@@ -1964,7 +1970,7 @@ ${siteComponents.head}
             log(`  → Creating new tag/${tag.slug}/ archive page`, 'info');
             
             const postsHtml = createArticleBlock(newPost);
-            return generateArchivePageHtml({ 
+            return await generateArchivePageHtml({ 
                 title: `Tag: ${tag.name}`, 
                 breadcrumb: `<a href="/">Home</a> › Tag: ${tag.name}`, 
                 content: postsHtml,
@@ -1994,7 +2000,7 @@ ${siteComponents.head}
             log(`  → Creating new author/bhwilkoff/ archive page`, 'info');
             
             const postsHtml = createArticleBlock(newPost);
-            return generateArchivePageHtml({ 
+            return await generateArchivePageHtml({ 
                 title: `Author: Ben Wilkoff`, 
                 breadcrumb: `<a href="/">Home</a> › Author: Ben Wilkoff`, 
                 content: postsHtml,
@@ -2027,16 +2033,142 @@ ${siteComponents.head}
             return createArticleBlock(post);
         }
         
-        function generateArchivePageHtml(data) {
+        // Cache for archive template
+        let cachedArchiveTemplate = null;
+        
+        // Fetch an actual archive page to use as a template
+        async function fetchArchiveTemplate() {
+            if (cachedArchiveTemplate) {
+                return cachedArchiveTemplate;
+            }
+            
+            // Try to fetch an existing archive page to use as template
+            const templateUrls = [
+                `${LiCAdmin.CONFIG.SITE_URL}/2024/07/`,
+                `${LiCAdmin.CONFIG.SITE_URL}/2024/06/`,
+                `${LiCAdmin.CONFIG.SITE_URL}/2022/03/`
+            ];
+            
+            for (const url of templateUrls) {
+                try {
+                    const response = await fetch(url);
+                    if (response.ok) {
+                        cachedArchiveTemplate = await response.text();
+                        log(`Fetched archive template from ${url}`, 'info');
+                        return cachedArchiveTemplate;
+                    }
+                } catch (e) {
+                    console.log(`Could not fetch template from ${url}:`, e);
+                }
+            }
+            
+            return null;
+        }
+        
+        async function generateArchivePageHtml(data) {
+            // Try to fetch a real archive page as template
+            const template = await fetchArchiveTemplate();
+            
+            if (template) {
+                // Use the real template and replace only the necessary parts
+                let html = template;
+                
+                // Replace title in <title> tag
+                html = html.replace(/<title>[^<]+<\/title>/, `<title>${data.title} – Learning is Change</title>`);
+                
+                // Replace page title in header
+                html = html.replace(
+                    /<h1 class="page-title"[^>]*>[^<]*<span>[^<]*<\/span><\/h1>/i,
+                    `<h1 class="page-title" itemprop="headline">${data.title}</h1>`
+                );
+                html = html.replace(
+                    /<h1 class="page-title"[^>]*itemprop="headline">[^<]+<\/h1>/i,
+                    `<h1 class="page-title" itemprop="headline">${data.title}</h1>`
+                );
+                
+                // Replace breadcrumb - find the nav#breadcrumbs-nav and replace its content
+                const breadcrumbMatch = html.match(/<nav id="breadcrumbs-nav">[\s\S]*?<\/nav>/);
+                if (breadcrumbMatch) {
+                    // Build proper Fluida breadcrumb
+                    let breadcrumbNav = data.breadcrumb;
+                    if (!breadcrumbNav.includes('blicon-home2')) {
+                        breadcrumbNav = breadcrumbNav
+                            .replace(/^<a href="\/"[^>]*>Home<\/a>/i, '<a href="/" title="Home"><i class="blicon-home2"></i><span class="screen-reader-text">Home</span></a>')
+                            .replace(/ › /g, '<i class="icon-angle-right"></i> ')
+                            .replace(/<i class="icon-angle-right"><\/i> ([^<]+)$/, '<i class="icon-angle-right"></i> <span class="current">$1</span>');
+                    }
+                    html = html.replace(/<nav id="breadcrumbs-nav">[\s\S]*?<\/nav>/, `<nav id="breadcrumbs-nav">${breadcrumbNav}</nav>`);
+                }
+                
+                // Replace content in content-masonry div
+                html = html.replace(
+                    /<div id="content-masonry"[^>]*>[\s\S]*?<\/div><!--content-masonry-->/i,
+                    `<div id="content-masonry" class="content-masonry" itemscope itemtype="http://schema.org/Blog">
+                ${data.content}
+            </div><!--content-masonry-->`
+                );
+                
+                // Replace header image alt text
+                html = html.replace(
+                    /alt="[^"]*" src="\/wp-content\/uploads\/2016\/07\/cropped-14747\.jpg"/,
+                    `alt="${data.title}" src="/wp-content/uploads/2016/07/cropped-14747.jpg"`
+                );
+                
+                // Add author box if needed (for author archives)
+                if (data.isAuthor) {
+                    const authorBox = `
+                <div class="author-info" itemscope itemtype="http://schema.org/Person" itemprop="author">
+                    <div class="author-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                        <img alt="" src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=96&d=mm&r=g" class="avatar avatar-96 photo" height="96" width="96" itemprop="url">
+                    </div>
+                    <div class="author-description" itemprop="description">
+                        <span>He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 17 and 19). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</span>
+                        <div class="author-link">
+                            <a href="/author/bhwilkoff/" itemprop="url">View all posts by Ben Wilkoff <span class="meta-nav">→</span></a>
+                        </div>
+                    </div>
+                </div>`;
+                    html = html.replace(
+                        /<\/header><!-- \.page-header -->/,
+                        `${authorBox}</header><!-- .page-header -->`
+                    );
+                }
+                
+                // Update sidebar with new month if year/month provided
+                if (data.year && data.month) {
+                    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                    const monthName = monthNames[parseInt(data.month) - 1];
+                    const archiveLink = `<li><a href="/${data.year}/${data.month}/">${monthName} ${data.year}</a></li>\n`;
+                    
+                    // Check if this month already exists
+                    if (!html.includes(`/${data.year}/${data.month}/"`)) {
+                        // Insert after wp-block-archives opening tag
+                        html = html.replace(
+                            /(<ul class="wp-block-archives-list wp-block-archives">)\s*/,
+                            `$1${archiveLink}`
+                        );
+                    }
+                }
+                
+                return html;
+            }
+            
+            // Fallback: construct page manually using site components
+            return generateArchivePageHtmlFallback(data);
+        }
+        
+        function generateArchivePageHtmlFallback(data) {
             // Author info for author archive pages
             const authorBox = data.isAuthor ? `
-                <div class="author-box archive-author-box">
-                    <div class="author-avatar">
-                        <img src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=96&d=mm&r=g" alt="Ben Wilkoff">
+                <div class="author-info" itemscope itemtype="http://schema.org/Person" itemprop="author">
+                    <div class="author-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                        <img alt="" src="https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=96&d=mm&r=g" class="avatar avatar-96 photo" height="96" width="96" itemprop="url">
                     </div>
-                    <div class="author-info">
-                        <h2 class="author-name">Ben Wilkoff</h2>
-                        <p class="author-bio">He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</p>
+                    <div class="author-description" itemprop="description">
+                        <span>He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 17 and 19). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.</span>
+                        <div class="author-link">
+                            <a href="/author/bhwilkoff/" itemprop="url">View all posts by Ben Wilkoff <span class="meta-nav">→</span></a>
+                        </div>
                     </div>
                 </div>` : '';
             
@@ -2066,45 +2198,74 @@ ${siteComponents.head}
                 }
             }
             
+            // Build proper Fluida theme breadcrumb
+            let breadcrumbNav = data.breadcrumb;
+            // If breadcrumb doesn't have proper icons, wrap it
+            if (!breadcrumbNav.includes('blicon-home2')) {
+                // Convert simple breadcrumb to Fluida format
+                breadcrumbNav = breadcrumbNav
+                    .replace(/^<a href="\/"[^>]*>Home<\/a>/i, '<a href="/" title="Home"><i class="blicon-home2"></i><span class="screen-reader-text">Home</span></a>')
+                    .replace(/ › /g, '<i class="icon-angle-right"></i> ')
+                    .replace(/<i class="icon-angle-right"><\/i> ([^<]+)$/, '<i class="icon-angle-right"></i> <span class="current">$1</span>');
+            }
+            
             // If we have site components from homepage, use them for a styled page
             if (siteComponents.head && siteComponents.header) {
                 return `<!DOCTYPE html>
-<html lang="en-US">
-<head>
+<html lang="en-US"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>${data.title} – Learning is Change</title>
 ${siteComponents.head}
-    <title>${data.title} – Learning is Change</title>
 </head>
-<body class="archive${data.isAuthor ? ' author' : ''}">
+
+<body class="archive date wp-embed-responsive wp-theme-fluida fluida-image-one fluida-caption-two fluida-totop-normal fluida-stripped-table fluida-fixed-menu fluida-responsive-headerimage fluida-responsive-featured fluida-magazine-one fluida-magazine-layout fluida-comment-placeholder fluida-elementshadow fluida-normalizedtags fluida-article-animation-fade fluida-menu-animation${data.isAuthor ? ' author' : ''}" itemscope itemtype="http://schema.org/WebPage">
+    <a class="skip-link screen-reader-text" href="#main" title="Skip to content">Skip to content</a>
     <div id="site-wrapper">
-        ${siteComponents.header}
-        
-        <div id="header-image-main" style="background-image: url('/wp-content/uploads/2016/07/cropped-14747.jpg');">
-            <div class="title-on-header">
-                <h1>${data.title}</h1>
+
+    ${siteComponents.header}
+
+    <div id="breadcrumbs-container" class="cryout two-columns-left">
+        <div id="breadcrumbs-container-inside">
+            <div id="breadcrumbs">
+                <nav id="breadcrumbs-nav">${breadcrumbNav}</nav>
             </div>
         </div>
-        
-        <div id="breadcrumbs-container">
-            <div id="breadcrumbs">${data.breadcrumb}</div>
+    </div><!-- breadcrumbs -->
+
+    <div id="content" class="cryout">
+
+    <div id="container" class="two-columns-left">
+        <main id="main" class="main">
+
+            <header class="page-header pad-container" itemscope itemtype="http://schema.org/WebPageElement">
+                <h1 class="page-title" itemprop="headline">${data.title}</h1>
+                ${authorBox}
+            </header><!-- .page-header -->
+
+            <div id="content-masonry" class="content-masonry" itemscope itemtype="http://schema.org/Blog">
+                ${data.content}
+            </div><!--content-masonry-->
+
+        </main><!-- #main -->
+
+        ${sidebarHtml}
+    </div><!-- #container -->
+
+    </div><!-- #content -->
+
+    ${siteComponents.colophon || '<aside id="colophon" itemscope itemtype="http://schema.org/WPSideBar"><div id="colophon-inside" class="footer-three"></div></aside>'}
+
+    ${siteComponents.footer || `<footer id="footer" class="cryout" itemscope itemtype="http://schema.org/WPFooter">
+        <div id="footer-inside">
+            <a id="toTop"><span class="screen-reader-text">Back to Top</span><i class="icon-back2top"></i></a>
+            <div id="site-copyright">Ben Wilkoff has been blogging since 2004. He has learned so much since then.</div>
+            <div style="display:block;float:right;clear: right;font-size: .9em;">Powered by Github and Love of Writing.</div>
         </div>
-        
-        <div id="content">
-            <main id="main">
-                <header class="page-header">
-                    <h1 class="page-title">${data.title}</h1>
-                    ${authorBox}
-                </header>
-                
-                <div id="content-masonry">
-                    ${data.content}
-                </div>
-            </main>
-            
-            ${sidebarHtml}
-        </div>
-        
-        ${siteComponents.footer || '<footer id="colophon"><p>Powered by GitHub and Love of Writing.</p></footer>'}
-    </div>
+    </footer>`}
+
+    </div><!-- #site-wrapper -->
     ${siteComponents.scripts || ''}
 </body>
 </html>`;
@@ -2365,14 +2526,15 @@ ${siteComponents.head}
                 }
                 
                 // Create new post entry
+                const tags = Array.isArray(newPost.tags) ? newPost.tags : [];
                 const newPostEntry = {
-                    title: newPost.title,
-                    url: newPost.postUrl.replace('https://learningischange.com', ''),
+                    title: newPost.title || 'Untitled',
+                    url: (newPost.postUrl || '').replace('https://learningischange.com', ''),
                     date_published: newPost.date,
-                    excerpt: newPost.excerpt,
+                    excerpt: newPost.excerpt || '',
                     categories: newPost.category ? [newPost.category.slug] : [],
-                    tags: newPost.tags.map(t => t.slug),
-                    content_preview: newPost.excerpt
+                    tags: tags.map(t => t && t.slug ? t.slug : String(t)),
+                    content_preview: newPost.excerpt || ''
                 };
                 
                 // Check if post already exists (by URL) and update or add
@@ -2502,19 +2664,22 @@ ${siteComponents.head}
                 }
                 
                 // Create search entry with keywords
+                const tags = Array.isArray(newPost.tags) ? newPost.tags : [];
+                const title = newPost.title || 'Untitled';
+                const excerpt = newPost.excerpt || '';
                 const searchEntry = {
-                    title: newPost.title,
-                    url: newPost.postUrl.replace('https://learningischange.com', ''),
+                    title: title,
+                    url: (newPost.postUrl || '').replace('https://learningischange.com', ''),
                     date: newPost.date,
-                    excerpt: newPost.excerpt,
+                    excerpt: excerpt,
                     categories: newPost.category ? [newPost.category.name] : [],
-                    tags: newPost.tags.map(t => t.name),
+                    tags: tags.map(t => t && t.name ? t.name : String(t)),
                     // Create searchable text (lowercase, for simple text matching)
                     keywords: [
-                        newPost.title.toLowerCase(),
-                        newPost.excerpt.toLowerCase(),
+                        title.toLowerCase(),
+                        excerpt.toLowerCase(),
                         ...(newPost.category ? [newPost.category.name.toLowerCase()] : []),
-                        ...newPost.tags.map(t => t.name.toLowerCase())
+                        ...tags.map(t => (t && t.name ? t.name : String(t)).toLowerCase())
                     ].join(' ')
                 };
                 
@@ -2541,20 +2706,40 @@ ${siteComponents.head}
                 try {
                     const response = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/changelog.json`);
                     if (response.ok) {
-                        changelog = await response.json();
+                        const text = await response.text();
+                        if (text && text.trim()) {
+                            try {
+                                const fetched = JSON.parse(text);
+                                // Only use fetched data if it has the right structure
+                                if (fetched && typeof fetched === 'object') {
+                                    changelog = {
+                                        ...fetched,
+                                        entries: Array.isArray(fetched.entries) ? fetched.entries : []
+                                    };
+                                }
+                            } catch (parseError) {
+                                log(`Changelog JSON parse error, creating new: ${parseError.message}`, 'info');
+                            }
+                        }
                     }
                 } catch (e) {
                     log(`Creating new changelog`, 'info');
                 }
                 
-                // Create changelog entry
+                // Double-check we have a valid entries array
+                if (!changelog || !Array.isArray(changelog.entries)) {
+                    changelog = { entries: [] };
+                }
+                
+                // Create changelog entry with null checks
+                const tags = Array.isArray(newPost.tags) ? newPost.tags : [];
                 const changeEntry = {
                     timestamp: new Date().toISOString(),
                     action: 'post_created',
-                    title: newPost.title,
-                    url: newPost.postUrl.replace('https://learningischange.com', ''),
+                    title: newPost.title || 'Untitled',
+                    url: (newPost.postUrl || '').replace('https://learningischange.com', ''),
                     category: newPost.category ? newPost.category.name : null,
-                    tags: newPost.tags.map(t => t.name)
+                    tags: tags.map(t => t && t.name ? t.name : String(t))
                 };
                 
                 // Add to beginning (newest first)
