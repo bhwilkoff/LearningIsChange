@@ -955,7 +955,6 @@
         <div class="card">
             <div class="card-header">
                 <h2><span class="step-number">1</span> Load Example Page</h2>
-                <span id="dbStatus" style="font-size: 0.85rem; color: var(--text-muted);"></span>
             </div>
             <div class="card-body">
                 <div class="info-box">
@@ -984,10 +983,16 @@
                             <div class="db-stat-label">Categories</div>
                         </div>
                     </div>
+                    
+                    <div class="btn-group" style="margin-bottom: 15px;">
+                        <button class="btn btn-primary" onclick="manualLoadDatabase()">🔄 Load Database</button>
+                        <span id="dbStatus" style="font-size: 0.9rem; color: var(--text-muted); margin-left: 10px;"></span>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="dbPostSelect">Select a Post</label>
                         <select id="dbPostSelect">
-                            <option value="">Loading posts from database...</option>
+                            <option value="">Click "Load Database" to load posts...</option>
                         </select>
                         <div class="help-text">Posts are sorted by date (newest first). Select one to preview and create rules.</div>
                     </div>
@@ -1805,9 +1810,6 @@
                 document.getElementById('settingsToggle').classList.add('open');
             }
             
-            // Load database
-            await loadDatabase();
-            
             // Initialize IndexedDB
             await initDB();
             await updateStats();
@@ -1817,6 +1819,9 @@
             
             // Render initial rules
             renderRules();
+            
+            // Show initial message in database status
+            document.getElementById('dbStatus').textContent = 'Click "Load Database" to start';
         });
         
         function toggleSettings() {
@@ -1828,51 +1833,146 @@
         // Database Functions
         // ============================================
         async function loadDatabase() {
+            const statusEl = document.getElementById('dbStatus');
+            const selectEl = document.getElementById('dbPostSelect');
+            
             try {
-                document.getElementById('dbStatus').textContent = 'Loading database...';
-                state.database = await LiCAdmin.fetchDatabase();
+                statusEl.textContent = '🔄 Loading database manifest...';
+                selectEl.innerHTML = '<option value="">Loading...</option>';
+                
+                const baseUrl = LiCAdmin.CONFIG.SITE_URL + '/database';
+                
+                // Fetch manifest
+                console.log('Fetching manifest from:', `${baseUrl}/manifest.json`);
+                const manifestRes = await fetch(`${baseUrl}/manifest.json`);
+                if (!manifestRes.ok) {
+                    throw new Error(`Manifest fetch failed: HTTP ${manifestRes.status}`);
+                }
+                const manifest = await manifestRes.json();
+                console.log('Manifest loaded:', manifest);
+                
+                // Fetch taxonomies
+                statusEl.textContent = '🔄 Loading taxonomies...';
+                let taxonomies = { categories: { items: {} }, tags: { items: {} } };
+                try {
+                    const taxRes = await fetch(`${baseUrl}/taxonomies.json`);
+                    if (taxRes.ok) {
+                        taxonomies = await taxRes.json();
+                        console.log('Taxonomies loaded:', Object.keys(taxonomies.categories?.items || {}).length, 'categories');
+                    }
+                } catch (e) {
+                    console.warn('Could not load taxonomies:', e);
+                }
+                
+                // Fetch authors
+                let authors = {};
+                try {
+                    const authRes = await fetch(`${baseUrl}/authors.json`);
+                    if (authRes.ok) {
+                        const authData = await authRes.json();
+                        authors = authData.authors || authData || {};
+                        console.log('Authors loaded:', Object.keys(authors).length);
+                    }
+                } catch (e) {
+                    console.warn('Could not load authors:', e);
+                }
+                
+                // Fetch changelog
+                let changelog = { entries: [] };
+                try {
+                    const changeRes = await fetch(`${baseUrl}/changelog.json`);
+                    if (changeRes.ok) {
+                        changelog = await changeRes.json();
+                        console.log('Changelog loaded:', changelog.entries?.length || 0, 'entries');
+                    }
+                } catch (e) {
+                    console.warn('Could not load changelog:', e);
+                }
+                
+                // Build shards from manifest - the key is manifest.shards.posts
+                const shards = manifest.shards?.posts || {};
+                console.log('Shards found:', Object.keys(shards));
+                
+                // Store in state
+                state.database = {
+                    manifest,
+                    taxonomies,
+                    authors,
+                    changelog,
+                    _shards: shards
+                };
                 
                 // Update stats display
-                const manifest = state.database.manifest;
                 document.getElementById('dbPostCount').textContent = manifest.stats?.total_posts || '—';
-                document.getElementById('dbYearCount').textContent = Object.keys(state.database._shards).length;
+                document.getElementById('dbYearCount').textContent = Object.keys(shards).length || '—';
                 document.getElementById('dbCategoryCount').textContent = manifest.stats?.total_categories || '—';
                 
-                // Load all posts for the selector
-                state.allPosts = await LiCAdmin.getAllPosts();
+                // Now load all posts from each year shard
+                statusEl.textContent = '🔄 Loading posts...';
+                state.allPosts = [];
                 
-                // Populate the post selector
-                const select = document.getElementById('dbPostSelect');
-                select.innerHTML = '<option value="">Select a post...</option>';
+                const years = Object.keys(shards).sort().reverse();
+                console.log('Loading posts from years:', years);
+                
+                for (const year of years) {
+                    try {
+                        statusEl.textContent = `🔄 Loading posts from ${year}...`;
+                        const postsRes = await fetch(`${baseUrl}/posts/${year}.json`);
+                        if (postsRes.ok) {
+                            const yearData = await postsRes.json();
+                            const posts = yearData.posts || [];
+                            console.log(`Year ${year}: ${posts.length} posts`);
+                            state.allPosts.push(...posts);
+                        } else {
+                            console.warn(`Could not load posts for ${year}: HTTP ${postsRes.status}`);
+                        }
+                    } catch (e) {
+                        console.warn(`Error loading posts for ${year}:`, e);
+                    }
+                }
                 
                 // Sort posts by date (newest first)
                 state.allPosts.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''));
+                
+                console.log('Total posts loaded:', state.allPosts.length);
+                
+                // Populate the post selector
+                selectEl.innerHTML = '<option value="">Select a post...</option>';
                 
                 for (const post of state.allPosts.slice(0, 500)) {
                     const option = document.createElement('option');
                     option.value = post.url;
                     const date = post.date_published ? post.date_published.split('T')[0] : '';
                     option.textContent = `${date} — ${post.title || 'Untitled'}`;
-                    select.appendChild(option);
+                    selectEl.appendChild(option);
                 }
                 
-                // Populate year selector
+                // Populate year selector for scanning
                 const yearSelect = document.getElementById('yearSelect');
                 yearSelect.innerHTML = '';
-                Object.keys(state.database._shards).sort().reverse().forEach(year => {
+                years.forEach(year => {
                     const option = document.createElement('option');
                     option.value = year;
                     option.textContent = year;
                     yearSelect.appendChild(option);
                 });
                 
-                document.getElementById('dbStatus').textContent = `✅ ${state.allPosts.length} posts loaded`;
+                statusEl.innerHTML = `<span style="color: var(--success);">✅ ${state.allPosts.length} posts loaded from ${years.length} years</span>`;
                 
             } catch (e) {
                 console.error('Error loading database:', e);
-                document.getElementById('dbStatus').textContent = `❌ Error: ${e.message}`;
-                document.getElementById('dbPostSelect').innerHTML = '<option value="">Error loading database</option>';
+                statusEl.innerHTML = `<span style="color: var(--error);">❌ Error: ${e.message}</span>`;
+                selectEl.innerHTML = '<option value="">Error loading - click "Load Database" to retry</option>';
             }
+        }
+        
+        async function manualLoadDatabase() {
+            // Clear any cached data
+            state.database = null;
+            state.allPosts = [];
+            
+            // Re-load
+            await loadDatabase();
         }
         
         function handleScopeChange() {
@@ -1897,15 +1997,29 @@
         async function loadFromDatabase() {
             const postUrl = document.getElementById('dbPostSelect').value;
             if (!postUrl) {
-                showStatus('loadStatus', 'Please select a post', 'warning');
+                if (!state.allPosts || state.allPosts.length === 0) {
+                    showStatus('loadStatus', 'Please click "Load Database" first, then select a post', 'warning');
+                } else {
+                    showStatus('loadStatus', 'Please select a post from the dropdown', 'warning');
+                }
                 return;
             }
             
             showStatus('loadStatus', 'Loading post...', 'info');
             
             try {
-                // Construct the full URL
-                const fullUrl = `${LiCAdmin.CONFIG.SITE_URL}${postUrl}`;
+                // Construct the full URL - handle paths with or without trailing slash
+                let fullUrl = postUrl;
+                if (!postUrl.startsWith('http')) {
+                    fullUrl = `${LiCAdmin.CONFIG.SITE_URL}${postUrl}`;
+                }
+                
+                // Make sure URL ends properly for fetching HTML
+                if (!fullUrl.endsWith('.html') && !fullUrl.endsWith('/')) {
+                    fullUrl += '/';
+                }
+                
+                console.log('Loading post from:', fullUrl);
                 
                 const response = await fetch(fullUrl);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -1916,13 +2030,14 @@
                 
                 showStatus('loadStatus', `✅ Loaded: ${postUrl}`, 'success');
             } catch (e) {
+                console.error('Error loading post:', e);
                 showStatus('loadStatus', `❌ Error: ${e.message}`, 'error');
             }
         }
         
         async function loadRandomPost() {
-            if (state.allPosts.length === 0) {
-                showStatus('loadStatus', 'No posts loaded from database', 'error');
+            if (!state.allPosts || state.allPosts.length === 0) {
+                showStatus('loadStatus', 'No posts loaded. Please click "Load Database" first.', 'warning');
                 return;
             }
             
@@ -2733,6 +2848,13 @@
             }
             
             const scope = document.getElementById('scanScope').value;
+            
+            // Check if database is needed and loaded
+            if ((scope === 'database' || scope === 'year') && (!state.allPosts || state.allPosts.length === 0)) {
+                showStatus('scanStatus', 'Please load the database first (Step 1 → "Load Database" button)', 'warning');
+                return;
+            }
+            
             document.getElementById('scanBtn').disabled = true;
             showStatus('scanStatus', 'Starting scan...', 'info');
             
@@ -2745,21 +2867,35 @@
                     
                     if (scope === 'year') {
                         const year = document.getElementById('yearSelect').value;
-                        posts = await LiCAdmin.fetchPostsByYear(year);
+                        // Fetch posts for specific year
+                        try {
+                            const baseUrl = LiCAdmin.CONFIG.SITE_URL + '/database';
+                            const postsRes = await fetch(`${baseUrl}/posts/${year}.json`);
+                            if (postsRes.ok) {
+                                const yearData = await postsRes.json();
+                                posts = yearData.posts || [];
+                            }
+                        } catch (e) {
+                            console.error('Error fetching year posts:', e);
+                        }
                     } else {
                         posts = state.allPosts;
                     }
                     
-                    filesToScan = posts.map(p => ({
-                        path: p.url.startsWith('/') ? p.url.slice(1) : p.url,
-                        url: p.url
-                    })).filter(f => f.path);
+                    filesToScan = posts.map(p => {
+                        let path = p.url || '';
+                        // Remove leading slash if present
+                        if (path.startsWith('/')) path = path.slice(1);
+                        // Remove trailing slash if present
+                        if (path.endsWith('/')) path = path.slice(0, -1);
+                        
+                        return {
+                            path: path + '/index.html',
+                            url: p.url
+                        };
+                    }).filter(f => f.path && f.path !== '/index.html' && f.path !== 'index.html');
                     
-                    // Ensure paths end with index.html
-                    filesToScan = filesToScan.map(f => ({
-                        ...f,
-                        path: f.path.endsWith('/') ? f.path + 'index.html' : f.path + '/index.html'
-                    }));
+                    console.log('Files to scan from database:', filesToScan.length);
                     
                 } else {
                     // Scan all HTML files from GitHub
