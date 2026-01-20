@@ -1208,6 +1208,14 @@
                     
                     <div class="batch-controls">
                         <div class="form-group">
+                            <label for="fetchSource">Fetch Source</label>
+                            <select id="fetchSource">
+                                <option value="site">Live Site (learningischange.com)</option>
+                                <option value="github">GitHub Repository</option>
+                            </select>
+                            <div class="help-text">GitHub is slower but works for all files</div>
+                        </div>
+                        <div class="form-group">
                             <label for="processDelay">Delay Between Files (ms)</label>
                             <input type="number" id="processDelay" value="100" min="50" max="500" step="50">
                             <div class="help-text">Higher = slower but safer</div>
@@ -3067,6 +3075,38 @@
             let analyzed = 0;
             let estimatedAffected = 0;
             
+            // Check if we ONLY have rawtext rules (no DOM-based rules)
+            const hasOnlyRawtextRules = state.rules.rawtext.length > 0 && 
+                state.rules.removals.length === 0 && 
+                state.rules.additions.length === 0 && 
+                state.rules.updates.length === 0;
+            
+            // If only rawtext rules, skip HTTP fetching - mark all files as potentially affected
+            if (hasOnlyRawtextRules) {
+                document.getElementById('scanProgressText').textContent = `Raw text mode: Marking all ${files.length} files for processing...`;
+                
+                for (const file of files) {
+                    file.affected = true;
+                    estimatedAffected++;
+                }
+                
+                document.getElementById('scanProgressBar').style.width = '100%';
+                document.getElementById('scanStats').innerHTML = `
+                    <div class="progress-stat">
+                        <span class="progress-stat-value">${files.length}</span>
+                        <span class="progress-stat-label">Total Files</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="progress-stat-value">${estimatedAffected}</span>
+                        <span class="progress-stat-label">To Process</span>
+                    </div>
+                    <div class="progress-stat" style="flex-basis: 100%; margin-top: 10px;">
+                        <span class="progress-stat-label" style="color: #6f42c1;">⚡ Raw text mode: Skipped pre-analysis. Pattern matching happens during processing.</span>
+                    </div>
+                `;
+                return;
+            }
+            
             document.getElementById('scanProgressText').textContent = `Analyzing files...`;
             
             for (let i = 0; i < files.length; i += batchSize) {
@@ -3316,10 +3356,11 @@
             document.getElementById('processProgress').style.display = 'block';
             
             const delay = parseInt(document.getElementById('processDelay').value) || 100;
+            const fetchSource = document.getElementById('fetchSource').value;
             let processed = 0;
             let skipped = 0;
             
-            execLog('Starting file processing...', 'info');
+            execLog(`Starting file processing (source: ${fetchSource})...`, 'info');
             
             for (const file of state.filesToProcess) {
                 if (shouldStopProcessing) {
@@ -3330,17 +3371,58 @@
                 }
                 
                 try {
-                    // Fetch the file
-                    const url = `${LiCAdmin.CONFIG.SITE_URL}/${file.path}`;
-                    const response = await fetch(url);
+                    let html;
                     
-                    if (!response.ok) {
-                        skipped++;
-                        execLog(`Skipped ${file.path}: HTTP ${response.status}`, 'warning');
-                        continue;
+                    if (fetchSource === 'github') {
+                        // Fetch from GitHub Contents API
+                        const settings = LiCAdmin.getSettings();
+                        const contentsUrl = `https://api.github.com/repos/${settings.repoOwner}/${settings.repoName}/contents/${file.path}?ref=${settings.branch}`;
+                        const response = await fetch(contentsUrl, {
+                            headers: {
+                                'Authorization': `Bearer ${settings.githubToken}`,
+                                'Accept': 'application/vnd.github.v3+json'
+                            }
+                        });
+                        
+                        if (!response.ok) {
+                            // Check for rate limiting
+                            if (response.status === 403) {
+                                const remaining = response.headers.get('X-RateLimit-Remaining');
+                                if (remaining === '0') {
+                                    const resetTime = response.headers.get('X-RateLimit-Reset');
+                                    const resetDate = new Date(resetTime * 1000);
+                                    execLog(`GitHub rate limit reached. Resets at ${resetDate.toLocaleTimeString()}. Pausing...`, 'error');
+                                    shouldStopProcessing = true;
+                                    break;
+                                }
+                            }
+                            skipped++;
+                            execLog(`Skipped ${file.path}: GitHub API ${response.status}`, 'warning');
+                            continue;
+                        }
+                        
+                        const data = await response.json();
+                        // Decode base64 content (handle UTF-8)
+                        try {
+                            html = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
+                        } catch (e) {
+                            // Fallback for binary/non-UTF8
+                            html = atob(data.content.replace(/\n/g, ''));
+                        }
+                    } else {
+                        // Fetch from live site
+                        const url = `${LiCAdmin.CONFIG.SITE_URL}/${file.path}`;
+                        const response = await fetch(url);
+                        
+                        if (!response.ok) {
+                            skipped++;
+                            execLog(`Skipped ${file.path}: HTTP ${response.status}`, 'warning');
+                            continue;
+                        }
+                        
+                        html = await response.text();
                     }
                     
-                    let html = await response.text();
                     let changed = false;
                     
                     // Apply RAW TEXT rules FIRST (before DOM parsing)
