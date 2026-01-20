@@ -55,9 +55,22 @@
         #site-title a:hover { color: var(--accent); }
         #site-description { color: var(--text-secondary); font-size: 0.95rem; font-style: italic; font-family: 'Lora', Georgia, serif; }
         
-        .header-nav { display: flex; gap: 25px; }
+        .header-nav { display: flex; gap: 25px; align-items: center; }
         .header-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .header-nav a:hover { color: var(--accent); }
+        .btn-start-over {
+            background: var(--error);
+            color: #fff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-left: 10px;
+        }
+        .btn-start-over:hover { background: #c9302c; }
         
         #header-image-main {
             height: 180px;
@@ -918,6 +931,7 @@
                 <a href="/admin/NewPost.html">New Post</a>
                 <a href="/admin/Search.html">Search</a>
                 <a href="/">View Site</a>
+                <button class="btn-start-over" onclick="fullReset()">🔄 Start Over</button>
             </nav>
         </div>
     </header>
@@ -1096,6 +1110,20 @@
                                 </div>
                                 <div class="rule-list" id="updateRules">
                                     <div class="empty-rules">No update rules defined yet</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Raw Text Replacements -->
+                            <div class="rules-section">
+                                <div class="rules-section-header">
+                                    <span class="rules-section-title">🔤 Raw Text</span>
+                                    <button class="btn btn-sm" style="background: #6f42c1; color: white;" onclick="openAddRuleModal('rawtext')">+ Add</button>
+                                </div>
+                                <div class="rule-list" id="rawtextRules">
+                                    <div class="empty-rules">No raw text rules defined yet</div>
+                                </div>
+                                <div class="help-text" style="margin-top: 8px; font-size: 0.8rem;">
+                                    Raw text rules do direct string replacement without DOM parsing. Use for changing attributes, exact HTML patterns, etc.
                                 </div>
                             </div>
                         </div>
@@ -1416,6 +1444,18 @@
                     <input type="text" id="findText" placeholder="Text to find">
                     <label for="replaceText" style="margin-top: 10px;">Replace With</label>
                     <input type="text" id="replaceText" placeholder="Replacement text">
+                </div>
+                
+                <!-- Raw Text Help (for rawtext mode) -->
+                <div id="rawtextHelpSection" style="display: none; background: #f3e8ff; border: 1px solid #d8b4fe; border-radius: 6px; padding: 12px; margin-bottom: 15px;">
+                    <strong style="color: #6f42c1;">💡 Raw Text Mode</strong>
+                    <p style="font-size: 0.9rem; color: #666; margin: 8px 0 0 0;">
+                        This performs direct string replacement on the raw HTML file without DOM parsing. 
+                        Use this for changing attributes, exact HTML patterns, or any text that might get modified by the browser's DOM parser.
+                    </p>
+                    <p style="font-size: 0.85rem; color: #888; margin: 8px 0 0 0;">
+                        <strong>Example:</strong> Find <code>action="/"</code> → Replace with <code>action="/search/"</code>
+                    </p>
                 </div>
             </div>
             <div class="modal-footer">
@@ -1773,7 +1813,8 @@
             rules: {
                 removals: [],
                 additions: [],
-                updates: []
+                updates: [],
+                rawtext: []
             },
             // Database
             database: null,
@@ -2132,7 +2173,7 @@
             document.getElementById('selectBtn').disabled = false;
             
             // Enable preview button if there are rules
-            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0;
+            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0 || state.rules.rawtext.length > 0;
             document.getElementById('previewModeApplied').disabled = !hasRules;
             
             // Reset preview mode toggle
@@ -2408,6 +2449,16 @@
             let removalCount = 0;
             let additionCount = 0;
             let updateCount = 0;
+            let rawtextCount = 0;
+            
+            // Apply RAW TEXT rules FIRST (before DOM-based rules)
+            for (const rule of state.rules.rawtext) {
+                if (processedHtml.includes(rule.findText)) {
+                    const occurrences = (processedHtml.match(new RegExp(escapeRegExp(rule.findText), 'g')) || []).length;
+                    processedHtml = processedHtml.split(rule.findText).join(rule.replaceText);
+                    rawtextCount += occurrences;
+                }
+            }
             
             // Apply removal rules
             for (const rule of state.rules.removals) {
@@ -2446,6 +2497,7 @@
             
             // Update summary
             const summaryParts = [];
+            if (rawtextCount > 0) summaryParts.push(`${rawtextCount} raw text replacement(s)`);
             if (removalCount > 0) summaryParts.push(`${removalCount} removal(s)`);
             if (additionCount > 0) summaryParts.push(`${additionCount} addition(s)`);
             if (updateCount > 0) summaryParts.push(`${updateCount} update(s)`);
@@ -2465,6 +2517,11 @@
             iframe.srcdoc = processedHtml;
         }
         
+        // Helper function to escape regex special characters
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+        
         // ============================================
         // Rule Modal Functions
         // ============================================
@@ -2478,7 +2535,8 @@
             const titles = {
                 'removal': '🗑️ Add Removal Rule',
                 'addition': '➕ Add Addition Rule',
-                'update': '✏️ Add Update Rule'
+                'update': '✏️ Add Update Rule',
+                'rawtext': '🔤 Add Raw Text Rule'
             };
             document.getElementById('modalTitle').textContent = titles[type] || 'Add Rule';
             
@@ -2487,22 +2545,34 @@
             document.getElementById('insertionPositionSection').style.display = type === 'addition' ? 'block' : 'none';
             document.getElementById('htmlContentSection').style.display = type === 'addition' ? 'block' : 'none';
             document.getElementById('updateModeSection').style.display = type === 'update' ? 'block' : 'none';
-            document.getElementById('selectorSection').style.display = state.selectionMode !== 'range' ? 'block' : 'none';
-            document.getElementById('rangeMarkersSection').style.display = state.selectionMode === 'range' && type === 'removal' ? 'block' : 'none';
             
-            // Show update-specific fields
-            if (type === 'update') {
-                document.getElementById('originalTextSection').style.display = state.updateMode !== 'find-replace' ? 'block' : 'none';
-                document.getElementById('newTextSection').style.display = state.updateMode !== 'find-replace' ? 'block' : 'none';
-                document.getElementById('findReplaceSection').style.display = state.updateMode === 'find-replace' ? 'block' : 'none';
-            } else {
+            // For rawtext, hide selector and show only find/replace
+            if (type === 'rawtext') {
+                document.getElementById('selectorSection').style.display = 'none';
+                document.getElementById('rangeMarkersSection').style.display = 'none';
                 document.getElementById('originalTextSection').style.display = 'none';
                 document.getElementById('newTextSection').style.display = 'none';
-                document.getElementById('findReplaceSection').style.display = 'none';
+                document.getElementById('findReplaceSection').style.display = 'block';
+                document.getElementById('rawtextHelpSection').style.display = 'block';
+            } else {
+                document.getElementById('selectorSection').style.display = state.selectionMode !== 'range' ? 'block' : 'none';
+                document.getElementById('rangeMarkersSection').style.display = state.selectionMode === 'range' && type === 'removal' ? 'block' : 'none';
+                document.getElementById('rawtextHelpSection').style.display = 'none';
+                
+                // Show update-specific fields
+                if (type === 'update') {
+                    document.getElementById('originalTextSection').style.display = state.updateMode !== 'find-replace' ? 'block' : 'none';
+                    document.getElementById('newTextSection').style.display = state.updateMode !== 'find-replace' ? 'block' : 'none';
+                    document.getElementById('findReplaceSection').style.display = state.updateMode === 'find-replace' ? 'block' : 'none';
+                } else {
+                    document.getElementById('originalTextSection').style.display = 'none';
+                    document.getElementById('newTextSection').style.display = 'none';
+                    document.getElementById('findReplaceSection').style.display = 'none';
+                }
             }
             
             // Pre-fill selector if element was selected
-            if (state.selectedElement) {
+            if (state.selectedElement && type !== 'rawtext') {
                 document.getElementById('ruleSelector').value = state.selectedElement.selector;
                 
                 // For update rules, also pre-fill the original text
@@ -2640,6 +2710,20 @@
                 }
                 
                 state.rules.updates.push(rule);
+            } else if (type === 'rawtext') {
+                const findText = document.getElementById('findText').value;
+                const replaceText = document.getElementById('replaceText').value;
+                
+                if (!findText) {
+                    alert('Please enter text to find');
+                    return;
+                }
+                
+                rule.findText = findText;
+                rule.replaceText = replaceText;
+                rule.displayText = `"${findText.substring(0, 30)}${findText.length > 30 ? '...' : ''}" → "${replaceText.substring(0, 30)}${replaceText.length > 30 ? '...' : ''}"`;
+                
+                state.rules.rawtext.push(rule);
             }
             
             renderRules();
@@ -2654,6 +2738,8 @@
                 state.rules.additions = state.rules.additions.filter(r => r.id !== id);
             } else if (type === 'update') {
                 state.rules.updates = state.rules.updates.filter(r => r.id !== id);
+            } else if (type === 'rawtext') {
+                state.rules.rawtext = state.rules.rawtext.filter(r => r.id !== id);
             }
             renderRules();
         }
@@ -2720,8 +2806,28 @@
                 `).join('');
             }
             
+            // Render rawtext rules
+            const rawtextList = document.getElementById('rawtextRules');
+            if (state.rules.rawtext.length === 0) {
+                rawtextList.innerHTML = '<div class="empty-rules">No raw text rules defined yet</div>';
+            } else {
+                rawtextList.innerHTML = state.rules.rawtext.map(rule => `
+                    <div class="rule-item rawtext" style="border-left-color: #6f42c1;">
+                        <div class="rule-item-header">
+                            <div class="rule-item-content">
+                                <div class="rule-item-selector" style="color: #6f42c1;">${escapeHtml(rule.displayText)}</div>
+                                <div class="rule-item-type">Direct String Replace</div>
+                            </div>
+                            <div class="rule-item-actions">
+                                <button class="rule-item-btn delete" onclick="deleteRule('rawtext', ${rule.id})" title="Delete">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
             // Enable/disable buttons
-            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0;
+            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0 || state.rules.rawtext.length > 0;
             document.getElementById('scanBtn').disabled = !hasRules;
             document.getElementById('previewModeApplied').disabled = !hasRules || !state.pageLoaded;
         }
@@ -2860,7 +2966,7 @@
         // Repository Scanning
         // ============================================
         async function scanRepository() {
-            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0;
+            const hasRules = state.rules.removals.length > 0 || state.rules.additions.length > 0 || state.rules.updates.length > 0 || state.rules.rawtext.length > 0;
             if (!hasRules) {
                 showStatus('scanStatus', 'Please define at least one rule first', 'warning');
                 return;
@@ -2974,7 +3080,7 @@
                         if (response.ok) {
                             const html = await response.text();
                             const result = analyzeFile(html, file.path);
-                            if (result.removals > 0 || result.additions > 0 || result.updates > 0) {
+                            if (result.removals > 0 || result.additions > 0 || result.updates > 0 || result.rawtext > 0) {
                                 estimatedAffected++;
                                 file.affected = true;
                             }
@@ -3052,7 +3158,15 @@
                 } catch (e) {}
             }
             
-            return { removals, additions, updates };
+            // Check rawtext rules (direct string search on raw HTML)
+            let rawtext = 0;
+            for (const rule of state.rules.rawtext) {
+                if (html.includes(rule.findText)) {
+                    rawtext++;
+                }
+            }
+            
+            return { removals, additions, updates, rawtext };
         }
         
         function clearScan() {
@@ -3229,7 +3343,16 @@
                     let html = await response.text();
                     let changed = false;
                     
-                    // Apply rules
+                    // Apply RAW TEXT rules FIRST (before DOM parsing)
+                    // These work on the raw string and won't be affected by DOM serialization
+                    for (const rule of state.rules.rawtext) {
+                        if (html.includes(rule.findText)) {
+                            html = html.split(rule.findText).join(rule.replaceText);
+                            changed = true;
+                        }
+                    }
+                    
+                    // Apply DOM-based rules
                     for (const rule of state.rules.removals) {
                         if (rule.mode === 'range') {
                             const result = removeByMarkers(html, rule.startMarker, rule.endMarker);
@@ -3732,8 +3855,36 @@
         }
         
         async function fullReset() {
+            if (!confirm('⚠️ This will clear all rules, processed files, and uploaded blobs. GitHub settings will be preserved.\n\nAre you sure you want to start over?')) {
+                return;
+            }
+            
+            // Clear IndexedDB stores
             await clearAllStores();
             
+            // Clear all rules
+            state.rules = {
+                removals: [],
+                additions: [],
+                updates: [],
+                rawtext: []
+            };
+            
+            // Clear selected element
+            state.selectedElement = null;
+            
+            // Clear files lists
+            state.filesToProcess = [];
+            state.processedFiles = [];
+            
+            // Reset preview
+            state.pageHtml = '';
+            state.pageLoaded = false;
+            state.currentSourcePath = '';
+            const iframe = document.getElementById('previewIframe');
+            iframe.srcdoc = '<html><body style="display:flex;align-items:center;justify-content:center;height:100vh;color:#999;font-family:sans-serif;"><p>Load a page to preview</p></body></html>';
+            
+            // Hide all execution UI
             document.getElementById('executeResults').style.display = 'none';
             document.getElementById('uploadPhase').style.display = 'none';
             document.getElementById('commitPhase').style.display = 'none';
@@ -3743,18 +3894,37 @@
             document.getElementById('executeLog').innerHTML = '';
             document.getElementById('scanProgress').style.display = 'none';
             
+            // Reset buttons
             document.getElementById('startProcessBtn').style.display = 'inline-flex';
             document.getElementById('startProcessBtn').textContent = '🚀 Start Processing';
             document.getElementById('startProcessBtn').disabled = true;
             document.getElementById('startUploadBtn').style.display = 'inline-flex';
             document.getElementById('startUploadBtn').textContent = '🚀 Upload All Blobs';
             document.getElementById('startUploadBtn').disabled = false;
+            document.getElementById('scanBtn').disabled = true;
             
-            state.filesToProcess = [];
-            state.processedFiles = [];
-            
-            await updateStats();
+            // Clear scan results
             clearScan();
+            
+            // Re-render rules (will show empty state)
+            renderRules();
+            
+            // Reset preview mode buttons
+            document.getElementById('previewModeOriginal').classList.add('active');
+            document.getElementById('previewModeApplied').classList.remove('active');
+            document.getElementById('previewModeApplied').disabled = true;
+            
+            // Update stats
+            await updateStats();
+            
+            // Clear any status messages
+            document.getElementById('loadStatus').className = 'status';
+            document.getElementById('loadStatus').textContent = '';
+            document.getElementById('scanStatus').className = 'status';
+            document.getElementById('scanStatus').textContent = '';
+            
+            // Show confirmation
+            showStatus('loadStatus', '✅ Reset complete. Ready to start a new session.', 'success');
         }
         
         // ============================================
