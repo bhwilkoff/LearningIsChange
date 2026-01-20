@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Console – Learning is Change</title>
+    <title>Search – Learning is Change</title>
     <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent: #1abc9c;
-            --accent-hover: #16a085;
-            --accent-light: rgba(26, 188, 156, 0.1);
+            --accent: #0085b2;
+            --accent-hover: #006d94;
+            --accent-light: rgba(0, 133, 178, 0.1);
             --text-primary: #333;
             --text-secondary: #666;
             --text-muted: #999;
@@ -55,19 +55,19 @@
         #site-title a:hover { color: var(--accent); }
         #site-description { color: var(--text-secondary); font-size: 0.95rem; font-style: italic; font-family: 'Lora', Georgia, serif; }
         
-        .header-nav { display: flex; gap: 25px; }
+        .header-nav { display: flex; gap: 25px; align-items: center; }
         .header-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .header-nav a:hover { color: var(--accent); }
         
         #header-image-main {
-            height: 180px;
+            height: 140px;
             background: linear-gradient(135deg, var(--accent), var(--accent-hover));
             position: relative;
         }
         
         .page-title-overlay {
             position: absolute;
-            bottom: 25px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
@@ -75,8 +75,8 @@
             color: #fff;
         }
         
-        .page-title-overlay h1 { font-size: 2rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2); margin-bottom: 5px; }
-        .page-title-overlay p { font-family: 'Lora', Georgia, serif; font-style: italic; opacity: 0.9; }
+        .page-title-overlay h1 { font-size: 1.8rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2); margin-bottom: 5px; }
+        .page-title-overlay p { font-family: 'Lora', Georgia, serif; font-style: italic; opacity: 0.9; font-size: 0.95rem; }
         
         #breadcrumbs-container { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 12px 20px; }
         #breadcrumbs { max-width: 1200px; margin: 0 auto; font-size: 0.9rem; color: var(--text-muted); }
@@ -180,6 +180,29 @@
             min-width: 150px;
         }
         
+        /* Loading indicator */
+        .loading-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+        
+        .loading-indicator .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
         /* Results */
         .results-header {
             display: flex;
@@ -250,10 +273,9 @@
         }
         
         .tag {
-            display: inline-block;
             padding: 3px 10px;
             background: var(--bg-tertiary);
-            border-radius: 12px;
+            border-radius: 4px;
             font-size: 0.8rem;
             color: var(--text-secondary);
         }
@@ -263,8 +285,60 @@
             color: var(--accent);
         }
         
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+        }
+        
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .pagination button {
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .pagination button:hover:not(:disabled) {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .pagination button.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
         /* Sidebar */
-        #sidebar { display: flex; flex-direction: column; gap: 20px; }
+        #sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
         
         .widget {
             background: var(--bg-primary);
@@ -276,42 +350,34 @@
         .widget h3 {
             font-size: 1rem;
             font-weight: 700;
-            color: var(--text-primary);
             margin-bottom: 15px;
             padding-bottom: 10px;
             border-bottom: 2px solid var(--accent-light);
         }
         
-        .widget ul { list-style: none; }
-        .widget li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-light);
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: space-between;
+        .widget ul {
+            list-style: none;
         }
-        .widget li:last-child { border-bottom: none; }
         
-        .widget .count {
-            background: var(--bg-tertiary);
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
+        .widget ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid var(--border-light);
         }
+        
+        .widget ul li:last-child { border-bottom: none; }
         
         .stat-mini {
-            text-align: center;
-            padding: 15px;
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
         }
         
-        .stat-mini:last-child { margin-bottom: 0; }
+        .stat-mini:last-child { border-bottom: none; }
         
         .stat-mini .value {
-            font-size: 2rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent);
         }
@@ -321,60 +387,26 @@
             color: var(--text-muted);
         }
         
-        /* Loading & Empty States */
-        .loading, .empty-state {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-muted);
-        }
-        
-        .loading::after {
-            content: '';
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--border-color);
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        
-        @keyframes spin { to { transform: rotate(360deg); } }
-        
-        .empty-state .icon { font-size: 3rem; margin-bottom: 15px; }
-        
-        /* Pagination */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            margin-top: 20px;
-        }
-        
-        .pagination button {
-            padding: 8px 15px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-primary);
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        .pagination button:hover { background: var(--bg-tertiary); }
-        .pagination button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-        .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
-        
+        /* Footer */
         footer {
-            background: var(--bg-primary);
-            border-top: 1px solid var(--border-light);
-            padding: 20px;
             text-align: center;
+            padding: 30px;
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-top: 40px;
         }
+        
+        /* URL parameter notice */
+        .search-notice {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .search-notice.show { display: block; }
     </style>
 </head>
 <body>
@@ -382,31 +414,32 @@
         <div id="site-header-main">
             <div id="branding">
                 <div id="site-text">
-                    <h1 id="site-title"><a href="https://learningischange.com">Learning is Change</a></h1>
-                    <span id="site-description">Admin Tools</span>
+                    <h1 id="site-title"><a href="/">Learning is Change</a></h1>
+                    <span id="site-description">My name is Ben Wilkoff, and I Teach. And Learn. A Lot.</span>
                 </div>
             </div>
             <nav class="header-nav">
-                <a href="/admin/">← Dashboard</a>
-                <a href="https://learningischange.com">View Site</a>
+                <a href="/">Home</a>
+                <a href="/important-posts/">Important Posts</a>
+                <a href="/category/videos/">Videos</a>
+                <a href="/services/">Services</a>
+                <a href="/services/contact/">Contact</a>
             </nav>
         </div>
     </header>
 
     <div id="header-image-main">
         <div class="page-title-overlay">
-            <h1>🔍 Search Console</h1>
-            <p>Test and explore your site's search database</p>
+            <h1>🔍 Search</h1>
+            <p>Find posts, pages, and content across 20 years of writing</p>
         </div>
     </div>
 
     <div id="breadcrumbs-container">
         <div id="breadcrumbs">
-            <a href="https://learningischange.com">Home</a>
+            <a href="/">Home</a>
             <span class="separator">›</span>
-            <a href="/admin/">Admin</a>
-            <span class="separator">›</span>
-            <span>Search Console</span>
+            <span>Search</span>
         </div>
     </div>
 
@@ -414,7 +447,7 @@
         <main>
             <!-- Search Box -->
             <div class="card">
-                <div class="card-title">🔎 Search</div>
+                <div class="search-notice" id="searchNotice"></div>
                 <div class="search-box">
                     <input type="text" class="search-input" id="searchInput" placeholder="Search posts, pages, and content..." autofocus>
                     <button class="search-btn" onclick="performSearch()">Search</button>
@@ -423,7 +456,7 @@
                 <div class="filters">
                     <div class="filter-group">
                         <label>Type</label>
-                        <select id="filterType">
+                        <select id="filterType" onchange="performSearch()">
                             <option value="">All Types</option>
                             <option value="post">Posts</option>
                             <option value="page">Pages</option>
@@ -431,19 +464,19 @@
                     </div>
                     <div class="filter-group">
                         <label>Category</label>
-                        <select id="filterCategory">
+                        <select id="filterCategory" onchange="performSearch()">
                             <option value="">All Categories</option>
                         </select>
                     </div>
                     <div class="filter-group">
                         <label>Year</label>
-                        <select id="filterYear">
+                        <select id="filterYear" onchange="performSearch()">
                             <option value="">All Years</option>
                         </select>
                     </div>
                     <div class="filter-group">
                         <label>Sort By</label>
-                        <select id="sortBy">
+                        <select id="sortBy" onchange="performSearch()">
                             <option value="relevance">Relevance</option>
                             <option value="date-desc">Newest First</option>
                             <option value="date-asc">Oldest First</option>
@@ -460,9 +493,9 @@
                     <div class="results-count" id="resultsCount"></div>
                 </div>
                 <div id="resultsContainer">
-                    <div class="empty-state">
-                        <div class="icon">🔍</div>
-                        <p>Enter a search term to find posts and pages</p>
+                    <div class="loading-indicator" id="loadingIndicator">
+                        <div class="spinner"></div>
+                        <span>Loading search database...</span>
                     </div>
                 </div>
                 <div class="pagination" id="pagination" style="display: none;"></div>
@@ -497,134 +530,59 @@
             </div>
             
             <div class="widget">
-                <h3>ℹ️ About</h3>
+                <h3>ℹ️ About Search</h3>
                 <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                    This console searches your site's database directly. Results are instant because all data is pre-indexed.
+                    Search across all posts and pages instantly. Results are powered by a pre-indexed database for fast retrieval.
                 </p>
             </div>
         </aside>
     </div>
 
     <footer>
-        <p>Search Console for <a href="https://learningischange.com">Learning is Change</a></p>
+        <p>Ben Wilkoff has been blogging since 2004. Powered by GitHub and a love of writing.</p>
     </footer>
 
     <script>
-        /**
-         * Learning is Change - Admin Tools Common Module
-         */
-        const LiCAdmin = (function() {
-            'use strict';
-            
-            const CONFIG = {
-                STORAGE_KEY: 'lic_admin_settings',
-                DATABASE_CACHE_KEY: 'lic_database_cache',
-                DEFAULT_REPO_OWNER: 'bhwilkoff',
-                DEFAULT_REPO_NAME: 'LearningIsChange',
-                DEFAULT_BRANCH: 'main',
-                DEFAULT_COMMITTER_NAME: 'Ben Wilkoff',
-                DEFAULT_COMMITTER_EMAIL: 'Ben@learningischange.com',
-                SITE_URL: 'https://learningischange.com',
-                DATABASE_PATH: '/database',
-                CACHE_DURATION: 5 * 60 * 1000,
-            };
-            
-            function getSettings() {
-                try {
-                    const stored = localStorage.getItem(CONFIG.STORAGE_KEY);
-                    if (stored) return JSON.parse(stored);
-                } catch (e) { console.error('Error loading settings:', e); }
-                return {
-                    githubToken: '', repoOwner: CONFIG.DEFAULT_REPO_OWNER, repoName: CONFIG.DEFAULT_REPO_NAME,
-                    branch: CONFIG.DEFAULT_BRANCH, committerName: CONFIG.DEFAULT_COMMITTER_NAME,
-                    committerEmail: CONFIG.DEFAULT_COMMITTER_EMAIL, rememberToken: false
-                };
-            }
-            
-            function saveSettings(settings) {
-                try {
-                    const toSave = { ...settings };
-                    if (!settings.rememberToken) toSave.githubToken = '';
-                    localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(toSave));
-                    return true;
-                } catch (e) { return false; }
-            }
-            
-            let databaseCache = null, databaseCacheTime = 0;
-            
-            async function fetchDatabase(forceRefresh = false) {
-                const now = Date.now();
-                if (!forceRefresh && databaseCache && (now - databaseCacheTime) < CONFIG.CACHE_DURATION) return databaseCache;
-                
-                if (!forceRefresh) {
-                    try {
-                        const cached = localStorage.getItem(CONFIG.DATABASE_CACHE_KEY);
-                        if (cached) {
-                            const { data, timestamp } = JSON.parse(cached);
-                            if ((now - timestamp) < CONFIG.CACHE_DURATION) {
-                                databaseCache = data; databaseCacheTime = timestamp; return data;
-                            }
-                        }
-                    } catch (e) {}
-                }
-                
-                const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
-                const manifestRes = await fetch(`${baseUrl}/manifest.json`);
-                if (!manifestRes.ok) throw new Error('Failed to fetch manifest');
-                const manifest = await manifestRes.json();
-                
-                const taxRes = await fetch(`${baseUrl}/taxonomies.json`);
-                const taxonomies = taxRes.ok ? await taxRes.json() : { categories: { items: {} }, tags: { items: {} } };
-                
-                const authRes = await fetch(`${baseUrl}/authors.json`);
-                const authors = authRes.ok ? await authRes.json() : { authors: {} };
-                
-                const pagesRes = await fetch(`${baseUrl}/pages.json`);
-                const pages = pagesRes.ok ? await pagesRes.json() : { pages: [] };
-                
-                const database = {
-                    manifest, taxonomies, authors: authors.authors || {}, pages: pages.pages || [],
-                    posts: {}, _shards: manifest.shards?.posts || {}
-                };
-                
-                databaseCache = database; databaseCacheTime = now;
-                try { localStorage.setItem(CONFIG.DATABASE_CACHE_KEY, JSON.stringify({ data: database, timestamp: now })); } catch (e) {}
-                return database;
-            }
-            
-            async function fetchPostsByYear(year) {
-                const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
-                try {
-                    const res = await fetch(`${baseUrl}/posts/${year}.json`);
-                    if (!res.ok) return [];
-                    const data = await res.json();
-                    return data.posts || [];
-                } catch (e) { return []; }
-            }
-            
-            function formatDate(dateString) {
-                if (!dateString) return '';
-                return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            }
-            
-            function formatNumber(num) { return num.toLocaleString(); }
-            
-            return { CONFIG, getSettings, saveSettings, fetchDatabase, fetchPostsByYear, formatDate, formatNumber };
-        })();
-    </script>
-    <script>
+        // Configuration
+        const CONFIG = {
+            SITE_URL: 'https://learningischange.com',
+            DATABASE_PATH: '/database'
+        };
+        
         // State
         let allPosts = [];
         let filteredResults = [];
         let currentPage = 1;
         const resultsPerPage = 20;
         let database = null;
+        let initialSearchQuery = null;
         
         // Initialize
         document.addEventListener('DOMContentLoaded', async function() {
+            // Parse URL parameters for search query
+            const urlParams = new URLSearchParams(window.location.search);
+            initialSearchQuery = urlParams.get('s') || urlParams.get('q') || urlParams.get('query') || '';
+            
+            // If we have a search query from URL, show it
+            if (initialSearchQuery) {
+                document.getElementById('searchInput').value = initialSearchQuery;
+                const notice = document.getElementById('searchNotice');
+                notice.textContent = `Searching for: "${initialSearchQuery}"`;
+                notice.classList.add('show');
+            }
+            
             // Enter key triggers search
             document.getElementById('searchInput').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') performSearch();
+            });
+            
+            // Also trigger search on input change (with debounce for live search)
+            let searchTimeout;
+            document.getElementById('searchInput').addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    if (allPosts.length > 0) performSearch();
+                }, 300);
             });
             
             // Load database
@@ -633,11 +591,40 @@
         
         async function loadDatabase() {
             try {
-                database = await LiCAdmin.fetchDatabase();
+                const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
+                
+                // Fetch manifest
+                const manifestRes = await fetch(`${baseUrl}/manifest.json`);
+                if (!manifestRes.ok) throw new Error('Failed to load database');
+                const manifest = await manifestRes.json();
+                
+                // Fetch taxonomies
+                let taxonomies = { categories: { items: {} }, tags: { items: {} } };
+                try {
+                    const taxRes = await fetch(`${baseUrl}/taxonomies.json`);
+                    if (taxRes.ok) taxonomies = await taxRes.json();
+                } catch (e) {}
+                
+                // Fetch pages
+                let pages = [];
+                try {
+                    const pagesRes = await fetch(`${baseUrl}/pages.json`);
+                    if (pagesRes.ok) {
+                        const pagesData = await pagesRes.json();
+                        pages = pagesData.pages || [];
+                    }
+                } catch (e) {}
+                
+                database = {
+                    manifest,
+                    taxonomies,
+                    pages,
+                    _shards: manifest.shards?.posts || {}
+                };
                 
                 // Update stats
-                document.getElementById('statTotalPosts').textContent = LiCAdmin.formatNumber(database.manifest.stats.total_posts);
-                document.getElementById('statTotalPages').textContent = LiCAdmin.formatNumber(database.manifest.stats.total_pages);
+                document.getElementById('statTotalPosts').textContent = formatNumber(manifest.stats?.total_posts || 0);
+                document.getElementById('statTotalPages').textContent = formatNumber(manifest.stats?.total_pages || 0);
                 
                 // Populate year filter
                 const yearSelect = document.getElementById('filterYear');
@@ -651,7 +638,7 @@
                 
                 // Populate category filter
                 const catSelect = document.getElementById('filterCategory');
-                const categories = Object.values(database.taxonomies.categories?.items || {});
+                const categories = Object.values(taxonomies.categories?.items || {});
                 categories.sort((a, b) => a.name.localeCompare(b.name)).forEach(cat => {
                     const opt = document.createElement('option');
                     opt.value = cat.slug;
@@ -663,18 +650,34 @@
                 displayTopCategories(categories);
                 
                 // Display top tags
-                const tags = Object.values(database.taxonomies.tags?.items || {});
+                const tags = Object.values(taxonomies.tags?.items || {});
                 displayTopTags(tags);
                 
                 // Load all posts for searching
                 await loadAllPosts();
+                
+                // Hide loading indicator
+                document.getElementById('loadingIndicator').style.display = 'none';
+                
+                // If we have an initial search query from URL, perform search automatically
+                if (initialSearchQuery) {
+                    performSearch();
+                } else {
+                    // Show empty state
+                    document.getElementById('resultsContainer').innerHTML = `
+                        <div class="empty-state">
+                            <div class="icon">🔍</div>
+                            <p>Enter a search term to find posts and pages</p>
+                        </div>
+                    `;
+                }
                 
             } catch (e) {
                 console.error('Error loading database:', e);
                 document.getElementById('resultsContainer').innerHTML = `
                     <div class="empty-state">
                         <div class="icon">⚠️</div>
-                        <p>Failed to load database: ${e.message}</p>
+                        <p>Failed to load search database: ${e.message}</p>
                     </div>
                 `;
             }
@@ -684,9 +687,19 @@
             const years = Object.keys(database._shards).sort().reverse();
             allPosts = [];
             
+            const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
+            
             for (const year of years) {
-                const posts = await LiCAdmin.fetchPostsByYear(year);
-                allPosts.push(...posts);
+                try {
+                    const res = await fetch(`${baseUrl}/posts/${year}.json`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        const posts = data.posts || [];
+                        allPosts.push(...posts);
+                    }
+                } catch (e) {
+                    console.warn(`Could not load posts for ${year}:`, e);
+                }
             }
             
             // Add pages
@@ -746,6 +759,17 @@
             const categoryFilter = document.getElementById('filterCategory').value;
             const yearFilter = document.getElementById('filterYear').value;
             const sortBy = document.getElementById('sortBy').value;
+            
+            // Hide the URL notice after user interaction
+            document.getElementById('searchNotice').classList.remove('show');
+            
+            // Update URL without reloading (for bookmarking)
+            if (query) {
+                const newUrl = `${window.location.pathname}?s=${encodeURIComponent(query)}`;
+                window.history.replaceState({}, '', newUrl);
+            } else {
+                window.history.replaceState({}, '', window.location.pathname);
+            }
             
             currentPage = 1;
             
@@ -871,10 +895,10 @@
                 return `
                     <div class="result-item">
                         <div class="result-title">
-                            <a href="${post.url}" target="_blank">${post.title || 'Untitled'}</a>
+                            <a href="${post.url}">${post.title || 'Untitled'}</a>
                         </div>
                         <div class="result-meta">
-                            <span>📅 ${LiCAdmin.formatDate(post.date_published)}</span>
+                            <span>📅 ${formatDate(post.date_published)}</span>
                             <span>📄 ${post.type || 'post'}</span>
                             ${post.word_count ? `<span>📝 ${post.word_count} words</span>` : ''}
                         </div>
@@ -936,6 +960,15 @@
             currentPage = page;
             displayResults();
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+        
+        function formatNumber(num) {
+            return num.toLocaleString();
         }
         
         function escapeRegex(string) {
