@@ -2317,15 +2317,29 @@
                     textContent: e.data.textContent
                 };
                 
-                document.getElementById('ruleSelector').value = e.data.selector;
-                
-                if (state.currentRuleType === 'update' && state.updateMode !== 'find-replace') {
-                    document.getElementById('originalText').value = e.data.textContent;
-                }
-                
+                // Just store the selection and update the display - don't auto-open modal
                 cancelSelection();
-                openAddRuleModal(state.currentRuleType || 'removal');
+                
+                // Show a confirmation that element was selected
+                showElementSelectedNotification(e.data.selector);
             }
+        }
+        
+        function showElementSelectedNotification(selector) {
+            // Update the current selection info display
+            const selectionInfo = document.getElementById('currentSelectionInfo');
+            selectionInfo.classList.add('active');
+            document.getElementById('currentSelector').textContent = selector;
+            
+            // Show a brief status message
+            showStatus('loadStatus', `✅ Element selected: ${selector.substring(0, 50)}${selector.length > 50 ? '...' : ''} — Now click an "Add" button to create a rule`, 'success');
+            
+            // Keep the selection info visible for a while, then hide it
+            setTimeout(() => {
+                if (!state.isSelecting) {
+                    selectionInfo.classList.remove('active');
+                }
+            }, 10000);
         }
         
         // ============================================
@@ -2490,6 +2504,11 @@
             // Pre-fill selector if element was selected
             if (state.selectedElement) {
                 document.getElementById('ruleSelector').value = state.selectedElement.selector;
+                
+                // For update rules, also pre-fill the original text
+                if (type === 'update' && state.updateMode !== 'find-replace') {
+                    document.getElementById('originalText').value = state.selectedElement.textContent || '';
+                }
             }
         }
         
@@ -3295,6 +3314,51 @@
         // ============================================
         // Upload Functions
         // ============================================
+        async function uploadBlobWithRetry(file, headers, repoOwner, repoName, maxRetries = 3) {
+            let lastError;
+            
+            for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                try {
+                    // Create blob
+                    const blobResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/blobs`, {
+                        method: 'POST',
+                        headers,
+                        body: JSON.stringify({
+                            content: btoa(unescape(encodeURIComponent(file.content))),
+                            encoding: 'base64'
+                        })
+                    });
+                    
+                    if (!blobResponse.ok) {
+                        const errorData = await blobResponse.json().catch(() => ({}));
+                        const errorMsg = errorData.message || `HTTP ${blobResponse.status}`;
+                        throw new Error(errorMsg);
+                    }
+                    
+                    const blobData = await blobResponse.json();
+                    return { success: true, sha: blobData.sha };
+                    
+                } catch (e) {
+                    lastError = e;
+                    
+                    // Check if it's a rate limit error
+                    if (e.message && e.message.includes('rate limit')) {
+                        // Wait longer for rate limits
+                        const waitTime = 60000; // 1 minute
+                        execLog(`Rate limited. Waiting ${waitTime/1000}s before retry ${attempt}/${maxRetries}...`, 'warning');
+                        await new Promise(r => setTimeout(r, waitTime));
+                    } else if (attempt < maxRetries) {
+                        // Exponential backoff for other errors
+                        const waitTime = Math.pow(2, attempt) * 1000;
+                        execLog(`Retry ${attempt}/${maxRetries} for ${file.path} in ${waitTime/1000}s: ${e.message}`, 'warning');
+                        await new Promise(r => setTimeout(r, waitTime));
+                    }
+                }
+            }
+            
+            return { success: false, error: lastError };
+        }
+        
         async function startBlobUpload() {
             isUploading = true;
             shouldStopUploading = false;
@@ -3318,6 +3382,7 @@
             const pendingFiles = await getAllFromStore('pendingFiles');
             let uploaded = 0;
             let errors = 0;
+            const failedFiles = [];
             
             execLog(`Starting upload of ${pendingFiles.length} files...`, 'info');
             
@@ -3329,27 +3394,13 @@
                     break;
                 }
                 
-                try {
-                    // Create blob
-                    const blobResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/blobs`, {
-                        method: 'POST',
-                        headers,
-                        body: JSON.stringify({
-                            content: btoa(unescape(encodeURIComponent(file.content))),
-                            encoding: 'base64'
-                        })
-                    });
-                    
-                    if (!blobResponse.ok) {
-                        throw new Error(`HTTP ${blobResponse.status}`);
-                    }
-                    
-                    const blobData = await blobResponse.json();
-                    
+                const result = await uploadBlobWithRetry(file, headers, repoOwner, repoName);
+                
+                if (result.success) {
                     // Store uploaded blob info
                     await addToStore('uploadedBlobs', {
                         path: file.path,
-                        sha: blobData.sha
+                        sha: result.sha
                     });
                     
                     // Remove from pending
@@ -3357,10 +3408,10 @@
                     
                     uploaded++;
                     execLog(`✓ Uploaded: ${file.path}`, 'success');
-                    
-                } catch (e) {
+                } else {
                     errors++;
-                    execLog(`Error uploading ${file.path}: ${e.message}`, 'error');
+                    failedFiles.push({ path: file.path, error: result.error?.message || 'Unknown error' });
+                    execLog(`✗ Failed after retries: ${file.path}: ${result.error?.message || 'Unknown error'}`, 'error');
                 }
                 
                 // Update progress
@@ -3379,11 +3430,21 @@
             isUploading = false;
             
             if (!shouldStopUploading) {
-                execLog(`Upload complete. ${uploaded} blobs created, ${errors} errors.`, 'success');
+                execLog(`Upload complete. ${uploaded} blobs created, ${errors} errors.`, uploaded > 0 ? 'success' : 'warning');
+                
+                if (failedFiles.length > 0) {
+                    execLog(`Failed files: ${failedFiles.map(f => f.path).join(', ')}`, 'warning');
+                }
+                
                 document.getElementById('pauseUploadBtn').style.display = 'none';
                 document.getElementById('startUploadBtn').style.display = 'inline-flex';
                 document.getElementById('startUploadBtn').textContent = '✅ Upload Complete';
                 document.getElementById('startUploadBtn').disabled = true;
+                
+                // Enable commit if we have uploaded blobs (even if some failed)
+                if (uploaded > 0) {
+                    document.getElementById('commitPhase').style.display = 'block';
+                }
             }
         }
         
@@ -3414,22 +3475,35 @@
                 execLog('Getting current branch state...', 'info');
                 
                 const refResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
-                if (!refResponse.ok) throw new Error('Failed to get branch reference');
+                if (!refResponse.ok) {
+                    const errorData = await refResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to get branch reference: ${errorData.message || refResponse.status}`);
+                }
                 const refData = await refResponse.json();
                 const currentCommitSha = refData.object.sha;
                 
                 const commitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
-                if (!commitResponse.ok) throw new Error('Failed to get current commit');
+                if (!commitResponse.ok) {
+                    const errorData = await commitResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to get current commit: ${errorData.message || commitResponse.status}`);
+                }
                 const commitData = await commitResponse.json();
-                const baseTreeSha = commitData.tree.sha;
+                let baseTreeSha = commitData.tree.sha;
                 
                 const uploadedBlobs = await getAllFromStore('uploadedBlobs');
+                
+                if (uploadedBlobs.length === 0) {
+                    throw new Error('No uploaded blobs found. Please complete the upload phase first.');
+                }
+                
                 let treeItems = uploadedBlobs.map(blob => ({
                     path: blob.path,
                     mode: '100644',
                     type: 'blob',
                     sha: blob.sha
                 }));
+                
+                execLog(`Found ${treeItems.length} blobs to commit`, 'info');
                 
                 // Update changelog if requested
                 if (updateChangelog) {
@@ -3455,26 +3529,62 @@
                                 type: 'blob',
                                 sha: changelogBlob.sha
                             });
-                            execLog('Changelog updated', 'success');
+                            execLog('Changelog blob created', 'success');
+                        } else {
+                            const errorData = await changelogBlobResponse.json().catch(() => ({}));
+                            execLog(`Warning: Could not create changelog blob: ${errorData.message || changelogBlobResponse.status}`, 'warning');
                         }
                     } catch (e) {
                         execLog(`Warning: Could not update changelog: ${e.message}`, 'warning');
                     }
                 }
                 
-                // Create tree
-                execLog(`Creating tree with ${treeItems.length} files...`, 'info');
-                const treeResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/trees`, {
-                    method: 'POST',
-                    headers,
-                    body: JSON.stringify({
-                        base_tree: baseTreeSha,
-                        tree: treeItems
-                    })
-                });
+                // For very large trees (>1000 items), create in batches to avoid timeouts
+                const BATCH_SIZE = 1000;
                 
-                if (!treeResponse.ok) throw new Error('Failed to create tree');
-                const treeData = await treeResponse.json();
+                if (treeItems.length > BATCH_SIZE) {
+                    execLog(`Large tree detected (${treeItems.length} items). Creating in batches of ${BATCH_SIZE}...`, 'info');
+                    
+                    let currentBaseTree = baseTreeSha;
+                    
+                    for (let i = 0; i < treeItems.length; i += BATCH_SIZE) {
+                        const batch = treeItems.slice(i, i + BATCH_SIZE);
+                        const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+                        const totalBatches = Math.ceil(treeItems.length / BATCH_SIZE);
+                        
+                        execLog(`Creating tree batch ${batchNum}/${totalBatches} (${batch.length} items)...`, 'info');
+                        
+                        const treeResponse = await createTreeWithRetry(
+                            repoOwner, repoName, headers, currentBaseTree, batch
+                        );
+                        
+                        if (!treeResponse.success) {
+                            throw new Error(`Failed to create tree batch ${batchNum}: ${treeResponse.error}`);
+                        }
+                        
+                        currentBaseTree = treeResponse.sha;
+                        
+                        // Small delay between batches
+                        await new Promise(r => setTimeout(r, 500));
+                    }
+                    
+                    baseTreeSha = currentBaseTree;
+                    execLog('All tree batches created successfully', 'success');
+                    
+                } else {
+                    // Create tree in single request
+                    execLog(`Creating tree with ${treeItems.length} files...`, 'info');
+                    
+                    const treeResponse = await createTreeWithRetry(
+                        repoOwner, repoName, headers, baseTreeSha, treeItems
+                    );
+                    
+                    if (!treeResponse.success) {
+                        throw new Error(`Failed to create tree: ${treeResponse.error}`);
+                    }
+                    
+                    baseTreeSha = treeResponse.sha;
+                }
                 
                 // Create commit
                 execLog('Creating commit...', 'info');
@@ -3483,13 +3593,16 @@
                     headers,
                     body: JSON.stringify({
                         message: commitMessage,
-                        tree: treeData.sha,
+                        tree: baseTreeSha,
                         parents: [currentCommitSha],
                         author: { name: committerName, email: committerEmail }
                     })
                 });
                 
-                if (!newCommitResponse.ok) throw new Error('Failed to create commit');
+                if (!newCommitResponse.ok) {
+                    const errorData = await newCommitResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to create commit: ${errorData.message || newCommitResponse.status}`);
+                }
                 const newCommitData = await newCommitResponse.json();
                 
                 // Update branch
@@ -3503,7 +3616,10 @@
                     })
                 });
                 
-                if (!updateRefResponse.ok) throw new Error('Failed to update branch');
+                if (!updateRefResponse.ok) {
+                    const errorData = await updateRefResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to update branch: ${errorData.message || updateRefResponse.status}`);
+                }
                 
                 execLog(`✅ Commit created: ${newCommitData.sha.substring(0, 7)}`, 'success');
                 
@@ -3521,11 +3637,54 @@
                 await clearAllStores();
                 
             } catch (error) {
-                execLog(`Error: ${error.message}`, 'error');
-                alert(`Error creating commit: ${error.message}`);
+                execLog(`❌ Error: ${error.message}`, 'error');
+                console.error('Commit error details:', error);
+                
+                // Show failure in results
+                document.getElementById('executeResults').style.display = 'block';
+                document.getElementById('resultsHeader').className = 'execute-results-header error';
+                document.querySelector('.results-icon').textContent = '❌';
+                document.getElementById('resultsMessage').textContent = `Commit failed: ${error.message}`;
+                document.getElementById('viewCommitLink').style.display = 'none';
             }
             
             document.getElementById('createCommitBtn').disabled = false;
+        }
+        
+        async function createTreeWithRetry(repoOwner, repoName, headers, baseTree, treeItems, maxRetries = 3) {
+            let lastError;
+            
+            for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                try {
+                    const treeResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/trees`, {
+                        method: 'POST',
+                        headers,
+                        body: JSON.stringify({
+                            base_tree: baseTree,
+                            tree: treeItems
+                        })
+                    });
+                    
+                    if (!treeResponse.ok) {
+                        const errorData = await treeResponse.json().catch(() => ({}));
+                        throw new Error(errorData.message || `HTTP ${treeResponse.status}`);
+                    }
+                    
+                    const treeData = await treeResponse.json();
+                    return { success: true, sha: treeData.sha };
+                    
+                } catch (e) {
+                    lastError = e;
+                    
+                    if (attempt < maxRetries) {
+                        const waitTime = Math.pow(2, attempt) * 2000; // Longer wait for tree creation
+                        execLog(`Tree creation attempt ${attempt} failed: ${e.message}. Retrying in ${waitTime/1000}s...`, 'warning');
+                        await new Promise(r => setTimeout(r, waitTime));
+                    }
+                }
+            }
+            
+            return { success: false, error: lastError?.message || 'Unknown error' };
         }
         
         async function generateChangelogUpdate(commitMessage, fileCount) {
