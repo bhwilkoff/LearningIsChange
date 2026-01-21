@@ -1316,7 +1316,9 @@
                     
                     <div class="commit-info" style="background: #e8f4fd; border: 1px solid #b8daff; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
                         <strong>📦 Batch Commits:</strong> Files will be committed in batches of 100. 
-                        You can stop and resume at any time.
+                        You can stop and resume at any time.<br>
+                        <strong>🚀 GitHub Actions:</strong> Only the <em>final batch</em> will trigger a build. 
+                        Intermediate batches include <code>[skip ci]</code> to prevent repeated builds.
                     </div>
                     
                     <div class="process-actions">
@@ -1484,7 +1486,7 @@
                         Use this for changing attributes, exact HTML patterns, or any text that might get modified by the browser's DOM parser.
                     </p>
                     <p style="font-size: 0.85rem; color: #888; margin: 8px 0 0 0;">
-                        <strong>Example:</strong> Find <code>action="/search/"</code> → Replace with <code>action="/search/"</code>
+                        <strong>Example:</strong> Find <code>action="/"</code> → Replace with <code>action="/search/"</code>
                     </p>
                 </div>
             </div>
@@ -3810,10 +3812,21 @@
                         }
                         const treeData = await treeResponse.json();
                         
-                        // Create commit
-                        const batchMessage = batches.length > 1 
-                            ? `${commitMessage} (batch ${batchNum}/${batches.length})`
-                            : commitMessage;
+                        // Create commit message
+                        // Add [skip ci] to intermediate batches to prevent GitHub Actions from triggering
+                        // Only the LAST batch (or single batch) will trigger the build
+                        const isLastBatch = batchIndex === batches.length - 1;
+                        let batchMessage;
+                        if (batches.length === 1) {
+                            // Single batch - no skip ci
+                            batchMessage = commitMessage;
+                        } else if (isLastBatch) {
+                            // Last batch - no skip ci, this will trigger the build
+                            batchMessage = `${commitMessage} (batch ${batchNum}/${batches.length} - FINAL)`;
+                        } else {
+                            // Intermediate batch - add skip ci
+                            batchMessage = `${commitMessage} (batch ${batchNum}/${batches.length}) [skip ci]`;
+                        }
                             
                         const newCommitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits`, {
                             method: 'POST',
