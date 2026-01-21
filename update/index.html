@@ -1198,7 +1198,11 @@
                         </div>
                         <div class="progress-stat uploaded">
                             <span class="progress-stat-value" id="processComplete">0</span>
-                            <span class="progress-stat-label">Processed</span>
+                            <span class="progress-stat-label">Files Changed</span>
+                        </div>
+                        <div class="progress-stat" style="background: #fff3cd;">
+                            <span class="progress-stat-value" id="processInstances" style="color: #856404;">0</span>
+                            <span class="progress-stat-label">Instances Changed</span>
                         </div>
                         <div class="progress-stat errors">
                             <span class="progress-stat-value" id="processSkipped">0</span>
@@ -1210,10 +1214,11 @@
                         <div class="form-group">
                             <label for="fetchSource">Fetch Source</label>
                             <select id="fetchSource">
+                                <option value="github-raw">GitHub Raw (recommended, no rate limits)</option>
                                 <option value="site">Live Site (learningischange.com)</option>
-                                <option value="github">GitHub Repository</option>
+                                <option value="github">GitHub API (rate limited)</option>
                             </select>
-                            <div class="help-text">GitHub is slower but works for all files</div>
+                            <div class="help-text">GitHub Raw is fastest and has no rate limits</div>
                         </div>
                         <div class="form-group">
                             <label for="processDelay">Delay Between Files (ms)</label>
@@ -1309,9 +1314,26 @@
                         0 files ready to commit
                     </div>
                     
-                    <button class="btn btn-success" id="createCommitBtn" onclick="createFinalCommit()">
-                        📝 Create Commit
-                    </button>
+                    <div class="commit-info" style="background: #e8f4fd; border: 1px solid #b8daff; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
+                        <strong>📦 Batch Commits:</strong> Files will be committed in batches of 100. 
+                        You can stop and resume at any time.
+                    </div>
+                    
+                    <div class="process-actions">
+                        <button class="btn btn-success" id="createCommitBtn" onclick="createFinalCommit()">
+                            📝 Start Committing
+                        </button>
+                        <button class="btn btn-warning" id="stopCommitBtn" onclick="stopCommit()" style="display: none;">
+                            ⏸️ Stop After Current Batch
+                        </button>
+                    </div>
+                    
+                    <div class="process-progress" id="commitProgress" style="display: none; margin-top: 15px;">
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-bar" id="commitProgressBar" style="width: 0%;"></div>
+                        </div>
+                        <div class="progress-text" id="commitProgressText">Ready</div>
+                    </div>
                 </div>
                 
                 <!-- Results -->
@@ -3071,84 +3093,93 @@
         }
         
         async function analyzeFiles(files) {
-            const batchSize = parseInt(document.getElementById('batchSize').value) || 50;
+            const CONCURRENCY = 20; // Parallel fetches (raw.githubusercontent.com has no rate limits)
             let analyzed = 0;
-            let estimatedAffected = 0;
+            let filesWithMatches = 0;
+            let totalInstances = 0;
             
-            // Check if we ONLY have rawtext rules (no DOM-based rules)
-            const hasOnlyRawtextRules = state.rules.rawtext.length > 0 && 
+            // Check if we have rawtext rules - these need special handling
+            const hasRawtextRules = state.rules.rawtext.length > 0;
+            const hasOnlyRawtextRules = hasRawtextRules && 
                 state.rules.removals.length === 0 && 
                 state.rules.additions.length === 0 && 
                 state.rules.updates.length === 0;
             
-            // If only rawtext rules, skip HTTP fetching - mark all files as potentially affected
-            if (hasOnlyRawtextRules) {
-                document.getElementById('scanProgressText').textContent = `Raw text mode: Marking all ${files.length} files for processing...`;
-                
-                for (const file of files) {
-                    file.affected = true;
-                    estimatedAffected++;
-                }
-                
-                document.getElementById('scanProgressBar').style.width = '100%';
-                document.getElementById('scanStats').innerHTML = `
-                    <div class="progress-stat">
-                        <span class="progress-stat-value">${files.length}</span>
-                        <span class="progress-stat-label">Total Files</span>
-                    </div>
-                    <div class="progress-stat">
-                        <span class="progress-stat-value">${estimatedAffected}</span>
-                        <span class="progress-stat-label">To Process</span>
-                    </div>
-                    <div class="progress-stat" style="flex-basis: 100%; margin-top: 10px;">
-                        <span class="progress-stat-label" style="color: #6f42c1;">⚡ Raw text mode: Skipped pre-analysis. Pattern matching happens during processing.</span>
-                    </div>
-                `;
-                return;
-            }
+            document.getElementById('scanProgressText').textContent = `Analyzing files with ${CONCURRENCY}x concurrency...`;
             
-            document.getElementById('scanProgressText').textContent = `Analyzing files...`;
-            
-            for (let i = 0; i < files.length; i += batchSize) {
-                const batch = files.slice(i, i + batchSize);
+            // Process files in concurrent batches
+            for (let i = 0; i < files.length; i += CONCURRENCY) {
+                const batch = files.slice(i, Math.min(i + CONCURRENCY, files.length));
                 
-                for (const file of batch) {
+                const results = await Promise.all(batch.map(async (file) => {
                     try {
-                        // Fetch and analyze
-                        const url = `${LiCAdmin.CONFIG.SITE_URL}/${file.path}`;
-                        const response = await fetch(url);
-                        if (response.ok) {
-                            const html = await response.text();
-                            const result = analyzeFile(html, file.path);
-                            if (result.removals > 0 || result.additions > 0 || result.updates > 0 || result.rawtext > 0) {
-                                estimatedAffected++;
-                                file.affected = true;
-                            }
+                        // Use raw.githubusercontent.com - no rate limits!
+                        const settings = LiCAdmin.getSettings();
+                        const rawUrl = `https://raw.githubusercontent.com/${settings.repoOwner}/${settings.repoName}/${settings.branch}/${file.path}`;
+                        
+                        const response = await fetch(rawUrl);
+                        if (!response.ok) {
+                            return { file, affected: false, instances: 0 };
                         }
+                        
+                        const html = await response.text();
+                        const result = analyzeFile(html, file.path);
+                        
+                        const instances = result.removals + result.additions + result.updates + result.rawtext;
+                        
+                        if (instances > 0) {
+                            file.affected = true;
+                            file.instanceCount = instances;
+                            return { file, affected: true, instances };
+                        }
+                        
+                        return { file, affected: false, instances: 0 };
                     } catch (e) {
                         console.log(`Could not analyze ${file.path}:`, e.message);
+                        return { file, affected: false, instances: 0 };
                     }
-                    
+                }));
+                
+                // Aggregate results
+                for (const r of results) {
                     analyzed++;
-                    const progress = Math.round((analyzed / files.length) * 100);
-                    document.getElementById('scanProgressBar').style.width = progress + '%';
-                    document.getElementById('scanProgressText').textContent = `Analyzed ${analyzed} / ${files.length} files`;
+                    if (r.affected) {
+                        filesWithMatches++;
+                        totalInstances += r.instances;
+                    }
                 }
                 
-                // Small delay between batches
-                await new Promise(r => setTimeout(r, 100));
+                // Update progress
+                const progress = Math.round((analyzed / files.length) * 100);
+                document.getElementById('scanProgressBar').style.width = progress + '%';
+                document.getElementById('scanProgressText').textContent = 
+                    `Analyzed ${analyzed} / ${files.length} files — Found ${filesWithMatches} files with ${totalInstances} total instances`;
             }
             
+            // Update final stats
             document.getElementById('scanStats').innerHTML = `
                 <div class="progress-stat">
-                    <span class="progress-stat-value">${files.length}</span>
-                    <span class="progress-stat-label">Total Files</span>
+                    <span class="progress-stat-value">${files.length.toLocaleString()}</span>
+                    <span class="progress-stat-label">Total Files Scanned</span>
                 </div>
-                <div class="progress-stat">
-                    <span class="progress-stat-value">${estimatedAffected}</span>
-                    <span class="progress-stat-label">Affected Files</span>
+                <div class="progress-stat" style="background: #d4edda;">
+                    <span class="progress-stat-value" style="color: #28a745;">${filesWithMatches.toLocaleString()}</span>
+                    <span class="progress-stat-label">Files with Matches</span>
+                </div>
+                <div class="progress-stat" style="background: #fff3cd;">
+                    <span class="progress-stat-value" style="color: #856404;">${totalInstances.toLocaleString()}</span>
+                    <span class="progress-stat-label">Total Instances</span>
                 </div>
             `;
+            
+            // Filter to only affected files
+            state.filesToProcess = files.filter(f => f.affected);
+            
+            // Store in localStorage for resume capability
+            localStorage.setItem('massUpdater_pendingPaths', JSON.stringify(state.filesToProcess.map(f => f.path)));
+            localStorage.setItem('massUpdater_totalInstances', totalInstances.toString());
+            
+            return { filesWithMatches, totalInstances };
         }
         
         function analyzeFile(html, path) {
@@ -3199,10 +3230,14 @@
             }
             
             // Check rawtext rules (direct string search on raw HTML)
+            // Count actual occurrences, not just presence
             let rawtext = 0;
             for (const rule of state.rules.rawtext) {
-                if (html.includes(rule.findText)) {
-                    rawtext++;
+                // Count all occurrences of the find text
+                const regex = new RegExp(escapeRegExp(rule.findText), 'g');
+                const matches = html.match(regex);
+                if (matches) {
+                    rawtext += matches.length;
                 }
             }
             
@@ -3359,6 +3394,7 @@
             const fetchSource = document.getElementById('fetchSource').value;
             let processed = 0;
             let skipped = 0;
+            let totalInstancesChanged = 0;
             
             execLog(`Starting file processing (source: ${fetchSource})...`, 'info');
             
@@ -3373,7 +3409,20 @@
                 try {
                     let html;
                     
-                    if (fetchSource === 'github') {
+                    if (fetchSource === 'github-raw') {
+                        // Fetch from raw.githubusercontent.com (no rate limits!)
+                        const settings = LiCAdmin.getSettings();
+                        const rawUrl = `https://raw.githubusercontent.com/${settings.repoOwner}/${settings.repoName}/${settings.branch}/${file.path}`;
+                        const response = await fetch(rawUrl);
+                        
+                        if (!response.ok) {
+                            skipped++;
+                            execLog(`Skipped ${file.path}: HTTP ${response.status}`, 'warning');
+                            continue;
+                        }
+                        
+                        html = await response.text();
+                    } else if (fetchSource === 'github') {
                         // Fetch from GitHub Contents API
                         const settings = LiCAdmin.getSettings();
                         const contentsUrl = `https://api.github.com/repos/${settings.repoOwner}/${settings.repoName}/contents/${file.path}?ref=${settings.branch}`;
@@ -3424,11 +3473,15 @@
                     }
                     
                     let changed = false;
+                    let fileInstances = 0;
                     
                     // Apply RAW TEXT rules FIRST (before DOM parsing)
                     // These work on the raw string and won't be affected by DOM serialization
                     for (const rule of state.rules.rawtext) {
-                        if (html.includes(rule.findText)) {
+                        const regex = new RegExp(escapeRegExp(rule.findText), 'g');
+                        const matches = html.match(regex);
+                        if (matches) {
+                            fileInstances += matches.length;
                             html = html.split(rule.findText).join(rule.replaceText);
                             changed = true;
                         }
@@ -3440,12 +3493,14 @@
                             const result = removeByMarkers(html, rule.startMarker, rule.endMarker);
                             if (result.count > 0) {
                                 html = result.html;
+                                fileInstances += result.count;
                                 changed = true;
                             }
                         } else {
                             const result = removeBySelector(html, rule.selector, rule.mode);
                             if (result.count > 0) {
                                 html = result.html;
+                                fileInstances += result.count;
                                 changed = true;
                             }
                         }
@@ -3455,6 +3510,7 @@
                         const result = addContent(html, rule.selector, rule.position, rule.content);
                         if (result.count > 0) {
                             html = result.html;
+                            fileInstances += result.count;
                             changed = true;
                         }
                     }
@@ -3463,6 +3519,7 @@
                         const result = updateContent(html, rule);
                         if (result.count > 0) {
                             html = result.html;
+                            fileInstances += result.count;
                             changed = true;
                         }
                     }
@@ -3474,7 +3531,8 @@
                             content: html
                         });
                         processed++;
-                        execLog(`✓ Processed: ${file.path}`, 'success');
+                        totalInstancesChanged += fileInstances;
+                        execLog(`✓ Processed: ${file.path} (${fileInstances} instances)`, 'success');
                     } else {
                         skipped++;
                     }
@@ -3489,8 +3547,9 @@
                 const current = processed + skipped;
                 const progress = Math.round((current / total) * 100);
                 document.getElementById('processProgressBar').style.width = progress + '%';
-                document.getElementById('processProgressText').textContent = `${current} / ${total} files`;
+                document.getElementById('processProgressText').textContent = `${current} / ${total} files — ${totalInstancesChanged.toLocaleString()} instances changed`;
                 document.getElementById('processComplete').textContent = processed;
+                document.getElementById('processInstances').textContent = totalInstancesChanged.toLocaleString();
                 document.getElementById('processSkipped').textContent = skipped;
                 
                 await new Promise(r => setTimeout(r, delay));
@@ -3499,7 +3558,7 @@
             isProcessing = false;
             
             if (!shouldStopProcessing) {
-                execLog(`Processing complete. ${processed} files changed, ${skipped} skipped.`, 'success');
+                execLog(`Processing complete. ${processed} files changed (${totalInstancesChanged} instances), ${skipped} skipped.`, 'success');
                 document.getElementById('pauseProcessBtn').style.display = 'none';
                 document.getElementById('startProcessBtn').style.display = 'inline-flex';
                 document.getElementById('startProcessBtn').textContent = '✅ Processing Complete';
@@ -3659,8 +3718,11 @@
         }
         
         // ============================================
-        // Commit Functions
+        // Commit Functions - Batch Commit Approach
         // ============================================
+        const COMMIT_BATCH_SIZE = 100; // Files per commit
+        let stopCommitRequested = false;
+        
         async function createFinalCommit() {
             const settings = LiCAdmin.getSettings();
             const { repoOwner, repoName, branch, committerName, committerEmail } = settings;
@@ -3668,6 +3730,9 @@
             const updateChangelog = document.getElementById('updateChangelog').checked;
             
             document.getElementById('createCommitBtn').disabled = true;
+            document.getElementById('stopCommitBtn').style.display = 'inline-flex';
+            document.getElementById('commitProgress').style.display = 'block';
+            stopCommitRequested = false;
             
             const headers = {
                 'Authorization': `Bearer ${settings.githubToken}`,
@@ -3677,46 +3742,164 @@
             };
             
             try {
-                execLog('Getting current branch state...', 'info');
-                
-                const refResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
-                if (!refResponse.ok) {
-                    const errorData = await refResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to get branch reference: ${errorData.message || refResponse.status}`);
-                }
-                const refData = await refResponse.json();
-                const currentCommitSha = refData.object.sha;
-                
-                const commitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
-                if (!commitResponse.ok) {
-                    const errorData = await commitResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to get current commit: ${errorData.message || commitResponse.status}`);
-                }
-                const commitData = await commitResponse.json();
-                let baseTreeSha = commitData.tree.sha;
-                
                 const uploadedBlobs = await getAllFromStore('uploadedBlobs');
                 
                 if (uploadedBlobs.length === 0) {
                     throw new Error('No uploaded blobs found. Please complete the upload phase first.');
                 }
                 
-                let treeItems = uploadedBlobs.map(blob => ({
-                    path: blob.path,
-                    mode: '100644',
-                    type: 'blob',
-                    sha: blob.sha
-                }));
+                execLog(`Found ${uploadedBlobs.length} blobs to commit in batches of ${COMMIT_BATCH_SIZE}`, 'info');
                 
-                execLog(`Found ${treeItems.length} blobs to commit`, 'info');
+                // Split into batches
+                const batches = [];
+                for (let i = 0; i < uploadedBlobs.length; i += COMMIT_BATCH_SIZE) {
+                    batches.push(uploadedBlobs.slice(i, i + COMMIT_BATCH_SIZE));
+                }
                 
-                // Update changelog if requested
-                if (updateChangelog) {
+                let totalCommitted = 0;
+                let batchesCompleted = 0;
+                
+                for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
+                    if (stopCommitRequested) {
+                        execLog(`⏸️ Commit stopped by user after ${batchesCompleted} batches (${totalCommitted} files)`, 'warning');
+                        break;
+                    }
+                    
+                    const batch = batches[batchIndex];
+                    const batchNum = batchIndex + 1;
+                    
+                    execLog(`\n📦 Committing batch ${batchNum}/${batches.length} (${batch.length} files)...`, 'info');
+                    
+                    try {
+                        // Get FRESH branch state for each batch
+                        const refResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
+                        if (!refResponse.ok) {
+                            const errorData = await refResponse.json().catch(() => ({}));
+                            throw new Error(`Failed to get branch reference: ${errorData.message || refResponse.status}`);
+                        }
+                        const refData = await refResponse.json();
+                        const currentCommitSha = refData.object.sha;
+                        
+                        // Get current tree
+                        const commitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
+                        if (!commitResponse.ok) throw new Error('Failed to get current commit');
+                        const commitData = await commitResponse.json();
+                        const baseTreeSha = commitData.tree.sha;
+                        
+                        // Build tree items for this batch
+                        const treeItems = batch.map(blob => ({
+                            path: blob.path,
+                            mode: '100644',
+                            type: 'blob',
+                            sha: blob.sha
+                        }));
+                        
+                        // Create tree
+                        const treeResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/trees`, {
+                            method: 'POST',
+                            headers,
+                            body: JSON.stringify({
+                                base_tree: baseTreeSha,
+                                tree: treeItems
+                            })
+                        });
+                        
+                        if (!treeResponse.ok) {
+                            const errorData = await treeResponse.json().catch(() => ({}));
+                            throw new Error(`Failed to create tree: ${errorData.message || treeResponse.status}`);
+                        }
+                        const treeData = await treeResponse.json();
+                        
+                        // Create commit
+                        const batchMessage = batches.length > 1 
+                            ? `${commitMessage} (batch ${batchNum}/${batches.length})`
+                            : commitMessage;
+                            
+                        const newCommitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits`, {
+                            method: 'POST',
+                            headers,
+                            body: JSON.stringify({
+                                message: batchMessage,
+                                tree: treeData.sha,
+                                parents: [currentCommitSha],
+                                author: { name: committerName, email: committerEmail, date: new Date().toISOString() },
+                                committer: { name: committerName, email: committerEmail, date: new Date().toISOString() }
+                            })
+                        });
+                        
+                        if (!newCommitResponse.ok) {
+                            const errorData = await newCommitResponse.json().catch(() => ({}));
+                            throw new Error(`Failed to create commit: ${errorData.message || newCommitResponse.status}`);
+                        }
+                        const newCommitData = await newCommitResponse.json();
+                        
+                        // Update branch reference
+                        const updateRefResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/refs/heads/${branch}`, {
+                            method: 'PATCH',
+                            headers,
+                            body: JSON.stringify({
+                                sha: newCommitData.sha,
+                                force: true
+                            })
+                        });
+                        
+                        if (!updateRefResponse.ok) {
+                            const errorData = await updateRefResponse.json().catch(() => ({}));
+                            throw new Error(`Failed to update branch: ${errorData.message || updateRefResponse.status}`);
+                        }
+                        
+                        // Remove committed blobs from IndexedDB
+                        for (const blob of batch) {
+                            await removeFromStore('uploadedBlobs', blob.path);
+                        }
+                        
+                        totalCommitted += batch.length;
+                        batchesCompleted++;
+                        
+                        execLog(`✓ Batch ${batchNum} committed: ${newCommitData.sha.substring(0, 7)} (${batch.length} files)`, 'success');
+                        
+                        // Update progress display
+                        const progress = Math.round((totalCommitted / uploadedBlobs.length) * 100);
+                        document.getElementById('commitProgressText').textContent = 
+                            `Committed ${totalCommitted} / ${uploadedBlobs.length} files (${batchesCompleted}/${batches.length} batches)`;
+                        document.getElementById('commitProgressBar').style.width = progress + '%';
+                        
+                        // Delay between batches to avoid rate limiting
+                        if (batchIndex < batches.length - 1 && !stopCommitRequested) {
+                            execLog(`⏳ Waiting 3 seconds before next batch...`, 'info');
+                            await new Promise(r => setTimeout(r, 3000));
+                        }
+                        
+                    } catch (batchError) {
+                        execLog(`❌ Batch ${batchNum} failed: ${batchError.message}`, 'error');
+                        
+                        // Continue to next batch or stop based on error type
+                        if (batchError.message.includes('rate limit')) {
+                            execLog(`Rate limited. Waiting 60 seconds before retry...`, 'warning');
+                            await new Promise(r => setTimeout(r, 60000));
+                            batchIndex--; // Retry this batch
+                        } else {
+                            throw batchError; // Stop on other errors
+                        }
+                    }
+                }
+                
+                // Update changelog if requested (as final commit)
+                if (updateChangelog && !stopCommitRequested && totalCommitted > 0) {
                     try {
                         execLog('Updating changelog...', 'info');
-                        const changelogContent = await generateChangelogUpdate(commitMessage, treeItems.length);
+                        const changelogContent = await generateChangelogUpdate(commitMessage, totalCommitted);
                         
-                        // Create blob for changelog
+                        // Get fresh branch state
+                        const refResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
+                        const refData = await refResponse.json();
+                        const currentCommitSha = refData.object.sha;
+                        
+                        const commitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
+                        const commitData = await commitResponse.json();
+                        const baseTreeSha = commitData.tree.sha;
+                        
+                        // Create changelog blob
                         const changelogBlobResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/blobs`, {
                             method: 'POST',
                             headers,
@@ -3728,126 +3911,93 @@
                         
                         if (changelogBlobResponse.ok) {
                             const changelogBlob = await changelogBlobResponse.json();
-                            treeItems.push({
-                                path: 'database/changelog.json',
-                                mode: '100644',
-                                type: 'blob',
-                                sha: changelogBlob.sha
+                            
+                            // Create tree with just changelog
+                            const treeResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/trees`, {
+                                method: 'POST',
+                                headers,
+                                body: JSON.stringify({
+                                    base_tree: baseTreeSha,
+                                    tree: [{
+                                        path: 'database/changelog.json',
+                                        mode: '100644',
+                                        type: 'blob',
+                                        sha: changelogBlob.sha
+                                    }]
+                                })
                             });
-                            execLog('Changelog blob created', 'success');
-                        } else {
-                            const errorData = await changelogBlobResponse.json().catch(() => ({}));
-                            execLog(`Warning: Could not create changelog blob: ${errorData.message || changelogBlobResponse.status}`, 'warning');
+                            const treeData = await treeResponse.json();
+                            
+                            // Create changelog commit
+                            const newCommitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits`, {
+                                method: 'POST',
+                                headers,
+                                body: JSON.stringify({
+                                    message: `Update changelog for: ${commitMessage}`,
+                                    tree: treeData.sha,
+                                    parents: [currentCommitSha],
+                                    author: { name: committerName, email: committerEmail }
+                                })
+                            });
+                            const newCommitData = await newCommitResponse.json();
+                            
+                            // Update branch
+                            await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/refs/heads/${branch}`, {
+                                method: 'PATCH',
+                                headers,
+                                body: JSON.stringify({ sha: newCommitData.sha, force: true })
+                            });
+                            
+                            execLog('✓ Changelog updated', 'success');
                         }
                     } catch (e) {
                         execLog(`Warning: Could not update changelog: ${e.message}`, 'warning');
                     }
                 }
                 
-                // For very large trees (>1000 items), create in batches to avoid timeouts
-                const BATCH_SIZE = 1000;
-                
-                if (treeItems.length > BATCH_SIZE) {
-                    execLog(`Large tree detected (${treeItems.length} items). Creating in batches of ${BATCH_SIZE}...`, 'info');
-                    
-                    let currentBaseTree = baseTreeSha;
-                    
-                    for (let i = 0; i < treeItems.length; i += BATCH_SIZE) {
-                        const batch = treeItems.slice(i, i + BATCH_SIZE);
-                        const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-                        const totalBatches = Math.ceil(treeItems.length / BATCH_SIZE);
-                        
-                        execLog(`Creating tree batch ${batchNum}/${totalBatches} (${batch.length} items)...`, 'info');
-                        
-                        const treeResponse = await createTreeWithRetry(
-                            repoOwner, repoName, headers, currentBaseTree, batch
-                        );
-                        
-                        if (!treeResponse.success) {
-                            throw new Error(`Failed to create tree batch ${batchNum}: ${treeResponse.error}`);
-                        }
-                        
-                        currentBaseTree = treeResponse.sha;
-                        
-                        // Small delay between batches
-                        await new Promise(r => setTimeout(r, 500));
-                    }
-                    
-                    baseTreeSha = currentBaseTree;
-                    execLog('All tree batches created successfully', 'success');
-                    
-                } else {
-                    // Create tree in single request
-                    execLog(`Creating tree with ${treeItems.length} files...`, 'info');
-                    
-                    const treeResponse = await createTreeWithRetry(
-                        repoOwner, repoName, headers, baseTreeSha, treeItems
-                    );
-                    
-                    if (!treeResponse.success) {
-                        throw new Error(`Failed to create tree: ${treeResponse.error}`);
-                    }
-                    
-                    baseTreeSha = treeResponse.sha;
-                }
-                
-                // Create commit
-                execLog('Creating commit...', 'info');
-                const newCommitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits`, {
-                    method: 'POST',
-                    headers,
-                    body: JSON.stringify({
-                        message: commitMessage,
-                        tree: baseTreeSha,
-                        parents: [currentCommitSha],
-                        author: { name: committerName, email: committerEmail }
-                    })
-                });
-                
-                if (!newCommitResponse.ok) {
-                    const errorData = await newCommitResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to create commit: ${errorData.message || newCommitResponse.status}`);
-                }
-                const newCommitData = await newCommitResponse.json();
-                
-                // Update branch
-                execLog('Updating branch...', 'info');
-                const updateRefResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/refs/heads/${branch}`, {
-                    method: 'PATCH',
-                    headers,
-                    body: JSON.stringify({
-                        sha: newCommitData.sha,
-                        force: false
-                    })
-                });
-                
-                if (!updateRefResponse.ok) {
-                    const errorData = await updateRefResponse.json().catch(() => ({}));
-                    throw new Error(`Failed to update branch: ${errorData.message || updateRefResponse.status}`);
-                }
-                
-                execLog(`✅ Commit created: ${newCommitData.sha.substring(0, 7)}`, 'success');
-                
                 // Show results
+                document.getElementById('stopCommitBtn').style.display = 'none';
                 document.getElementById('executeResults').style.display = 'block';
-                document.getElementById('resultsHeader').className = 'execute-results-header success';
-                document.querySelector('.results-icon').textContent = '✅';
-                document.getElementById('resultsMessage').textContent = 'Changes applied successfully!';
-                document.getElementById('resultFilesChanged').textContent = treeItems.length;
-                document.getElementById('resultCommitSha').textContent = `Commit: ${newCommitData.sha.substring(0, 7)}`;
-                document.getElementById('viewCommitLink').href = `https://github.com/${repoOwner}/${repoName}/commit/${newCommitData.sha}`;
+                
+                if (stopCommitRequested && totalCommitted > 0) {
+                    document.getElementById('resultsHeader').className = 'execute-results-header warning';
+                    document.querySelector('.results-icon').textContent = '⏸️';
+                    document.getElementById('resultsMessage').textContent = `Partially complete - ${totalCommitted} files committed in ${batchesCompleted} batches. Resume to continue.`;
+                } else if (totalCommitted > 0) {
+                    document.getElementById('resultsHeader').className = 'execute-results-header success';
+                    document.querySelector('.results-icon').textContent = '✅';
+                    document.getElementById('resultsMessage').textContent = `All changes committed successfully! ${totalCommitted} files in ${batchesCompleted} batch(es).`;
+                    await clearAllStores();
+                }
+                
+                document.getElementById('resultFilesChanged').textContent = totalCommitted;
+                document.getElementById('resultCommitSha').textContent = `${batchesCompleted} batch commits`;
+                document.getElementById('viewCommitLink').href = `https://github.com/${repoOwner}/${repoName}/commits/${branch}`;
+                document.getElementById('viewCommitLink').textContent = 'View Commits →';
                 document.getElementById('viewCommitLink').style.display = 'inline-flex';
                 
-                // Clear stores
-                await clearAllStores();
+                // Update remaining blobs count
+                await updateStats();
                 
             } catch (error) {
                 execLog(`❌ Error: ${error.message}`, 'error');
                 console.error('Commit error details:', error);
                 
-                // Show failure in results
+                document.getElementById('stopCommitBtn').style.display = 'none';
                 document.getElementById('executeResults').style.display = 'block';
                 document.getElementById('resultsHeader').className = 'execute-results-header error';
+                document.querySelector('.results-icon').textContent = '❌';
+                document.getElementById('resultsMessage').textContent = `Error: ${error.message}`;
+                document.getElementById('viewCommitLink').style.display = 'none';
+            }
+            
+            document.getElementById('createCommitBtn').disabled = false;
+        }
+        
+        function stopCommit() {
+            stopCommitRequested = true;
+            execLog('⏸️ Stop requested - will stop after current batch completes...', 'info');
+        }
                 document.querySelector('.results-icon').textContent = '❌';
                 document.getElementById('resultsMessage').textContent = `Commit failed: ${error.message}`;
                 document.getElementById('viewCommitLink').style.display = 'none';
