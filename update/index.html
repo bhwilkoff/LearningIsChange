@@ -3998,13 +3998,6 @@
             stopCommitRequested = true;
             execLog('⏸️ Stop requested - will stop after current batch completes...', 'info');
         }
-                document.querySelector('.results-icon').textContent = '❌';
-                document.getElementById('resultsMessage').textContent = `Commit failed: ${error.message}`;
-                document.getElementById('viewCommitLink').style.display = 'none';
-            }
-            
-            document.getElementById('createCommitBtn').disabled = false;
-        }
         
         async function createTreeWithRetry(repoOwner, repoName, headers, baseTree, treeItems, maxRetries = 3) {
             let lastError;
