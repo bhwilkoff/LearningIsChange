@@ -3,683 +3,816 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search – Learning is Change</title>
-    <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <title>Search - Learning is Change</title>
+    <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&amp;ssl=1" sizes="32x32">
+    <link rel="stylesheet" href="/wp-content/themes/fluida/resources/fonts/fontfaces.css?ver=1.8.8.1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A%7COpen+Sans+Condensed%3A300%7COpen+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7COpen+Sans%3A700%7COpen+Sans%3A300">
     <style>
-        :root {
-            --accent: #0085b2;
-            --accent-hover: #006d94;
-            --accent-light: rgba(0, 133, 178, 0.1);
-            --text-primary: #333;
-            --text-secondary: #666;
-            --text-muted: #999;
-            --bg-primary: #fff;
-            --bg-secondary: #f8f9fa;
-            --bg-tertiary: #eef1f3;
-            --border-color: #ddd;
-            --border-light: #eee;
-            --success: #28a745;
-            --warning: #f0ad4e;
-            --error: #d9534f;
-            --shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+        /* Reset and base - matching Fluida */
+        *, *::before, *::after { box-sizing: border-box; }
+        html { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.8; }
+        body { margin: 0; padding: 0; color: #555; background-color: #F3F3F3; -webkit-font-smoothing: antialiased; }
+        a { color: #0085b2; text-decoration: none; }
+        a:hover { color: #f42b00; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans Condensed', sans-serif; font-weight: 300; color: #333; margin: 0; }
         
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* Site wrapper */
+        #site-wrapper { max-width: 1920px; margin: 0 auto; overflow: hidden; }
         
-        body {
-            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background: var(--bg-secondary);
-        }
-        
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        
-        #masthead { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); }
+        /* Header - matching Fluida fixed header */
+        #masthead { position: relative; }
         
         #site-header-main {
-            max-width: 1200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 101;
+            height: 100px;
+            background-color: #fff;
+            box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        }
+        
+        #site-header-main-inside {
+            max-width: 1920px;
             margin: 0 auto;
-            padding: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 100%;
+            padding: 0 2%;
         }
         
-        #branding { display: flex; align-items: center; gap: 15px; }
-        #site-title { font-size: 1.8rem; font-weight: 700; margin: 0; }
-        #site-title a { color: var(--text-primary); text-decoration: none; }
-        #site-title a:hover { color: var(--accent); }
-        #site-description { color: var(--text-secondary); font-size: 0.95rem; font-style: italic; font-family: 'Lora', Georgia, serif; }
+        #branding { display: flex; align-items: center; height: 100%; }
         
-        .header-nav { display: flex; gap: 25px; align-items: center; }
-        .header-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        .header-nav a:hover { color: var(--accent); }
+        #site-title {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 150%;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
         
+        #site-title a { color: #0085b2; text-decoration: none; }
+        #site-title a:hover { color: #f42b00; }
+        
+        #site-title a span:first-child {
+            background-color: #0085b2;
+            color: #fff;
+            width: 1.4em;
+            margin-right: .1em;
+            text-align: center;
+            line-height: 1.4;
+            font-weight: 300;
+            display: inline-block;
+        }
+        
+        #site-title a:hover span:first-child { background-color: #f42b00; }
+        
+        #site-description {
+            display: none;
+            font-size: .9em;
+            opacity: .75;
+        }
+        
+        /* Navigation */
+        #access {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        #access ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        #access ul li a {
+            display: block;
+            padding: 0 1.6em;
+            line-height: 98px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 105%;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #0085b2;
+            border-top: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        #access ul li a:hover {
+            background-color: #0085b2;
+            color: #fff;
+        }
+        
+        /* Header image area */
         #header-image-main {
-            height: 140px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            margin-top: 100px;
+            height: 250px;
+            background-image: url('/wp-content/uploads/2016/07/cropped-14747.jpg');
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
         
         .page-title-overlay {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-            text-align: center;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2em;
+            background: linear-gradient(transparent, rgba(0,0,0,0.5));
             color: #fff;
+            text-align: center;
         }
         
-        .page-title-overlay h1 { font-size: 1.8rem; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.2); margin-bottom: 5px; }
-        .page-title-overlay p { font-family: 'Lora', Georgia, serif; font-style: italic; opacity: 0.9; font-size: 0.95rem; }
+        .page-title-overlay h1 {
+            font-size: 250%;
+            color: #fff;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
         
-        #breadcrumbs-container { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 12px 20px; }
-        #breadcrumbs { max-width: 1200px; margin: 0 auto; font-size: 0.9rem; color: var(--text-muted); }
-        #breadcrumbs a { color: var(--accent); }
-        #breadcrumbs .separator { margin: 0 8px; color: var(--border-color); }
+        /* Breadcrumbs - matching Fluida */
+        #breadcrumbs-container {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #eee;
+        }
         
-        #content {
-            max-width: 1200px;
+        #breadcrumbs-nav {
+            max-width: 1920px;
             margin: 0 auto;
-            padding: 30px 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
+            padding: 0.8em 2%;
+            font-size: 0.9em;
+            color: #9a9a9a;
         }
         
-        @media (max-width: 900px) { #content { grid-template-columns: 1fr; } }
+        #breadcrumbs-nav a { color: #0085b2; }
+        #breadcrumbs-nav a:hover { color: #f42b00; }
         
-        main { display: flex; flex-direction: column; gap: 25px; }
-        
-        .card {
-            background: var(--bg-primary);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            padding: 25px;
+        #breadcrumbs-nav .separator {
+            color: #9a9a9a;
+            margin: 0 0.5em;
         }
         
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-light);
+        /* Content area - matching Fluida two-column layout */
+        #content {
+            max-width: 1920px;
+            margin: 20px auto 0;
+            padding: 0 20px;
             display: flex;
-            align-items: center;
-            gap: 10px;
+            gap: 2%;
         }
         
-        /* Search Box */
+        .main {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        #secondary {
+            width: 320px;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 900px) {
+            #content { flex-direction: column; }
+            #secondary { width: 100%; order: -1; margin-bottom: 20px; }
+        }
+        
+        /* Article/Card styling - matching Fluida */
+        article.hentry, .search-card {
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .article-inner, .card-inner {
+            padding: 2em 10%;
+        }
+        
+        .entry-title, .card-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 200%;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 0.5em;
+            border-top: 3px solid #0085b2;
+            padding-top: 0.5em;
+        }
+        
+        .entry-title a, .card-title a { color: #0085b2; }
+        .entry-title a:hover, .card-title a:hover { color: #f42b00; }
+        
+        /* Search box styling */
         .search-box {
             display: flex;
             gap: 10px;
+            margin-bottom: 1.5em;
         }
         
         .search-input {
             flex: 1;
-            padding: 15px 20px;
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 1.1rem;
+            padding: 0.7em 1em;
+            font-size: inherit;
             font-family: inherit;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            border: 1px solid #e9e9e9;
+            background: transparent;
+            transition: border-color 0.3s;
         }
         
-        .search-input:focus {
+        .search-input:hover, .search-input:focus {
+            border-color: #cdcdcd;
             outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-light);
         }
         
         .search-btn {
-            padding: 15px 30px;
-            background: var(--accent);
+            padding: 0.7em 1.5em;
+            font-size: 0.9em;
+            font-family: inherit;
+            background-color: #0085b2;
             color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
+            border: 0;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background-color 0.3s;
         }
         
-        .search-btn:hover { background: var(--accent-hover); }
+        .search-btn:hover { background-color: #f42b00; }
         
         /* Filters */
         .filters {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            margin-bottom: 1em;
         }
         
         .filter-group label {
-            font-size: 0.85rem;
+            display: block;
+            font-size: 0.85em;
             font-weight: 600;
-            color: var(--text-muted);
+            color: #333;
+            margin-bottom: 5px;
         }
         
-        .filter-group select, .filter-group input {
-            padding: 8px 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 0.9rem;
+        .filter-group select {
+            width: 100%;
+            padding: 0.5em;
+            font-size: inherit;
             font-family: inherit;
-            min-width: 150px;
+            border: 1px solid #e9e9e9;
+            background: #fff;
         }
         
-        /* Loading indicator */
-        .loading-indicator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 40px;
-            color: var(--text-muted);
-        }
-        
-        .loading-indicator .spinner {
-            width: 24px;
-            height: 24px;
-            border: 3px solid var(--border-color);
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        .filter-group select:hover { border-color: #cdcdcd; }
         
         /* Results */
         .results-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            border-bottom: 1px solid #eee;
         }
         
         .results-count {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-        
-        .results-count strong {
-            color: var(--accent);
+            font-size: 0.9em;
+            color: #9a9a9a;
         }
         
         .result-item {
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-light);
+            padding: 1.5em 0;
+            border-bottom: 1px solid #eee;
         }
         
         .result-item:last-child { border-bottom: none; }
         
         .result-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 0.3em;
         }
         
-        .result-title a {
-            color: inherit;
-        }
-        
-        .result-title a:hover {
-            color: var(--accent);
-        }
+        .result-title a { color: #0085b2; }
+        .result-title a:hover { color: #f42b00; text-decoration: underline; }
         
         .result-meta {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
+            font-size: 0.85em;
+            color: #9a9a9a;
+            margin-bottom: 0.5em;
         }
         
-        .result-meta span {
-            margin-right: 15px;
+        .result-meta .icon-metas::before {
+            color: #f42b00;
+            margin-right: 0.3em;
         }
+        
+        .result-meta span { margin-right: 1.5em; }
         
         .result-excerpt {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            color: #555;
+            line-height: 1.7;
         }
         
         .result-excerpt mark {
-            background: var(--accent-light);
-            color: var(--accent);
-            padding: 1px 3px;
-            border-radius: 2px;
+            background: #fff3cd;
+            padding: 0 2px;
         }
         
         .result-tags {
-            margin-top: 10px;
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
+            margin-top: 0.8em;
         }
         
         .tag {
+            display: inline-block;
             padding: 3px 10px;
-            background: var(--bg-tertiary);
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
+            margin: 2px;
+            font-size: 0.8em;
+            background-color: #0085b2;
+            color: #fff;
+            border-radius: 2px;
         }
         
-        .tag.category {
-            background: var(--accent-light);
-            color: var(--accent);
-        }
+        .tag:hover { background-color: #f42b00; }
         
-        /* Empty State */
+        .tag.category { background-color: #f42b00; }
+        
+        /* Empty state */
         .empty-state {
             text-align: center;
-            padding: 50px 20px;
-            color: var(--text-muted);
+            padding: 3em;
+            color: #9a9a9a;
         }
         
         .empty-state .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            opacity: 0.5;
         }
         
         /* Pagination */
         .pagination {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 5px;
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-light);
+            margin-top: 2em;
+            padding-top: 1.5em;
+            border-top: 1px solid #eee;
         }
         
         .pagination button {
-            padding: 8px 15px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-primary);
-            border-radius: 4px;
+            padding: 0.5em 1em;
+            font-size: 0.9em;
+            font-family: inherit;
+            background: #f6f6f6;
+            color: #555;
+            border: 1px solid #e9e9e9;
             cursor: pointer;
-            font-size: 0.9rem;
             transition: all 0.2s;
         }
         
         .pagination button:hover:not(:disabled) {
-            border-color: var(--accent);
-            color: var(--accent);
+            background-color: #0085b2;
+            color: #fff;
+            border-color: #0085b2;
         }
         
         .pagination button.active {
-            background: var(--accent);
-            border-color: var(--accent);
+            background-color: #0085b2;
             color: #fff;
+            border-color: #0085b2;
         }
         
         .pagination button:disabled {
-            opacity: 0.5;
+            opacity: 0.4;
             cursor: not-allowed;
         }
         
-        /* Sidebar */
-        #sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        /* Sidebar widgets - matching Fluida */
+        .widget-container {
+            background-color: #fff;
+            padding: 1.5em;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
         
-        .widget {
-            background: var(--bg-primary);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            padding: 20px;
-        }
-        
-        .widget h3 {
-            font-size: 1rem;
+        .widget-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 100%;
             font-weight: 700;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent-light);
+            color: #333;
+            margin-bottom: 1em;
+            padding-bottom: 0.5em;
+            border-bottom: 2px solid #0085b2;
         }
         
-        .widget ul {
+        .widget-container ul {
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
         
-        .widget ul li {
-            padding: 5px 0;
-            border-bottom: 1px solid var(--border-light);
+        .widget-container li {
+            padding: 0.5em 0;
+            border-bottom: 1px solid #eee;
         }
         
-        .widget ul li:last-child { border-bottom: none; }
+        .widget-container li:last-child { border-bottom: none; }
         
-        .stat-mini {
+        .widget-container li a {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-light);
         }
         
-        .stat-mini:last-child { border-bottom: none; }
-        
-        .stat-mini .value {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--accent);
+        .widget-container .count {
+            font-size: 0.8em;
+            color: #9a9a9a;
+            background: #f6f6f6;
+            padding: 2px 8px;
+            border-radius: 10px;
         }
         
-        .stat-mini .label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        
-        /* Footer */
-        footer {
+        .stat-box {
             text-align: center;
-            padding: 30px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            padding: 1em;
+            background: #f6f6f6;
+            margin-bottom: 10px;
+            border-radius: 3px;
         }
         
-        /* URL parameter notice */
-        .search-notice {
-            background: var(--accent-light);
-            color: var(--accent);
-            padding: 10px 15px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            display: none;
+        .stat-box:last-child { margin-bottom: 0; }
+        
+        .stat-box .value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #0085b2;
+            line-height: 1.2;
         }
         
-        .search-notice.show { display: block; }
+        .stat-box .label {
+            font-size: 0.85em;
+            color: #9a9a9a;
+        }
+        
+        /* Footer - matching Fluida */
+        #footer {
+            background-color: #222226;
+            color: #AAA;
+            padding: 2em;
+            margin-top: 40px;
+            text-align: center;
+            border-top: 3px solid #36363a;
+        }
+        
+        #footer a { color: #0085b2; }
+        #footer a:hover { color: #f42b00; }
+        
+        /* Loading */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3em;
+            color: #9a9a9a;
+        }
+        
+        .loading::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid #eee;
+            border-top-color: #0085b2;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* Mobile menu toggle (hidden on desktop) */
+        #nav-toggle { display: none; }
+        
+        @media (max-width: 800px) {
+            #access { display: none; }
+            #nav-toggle {
+                display: block;
+                padding: 1em;
+                font-size: 1.5em;
+                color: #0085b2;
+                cursor: pointer;
+            }
+            #site-title { font-size: 120%; }
+            .article-inner, .card-inner { padding: 1.5em 5%; }
+            .entry-title, .card-title { font-size: 150%; }
+        }
     </style>
 </head>
-<body>
-    <header id="masthead">
-        <div id="site-header-main">
-            <div id="branding">
-                <div id="site-text">
-                    <h1 id="site-title"><a href="/">Learning is Change</a></h1>
-                    <span id="site-description">My name is Ben Wilkoff, and I Teach. And Learn. A Lot.</span>
+<body class="search-page">
+    <div id="site-wrapper">
+        <header id="masthead">
+            <div id="site-header-main">
+                <div id="site-header-main-inside">
+                    <div id="branding">
+                        <h1 id="site-title">
+                            <span>
+                                <a href="/" title="My name is Ben Wilkoff, and I Teach. And Learn. A Lot." rel="home">
+                                    <span>L</span><span>earning is Change</span>
+                                </a>
+                            </span>
+                        </h1>
+                    </div>
+                    
+                    <nav id="access">
+                        <ul>
+                            <li><a href="/"><span>Home</span></a></li>
+                            <li><a href="/services/"><span>Services</span></a></li>
+                            <li><a href="/services/contact/"><span>Contact</span></a></li>
+                        </ul>
+                    </nav>
+                    
+                    <a id="nav-toggle" href="#">&#9776;</a>
                 </div>
             </div>
-            <nav class="header-nav">
-                <a href="/">Home</a>
-                <a href="/important-posts/">Important Posts</a>
-                <a href="/category/videos/">Videos</a>
-                <a href="/services/">Services</a>
-                <a href="/services/contact/">Contact</a>
+            
+            <div id="header-image-main">
+                <div class="page-title-overlay">
+                    <h1>Search</h1>
+                </div>
+            </div>
+        </header>
+        
+        <div id="breadcrumbs-container">
+            <nav id="breadcrumbs-nav">
+                <a href="/">Home</a><span class="separator">&#8250;</span><span>Search</span>
             </nav>
         </div>
-    </header>
-
-    <div id="header-image-main">
-        <div class="page-title-overlay">
-            <h1>🔍 Search</h1>
-            <p>Find posts, pages, and content across 20 years of writing</p>
-        </div>
-    </div>
-
-    <div id="breadcrumbs-container">
-        <div id="breadcrumbs">
-            <a href="/">Home</a>
-            <span class="separator">›</span>
-            <span>Search</span>
-        </div>
-    </div>
-
-    <div id="content">
-        <main>
-            <!-- Search Box -->
-            <div class="card">
-                <div class="search-notice" id="searchNotice"></div>
-                <div class="search-box">
-                    <input type="text" class="search-input" id="searchInput" placeholder="Search posts, pages, and content..." autofocus>
-                    <button class="search-btn" onclick="performSearch()">Search</button>
+        
+        <div id="content">
+            <main class="main">
+                <!-- Search Box -->
+                <article class="hentry search-card">
+                    <div class="article-inner card-inner">
+                        <form class="search-box" onsubmit="performSearch(); return false;">
+                            <input type="text" class="search-input" id="searchInput" name="s" placeholder="Search posts, pages, and content..." autofocus>
+                            <button type="submit" class="search-btn">Search</button>
+                        </form>
+                        
+                        <div class="filters">
+                            <div class="filter-group">
+                                <label>Type</label>
+                                <select id="filterType" onchange="performSearch()">
+                                    <option value="">All Types</option>
+                                    <option value="post">Posts</option>
+                                    <option value="page">Pages</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Category</label>
+                                <select id="filterCategory" onchange="performSearch()">
+                                    <option value="">All Categories</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Year</label>
+                                <select id="filterYear" onchange="performSearch()">
+                                    <option value="">All Years</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Sort By</label>
+                                <select id="sortBy" onchange="performSearch()">
+                                    <option value="relevance">Relevance</option>
+                                    <option value="date-desc">Newest First</option>
+                                    <option value="date-asc">Oldest First</option>
+                                    <option value="title">Title A-Z</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Results -->
+                <article class="hentry search-card">
+                    <div class="article-inner card-inner">
+                        <div class="results-header">
+                            <h2 class="card-title" style="border: none; padding: 0; margin: 0; font-size: 1.5em;">Results</h2>
+                            <div class="results-count" id="resultsCount"></div>
+                        </div>
+                        <div id="resultsContainer">
+                            <div class="loading">Loading database...</div>
+                        </div>
+                        <div class="pagination" id="pagination" style="display: none;"></div>
+                    </div>
+                </article>
+            </main>
+            
+            <aside id="secondary">
+                <div class="widget-container">
+                    <h3 class="widget-title">Database Stats</h3>
+                    <div class="stat-box">
+                        <div class="value" id="statTotalPosts">&#8212;</div>
+                        <div class="label">Total Posts</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value" id="statTotalPages">&#8212;</div>
+                        <div class="label">Total Pages</div>
+                    </div>
                 </div>
                 
-                <div class="filters">
-                    <div class="filter-group">
-                        <label>Type</label>
-                        <select id="filterType" onchange="performSearch()">
-                            <option value="">All Types</option>
-                            <option value="post">Posts</option>
-                            <option value="page">Pages</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Category</label>
-                        <select id="filterCategory" onchange="performSearch()">
-                            <option value="">All Categories</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Year</label>
-                        <select id="filterYear" onchange="performSearch()">
-                            <option value="">All Years</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Sort By</label>
-                        <select id="sortBy" onchange="performSearch()">
-                            <option value="relevance">Relevance</option>
-                            <option value="date-desc">Newest First</option>
-                            <option value="date-asc">Oldest First</option>
-                            <option value="title">Title A-Z</option>
-                        </select>
-                    </div>
+                <div class="widget-container">
+                    <h3 class="widget-title">Top Categories</h3>
+                    <ul id="topCategories">
+                        <li>Loading...</li>
+                    </ul>
                 </div>
-            </div>
-            
-            <!-- Results -->
-            <div class="card">
-                <div class="results-header">
-                    <div class="card-title" style="margin-bottom: 0; border: none; padding: 0;">📋 Results</div>
-                    <div class="results-count" id="resultsCount"></div>
+                
+                <div class="widget-container">
+                    <h3 class="widget-title">Popular Tags</h3>
+                    <ul id="topTags">
+                        <li>Loading...</li>
+                    </ul>
                 </div>
-                <div id="resultsContainer">
-                    <div class="loading-indicator" id="loadingIndicator">
-                        <div class="spinner"></div>
-                        <span>Loading search database...</span>
-                    </div>
-                </div>
-                <div class="pagination" id="pagination" style="display: none;"></div>
-            </div>
-        </main>
-
-        <aside id="sidebar">
-            <div class="widget">
-                <h3>📊 Database Stats</h3>
-                <div class="stat-mini">
-                    <div class="value" id="statTotalPosts">—</div>
-                    <div class="label">Total Posts</div>
-                </div>
-                <div class="stat-mini">
-                    <div class="value" id="statTotalPages">—</div>
-                    <div class="label">Total Pages</div>
-                </div>
-            </div>
-            
-            <div class="widget">
-                <h3>📁 Top Categories</h3>
-                <ul id="topCategories">
-                    <li>Loading...</li>
-                </ul>
-            </div>
-            
-            <div class="widget">
-                <h3>🏷️ Popular Tags</h3>
-                <ul id="topTags">
-                    <li>Loading...</li>
-                </ul>
-            </div>
-            
-            <div class="widget">
-                <h3>ℹ️ About Search</h3>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                    Search across all posts and pages instantly. Results are powered by a pre-indexed database for fast retrieval.
-                </p>
-            </div>
-        </aside>
+            </aside>
+        </div>
+        
+        <footer id="footer">
+            <p>&#169; 2005&#8211;2026 <a href="/">Learning is Change</a> &#183; Ben Wilkoff</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>Ben Wilkoff has been blogging since 2004. Powered by GitHub and a love of writing.</p>
-    </footer>
 
     <script>
-        // Configuration
-        const CONFIG = {
-            SITE_URL: 'https://learningischange.com',
-            DATABASE_PATH: '/database'
-        };
-        
-        // State
-        let allPosts = [];
-        let filteredResults = [];
-        let currentPage = 1;
-        const resultsPerPage = 20;
-        let database = null;
-        let initialSearchQuery = null;
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', async function() {
-            // Parse URL parameters for search query
-            const urlParams = new URLSearchParams(window.location.search);
-            initialSearchQuery = urlParams.get('s') || urlParams.get('q') || urlParams.get('query') || '';
+        const LiCAdmin = (function() {
+            const CONFIG = {
+                SITE_URL: 'https://learningischange.com',
+                DATABASE_PATH: '/database',
+                CACHE_DURATION: 5 * 60 * 1000,
+                DATABASE_CACHE_KEY: 'lic_search_database'
+            };
             
-            // If we have a search query from URL, show it
-            if (initialSearchQuery) {
-                document.getElementById('searchInput').value = initialSearchQuery;
-                const notice = document.getElementById('searchNotice');
-                notice.textContent = `Searching for: "${initialSearchQuery}"`;
-                notice.classList.add('show');
-            }
+            let databaseCache = null;
+            let databaseCacheTime = 0;
             
-            // Enter key triggers search
-            document.getElementById('searchInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') performSearch();
-            });
-            
-            // Also trigger search on input change (with debounce for live search)
-            let searchTimeout;
-            document.getElementById('searchInput').addEventListener('input', function() {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => {
-                    if (allPosts.length > 0) performSearch();
-                }, 300);
-            });
-            
-            // Load database
-            await loadDatabase();
-        });
-        
-        async function loadDatabase() {
-            try {
+            async function fetchDatabase(forceRefresh = false) {
+                const now = Date.now();
+                if (!forceRefresh && databaseCache && (now - databaseCacheTime) < CONFIG.CACHE_DURATION) {
+                    return databaseCache;
+                }
+                
+                if (!forceRefresh) {
+                    try {
+                        const cached = localStorage.getItem(CONFIG.DATABASE_CACHE_KEY);
+                        if (cached) {
+                            const { data, timestamp } = JSON.parse(cached);
+                            if ((now - timestamp) < CONFIG.CACHE_DURATION) {
+                                databaseCache = data;
+                                databaseCacheTime = timestamp;
+                                return data;
+                            }
+                        }
+                    } catch (e) {}
+                }
+                
                 const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
                 
-                // Fetch manifest
-                const manifestRes = await fetch(`${baseUrl}/manifest.json`);
-                if (!manifestRes.ok) throw new Error('Failed to load database');
+                const manifestRes = await fetch(baseUrl + '/manifest.json');
+                if (!manifestRes.ok) throw new Error('Failed to fetch manifest');
                 const manifest = await manifestRes.json();
                 
-                // Fetch taxonomies
                 let taxonomies = { categories: { items: {} }, tags: { items: {} } };
                 try {
-                    const taxRes = await fetch(`${baseUrl}/taxonomies.json`);
+                    const taxRes = await fetch(baseUrl + '/taxonomies.json');
                     if (taxRes.ok) taxonomies = await taxRes.json();
                 } catch (e) {}
                 
-                // Fetch pages
                 let pages = [];
                 try {
-                    const pagesRes = await fetch(`${baseUrl}/pages.json`);
+                    const pagesRes = await fetch(baseUrl + '/pages.json');
                     if (pagesRes.ok) {
                         const pagesData = await pagesRes.json();
                         pages = pagesData.pages || [];
                     }
                 } catch (e) {}
                 
-                database = {
+                const database = {
                     manifest,
                     taxonomies,
                     pages,
+                    posts: {},
                     _shards: manifest.shards?.posts || {}
                 };
                 
-                // Update stats
-                document.getElementById('statTotalPosts').textContent = formatNumber(manifest.stats?.total_posts || 0);
-                document.getElementById('statTotalPages').textContent = formatNumber(manifest.stats?.total_pages || 0);
+                databaseCache = database;
+                databaseCacheTime = now;
                 
-                // Populate year filter
+                try {
+                    localStorage.setItem(CONFIG.DATABASE_CACHE_KEY, JSON.stringify({ data: database, timestamp: now }));
+                } catch (e) {}
+                
+                return database;
+            }
+            
+            async function fetchPostsByYear(year) {
+                const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
+                try {
+                    const res = await fetch(baseUrl + '/posts/' + year + '.json');
+                    if (!res.ok) return [];
+                    const data = await res.json();
+                    return data.posts || [];
+                } catch (e) {
+                    return [];
+                }
+            }
+            
+            function formatDate(dateString) {
+                if (!dateString) return '';
+                return new Date(dateString).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+            }
+            
+            function formatNumber(num) {
+                return num.toLocaleString();
+            }
+            
+            function decodeEntities(text) {
+                if (!text) return '';
+                const textarea = document.createElement('textarea');
+                textarea.innerHTML = text;
+                return textarea.value;
+            }
+            
+            return { CONFIG, fetchDatabase, fetchPostsByYear, formatDate, formatNumber, decodeEntities };
+        })();
+    </script>
+    
+    <script>
+        let allPosts = [];
+        let filteredResults = [];
+        let currentPage = 1;
+        const resultsPerPage = 20;
+        let database = null;
+        let isLoaded = false;
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('s');
+            if (query) {
+                document.getElementById('searchInput').value = query;
+            }
+            
+            await loadDatabase();
+            
+            if (query) {
+                performSearch();
+            }
+        });
+        
+        async function loadDatabase() {
+            try {
+                database = await LiCAdmin.fetchDatabase();
+                
+                document.getElementById('statTotalPosts').textContent = LiCAdmin.formatNumber(database.manifest.stats.total_posts);
+                document.getElementById('statTotalPages').textContent = LiCAdmin.formatNumber(database.manifest.stats.total_pages);
+                
                 const yearSelect = document.getElementById('filterYear');
                 const years = Object.keys(database._shards).sort().reverse();
-                years.forEach(year => {
+                years.forEach(function(year) {
                     const opt = document.createElement('option');
                     opt.value = year;
                     opt.textContent = year;
                     yearSelect.appendChild(opt);
                 });
                 
-                // Populate category filter
                 const catSelect = document.getElementById('filterCategory');
-                const categories = Object.values(taxonomies.categories?.items || {});
-                categories.sort((a, b) => a.name.localeCompare(b.name)).forEach(cat => {
+                const categories = Object.values(database.taxonomies.categories?.items || {});
+                categories.sort(function(a, b) { return a.name.localeCompare(b.name); });
+                categories.forEach(function(cat) {
                     const opt = document.createElement('option');
                     opt.value = cat.slug;
-                    opt.textContent = cat.name;
+                    opt.textContent = LiCAdmin.decodeEntities(cat.name);
                     catSelect.appendChild(opt);
                 });
                 
-                // Display top categories
                 displayTopCategories(categories);
                 
-                // Display top tags
-                const tags = Object.values(taxonomies.tags?.items || {});
+                const tags = Object.values(database.taxonomies.tags?.items || {});
                 displayTopTags(tags);
                 
-                // Load all posts for searching
                 await loadAllPosts();
                 
-                // Hide loading indicator
-                document.getElementById('loadingIndicator').style.display = 'none';
+                isLoaded = true;
                 
-                // If we have an initial search query from URL, perform search automatically
-                if (initialSearchQuery) {
-                    performSearch();
-                } else {
-                    // Show empty state
-                    document.getElementById('resultsContainer').innerHTML = `
-                        <div class="empty-state">
-                            <div class="icon">🔍</div>
-                            <p>Enter a search term to find posts and pages</p>
-                        </div>
-                    `;
-                }
+                document.getElementById('resultsContainer').innerHTML = '<div class="empty-state"><div class="icon">&#128269;</div><p>Enter a search term to find posts and pages</p></div>';
                 
             } catch (e) {
                 console.error('Error loading database:', e);
-                document.getElementById('resultsContainer').innerHTML = `
-                    <div class="empty-state">
-                        <div class="icon">⚠️</div>
-                        <p>Failed to load search database: ${e.message}</p>
-                    </div>
-                `;
+                document.getElementById('resultsContainer').innerHTML = '<div class="empty-state"><div class="icon">&#9888;</div><p>Failed to load database: ' + e.message + '</p></div>';
             }
         }
         
@@ -687,59 +820,44 @@
             const years = Object.keys(database._shards).sort().reverse();
             allPosts = [];
             
-            const baseUrl = CONFIG.SITE_URL + CONFIG.DATABASE_PATH;
-            
             for (const year of years) {
-                try {
-                    const res = await fetch(`${baseUrl}/posts/${year}.json`);
-                    if (res.ok) {
-                        const data = await res.json();
-                        const posts = data.posts || [];
-                        allPosts.push(...posts);
-                    }
-                } catch (e) {
-                    console.warn(`Could not load posts for ${year}:`, e);
-                }
+                const posts = await LiCAdmin.fetchPostsByYear(year);
+                allPosts.push(...posts);
             }
             
-            // Add pages
             if (database.pages && database.pages.length > 0) {
-                allPosts.push(...database.pages.map(p => ({ ...p, type: 'page' })));
+                allPosts.push(...database.pages.map(function(p) { 
+                    return Object.assign({}, p, { type: 'page' }); 
+                }));
             }
             
-            console.log(`Loaded ${allPosts.length} items for search`);
+            console.log('Loaded ' + allPosts.length + ' items for search');
         }
         
         function displayTopCategories(categories) {
-            const container = document.getElementById('topCategories');
-            const sorted = [...categories].sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, 10);
+            const sorted = categories.slice().sort(function(a, b) { return (b.count || 0) - (a.count || 0); });
+            const top = sorted.slice(0, 8);
             
-            if (sorted.length === 0) {
-                container.innerHTML = '<li>No categories found</li>';
-                return;
-            }
-            
-            container.innerHTML = sorted.map(cat => `
-                <li>
-                    <a href="#" onclick="searchCategory('${cat.slug}'); return false;">${cat.name}</a>
-                </li>
-            `).join('');
+            const ul = document.getElementById('topCategories');
+            ul.innerHTML = top.map(function(cat) {
+                return '<li><a href="javascript:searchCategory(\'' + cat.slug + '\')">' + 
+                    '<span>' + LiCAdmin.decodeEntities(cat.name) + '</span>' +
+                    '<span class="count">' + (cat.count || 0) + '</span>' +
+                    '</a></li>';
+            }).join('');
         }
         
         function displayTopTags(tags) {
-            const container = document.getElementById('topTags');
-            const sorted = [...tags].sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, 10);
+            const sorted = tags.slice().sort(function(a, b) { return (b.count || 0) - (a.count || 0); });
+            const top = sorted.slice(0, 10);
             
-            if (sorted.length === 0) {
-                container.innerHTML = '<li>No tags found</li>';
-                return;
-            }
-            
-            container.innerHTML = sorted.map(tag => `
-                <li>
-                    <a href="#" onclick="searchTag('${tag.slug}'); return false;">${tag.name}</a>
-                </li>
-            `).join('');
+            const ul = document.getElementById('topTags');
+            ul.innerHTML = top.map(function(tag) {
+                return '<li><a href="javascript:searchTag(\'' + tag.slug + '\')">' + 
+                    '<span>' + LiCAdmin.decodeEntities(tag.name) + '</span>' +
+                    '<span class="count">' + (tag.count || 0) + '</span>' +
+                    '</a></li>';
+            }).join('');
         }
         
         function searchCategory(slug) {
@@ -749,73 +867,56 @@
         }
         
         function searchTag(slug) {
-            document.getElementById('searchInput').value = `tag:${slug}`;
+            document.getElementById('searchInput').value = 'tag:' + slug;
             performSearch();
         }
         
         function performSearch() {
+            if (!isLoaded) return;
+            
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             const typeFilter = document.getElementById('filterType').value;
             const categoryFilter = document.getElementById('filterCategory').value;
             const yearFilter = document.getElementById('filterYear').value;
             const sortBy = document.getElementById('sortBy').value;
             
-            // Hide the URL notice after user interaction
-            document.getElementById('searchNotice').classList.remove('show');
-            
-            // Update URL without reloading (for bookmarking)
-            if (query) {
-                const newUrl = `${window.location.pathname}?s=${encodeURIComponent(query)}`;
-                window.history.replaceState({}, '', newUrl);
-            } else {
-                window.history.replaceState({}, '', window.location.pathname);
-            }
-            
             currentPage = 1;
             
-            // Filter posts
-            filteredResults = allPosts.filter(post => {
-                // Type filter
+            filteredResults = allPosts.filter(function(post) {
                 if (typeFilter && post.type !== typeFilter) return false;
                 
-                // Category filter
                 if (categoryFilter) {
-                    const postCats = (post.categories || []).map(c => c.slug);
-                    if (!postCats.includes(categoryFilter)) return false;
+                    const postCats = (post.categories || []).map(function(c) { return c.slug; });
+                    if (postCats.indexOf(categoryFilter) === -1) return false;
                 }
                 
-                // Year filter
                 if (yearFilter && post.date_published) {
                     const postYear = post.date_published.substring(0, 4);
                     if (postYear !== yearFilter) return false;
                 }
                 
-                // Text search
                 if (query) {
-                    // Check for tag: prefix
-                    if (query.startsWith('tag:')) {
+                    if (query.indexOf('tag:') === 0) {
                         const tagSlug = query.substring(4);
-                        const postTags = (post.tags || []).map(t => t.slug);
-                        return postTags.includes(tagSlug);
+                        const postTags = (post.tags || []).map(function(t) { return t.slug; });
+                        return postTags.indexOf(tagSlug) !== -1;
                     }
                     
                     const searchFields = [
                         post.title || '',
                         post.content_filtered || '',
                         post.excerpt || '',
-                        (post.categories || []).map(c => c.name).join(' '),
-                        (post.tags || []).map(t => t.name).join(' ')
+                        (post.categories || []).map(function(c) { return c.name; }).join(' '),
+                        (post.tags || []).map(function(t) { return t.name; }).join(' ')
                     ].join(' ').toLowerCase();
                     
-                    // Simple relevance: check if all words are present
-                    const words = query.split(/\s+/).filter(w => w.length > 1);
-                    const allWordsMatch = words.every(word => searchFields.includes(word));
+                    const words = query.split(/\s+/).filter(function(w) { return w.length > 1; });
+                    const allWordsMatch = words.every(function(word) { return searchFields.indexOf(word) !== -1; });
                     if (!allWordsMatch) return false;
                     
-                    // Add relevance score for sorting
-                    post._relevance = words.reduce((score, word) => {
-                        if ((post.title || '').toLowerCase().includes(word)) score += 10;
-                        if ((post.excerpt || '').toLowerCase().includes(word)) score += 5;
+                    post._relevance = words.reduce(function(score, word) {
+                        if ((post.title || '').toLowerCase().indexOf(word) !== -1) score += 10;
+                        if ((post.excerpt || '').toLowerCase().indexOf(word) !== -1) score += 5;
                         return score;
                     }, 0);
                 }
@@ -823,23 +924,22 @@
                 return true;
             });
             
-            // Sort results
             switch (sortBy) {
                 case 'relevance':
                     if (query) {
-                        filteredResults.sort((a, b) => (b._relevance || 0) - (a._relevance || 0));
+                        filteredResults.sort(function(a, b) { return (b._relevance || 0) - (a._relevance || 0); });
                     } else {
-                        filteredResults.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''));
+                        filteredResults.sort(function(a, b) { return (b.date_published || '').localeCompare(a.date_published || ''); });
                     }
                     break;
                 case 'date-desc':
-                    filteredResults.sort((a, b) => (b.date_published || '').localeCompare(a.date_published || ''));
+                    filteredResults.sort(function(a, b) { return (b.date_published || '').localeCompare(a.date_published || ''); });
                     break;
                 case 'date-asc':
-                    filteredResults.sort((a, b) => (a.date_published || '').localeCompare(b.date_published || ''));
+                    filteredResults.sort(function(a, b) { return (a.date_published || '').localeCompare(b.date_published || ''); });
                     break;
                 case 'title':
-                    filteredResults.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+                    filteredResults.sort(function(a, b) { return (a.title || '').localeCompare(b.title || ''); });
                     break;
             }
             
@@ -852,63 +952,53 @@
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             
             if (filteredResults.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="icon">😕</div>
-                        <p>No results found. Try different search terms or filters.</p>
-                    </div>
-                `;
+                container.innerHTML = '<div class="empty-state"><div class="icon">&#128533;</div><p>No results found. Try different search terms or filters.</p></div>';
                 countEl.textContent = '';
                 document.getElementById('pagination').style.display = 'none';
                 return;
             }
             
-            // Pagination
             const totalPages = Math.ceil(filteredResults.length / resultsPerPage);
             const startIndex = (currentPage - 1) * resultsPerPage;
             const endIndex = Math.min(startIndex + resultsPerPage, filteredResults.length);
             const pageResults = filteredResults.slice(startIndex, endIndex);
             
-            countEl.innerHTML = `Showing <strong>${startIndex + 1}-${endIndex}</strong> of <strong>${filteredResults.length}</strong> results`;
+            countEl.innerHTML = 'Showing <strong>' + (startIndex + 1) + '&#8211;' + endIndex + '</strong> of <strong>' + filteredResults.length + '</strong> results';
             
-            container.innerHTML = pageResults.map(post => {
-                let excerpt = post.excerpt || (post.content_filtered || '').substring(0, 200);
+            container.innerHTML = pageResults.map(function(post) {
+                let excerpt = LiCAdmin.decodeEntities(post.excerpt || (post.content_filtered || '').substring(0, 200));
                 if (excerpt.length >= 200) excerpt += '...';
                 
-                // Highlight search terms in excerpt
-                if (query && !query.startsWith('tag:')) {
-                    const words = query.split(/\s+/).filter(w => w.length > 1);
-                    words.forEach(word => {
-                        const regex = new RegExp(`(${escapeRegex(word)})`, 'gi');
+                if (query && query.indexOf('tag:') !== 0) {
+                    const words = query.split(/\s+/).filter(function(w) { return w.length > 1; });
+                    words.forEach(function(word) {
+                        const regex = new RegExp('(' + escapeRegex(word) + ')', 'gi');
                         excerpt = excerpt.replace(regex, '<mark>$1</mark>');
                     });
                 }
                 
-                const categories = (post.categories || []).map(c => 
-                    `<span class="tag category">${c.name}</span>`
-                ).join('');
+                const categories = (post.categories || []).map(function(c) {
+                    return '<a href="javascript:searchCategory(\'' + c.slug + '\')" class="tag category">' + LiCAdmin.decodeEntities(c.name) + '</a>';
+                }).join('');
                 
-                const tags = (post.tags || []).slice(0, 5).map(t => 
-                    `<span class="tag">${t.name}</span>`
-                ).join('');
+                const tags = (post.tags || []).slice(0, 5).map(function(t) {
+                    return '<a href="javascript:searchTag(\'' + t.slug + '\')" class="tag">' + LiCAdmin.decodeEntities(t.name) + '</a>';
+                }).join('');
                 
-                return `
-                    <div class="result-item">
-                        <div class="result-title">
-                            <a href="${post.url}">${post.title || 'Untitled'}</a>
-                        </div>
-                        <div class="result-meta">
-                            <span>📅 ${formatDate(post.date_published)}</span>
-                            <span>📄 ${post.type || 'post'}</span>
-                            ${post.word_count ? `<span>📝 ${post.word_count} words</span>` : ''}
-                        </div>
-                        <div class="result-excerpt">${excerpt}</div>
-                        ${categories || tags ? `<div class="result-tags">${categories}${tags}</div>` : ''}
-                    </div>
-                `;
+                const title = LiCAdmin.decodeEntities(post.title || 'Untitled');
+                
+                return '<div class="result-item">' +
+                    '<div class="result-title"><a href="' + post.url + '">' + title + '</a></div>' +
+                    '<div class="result-meta">' +
+                        '<span>' + LiCAdmin.formatDate(post.date_published) + '</span>' +
+                        '<span>' + (post.type || 'post') + '</span>' +
+                        (post.word_count ? '<span>' + post.word_count + ' words</span>' : '') +
+                    '</div>' +
+                    '<div class="result-excerpt">' + excerpt + '</div>' +
+                    (categories || tags ? '<div class="result-tags">' + categories + tags + '</div>' : '') +
+                '</div>';
             }).join('');
             
-            // Render pagination
             renderPagination(totalPages);
         }
         
@@ -924,10 +1014,8 @@
             
             let html = '';
             
-            // Previous button
-            html += `<button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>`;
+            html += '<button onclick="goToPage(' + (currentPage - 1) + ')" ' + (currentPage === 1 ? 'disabled' : '') + '>&#8592; Prev</button>';
             
-            // Page numbers
             const maxButtons = 5;
             let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
             let endPage = Math.min(totalPages, startPage + maxButtons - 1);
@@ -937,21 +1025,20 @@
             }
             
             if (startPage > 1) {
-                html += `<button onclick="goToPage(1)">1</button>`;
-                if (startPage > 2) html += `<button disabled>...</button>`;
+                html += '<button onclick="goToPage(1)">1</button>';
+                if (startPage > 2) html += '<button disabled>...</button>';
             }
             
             for (let i = startPage; i <= endPage; i++) {
-                html += `<button onclick="goToPage(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
+                html += '<button onclick="goToPage(' + i + ')" class="' + (i === currentPage ? 'active' : '') + '">' + i + '</button>';
             }
             
             if (endPage < totalPages) {
-                if (endPage < totalPages - 1) html += `<button disabled>...</button>`;
-                html += `<button onclick="goToPage(${totalPages})">${totalPages}</button>`;
+                if (endPage < totalPages - 1) html += '<button disabled>...</button>';
+                html += '<button onclick="goToPage(' + totalPages + ')">' + totalPages + '</button>';
             }
             
-            // Next button
-            html += `<button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>Next →</button>`;
+            html += '<button onclick="goToPage(' + (currentPage + 1) + ')" ' + (currentPage === totalPages ? 'disabled' : '') + '>Next &#8594;</button>';
             
             container.innerHTML = html;
         }
@@ -960,15 +1047,6 @@
             currentPage = page;
             displayResults();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        function formatDate(dateString) {
-            if (!dateString) return '';
-            return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        }
-        
-        function formatNumber(num) {
-            return num.toLocaleString();
         }
         
         function escapeRegex(string) {
