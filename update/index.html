@@ -3761,6 +3761,27 @@
                 let totalCommitted = 0;
                 let batchesCompleted = 0;
                 
+                // Get INITIAL branch state ONCE - then track our own state to avoid GitHub API caching issues
+                execLog('Getting initial branch state...', 'info');
+                const initialRefResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
+                if (!initialRefResponse.ok) {
+                    const errorData = await initialRefResponse.json().catch(() => ({}));
+                    throw new Error(`Failed to get branch reference: ${errorData.message || initialRefResponse.status}`);
+                }
+                const initialRefData = await initialRefResponse.json();
+                
+                // Track our current position - this avoids GitHub API caching/eventual consistency issues
+                let currentCommitSha = initialRefData.object.sha;
+                let currentTreeSha = null;
+                
+                // Get initial tree SHA
+                const initialCommitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
+                if (!initialCommitResponse.ok) throw new Error('Failed to get initial commit');
+                const initialCommitData = await initialCommitResponse.json();
+                currentTreeSha = initialCommitData.tree.sha;
+                
+                execLog(`Starting from commit ${currentCommitSha.substring(0, 7)}, tree ${currentTreeSha.substring(0, 7)}`, 'info');
+                
                 for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
                     if (stopCommitRequested) {
                         execLog(`⏸️ Commit stopped by user after ${batchesCompleted} batches (${totalCommitted} files)`, 'warning');
@@ -3773,20 +3794,10 @@
                     execLog(`\n📦 Committing batch ${batchNum}/${batches.length} (${batch.length} files)...`, 'info');
                     
                     try {
-                        // Get FRESH branch state for each batch
-                        const refResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
-                        if (!refResponse.ok) {
-                            const errorData = await refResponse.json().catch(() => ({}));
-                            throw new Error(`Failed to get branch reference: ${errorData.message || refResponse.status}`);
-                        }
-                        const refData = await refResponse.json();
-                        const currentCommitSha = refData.object.sha;
-                        
-                        // Get current tree
-                        const commitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
-                        if (!commitResponse.ok) throw new Error('Failed to get current commit');
-                        const commitData = await commitResponse.json();
-                        const baseTreeSha = commitData.tree.sha;
+                        // Use our tracked state instead of re-querying GitHub
+                        // This prevents race conditions from GitHub's eventual consistency
+                        const parentCommitSha = currentCommitSha;
+                        const baseTreeSha = currentTreeSha;
                         
                         // Build tree items for this batch
                         const treeItems = batch.map(blob => ({
@@ -3796,7 +3807,7 @@
                             sha: blob.sha
                         }));
                         
-                        // Create tree
+                        // Create tree based on our tracked tree (not a potentially stale one)
                         const treeResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/trees`, {
                             method: 'POST',
                             headers,
@@ -3827,14 +3838,15 @@
                             // Intermediate batch - add skip ci
                             batchMessage = `${commitMessage} (batch ${batchNum}/${batches.length}) [skip ci]`;
                         }
-                            
+                        
+                        // Create commit with our tracked parent (not a potentially stale one)
                         const newCommitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits`, {
                             method: 'POST',
                             headers,
                             body: JSON.stringify({
                                 message: batchMessage,
                                 tree: treeData.sha,
-                                parents: [currentCommitSha],
+                                parents: [parentCommitSha],
                                 author: { name: committerName, email: committerEmail, date: new Date().toISOString() },
                                 committer: { name: committerName, email: committerEmail, date: new Date().toISOString() }
                             })
@@ -3861,6 +3873,12 @@
                             throw new Error(`Failed to update branch: ${errorData.message || updateRefResponse.status}`);
                         }
                         
+                        // CRITICAL: Update our tracked state to chain commits correctly
+                        // This is the key fix for the race condition - we track our own state
+                        // instead of re-querying GitHub's potentially stale API
+                        currentCommitSha = newCommitData.sha;
+                        currentTreeSha = treeData.sha;
+                        
                         // Remove committed blobs from IndexedDB
                         for (const blob of batch) {
                             await removeFromStore('uploadedBlobs', blob.path);
@@ -3869,7 +3887,7 @@
                         totalCommitted += batch.length;
                         batchesCompleted++;
                         
-                        execLog(`✓ Batch ${batchNum} committed: ${newCommitData.sha.substring(0, 7)} (${batch.length} files)`, 'success');
+                        execLog(`✓ Batch ${batchNum} committed: ${newCommitData.sha.substring(0, 7)} → tree ${treeData.sha.substring(0, 7)} (${batch.length} files)`, 'success');
                         
                         // Update progress display
                         const progress = Math.round((totalCommitted / uploadedBlobs.length) * 100);
@@ -3877,10 +3895,9 @@
                             `Committed ${totalCommitted} / ${uploadedBlobs.length} files (${batchesCompleted}/${batches.length} batches)`;
                         document.getElementById('commitProgressBar').style.width = progress + '%';
                         
-                        // Delay between batches to avoid rate limiting
+                        // Short delay between batches for rate limiting (reduced from 3s since we fixed the race condition)
                         if (batchIndex < batches.length - 1 && !stopCommitRequested) {
-                            execLog(`⏳ Waiting 3 seconds before next batch...`, 'info');
-                            await new Promise(r => setTimeout(r, 3000));
+                            await new Promise(r => setTimeout(r, 500));
                         }
                         
                     } catch (batchError) {
@@ -3898,15 +3915,15 @@
                 }
                 
                 // Update changelog if requested (as final commit)
+                // Use our tracked state instead of re-querying
                 if (updateChangelog && !stopCommitRequested && totalCommitted > 0) {
                     try {
                         execLog('Updating changelog...', 'info');
                         const changelogContent = await generateChangelogUpdate(commitMessage, totalCommitted);
                         
-                        // Get fresh branch state
-                        const refResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/ref/heads/${branch}`, { headers });
-                        const refData = await refResponse.json();
-                        const currentCommitSha = refData.object.sha;
+                        // Use our tracked commit SHA (no need to re-query)
+                        const changelogParentSha = currentCommitSha;
+                        const changelogBaseTreeSha = currentTreeSha;
                         
                         const commitResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/git/commits/${currentCommitSha}`, { headers });
                         const commitData = await commitResponse.json();
