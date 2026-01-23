@@ -114,7 +114,7 @@
         "name": "Stories",
         "slug": "stories",
         "url": "/category/stories/",
-        "count": 2
+        "count": 3
       },
       "thinking": {
         "name": "Thinking",
@@ -4079,7 +4079,7 @@
         "name": "typewriter",
         "slug": "typewriter",
         "url": "/tag/typewriter/",
-        "count": 4
+        "count": 5
       },
       "health": {
         "name": "health",
@@ -8404,6 +8404,16 @@
       "time-loops": {
         "name": "Time Loops",
         "slug": "time-loops",
+        "count": 1
+      },
+      "bars": {
+        "name": "Bars",
+        "slug": "bars",
+        "count": 1
+      },
+      "new-people": {
+        "name": "New People",
+        "slug": "new-people",
         "count": 1
       }
     }
