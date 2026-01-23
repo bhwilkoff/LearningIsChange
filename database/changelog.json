@@ -19,6 +19,18 @@
   ],
   "entries": [
     {
+      "timestamp": "2026-01-23T18:47:10.452Z",
+      "action": "post_created",
+      "title": "It is a burden to believe that you can change the world.",
+      "url": "/2026/01/23/it-is-a-burden-to-believe-that-you-can-change-the-world/",
+      "category": "Ben Wilkoff",
+      "tags": [
+        "Typewriter",
+        "Time Loops",
+        "Movies"
+      ]
+    },
+    {
       "timestamp": "2026-01-22T20:26:13.071Z",
       "action": "mass_update",
       "description": "Mass update via tool",

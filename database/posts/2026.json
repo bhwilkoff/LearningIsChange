@@ -3,6 +3,21 @@
   "count": 5,
   "posts": [
     {
+      "title": "It is a burden to believe that you can change the world.",
+      "url": "/2026/01/23/it-is-a-burden-to-believe-that-you-can-change-the-world/",
+      "date_published": "2026-01-23",
+      "excerpt": "",
+      "categories": [
+        "ben-wilkoff"
+      ],
+      "tags": [
+        "typewriter",
+        "time-loops",
+        "movies"
+      ],
+      "content_preview": ""
+    },
+    {
       "title": "We aren't so far.",
       "url": "/2026/01/18/we-arent-so-far/",
       "date_published": "2026-01-18",
@@ -372,5 +387,5 @@
       ]
     }
   ],
-  "post_count": 6
+  "post_count": 7
 }
