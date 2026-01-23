@@ -948,34 +948,33 @@
             // Fix common UTF-8 mojibake patterns
             function fixMojibake(text) {
                 if (!text) return '';
-                return text
-                    .replace(/â€¦/g, '...')
-                    .replace(/â¦/g, '...')
-                    .replace(/â€™/g, "'")
-                    .replace(/â€˜/g, "'")
-                    .replace(/â€œ/g, '"')
-                    .replace(/â€/g, '"')
-                    .replace(/Ã¢â‚¬â„¢/g, "'")
-                    .replace(/â€"/g, '-')
-                    .replace(/â€"/g, '-')
-                    .replace(/Ã©/g, 'e')
-                    .replace(/Ã¨/g, 'e')
-                    .replace(/Ã /g, 'a')
-                    .replace(/Ã¢/g, 'a')
-                    .replace(/Ã´/g, 'o')
-                    .replace(/Ã®/g, 'i')
-                    .replace(/Ã¯/g, 'i')
-                    .replace(/Ã§/g, 'c')
-                    .replace(/Ã±/g, 'n')
-                    .replace(/Â /g, ' ')
-                    .replace(/Â·/g, '-')
-                    .replace(/Ã¢â‚¬/g, '')
-                    .replace(/â€‹/g, '')
-                    .replace(/Â»/g, '>>')
-                    .replace(/Â«/g, '<<')
-                    .replace(/Â®/g, '(R)')
-                    .replace(/â„¢/g, '(TM)')
-                    .replace(/Â©/g, '(c)');
+                
+                // The character â (U+00E2) appears when UTF-8 curly apostrophe is partially decoded
+                // Fix contractions: â followed by common contraction endings
+                text = text.replace(/(\w)\u00e2(m|ve|ll|d|re|s|t)\b/gi, "$1'$2");
+                text = text.replace(/(\w)â(m|ve|ll|d|re|s|t)\b/gi, "$1'$2");
+                
+                // Fix ellipsis: â¦ should be ...
+                text = text.replace(/\u00e2\u00a6/g, '...');
+                text = text.replace(/â¦/g, '...');
+                
+                // Full mojibake sequences
+                text = text.replace(/â€™/g, "'");
+                text = text.replace(/â€˜/g, "'");
+                text = text.replace(/â€œ/g, '"');
+                text = text.replace(/â€/g, '"');
+                text = text.replace(/â€¦/g, '...');
+                text = text.replace(/â€"/g, '-');
+                text = text.replace(/â€"/g, '-');
+                text = text.replace(/Â /g, ' ');
+                text = text.replace(/â€‹/g, '');
+                text = text.replace(/Â»/g, '>>');
+                text = text.replace(/Â«/g, '<<');
+                text = text.replace(/Â®/g, '(R)');
+                text = text.replace(/â„¢/g, '(TM)');
+                text = text.replace(/Â©/g, '(c)');
+                
+                return text;
             }
             
             return {
