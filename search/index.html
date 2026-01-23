@@ -151,9 +151,10 @@
         #breadcrumbs-nav a { color: #0085b2; }
         #breadcrumbs-nav a:hover { color: #f42b00; }
         
-        #breadcrumbs-nav .separator {
+        #breadcrumbs-nav .icon-angle-right::before {
+            content: ' \\203A ';
             color: #9a9a9a;
-            margin: 0 0.5em;
+            padding: 0 0.5em;
         }
         
         /* Content area - matching Fluida two-column layout */
@@ -547,7 +548,7 @@
         
         <div id="breadcrumbs-container">
             <nav id="breadcrumbs-nav">
-                <a href="/">Home</a><span class="separator">&#8250;</span><span>Search</span>
+                <a href="/">Home</a><span class="icon-angle-right"></span><span>Search</span>
             </nav>
         </div>
         
