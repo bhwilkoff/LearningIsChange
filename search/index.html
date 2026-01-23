@@ -107,31 +107,29 @@
             color: #fff;
         }
         
-        /* Header image area */
+        /* Header image area - matching Fluida responsive header */
         #header-image-main {
             margin-top: 100px;
-            height: 250px;
-            background-image: url('/wp-content/uploads/2016/07/cropped-14747.jpg');
-            background-size: cover;
-            background-position: center;
             position: relative;
+            overflow: hidden;
         }
         
-        .page-title-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2em;
-            background: linear-gradient(transparent, rgba(0,0,0,0.5));
-            color: #fff;
-            text-align: center;
+        #header-image-main-inside {
+            max-width: 1920px;
+            max-height: 250px;
+            margin: 0 auto;
+            overflow: hidden;
         }
         
-        .page-title-overlay h1 {
-            font-size: 250%;
-            color: #fff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        #header-image-main .header-image {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #header-image-main div.header-image {
+            display: none;
         }
         
         /* Breadcrumbs - matching Fluida */
@@ -151,10 +149,9 @@
         #breadcrumbs-nav a { color: #0085b2; }
         #breadcrumbs-nav a:hover { color: #f42b00; }
         
-        #breadcrumbs-nav .icon-angle-right::before {
-            content: ' \\203A ';
+        #breadcrumbs-nav .separator {
             color: #9a9a9a;
-            padding: 0 0.5em;
+            margin: 0 0.5em;
         }
         
         /* Content area - matching Fluida two-column layout */
@@ -540,15 +537,15 @@
             </div>
             
             <div id="header-image-main">
-                <div class="page-title-overlay">
-                    <h1>Search</h1>
+                <div id="header-image-main-inside">
+                    <img class="header-image" alt="Learning is Change" src="/wp-content/uploads/2016/07/cropped-14747.jpg">
                 </div>
             </div>
         </header>
         
         <div id="breadcrumbs-container">
             <nav id="breadcrumbs-nav">
-                <a href="/">Home</a><span class="icon-angle-right"></span><span>Search</span>
+                <a href="/">Home</a><span class="separator">&#8250;</span><span>Search</span>
             </nav>
         </div>
         
@@ -745,7 +742,48 @@
                 if (!text) return '';
                 const textarea = document.createElement('textarea');
                 textarea.innerHTML = text;
-                return textarea.value;
+                return fixMojibake(textarea.value);
+            }
+            
+            // Fix common UTF-8 mojibake patterns (UTF-8 bytes interpreted as Latin-1)
+            function fixMojibake(text) {
+                if (!text) return '';
+                return text
+                    // Ellipsis
+                    .replace(/â€¦/g, '...')
+                    .replace(/â¦/g, '...')
+                    // Curly quotes and apostrophes
+                    .replace(/â€™/g, "'")
+                    .replace(/â€˜/g, "'")
+                    .replace(/â€œ/g, '"')
+                    .replace(/â€/g, '"')
+                    .replace(/Ã¢â‚¬â„¢/g, "'")
+                    .replace(/â€"/g, '-')
+                    // Em and en dashes
+                    .replace(/â€"/g, '-')
+                    .replace(/â€"/g, '-')
+                    .replace(/â€"Â /g, '- ')
+                    // Accented characters
+                    .replace(/Ã©/g, 'e')
+                    .replace(/Ã¨/g, 'e')
+                    .replace(/Ã /g, 'a')
+                    .replace(/Ã¢/g, 'a')
+                    .replace(/Ã´/g, 'o')
+                    .replace(/Ã®/g, 'i')
+                    .replace(/Ã¯/g, 'i')
+                    .replace(/Ã§/g, 'c')
+                    .replace(/Ã±/g, 'n')
+                    // Common fragments that indicate mojibake
+                    .replace(/Â /g, ' ')
+                    .replace(/Â·/g, '-')
+                    .replace(/Ã¢â‚¬/g, '')
+                    // Clean up any remaining weird patterns
+                    .replace(/â€‹/g, '') // zero-width space
+                    .replace(/Â»/g, '>>')
+                    .replace(/Â«/g, '<<')
+                    .replace(/Â®/g, '(R)')
+                    .replace(/â„¢/g, '(TM)')
+                    .replace(/Â©/g, '(c)');
             }
             
             return { CONFIG, fetchDatabase, fetchPostsByYear, formatDate, formatNumber, decodeEntities };
