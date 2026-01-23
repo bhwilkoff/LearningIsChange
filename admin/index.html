@@ -241,7 +241,7 @@
         }
         
         .tool-features li::before {
-            content: '&#10003;';
+            content: '\2713';
             color: #28a745;
             font-weight: bold;
             margin-right: 8px;
@@ -645,7 +645,7 @@
                             <li>Auto pause/resume for rate limits</li>
                             <li>JSON output for all tools</li>
                         </ul>
-                        <a href="/database-generator/" class="tool-link" style="background: #3498db;">Open Database Generator &#8594;</a>
+                        <a href="/database/" class="tool-link" style="background: #3498db;">Open Database Generator &#8594;</a>
                     </div>
                 </div>
                 
@@ -662,22 +662,6 @@
                             <li>Preview search results</li>
                         </ul>
                         <a href="/search/" class="tool-link" style="background: #1abc9c;">Open Search Console &#8594;</a>
-                    </div>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-header" style="background: linear-gradient(135deg, #34495e, #2c3e50);">
-                        <span class="tool-icon">&#128451;</span>
-                        <span class="tool-title">Database Admin</span>
-                    </div>
-                    <div class="tool-body">
-                        <p class="tool-description">Browse and inspect the raw database files. View manifest, taxonomies, authors, and post data directly.</p>
-                        <ul class="tool-features">
-                            <li>View raw JSON files</li>
-                            <li>Browse posts by year</li>
-                            <li>Inspect taxonomies</li>
-                        </ul>
-                        <a href="https://learningischange.com/database/" class="tool-link" style="background: #34495e;">Browse Database &#8594;</a>
                     </div>
                 </div>
                 
@@ -1053,6 +1037,11 @@
                 var sortedYears = Object.keys(db._shards).sort().reverse();
                 if (sortedYears.length > 0) {
                     var recentPosts = await LiCAdmin.fetchPostsByYear(sortedYears[0]);
+                    // Sort by date descending (most recent first)
+                    recentPosts.sort(function(a, b) {
+                        return (b.date_published || '').localeCompare(a.date_published || '');
+                    });
+                    console.log('Loaded posts:', recentPosts.slice(0, 3)); // Debug
                     displayRecentPosts(recentPosts.slice(0, 10));
                 }
                 
@@ -1078,22 +1067,40 @@
             }
             
             container.innerHTML = posts.map(function(post) {
-                var title = LiCAdmin.decodeEntities(post.title) || 'Untitled';
-                var date = LiCAdmin.formatDate(post.date_published);
+                // Get title - try multiple possible field names
+                var title = post.title || post.post_title || post.name || 'Untitled';
+                title = LiCAdmin.decodeEntities(title);
                 
-                var categories = (post.categories || []).map(function(c) {
-                    return '<a href="/category/' + c.slug + '/" class="activity-tag category">' + LiCAdmin.decodeEntities(c.name) + '</a>';
-                }).join('');
+                var date = LiCAdmin.formatDate(post.date_published || post.date || post.post_date);
+                var url = post.url || post.link || post.guid || '#';
                 
-                var tags = (post.tags || []).slice(0, 3).map(function(t) {
-                    return '<a href="/tag/' + t.slug + '/" class="activity-tag">' + LiCAdmin.decodeEntities(t.name) + '</a>';
-                }).join('');
+                // Get categories
+                var categories = '';
+                if (post.categories && Array.isArray(post.categories)) {
+                    categories = post.categories.map(function(c) {
+                        var catName = typeof c === 'string' ? c : (c.name || c.term || '');
+                        var catSlug = typeof c === 'string' ? c.toLowerCase().replace(/\s+/g, '-') : (c.slug || '');
+                        if (!catName) return '';
+                        return '<a href="/category/' + catSlug + '/" class="activity-tag category">' + LiCAdmin.decodeEntities(catName) + '</a>';
+                    }).filter(function(x) { return x; }).join('');
+                }
+                
+                // Get tags (limit to 3)
+                var tags = '';
+                if (post.tags && Array.isArray(post.tags)) {
+                    tags = post.tags.slice(0, 3).map(function(t) {
+                        var tagName = typeof t === 'string' ? t : (t.name || t.term || '');
+                        var tagSlug = typeof t === 'string' ? t.toLowerCase().replace(/\s+/g, '-') : (t.slug || '');
+                        if (!tagName) return '';
+                        return '<a href="/tag/' + tagSlug + '/" class="activity-tag">' + LiCAdmin.decodeEntities(tagName) + '</a>';
+                    }).filter(function(x) { return x; }).join('');
+                }
                 
                 return '<li class="activity-item">' +
                     '<div class="activity-icon">&#128221;</div>' +
                     '<div class="activity-content">' +
                         '<div class="activity-title">' +
-                            '<a href="' + post.url + '" target="_blank">' + title + '</a>' +
+                            '<a href="' + url + '" target="_blank">' + title + '</a>' +
                         '</div>' +
                         '<div class="activity-meta">' + date + '</div>' +
                         (categories || tags ? '<div class="activity-tags">' + categories + tags + '</div>' : '') +
