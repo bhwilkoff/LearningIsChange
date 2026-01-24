@@ -3,6 +3,21 @@
   "count": 5,
   "posts": [
     {
+      "title": "An Honest Encounter With Death",
+      "url": "/2026/01/24/an-honest-encounter-with-death/",
+      "date_published": "2026-01-24",
+      "excerpt": "An honest encounter with death is not something I am prepared for, most of the time.\n\nWhen the actress I only knew from The Crown, a former queen in my eyes, said that she was sorry that the rabbit di...",
+      "categories": [
+        "family"
+      ],
+      "tags": [
+        "death",
+        "movies",
+        "h-is-for-hawk"
+      ],
+      "content_preview": "An honest encounter with death is not something I am prepared for, most of the time.\n\nWhen the actress I only knew from The Crown, a former queen in my eyes, said that she was sorry that the rabbit di..."
+    },
+    {
       "title": "The Comparison Game",
       "url": "/2026/01/23/the-comparison-game/",
       "date_published": "2026-01-23",
@@ -402,5 +417,5 @@
       ]
     }
   ],
-  "post_count": 8
+  "post_count": 9
 }

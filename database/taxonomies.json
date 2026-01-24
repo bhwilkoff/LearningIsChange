@@ -222,7 +222,7 @@
         "name": "Family",
         "slug": "family",
         "url": "/category/family/",
-        "count": 1
+        "count": 2
       },
       "movies": {
         "name": "Movies",
@@ -1529,7 +1529,7 @@
         "name": "movies",
         "slug": "movies",
         "url": "/tag/movies/",
-        "count": 7
+        "count": 8
       },
       "social-media": {
         "name": "social media",
@@ -6227,7 +6227,7 @@
         "name": "death",
         "slug": "death",
         "url": "/tag/death/",
-        "count": 2
+        "count": 3
       },
       "end-of-life": {
         "name": "end of life",
@@ -8414,6 +8414,11 @@
       "new-people": {
         "name": "New People",
         "slug": "new-people",
+        "count": 1
+      },
+      "h-is-for-hawk": {
+        "name": "H is for Hawk",
+        "slug": "h-is-for-hawk",
         "count": 1
       }
     }
