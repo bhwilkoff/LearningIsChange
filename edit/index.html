@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Learning is Change</title>
+    <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #0085b2;
+            --accent-hover: #006a8e;
+            --accent-light: rgba(0, 133, 178, 0.1);
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-muted: #999;
+            --bg-primary: #fff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #eef1f3;
+            --border-color: #ddd;
+            --border-light: #eee;
+            --success: #28a745;
+            --warning: #f0ad4e;
+            --error: #d9534f;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px; line-height: 1.7; color: var(--text-primary); background: var(--bg-secondary);
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        #masthead { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); }
+        #site-header-main {
+            max-width: 1400px; margin: 0 auto; padding: 15px 20px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        #site-title { font-size: 1.5rem; font-weight: 700; }
+        #site-title a { color: var(--text-primary); }
+        .header-nav { display: flex; gap: 20px; }
+        .header-nav a { color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; }
+        #breadcrumbs-container { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 10px 20px; }
+        #breadcrumbs { max-width: 1400px; margin: 0 auto; font-size: 0.85rem; color: var(--text-muted); }
+        #breadcrumbs a { color: var(--accent); }
+        #breadcrumbs .separator { margin: 0 8px; }
+        #content { max-width: 1400px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 350px; gap: 25px; }
+        @media (max-width: 1000px) { #content { grid-template-columns: 1fr; } }
+        .card { background: var(--bg-primary); border-radius: 8px; box-shadow: var(--shadow); padding: 20px; margin-bottom: 20px; }
+        .card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-light); display: flex; align-items: center; gap: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; color: var(--text-secondary); }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 4px;
+            font-size: 0.95rem; font-family: inherit; transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        .btn {
+            padding: 10px 18px; border: none; border-radius: 4px; cursor: pointer;
+            font-size: 0.9rem; font-weight: 600; font-family: inherit;
+            display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s;
+        }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover:not(:disabled) { background: var(--accent-hover); }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover:not(:disabled) { background: #218838; }
+        .btn-secondary { background: var(--bg-tertiary); color: var(--text-primary); }
+        .btn-secondary:hover:not(:disabled) { background: var(--border-color); }
+        .btn-danger { background: var(--error); color: white; }
+        .btn-danger:hover:not(:disabled) { background: #c82333; }
+        .btn-warning { background: var(--warning); color: #333; }
+        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        
+        /* Editor Styles */
+        #editor-container { border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden; }
+        .editor-toolbar {
+            display: flex; flex-wrap: wrap; gap: 3px; padding: 8px;
+            background: var(--bg-tertiary); border-bottom: 1px solid var(--border-color);
+        }
+        .editor-toolbar button, .editor-toolbar select {
+            padding: 6px 10px; border: 1px solid var(--border-color); background: var(--bg-primary);
+            border-radius: 3px; cursor: pointer; font-size: 0.85rem;
+        }
+        .editor-toolbar button:hover { background: var(--border-color); }
+        #editor-content {
+            min-height: 400px; padding: 20px; outline: none;
+            font-size: 1rem; line-height: 1.8; overflow-y: auto; max-height: 600px;
+        }
+        #editor-content:empty::before {
+            content: attr(placeholder); color: var(--text-muted); pointer-events: none;
+        }
+        #editor-content p { margin-bottom: 1em; }
+        #editor-content h1, #editor-content h2, #editor-content h3, #editor-content h4 { margin: 1em 0 0.5em; }
+        #editor-content ul, #editor-content ol { margin-left: 1.5em; margin-bottom: 1em; }
+        #editor-content blockquote { border-left: 4px solid var(--accent); padding-left: 1em; margin: 1em 0; color: var(--text-secondary); }
+        #editor-content a { color: var(--accent); }
+        #editor-content img { max-width: 100%; height: auto; }
+        #editor-content pre, #editor-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        #editor-content pre { padding: 15px; overflow-x: auto; }
+        
+        /* Source View */
+        #source-editor {
+            width: 100%; min-height: 400px; max-height: 600px; padding: 15px;
+            font-family: 'Consolas', 'Monaco', monospace; font-size: 0.85rem;
+            border: none; resize: vertical; background: #1e1e1e; color: #d4d4d4;
+        }
+        .editor-tabs { display: flex; border-bottom: 1px solid var(--border-color); }
+        .editor-tab {
+            padding: 10px 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem;
+            border-bottom: 2px solid transparent; color: var(--text-secondary);
+        }
+        .editor-tab:hover { color: var(--accent); }
+        .editor-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        
+        /* URL Loader */
+        .url-loader { display: flex; gap: 10px; align-items: flex-end; }
+        .url-loader .form-group { flex: 1; margin-bottom: 0; }
+        .url-loader .btn { height: 42px; }
+        .page-info { background: var(--bg-tertiary); padding: 12px 15px; border-radius: 4px; margin-top: 15px; font-size: 0.9rem; }
+        .page-info strong { color: var(--text-primary); }
+        .page-info .file-path { font-family: monospace; color: var(--accent); word-break: break-all; }
+        
+        /* Status & Progress */
+        .status-badge {
+            display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px;
+            border-radius: 12px; font-size: 0.8rem; font-weight: 600;
+        }
+        .status-badge.loading { background: #fff3cd; color: #856404; }
+        .status-badge.success { background: #d4edda; color: #155724; }
+        .status-badge.error { background: #f8d7da; color: #721c24; }
+        .progress-bar { background: var(--bg-tertiary); border-radius: 4px; height: 8px; overflow: hidden; margin-top: 10px; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--success)); transition: width 0.3s; }
+        .log-container {
+            background: #1e1e1e; border-radius: 4px; padding: 15px; margin-top: 15px;
+            max-height: 200px; overflow-y: auto; font-family: monospace; font-size: 0.8rem;
+        }
+        .log-entry { margin: 3px 0; }
+        .log-entry.info { color: #6cb6ff; }
+        .log-entry.success { color: #7ee787; }
+        .log-entry.warning { color: #f0c674; }
+        .log-entry.error { color: #f97583; }
+        
+        /* Sidebar Widgets */
+        .widget { background: var(--bg-primary); border-radius: 8px; box-shadow: var(--shadow); padding: 15px; margin-bottom: 15px; }
+        .widget h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--accent-light); }
+        .widget-item { padding: 8px 0; border-bottom: 1px solid var(--border-light); font-size: 0.85rem; }
+        .widget-item:last-child { border-bottom: none; }
+        .widget-item label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+        .widget-item input[type="checkbox"] { width: 16px; height: 16px; }
+        
+        /* Settings */
+        .settings-toggle { display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 10px 0; }
+        .settings-toggle h4 { font-size: 0.9rem; margin: 0; }
+        .settings-body { display: none; padding-top: 10px; }
+        .settings-body.open { display: block; }
+        .token-wrapper { display: flex; gap: 5px; }
+        .token-wrapper input { flex: 1; }
+        .token-toggle { padding: 10px; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 4px; cursor: pointer; }
+        
+        /* Diff View */
+        .diff-container { background: #1e1e1e; border-radius: 4px; padding: 15px; max-height: 300px; overflow: auto; }
+        .diff-line { font-family: monospace; font-size: 0.8rem; white-space: pre-wrap; word-break: break-all; }
+        .diff-add { color: #7ee787; background: rgba(46, 160, 67, 0.15); }
+        .diff-remove { color: #f97583; background: rgba(248, 81, 73, 0.15); }
+        .diff-context { color: #8b949e; }
+        
+        footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 0.85rem; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header id="masthead">
+        <div id="site-header-main">
+            <h1 id="site-title"><a href="/">Learning is Change</a></h1>
+            <nav class="header-nav">
+                <a href="/">Home</a>
+                <a href="/admin/">Admin</a>
+                <a href="/new/">New Post</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="breadcrumbs-container">
+        <div id="breadcrumbs">
+            <a href="/">Home</a><span class="separator">&rsaquo;</span>
+            <a href="/admin/">Admin</a><span class="separator">&rsaquo;</span>
+            <span>Page Editor</span>
+        </div>
+    </div>
+    
+    <div id="content">
+        <main>
+            <!-- URL Loader -->
+            <div class="card">
+                <div class="card-title">Load Page</div>
+                <div class="url-loader">
+                    <div class="form-group">
+                        <label for="pageUrl">Page URL or Path</label>
+                        <input type="text" id="pageUrl" placeholder="https://learningischange.com/2009/06/26/post-slug/ or /2009/06/26/post-slug/">
+                    </div>
+                    <button class="btn btn-primary" onclick="loadPage()">Load Page</button>
+                </div>
+                <div id="pageInfo" class="page-info" style="display:none;">
+                    <div><strong>File:</strong> <span class="file-path" id="filePath"></span></div>
+                    <div style="margin-top:5px;"><strong>Last Modified:</strong> <span id="lastModified">-</span></div>
+                </div>
+            </div>
+            
+            <!-- Page Metadata -->
+            <div class="card" id="metadataCard" style="display:none;">
+                <div class="card-title">Page Metadata</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="pageTitle">Title</label>
+                        <input type="text" id="pageTitle" placeholder="Page title">
+                    </div>
+                    <div class="form-group">
+                        <label for="pageDate">Date</label>
+                        <input type="date" id="pageDate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pageExcerpt">Excerpt / Description</label>
+                    <textarea id="pageExcerpt" rows="2" placeholder="Brief description for RSS and search"></textarea>
+                </div>
+            </div>
+            
+            <!-- Content Editor -->
+            <div class="card" id="editorCard" style="display:none;">
+                <div class="card-title">Content Editor</div>
+                <div class="editor-tabs">
+                    <div class="editor-tab active" data-tab="visual" onclick="switchEditorTab('visual')">Visual</div>
+                    <div class="editor-tab" data-tab="source" onclick="switchEditorTab('source')">HTML Source</div>
+                    <div class="editor-tab" data-tab="full" onclick="switchEditorTab('full')">Full Page Source</div>
+                </div>
+                <div id="editor-container">
+                    <div id="visualEditor">
+                        <div class="editor-toolbar">
+                            <select onchange="execFormat('formatBlock', this.value); this.selectedIndex=0;">
+                                <option value="">Format</option>
+                                <option value="h2">Heading 2</option>
+                                <option value="h3">Heading 3</option>
+                                <option value="h4">Heading 4</option>
+                                <option value="p">Paragraph</option>
+                                <option value="pre">Code Block</option>
+                            </select>
+                            <button type="button" onclick="execFormat('bold')" title="Bold"><b>B</b></button>
+                            <button type="button" onclick="execFormat('italic')" title="Italic"><i>I</i></button>
+                            <button type="button" onclick="execFormat('underline')" title="Underline"><u>U</u></button>
+                            <button type="button" onclick="execFormat('strikeThrough')" title="Strike"><s>S</s></button>
+                            <button type="button" onclick="execFormat('insertUnorderedList')" title="Bullet List">&bull; List</button>
+                            <button type="button" onclick="execFormat('insertOrderedList')" title="Numbered List">1. List</button>
+                            <button type="button" onclick="execFormat('formatBlock', 'blockquote')" title="Quote">&ldquo; Quote</button>
+                            <button type="button" onclick="insertLink()" title="Insert Link">Link</button>
+                            <button type="button" onclick="insertImage()" title="Insert Image">Image</button>
+                            <button type="button" onclick="execFormat('removeFormat')" title="Clear Formatting">Clear</button>
+                        </div>
+                        <div id="editor-content" contenteditable="true" placeholder="Page content..."></div>
+                    </div>
+                    <div id="sourceEditor" style="display:none;">
+                        <textarea id="source-editor" placeholder="HTML source code..."></textarea>
+                    </div>
+                    <div id="fullSourceEditor" style="display:none;">
+                        <textarea id="full-source-editor" placeholder="Full page HTML..."></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="card" id="actionsCard" style="display:none;">
+                <div class="card-title">Save Changes</div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="previewChanges()">Preview Changes</button>
+                    <button class="btn btn-success" id="saveBtn" onclick="saveChanges()">Save to GitHub</button>
+                    <button class="btn btn-secondary" onclick="revertChanges()">Revert Changes</button>
+                </div>
+                <div id="saveProgress" style="display:none;">
+                    <div class="progress-bar"><div class="progress-fill" id="progressBar"></div></div>
+                    <div id="statusText" style="margin-top:8px; font-size:0.9rem; color:var(--text-secondary);"></div>
+                </div>
+                <div class="log-container" id="logContainer" style="display:none;"></div>
+            </div>
+            
+            <!-- Preview Modal -->
+            <div class="card" id="previewCard" style="display:none;">
+                <div class="card-title">Changes Preview</div>
+                <div class="diff-container" id="diffContainer"></div>
+                <div class="btn-group">
+                    <button class="btn btn-success" onclick="saveChanges()">Confirm &amp; Save</button>
+                    <button class="btn btn-secondary" onclick="closePreview()">Back to Editor</button>
+                </div>
+            </div>
+        </main>
+        
+        <aside id="sidebar">
+            <!-- GitHub Settings -->
+            <div class="widget">
+                <h3>GitHub Connection</h3>
+                <div class="settings-toggle" onclick="toggleSettings('github')">
+                    <h4>Settings</h4>
+                    <span id="githubToggle">&#9660;</span>
+                </div>
+                <div class="settings-body" id="githubBody">
+                    <div class="form-group">
+                        <label>Access Token</label>
+                        <div class="token-wrapper">
+                            <input type="password" id="githubToken" placeholder="ghp_...">
+                            <button class="token-toggle" onclick="toggleTokenVisibility()">&#128065;</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Repository</label>
+                        <input type="text" id="repoName" value="bhwilkoff/LearningIsChange">
+                    </div>
+                    <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;margin-top:10px;">
+                        <input type="checkbox" id="rememberToken" checked> Remember token
+                    </label>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary" onclick="testConnection()" style="width:100%;">Test Connection</button>
+                    </div>
+                    <div id="connectionStatus" style="margin-top:10px;font-size:0.85rem;"></div>
+                </div>
+            </div>
+            
+            <!-- Update Options -->
+            <div class="widget" id="updateOptions" style="display:none;">
+                <h3>Update Options</h3>
+                <div class="widget-item"><label><input type="checkbox" id="updateDatabase" checked> Update database</label></div>
+                <div class="widget-item"><label><input type="checkbox" id="updateChangelog" checked> Update changelog</label></div>
+                <div class="widget-item"><label><input type="checkbox" id="updateRss" checked> Update RSS feed</label></div>
+                <div class="widget-item"><label><input type="checkbox" id="updateArchives"> Update archives</label></div>
+            </div>
+            
+            <!-- Recent Edits -->
+            <div class="widget">
+                <h3>Recent Edits</h3>
+                <div id="recentEdits">
+                    <div class="widget-item" style="color:var(--text-muted);font-style:italic;">No recent edits</div>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="widget">
+                <h3>Quick Links</h3>
+                <div class="widget-item"><a href="/admin/">Admin Dashboard</a></div>
+                <div class="widget-item"><a href="/new/">Create New Post</a></div>
+                <div class="widget-item"><a href="/links/">Link Checker</a></div>
+                <div class="widget-item"><a href="/podcast-rss/">Podcast RSS</a></div>
+            </div>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>Page Editor for <a href="https://learningischange.com">Learning is Change</a> &bull; Built with Claude AI</p>
+    </footer>
+
+    <script>
+        // ============================================
+        // LiCAdmin Module (shared config)
+        // ============================================
+        const LiCAdmin = (function() {
+            const CONFIG = {
+                STORAGE_KEY: 'lic_admin_settings',
+                SITE_URL: 'https://learningischange.com',
+                DATABASE_PATH: '/database',
+            };
+            
+            function getSettings() {
+                try {
+                    const stored = localStorage.getItem(CONFIG.STORAGE_KEY);
+                    if (stored) return JSON.parse(stored);
+                } catch (e) {}
+                return {
+                    githubToken: '', repoOwner: 'bhwilkoff', repoName: 'LearningIsChange',
+                    branch: 'main', committerName: 'Ben Wilkoff', committerEmail: 'Ben@learningischange.com', rememberToken: false
+                };
+            }
+            
+            function saveSettings(settings) {
+                try {
+                    const toSave = { ...settings };
+                    if (!settings.rememberToken) toSave.githubToken = '';
+                    localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(toSave));
+                } catch (e) {}
+            }
+            
+            async function githubAPI(endpoint, options = {}) {
+                const settings = getSettings();
+                const token = settings.githubToken;
+                if (!token) throw new Error('GitHub token not configured');
+                
+                const response = await fetch(`https://api.github.com${endpoint}`, {
+                    ...options,
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json',
+                        ...options.headers
+                    }
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json().catch(() => ({}));
+                    throw new Error(error.message || `GitHub API error: ${response.status}`);
+                }
+                return response.json();
+            }
+            
+            async function getFile(path) {
+                const settings = getSettings();
+                return githubAPI(`/repos/${settings.repoOwner}/${settings.repoName}/contents/${path}?ref=${settings.branch}`);
+            }
+            
+            async function updateFile(path, content, message, sha) {
+                const settings = getSettings();
+                return githubAPI(`/repos/${settings.repoOwner}/${settings.repoName}/contents/${path}`, {
+                    method: 'PUT',
+                    body: JSON.stringify({
+                        message,
+                        content: btoa(unescape(encodeURIComponent(content))),
+                        sha,
+                        branch: settings.branch
+                    })
+                });
+            }
+            
+            async function commitMultipleFiles(files, message) {
+                const settings = getSettings();
+                const repoPath = `/repos/${settings.repoOwner}/${settings.repoName}`;
+                
+                // Get current commit
+                const refData = await githubAPI(`${repoPath}/git/refs/heads/${settings.branch}`);
+                const commitData = await githubAPI(`${repoPath}/git/commits/${refData.object.sha}`);
+                
+                // Create blobs for each file
+                const treeItems = [];
+                for (const file of files) {
+                    const content = btoa(unescape(encodeURIComponent(file.content)));
+                    const blobData = await githubAPI(`${repoPath}/git/blobs`, {
+                        method: 'POST',
+                        body: JSON.stringify({ content, encoding: 'base64' })
+                    });
+                    treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobData.sha });
+                }
+                
+                // Create new tree
+                const newTreeData = await githubAPI(`${repoPath}/git/trees`, {
+                    method: 'POST',
+                    body: JSON.stringify({ base_tree: commitData.tree.sha, tree: treeItems })
+                });
+                
+                // Create commit
+                const newCommitData = await githubAPI(`${repoPath}/git/commits`, {
+                    method: 'POST',
+                    body: JSON.stringify({ message, tree: newTreeData.sha, parents: [refData.object.sha] })
+                });
+                
+                // Update ref
+                await githubAPI(`${repoPath}/git/refs/heads/${settings.branch}`, {
+                    method: 'PATCH',
+                    body: JSON.stringify({ sha: newCommitData.sha })
+                });
+                
+                return { success: true, commitSha: newCommitData.sha, filesCommitted: files.length };
+            }
+            
+            async function testConnection() {
+                const settings = getSettings();
+                try {
+                    const data = await githubAPI(`/repos/${settings.repoOwner}/${settings.repoName}`);
+                    return { success: true, repo: data.full_name };
+                } catch (e) {
+                    return { success: false, error: e.message };
+                }
+            }
+            
+            return { CONFIG, getSettings, saveSettings, githubAPI, getFile, updateFile, commitMultipleFiles, testConnection };
+        })();
+        
+        // ============================================
+        // State
+        // ============================================
+        let currentPage = null;  // { path, sha, originalHtml, title, date, content }
+        let originalContent = '';
+        const RECENT_EDITS_KEY = 'lic_recent_edits';
+        
+        // ============================================
+        // Initialization
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSettings();
+            loadRecentEdits();
+            
+            // Check URL params for page to load
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageToLoad = urlParams.get('page') || urlParams.get('url');
+            if (pageToLoad) {
+                document.getElementById('pageUrl').value = pageToLoad;
+                loadPage();
+            }
+            
+            // Sync visual and source editors
+            document.getElementById('editor-content').addEventListener('input', syncToSource);
+            document.getElementById('source-editor').addEventListener('input', syncToVisual);
+        });
+        
+        function loadSettings() {
+            const settings = LiCAdmin.getSettings();
+            document.getElementById('githubToken').value = settings.githubToken || '';
+            document.getElementById('repoName').value = `${settings.repoOwner}/${settings.repoName}`;
+            document.getElementById('rememberToken').checked = settings.rememberToken;
+        }
+        
+        function saveSettingsFromUI() {
+            const repoValue = document.getElementById('repoName').value;
+            const [owner, name] = repoValue.split('/');
+            LiCAdmin.saveSettings({
+                githubToken: document.getElementById('githubToken').value,
+                repoOwner: owner || 'bhwilkoff',
+                repoName: name || 'LearningIsChange',
+                branch: 'main',
+                committerName: 'Ben Wilkoff',
+                committerEmail: 'Ben@learningischange.com',
+                rememberToken: document.getElementById('rememberToken').checked
+            });
+        }
+        
+        // ============================================
+        // URL/Path Handling
+        // ============================================
+        function urlToPath(url) {
+            // Remove domain and protocol
+            let path = url.replace(/^https?:\/\/[^\/]+/, '').replace(/^\/+/, '');
+            
+            // If empty, it's the homepage
+            if (!path || path === '') return 'index.html';
+            
+            // Remove trailing slash
+            path = path.replace(/\/+$/, '');
+            
+            // Add index.html if it's a directory path
+            if (!path.endsWith('.html') && !path.endsWith('.xml') && !path.endsWith('.json')) {
+                path = path + '/index.html';
+            }
+            
+            return path;
+        }
+        
+        function pathToUrl(path) {
+            // Convert file path back to URL
+            return '/' + path.replace(/\/index\.html$/, '/').replace(/^\/+/, '');
+        }
+        
+        // ============================================
+        // Page Loading
+        // ============================================
+        async function loadPage() {
+            const urlInput = document.getElementById('pageUrl').value.trim();
+            if (!urlInput) {
+                alert('Please enter a page URL or path');
+                return;
+            }
+            
+            saveSettingsFromUI();
+            
+            const path = urlToPath(urlInput);
+            log(`Loading: ${path}`, 'info');
+            
+            try {
+                const fileData = await LiCAdmin.getFile(path);
+                const html = decodeURIComponent(escape(atob(fileData.content)));
+                
+                currentPage = {
+                    path: path,
+                    sha: fileData.sha,
+                    originalHtml: html,
+                    url: pathToUrl(path)
+                };
+                
+                originalContent = html;
+                
+                // Parse the HTML
+                parseAndDisplayPage(html);
+                
+                // Show UI
+                document.getElementById('pageInfo').style.display = 'block';
+                document.getElementById('filePath').textContent = path;
+                document.getElementById('lastModified').textContent = new Date().toLocaleString();
+                document.getElementById('metadataCard').style.display = 'block';
+                document.getElementById('editorCard').style.display = 'block';
+                document.getElementById('actionsCard').style.display = 'block';
+                document.getElementById('updateOptions').style.display = 'block';
+                
+                log(`Loaded successfully: ${path}`, 'success');
+                
+            } catch (e) {
+                log(`Error loading page: ${e.message}`, 'error');
+                alert(`Failed to load page: ${e.message}`);
+            }
+        }
+        
+        function parseAndDisplayPage(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            // Extract title
+            const titleEl = doc.querySelector('h1.entry-title, .entry-title, h1.post-title, article h1, .post h1, h1');
+            const title = titleEl ? titleEl.textContent.trim() : doc.title || '';
+            document.getElementById('pageTitle').value = title;
+            currentPage.title = title;
+            
+            // Extract date from URL or meta
+            const urlMatch = currentPage.path.match(/(\d{4})\/(\d{2})\/(\d{2})/);
+            if (urlMatch) {
+                const [, year, month, day] = urlMatch;
+                document.getElementById('pageDate').value = `${year}-${month}-${day}`;
+                currentPage.date = `${year}-${month}-${day}`;
+            }
+            
+            // Extract main content
+            const contentEl = doc.querySelector('.entry-content, .post-content, article .content, .content, main article');
+            let content = '';
+            if (contentEl) {
+                content = contentEl.innerHTML;
+            } else {
+                // Fallback: get body content excluding header/footer
+                const body = doc.body;
+                if (body) {
+                    const clone = body.cloneNode(true);
+                    clone.querySelectorAll('header, footer, nav, script, style, .sidebar, #sidebar').forEach(el => el.remove());
+                    content = clone.innerHTML;
+                }
+            }
+            
+            currentPage.contentSelector = contentEl ? getSelector(contentEl) : null;
+            
+            // Display in editors
+            document.getElementById('editor-content').innerHTML = content;
+            document.getElementById('source-editor').value = content;
+            document.getElementById('full-source-editor').value = html;
+            
+            // Extract excerpt
+            const metaDesc = doc.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                document.getElementById('pageExcerpt').value = metaDesc.getAttribute('content') || '';
+            }
+        }
+        
+        function getSelector(el) {
+            // Generate a CSS selector for an element
+            if (el.id) return '#' + el.id;
+            if (el.className) {
+                const classes = el.className.split(' ').filter(c => c && !c.includes(':')).slice(0, 2);
+                if (classes.length) return '.' + classes.join('.');
+            }
+            return el.tagName.toLowerCase();
+        }
+        
+        // ============================================
+        // Editor Functions
+        // ============================================
+        function switchEditorTab(tab) {
+            document.querySelectorAll('.editor-tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.editor-tab[data-tab="${tab}"]`).classList.add('active');
+            
+            document.getElementById('visualEditor').style.display = tab === 'visual' ? 'block' : 'none';
+            document.getElementById('sourceEditor').style.display = tab === 'source' ? 'block' : 'none';
+            document.getElementById('fullSourceEditor').style.display = tab === 'full' ? 'block' : 'none';
+            
+            // Sync content when switching
+            if (tab === 'source') {
+                document.getElementById('source-editor').value = document.getElementById('editor-content').innerHTML;
+            } else if (tab === 'visual') {
+                document.getElementById('editor-content').innerHTML = document.getElementById('source-editor').value;
+            }
+        }
+        
+        function syncToSource() {
+            // Don't sync if source tab is active
+            if (document.querySelector('.editor-tab[data-tab="source"]').classList.contains('active')) return;
+            document.getElementById('source-editor').value = document.getElementById('editor-content').innerHTML;
+        }
+        
+        function syncToVisual() {
+            // Don't sync if visual tab is active
+            if (document.querySelector('.editor-tab[data-tab="visual"]').classList.contains('active')) return;
+            document.getElementById('editor-content').innerHTML = document.getElementById('source-editor').value;
+        }
+        
+        function execFormat(command, value = null) {
+            document.execCommand(command, false, value);
+            document.getElementById('editor-content').focus();
+        }
+        
+        function insertLink() {
+            const url = prompt('Enter URL:', 'https://');
+            if (url) {
+                document.execCommand('createLink', false, url);
+            }
+        }
+        
+        function insertImage() {
+            const url = prompt('Enter image URL:', 'https://');
+            if (url) {
+                document.execCommand('insertImage', false, url);
+            }
+        }
+        
+        // ============================================
+        // Settings UI
+        // ============================================
+        function toggleSettings(name) {
+            const body = document.getElementById(name + 'Body');
+            const toggle = document.getElementById(name + 'Toggle');
+            body.classList.toggle('open');
+        }
+        
+        function toggleTokenVisibility() {
+            const input = document.getElementById('githubToken');
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+        
+        async function testConnection() {
+            saveSettingsFromUI();
+            const statusEl = document.getElementById('connectionStatus');
+            statusEl.innerHTML = '<span class="status-badge loading">Testing...</span>';
+            
+            const result = await LiCAdmin.testConnection();
+            if (result.success) {
+                statusEl.innerHTML = `<span class="status-badge success">Connected: ${result.repo}</span>`;
+            } else {
+                statusEl.innerHTML = `<span class="status-badge error">Error: ${result.error}</span>`;
+            }
+        }
+        
+        // ============================================
+        // Save & Preview
+        // ============================================
+        function buildUpdatedHtml() {
+            if (!currentPage) return null;
+            
+            const fullSourceEl = document.getElementById('full-source-editor');
+            let html = fullSourceEl.value;
+            
+            // If using visual/source editor, update the content section
+            const newContent = document.getElementById('source-editor').value;
+            const newTitle = document.getElementById('pageTitle').value;
+            
+            // Parse and update
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            // Update title
+            const titleEl = doc.querySelector('h1.entry-title, .entry-title, h1.post-title, article h1, .post h1');
+            if (titleEl) titleEl.textContent = newTitle;
+            
+            // Update <title> tag
+            const headTitle = doc.querySelector('title');
+            if (headTitle && newTitle) {
+                headTitle.textContent = newTitle + ' - Learning is Change';
+            }
+            
+            // Update content
+            if (currentPage.contentSelector) {
+                const contentEl = doc.querySelector(currentPage.contentSelector);
+                if (contentEl) {
+                    contentEl.innerHTML = newContent;
+                }
+            } else {
+                // Try common selectors
+                const contentEl = doc.querySelector('.entry-content, .post-content, article .content');
+                if (contentEl) {
+                    contentEl.innerHTML = newContent;
+                }
+            }
+            
+            // Serialize back to HTML
+            return '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
+        }
+        
+        function previewChanges() {
+            if (!currentPage) return;
+            
+            const newHtml = buildUpdatedHtml();
+            const oldHtml = currentPage.originalHtml;
+            
+            // Generate diff
+            const diffHtml = generateDiff(oldHtml, newHtml);
+            document.getElementById('diffContainer').innerHTML = diffHtml;
+            
+            document.getElementById('previewCard').style.display = 'block';
+            document.getElementById('editorCard').style.display = 'none';
+        }
+        
+        function closePreview() {
+            document.getElementById('previewCard').style.display = 'none';
+            document.getElementById('editorCard').style.display = 'block';
+        }
+        
+        function generateDiff(oldText, newText) {
+            // Simple line-by-line diff
+            const oldLines = oldText.split('\n');
+            const newLines = newText.split('\n');
+            
+            let html = '';
+            const maxLines = Math.max(oldLines.length, newLines.length);
+            let changesFound = 0;
+            
+            for (let i = 0; i < Math.min(maxLines, 100); i++) {
+                const oldLine = oldLines[i] || '';
+                const newLine = newLines[i] || '';
+                
+                if (oldLine !== newLine) {
+                    changesFound++;
+                    if (oldLine) html += `<div class="diff-line diff-remove">- ${escapeHtml(oldLine.substring(0, 200))}</div>`;
+                    if (newLine) html += `<div class="diff-line diff-add">+ ${escapeHtml(newLine.substring(0, 200))}</div>`;
+                }
+            }
+            
+            if (changesFound === 0) {
+                return '<div class="diff-line diff-context">No changes detected</div>';
+            }
+            
+            return `<div class="diff-line diff-context">${changesFound} line(s) changed</div>` + html;
+        }
+        
+        function revertChanges() {
+            if (!currentPage || !confirm('Revert all changes to the original content?')) return;
+            
+            parseAndDisplayPage(currentPage.originalHtml);
+            log('Changes reverted', 'warning');
+        }
+        
+        async function saveChanges() {
+            if (!currentPage) return;
+            
+            saveSettingsFromUI();
+            
+            const saveBtn = document.getElementById('saveBtn');
+            saveBtn.disabled = true;
+            
+            document.getElementById('saveProgress').style.display = 'block';
+            document.getElementById('logContainer').style.display = 'block';
+            document.getElementById('logContainer').innerHTML = '';
+            
+            try {
+                const files = [];
+                const newHtml = buildUpdatedHtml();
+                const newTitle = document.getElementById('pageTitle').value;
+                
+                // 1. Update the main page file
+                log('Preparing page update...', 'info');
+                files.push({ path: currentPage.path, content: newHtml });
+                updateProgress(20);
+                
+                // 2. Update database if checked
+                if (document.getElementById('updateDatabase').checked) {
+                    log('Updating database...', 'info');
+                    await updateDatabase(files, newTitle, newHtml);
+                    updateProgress(50);
+                }
+                
+                // 3. Update changelog if checked
+                if (document.getElementById('updateChangelog').checked) {
+                    log('Updating changelog...', 'info');
+                    await updateChangelog(files, newTitle);
+                    updateProgress(70);
+                }
+                
+                // 4. Commit all files
+                log(`Committing ${files.length} file(s)...`, 'info');
+                const commitMessage = `Update: ${newTitle || currentPage.path}`;
+                const result = await LiCAdmin.commitMultipleFiles(files, commitMessage);
+                
+                updateProgress(100);
+                log(`Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
+                
+                // Update state
+                currentPage.originalHtml = newHtml;
+                currentPage.sha = null; // Will need to refetch
+                
+                // Save to recent edits
+                addRecentEdit(currentPage.url, newTitle);
+                
+                // Close preview if open
+                closePreview();
+                
+            } catch (e) {
+                log(`Error: ${e.message}`, 'error');
+                alert(`Failed to save: ${e.message}`);
+            } finally {
+                saveBtn.disabled = false;
+            }
+        }
+        
+        async function updateDatabase(files, newTitle, newHtml) {
+            // Extract year from path
+            const match = currentPage.path.match(/^(\d{4})\//);
+            if (!match) return;
+            
+            const year = match[1];
+            const dbPath = `database/posts/${year}.json`;
+            
+            try {
+                const fileData = await LiCAdmin.getFile(dbPath);
+                const dbContent = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+                
+                // Find and update the post entry
+                const postUrl = currentPage.url;
+                const posts = dbContent.posts || [];
+                const postIndex = posts.findIndex(p => p.url === postUrl || p.link === postUrl);
+                
+                if (postIndex >= 0) {
+                    // Update existing entry
+                    posts[postIndex].title = newTitle;
+                    posts[postIndex].modified = new Date().toISOString();
+                    
+                    // Extract new content/excerpt
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(newHtml, 'text/html');
+                    const contentEl = doc.querySelector('.entry-content, .post-content');
+                    if (contentEl) {
+                        posts[postIndex].content = contentEl.innerHTML;
+                        const plainText = contentEl.textContent.trim();
+                        posts[postIndex].excerpt = plainText.substring(0, 200) + '...';
+                    }
+                    
+                    files.push({ path: dbPath, content: JSON.stringify(dbContent, null, 2) });
+                    log(`Updated database entry for ${year}`, 'success');
+                } else {
+                    log(`Post not found in ${year} database`, 'warning');
+                }
+            } catch (e) {
+                log(`Could not update database: ${e.message}`, 'warning');
+            }
+        }
+        
+        async function updateChangelog(files, title) {
+            const changelogPath = 'database/changelog.json';
+            
+            try {
+                let changelog = { entries: [] };
+                
+                try {
+                    const fileData = await LiCAdmin.getFile(changelogPath);
+                    changelog = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+                } catch (e) {
+                    // Changelog doesn't exist, create new
+                }
+                
+                changelog.entries = changelog.entries || [];
+                changelog.entries.unshift({
+                    date: new Date().toISOString(),
+                    action: 'edit',
+                    path: currentPage.path,
+                    title: title,
+                    url: currentPage.url
+                });
+                
+                // Keep last 100 entries
+                changelog.entries = changelog.entries.slice(0, 100);
+                
+                files.push({ path: changelogPath, content: JSON.stringify(changelog, null, 2) });
+                log('Changelog updated', 'success');
+                
+            } catch (e) {
+                log(`Could not update changelog: ${e.message}`, 'warning');
+            }
+        }
+        
+        // ============================================
+        // Utilities
+        // ============================================
+        function updateProgress(percent) {
+            document.getElementById('progressBar').style.width = percent + '%';
+            document.getElementById('statusText').textContent = percent < 100 ? `${percent}% complete...` : 'Done!';
+        }
+        
+        function log(message, type = 'info') {
+            const container = document.getElementById('logContainer');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry ' + type;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // ============================================
+        // Recent Edits
+        // ============================================
+        function loadRecentEdits() {
+            try {
+                const edits = JSON.parse(localStorage.getItem(RECENT_EDITS_KEY) || '[]');
+                renderRecentEdits(edits);
+            } catch (e) {}
+        }
+        
+        function addRecentEdit(url, title) {
+            try {
+                let edits = JSON.parse(localStorage.getItem(RECENT_EDITS_KEY) || '[]');
+                
+                // Remove duplicate
+                edits = edits.filter(e => e.url !== url);
+                
+                // Add to front
+                edits.unshift({ url, title, date: new Date().toISOString() });
+                
+                // Keep last 10
+                edits = edits.slice(0, 10);
+                
+                localStorage.setItem(RECENT_EDITS_KEY, JSON.stringify(edits));
+                renderRecentEdits(edits);
+            } catch (e) {}
+        }
+        
+        function renderRecentEdits(edits) {
+            const container = document.getElementById('recentEdits');
+            
+            if (edits.length === 0) {
+                container.innerHTML = '<div class="widget-item" style="color:var(--text-muted);font-style:italic;">No recent edits</div>';
+                return;
+            }
+            
+            container.innerHTML = edits.map(edit => {
+                const date = new Date(edit.date).toLocaleDateString();
+                return `<div class="widget-item">
+                    <a href="?page=${encodeURIComponent(edit.url)}">${escapeHtml(edit.title || edit.url)}</a>
+                    <div style="font-size:0.75rem;color:var(--text-muted);">${date}</div>
+                </div>`;
+            }).join('');
+        }
+    </script>
+</body>
+</html>
