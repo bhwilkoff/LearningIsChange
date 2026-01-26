@@ -173,11 +173,12 @@
                     
                     <div class="form-section">
                         <h3>Scan for Podcast Episodes</h3>
-                        <p style="color:#666; font-size:0.9em; margin-bottom:15px;">Scans all posts in the database looking for PowerPress player embeds to extract episode audio URLs.</p>
+                        <p style="color:#666; font-size:0.9em; margin-bottom:15px;">Scans all posts for PowerPress embeds. Extracts dates from post metadata/URL structure and converts Blubrry URLs to direct GitHub Pages links.</p>
                         
                         <div class="btn-group" style="margin-top:0;">
-                            <button class="btn btn-primary" id="startScan" onclick="startScan()">🔍 Scan for Episodes</button>
-                            <button class="btn btn-secondary" onclick="loadSavedEpisodes()">📂 Load Saved Episodes</button>
+                            <button class="btn btn-primary" id="startScan" onclick="startScan()">Scan for Episodes</button>
+                            <button class="btn btn-secondary" onclick="loadSavedEpisodes()">Load Saved Episodes</button>
+                            <button class="btn btn-danger" onclick="clearAndRescan()">Clear &amp; Rescan</button>
                         </div>
                     </div>
                     
@@ -199,9 +200,10 @@
                     <div class="form-section">
                         <h3>Podcast Episodes</h3>
                         <div class="btn-group" style="margin-top:0;">
-                            <button class="btn btn-secondary" onclick="selectAllEpisodes()">☑️ Select All</button>
-                            <button class="btn btn-secondary" onclick="deselectAllEpisodes()">☐ Deselect All</button>
-                            <button class="btn btn-warning" onclick="addManualEpisode()">➕ Add Episode Manually</button>
+                            <button class="btn btn-secondary" onclick="selectAllEpisodes()">Select All</button>
+                            <button class="btn btn-secondary" onclick="deselectAllEpisodes()">Deselect All</button>
+                            <button class="btn btn-primary" onclick="fixAllUrls()">Fix Blubrry URLs</button>
+                            <button class="btn btn-warning" onclick="addManualEpisode()">Add Episode Manually</button>
                         </div>
                     </div>
                     
@@ -681,6 +683,17 @@
         // ============================================
         // Scanning for Episodes
         // ============================================
+        async function clearAndRescan() {
+            if (!confirm('This will delete all saved episodes and perform a fresh scan. Continue?')) return;
+            
+            episodes = [];
+            saveEpisodes();
+            renderEpisodes();
+            document.getElementById('episodeCount').textContent = '0';
+            
+            await startScan();
+        }
+        
         async function startScan() {
             document.getElementById('scanStats').style.display = 'grid';
             document.getElementById('scanProgress').style.display = 'block';
@@ -720,7 +733,8 @@
                             if (episode) {
                                 newEpisodes.push(episode);
                                 episodesFound++;
-                                log(`  Found: ${episode.title}`, 'success');
+                                const dateStr = new Date(episode.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+                                log(`  Found: ${episode.title} (${dateStr})`, 'success');
                             }
                         }
                     }
@@ -760,6 +774,69 @@
             }
         }
         
+        // Convert Blubrry/external URLs to direct GitHub Pages URLs
+        function convertToDirectUrl(url) {
+            if (!url) return url;
+            
+            // Pattern: http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/...
+            // Should become: https://learningischange.com/wp-content/uploads/...
+            
+            // Handle Blubrry URLs
+            if (url.includes('blubrry.com')) {
+                // Extract the path after learningischange.com
+                const match = url.match(/learningischange\.com(\/wp-content\/uploads\/[^\s"'<>]+)/i);
+                if (match) {
+                    return 'https://learningischange.com' + match[1];
+                }
+            }
+            
+            // Handle http:// URLs that should be https://
+            if (url.startsWith('http://learningischange.com')) {
+                return url.replace('http://', 'https://');
+            }
+            
+            // Handle URLs that are missing the protocol
+            if (url.startsWith('learningischange.com')) {
+                return 'https://' + url;
+            }
+            
+            return url;
+        }
+        
+        // Extract date from post data or URL structure
+        function extractPostDate(post) {
+            // First, try the post's date fields
+            if (post.date && post.date !== '' && !post.date.startsWith('1970')) {
+                return post.date;
+            }
+            if (post.post_date && post.post_date !== '' && !post.post_date.startsWith('1970')) {
+                return post.post_date;
+            }
+            
+            // Try to extract from URL structure: /2009/06/26/slug/
+            const pageUrl = post.url || post.link || '';
+            const urlMatch = pageUrl.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
+            if (urlMatch) {
+                const [, year, month, day] = urlMatch;
+                // Return ISO date string at noon UTC to avoid timezone issues
+                return `${year}-${month}-${day}T12:00:00Z`;
+            }
+            
+            // Try slug pattern if present
+            if (post.slug) {
+                // Some posts have date in slug
+                const slugMatch = post.slug.match(/^(\d{4})-(\d{2})-(\d{2})/);
+                if (slugMatch) {
+                    const [, year, month, day] = slugMatch;
+                    return `${year}-${month}-${day}T12:00:00Z`;
+                }
+            }
+            
+            // Last resort: return a very old date so it's obvious something is wrong
+            console.warn('Could not extract date for post:', post.title, post.url);
+            return '2005-01-01T12:00:00Z';
+        }
+        
         function extractEpisodeFromContent(post, content) {
             try {
                 const parser = new DOMParser();
@@ -790,7 +867,7 @@
                     }
                 }
                 
-                // Method 4: Regex fallback
+                // Method 4: Regex fallback - find any MP3 URL
                 if (!audioUrl) {
                     const match = content.match(/https?:\/\/[^\s"'<>]+\.mp3/i);
                     if (match) {
@@ -800,11 +877,17 @@
                 
                 if (!audioUrl) return null;
                 
-                // Clean up URL
-                audioUrl = audioUrl.split('?')[0];  // Remove query params
+                // Clean up URL - remove query params
+                audioUrl = audioUrl.split('?')[0];
+                
+                // Convert Blubrry URLs to direct GitHub Pages URLs
+                audioUrl = convertToDirectUrl(audioUrl);
                 
                 // Build page URL
                 const pageUrl = post.url || post.link || '';
+                
+                // Extract the actual post date
+                const pubDate = extractPostDate(post);
                 
                 // Extract description (strip HTML)
                 let description = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -816,7 +899,7 @@
                     title: post.title || 'Untitled Episode',
                     audioUrl: audioUrl,
                     pageUrl: pageUrl,
-                    pubDate: post.date || post.post_date || new Date().toISOString(),
+                    pubDate: pubDate,
                     description: description,
                     duration: '',  // Would need to fetch audio file to get this
                     selected: true
@@ -857,8 +940,11 @@
             </div>`;
             
             episodes.forEach((ep, index) => {
-                const pubDate = new Date(ep.pubDate).toLocaleDateString();
+                const pubDate = new Date(ep.pubDate).toLocaleDateString('en-US', {
+                    year: 'numeric', month: 'short', day: 'numeric'
+                });
                 const audioFile = ep.audioUrl.split('/').pop();
+                const needsUrlFix = ep.audioUrl.includes('blubrry');
                 
                 html += `
                     <div class="episode-item">
@@ -868,12 +954,13 @@
                         <div class="episode-info">
                             <h4>${escapeHtml(ep.title)}</h4>
                             <p>${escapeHtml(ep.description ? ep.description.substring(0, 150) + '...' : '')}</p>
-                            <div class="episode-url">${escapeHtml(audioFile)}</div>
+                            <div class="episode-url" style="${needsUrlFix ? 'color:#e74c3c;' : ''}">${needsUrlFix ? '⚠️ ' : ''}${escapeHtml(audioFile)}</div>
+                            ${needsUrlFix ? '<div style="font-size:0.75em;color:#e74c3c;">Needs URL fix - click "Fix Blubrry URLs"</div>' : ''}
                         </div>
                         <div class="episode-meta">
                             <div>${pubDate}</div>
                             ${ep.pageUrl ? `<a href="${escapeHtml(ep.pageUrl)}" target="_blank">View Post</a>` : ''}
-                            <button class="btn btn-sm btn-danger" onclick="removeEpisode(${index})" style="margin-top:5px;">🗑</button>
+                            <button class="btn btn-sm btn-danger" onclick="removeEpisode(${index})" style="margin-top:5px;">Remove</button>
                         </div>
                     </div>
                 `;
@@ -898,6 +985,26 @@
             episodes.forEach(ep => ep.selected = false);
             saveEpisodes();
             renderEpisodes();
+        }
+        
+        function fixAllUrls() {
+            let fixedCount = 0;
+            episodes.forEach(ep => {
+                const originalUrl = ep.audioUrl;
+                const fixedUrl = convertToDirectUrl(originalUrl);
+                if (fixedUrl !== originalUrl) {
+                    ep.audioUrl = fixedUrl;
+                    fixedCount++;
+                }
+            });
+            
+            if (fixedCount > 0) {
+                saveEpisodes();
+                renderEpisodes();
+                alert(`Fixed ${fixedCount} Blubrry URL(s) to direct GitHub Pages URLs.`);
+            } else {
+                alert('No Blubrry URLs found to fix. All URLs are already using direct links.');
+            }
         }
         
         function removeEpisode(index) {
