@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Broken Link Checker &#8211; Learning is Change</title>
     <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&amp;ssl=1" sizes="32x32">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A%7COpen+Sans+Condensed%3A300%7COpen+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7COpen+Sans%3A700%7COpen+Sans%3A300">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A300%7COpen+Sans+Condensed%3A300">
     <style>
         *, *::before, *::after { box-sizing: border-box; }
         html { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.8; }
@@ -16,39 +16,33 @@
         
         #site-wrapper { max-width: 1920px; margin: 0 auto; overflow: hidden; }
         #masthead { position: relative; }
-        #site-header-main { position: fixed; top: 0; left: 0; right: 0; z-index: 101; height: 100px; background-color: #fff; box-shadow: 0 0 3px rgba(0,0,0,0.2); }
+        #site-header-main { position: fixed; top: 0; left: 0; right: 0; z-index: 101; height: 80px; background-color: #fff; box-shadow: 0 0 3px rgba(0,0,0,0.2); }
         #site-header-main-inside { max-width: 1920px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 2%; }
         #branding { display: flex; align-items: center; height: 100%; }
-        #site-title { font-family: 'Open Sans Condensed', sans-serif; font-size: 150%; font-weight: 300; text-transform: uppercase; line-height: 1.5; }
-        #site-title a { color: #0085b2; text-decoration: none; }
-        #site-title a:hover { color: #f42b00; }
-        #site-title a span:first-child { background-color: #0085b2; color: #fff; width: 1.4em; margin-right: .1em; text-align: center; line-height: 1.4; font-weight: 300; display: inline-block; }
-        #site-title a:hover span:first-child { background-color: #f42b00; }
-        #access { display: flex; align-items: center; height: 100%; }
+        #site-title { font-family: 'Open Sans Condensed', sans-serif; font-size: 140%; font-weight: 300; text-transform: uppercase; }
+        #site-title a { color: #0085b2; }
+        #site-title a span:first-child { background-color: #0085b2; color: #fff; width: 1.4em; margin-right: .1em; text-align: center; line-height: 1.4; display: inline-block; }
         #access ul { list-style: none; margin: 0; padding: 0; display: flex; }
-        #access ul li a { display: block; padding: 0 1.6em; line-height: 98px; font-family: 'Open Sans Condensed', sans-serif; font-size: 105%; font-weight: 300; text-transform: uppercase; color: #0085b2; border-top: 2px solid transparent; transition: all 0.2s; }
+        #access ul li a { display: block; padding: 0 1.2em; line-height: 78px; font-family: 'Open Sans Condensed', sans-serif; font-size: 100%; text-transform: uppercase; color: #0085b2; }
         #access ul li a:hover { background-color: #0085b2; color: #fff; }
-        #header-image-main { margin-top: 100px; position: relative; overflow: hidden; }
-        #header-image-main-inside { max-width: 1920px; max-height: 250px; margin: 0 auto; overflow: hidden; }
-        #header-image-main .header-image { display: block; width: 100%; max-width: 100%; height: auto; }
-        #breadcrumbs-container { background-color: #f8f8f8; border-bottom: 1px solid #eee; }
-        #breadcrumbs-nav { max-width: 1920px; margin: 0 auto; padding: 0.8em 2%; font-size: 0.9em; color: #9a9a9a; }
-        #breadcrumbs-nav a { color: #0085b2; }
-        #breadcrumbs-nav a:hover { color: #f42b00; }
-        #breadcrumbs-nav .separator { color: #9a9a9a; margin: 0 0.5em; }
+        #header-image-main { margin-top: 80px; max-height: 200px; overflow: hidden; }
+        #header-image-main img { width: 100%; }
+        #breadcrumbs-container { background-color: #f8f8f8; border-bottom: 1px solid #eee; padding: 0.8em 2%; font-size: 0.9em; color: #9a9a9a; }
+        #breadcrumbs-container a { color: #0085b2; }
+        .separator { margin: 0 0.5em; }
         #content { max-width: 1400px; margin: 20px auto 0; padding: 0 2% 40px; }
-        .main-content { background-color: #fff; padding: 30px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .page-title { font-size: 2em; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .main-content { background-color: #fff; padding: 25px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .page-title { font-size: 1.8em; margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
         
-        .form-section { margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-radius: 4px; }
-        .form-section h3 { font-size: 1.2em; margin-bottom: 15px; color: #0085b2; }
-        .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 15px; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: #333; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 3px; font-size: 14px; font-family: inherit; }
-        .form-group input:focus, .form-group select:focus { outline: none; border-color: #0085b2; box-shadow: 0 0 0 2px rgba(0,133,178,0.1); }
+        .form-section { margin-bottom: 25px; padding: 15px; background: #f9f9f9; border-radius: 4px; }
+        .form-section h3 { font-size: 1.1em; margin-bottom: 12px; color: #0085b2; }
+        .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 12px; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; margin-bottom: 4px; font-weight: 600; color: #333; font-size: 0.9em; }
+        .form-group input, .form-group select { width: 100%; padding: 8px 10px; border: 1px solid #ddd; border-radius: 3px; font-size: 14px; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #0085b2; }
         
-        .btn { padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; font-family: inherit; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+        .btn { padding: 8px 16px; border: none; border-radius: 3px; cursor: pointer; font-size: 13px; font-family: inherit; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s; }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; }
         .btn-primary { background: #0085b2; color: white; }
         .btn-primary:hover:not(:disabled) { background: #006d91; }
@@ -60,141 +54,113 @@
         .btn-warning:hover:not(:disabled) { background: #e0a800; }
         .btn-secondary { background: #6c757d; color: white; }
         .btn-secondary:hover:not(:disabled) { background: #5a6268; }
-        .btn-group { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-        .btn-sm { padding: 5px 10px; font-size: 12px; }
+        .btn-group { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
+        .btn-sm { padding: 4px 8px; font-size: 11px; }
         
-        .progress-container { margin: 20px 0; }
-        .progress-bar-wrapper { background: #e9ecef; border-radius: 10px; height: 20px; overflow: hidden; }
+        .progress-container { margin: 15px 0; }
+        .progress-bar-wrapper { background: #e9ecef; border-radius: 8px; height: 16px; overflow: hidden; }
         .progress-bar { height: 100%; background: linear-gradient(90deg, #0085b2, #00a8e8); transition: width 0.3s; }
-        .progress-text { margin-top: 10px; font-size: 0.9em; color: #666; }
+        .progress-text { margin-top: 8px; font-size: 0.85em; color: #666; }
         
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; margin-bottom: 20px; }
-        .stat-card { background: linear-gradient(135deg, #f8f9fa, #fff); padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #e9ecef; }
-        .stat-card.success { border-left: 4px solid #28a745; }
-        .stat-card.warning { border-left: 4px solid #ffc107; }
-        .stat-card.danger { border-left: 4px solid #dc3545; }
-        .stat-card.info { border-left: 4px solid #0085b2; }
-        .stat-value { font-size: 1.8em; font-weight: 600; color: #333; }
-        .stat-label { font-size: 0.8em; color: #666; margin-top: 5px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        .stat-card { background: linear-gradient(135deg, #f8f9fa, #fff); padding: 12px 8px; border-radius: 6px; text-align: center; border: 1px solid #e9ecef; }
+        .stat-card.success { border-left: 3px solid #28a745; }
+        .stat-card.warning { border-left: 3px solid #ffc107; }
+        .stat-card.danger { border-left: 3px solid #dc3545; }
+        .stat-card.info { border-left: 3px solid #0085b2; }
+        .stat-value { font-size: 1.5em; font-weight: 600; color: #333; }
+        .stat-label { font-size: 0.75em; color: #666; margin-top: 3px; }
         
-        .tabs { display: flex; border-bottom: 2px solid #eee; margin-bottom: 20px; flex-wrap: wrap; }
-        .tab { padding: 12px 24px; cursor: pointer; font-weight: 600; color: #666; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+        .tabs { display: flex; border-bottom: 2px solid #eee; margin-bottom: 15px; flex-wrap: wrap; }
+        .tab { padding: 10px 20px; cursor: pointer; font-weight: 600; color: #666; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; font-size: 0.95em; }
         .tab:hover { color: #0085b2; }
         .tab.active { color: #0085b2; border-bottom-color: #0085b2; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
         
-        .log-container { background: #1e1e1e; border-radius: 4px; padding: 15px; max-height: 200px; overflow-y: auto; font-family: 'Consolas', 'Monaco', monospace; font-size: 0.85em; }
-        .log-entry { margin: 2px 0; padding: 2px 0; }
+        .log-container { background: #1e1e1e; border-radius: 4px; padding: 12px; max-height: 150px; overflow-y: auto; font-family: 'Consolas', 'Monaco', monospace; font-size: 0.8em; }
+        .log-entry { margin: 1px 0; }
         .log-entry.info { color: #6cb6ff; }
         .log-entry.success { color: #7ee787; }
         .log-entry.warning { color: #f0c674; }
         .log-entry.error { color: #f97583; }
         
-        .settings-section { margin-top: 20px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
-        .settings-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; background: #f8f9fa; cursor: pointer; }
-        .settings-header h3 { margin: 0; font-size: 1em; color: #333; }
+        .settings-section { margin-top: 15px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
+        .settings-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; background: #f8f9fa; cursor: pointer; }
+        .settings-header h3 { margin: 0; font-size: 0.95em; color: #333; }
         .settings-toggle { transition: transform 0.2s; }
         .settings-toggle.open { transform: rotate(180deg); }
-        .settings-body { padding: 0 15px; max-height: 0; overflow: hidden; transition: all 0.3s; }
-        .settings-body.open { padding: 15px; max-height: 500px; }
-        .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .token-wrapper { display: flex; gap: 5px; }
+        .settings-body { padding: 0 12px; max-height: 0; overflow: hidden; transition: all 0.3s; }
+        .settings-body.open { padding: 12px; max-height: 400px; }
+        .settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .token-wrapper { display: flex; gap: 4px; }
         .token-wrapper input { flex: 1; }
-        .token-toggle { padding: 10px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 0 3px 3px 0; cursor: pointer; }
-        .checkbox-label { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: normal; }
+        .token-toggle { padding: 8px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 0 3px 3px 0; cursor: pointer; }
+        .checkbox-label { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-weight: normal; font-size: 0.9em; }
         .checkbox-label input { width: auto; }
-        .connection-status { margin-left: 10px; font-size: 0.9em; }
+        .connection-status { margin-left: 8px; font-size: 0.85em; }
         .connection-status.success { color: #28a745; }
         .connection-status.error { color: #dc3545; }
         
-        .db-status { display: flex; gap: 20px; margin-bottom: 20px; padding: 15px; background: #e8f4f8; border-radius: 4px; flex-wrap: wrap; }
+        .db-status { display: flex; gap: 15px; margin-bottom: 15px; padding: 12px; background: #e8f4f8; border-radius: 4px; flex-wrap: wrap; font-size: 0.9em; }
         .db-stat { text-align: center; }
-        .db-stat-value { font-size: 1.5em; font-weight: 600; color: #0085b2; }
-        .db-stat-label { font-size: 0.8em; color: #666; }
+        .db-stat-value { font-size: 1.3em; font-weight: 600; color: #0085b2; }
+        .db-stat-label { font-size: 0.75em; color: #666; }
         
-        /* Important notice box */
-        .notice-box { padding: 15px; border-radius: 4px; margin-bottom: 20px; }
-        .notice-box.info { background: #e8f4f8; border-left: 4px solid #0085b2; }
-        .notice-box.warning { background: #fff3cd; border-left: 4px solid #ffc107; }
-        .notice-box.success { background: #d4edda; border-left: 4px solid #28a745; }
-        .notice-box h4 { margin: 0 0 8px 0; font-size: 1em; }
-        .notice-box p { margin: 0; font-size: 0.9em; }
+        .notice-box { padding: 12px; border-radius: 4px; margin-bottom: 15px; font-size: 0.9em; }
+        .notice-box.info { background: #e8f4f8; border-left: 3px solid #0085b2; }
+        .notice-box.warning { background: #fff3cd; border-left: 3px solid #ffc107; }
+        .notice-box.success { background: #d4edda; border-left: 3px solid #28a745; }
+        .notice-box h4 { margin: 0 0 6px 0; font-size: 0.95em; }
+        .notice-box p { margin: 4px 0; }
         
-        /* Broken links grouping */
-        .group-card { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; overflow: hidden; }
-        .group-header { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #f8f9fa; cursor: pointer; border-bottom: 1px solid #ddd; }
-        .group-header:hover { background: #eef1f3; }
-        .group-header.collapsed + .group-links { display: none; }
-        .group-info { display: flex; align-items: center; gap: 15px; flex: 1; min-width: 0; }
-        .group-name { font-weight: 600; color: #333; font-size: 1em; word-break: break-all; }
-        .group-count { background: #dc3545; color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; white-space: nowrap; }
-        .group-count.internal { background: #0085b2; }
-        .group-count.external { background: #6c757d; }
-        .group-actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
-        .group-links { padding: 0; }
-        
-        .link-item { display: grid; grid-template-columns: 40px 1fr 150px 220px; gap: 15px; align-items: start; padding: 12px 15px; border-bottom: 1px solid #eee; }
-        .link-item:last-child { border-bottom: none; }
-        .link-item:hover { background: #fafafa; }
-        .link-checkbox { display: flex; align-items: center; justify-content: center; padding-top: 3px; }
-        .link-checkbox input { width: 18px; height: 18px; cursor: pointer; }
-        .link-details { min-width: 0; }
-        .link-url { font-family: monospace; font-size: 0.9em; color: #333; word-break: break-all; margin-bottom: 5px; }
+        /* Link list - optimized for large datasets */
+        .link-list { border: 1px solid #ddd; border-radius: 4px; }
+        .link-row { display: grid; grid-template-columns: 30px 1fr 100px 180px; gap: 10px; padding: 10px 12px; border-bottom: 1px solid #eee; align-items: start; font-size: 0.9em; }
+        .link-row:last-child { border-bottom: none; }
+        .link-row:hover { background: #fafafa; }
+        .link-row.header { background: #f8f9fa; font-weight: 600; font-size: 0.85em; color: #666; padding: 8px 12px; }
+        .link-checkbox input { width: 16px; height: 16px; }
+        .link-url { word-break: break-all; font-family: monospace; font-size: 0.85em; }
         .link-url a { color: #0085b2; }
-        .link-text { font-size: 0.85em; color: #666; font-style: italic; margin-bottom: 8px; }
-        .link-sources { font-size: 0.8em; }
-        .link-sources summary { cursor: pointer; color: #0085b2; }
-        .link-sources ul { margin: 5px 0 0 20px; padding: 0; }
-        .link-sources li { margin: 3px 0; }
-        .link-sources a { color: #666; }
-        .link-status { text-align: center; }
-        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.8em; font-weight: 600; }
+        .link-meta { font-size: 0.8em; color: #888; margin-top: 3px; }
+        .status-badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.75em; font-weight: 600; }
         .status-404 { background: #f8d7da; color: #721c24; }
         .status-timeout { background: #fff3cd; color: #856404; }
         .status-error { background: #f5c6cb; color: #721c24; }
         .status-unverified { background: #e9ecef; color: #495057; }
-        .status-manual { background: #d4edda; color: #155724; border: 2px solid #28a745; }
-        .status-ok { background: #d4edda; color: #155724; }
-        .link-fix { display: flex; flex-direction: column; gap: 5px; }
-        .link-fix select, .link-fix input { padding: 6px 8px; font-size: 0.85em; border: 1px solid #ddd; border-radius: 3px; }
-        .link-fix input { width: 100%; }
+        .status-verified { background: #d4edda; color: #155724; }
+        .status-fixed { background: #cce5ff; color: #004085; }
+        .link-actions { display: flex; flex-direction: column; gap: 4px; }
+        .link-actions select { padding: 4px 6px; font-size: 0.8em; border: 1px solid #ddd; border-radius: 3px; }
+        .link-actions input { padding: 4px 6px; font-size: 0.8em; }
         
-        /* Bulk actions bar */
-        .bulk-actions { display: flex; gap: 15px; align-items: center; padding: 15px; background: #e8f4f8; border-radius: 4px; margin-bottom: 20px; flex-wrap: wrap; }
-        .bulk-actions label { font-weight: 600; }
-        .bulk-actions select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 3px; min-width: 200px; }
-        .selected-count { background: #0085b2; color: white; padding: 5px 15px; border-radius: 20px; font-weight: 600; }
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 4px; }
+        .pagination button { padding: 6px 12px; }
+        .pagination span { font-size: 0.9em; color: #666; }
         
-        /* Verification status */
-        .verify-status { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8em; padding: 3px 8px; border-radius: 3px; margin-top: 4px; }
-        .verify-status.verified { background: #d4edda; color: #155724; }
-        .verify-status.unverified { background: #fff3cd; color: #856404; }
-        .verify-status.checking { background: #cce5ff; color: #004085; }
+        .bulk-bar { display: flex; gap: 10px; align-items: center; padding: 12px; background: #e8f4f8; border-radius: 4px; margin-bottom: 15px; flex-wrap: wrap; font-size: 0.9em; }
+        .bulk-bar label { font-weight: 600; }
+        .bulk-bar select, .bulk-bar input { padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; }
+        .selected-count { background: #0085b2; color: white; padding: 4px 12px; border-radius: 15px; font-weight: 600; }
         
-        .filter-bar { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; padding: 15px; background: #f9f9f9; border-radius: 4px; }
-        .filter-bar label { font-weight: 600; white-space: nowrap; }
-        .filter-bar select, .filter-bar input { padding: 8px 12px; border: 1px solid #ddd; border-radius: 3px; }
-        .filter-bar input[type="text"] { min-width: 200px; }
+        .filter-bar { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; align-items: center; padding: 12px; background: #f9f9f9; border-radius: 4px; font-size: 0.9em; }
+        .filter-bar label { font-weight: 600; }
+        .filter-bar select, .filter-bar input { padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; }
+        .filter-bar input[type="text"] { min-width: 150px; }
         
-        .empty-state { text-align: center; padding: 60px 20px; color: #888; }
-        .empty-state p { margin: 10px 0; }
+        .empty-state { text-align: center; padding: 40px 20px; color: #888; }
+        .empty-state p { margin: 8px 0; }
         
-        #footer { background: #fff; border-top: 1px solid #eee; padding: 20px 0; margin-top: 40px; }
-        #footer-inside { max-width: 1200px; margin: 0 auto; padding: 0 2%; display: flex; justify-content: space-between; align-items: center; font-size: 0.9em; color: #888; }
+        .cache-info { background: #f0f7ff; border: 1px solid #b3d7ff; border-radius: 4px; padding: 12px; margin-bottom: 15px; font-size: 0.85em; }
+        .cache-info strong { color: #0056b3; }
         
-        /* Patterns panel */
-        .patterns-panel { background: #fff8e1; border: 1px solid #ffcc80; border-radius: 4px; padding: 15px; margin-bottom: 20px; }
-        .patterns-panel h4 { margin: 0 0 10px 0; color: #e65100; }
-        .pattern-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #ffe0b2; }
-        .pattern-item:last-child { border-bottom: none; }
-        .pattern-info { flex: 1; }
-        .pattern-count { font-weight: 600; color: #e65100; margin-right: 10px; }
-        .pattern-url { font-family: monospace; font-size: 0.85em; word-break: break-all; }
+        #footer { background: #fff; border-top: 1px solid #eee; padding: 15px 0; margin-top: 30px; }
+        #footer-inside { max-width: 1200px; margin: 0 auto; padding: 0 2%; display: flex; justify-content: space-between; font-size: 0.85em; color: #888; }
         
-        @media (max-width: 900px) {
-            .link-item { grid-template-columns: 30px 1fr; }
-            .link-status, .link-fix { grid-column: 2; margin-top: 10px; }
+        @media (max-width: 768px) {
+            .link-row { grid-template-columns: 25px 1fr; }
+            .link-row .link-status, .link-row .link-actions { grid-column: 2; }
         }
     </style>
 </head>
@@ -216,18 +182,14 @@
                 </div>
             </div>
             <div id="header-image-main">
-                <div id="header-image-main-inside">
-                    <img class="header-image" src="/wp-content/uploads/2016/07/cropped-14747.jpg" alt="Learning is Change">
-                </div>
+                <img src="/wp-content/uploads/2016/07/cropped-14747.jpg" alt="Learning is Change">
             </div>
         </header>
 
         <div id="breadcrumbs-container">
-            <nav id="breadcrumbs-nav">
-                <a href="/">Home</a><span class="separator">&#8250;</span>
-                <a href="/admin/">Admin</a><span class="separator">&#8250;</span>
-                <span>Broken Link Checker</span>
-            </nav>
+            <a href="/">Home</a><span class="separator">›</span>
+            <a href="/admin/">Admin</a><span class="separator">›</span>
+            <span>Broken Link Checker</span>
         </div>
 
         <div id="content">
@@ -235,15 +197,17 @@
                 <h1 class="page-title">Broken Link Checker</h1>
                 
                 <div class="db-status">
-                    <div class="db-stat"><div class="db-stat-value" id="dbPosts">&#8212;</div><div class="db-stat-label">Posts in Database</div></div>
-                    <div class="db-stat"><div class="db-stat-value" id="dbYears">&#8212;</div><div class="db-stat-label">Years Available</div></div>
+                    <div class="db-stat"><div class="db-stat-value" id="dbPosts">—</div><div class="db-stat-label">Posts</div></div>
+                    <div class="db-stat"><div class="db-stat-value" id="dbYears">—</div><div class="db-stat-label">Years</div></div>
+                    <div class="db-stat"><div class="db-stat-value" id="cacheCount">0</div><div class="db-stat-label">Cached Links</div></div>
                     <div class="db-stat"><div class="db-stat-value" id="dbStatus">Loading...</div><div class="db-stat-label">Status</div></div>
                 </div>
                 
                 <div class="tabs">
-                    <div class="tab active" data-tab="scan">Scan Links</div>
-                    <div class="tab" data-tab="review">Review &amp; Verify</div>
-                    <div class="tab" data-tab="fix">Fix Links</div>
+                    <div class="tab active" data-tab="scan">Scan</div>
+                    <div class="tab" data-tab="review">Review (<span id="reviewCount">0</span>)</div>
+                    <div class="tab" data-tab="fix">Fix (<span id="fixCount">0</span>)</div>
+                    <div class="tab" data-tab="cache">Cache</div>
                 </div>
                 
                 <!-- SCAN TAB -->
@@ -252,25 +216,22 @@
                         <h3>Scan Configuration</h3>
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Scan Source</label>
+                                <label>Source</label>
                                 <select id="scanSource">
                                     <option value="database">Entire Database</option>
                                     <option value="year">Specific Year</option>
-                                    <option value="recent">Recent Posts (last 100)</option>
+                                    <option value="recent">Recent (last 100)</option>
                                 </select>
                             </div>
                             <div class="form-group" id="yearSelect" style="display:none;">
-                                <label>Select Year</label>
+                                <label>Year</label>
                                 <select id="yearChoice"></select>
                             </div>
-                        </div>
-                        
-                        <div class="form-row">
                             <div class="form-group">
-                                <label>Link Types to Check</label>
-                                <div style="display:flex; gap:20px; flex-wrap:wrap;">
-                                    <label class="checkbox-label"><input type="checkbox" id="checkInternal" checked> Internal Links</label>
-                                    <label class="checkbox-label"><input type="checkbox" id="checkExternal" checked> External Links</label>
+                                <label>Link Types</label>
+                                <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                                    <label class="checkbox-label"><input type="checkbox" id="checkInternal" checked> Internal</label>
+                                    <label class="checkbox-label"><input type="checkbox" id="checkExternal" checked> External</label>
                                     <label class="checkbox-label"><input type="checkbox" id="checkImages"> Images</label>
                                 </div>
                             </div>
@@ -278,41 +239,44 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Concurrent Checks</label>
-                                <select id="concurrency">
-                                    <option value="3">3 (Conservative)</option>
-                                    <option value="5" selected>5 (Default)</option>
-                                    <option value="10">10 (Faster)</option>
+                                <label>Batch Size</label>
+                                <select id="batchSize">
+                                    <option value="10">10 (Safe)</option>
+                                    <option value="25" selected>25 (Default)</option>
+                                    <option value="50">50 (Faster)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Timeout (seconds)</label>
+                                <label>Timeout</label>
                                 <select id="timeout">
-                                    <option value="5">5 seconds</option>
-                                    <option value="10" selected>10 seconds</option>
-                                    <option value="15">15 seconds</option>
+                                    <option value="5">5 sec</option>
+                                    <option value="8" selected>8 sec</option>
+                                    <option value="12">12 sec</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Options</label>
+                                <label class="checkbox-label"><input type="checkbox" id="skipCached" checked> Skip already-cached URLs</label>
                             </div>
                         </div>
                         
                         <div class="btn-group">
-                            <button class="btn btn-primary" id="startScan" onclick="startScan()">&#128269; Start Scan</button>
-                            <button class="btn btn-warning" id="pauseScan" onclick="pauseScan()" disabled>&#9208; Pause</button>
-                            <button class="btn btn-danger" id="stopScan" onclick="stopScan()" disabled>&#9632; Stop</button>
+                            <button class="btn btn-primary" id="startScan" onclick="startScan()">🔍 Start Scan</button>
+                            <button class="btn btn-warning" id="pauseScan" onclick="pauseScan()" disabled>⏸ Pause</button>
+                            <button class="btn btn-danger" id="stopScan" onclick="stopScan()" disabled>⏹ Stop</button>
                         </div>
                     </div>
                     
                     <div class="stats-grid" id="scanStats" style="display:none;">
-                        <div class="stat-card info"><div class="stat-value" id="statTotal">0</div><div class="stat-label">Total Links</div></div>
+                        <div class="stat-card info"><div class="stat-value" id="statTotal">0</div><div class="stat-label">Total</div></div>
                         <div class="stat-card success"><div class="stat-value" id="statOk">0</div><div class="stat-label">OK</div></div>
-                        <div class="stat-card warning"><div class="stat-value" id="statRedirect">0</div><div class="stat-label">Redirects</div></div>
+                        <div class="stat-card warning"><div class="stat-value" id="statSkipped">0</div><div class="stat-label">Skipped</div></div>
                         <div class="stat-card danger"><div class="stat-value" id="statBroken">0</div><div class="stat-label">Broken</div></div>
-                        <div class="stat-card"><div class="stat-value" id="statSkipped">0</div><div class="stat-label">Skipped</div></div>
                     </div>
                     
                     <div class="progress-container" id="scanProgress" style="display:none;">
-                        <div class="progress-bar-wrapper"><div class="progress-bar" id="progressBar" style="width: 0%"></div></div>
-                        <div class="progress-text" id="progressText">Preparing scan...</div>
+                        <div class="progress-bar-wrapper"><div class="progress-bar" id="progressBar"></div></div>
+                        <div class="progress-text" id="progressText">Preparing...</div>
                     </div>
                     
                     <div class="log-container" id="scanLog" style="display:none;"></div>
@@ -320,111 +284,91 @@
                 
                 <!-- REVIEW TAB -->
                 <div id="tab-review" class="tab-content">
-                    <div class="notice-box warning" id="corsNotice">
-                        <h4>⚠️ About External Link Verification</h4>
-                        <p><strong>Internal links</strong> (learningischange.com) can be verified automatically and show accurate HTTP status codes.</p>
-                        <p><strong>External links</strong> cannot be fully verified from the browser due to CORS security restrictions. 
-                        Use the "Open in New Tab" button to manually verify these links, then mark them as "Broken" or "OK".</p>
+                    <div class="notice-box warning">
+                        <h4>⚠️ Verification Notes</h4>
+                        <p><strong>Internal links</strong> show accurate HTTP status. <strong>External links</strong> may show false positives due to CORS - use "Open" to verify manually.</p>
                     </div>
                     
-                    <div class="stats-grid" id="reviewStats" style="display:none;">
-                        <div class="stat-card info"><div class="stat-value" id="statTotalBroken">0</div><div class="stat-label">Total Broken URLs</div></div>
-                        <div class="stat-card success"><div class="stat-value" id="statInternal">0</div><div class="stat-label">Internal (Verified)</div></div>
-                        <div class="stat-card warning"><div class="stat-value" id="statExternal">0</div><div class="stat-label">External (Needs Check)</div></div>
-                        <div class="stat-card"><div class="stat-value" id="statInstances">0</div><div class="stat-label">Total Instances</div></div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Review Broken Links</h3>
-                        <div class="btn-group" style="margin-top:0;">
-                            <button class="btn btn-primary" onclick="openSelectedInTabs()">🔗 Open Selected in Tabs</button>
-                            <button class="btn btn-warning" onclick="batchVerifyUnverified()">🔍 Batch Verify Unverified (Open 10)</button>
-                            <button class="btn btn-secondary" onclick="exportResults()">&#128190; Export CSV</button>
-                            <button class="btn btn-danger" onclick="clearResults()">&#128465; Clear All</button>
-                        </div>
-                    </div>
-                    
-                    <div class="filter-bar" id="reviewFilters" style="display:none;">
-                        <label>Group By:</label>
-                        <select id="groupBy" onchange="renderBrokenLinks()">
-                            <option value="url">Target URL (find duplicates)</option>
-                            <option value="domain">Domain</option>
-                            <option value="source">Source Post</option>
-                        </select>
+                    <div class="filter-bar">
                         <label>Type:</label>
-                        <select id="filterType" onchange="renderBrokenLinks()">
-                            <option value="all">All Types</option>
-                            <option value="internal">Internal Only</option>
-                            <option value="external">External Only</option>
-                            <option value="image">Images Only</option>
+                        <select id="filterType" onchange="loadReviewPage(1)">
+                            <option value="all">All</option>
+                            <option value="internal">Internal</option>
+                            <option value="external">External</option>
+                            <option value="image">Images</option>
                         </select>
                         <label>Status:</label>
-                        <select id="filterStatus" onchange="renderBrokenLinks()">
-                            <option value="all">All Statuses</option>
-                            <option value="404">404 Not Found</option>
-                            <option value="verified">Verified Broken</option>
+                        <select id="filterStatus" onchange="loadReviewPage(1)">
+                            <option value="broken">Broken Only</option>
                             <option value="unverified">Unverified</option>
+                            <option value="verified">Verified Broken</option>
+                            <option value="all">All Cached</option>
                         </select>
                         <label>Search:</label>
-                        <input type="text" id="filterSearch" placeholder="Filter by URL..." oninput="renderBrokenLinks()">
-                        <span id="filteredCount" style="color:#666;"></span>
+                        <input type="text" id="filterSearch" placeholder="URL contains..." onchange="loadReviewPage(1)">
+                        <button class="btn btn-sm btn-secondary" onclick="loadReviewPage(1)">Apply</button>
                     </div>
                     
-                    <!-- Patterns Panel -->
-                    <div class="patterns-panel" id="patternsPanel" style="display:none;">
-                        <h4>🔍 Common Broken URL Patterns</h4>
-                        <p style="font-size:0.85em; margin-bottom:10px;">These URLs appear broken in multiple posts. Fix once to update all occurrences.</p>
-                        <div id="patternsList"></div>
+                    <div class="bulk-bar" id="reviewBulkBar">
+                        <label>Selected: <span class="selected-count" id="selectedCount">0</span></label>
+                        <button class="btn btn-sm btn-primary" onclick="openSelectedLinks()">🔗 Open Selected</button>
+                        <button class="btn btn-sm btn-success" onclick="markSelectedOk()">✓ Mark OK</button>
+                        <button class="btn btn-sm btn-danger" onclick="markSelectedBroken()">✗ Mark Broken</button>
+                        <button class="btn btn-sm btn-warning" onclick="addSelectedToFix()">🔧 Add to Fix Queue</button>
+                        <span style="margin-left:auto;">
+                            <button class="btn btn-sm btn-secondary" onclick="selectAllPage()">Select Page</button>
+                            <button class="btn btn-sm btn-secondary" onclick="deselectAll()">Clear</button>
+                        </span>
                     </div>
                     
-                    <div id="brokenLinksContainer">
+                    <div id="reviewContainer">
                         <div class="empty-state">
-                            <p>&#128269; No broken links found yet.</p>
-                            <p>Run a scan first to find broken links.</p>
+                            <p>🔍 No links to review.</p>
+                            <p>Run a scan to find broken links.</p>
                         </div>
+                    </div>
+                    
+                    <div class="pagination" id="reviewPagination" style="display:none;">
+                        <button class="btn btn-sm btn-secondary" onclick="loadReviewPage(currentPage - 1)">← Prev</button>
+                        <span id="pageInfo">Page 1 of 1</span>
+                        <button class="btn btn-sm btn-secondary" onclick="loadReviewPage(currentPage + 1)">Next →</button>
                     </div>
                 </div>
                 
                 <!-- FIX TAB -->
                 <div id="tab-fix" class="tab-content">
                     <div class="form-section">
-                        <h3>Fix Broken Links</h3>
-                        <p style="color:#666; margin-bottom:15px;">
-                            Select links from the Review tab, then apply fixes here. You can fix links individually or in bulk.
-                        </p>
+                        <h3>Fix Queue</h3>
+                        <p style="color:#666; font-size:0.9em;">Links added to the fix queue. Select action for each, then apply.</p>
                     </div>
                     
-                    <div class="bulk-actions" id="bulkActions" style="display:none;">
-                        <label>Selected: <span class="selected-count" id="selectedCount">0</span></label>
+                    <div class="bulk-bar" id="fixBulkBar">
+                        <label>Bulk Action:</label>
                         <select id="bulkAction" onchange="onBulkActionChange()">
-                            <option value="">-- Choose bulk action --</option>
-                            <option value="remove">Remove links (keep text)</option>
+                            <option value="">-- Select --</option>
+                            <option value="remove">Remove link (keep text)</option>
                             <option value="archive">Replace with Archive.org</option>
-                            <option value="replace">Replace with URL...</option>
+                            <option value="replace">Replace URL...</option>
                         </select>
-                        <input type="text" id="bulkReplaceUrl" placeholder="Replacement URL" style="display:none; min-width:250px;">
-                        <button class="btn btn-warning" onclick="applyBulkAction()">Apply to Selected</button>
-                        <button class="btn btn-secondary" onclick="selectAllVisible()">Select All Visible</button>
-                        <button class="btn btn-secondary" onclick="deselectAll()">Deselect All</button>
+                        <input type="text" id="bulkReplaceUrl" placeholder="New URL" style="display:none; min-width:200px;">
+                        <button class="btn btn-sm btn-warning" onclick="applyBulkAction()">Apply to All</button>
+                        <button class="btn btn-sm btn-danger" onclick="clearFixQueue()">Clear Queue</button>
                     </div>
                     
                     <div class="settings-section">
                         <div class="settings-header" onclick="toggleSettings('github')">
-                            <h3>&#128273; GitHub Connection</h3>
-                            <span class="settings-toggle" id="githubToggle">&#9660;</span>
+                            <h3>🔑 GitHub Connection</h3>
+                            <span class="settings-toggle" id="githubToggle">▼</span>
                         </div>
                         <div class="settings-body" id="githubBody">
                             <div class="settings-grid">
                                 <div class="form-group">
-                                    <label>Personal Access Token</label>
+                                    <label>Token</label>
                                     <div class="token-wrapper">
-                                        <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
-                                        <button class="token-toggle" onclick="toggleTokenVisibility()">&#128065;</button>
+                                        <input type="password" id="githubToken" placeholder="ghp_...">
+                                        <button class="token-toggle" onclick="toggleTokenVisibility()">👁</button>
                                     </div>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" id="rememberToken" checked>
-                                        Remember token
-                                    </label>
+                                    <label class="checkbox-label"><input type="checkbox" id="rememberToken" checked> Remember</label>
                                 </div>
                                 <div class="form-group">
                                     <label>Repository</label>
@@ -432,27 +376,50 @@
                                 </div>
                             </div>
                             <div class="btn-group">
-                                <button class="btn btn-secondary" onclick="testConnection()">&#128279; Test Connection</button>
+                                <button class="btn btn-secondary" onclick="testConnection()">🔗 Test</button>
                                 <span id="connectionStatus" class="connection-status"></span>
                             </div>
                         </div>
                     </div>
                     
-                    <div id="fixLinksContainer" style="margin-top:20px;">
+                    <div id="fixContainer" style="margin-top:15px;">
                         <div class="empty-state">
-                            <p>&#128736; No links selected for fixing.</p>
-                            <p>Go to "Review &amp; Verify" tab and select links to fix.</p>
+                            <p>🔧 Fix queue is empty.</p>
+                            <p>Add links from the Review tab.</p>
                         </div>
                     </div>
                     
                     <div class="btn-group" id="fixButtons" style="display:none;">
-                        <button class="btn btn-primary" onclick="previewFixes()">&#128065; Preview Changes</button>
-                        <button class="btn btn-success" onclick="applyFixes()" id="applyFixBtn" disabled>&#128640; Apply Fixes to GitHub</button>
+                        <button class="btn btn-primary" onclick="previewFixes()">👁 Preview</button>
+                        <button class="btn btn-success" id="applyFixBtn" onclick="applyFixes()" disabled>🚀 Apply to GitHub</button>
                     </div>
                     
-                    <div id="fixPreview" style="display:none; margin-top:20px;">
-                        <h4>Preview Changes</h4>
-                        <div class="log-container" id="fixLog" style="max-height:400px;"></div>
+                    <div id="fixLog" class="log-container" style="display:none; margin-top:15px; max-height:300px;"></div>
+                </div>
+                
+                <!-- CACHE TAB -->
+                <div id="tab-cache" class="tab-content">
+                    <div class="cache-info">
+                        <strong>Cache Statistics</strong>
+                        <p>Total cached URLs: <span id="cacheTotalUrls">0</span></p>
+                        <p>Broken: <span id="cacheBrokenUrls">0</span> | OK: <span id="cacheOkUrls">0</span> | Fixed: <span id="cacheFixedUrls">0</span></p>
+                        <p>Cache size: <span id="cacheSize">0</span> KB</p>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="exportCache()">📥 Export Cache (JSON)</button>
+                        <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">📤 Import Cache</button>
+                        <input type="file" id="importFile" accept=".json" style="display:none" onchange="importCache(event)">
+                        <button class="btn btn-warning" onclick="clearBrokenFromCache()">🗑 Clear Broken Links</button>
+                        <button class="btn btn-danger" onclick="clearAllCache()">⚠️ Clear All Cache</button>
+                    </div>
+                    
+                    <div class="form-section" style="margin-top:20px;">
+                        <h3>Export Options</h3>
+                        <div class="btn-group" style="margin-top:0;">
+                            <button class="btn btn-secondary" onclick="exportBrokenCSV()">📊 Export Broken Links (CSV)</button>
+                            <button class="btn btn-secondary" onclick="exportFixedCSV()">📊 Export Fixed Links (CSV)</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -468,12 +435,11 @@
 
     <script>
         // ============================================
-        // COMMON MODULE (LiCAdmin) - Matching NewPost.html pattern
+        // LiCAdmin Module (shared config)
         // ============================================
         const LiCAdmin = (function() {
             const CONFIG = {
                 STORAGE_KEY: 'lic_admin_settings',
-                DATABASE_CACHE_KEY: 'lic_database_cache',
                 SITE_URL: 'https://learningischange.com',
                 DATABASE_PATH: '/database',
             };
@@ -528,8 +494,7 @@
                 
                 const treeItems = [];
                 for (const file of files) {
-                    const isBase64 = file.isBase64;
-                    const content = isBase64 ? file.content : btoa(unescape(encodeURIComponent(file.content)));
+                    const content = file.isBase64 ? file.content : btoa(unescape(encodeURIComponent(file.content)));
                     const blobData = await githubAPI(`/repos/${settings.repoOwner}/${settings.repoName}/git/blobs`, {
                         method: 'POST', body: JSON.stringify({ content, encoding: 'base64' })
                     });
@@ -558,7 +523,7 @@
                 const manifest = await manifestRes.json();
                 
                 const taxRes = await fetch(`${baseUrl}/taxonomies.json`);
-                const taxonomies = taxRes.ok ? await taxRes.json() : { categories: { items: {} }, tags: { items: {} } };
+                const taxonomies = taxRes.ok ? await taxRes.json() : { categories: {}, tags: {} };
                 
                 return { manifest, taxonomies, _shards: manifest.shards?.posts || {} };
             }
@@ -580,55 +545,221 @@
                     const response = await fetch(`https://api.github.com/repos/${settings.repoOwner}/${settings.repoName}/contents/${path}?ref=${settings.branch}`, {
                         headers: {
                             'Authorization': `token ${settings.githubToken}`,
-                            'Accept': 'application/vnd.github.raw+json',
-                            'X-GitHub-Api-Version': '2022-11-28'
+                            'Accept': 'application/vnd.github.raw+json'
                         }
                     });
-                    
                     if (response.ok) return await response.text();
                     return null;
-                } catch (e) {
-                    console.log(`Could not fetch ${path}:`, e.message);
-                    return null;
-                }
+                } catch (e) { return null; }
             }
             
-            function slugify(text) {
-                return text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
-            }
-            
-            function formatDate(dateString) {
-                if (!dateString) return '';
-                return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            }
-            
-            return { CONFIG, getSettings, saveSettings, githubAPI, testConnection, commitMultipleFiles, fetchDatabase, fetchPostsByYear, fetchFileFromGithub, slugify, formatDate };
+            return { CONFIG, getSettings, saveSettings, githubAPI, testConnection, commitMultipleFiles, fetchDatabase, fetchPostsByYear, fetchFileFromGithub };
         })();
         
         // ============================================
-        // STATE
+        // IndexedDB Cache Manager
         // ============================================
-        let database = null;
-        let allLinks = [];
-        let brokenLinks = [];  // Array of { url, type, statusCode, statusText, verified, sources: [{url, title, text}] }
-        let selectedForFix = new Set();
-        let fixActions = {};  // url -> { action: 'remove'|'archive'|'replace', replacement: '' }
-        let isScanning = false, isPaused = false, shouldStop = false, currentIndex = 0;
-        let pendingFixes = [];  // Files to be committed
+        const LinkCache = (function() {
+            const DB_NAME = 'LiCLinkChecker';
+            const DB_VERSION = 1;
+            const STORE_NAME = 'links';
+            let db = null;
+            
+            async function init() {
+                return new Promise((resolve, reject) => {
+                    const request = indexedDB.open(DB_NAME, DB_VERSION);
+                    
+                    request.onerror = () => reject(request.error);
+                    request.onsuccess = () => {
+                        db = request.result;
+                        resolve(db);
+                    };
+                    
+                    request.onupgradeneeded = (event) => {
+                        const database = event.target.result;
+                        if (!database.objectStoreNames.contains(STORE_NAME)) {
+                            const store = database.createObjectStore(STORE_NAME, { keyPath: 'url' });
+                            store.createIndex('status', 'status', { unique: false });
+                            store.createIndex('type', 'type', { unique: false });
+                            store.createIndex('verified', 'verified', { unique: false });
+                            store.createIndex('fixStatus', 'fixStatus', { unique: false });
+                        }
+                    };
+                });
+            }
+            
+            async function put(link) {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readwrite');
+                    const store = tx.objectStore(STORE_NAME);
+                    const request = store.put(link);
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+            
+            async function putBatch(links) {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readwrite');
+                    const store = tx.objectStore(STORE_NAME);
+                    let count = 0;
+                    
+                    links.forEach(link => {
+                        const request = store.put(link);
+                        request.onsuccess = () => count++;
+                    });
+                    
+                    tx.oncomplete = () => resolve(count);
+                    tx.onerror = () => reject(tx.error);
+                });
+            }
+            
+            async function get(url) {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readonly');
+                    const store = tx.objectStore(STORE_NAME);
+                    const request = store.get(url);
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+            
+            async function getAll() {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readonly');
+                    const store = tx.objectStore(STORE_NAME);
+                    const request = store.getAll();
+                    request.onsuccess = () => resolve(request.result || []);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+            
+            async function query(filters = {}, limit = 50, offset = 0) {
+                if (!db) await init();
+                const all = await getAll();
+                
+                let filtered = all;
+                
+                if (filters.status && filters.status !== 'all') {
+                    if (filters.status === 'broken') {
+                        filtered = filtered.filter(l => l.status === 'broken' && l.fixStatus !== 'fixed');
+                    } else if (filters.status === 'verified') {
+                        filtered = filtered.filter(l => l.status === 'broken' && l.verified);
+                    } else if (filters.status === 'unverified') {
+                        filtered = filtered.filter(l => l.status === 'broken' && !l.verified);
+                    }
+                }
+                
+                if (filters.type && filters.type !== 'all') {
+                    filtered = filtered.filter(l => l.type === filters.type);
+                }
+                
+                if (filters.search) {
+                    const search = filters.search.toLowerCase();
+                    filtered = filtered.filter(l => l.url && l.url.toLowerCase().includes(search));
+                }
+                
+                // Sort by source count descending
+                filtered.sort((a, b) => ((b.sources || []).length) - ((a.sources || []).length));
+                
+                return {
+                    total: filtered.length,
+                    items: filtered.slice(offset, offset + limit)
+                };
+            }
+            
+            async function count() {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readonly');
+                    const store = tx.objectStore(STORE_NAME);
+                    const request = store.count();
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+            
+            async function getStats() {
+                const all = await getAll();
+                return {
+                    total: all.length,
+                    broken: all.filter(l => l.status === 'broken' && l.fixStatus !== 'fixed').length,
+                    ok: all.filter(l => l.status === 'ok').length,
+                    fixed: all.filter(l => l.fixStatus === 'fixed').length
+                };
+            }
+            
+            async function remove(url) {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readwrite');
+                    const store = tx.objectStore(STORE_NAME);
+                    const request = store.delete(url);
+                    request.onsuccess = () => resolve();
+                    request.onerror = () => reject(request.error);
+                });
+            }
+            
+            async function clear() {
+                if (!db) await init();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(STORE_NAME, 'readwrite');
+                    const store = tx.objectStore(STORE_NAME);
+                    const request = store.clear();
+                    request.onsuccess = () => resolve();
+                    request.onerror = () => reject(request.error);
+                });
+            }
+            
+            async function clearBroken() {
+                const all = await getAll();
+                const broken = all.filter(l => l.status === 'broken' && l.fixStatus !== 'fixed');
+                for (const link of broken) {
+                    await remove(link.url);
+                }
+                return broken.length;
+            }
+            
+            async function exportAll() {
+                return await getAll();
+            }
+            
+            async function importData(data) {
+                if (!Array.isArray(data)) throw new Error('Invalid data format');
+                return await putBatch(data);
+            }
+            
+            return { init, put, putBatch, get, getAll, query, count, getStats, remove, clear, clearBroken, exportAll, importData };
+        })();
         
         // ============================================
-        // INITIALIZATION
+        // State
         // ============================================
-        document.addEventListener('DOMContentLoaded', function() {
+        let database = null;
+        let isScanning = false, isPaused = false, shouldStop = false;
+        let selectedUrls = new Set();
+        let fixQueue = new Map();  // url -> { action, replacement }
+        let currentPage = 1;
+        const PAGE_SIZE = 50;
+        
+        // ============================================
+        // Initialization
+        // ============================================
+        document.addEventListener('DOMContentLoaded', async function() {
+            await LinkCache.init();
             loadSettings();
-            loadDatabase();
+            await loadDatabase();
             initTabs();
+            updateCacheStats();
+            loadReviewPage(1);
+            
             document.getElementById('scanSource').addEventListener('change', function() {
                 document.getElementById('yearSelect').style.display = this.value === 'year' ? 'block' : 'none';
             });
-            
-            // Load any saved broken links from localStorage
-            loadSavedResults();
         });
         
         function initTabs() {
@@ -639,10 +770,9 @@
                     this.classList.add('active');
                     document.getElementById('tab-' + this.dataset.tab).classList.add('active');
                     
-                    // Refresh fix tab when switching to it
-                    if (this.dataset.tab === 'fix') {
-                        renderFixTab();
-                    }
+                    if (this.dataset.tab === 'review') loadReviewPage(currentPage);
+                    if (this.dataset.tab === 'fix') renderFixQueue();
+                    if (this.dataset.tab === 'cache') updateCacheStats();
                 });
             });
         }
@@ -652,11 +782,6 @@
             document.getElementById('githubToken').value = settings.githubToken || '';
             document.getElementById('repoName').value = `${settings.repoOwner}/${settings.repoName}`;
             document.getElementById('rememberToken').checked = settings.rememberToken;
-            
-            if (!settings.githubToken) {
-                document.getElementById('githubBody').classList.add('open');
-                document.getElementById('githubToggle').classList.add('open');
-            }
         }
         
         function saveCurrentSettings() {
@@ -679,50 +804,48 @@
                 document.getElementById('dbPosts').textContent = database.manifest.stats?.total_posts || '0';
                 const years = Object.keys(database._shards || {});
                 document.getElementById('dbYears').textContent = years.length > 0 ? `${Math.min(...years)}–${Math.max(...years)}` : '—';
-                document.getElementById('dbStatus').textContent = 'Connected';
+                document.getElementById('dbStatus').textContent = 'Ready';
                 document.getElementById('dbStatus').style.color = '#28a745';
                 populateYears(years);
             } catch (e) {
-                console.warn('Could not load database:', e.message);
                 document.getElementById('dbPosts').textContent = '—';
                 document.getElementById('dbYears').textContent = '—';
-                document.getElementById('dbStatus').textContent = 'Unavailable';
+                document.getElementById('dbStatus').textContent = 'Error';
                 document.getElementById('dbStatus').style.color = '#dc3545';
-                database = { manifest: { stats: {} }, taxonomies: {}, _shards: {} };
-                populateYears([]);
+                database = { manifest: { stats: {} }, _shards: {} };
             }
         }
         
         function populateYears(years) {
             const select = document.getElementById('yearChoice');
             select.innerHTML = '';
-            const sortedYears = years.map(y => parseInt(y)).sort((a, b) => b - a);
-            sortedYears.forEach(year => {
-                const opt = document.createElement('option');
-                opt.value = year;
-                opt.textContent = year;
-                select.appendChild(opt);
+            years.map(y => parseInt(y)).sort((a, b) => b - a).forEach(year => {
+                select.innerHTML += `<option value="${year}">${year}</option>`;
             });
         }
         
-        function loadSavedResults() {
+        async function updateCacheStats() {
             try {
-                const saved = localStorage.getItem('lic_broken_links');
-                if (saved) {
-                    brokenLinks = JSON.parse(saved);
-                    renderBrokenLinks();
-                }
-            } catch (e) {}
-        }
-        
-        function saveResults() {
-            try {
-                localStorage.setItem('lic_broken_links', JSON.stringify(brokenLinks));
-            } catch (e) {}
+                const stats = await LinkCache.getStats();
+                document.getElementById('cacheCount').textContent = stats.total;
+                document.getElementById('cacheTotalUrls').textContent = stats.total;
+                document.getElementById('cacheBrokenUrls').textContent = stats.broken;
+                document.getElementById('cacheOkUrls').textContent = stats.ok;
+                document.getElementById('cacheFixedUrls').textContent = stats.fixed;
+                document.getElementById('reviewCount').textContent = stats.broken;
+                document.getElementById('fixCount').textContent = fixQueue.size;
+                
+                // Estimate size
+                const all = await LinkCache.exportAll();
+                const size = new Blob([JSON.stringify(all)]).size;
+                document.getElementById('cacheSize').textContent = (size / 1024).toFixed(1);
+            } catch (e) {
+                console.error('Cache stats error:', e);
+            }
         }
         
         // ============================================
-        // UI HELPERS
+        // UI Helpers
         // ============================================
         function toggleSettings(name) {
             const body = document.getElementById(name + 'Body');
@@ -743,87 +866,83 @@
             statusEl.className = 'connection-status';
             
             const result = await LiCAdmin.testConnection();
-            if (result.success) {
-                statusEl.textContent = '✓ Connected to ' + result.repo;
-                statusEl.className = 'connection-status success';
-            } else {
-                statusEl.textContent = '✗ ' + result.error;
-                statusEl.className = 'connection-status error';
-            }
+            statusEl.textContent = result.success ? '✓ ' + result.repo : '✗ ' + result.error;
+            statusEl.className = 'connection-status ' + (result.success ? 'success' : 'error');
         }
         
         function log(message, type = 'info') {
             const logEl = document.getElementById('scanLog');
+            if (!logEl) return;
             const entry = document.createElement('div');
             entry.className = 'log-entry ' + type;
-            entry.textContent = '[' + new Date().toLocaleTimeString() + '] ' + message;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
             logEl.appendChild(entry);
             logEl.scrollTop = logEl.scrollHeight;
         }
         
         function escapeHtml(text) {
+            if (text === null || text === undefined) return '';
             const div = document.createElement('div');
-            div.textContent = text;
+            div.textContent = String(text);
             return div.innerHTML;
         }
         
-        function escapeAttr(text) {
-            return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-        }
-        
         // ============================================
-        // LINK EXTRACTION
+        // Link Extraction & Checking
         // ============================================
         function extractLinksFromPost(post) {
             const links = [];
             const content = post.content || post.content_filtered || '';
             if (!content) return links;
             
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(content, 'text/html');
-            const postUrl = post.url || post.link || '';
-            const postTitle = post.title || 'Untitled';
-            
-            if (document.getElementById('checkInternal').checked || document.getElementById('checkExternal').checked) {
-                doc.querySelectorAll('a[href]').forEach(a => {
-                    const href = a.getAttribute('href');
-                    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
-                    
-                    const isInternal = isInternalLink(href);
-                    if ((isInternal && document.getElementById('checkInternal').checked) || 
-                        (!isInternal && document.getElementById('checkExternal').checked)) {
-                        links.push({
-                            url: normalizeUrl(href),
-                            type: isInternal ? 'internal' : 'external',
-                            sourceUrl: postUrl,
-                            sourceTitle: postTitle,
-                            linkText: a.textContent.trim().substring(0, 100) || '[no text]',
-                            element: 'a'
-                        });
-                    }
-                });
-            }
-            
-            if (document.getElementById('checkImages').checked) {
-                doc.querySelectorAll('img[src]').forEach(img => {
-                    const src = img.getAttribute('src');
-                    if (src && !src.startsWith('data:')) {
-                        links.push({
-                            url: normalizeUrl(src),
-                            type: 'image',
-                            sourceUrl: postUrl,
-                            sourceTitle: postTitle,
-                            linkText: img.alt || '[image]',
-                            element: 'img'
-                        });
-                    }
-                });
+            try {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(content, 'text/html');
+                const postUrl = post.url || post.link || '';
+                const postTitle = post.title || 'Untitled';
+                
+                if (document.getElementById('checkInternal').checked || document.getElementById('checkExternal').checked) {
+                    doc.querySelectorAll('a[href]').forEach(a => {
+                        const href = a.getAttribute('href');
+                        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
+                        
+                        const isInternal = isInternalLink(href);
+                        if ((isInternal && document.getElementById('checkInternal').checked) || 
+                            (!isInternal && document.getElementById('checkExternal').checked)) {
+                            links.push({
+                                url: normalizeUrl(href),
+                                type: isInternal ? 'internal' : 'external',
+                                sourceUrl: postUrl,
+                                sourceTitle: postTitle,
+                                linkText: (a.textContent || '').trim().substring(0, 100) || '[no text]'
+                            });
+                        }
+                    });
+                }
+                
+                if (document.getElementById('checkImages').checked) {
+                    doc.querySelectorAll('img[src]').forEach(img => {
+                        const src = img.getAttribute('src');
+                        if (src && !src.startsWith('data:')) {
+                            links.push({
+                                url: normalizeUrl(src),
+                                type: 'image',
+                                sourceUrl: postUrl,
+                                sourceTitle: postTitle,
+                                linkText: img.alt || '[image]'
+                            });
+                        }
+                    });
+                }
+            } catch (e) {
+                console.error('Error extracting links from post:', e);
             }
             
             return links;
         }
         
         function isInternalLink(url) {
+            if (!url) return false;
             if (url.startsWith('/') && !url.startsWith('//')) return true;
             try {
                 const parsed = new URL(url, LiCAdmin.CONFIG.SITE_URL);
@@ -834,6 +953,7 @@
         }
         
         function normalizeUrl(url) {
+            if (!url) return '';
             if (url.startsWith('//')) return 'https:' + url;
             if (url.startsWith('/')) return LiCAdmin.CONFIG.SITE_URL + url;
             return url;
@@ -841,16 +961,10 @@
         
         function getDomain(url) {
             try {
-                const parsed = new URL(url);
-                return parsed.hostname;
-            } catch {
-                return 'unknown';
-            }
+                return new URL(url).hostname;
+            } catch { return 'unknown'; }
         }
         
-        // ============================================
-        // LINK CHECKING
-        // ============================================
         async function checkLink(link) {
             const timeout = parseInt(document.getElementById('timeout').value) * 1000;
             const controller = new AbortController();
@@ -858,7 +972,6 @@
             
             try {
                 if (link.type === 'internal' || link.type === 'image') {
-                    // Internal links: we can get real status codes
                     const response = await fetch(link.url, { 
                         method: 'HEAD', 
                         signal: controller.signal,
@@ -872,49 +985,33 @@
                     if (response.status >= 300 && response.status < 400) {
                         return { status: 'redirect', statusCode: response.status, verified: true };
                     }
-                    return { status: 'broken', statusCode: response.status, statusText: getStatusText(response.status), verified: true };
+                    return { status: 'broken', statusCode: response.status, verified: true };
                 } else {
-                    // External links: CORS prevents us from getting status codes
-                    // Use no-cors mode which returns opaque response
                     const response = await fetch(link.url, { 
                         method: 'HEAD', 
                         mode: 'no-cors', 
                         signal: controller.signal 
                     });
                     clearTimeout(timeoutId);
-                    
-                    // Opaque response means we can't know the status
-                    // Mark as OK but unverified
-                    return { status: 'ok', statusCode: '?', statusText: 'External (CORS)', verified: false };
+                    return { status: 'ok', statusCode: '?', verified: false };
                 }
             } catch (error) {
                 clearTimeout(timeoutId);
                 
                 if (error.name === 'AbortError') {
-                    return { status: 'broken', statusCode: 'TIMEOUT', statusText: 'Request timed out', verified: link.type === 'internal' };
+                    return { status: 'broken', statusCode: 'TIMEOUT', verified: link.type === 'internal' };
                 }
                 
-                // Network errors often indicate broken links for external sites
-                // But could also be CORS issues
-                if (link.type === 'external') {
-                    return { status: 'broken', statusCode: 'ERROR', statusText: error.message, verified: false };
-                }
-                
-                return { status: 'broken', statusCode: 'ERROR', statusText: error.message, verified: true };
+                return { 
+                    status: 'broken', 
+                    statusCode: 'ERROR', 
+                    verified: link.type === 'internal'
+                };
             }
         }
         
-        function getStatusText(code) {
-            const texts = {
-                400: 'Bad Request', 401: 'Unauthorized', 403: 'Forbidden', 404: 'Not Found',
-                405: 'Method Not Allowed', 408: 'Request Timeout', 410: 'Gone', 500: 'Server Error',
-                502: 'Bad Gateway', 503: 'Service Unavailable', 504: 'Gateway Timeout'
-            };
-            return texts[code] || `HTTP ${code}`;
-        }
-        
         // ============================================
-        // SCANNING
+        // Scanning
         // ============================================
         async function startScan() {
             if (isScanning) return;
@@ -922,11 +1019,6 @@
             isScanning = true;
             isPaused = false;
             shouldStop = false;
-            currentIndex = 0;
-            allLinks = [];
-            brokenLinks = [];
-            selectedForFix.clear();
-            fixActions = {};
             
             document.getElementById('startScan').disabled = true;
             document.getElementById('pauseScan').disabled = false;
@@ -936,29 +1028,32 @@
             document.getElementById('scanLog').style.display = 'block';
             document.getElementById('scanLog').innerHTML = '';
             
-            log('Starting link scan...', 'info');
+            const skipCached = document.getElementById('skipCached').checked;
+            const batchSize = parseInt(document.getElementById('batchSize').value);
+            
+            let stats = { total: 0, ok: 0, broken: 0, skipped: 0 };
             
             try {
+                log('Starting scan...', 'info');
+                
+                // Load posts
                 const source = document.getElementById('scanSource').value;
                 let posts = [];
                 
                 if (source === 'database') {
-                    log('Loading posts from all years...', 'info');
                     const years = Object.keys(database._shards || {});
-                    const yearList = years.length > 0 ? years : Array.from({length: 21}, (_, i) => 2024 - i);
-                    
-                    for (const year of yearList) {
+                    for (const year of years) {
                         if (shouldStop) break;
+                        log(`Loading ${year}...`, 'info');
                         const yearPosts = await LiCAdmin.fetchPostsByYear(year);
                         posts.push(...yearPosts);
-                        log(`Loaded ${yearPosts.length} posts from ${year}`, 'info');
+                        // Yield to prevent blocking
+                        await new Promise(r => setTimeout(r, 10));
                     }
                 } else if (source === 'year') {
                     const year = document.getElementById('yearChoice').value;
-                    log(`Loading posts from ${year}...`, 'info');
                     posts = await LiCAdmin.fetchPostsByYear(year);
-                } else if (source === 'recent') {
-                    log('Loading recent posts...', 'info');
+                } else {
                     const years = Object.keys(database._shards || {}).sort((a, b) => b - a);
                     for (const year of years) {
                         const yearPosts = await LiCAdmin.fetchPostsByYear(year);
@@ -968,454 +1063,651 @@
                     posts = posts.slice(0, 100);
                 }
                 
-                log(`Found ${posts.length} posts. Extracting links...`, 'info');
+                log(`Loaded ${posts.length} posts. Extracting links...`, 'info');
                 
-                // Extract all links
-                posts.forEach(post => {
+                // Extract links with deduplication by URL
+                const linkMap = new Map();  // url -> { ...link, sources: [] }
+                
+                for (let i = 0; i < posts.length; i++) {
+                    const post = posts[i];
                     const links = extractLinksFromPost(post);
-                    allLinks.push(...links);
-                });
+                    
+                    for (const link of links) {
+                        if (!link.url) continue;
+                        
+                        if (!linkMap.has(link.url)) {
+                            linkMap.set(link.url, {
+                                url: link.url,
+                                type: link.type,
+                                sources: []
+                            });
+                        }
+                        linkMap.get(link.url).sources.push({
+                            url: link.sourceUrl || '',
+                            title: link.sourceTitle || '',
+                            text: link.linkText || ''
+                        });
+                    }
+                    
+                    // Yield periodically
+                    if (i % 100 === 0) {
+                        await new Promise(r => setTimeout(r, 0));
+                    }
+                }
                 
-                log(`Found ${allLinks.length} total links. Starting verification...`, 'info');
-                document.getElementById('statTotal').textContent = allLinks.length;
+                const uniqueLinks = Array.from(linkMap.values());
+                stats.total = uniqueLinks.length;
+                log(`Found ${uniqueLinks.length} unique URLs to check.`, 'info');
+                document.getElementById('statTotal').textContent = stats.total;
                 
-                // Check links with concurrency
-                const concurrency = parseInt(document.getElementById('concurrency').value);
-                let stats = { ok: 0, redirect: 0, broken: 0, skipped: 0 };
-                const brokenMap = new Map();  // url -> broken link data with sources
-                
-                for (let i = 0; i < allLinks.length; i += concurrency) {
+                // Check links in batches
+                for (let i = 0; i < uniqueLinks.length; i += batchSize) {
                     if (shouldStop) break;
+                    
                     while (isPaused && !shouldStop) {
                         await new Promise(r => setTimeout(r, 100));
                     }
                     
-                    const batch = allLinks.slice(i, i + concurrency);
-                    const results = await Promise.all(batch.map(async link => {
+                    const batch = uniqueLinks.slice(i, i + batchSize);
+                    
+                    await Promise.all(batch.map(async link => {
+                        // Check cache first
+                        if (skipCached) {
+                            const cached = await LinkCache.get(link.url);
+                            if (cached) {
+                                stats.skipped++;
+                                return;
+                            }
+                        }
+                        
                         const result = await checkLink(link);
-                        return { link, result };
+                        
+                        const cacheEntry = {
+                            url: link.url,
+                            type: link.type,
+                            status: result.status,
+                            statusCode: result.statusCode,
+                            verified: result.verified,
+                            sources: link.sources,
+                            checkedAt: new Date().toISOString(),
+                            fixStatus: null,
+                            fixAction: null
+                        };
+                        
+                        await LinkCache.put(cacheEntry);
+                        
+                        if (result.status === 'ok') stats.ok++;
+                        else if (result.status === 'broken') stats.broken++;
                     }));
                     
-                    results.forEach(({ link, result }) => {
-                        if (result.status === 'ok') stats.ok++;
-                        else if (result.status === 'redirect') stats.redirect++;
-                        else if (result.status === 'broken') {
-                            stats.broken++;
-                            
-                            // Add to broken map, grouping by URL
-                            if (!brokenMap.has(link.url)) {
-                                brokenMap.set(link.url, {
-                                    url: link.url,
-                                    type: link.type,
-                                    statusCode: result.statusCode,
-                                    statusText: result.statusText,
-                                    verified: result.verified,
-                                    sources: []
-                                });
-                            }
-                            brokenMap.get(link.url).sources.push({
-                                url: link.sourceUrl,
-                                title: link.sourceTitle,
-                                text: link.linkText
-                            });
-                        }
-                    });
-                    
-                    currentIndex = Math.min(i + concurrency, allLinks.length);
-                    const progress = Math.round((currentIndex / allLinks.length) * 100);
+                    // Update UI
+                    const progress = Math.round(((i + batch.length) / uniqueLinks.length) * 100);
                     document.getElementById('progressBar').style.width = progress + '%';
-                    document.getElementById('progressText').textContent = `Checked ${currentIndex} of ${allLinks.length} links (${progress}%)`;
+                    document.getElementById('progressText').textContent = `${i + batch.length} / ${uniqueLinks.length} (${progress}%)`;
                     document.getElementById('statOk').textContent = stats.ok;
-                    document.getElementById('statRedirect').textContent = stats.redirect;
                     document.getElementById('statBroken').textContent = stats.broken;
+                    document.getElementById('statSkipped').textContent = stats.skipped;
+                    
+                    // Log every 10 batches
+                    if ((i / batchSize) % 10 === 0) {
+                        log(`Progress: ${i + batch.length}/${uniqueLinks.length} - ${stats.broken} broken found`, 'info');
+                    }
+                    
+                    // Small delay between batches
+                    await new Promise(r => setTimeout(r, 50));
                 }
                 
-                // Convert map to array
-                brokenLinks = Array.from(brokenMap.values());
-                
-                log(`Scan complete! Found ${brokenLinks.length} unique broken URLs across ${stats.broken} total instances.`, 'success');
-                saveResults();
-                renderBrokenLinks();
+                log(`Scan complete! ${stats.broken} broken links found.`, 'success');
                 
             } catch (e) {
-                log(`Error during scan: ${e.message}`, 'error');
+                log(`Error: ${e.message}`, 'error');
+                console.error('Scan error:', e);
             } finally {
                 isScanning = false;
                 document.getElementById('startScan').disabled = false;
                 document.getElementById('pauseScan').disabled = true;
                 document.getElementById('stopScan').disabled = true;
+                updateCacheStats();
+                loadReviewPage(1);
             }
         }
         
         function pauseScan() {
             isPaused = !isPaused;
             document.getElementById('pauseScan').textContent = isPaused ? '▶ Resume' : '⏸ Pause';
-            log(isPaused ? 'Scan paused.' : 'Scan resumed.', 'info');
+            log(isPaused ? 'Paused.' : 'Resumed.', 'info');
         }
         
         function stopScan() {
             shouldStop = true;
-            log('Stopping scan...', 'warning');
+            log('Stopping...', 'warning');
         }
         
         // ============================================
-        // BROKEN LINKS DISPLAY
+        // Review Tab
         // ============================================
-        function renderBrokenLinks() {
-            const container = document.getElementById('brokenLinksContainer');
+        async function loadReviewPage(page) {
+            if (page < 1) page = 1;
+            currentPage = page;
             
-            if (brokenLinks.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <p>&#128269; No broken links found.</p>
-                        <p>Run a scan to find broken links.</p>
-                    </div>`;
-                document.getElementById('reviewFilters').style.display = 'none';
-                document.getElementById('patternsPanel').style.display = 'none';
-                document.getElementById('bulkActions').style.display = 'none';
-                document.getElementById('reviewStats').style.display = 'none';
-                return;
-            }
+            const filters = {
+                type: document.getElementById('filterType').value,
+                status: document.getElementById('filterStatus').value,
+                search: document.getElementById('filterSearch').value
+            };
             
-            document.getElementById('reviewFilters').style.display = 'flex';
-            document.getElementById('bulkActions').style.display = 'flex';
-            document.getElementById('reviewStats').style.display = 'grid';
-            
-            // Update stats
-            const internalCount = brokenLinks.filter(l => l.type === 'internal').length;
-            const externalCount = brokenLinks.filter(l => l.type === 'external' && !l.verified).length;
-            const totalInstances = brokenLinks.reduce((sum, l) => sum + l.sources.length, 0);
-            document.getElementById('statTotalBroken').textContent = brokenLinks.length;
-            document.getElementById('statInternal').textContent = internalCount;
-            document.getElementById('statExternal').textContent = externalCount;
-            document.getElementById('statInstances').textContent = totalInstances;
-            
-            // Apply filters
-            const typeFilter = document.getElementById('filterType').value;
-            const statusFilter = document.getElementById('filterStatus').value;
-            const searchFilter = document.getElementById('filterSearch').value.toLowerCase();
-            
-            let filtered = brokenLinks;
-            if (typeFilter !== 'all') {
-                filtered = filtered.filter(l => l.type === typeFilter);
-            }
-            if (statusFilter === '404') {
-                filtered = filtered.filter(l => l.statusCode === 404);
-            } else if (statusFilter === 'verified') {
-                filtered = filtered.filter(l => l.verified);
-            } else if (statusFilter === 'unverified') {
-                filtered = filtered.filter(l => !l.verified);
-            }
-            if (searchFilter) {
-                filtered = filtered.filter(l => l.url.toLowerCase().includes(searchFilter));
-            }
-            
-            document.getElementById('filteredCount').textContent = `Showing ${filtered.length} of ${brokenLinks.length} broken URLs`;
-            
-            // Show patterns panel for duplicates
-            const duplicates = filtered.filter(l => l.sources.length > 1).sort((a, b) => b.sources.length - a.sources.length);
-            if (duplicates.length > 0) {
-                document.getElementById('patternsPanel').style.display = 'block';
-                document.getElementById('patternsList').innerHTML = duplicates.slice(0, 10).map(l => `
-                    <div class="pattern-item">
-                        <div class="pattern-info">
-                            <span class="pattern-count">${l.sources.length}×</span>
-                            <span class="pattern-url">${escapeHtml(l.url)}</span>
-                        </div>
-                        <button class="btn btn-sm btn-primary" onclick="selectBrokenUrl('${escapeAttr(l.url)}')">Select</button>
-                    </div>
-                `).join('');
-            } else {
-                document.getElementById('patternsPanel').style.display = 'none';
-            }
-            
-            // Group by selected method
-            const groupBy = document.getElementById('groupBy').value;
-            const groups = new Map();
-            
-            filtered.forEach(link => {
-                let key;
-                if (groupBy === 'url') {
-                    key = link.url;
-                } else if (groupBy === 'domain') {
-                    key = getDomain(link.url);
-                } else if (groupBy === 'source') {
-                    // Create entry for each source
-                    link.sources.forEach(source => {
-                        const sourceKey = source.url;
-                        if (!groups.has(sourceKey)) {
-                            groups.set(sourceKey, { name: source.title || source.url, links: [] });
-                        }
-                        groups.get(sourceKey).links.push({ ...link, sources: [source] });
-                    });
+            try {
+                const result = await LinkCache.query(filters, PAGE_SIZE, (page - 1) * PAGE_SIZE);
+                const totalPages = Math.ceil(result.total / PAGE_SIZE) || 1;
+                
+                if (page > totalPages) {
+                    currentPage = totalPages;
+                    return loadReviewPage(totalPages);
+                }
+                
+                document.getElementById('reviewCount').textContent = result.total;
+                
+                const container = document.getElementById('reviewContainer');
+                
+                if (result.items.length === 0) {
+                    container.innerHTML = `<div class="empty-state"><p>No links match the current filters.</p></div>`;
+                    document.getElementById('reviewPagination').style.display = 'none';
                     return;
                 }
                 
-                if (!groups.has(key)) {
-                    groups.set(key, { name: key, links: [] });
-                }
-                groups.get(key).links.push(link);
-            });
-            
-            // Sort groups by number of items
-            const sortedGroups = Array.from(groups.entries()).sort((a, b) => {
-                const aCount = a[1].links.reduce((sum, l) => sum + l.sources.length, 0);
-                const bCount = b[1].links.reduce((sum, l) => sum + l.sources.length, 0);
-                return bCount - aCount;
-            });
-            
-            let html = '';
-            sortedGroups.forEach(([key, group]) => {
-                const totalInstances = group.links.reduce((sum, l) => sum + l.sources.length, 0);
-                const typeClass = group.links[0]?.type === 'internal' ? 'internal' : 'external';
+                let html = `<div class="link-list">
+                    <div class="link-row header">
+                        <div><input type="checkbox" onchange="toggleSelectAll(this.checked)"></div>
+                        <div>URL</div>
+                        <div>Status</div>
+                        <div>Actions</div>
+                    </div>`;
                 
-                html += `
-                    <div class="group-card">
-                        <div class="group-header" onclick="toggleGroup(this)">
-                            <div class="group-info">
-                                <input type="checkbox" onclick="event.stopPropagation(); toggleGroupSelection('${escapeAttr(key)}')" 
-                                    ${group.links.every(l => selectedForFix.has(l.url)) ? 'checked' : ''}>
-                                <span class="group-name">${escapeHtml(group.name)}</span>
-                                <span class="group-count ${typeClass}">${group.links.length} URL${group.links.length > 1 ? 's' : ''}, ${totalInstances} instance${totalInstances > 1 ? 's' : ''}</span>
+                result.items.forEach(link => {
+                    const statusClass = link.statusCode === 404 ? 'status-404' : 
+                                       link.statusCode === 'TIMEOUT' ? 'status-timeout' :
+                                       link.verified ? 'status-verified' : 'status-unverified';
+                    
+                    const sourceCount = (link.sources || []).length;
+                    const isSelected = selectedUrls.has(link.url);
+                    
+                    html += `
+                        <div class="link-row" data-url="${escapeHtml(link.url)}">
+                            <div class="link-checkbox">
+                                <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleSelect('${escapeHtml(link.url)}')">
                             </div>
-                            <div class="group-actions">
-                                <button class="btn btn-sm btn-secondary" onclick="event.stopPropagation(); openGroupInTabs('${escapeAttr(key)}')">🔗 Open</button>
-                                <span style="color:#999;">▼</span>
+                            <div class="link-url">
+                                <a href="${escapeHtml(link.url)}" target="_blank">${escapeHtml(link.url)}</a>
+                                <div class="link-meta">${sourceCount} source${sourceCount !== 1 ? 's' : ''} · ${link.type}</div>
+                            </div>
+                            <div class="link-status">
+                                <span class="status-badge ${statusClass}">${link.statusCode || '?'}</span>
+                                <div style="font-size:0.75em; margin-top:3px; color:#888;">${link.verified ? 'Verified' : 'Unverified'}</div>
+                            </div>
+                            <div class="link-actions">
+                                <button class="btn btn-sm btn-secondary" onclick="window.open('${escapeHtml(link.url)}', '_blank')">🔗</button>
+                                <button class="btn btn-sm btn-success" onclick="markOk('${escapeHtml(link.url)}')" title="Mark as OK">✓</button>
+                                <button class="btn btn-sm btn-danger" onclick="markBroken('${escapeHtml(link.url)}')" title="Confirm broken">✗</button>
+                                <button class="btn btn-sm btn-warning" onclick="addToFix('${escapeHtml(link.url)}')" title="Add to fix queue">🔧</button>
                             </div>
                         </div>
-                        <div class="group-links">
-                            ${group.links.map(link => renderLinkItem(link, groupBy)).join('')}
+                    `;
+                });
+                
+                html += '</div>';
+                container.innerHTML = html;
+                
+                // Pagination
+                document.getElementById('reviewPagination').style.display = 'flex';
+                document.getElementById('pageInfo').textContent = `Page ${page} of ${totalPages} (${result.total} total)`;
+                
+            } catch (e) {
+                console.error('Review load error:', e);
+                document.getElementById('reviewContainer').innerHTML = `<div class="empty-state"><p>Error loading links: ${e.message}</p></div>`;
+            }
+        }
+        
+        function toggleSelect(url) {
+            if (selectedUrls.has(url)) {
+                selectedUrls.delete(url);
+            } else {
+                selectedUrls.add(url);
+            }
+            document.getElementById('selectedCount').textContent = selectedUrls.size;
+        }
+        
+        function toggleSelectAll(checked) {
+            document.querySelectorAll('#reviewContainer .link-row:not(.header) input[type="checkbox"]').forEach(cb => {
+                const url = cb.closest('.link-row').dataset.url;
+                if (checked) {
+                    selectedUrls.add(url);
+                } else {
+                    selectedUrls.delete(url);
+                }
+                cb.checked = checked;
+            });
+            document.getElementById('selectedCount').textContent = selectedUrls.size;
+        }
+        
+        function selectAllPage() {
+            toggleSelectAll(true);
+        }
+        
+        function deselectAll() {
+            selectedUrls.clear();
+            document.querySelectorAll('#reviewContainer input[type="checkbox"]').forEach(cb => cb.checked = false);
+            document.getElementById('selectedCount').textContent = 0;
+        }
+        
+        async function markOk(url) {
+            const link = await LinkCache.get(url);
+            if (link) {
+                link.status = 'ok';
+                link.verified = true;
+                await LinkCache.put(link);
+                loadReviewPage(currentPage);
+                updateCacheStats();
+            }
+        }
+        
+        async function markBroken(url) {
+            const link = await LinkCache.get(url);
+            if (link) {
+                link.verified = true;
+                await LinkCache.put(link);
+                loadReviewPage(currentPage);
+            }
+        }
+        
+        async function markSelectedOk() {
+            for (const url of selectedUrls) {
+                await markOk(url);
+            }
+            selectedUrls.clear();
+            document.getElementById('selectedCount').textContent = 0;
+            loadReviewPage(currentPage);
+            updateCacheStats();
+        }
+        
+        async function markSelectedBroken() {
+            for (const url of selectedUrls) {
+                await markBroken(url);
+            }
+            loadReviewPage(currentPage);
+        }
+        
+        function openSelectedLinks() {
+            if (selectedUrls.size === 0) {
+                alert('No links selected.');
+                return;
+            }
+            if (selectedUrls.size > 20 && !confirm(`Open ${selectedUrls.size} tabs?`)) return;
+            selectedUrls.forEach(url => window.open(url, '_blank'));
+        }
+        
+        async function addToFix(url) {
+            const link = await LinkCache.get(url);
+            if (link) {
+                fixQueue.set(url, { link, action: null, replacement: '' });
+                document.getElementById('fixCount').textContent = fixQueue.size;
+                alert('Added to fix queue.');
+            }
+        }
+        
+        async function addSelectedToFix() {
+            for (const url of selectedUrls) {
+                const link = await LinkCache.get(url);
+                if (link && link.status === 'broken') {
+                    fixQueue.set(url, { link, action: null, replacement: '' });
+                }
+            }
+            document.getElementById('fixCount').textContent = fixQueue.size;
+            alert(`Added ${selectedUrls.size} links to fix queue.`);
+        }
+        
+        // ============================================
+        // Fix Tab
+        // ============================================
+        function renderFixQueue() {
+            const container = document.getElementById('fixContainer');
+            
+            if (fixQueue.size === 0) {
+                container.innerHTML = `<div class="empty-state"><p>🔧 Fix queue is empty.</p><p>Add links from the Review tab.</p></div>`;
+                document.getElementById('fixButtons').style.display = 'none';
+                return;
+            }
+            
+            document.getElementById('fixButtons').style.display = 'block';
+            
+            let html = `<div class="link-list">
+                <div class="link-row header">
+                    <div>#</div>
+                    <div>URL</div>
+                    <div>Sources</div>
+                    <div>Action</div>
+                </div>`;
+            
+            let i = 0;
+            fixQueue.forEach((item, url) => {
+                i++;
+                const sourceCount = (item.link.sources || []).length;
+                
+                html += `
+                    <div class="link-row">
+                        <div>${i}</div>
+                        <div class="link-url" style="font-size:0.8em;">${escapeHtml(url)}</div>
+                        <div>${sourceCount}</div>
+                        <div class="link-actions">
+                            <select onchange="setFixAction('${escapeHtml(url)}', this.value)" style="width:auto;">
+                                <option value="">Select...</option>
+                                <option value="remove" ${item.action === 'remove' ? 'selected' : ''}>Remove</option>
+                                <option value="archive" ${item.action === 'archive' ? 'selected' : ''}>Archive.org</option>
+                                <option value="replace" ${item.action === 'replace' ? 'selected' : ''}>Replace</option>
+                            </select>
+                            ${item.action === 'replace' ? `<input type="text" value="${escapeHtml(item.replacement)}" placeholder="New URL" onchange="setFixReplacement('${escapeHtml(url)}', this.value)" style="width:120px;">` : ''}
+                            <button class="btn btn-sm btn-danger" onclick="removeFromFix('${escapeHtml(url)}')">✕</button>
                         </div>
                     </div>
                 `;
             });
             
+            html += '</div>';
             container.innerHTML = html;
-            updateSelectedCount();
         }
         
-        function renderLinkItem(link, groupBy) {
-            const isSelected = selectedForFix.has(link.url);
-            const statusClass = link.statusCode === 404 ? 'status-404' : 
-                               link.statusCode === 'TIMEOUT' ? 'status-timeout' : 
-                               link.statusCode === 'ERROR' ? 'status-error' : 
-                               link.statusCode === 'MANUAL' ? 'status-manual' : 'status-unverified';
-            
-            const verifyClass = link.verified ? 'verified' : 'unverified';
-            const verifyText = link.verified ? '✓ Verified broken' : '? Unverified (CORS)';
-            
-            // If grouped by URL, don't show URL again, show sources inline
-            const showUrl = groupBy !== 'url';
-            
-            return `
-                <div class="link-item" data-url="${escapeAttr(link.url)}">
-                    <div class="link-checkbox">
-                        <input type="checkbox" ${isSelected ? 'checked' : ''} onchange="toggleLinkSelection('${escapeAttr(link.url)}')">
-                    </div>
-                    <div class="link-details">
-                        ${showUrl ? `<div class="link-url"><a href="${escapeAttr(link.url)}" target="_blank">${escapeHtml(link.url)}</a></div>` : ''}
-                        <div class="link-text">"${escapeHtml(link.sources[0]?.text || '')}"</div>
-                        <details class="link-sources" ${link.sources.length <= 3 ? 'open' : ''}>
-                            <summary>Found in ${link.sources.length} post${link.sources.length > 1 ? 's' : ''}</summary>
-                            <ul>
-                                ${link.sources.slice(0, 15).map(s => `<li><a href="${escapeAttr(s.url)}" target="_blank">${escapeHtml(s.title)}</a></li>`).join('')}
-                                ${link.sources.length > 15 ? `<li>...and ${link.sources.length - 15} more</li>` : ''}
-                            </ul>
-                        </details>
-                    </div>
-                    <div class="link-status">
-                        <div class="status-badge ${statusClass}">${link.statusCode}</div>
-                        <div class="verify-status ${verifyClass}">${verifyText}</div>
-                        <button class="btn btn-sm btn-secondary" onclick="window.open('${escapeAttr(link.url)}', '_blank')" style="margin-top:5px;">🔗 Open</button>
-                        ${!link.verified ? `
-                        <div style="margin-top:5px; display:flex; gap:3px;">
-                            <button class="btn btn-sm btn-danger" onclick="markAsVerified('${escapeAttr(link.url)}', true)" title="Confirm this link is broken">✗ Broken</button>
-                            <button class="btn btn-sm btn-success" onclick="markAsVerified('${escapeAttr(link.url)}', false)" title="This link actually works">✓ OK</button>
-                        </div>` : ''}
-                    </div>
-                    <div class="link-fix">
-                        <select onchange="setLinkAction('${escapeAttr(link.url)}', this.value)">
-                            <option value="">-- Action --</option>
-                            <option value="remove" ${fixActions[link.url]?.action === 'remove' ? 'selected' : ''}>Remove link</option>
-                            <option value="archive" ${fixActions[link.url]?.action === 'archive' ? 'selected' : ''}>Archive.org</option>
-                            <option value="replace" ${fixActions[link.url]?.action === 'replace' ? 'selected' : ''}>Replace URL</option>
-                        </select>
-                        ${fixActions[link.url]?.action === 'replace' ? 
-                            `<input type="text" placeholder="New URL" value="${escapeAttr(fixActions[link.url]?.replacement || '')}" onchange="setLinkReplacement('${escapeAttr(link.url)}', this.value)">` : ''}
-                    </div>
-                </div>
-            `;
-        }
-        
-        function toggleGroup(header) {
-            header.classList.toggle('collapsed');
-        }
-        
-        function toggleLinkSelection(url) {
-            if (selectedForFix.has(url)) {
-                selectedForFix.delete(url);
-            } else {
-                selectedForFix.add(url);
-            }
-            updateSelectedCount();
-            // Update checkbox without full re-render
-            document.querySelectorAll(`.link-item[data-url="${CSS.escape(url)}"] input[type="checkbox"]`).forEach(cb => {
-                cb.checked = selectedForFix.has(url);
-            });
-        }
-        
-        function toggleGroupSelection(key) {
-            const groupBy = document.getElementById('groupBy').value;
-            let linksInGroup;
-            
-            if (groupBy === 'url') {
-                linksInGroup = brokenLinks.filter(l => l.url === key);
-            } else if (groupBy === 'domain') {
-                linksInGroup = brokenLinks.filter(l => getDomain(l.url) === key);
-            } else {
-                linksInGroup = brokenLinks.filter(l => l.sources.some(s => s.url === key));
-            }
-            
-            const allSelected = linksInGroup.every(l => selectedForFix.has(l.url));
-            linksInGroup.forEach(l => {
-                if (allSelected) {
-                    selectedForFix.delete(l.url);
-                } else {
-                    selectedForFix.add(l.url);
-                }
-            });
-            
-            renderBrokenLinks();
-        }
-        
-        function selectBrokenUrl(url) {
-            selectedForFix.add(url);
-            renderBrokenLinks();
-        }
-        
-        function openGroupInTabs(key) {
-            const groupBy = document.getElementById('groupBy').value;
-            let linksInGroup;
-            
-            if (groupBy === 'url') {
-                window.open(key, '_blank');
-                return;
-            } else if (groupBy === 'domain') {
-                linksInGroup = brokenLinks.filter(l => getDomain(l.url) === key);
-            } else {
-                linksInGroup = brokenLinks.filter(l => l.sources.some(s => s.url === key));
-            }
-            
-            // Open first 5 links
-            linksInGroup.slice(0, 5).forEach(l => window.open(l.url, '_blank'));
-            if (linksInGroup.length > 5) {
-                alert(`Opened first 5 of ${linksInGroup.length} links. Select links individually to open more.`);
+        function setFixAction(url, action) {
+            const item = fixQueue.get(url);
+            if (item) {
+                item.action = action;
+                renderFixQueue();
             }
         }
         
-        function openSelectedInTabs() {
-            if (selectedForFix.size === 0) {
-                alert('No links selected. Select links first using the checkboxes.');
-                return;
+        function setFixReplacement(url, replacement) {
+            const item = fixQueue.get(url);
+            if (item) {
+                item.replacement = replacement;
             }
-            if (selectedForFix.size > 10) {
-                if (!confirm(`This will open ${selectedForFix.size} tabs. Continue?`)) return;
-            }
-            selectedForFix.forEach(url => window.open(url, '_blank'));
         }
         
-        function batchVerifyUnverified() {
-            const unverified = brokenLinks.filter(l => !l.verified).slice(0, 10);
-            if (unverified.length === 0) {
-                alert('All links have been verified!');
-                return;
-            }
-            
-            alert(`Opening ${unverified.length} unverified links in new tabs.\n\nAfter checking each link:\n• Click "✗ Broken" if the link is truly broken\n• Click "✓ OK" if the link actually works`);
-            
-            unverified.forEach(l => window.open(l.url, '_blank'));
+        function removeFromFix(url) {
+            fixQueue.delete(url);
+            document.getElementById('fixCount').textContent = fixQueue.size;
+            renderFixQueue();
         }
         
-        function selectAllVisible() {
-            const typeFilter = document.getElementById('filterType').value;
-            const statusFilter = document.getElementById('filterStatus').value;
-            const searchFilter = document.getElementById('filterSearch').value.toLowerCase();
-            
-            let filtered = brokenLinks;
-            if (typeFilter !== 'all') filtered = filtered.filter(l => l.type === typeFilter);
-            if (statusFilter === '404') filtered = filtered.filter(l => l.statusCode === 404);
-            else if (statusFilter === 'verified') filtered = filtered.filter(l => l.verified);
-            else if (statusFilter === 'unverified') filtered = filtered.filter(l => !l.verified);
-            if (searchFilter) filtered = filtered.filter(l => l.url.toLowerCase().includes(searchFilter));
-            
-            filtered.forEach(l => selectedForFix.add(l.url));
-            renderBrokenLinks();
-        }
-        
-        function deselectAll() {
-            selectedForFix.clear();
-            renderBrokenLinks();
-        }
-        
-        function updateSelectedCount() {
-            document.getElementById('selectedCount').textContent = selectedForFix.size;
-        }
-        
-        function setLinkAction(url, action) {
-            if (!action) {
-                delete fixActions[url];
-            } else {
-                fixActions[url] = { action, replacement: fixActions[url]?.replacement || '' };
-                selectedForFix.add(url);
-            }
-            renderBrokenLinks();
-        }
-        
-        function setLinkReplacement(url, replacement) {
-            if (fixActions[url]) {
-                fixActions[url].replacement = replacement;
-            }
+        function clearFixQueue() {
+            if (!confirm('Clear entire fix queue?')) return;
+            fixQueue.clear();
+            document.getElementById('fixCount').textContent = 0;
+            renderFixQueue();
         }
         
         function onBulkActionChange() {
-            const action = document.getElementById('bulkAction').value;
-            document.getElementById('bulkReplaceUrl').style.display = action === 'replace' ? 'block' : 'none';
+            document.getElementById('bulkReplaceUrl').style.display = 
+                document.getElementById('bulkAction').value === 'replace' ? 'block' : 'none';
         }
         
         function applyBulkAction() {
             const action = document.getElementById('bulkAction').value;
             if (!action) {
-                alert('Please select an action.');
-                return;
-            }
-            if (selectedForFix.size === 0) {
-                alert('No links selected.');
+                alert('Select an action.');
                 return;
             }
             
             const replacement = document.getElementById('bulkReplaceUrl').value;
             if (action === 'replace' && !replacement) {
-                alert('Please enter a replacement URL.');
+                alert('Enter a replacement URL.');
                 return;
             }
             
-            selectedForFix.forEach(url => {
-                fixActions[url] = { action, replacement };
+            fixQueue.forEach(item => {
+                item.action = action;
+                item.replacement = replacement;
             });
             
-            renderBrokenLinks();
-            alert(`Applied "${action}" action to ${selectedForFix.size} links. Go to the Fix tab to preview and apply changes.`);
+            renderFixQueue();
         }
         
-        function exportResults() {
-            if (brokenLinks.length === 0) {
-                alert('No broken links to export.');
-                return;
+        async function previewFixes() {
+            const logEl = document.getElementById('fixLog');
+            logEl.style.display = 'block';
+            logEl.innerHTML = '';
+            
+            function fixLog(msg, type = 'info') {
+                const entry = document.createElement('div');
+                entry.className = 'log-entry ' + type;
+                entry.textContent = msg;
+                logEl.appendChild(entry);
+                logEl.scrollTop = logEl.scrollHeight;
             }
             
-            let csv = 'Broken URL,Status,Verified,Type,Source Count,First Source,Link Text\n';
-            brokenLinks.forEach(link => {
-                csv += `"${link.url}","${link.statusCode}","${link.verified ? 'Yes' : 'No'}","${link.type}","${link.sources.length}","${link.sources[0]?.url || ''}","${(link.sources[0]?.text || '').replace(/"/g, '""')}"\n`;
+            // Collect files to modify
+            const fileMap = new Map();  // path -> Set of URLs
+            
+            fixQueue.forEach((item, url) => {
+                if (!item.action) return;
+                
+                (item.link.sources || []).forEach(source => {
+                    let path = (source.url || '').replace(LiCAdmin.CONFIG.SITE_URL, '').replace(/^\//, '');
+                    if (!path) return;
+                    
+                    if (path.endsWith('/')) path += 'index.html';
+                    else if (!path.includes('.')) path += '/index.html';
+                    
+                    if (!fileMap.has(path)) fileMap.set(path, new Set());
+                    fileMap.get(path).add(url);
+                });
+            });
+            
+            fixLog(`Preview: ${fileMap.size} files to modify for ${fixQueue.size} broken URLs`, 'info');
+            
+            let readyCount = 0;
+            fixQueue.forEach((item, url) => {
+                if (item.action) {
+                    fixLog(`  ${url} → ${item.action}${item.action === 'replace' ? ' (' + item.replacement + ')' : ''}`, 'info');
+                    readyCount++;
+                }
+            });
+            
+            if (readyCount === 0) {
+                fixLog('No actions configured. Select an action for each URL.', 'warning');
+                document.getElementById('applyFixBtn').disabled = true;
+            } else {
+                fixLog(`Ready to apply ${readyCount} fixes across ${fileMap.size} files.`, 'success');
+                document.getElementById('applyFixBtn').disabled = false;
+            }
+        }
+        
+        async function applyFixes() {
+            if (!confirm('Apply fixes to GitHub? This will modify files in your repository.')) return;
+            
+            saveCurrentSettings();
+            
+            const logEl = document.getElementById('fixLog');
+            logEl.style.display = 'block';
+            
+            function fixLog(msg, type = 'info') {
+                const entry = document.createElement('div');
+                entry.className = 'log-entry ' + type;
+                entry.textContent = msg;
+                logEl.appendChild(entry);
+                logEl.scrollTop = logEl.scrollHeight;
+            }
+            
+            const btn = document.getElementById('applyFixBtn');
+            btn.disabled = true;
+            btn.textContent = '⏳ Applying...';
+            
+            try {
+                // Collect files
+                const fileMap = new Map();
+                
+                fixQueue.forEach((item, url) => {
+                    if (!item.action) return;
+                    
+                    (item.link.sources || []).forEach(source => {
+                        let path = (source.url || '').replace(LiCAdmin.CONFIG.SITE_URL, '').replace(/^\//, '');
+                        if (!path) return;
+                        if (path.endsWith('/')) path += 'index.html';
+                        else if (!path.includes('.')) path += '/index.html';
+                        
+                        if (!fileMap.has(path)) fileMap.set(path, new Set());
+                        fileMap.get(path).add(url);
+                    });
+                });
+                
+                fixLog(`Processing ${fileMap.size} files...`, 'info');
+                
+                const filesToCommit = [];
+                
+                for (const [path, urls] of fileMap) {
+                    fixLog(`Fetching: ${path}`, 'info');
+                    
+                    let content = await LiCAdmin.fetchFileFromGithub(path);
+                    if (!content) {
+                        fixLog(`  Could not fetch: ${path}`, 'warning');
+                        continue;
+                    }
+                    
+                    let modified = false;
+                    
+                    for (const url of urls) {
+                        const item = fixQueue.get(url);
+                        if (!item || !item.action) continue;
+                        
+                        const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                        
+                        if (item.action === 'remove') {
+                            const regex = new RegExp(`<a[^>]*href=["']${escapedUrl}["'][^>]*>(.*?)</a>`, 'gi');
+                            const newContent = content.replace(regex, '$1');
+                            if (newContent !== content) {
+                                content = newContent;
+                                modified = true;
+                            }
+                        } else if (item.action === 'archive') {
+                            const archiveUrl = `https://web.archive.org/web/${url}`;
+                            const regex = new RegExp(`href=["']${escapedUrl}["']`, 'gi');
+                            const newContent = content.replace(regex, `href="${archiveUrl}"`);
+                            if (newContent !== content) {
+                                content = newContent;
+                                modified = true;
+                            }
+                        } else if (item.action === 'replace' && item.replacement) {
+                            const regex = new RegExp(`href=["']${escapedUrl}["']`, 'gi');
+                            const newContent = content.replace(regex, `href="${item.replacement}"`);
+                            if (newContent !== content) {
+                                content = newContent;
+                                modified = true;
+                            }
+                        }
+                    }
+                    
+                    if (modified) {
+                        filesToCommit.push({ path, content, isBase64: false });
+                        fixLog(`  ✓ ${path} modified`, 'success');
+                    }
+                    
+                    // Yield
+                    await new Promise(r => setTimeout(r, 50));
+                }
+                
+                if (filesToCommit.length === 0) {
+                    fixLog('No changes to commit.', 'warning');
+                    btn.textContent = 'No Changes';
+                    return;
+                }
+                
+                fixLog(`Committing ${filesToCommit.length} files...`, 'info');
+                
+                const result = await LiCAdmin.commitMultipleFiles(filesToCommit, `Fix ${fixQueue.size} broken links`);
+                
+                fixLog(`✅ Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
+                
+                // Mark as fixed in cache
+                for (const [url, item] of fixQueue) {
+                    const link = await LinkCache.get(url);
+                    if (link) {
+                        link.fixStatus = 'fixed';
+                        link.fixAction = item.action;
+                        link.fixedAt = new Date().toISOString();
+                        await LinkCache.put(link);
+                    }
+                }
+                
+                fixQueue.clear();
+                document.getElementById('fixCount').textContent = 0;
+                btn.textContent = '✅ Done!';
+                
+                updateCacheStats();
+                renderFixQueue();
+                
+            } catch (e) {
+                fixLog(`Error: ${e.message}`, 'error');
+                btn.textContent = '❌ Failed';
+            }
+        }
+        
+        // ============================================
+        // Cache Management
+        // ============================================
+        async function exportCache() {
+            try {
+                const data = await LinkCache.exportAll();
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `link-cache-${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+            } catch (e) {
+                alert('Export error: ' + e.message);
+            }
+        }
+        
+        async function importCache(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            try {
+                const text = await file.text();
+                const data = JSON.parse(text);
+                const count = await LinkCache.importData(data);
+                alert(`Imported ${count} links.`);
+                updateCacheStats();
+                loadReviewPage(1);
+            } catch (e) {
+                alert('Import error: ' + e.message);
+            }
+            
+            event.target.value = '';
+        }
+        
+        async function clearBrokenFromCache() {
+            if (!confirm('Remove all broken links from cache? (Fixed links will be kept)')) return;
+            const count = await LinkCache.clearBroken();
+            alert(`Removed ${count} broken links.`);
+            updateCacheStats();
+            loadReviewPage(1);
+        }
+        
+        async function clearAllCache() {
+            if (!confirm('Clear ALL cached data? This cannot be undone.')) return;
+            await LinkCache.clear();
+            fixQueue.clear();
+            selectedUrls.clear();
+            alert('Cache cleared.');
+            updateCacheStats();
+            loadReviewPage(1);
+        }
+        
+        async function exportBrokenCSV() {
+            const result = await LinkCache.query({ status: 'broken' }, 100000, 0);
+            let csv = 'URL,Status,Verified,Type,Sources,First Source\n';
+            result.items.forEach(link => {
+                const sources = link.sources || [];
+                csv += `"${link.url}","${link.statusCode}","${link.verified ? 'Yes' : 'No'}","${link.type}","${sources.length}","${sources[0]?.url || ''}"\n`;
             });
             
             const blob = new Blob([csv], { type: 'text/csv' });
@@ -1427,243 +1719,22 @@
             URL.revokeObjectURL(url);
         }
         
-        function clearResults() {
-            if (!confirm('Clear all scan results?')) return;
-            brokenLinks = [];
-            selectedForFix.clear();
-            fixActions = {};
-            localStorage.removeItem('lic_broken_links');
-            renderBrokenLinks();
-        }
-        
-        function markAsVerified(url, isBroken) {
-            if (isBroken) {
-                // Mark as verified broken
-                const link = brokenLinks.find(l => l.url === url);
-                if (link) {
-                    link.verified = true;
-                    link.statusCode = link.statusCode === '?' || link.statusCode === 'ERROR' ? 'MANUAL' : link.statusCode;
-                    link.statusText = 'Manually verified broken';
-                    saveResults();
-                    renderBrokenLinks();
-                }
-            } else {
-                // Remove from broken links list (it's actually OK)
-                brokenLinks = brokenLinks.filter(l => l.url !== url);
-                selectedForFix.delete(url);
-                delete fixActions[url];
-                saveResults();
-                renderBrokenLinks();
-            }
-        }
-        
-        // ============================================
-        // FIX TAB
-        // ============================================
-        function renderFixTab() {
-            const container = document.getElementById('fixLinksContainer');
-            const linksToFix = brokenLinks.filter(l => fixActions[l.url]);
+        async function exportFixedCSV() {
+            const all = await LinkCache.getAll();
+            const fixed = all.filter(l => l.fixStatus === 'fixed');
             
-            if (linksToFix.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <p>&#128736; No links have actions assigned.</p>
-                        <p>Go to "Review &amp; Verify" tab and select an action for links you want to fix.</p>
-                    </div>`;
-                document.getElementById('fixButtons').style.display = 'none';
-                return;
-            }
-            
-            document.getElementById('fixButtons').style.display = 'block';
-            
-            let html = '<h4>Links to Fix</h4>';
-            html += '<table style="width:100%; border-collapse:collapse; font-size:0.9em;">';
-            html += '<tr style="background:#f8f9fa;"><th style="padding:10px; text-align:left; border-bottom:1px solid #ddd;">URL</th><th style="padding:10px; text-align:left; border-bottom:1px solid #ddd;">Action</th><th style="padding:10px; text-align:left; border-bottom:1px solid #ddd;">Instances</th></tr>';
-            
-            linksToFix.forEach(link => {
-                const action = fixActions[link.url];
-                let actionText = action.action;
-                if (action.action === 'replace') {
-                    actionText = `Replace → ${action.replacement}`;
-                } else if (action.action === 'archive') {
-                    actionText = 'Replace → Archive.org';
-                }
-                
-                html += `<tr>
-                    <td style="padding:10px; border-bottom:1px solid #eee; word-break:break-all; font-family:monospace; font-size:0.85em;">${escapeHtml(link.url)}</td>
-                    <td style="padding:10px; border-bottom:1px solid #eee;">${escapeHtml(actionText)}</td>
-                    <td style="padding:10px; border-bottom:1px solid #eee;">${link.sources.length}</td>
-                </tr>`;
+            let csv = 'URL,Fix Action,Fixed At,Sources\n';
+            fixed.forEach(link => {
+                csv += `"${link.url}","${link.fixAction}","${link.fixedAt}","${(link.sources || []).length}"\n`;
             });
             
-            html += '</table>';
-            container.innerHTML = html;
-        }
-        
-        async function previewFixes() {
-            const linksToFix = brokenLinks.filter(l => fixActions[l.url]);
-            if (linksToFix.length === 0) {
-                alert('No links to fix.');
-                return;
-            }
-            
-            const logEl = document.getElementById('fixLog');
-            logEl.innerHTML = '';
-            document.getElementById('fixPreview').style.display = 'block';
-            
-            function fixLog(msg, type = 'info') {
-                const entry = document.createElement('div');
-                entry.className = 'log-entry ' + type;
-                entry.textContent = msg;
-                logEl.appendChild(entry);
-                logEl.scrollTop = logEl.scrollHeight;
-            }
-            
-            fixLog('Analyzing files to update...', 'info');
-            
-            // Collect all unique source files
-            const sourceFiles = new Map();  // filePath -> Set of broken URLs
-            linksToFix.forEach(link => {
-                link.sources.forEach(source => {
-                    const path = source.url.replace(LiCAdmin.CONFIG.SITE_URL, '').replace(/^\//, '');
-                    if (path.endsWith('/')) {
-                        // It's a directory URL, need to find index.html
-                        const indexPath = path + 'index.html';
-                        if (!sourceFiles.has(indexPath)) sourceFiles.set(indexPath, new Set());
-                        sourceFiles.get(indexPath).add(link.url);
-                    } else if (path.endsWith('.html') || path.endsWith('.htm')) {
-                        if (!sourceFiles.has(path)) sourceFiles.set(path, new Set());
-                        sourceFiles.get(path).add(link.url);
-                    } else {
-                        // Assume it needs /index.html
-                        const indexPath = path + '/index.html';
-                        if (!sourceFiles.has(indexPath)) sourceFiles.set(indexPath, new Set());
-                        sourceFiles.get(indexPath).add(link.url);
-                    }
-                });
-            });
-            
-            fixLog(`Found ${sourceFiles.size} files to update.`, 'info');
-            
-            pendingFixes = [];
-            let fileCount = 0;
-            let errorCount = 0;
-            
-            for (const [filePath, brokenUrls] of sourceFiles) {
-                fixLog(`Fetching: ${filePath}...`, 'info');
-                
-                try {
-                    const content = await LiCAdmin.fetchFileFromGithub(filePath);
-                    if (!content) {
-                        fixLog(`⚠️ Could not fetch: ${filePath}`, 'warning');
-                        errorCount++;
-                        continue;
-                    }
-                    
-                    let newContent = content;
-                    let changes = 0;
-                    
-                    brokenUrls.forEach(brokenUrl => {
-                        const action = fixActions[brokenUrl];
-                        if (!action) return;
-                        
-                        if (action.action === 'remove') {
-                            // Remove <a> tags but keep text
-                            const regex = new RegExp(`<a[^>]*href=["']${escapeRegex(brokenUrl)}["'][^>]*>(.*?)</a>`, 'gi');
-                            const before = newContent;
-                            newContent = newContent.replace(regex, '$1');
-                            if (newContent !== before) changes++;
-                        } else if (action.action === 'archive') {
-                            const archiveUrl = `https://web.archive.org/web/${brokenUrl}`;
-                            const regex = new RegExp(`href=["']${escapeRegex(brokenUrl)}["']`, 'gi');
-                            const before = newContent;
-                            newContent = newContent.replace(regex, `href="${archiveUrl}"`);
-                            if (newContent !== before) changes++;
-                        } else if (action.action === 'replace' && action.replacement) {
-                            const regex = new RegExp(`href=["']${escapeRegex(brokenUrl)}["']`, 'gi');
-                            const before = newContent;
-                            newContent = newContent.replace(regex, `href="${action.replacement}"`);
-                            if (newContent !== before) changes++;
-                        }
-                    });
-                    
-                    if (changes > 0 && newContent !== content) {
-                        pendingFixes.push({ path: filePath, content: newContent });
-                        fixLog(`✓ ${filePath}: ${changes} link(s) to fix`, 'success');
-                        fileCount++;
-                    } else {
-                        fixLog(`⚠️ ${filePath}: No changes needed`, 'warning');
-                    }
-                } catch (e) {
-                    fixLog(`✗ Error processing ${filePath}: ${e.message}`, 'error');
-                    errorCount++;
-                }
-            }
-            
-            fixLog('', 'info');
-            fixLog(`Preview complete: ${fileCount} files will be updated, ${errorCount} errors.`, fileCount > 0 ? 'success' : 'warning');
-            
-            document.getElementById('applyFixBtn').disabled = pendingFixes.length === 0;
-        }
-        
-        function escapeRegex(string) {
-            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        }
-        
-        async function applyFixes() {
-            if (pendingFixes.length === 0) {
-                alert('No fixes to apply. Run preview first.');
-                return;
-            }
-            
-            if (!confirm(`This will update ${pendingFixes.length} files on GitHub. Continue?`)) {
-                return;
-            }
-            
-            const btn = document.getElementById('applyFixBtn');
-            btn.disabled = true;
-            btn.textContent = '⏳ Applying...';
-            
-            const logEl = document.getElementById('fixLog');
-            function fixLog(msg, type = 'info') {
-                const entry = document.createElement('div');
-                entry.className = 'log-entry ' + type;
-                entry.textContent = msg;
-                logEl.appendChild(entry);
-                logEl.scrollTop = logEl.scrollHeight;
-            }
-            
-            try {
-                saveCurrentSettings();
-                
-                fixLog('Committing changes to GitHub...', 'info');
-                
-                const files = pendingFixes.map(f => ({
-                    path: f.path,
-                    content: f.content,
-                    isBase64: false
-                }));
-                
-                const result = await LiCAdmin.commitMultipleFiles(files, `Fix ${pendingFixes.length} broken links`);
-                
-                fixLog(`✅ Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
-                fixLog(`Updated ${result.filesCommitted} files.`, 'success');
-                
-                // Remove fixed links from results
-                const fixedUrls = new Set(Object.keys(fixActions));
-                brokenLinks = brokenLinks.filter(l => !fixedUrls.has(l.url));
-                fixActions = {};
-                selectedForFix.clear();
-                pendingFixes = [];
-                saveResults();
-                
-                btn.textContent = '✅ Applied!';
-                
-            } catch (e) {
-                fixLog(`✗ Error: ${e.message}`, 'error');
-                btn.textContent = '❌ Failed';
-                btn.disabled = false;
-            }
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `fixed-links-${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
         }
     </script>
 </body>
