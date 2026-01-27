@@ -178,27 +178,53 @@
         }
         .page-info .file-path { font-family: monospace; color: var(--accent); word-break: break-all; }
         
-        /* Editor */
-        #editor-container { border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden; }
+        /* Editor - matches NewPost.html */
+        #editor-container {
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
         
         .editor-toolbar {
             display: flex;
             flex-wrap: wrap;
-            gap: 3px;
-            padding: 8px;
-            background: var(--bg-tertiary);
+            gap: 5px;
+            padding: 10px;
+            background: var(--bg-secondary);
             border-bottom: 1px solid var(--border-color);
         }
         
-        .editor-toolbar button, .editor-toolbar select {
+        .editor-toolbar button {
             padding: 6px 10px;
             border: 1px solid var(--border-color);
             background: var(--bg-primary);
-            border-radius: 3px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            min-width: 32px;
+            transition: all 0.15s;
         }
-        .editor-toolbar button:hover { background: var(--border-color); }
+        
+        .editor-toolbar button:hover { background: var(--bg-tertiary); }
+        .editor-toolbar button.active { background: var(--accent-light); border-color: var(--accent); }
+        
+        .editor-toolbar select {
+            padding: 6px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            background: var(--bg-primary);
+            cursor: pointer;
+        }
+        
+        .editor-toolbar .separator {
+            width: 1px;
+            background: var(--border-color);
+            margin: 0 5px;
+            align-self: stretch;
+        }
         
         .editor-tabs { display: flex; border-bottom: 1px solid var(--border-color); }
         .editor-tab {
@@ -208,26 +234,37 @@
             font-size: 0.9rem;
             border-bottom: 2px solid transparent;
             color: var(--text-secondary);
+            transition: all 0.15s;
         }
         .editor-tab:hover { color: var(--accent); }
         .editor-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
         
         #editor-content {
-            min-height: 400px;
+            flex: 1;
+            min-height: 350px;
             max-height: 600px;
             padding: 20px;
             outline: none;
             font-size: 1rem;
-            line-height: 1.8;
+            line-height: 1.7;
             overflow-y: auto;
         }
+        #editor-content:focus { outline: none; }
         #editor-content:empty::before { content: attr(placeholder); color: var(--text-muted); pointer-events: none; }
         #editor-content p { margin-bottom: 1em; }
         #editor-content h1, #editor-content h2, #editor-content h3, #editor-content h4 { margin: 1em 0 0.5em; }
         #editor-content ul, #editor-content ol { margin-left: 1.5em; margin-bottom: 1em; }
-        #editor-content blockquote { border-left: 4px solid var(--accent); padding-left: 1em; margin: 1em 0; color: var(--text-secondary); }
+        #editor-content blockquote { border-left: 4px solid var(--accent); padding-left: 1em; margin: 1em 0; color: var(--text-secondary); font-style: italic; }
         #editor-content a { color: var(--accent); }
         #editor-content img { max-width: 100%; height: auto; display: block; margin: 1em 0; }
+        #editor-content pre { background: var(--bg-tertiary); padding: 15px; border-radius: 4px; overflow-x: auto; font-family: monospace; }
+        #editor-content code { background: var(--bg-tertiary); padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        #editor-content hr { border: none; border-top: 1px solid var(--border-color); margin: 1.5em 0; }
+        #editor-content iframe, #editor-content embed, #editor-content video, #editor-content audio {
+            max-width: 100%;
+            margin: 1em 0;
+            display: block;
+        }
         
         #source-editor, #full-source-editor {
             width: 100%;
@@ -240,6 +277,67 @@
             resize: vertical;
             background: #1e1e1e;
             color: #d4d4d4;
+        }
+        
+        /* Embed Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .modal-overlay.hidden { display: none; }
+        .modal {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .modal-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header h3 { margin: 0; font-size: 1.1rem; }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            padding: 0;
+            line-height: 1;
+        }
+        .modal-close:hover { color: var(--text-primary); }
+        .modal-body { padding: 20px; flex: 1; overflow-y: auto; }
+        .modal-body textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            resize: vertical;
+        }
+        .modal-body textarea:focus { outline: none; border-color: var(--accent); }
+        .modal-body p { margin-bottom: 10px; color: var(--text-secondary); font-size: 0.9rem; }
+        .modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
         }
         
         /* Image Upload - matches NewPost.html */
@@ -452,22 +550,29 @@
                         <div class="editor-toolbar">
                             <select onchange="execFormat('formatBlock', this.value); this.selectedIndex=0;">
                                 <option value="">Format</option>
+                                <option value="h1">Heading 1</option>
                                 <option value="h2">Heading 2</option>
                                 <option value="h3">Heading 3</option>
                                 <option value="h4">Heading 4</option>
                                 <option value="p">Paragraph</option>
                                 <option value="pre">Code Block</option>
                             </select>
+                            <div class="separator"></div>
                             <button type="button" onclick="execFormat('bold')" title="Bold"><b>B</b></button>
                             <button type="button" onclick="execFormat('italic')" title="Italic"><i>I</i></button>
                             <button type="button" onclick="execFormat('underline')" title="Underline"><u>U</u></button>
                             <button type="button" onclick="execFormat('strikeThrough')" title="Strikethrough"><s>S</s></button>
-                            <button type="button" onclick="execFormat('insertUnorderedList')" title="Bullet List">&bull; List</button>
-                            <button type="button" onclick="execFormat('insertOrderedList')" title="Numbered List">1. List</button>
-                            <button type="button" onclick="execFormat('formatBlock', 'blockquote')" title="Quote">&ldquo;</button>
-                            <button type="button" onclick="insertLink()" title="Insert Link">Link</button>
-                            <button type="button" onclick="insertImageUrl()" title="Insert Image URL">Img</button>
-                            <button type="button" onclick="execFormat('removeFormat')" title="Clear Formatting">&times;</button>
+                            <div class="separator"></div>
+                            <button type="button" onclick="execFormat('insertUnorderedList')" title="Bullet List">&#8226;</button>
+                            <button type="button" onclick="execFormat('insertOrderedList')" title="Numbered List">1.</button>
+                            <button type="button" onclick="execFormat('formatBlock', 'blockquote')" title="Quote">&#8220;</button>
+                            <button type="button" onclick="execFormat('insertHorizontalRule')" title="Horizontal Rule">&#8213;</button>
+                            <div class="separator"></div>
+                            <button type="button" onclick="insertLink()" title="Insert Link">&#128279;</button>
+                            <button type="button" onclick="insertImageUrl()" title="Insert Image URL">&#128247;</button>
+                            <button type="button" onclick="showEmbedModal()" title="Embed HTML">&#60;/&#62;</button>
+                            <div class="separator"></div>
+                            <button type="button" onclick="execFormat('removeFormat')" title="Clear Formatting">&#10005;</button>
                         </div>
                         <div id="editor-content" contenteditable="true" placeholder="Write your content here..."></div>
                     </div>
@@ -557,6 +662,24 @@
                 </ul>
             </div>
         </aside>
+    </div>
+    
+    <!-- Embed HTML Modal -->
+    <div class="modal-overlay hidden" id="embedModal" onclick="if(event.target === this) closeEmbedModal()">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Embed HTML</h3>
+                <button class="modal-close" onclick="closeEmbedModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Paste your HTML code below. This can include iframes, embeds, videos, audio players, or any other HTML content.</p>
+                <textarea id="embedCode" placeholder="<iframe src=&quot;...&quot;></iframe>&#10;&#10;or any HTML code..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeEmbedModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="insertEmbed()">Insert</button>
+            </div>
+        </div>
     </div>
     
     <footer>
@@ -918,6 +1041,70 @@
             const url = prompt('Enter image URL:', 'https://');
             if (url) document.execCommand('insertImage', false, url);
         }
+        
+        // ============================================
+        // Embed HTML Modal
+        // ============================================
+        function showEmbedModal() {
+            document.getElementById('embedModal').classList.remove('hidden');
+            document.getElementById('embedCode').value = '';
+            document.getElementById('embedCode').focus();
+        }
+        
+        function closeEmbedModal() {
+            document.getElementById('embedModal').classList.add('hidden');
+        }
+        
+        function insertEmbed() {
+            const code = document.getElementById('embedCode').value.trim();
+            if (!code) {
+                alert('Please enter some HTML code to embed.');
+                return;
+            }
+            
+            const editor = document.getElementById('editor-content');
+            editor.focus();
+            
+            // Create a wrapper div for the embed
+            const wrapper = document.createElement('div');
+            wrapper.className = 'embed-wrapper';
+            wrapper.innerHTML = code;
+            
+            // Get current selection
+            const selection = window.getSelection();
+            
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                if (editor.contains(range.commonAncestorContainer)) {
+                    range.deleteContents();
+                    range.insertNode(wrapper);
+                    
+                    // Move cursor after the embed
+                    range.setStartAfter(wrapper);
+                    range.setEndAfter(wrapper);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                } else {
+                    editor.appendChild(wrapper);
+                }
+            } else {
+                editor.appendChild(wrapper);
+            }
+            
+            // Add a line break after for continued typing
+            const br = document.createElement('br');
+            wrapper.after(br);
+            
+            syncToSource();
+            closeEmbedModal();
+        }
+        
+        // Handle Escape key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeEmbedModal();
+            }
+        });
         
         // ============================================
         // Image Handling (matches NewPost.html)
