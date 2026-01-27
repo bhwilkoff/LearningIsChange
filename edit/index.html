@@ -637,7 +637,11 @@
             <!-- Update Options -->
             <div class="widget hidden" id="updateOptions">
                 <h3>Update Options</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:15px;">Select which files to update when saving:</p>
                 <ul>
+                    <li><label class="checkbox-label"><input type="checkbox" id="updateMonthArchive" checked> Update month archive</label></li>
+                    <li><label class="checkbox-label"><input type="checkbox" id="updateYearArchive" checked> Update year archive</label></li>
+                    <li><label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feeds</label></li>
                     <li><label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database</label></li>
                     <li><label class="checkbox-label"><input type="checkbox" id="updateChangelog" checked> Update changelog</label></li>
                 </ul>
@@ -1045,7 +1049,38 @@
         // ============================================
         // Embed HTML Modal
         // ============================================
+        let savedSelection = null;
+        let savedSelectionInEditor = false;
+        
+        function saveSelection() {
+            const editor = document.getElementById('editor-content');
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                savedSelection = range.cloneRange();
+                // Check if the selection is actually inside the editor
+                savedSelectionInEditor = editor.contains(range.commonAncestorContainer);
+            } else {
+                savedSelection = null;
+                savedSelectionInEditor = false;
+            }
+        }
+        
+        function restoreSelection() {
+            if (savedSelection && savedSelectionInEditor) {
+                const editor = document.getElementById('editor-content');
+                editor.focus();
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(savedSelection);
+                return true;
+            }
+            return false;
+        }
+        
         function showEmbedModal() {
+            // Save the current cursor position before opening modal
+            saveSelection();
             document.getElementById('embedModal').classList.remove('hidden');
             document.getElementById('embedCode').value = '';
             document.getElementById('embedCode').focus();
@@ -1053,6 +1088,8 @@
         
         function closeEmbedModal() {
             document.getElementById('embedModal').classList.add('hidden');
+            savedSelection = null;
+            savedSelectionInEditor = false;
         }
         
         function insertEmbed() {
@@ -1063,19 +1100,24 @@
             }
             
             const editor = document.getElementById('editor-content');
-            editor.focus();
             
             // Create a wrapper div for the embed
             const wrapper = document.createElement('div');
             wrapper.className = 'embed-wrapper';
+            wrapper.style.margin = '1em 0';
             wrapper.innerHTML = code;
             
-            // Get current selection
-            const selection = window.getSelection();
+            // Close modal first
+            document.getElementById('embedModal').classList.add('hidden');
             
-            if (selection.rangeCount > 0) {
-                const range = selection.getRangeAt(0);
-                if (editor.contains(range.commonAncestorContainer)) {
+            // Try to restore the saved selection
+            const restored = restoreSelection();
+            
+            if (restored) {
+                // Insert at the restored cursor position
+                const selection = window.getSelection();
+                if (selection.rangeCount > 0) {
+                    const range = selection.getRangeAt(0);
                     range.deleteContents();
                     range.insertNode(wrapper);
                     
@@ -1084,19 +1126,31 @@
                     range.setEndAfter(wrapper);
                     selection.removeAllRanges();
                     selection.addRange(range);
-                } else {
-                    editor.appendChild(wrapper);
                 }
             } else {
+                // No saved position or not in editor - append to end
+                editor.focus();
                 editor.appendChild(wrapper);
             }
             
-            // Add a line break after for continued typing
-            const br = document.createElement('br');
-            wrapper.after(br);
+            // Add a paragraph after for continued typing
+            const p = document.createElement('p');
+            p.innerHTML = '<br>';
+            wrapper.after(p);
+            
+            // Move cursor into the new paragraph
+            const selection = window.getSelection();
+            const newRange = document.createRange();
+            newRange.setStart(p, 0);
+            newRange.collapse(true);
+            selection.removeAllRanges();
+            selection.addRange(newRange);
             
             syncToSource();
-            closeEmbedModal();
+            
+            // Clear saved selection
+            savedSelection = null;
+            savedSelectionInEditor = false;
         }
         
         // Handle Escape key to close modal
@@ -1290,11 +1344,28 @@
                 const files = [];
                 const newHtml = buildUpdatedHtml();
                 const newTitle = document.getElementById('pageTitle').value;
+                const newExcerpt = document.getElementById('pageExcerpt').value || '';
+                const newContent = document.getElementById('source-editor').value;
+                
+                // Build post data object for archive updates
+                const postData = {
+                    title: newTitle,
+                    date: currentPage.year && currentPage.month && currentPage.day 
+                        ? `${currentPage.year}-${currentPage.month}-${currentPage.day}` 
+                        : null,
+                    content: newContent,
+                    excerpt: newExcerpt || newContent.replace(/<[^>]+>/g, '').substring(0, 200) + '...',
+                    url: currentPage.url,
+                    postUrl: currentPage.fullUrl,
+                    year: currentPage.year,
+                    month: currentPage.month,
+                    day: currentPage.day
+                };
                 
                 // 1. Main page file
                 log('Preparing page update...', 'info');
                 files.push({ path: currentPage.path, content: newHtml });
-                updateProgress(10, 'Preparing files...');
+                updateProgress(5, 'Preparing files...');
                 
                 // 2. Upload images
                 if (uploadedImages.length > 0) {
@@ -1308,29 +1379,51 @@
                         log(`  Prepared: ${imgPath}`, 'info');
                     }
                 }
-                updateProgress(30, 'Processing images...');
+                updateProgress(15, 'Processing images...');
                 
-                // 3. Update database if checked
+                // 3. Update month archive if checked
+                if (document.getElementById('updateMonthArchive').checked && currentPage.year && currentPage.month) {
+                    log('Updating month archive...', 'info');
+                    await updateMonthArchive(files, postData);
+                }
+                updateProgress(30, 'Updating archives...');
+                
+                // 4. Update year archive if checked
+                if (document.getElementById('updateYearArchive').checked && currentPage.year) {
+                    log('Updating year archive...', 'info');
+                    await updateYearArchive(files, postData);
+                }
+                updateProgress(45, 'Updating archives...');
+                
+                // 5. Update RSS feeds if checked
+                if (document.getElementById('updateRssFeed').checked && postData.date) {
+                    log('Updating RSS feeds...', 'info');
+                    await updateRssFeeds(files, postData);
+                }
+                updateProgress(60, 'Updating RSS feeds...');
+                
+                // 6. Update database if checked
                 if (document.getElementById('updateDatabase').checked && currentPage.year) {
                     log('Updating database...', 'info');
                     await updateDatabase(files, newTitle, newHtml);
                 }
-                updateProgress(60, 'Updating database...');
+                updateProgress(75, 'Updating database...');
                 
-                // 4. Update changelog if checked
+                // 7. Update changelog if checked
                 if (document.getElementById('updateChangelog').checked) {
                     log('Updating changelog...', 'info');
                     await updateChangelog(files, newTitle);
                 }
-                updateProgress(80, 'Updating changelog...');
+                updateProgress(90, 'Finalizing...');
                 
-                // 5. Commit all files
+                // 8. Commit all files
                 log(`Committing ${files.length} file(s)...`, 'info');
                 const commitMessage = `Edit: ${newTitle || currentPage.path}`;
                 const result = await LiCAdmin.commitMultipleFiles(files, commitMessage);
                 
                 updateProgress(100, 'Complete!');
-                log(`Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
+                log(`✓ Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
+                log(`✓ Updated ${files.length} file(s)`, 'success');
                 
                 // Update state
                 currentPage.originalHtml = newHtml;
@@ -1454,6 +1547,207 @@
             } catch (e) {
                 log(`Could not update changelog: ${e.message}`, 'warning');
             }
+        }
+        
+        // ============================================
+        // Archive Update Functions
+        // ============================================
+        async function updateMonthArchive(files, postData) {
+            if (!postData.year || !postData.month) return;
+            
+            const archivePath = `${postData.year}/${postData.month}/index.html`;
+            
+            try {
+                const existingHtml = await LiCAdmin.fetchFileFromGithub(archivePath);
+                
+                if (existingHtml) {
+                    // Update the existing post in the archive
+                    let updatedHtml = updatePostInArchive(existingHtml, postData);
+                    files.push({ path: archivePath, content: updatedHtml });
+                    log(`  ✓ Updated month archive: ${postData.year}/${postData.month}/`, 'success');
+                } else {
+                    log(`  Month archive not found, skipping`, 'warning');
+                }
+            } catch (e) {
+                log(`  Could not update month archive: ${e.message}`, 'warning');
+            }
+        }
+        
+        async function updateYearArchive(files, postData) {
+            if (!postData.year) return;
+            
+            const archivePath = `${postData.year}/index.html`;
+            
+            try {
+                const existingHtml = await LiCAdmin.fetchFileFromGithub(archivePath);
+                
+                if (existingHtml) {
+                    // Update the existing post in the archive
+                    let updatedHtml = updatePostInArchive(existingHtml, postData);
+                    files.push({ path: archivePath, content: updatedHtml });
+                    log(`  ✓ Updated year archive: ${postData.year}/`, 'success');
+                } else {
+                    log(`  Year archive not found, skipping`, 'warning');
+                }
+            } catch (e) {
+                log(`  Could not update year archive: ${e.message}`, 'warning');
+            }
+        }
+        
+        function updatePostInArchive(archiveHtml, postData) {
+            // Find the article for this post by its URL and update its content
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(archiveHtml, 'text/html');
+            
+            // Look for article with link matching the post URL
+            const articles = doc.querySelectorAll('article');
+            let updated = false;
+            
+            for (const article of articles) {
+                const link = article.querySelector('a[href*="' + postData.url + '"], a[href$="' + postData.url + '"]');
+                if (link) {
+                    // Update title
+                    const titleEl = article.querySelector('.entry-title, h2');
+                    if (titleEl) {
+                        const titleLink = titleEl.querySelector('a');
+                        if (titleLink) {
+                            titleLink.textContent = postData.title;
+                        } else {
+                            titleEl.textContent = postData.title;
+                        }
+                    }
+                    
+                    // Update content
+                    const contentEl = article.querySelector('.entry-content');
+                    if (contentEl && postData.content) {
+                        contentEl.innerHTML = postData.content;
+                    }
+                    
+                    // Update modified date if present
+                    const modifiedEl = article.querySelector('time.updated');
+                    if (modifiedEl) {
+                        modifiedEl.setAttribute('datetime', new Date().toISOString());
+                    }
+                    
+                    updated = true;
+                    break;
+                }
+            }
+            
+            if (updated) {
+                return '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
+            }
+            
+            // If post not found in archive, return original
+            return archiveHtml;
+        }
+        
+        // ============================================
+        // RSS Feed Update Functions
+        // ============================================
+        async function updateRssFeeds(files, postData) {
+            // Update main feed (feed/index.xml)
+            await updateRssFeed(files, postData, 'feed/index.xml', false);
+            
+            // Update full content feed (feed/full.xml)
+            await updateRssFeed(files, postData, 'feed/full.xml', true);
+        }
+        
+        async function updateRssFeed(files, postData, feedPath, includeFullContent) {
+            try {
+                const existingRss = await LiCAdmin.fetchFileFromGithub(feedPath);
+                
+                if (!existingRss) {
+                    log(`  RSS feed not found: ${feedPath}, skipping`, 'warning');
+                    return;
+                }
+                
+                // Parse existing RSS and find the item for this post
+                let updatedRss = existingRss;
+                const postUrl = postData.postUrl || postData.url;
+                
+                // Look for existing item with matching link or guid
+                const linkPattern = new RegExp(`<link>\\s*${escapeRegExp(postUrl)}\\s*</link>`, 'i');
+                const guidPattern = new RegExp(`<guid[^>]*>\\s*${escapeRegExp(postUrl)}\\s*</guid>`, 'i');
+                
+                if (linkPattern.test(existingRss) || guidPattern.test(existingRss)) {
+                    // Update existing item
+                    updatedRss = updateRssItem(existingRss, postData, includeFullContent);
+                    log(`  ✓ Updated RSS feed: ${feedPath}`, 'success');
+                } else {
+                    log(`  Post not found in ${feedPath}, skipping`, 'info');
+                    return;
+                }
+                
+                // Update lastBuildDate
+                const now = new Date().toUTCString();
+                updatedRss = updatedRss.replace(
+                    /<lastBuildDate>.*?<\/lastBuildDate>/,
+                    `<lastBuildDate>${now}</lastBuildDate>`
+                );
+                
+                files.push({ path: feedPath, content: updatedRss });
+                
+            } catch (e) {
+                log(`  Could not update RSS feed: ${e.message}`, 'warning');
+                console.error('RSS update error:', e);
+            }
+        }
+        
+        function updateRssItem(rss, postData, includeFullContent) {
+            const postUrl = postData.postUrl || postData.url;
+            
+            // Find the item block containing this post's URL
+            // RSS items are between <item> and </item> tags
+            const itemRegex = /<item>[\s\S]*?<\/item>/g;
+            
+            return rss.replace(itemRegex, (itemBlock) => {
+                // Check if this item matches our post
+                if (itemBlock.includes(postUrl)) {
+                    // Update title
+                    itemBlock = itemBlock.replace(
+                        /<title>.*?<\/title>/,
+                        `<title>${escapeXml(postData.title)}</title>`
+                    );
+                    
+                    // Update description (excerpt)
+                    const excerpt = postData.excerpt || postData.content.replace(/<[^>]+>/g, '').substring(0, 200) + '...';
+                    if (includeFullContent) {
+                        itemBlock = itemBlock.replace(
+                            /<description>[\s\S]*?<\/description>/,
+                            `<description><![CDATA[${postData.content}]]></description>`
+                        );
+                    } else {
+                        itemBlock = itemBlock.replace(
+                            /<description>[\s\S]*?<\/description>/,
+                            `<description><![CDATA[${excerpt}]]></description>`
+                        );
+                    }
+                    
+                    // Update content:encoded if present
+                    if (itemBlock.includes('<content:encoded>')) {
+                        itemBlock = itemBlock.replace(
+                            /<content:encoded>[\s\S]*?<\/content:encoded>/,
+                            `<content:encoded><![CDATA[${postData.content}]]></content:encoded>`
+                        );
+                    }
+                }
+                return itemBlock;
+            });
+        }
+        
+        function escapeXml(text) {
+            if (!text) return '';
+            return text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&apos;');
+        }
+        
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
         
         // ============================================
