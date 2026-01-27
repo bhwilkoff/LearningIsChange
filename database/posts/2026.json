@@ -3,6 +3,21 @@
   "count": 5,
   "posts": [
     {
+      "title": "Hope is Ours",
+      "url": "/2026/01/27/hope-is-ours/",
+      "date_published": "2026-01-27",
+      "excerpt": "",
+      "categories": [
+        "inspiration"
+      ],
+      "tags": [
+        "fascism",
+        "ice",
+        "typewriter"
+      ],
+      "content_preview": ""
+    },
+    {
       "title": "The Testament of Ann Lee",
       "url": "/2026/01/26/the-testament-of-ann-lee/",
       "date_published": "2026-01-26",
@@ -432,5 +447,5 @@
       ]
     }
   ],
-  "post_count": 10
+  "post_count": 11
 }
