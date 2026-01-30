@@ -873,6 +873,8 @@
                 
                 if (!response.ok) {
                     const error = await response.json().catch(() => ({}));
+                    console.error('GitHub API Error:', response.status, error);
+                    
                     // Provide more helpful error messages
                     if (response.status === 401) {
                         throw new Error('Authentication failed. Please check your GitHub token is valid and has not expired.');
@@ -880,9 +882,14 @@
                         if (error.message?.includes('rate limit')) {
                             throw new Error('GitHub API rate limit exceeded. Please wait a few minutes and try again.');
                         }
-                        throw new Error('Access denied. Check your token has the required permissions (repo scope).');
-                    } else if (response.status === 422 && error.message?.includes('too large')) {
-                        throw new Error('Content too large for GitHub API. Try with smaller changes or fewer images.');
+                        throw new Error(`Access denied: ${error.message || 'Check your token has the required permissions (repo scope).'}`);
+                    } else if (response.status === 422) {
+                        // More specific 422 error handling
+                        const errMsg = error.message || '';
+                        if (errMsg.includes('too large')) {
+                            throw new Error('Content too large for GitHub API. Uncheck some update options (RSS, archives) and try again.');
+                        }
+                        throw new Error(`GitHub validation error: ${errMsg || 'Unknown validation error'}`);
                     }
                     throw new Error(error.message || `GitHub API error: ${response.status}`);
                 }
@@ -946,11 +953,20 @@
                             content = arrayBufferToBase64(bytes);
                         }
                         
-                        const blobData = await githubAPI(`${repoPath}/git/blobs`, {
-                            method: 'POST',
-                            body: JSON.stringify({ content, encoding: 'base64' })
-                        });
-                        treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobData.sha });
+                        // Log file size for debugging
+                        const sizeKB = Math.round(content.length / 1024);
+                        console.log(`Creating blob for ${file.path} (${sizeKB} KB base64)`);
+                        
+                        try {
+                            const blobData = await githubAPI(`${repoPath}/git/blobs`, {
+                                method: 'POST',
+                                body: JSON.stringify({ content, encoding: 'base64' })
+                            });
+                            treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobData.sha });
+                        } catch (blobError) {
+                            // If this specific blob fails, throw with the filename
+                            throw new Error(`Failed to create blob for "${file.path}" (${sizeKB} KB): ${blobError.message}`);
+                        }
                     }
                     
                     // Create new tree
@@ -1954,6 +1970,27 @@
                 
                 // 8. Commit all files
                 log(`Committing ${files.length} file(s)...`, 'info');
+                
+                // Log file sizes and warn about large files
+                const MAX_FILE_SIZE_KB = 1500; // 1.5MB warning threshold
+                let hasLargeFile = false;
+                
+                for (const file of files) {
+                    const contentLength = file.isBase64 ? file.content.length : file.content.length;
+                    const sizeKB = Math.round(contentLength / 1024);
+                    
+                    if (sizeKB > MAX_FILE_SIZE_KB) {
+                        log(`  ⚠️ ${file.path} (~${sizeKB} KB) - LARGE FILE`, 'warning');
+                        hasLargeFile = true;
+                    } else {
+                        log(`  • ${file.path} (~${sizeKB} KB)`, 'info');
+                    }
+                }
+                
+                if (hasLargeFile) {
+                    log('Large files detected. If commit fails, try unchecking RSS/archive options.', 'warning');
+                }
+                
                 const commitMessage = `Edit: ${newTitle || currentPage.path}`;
                 const result = await LiCAdmin.commitMultipleFiles(files, commitMessage);
                 
