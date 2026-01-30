@@ -847,6 +847,12 @@
                     }
                     throw new Error(error.message || `GitHub API error: ${response.status}`);
                 }
+                
+                // Handle empty responses (like 204 No Content from workflow dispatch)
+                const contentType = response.headers.get('content-type');
+                if (response.status === 204 || !contentType || !contentType.includes('application/json')) {
+                    return { success: true };
+                }
                 return response.json();
             }
             
@@ -2209,12 +2215,7 @@
                     triggerRssWorkflow = true;
                     rssWorkflowParams = {
                         post_url: postUrl,
-                        post_title: title,
-                        post_date: date,
-                        post_content: btoa(unescape(encodeURIComponent(content))),
-                        post_excerpt: btoa(unescape(encodeURIComponent(excerpt))),
-                        update_full_feed: 'true',
-                        update_index_feed: 'false' // Already updated via API
+                        post_year: year
                     };
                 }
                 
