@@ -1051,7 +1051,23 @@
                 }
             }
             
-            return { CONFIG, getSettings, saveSettings, githubAPI, testConnection, commitMultipleFiles, createBlobRaw, fetchDatabase, fetchPostsByYear, fetchFileFromGithub, slugify, formatDate, arrayBufferToBase64 };
+            // Trigger a GitHub Actions workflow
+            async function triggerWorkflow(workflowFile, inputs = {}) {
+                const settings = getSettings();
+                const endpoint = `/repos/${settings.repoOwner}/${settings.repoName}/actions/workflows/${workflowFile}/dispatches`;
+                
+                await githubAPI(endpoint, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        ref: settings.branch,
+                        inputs: inputs
+                    })
+                });
+                
+                return { success: true };
+            }
+            
+            return { CONFIG, getSettings, saveSettings, githubAPI, testConnection, commitMultipleFiles, createBlobRaw, triggerWorkflow, fetchDatabase, fetchPostsByYear, fetchFileFromGithub, slugify, formatDate, arrayBufferToBase64 };
         })();
 
         // ============================================
@@ -2177,20 +2193,29 @@
                 
                 updateProgress(65, 'Updating RSS feeds...');
                 
+                let triggerRssWorkflow = false;
+                let rssWorkflowParams = null;
+                
                 if (document.getElementById('updateRssFeed').checked) {
-                    // Update summary feed (feed/index.xml)
+                    // Update summary feed (feed/index.xml) - small enough for API
                     const rssUpdate = await generateRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
                     if (rssUpdate) {
                         generatedFiles['feed/index.xml'] = rssUpdate;
                         log(`✓ Updated RSS feed: feed/index.xml`, 'success');
                     }
                     
-                    // Update full content feed (feed/full.xml)
-                    const fullRssUpdate = await generateFullRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
-                    if (fullRssUpdate) {
-                        generatedFiles['feed/full.xml'] = fullRssUpdate;
-                        log(`✓ Updated RSS feed: feed/full.xml`, 'success');
-                    }
+                    // full.xml is too large (40MB+) for GitHub API - trigger workflow instead
+                    log(`  Will trigger GitHub Action to update feed/full.xml`, 'info');
+                    triggerRssWorkflow = true;
+                    rssWorkflowParams = {
+                        post_url: postUrl,
+                        post_title: title,
+                        post_date: date,
+                        post_content: btoa(unescape(encodeURIComponent(content))),
+                        post_excerpt: btoa(unescape(encodeURIComponent(excerpt))),
+                        update_full_feed: 'true',
+                        update_index_feed: 'false' // Already updated via API
+                    };
                 }
                 
                 updateProgress(80, 'Updating database...');
@@ -3466,6 +3491,17 @@ ${siteComponents.head}
                 updateProgress(50, 'Uploading files...');
                 
                 const result = await LiCAdmin.commitMultipleFiles(files, `New post: ${document.getElementById('postTitle').value}`);
+                
+                // Trigger RSS workflow if needed
+                if (triggerRssWorkflow && rssWorkflowParams) {
+                    log('Triggering GitHub Action to update RSS feeds...', 'info');
+                    try {
+                        await LiCAdmin.triggerWorkflow('update-rss.yml', rssWorkflowParams);
+                        log('✓ RSS update workflow triggered', 'success');
+                    } catch (workflowError) {
+                        log(`⚠️ Could not trigger RSS workflow: ${workflowError.message}`, 'warning');
+                    }
+                }
                 
                 updateProgress(100, 'Published successfully!');
                 log(`✅ Published! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
