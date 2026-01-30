@@ -1,0 +1,190 @@
+name: Update RSS Feeds
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_url:
+        description: 'Full URL of the post that was edited'
+        required: true
+        type: string
+      post_title:
+        description: 'Title of the post'
+        required: true
+        type: string
+      post_date:
+        description: 'Post date (YYYY-MM-DD)'
+        required: true
+        type: string
+      post_content:
+        description: 'Post content (HTML) - base64 encoded to handle special characters'
+        required: true
+        type: string
+      post_excerpt:
+        description: 'Post excerpt (plain text) - base64 encoded'
+        required: false
+        type: string
+      update_full_feed:
+        description: 'Update full.xml archive feed'
+        required: false
+        type: boolean
+        default: true
+      update_index_feed:
+        description: 'Update index.xml (recent posts feed)'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  update-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Decode inputs and update RSS feeds
+        run: |
+          # Decode base64 inputs
+          POST_CONTENT=$(echo "${{ inputs.post_content }}" | base64 -d)
+          POST_EXCERPT="${{ inputs.post_excerpt }}"
+          if [ -n "$POST_EXCERPT" ]; then
+            POST_EXCERPT=$(echo "$POST_EXCERPT" | base64 -d)
+          fi
+          
+          # Create Node.js script to update RSS
+          cat > update-rss.js << 'SCRIPT_EOF'
+          const fs = require('fs');
+          
+          const postUrl = process.env.POST_URL;
+          const postTitle = process.env.POST_TITLE;
+          const postDate = process.env.POST_DATE;
+          const postContent = process.env.POST_CONTENT;
+          const postExcerpt = process.env.POST_EXCERPT || postContent.replace(/<[^>]+>/g, '').substring(0, 200) + '...';
+          const updateFullFeed = process.env.UPDATE_FULL_FEED === 'true';
+          const updateIndexFeed = process.env.UPDATE_INDEX_FEED === 'true';
+          
+          function escapeXml(str) {
+            return str
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#39;');
+          }
+          
+          function updateRssItem(rssContent, includeFullContent) {
+            // Find the item block containing this post's URL
+            const itemRegex = /<item>[\s\S]*?<\/item>/g;
+            let found = false;
+            
+            const updatedRss = rssContent.replace(itemRegex, (itemBlock) => {
+              if (itemBlock.includes(postUrl)) {
+                found = true;
+                console.log(`Found post in feed: ${postUrl}`);
+                
+                // Update title
+                itemBlock = itemBlock.replace(
+                  /<title>.*?<\/title>/,
+                  `<title>${escapeXml(postTitle)}</title>`
+                );
+                
+                // Update description
+                if (includeFullContent) {
+                  itemBlock = itemBlock.replace(
+                    /<description>[\s\S]*?<\/description>/,
+                    `<description><![CDATA[${postContent}]]></description>`
+                  );
+                } else {
+                  itemBlock = itemBlock.replace(
+                    /<description>[\s\S]*?<\/description>/,
+                    `<description><![CDATA[${postExcerpt}]]></description>`
+                  );
+                }
+                
+                // Update content:encoded if present
+                if (itemBlock.includes('<content:encoded>')) {
+                  itemBlock = itemBlock.replace(
+                    /<content:encoded>[\s\S]*?<\/content:encoded>/,
+                    `<content:encoded><![CDATA[${postContent}]]></content:encoded>`
+                  );
+                }
+              }
+              return itemBlock;
+            });
+            
+            if (!found) {
+              console.log(`Post not found in feed: ${postUrl}`);
+            }
+            
+            // Update lastBuildDate
+            const now = new Date().toUTCString();
+            return updatedRss.replace(
+              /<lastBuildDate>.*?<\/lastBuildDate>/,
+              `<lastBuildDate>${now}</lastBuildDate>`
+            );
+          }
+          
+          // Update full.xml if requested
+          if (updateFullFeed) {
+            const fullFeedPath = 'feed/full.xml';
+            if (fs.existsSync(fullFeedPath)) {
+              console.log('Updating feed/full.xml...');
+              let fullFeed = fs.readFileSync(fullFeedPath, 'utf8');
+              fullFeed = updateRssItem(fullFeed, true);
+              fs.writeFileSync(fullFeedPath, fullFeed, 'utf8');
+              console.log('feed/full.xml updated successfully');
+            } else {
+              console.log('feed/full.xml not found, skipping');
+            }
+          }
+          
+          // Update index.xml if requested
+          if (updateIndexFeed) {
+            const indexFeedPath = 'feed/index.xml';
+            if (fs.existsSync(indexFeedPath)) {
+              console.log('Updating feed/index.xml...');
+              let indexFeed = fs.readFileSync(indexFeedPath, 'utf8');
+              indexFeed = updateRssItem(indexFeed, false);
+              fs.writeFileSync(indexFeedPath, indexFeed, 'utf8');
+              console.log('feed/index.xml updated successfully');
+            } else {
+              console.log('feed/index.xml not found, skipping');
+            }
+          }
+          
+          console.log('RSS update complete');
+          SCRIPT_EOF
+          
+          # Run the script
+          POST_URL="${{ inputs.post_url }}" \
+          POST_TITLE="${{ inputs.post_title }}" \
+          POST_DATE="${{ inputs.post_date }}" \
+          POST_CONTENT="$POST_CONTENT" \
+          POST_EXCERPT="$POST_EXCERPT" \
+          UPDATE_FULL_FEED="${{ inputs.update_full_feed }}" \
+          UPDATE_INDEX_FEED="${{ inputs.update_index_feed }}" \
+          node update-rss.js
+          
+          # Clean up
+          rm update-rss.js
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          
+          # Check if there are changes
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add feed/full.xml feed/index.xml 2>/dev/null || true
+            git commit -m "Update RSS feeds for: ${{ inputs.post_title }}"
+            git push
+            echo "RSS feeds updated and pushed successfully"
+          fi
