@@ -2842,10 +2842,10 @@
       },
       "date_published": "2007-01-31T12:00:00Z",
       "date_published_gmt": "2007-01-31T12:00:00Z",
-      "date_modified": "2007-01-31T11:57:14+00:00",
-      "date_modified_gmt": "2007-01-31T11:57:14+00:00",
-      "content": "<p><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/bhwilkoff.podOmatic.com/2007-01-31T03_57_14-08_00.jpg?w=1225\" alt=\"itunes pic\"><br>This podcast is of a discussion that I had with my 7th and 8th grade students about what they think the perfect learning environment would be like. I asked them a few guiding questions, but their ideas were purely their own. I think there is a lot of insight here. If you would like to follow the online discussion, you can go to our conversate page at http://conversate.org/conversation/3JTD3.</p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-160-693718b2803e6\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=160&amp;origin=learningischange.com&amp;obj_id=113784134-160-693718b2803e6\" data-name=\"like-post-frame-113784134-160-693718b2803e6\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "This podcast is of a discussion that I had with my 7th and 8th grade students about what they think the perfect learning environment would be like. I asked them a few guiding questions, but their ideas were purely their own. I think there is a lot of insight here. If you would like to follow the online discussion, you can go to our conversate page at http://conversate.org/conversation/3JTD3.",
+      "date_modified": "2026-01-30T17:38:18.043Z",
+      "date_modified_gmt": "2026-01-30T17:38:18.043Z",
+      "content": "\n\t\t\t\t\t\t<p>This podcast is of a discussion that I had with my 7th and 8th grade students about what they think the perfect learning environment would be like. I asked them a few guiding questions, but their ideas were purely their own. I think there is a lot of insight here. If you would like to follow the online discussion, you can go to our conversate page at http://conversate.org/conversation/3JTD3.</p><p></p><div class=\"embed-wrapper\" style=\"margin: 1em 0px;\"><div class=\"powerpress_player\" id=\"powerpress_player_1639\"><audio class=\"wp-audio-shortcode\" id=\"audio-744-2\" preload=\"none\" style=\"width: 100%;\" controls=\"controls\"><source type=\"audio/mpeg\" src=\"http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4a\"><a href=\"http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4a\">http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4a</a></audio></div><p class=\"powerpress_links powerpress_links_mp3\" style=\"margin-bottom: 1px !important;\">Podcast: <a href=\"http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4a\" class=\"powerpress_link_pinw\" target=\"_blank\" title=\"Play in new window\" onclick=\"return powerpress_pinw('/?powerpress_pinw=744-podcast');\" rel=\"nofollow\">Play in new window</a> | <a href=\"http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4a\" class=\"powerpress_link_d\" title=\"Download\" rel=\"nofollow\" download=\"The_Perfect_Learning_Environment.m4a\">Download</a></p><p class=\"powerpress_links powerpress_subscribe_links\">Subscribe: <a href=\"/feed/podcast/\" class=\"powerpress_link_subscribe powerpress_link_subscribe_rss\" target=\"_blank\" title=\"Subscribe via RSS\" rel=\"nofollow\">RSS</a></p></div><br><p></p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-160-693718b2803e6\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=160&amp;origin=learningischange.com&amp;obj_id=113784134-160-693718b2803e6\" data-name=\"like-post-frame-113784134-160-693718b2803e6\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>\t\t\t\t\t\t\t\t\t\t\t",
+      "content_filtered": "This podcast is of a discussion that I had with my 7th and 8th grade students about what they think the perfect learning environment would be like. I asked them a few guiding questions, but their ideas were purely their own. I think there is a lot of insight here. If you would like to follow the online discussion, you can go to our conversate page at http://conversate.org/conversation/3JTD3.http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4aPodcast: Play in new window | DownloadSubscribe: RSS",
       "excerpt": "This podcast is of a discussion that I had with my 7th and 8th grade students about what they think the perfect learning environment would be like. I asked them a few guiding questions, but their idea...",
       "guid": "https://learningischange.com/2007/01/31/the-perfect-learning-environment/",
       "comment_status": "open",
@@ -2881,6 +2881,15 @@
             "initial-scan"
           ],
           "notes": "Initial database generation"
+        },
+        {
+          "date": "2026-01-30T17:38:18.045Z",
+          "action": "edited",
+          "tool": "page-editor",
+          "changes": [
+            "content-update"
+          ],
+          "notes": "Edited via Page Editor"
         }
       ]
     },
