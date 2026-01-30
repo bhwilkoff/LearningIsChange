@@ -857,18 +857,33 @@
                 const token = settings.githubToken;
                 if (!token) throw new Error('GitHub token not configured');
                 
+                // Trim any whitespace from token
+                const cleanToken = token.trim();
+                
                 const response = await fetch(`https://api.github.com${endpoint}`, {
                     ...options,
                     headers: {
-                        'Authorization': `token ${token}`,
-                        'Accept': 'application/vnd.github.v3+json',
+                        'Authorization': `Bearer ${cleanToken}`,
+                        'Accept': 'application/vnd.github+json',
                         'Content-Type': 'application/json',
+                        'X-GitHub-Api-Version': '2022-11-28',
                         ...options.headers
                     }
                 });
                 
                 if (!response.ok) {
                     const error = await response.json().catch(() => ({}));
+                    // Provide more helpful error messages
+                    if (response.status === 401) {
+                        throw new Error('Authentication failed. Please check your GitHub token is valid and has not expired.');
+                    } else if (response.status === 403) {
+                        if (error.message?.includes('rate limit')) {
+                            throw new Error('GitHub API rate limit exceeded. Please wait a few minutes and try again.');
+                        }
+                        throw new Error('Access denied. Check your token has the required permissions (repo scope).');
+                    } else if (response.status === 422 && error.message?.includes('too large')) {
+                        throw new Error('Content too large for GitHub API. Try with smaller changes or fewer images.');
+                    }
                     throw new Error(error.message || `GitHub API error: ${response.status}`);
                 }
                 return response.json();
@@ -879,10 +894,12 @@
                 const settings = getSettings();
                 if (!settings.githubToken) return null;
                 
+                const cleanToken = settings.githubToken.trim();
+                
                 try {
                     const response = await fetch(`https://api.github.com/repos/${settings.repoOwner}/${settings.repoName}/contents/${path}?ref=${settings.branch}`, {
                         headers: {
-                            'Authorization': `token ${settings.githubToken}`,
+                            'Authorization': `Bearer ${cleanToken}`,
                             'Accept': 'application/vnd.github.raw+json',
                             'X-GitHub-Api-Version': '2022-11-28'
                         }
@@ -905,45 +922,83 @@
                 return { sha: data.sha, path: data.path };
             }
             
-            async function commitMultipleFiles(files, message) {
+            async function commitMultipleFiles(files, message, retries = 2) {
                 const settings = getSettings();
                 const repoPath = `/repos/${settings.repoOwner}/${settings.repoName}`;
                 
-                // Get current commit
-                const refData = await githubAPI(`${repoPath}/git/refs/heads/${settings.branch}`);
-                const commitData = await githubAPI(`${repoPath}/git/commits/${refData.object.sha}`);
-                
-                // Create blobs for each file
-                const treeItems = [];
-                for (const file of files) {
-                    const isBase64 = file.isBase64;
-                    const content = isBase64 ? file.content : btoa(unescape(encodeURIComponent(file.content)));
-                    const blobData = await githubAPI(`${repoPath}/git/blobs`, {
+                try {
+                    // Get current commit
+                    const refData = await githubAPI(`${repoPath}/git/refs/heads/${settings.branch}`);
+                    const commitData = await githubAPI(`${repoPath}/git/commits/${refData.object.sha}`);
+                    
+                    // Create blobs for each file
+                    const treeItems = [];
+                    for (const file of files) {
+                        let content;
+                        if (file.isBase64) {
+                            // Already base64 encoded (binary files like images)
+                            content = file.content;
+                        } else {
+                            // Text content - use TextEncoder for proper UTF-8 handling
+                            const encoder = new TextEncoder();
+                            const bytes = encoder.encode(file.content);
+                            // Convert to base64 in chunks to avoid call stack issues
+                            content = arrayBufferToBase64(bytes);
+                        }
+                        
+                        const blobData = await githubAPI(`${repoPath}/git/blobs`, {
+                            method: 'POST',
+                            body: JSON.stringify({ content, encoding: 'base64' })
+                        });
+                        treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobData.sha });
+                    }
+                    
+                    // Create new tree
+                    const newTreeData = await githubAPI(`${repoPath}/git/trees`, {
                         method: 'POST',
-                        body: JSON.stringify({ content, encoding: 'base64' })
+                        body: JSON.stringify({ base_tree: commitData.tree.sha, tree: treeItems })
                     });
-                    treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobData.sha });
+                    
+                    // Create commit
+                    const newCommitData = await githubAPI(`${repoPath}/git/commits`, {
+                        method: 'POST',
+                        body: JSON.stringify({ message, tree: newTreeData.sha, parents: [refData.object.sha] })
+                    });
+                    
+                    // Update ref
+                    await githubAPI(`${repoPath}/git/refs/heads/${settings.branch}`, {
+                        method: 'PATCH',
+                        body: JSON.stringify({ sha: newCommitData.sha })
+                    });
+                    
+                    return { success: true, commitSha: newCommitData.sha, filesCommitted: files.length };
+                    
+                } catch (error) {
+                    // Retry on transient errors (network issues, rate limits)
+                    const isTransient = error.message.includes('rate limit') || 
+                                       error.message.includes('network') ||
+                                       error.message.includes('timeout') ||
+                                       error.message.includes('502') ||
+                                       error.message.includes('503');
+                    
+                    if (retries > 0 && isTransient) {
+                        console.log(`Retrying commit (${retries} retries left)...`);
+                        await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds
+                        return commitMultipleFiles(files, message, retries - 1);
+                    }
+                    throw error;
                 }
-                
-                // Create new tree
-                const newTreeData = await githubAPI(`${repoPath}/git/trees`, {
-                    method: 'POST',
-                    body: JSON.stringify({ base_tree: commitData.tree.sha, tree: treeItems })
-                });
-                
-                // Create commit
-                const newCommitData = await githubAPI(`${repoPath}/git/commits`, {
-                    method: 'POST',
-                    body: JSON.stringify({ message, tree: newTreeData.sha, parents: [refData.object.sha] })
-                });
-                
-                // Update ref
-                await githubAPI(`${repoPath}/git/refs/heads/${settings.branch}`, {
-                    method: 'PATCH',
-                    body: JSON.stringify({ sha: newCommitData.sha })
-                });
-                
-                return { success: true, commitSha: newCommitData.sha, filesCommitted: files.length };
+            }
+            
+            // Convert ArrayBuffer/Uint8Array to base64 in chunks (avoids call stack overflow)
+            function arrayBufferToBase64(bytes) {
+                const CHUNK_SIZE = 0x8000; // 32KB chunks
+                let result = '';
+                for (let i = 0; i < bytes.length; i += CHUNK_SIZE) {
+                    const chunk = bytes.subarray(i, i + CHUNK_SIZE);
+                    result += String.fromCharCode.apply(null, chunk);
+                }
+                return btoa(result);
             }
             
             async function testConnection() {
@@ -956,7 +1011,7 @@
                 }
             }
             
-            return { CONFIG, getSettings, saveSettings, githubAPI, fetchFileFromGithub, getFileMeta, commitMultipleFiles, testConnection };
+            return { CONFIG, getSettings, saveSettings, githubAPI, fetchFileFromGithub, getFileMeta, commitMultipleFiles, testConnection, arrayBufferToBase64 };
         })();
         
         // ============================================
