@@ -1087,7 +1087,23 @@
                 }
             }
             
-            return { CONFIG, getSettings, saveSettings, githubAPI, fetchFileFromGithub, getFileMeta, commitMultipleFiles, createBlobRaw, testConnection, arrayBufferToBase64 };
+            // Trigger a GitHub Actions workflow
+            async function triggerWorkflow(workflowFile, inputs = {}) {
+                const settings = getSettings();
+                const endpoint = `/repos/${settings.repoOwner}/${settings.repoName}/actions/workflows/${workflowFile}/dispatches`;
+                
+                await githubAPI(endpoint, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        ref: settings.branch,
+                        inputs: inputs
+                    })
+                });
+                
+                return { success: true };
+            }
+            
+            return { CONFIG, getSettings, saveSettings, githubAPI, fetchFileFromGithub, getFileMeta, commitMultipleFiles, createBlobRaw, testConnection, triggerWorkflow, arrayBufferToBase64 };
         })();
         
         // ============================================
@@ -2008,22 +2024,36 @@
                 updateProgress(45, 'Updating archives...');
                 
                 // 5. Update RSS feeds if checked
+                let triggerRssWorkflow = false;
+                let rssWorkflowParams = null;
+                
                 if (document.getElementById('updateRssFeed').checked && postData.date) {
                     log('Updating RSS feeds...', 'info');
                     
                     // Check post age for the regular feed (which only has recent posts)
                     const postDate = new Date(postData.date);
                     const daysSincePost = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24);
+                    const isRecentPost = daysSincePost <= 90;
                     
-                    // Always update full.xml (complete archive)
-                    await updateRssFeed(files, postData, 'feed/full.xml', true);
-                    
-                    // Only update index.xml for recent posts (within last 90 days)
-                    if (daysSincePost <= 90) {
+                    // For recent posts, update index.xml via API (it's small)
+                    if (isRecentPost) {
                         await updateRssFeed(files, postData, 'feed/index.xml', false);
                     } else {
                         log(`  Skipping feed/index.xml (post is ${Math.round(daysSincePost)} days old)`, 'info');
                     }
+                    
+                    // full.xml is too large for API - trigger GitHub Action to update it
+                    log(`  Will trigger GitHub Action to update feed/full.xml`, 'info');
+                    triggerRssWorkflow = true;
+                    rssWorkflowParams = {
+                        post_url: postData.postUrl,
+                        post_title: postData.title,
+                        post_date: postData.date,
+                        post_content: btoa(unescape(encodeURIComponent(postData.content))), // base64 encode
+                        post_excerpt: btoa(unescape(encodeURIComponent(postData.excerpt))),
+                        update_full_feed: 'true',
+                        update_index_feed: isRecentPost ? 'false' : 'false' // Already updated via API if recent
+                    };
                 }
                 updateProgress(60, 'Updating RSS feeds...');
                 
@@ -2065,9 +2095,23 @@
                 const commitMessage = `Edit: ${newTitle || currentPage.path}`;
                 const result = await LiCAdmin.commitMultipleFiles(files, commitMessage);
                 
-                updateProgress(100, 'Complete!');
+                updateProgress(95, 'Finalizing...');
                 log(`✓ Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
                 log(`✓ Updated ${files.length} file(s)`, 'success');
+                
+                // Trigger RSS workflow if needed
+                if (triggerRssWorkflow && rssWorkflowParams) {
+                    log('Triggering GitHub Action to update RSS feeds...', 'info');
+                    try {
+                        await LiCAdmin.triggerWorkflow('update-rss.yml', rssWorkflowParams);
+                        log('✓ RSS update workflow triggered', 'success');
+                    } catch (workflowError) {
+                        log(`⚠️ Could not trigger RSS workflow: ${workflowError.message}`, 'warning');
+                        log('  You may need to run the workflow manually or check permissions', 'warning');
+                    }
+                }
+                
+                updateProgress(100, 'Complete!');
                 
                 // Update state
                 currentPage.originalHtml = newHtml;
