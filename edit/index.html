@@ -932,6 +932,7 @@
             async function commitMultipleFiles(files, message, retries = 2) {
                 const settings = getSettings();
                 const repoPath = `/repos/${settings.repoOwner}/${settings.repoName}`;
+                const LARGE_FILE_THRESHOLD = 10 * 1024 * 1024; // 10MB - use raw upload above this
                 
                 try {
                     // Get current commit
@@ -941,31 +942,42 @@
                     // Create blobs for each file
                     const treeItems = [];
                     for (const file of files) {
-                        let content;
-                        if (file.isBase64) {
-                            // Already base64 encoded (binary files like images)
-                            content = file.content;
-                        } else {
-                            // Text content - use TextEncoder for proper UTF-8 handling
-                            const encoder = new TextEncoder();
-                            const bytes = encoder.encode(file.content);
-                            // Convert to base64 in chunks to avoid call stack issues
-                            content = arrayBufferToBase64(bytes);
-                        }
+                        const sizeBytes = file.isBase64 
+                            ? Math.round(file.content.length * 0.75)  // base64 is ~33% larger
+                            : file.content.length;
+                        const sizeKB = Math.round(sizeBytes / 1024);
+                        const sizeMB = (sizeBytes / (1024 * 1024)).toFixed(1);
                         
-                        // Log file size for debugging
-                        const sizeKB = Math.round(content.length / 1024);
-                        console.log(`Creating blob for ${file.path} (${sizeKB} KB base64)`);
+                        console.log(`Creating blob for ${file.path} (~${sizeKB} KB)`);
                         
                         try {
-                            const blobData = await githubAPI(`${repoPath}/git/blobs`, {
-                                method: 'POST',
-                                body: JSON.stringify({ content, encoding: 'base64' })
-                            });
-                            treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobData.sha });
+                            let blobSha;
+                            
+                            if (sizeBytes > LARGE_FILE_THRESHOLD) {
+                                // Use raw upload for large files
+                                console.log(`Using raw upload for large file: ${file.path} (${sizeMB} MB)`);
+                                blobSha = await createBlobRaw(file, settings);
+                            } else {
+                                // Use standard base64 JSON upload for smaller files
+                                let content;
+                                if (file.isBase64) {
+                                    content = file.content;
+                                } else {
+                                    const encoder = new TextEncoder();
+                                    const bytes = encoder.encode(file.content);
+                                    content = arrayBufferToBase64(bytes);
+                                }
+                                
+                                const blobData = await githubAPI(`${repoPath}/git/blobs`, {
+                                    method: 'POST',
+                                    body: JSON.stringify({ content, encoding: 'base64' })
+                                });
+                                blobSha = blobData.sha;
+                            }
+                            
+                            treeItems.push({ path: file.path, mode: '100644', type: 'blob', sha: blobSha });
                         } catch (blobError) {
-                            // If this specific blob fails, throw with the filename
-                            throw new Error(`Failed to create blob for "${file.path}" (${sizeKB} KB): ${blobError.message}`);
+                            throw new Error(`Failed to create blob for "${file.path}" (${sizeMB} MB): ${blobError.message}`);
                         }
                     }
                     
@@ -1006,6 +1018,49 @@
                 }
             }
             
+            // Create blob using raw binary upload (for large files)
+            // This avoids the base64 overhead and JSON size limits
+            async function createBlobRaw(file, settings) {
+                const cleanToken = settings.githubToken.trim();
+                const url = `https://api.github.com/repos/${settings.repoOwner}/${settings.repoName}/git/blobs`;
+                
+                // Convert content to raw bytes
+                let rawBytes;
+                if (file.isBase64) {
+                    // Decode base64 to binary
+                    const binaryString = atob(file.content);
+                    rawBytes = new Uint8Array(binaryString.length);
+                    for (let i = 0; i < binaryString.length; i++) {
+                        rawBytes[i] = binaryString.charCodeAt(i);
+                    }
+                } else {
+                    // Encode text to UTF-8 bytes
+                    const encoder = new TextEncoder();
+                    rawBytes = encoder.encode(file.content);
+                }
+                
+                // Upload as raw binary
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${cleanToken}`,
+                        'Accept': 'application/vnd.github+json',
+                        'Content-Type': 'application/octet-stream',
+                        'X-GitHub-Api-Version': '2022-11-28'
+                    },
+                    body: rawBytes
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json().catch(() => ({}));
+                    console.error('Raw blob upload failed:', response.status, error);
+                    throw new Error(error.message || `Raw blob upload failed: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data.sha;
+            }
+            
             // Convert ArrayBuffer/Uint8Array to base64 in chunks (avoids call stack overflow)
             function arrayBufferToBase64(bytes) {
                 const CHUNK_SIZE = 0x8000; // 32KB chunks
@@ -1027,7 +1082,7 @@
                 }
             }
             
-            return { CONFIG, getSettings, saveSettings, githubAPI, fetchFileFromGithub, getFileMeta, commitMultipleFiles, testConnection, arrayBufferToBase64 };
+            return { CONFIG, getSettings, saveSettings, githubAPI, fetchFileFromGithub, getFileMeta, commitMultipleFiles, createBlobRaw, testConnection, arrayBufferToBase64 };
         })();
         
         // ============================================
@@ -1950,7 +2005,20 @@
                 // 5. Update RSS feeds if checked
                 if (document.getElementById('updateRssFeed').checked && postData.date) {
                     log('Updating RSS feeds...', 'info');
-                    await updateRssFeeds(files, postData);
+                    
+                    // Check post age for the regular feed (which only has recent posts)
+                    const postDate = new Date(postData.date);
+                    const daysSincePost = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24);
+                    
+                    // Always update full.xml (complete archive)
+                    await updateRssFeed(files, postData, 'feed/full.xml', true);
+                    
+                    // Only update index.xml for recent posts (within last 90 days)
+                    if (daysSincePost <= 90) {
+                        await updateRssFeed(files, postData, 'feed/index.xml', false);
+                    } else {
+                        log(`  Skipping feed/index.xml (post is ${Math.round(daysSincePost)} days old)`, 'info');
+                    }
                 }
                 updateProgress(60, 'Updating RSS feeds...');
                 
@@ -1971,24 +2039,22 @@
                 // 8. Commit all files
                 log(`Committing ${files.length} file(s)...`, 'info');
                 
-                // Log file sizes and warn about large files
-                const MAX_FILE_SIZE_KB = 1500; // 1.5MB warning threshold
-                let hasLargeFile = false;
+                // Log file sizes
+                const WARN_SIZE_KB = 1500; // 1.5MB warning threshold
+                const LARGE_SIZE_MB = 10; // 10MB - will use raw upload
                 
                 for (const file of files) {
-                    const contentLength = file.isBase64 ? file.content.length : file.content.length;
+                    const contentLength = file.isBase64 ? file.content.length * 0.75 : file.content.length;
                     const sizeKB = Math.round(contentLength / 1024);
+                    const sizeMB = (contentLength / (1024 * 1024)).toFixed(1);
                     
-                    if (sizeKB > MAX_FILE_SIZE_KB) {
-                        log(`  ⚠️ ${file.path} (~${sizeKB} KB) - LARGE FILE`, 'warning');
-                        hasLargeFile = true;
+                    if (sizeKB > LARGE_SIZE_MB * 1024) {
+                        log(`  📦 ${file.path} (~${sizeMB} MB) - will use raw upload`, 'info');
+                    } else if (sizeKB > WARN_SIZE_KB) {
+                        log(`  ⚠️ ${file.path} (~${sizeKB} KB)`, 'warning');
                     } else {
                         log(`  • ${file.path} (~${sizeKB} KB)`, 'info');
                     }
-                }
-                
-                if (hasLargeFile) {
-                    log('Large files detected. If commit fails, try unchecking RSS/archive options.', 'warning');
                 }
                 
                 const commitMessage = `Edit: ${newTitle || currentPage.path}`;
