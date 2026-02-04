@@ -216,7 +216,7 @@
         "name": "Typewriter",
         "slug": "Typewriter",
         "url": "/category/Typewriter/",
-        "count": 1
+        "count": 2
       },
       "family": {
         "name": "Family",
@@ -2165,7 +2165,7 @@
         "name": "process",
         "slug": "process",
         "url": "/tag/process/",
-        "count": 2
+        "count": 3
       },
       "product": {
         "name": "product",
@@ -8424,6 +8424,11 @@
       "purpose": {
         "name": "Purpose",
         "slug": "purpose",
+        "count": 1
+      },
+      "laserdiscs": {
+        "name": "Laserdiscs",
+        "slug": "laserdiscs",
         "count": 1
       }
     }
