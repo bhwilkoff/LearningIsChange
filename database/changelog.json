@@ -19,6 +19,25 @@
   ],
   "entries": [
     {
+      "timestamp": "2026-02-04T21:24:03.931Z",
+      "action": "post_created",
+      "title": "Laserdiscs and Sacred Cows",
+      "url": "/2026/02/04/laserdiscs-and-sacred-cows/",
+      "category": "Typewriter",
+      "tags": [
+        "Laserdiscs",
+        "Process"
+      ]
+    },
+    {
+      "date": "2026-01-30T22:44:41.356Z",
+      "action": "edit",
+      "path": "2008/11/13/im-holding-my-son-2/index.html",
+      "title": "I'm holding my son…",
+      "url": "/2008/11/13/im-holding-my-son-2/",
+      "tool": "page-editor"
+    },
+    {
       "date": "2026-01-30T22:29:06.850Z",
       "action": "edit",
       "path": "2008/11/13/im-holding-my-son-2/index.html",

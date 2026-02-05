@@ -13343,10 +13343,10 @@
       },
       "date_published": "2008-11-13T12:00:00Z",
       "date_published_gmt": "2008-11-13T12:00:00Z",
-      "date_modified": "2026-01-30T22:29:06.518Z",
-      "date_modified_gmt": "2026-01-30T22:29:06.518Z",
-      "content": "\n\t\t\t\t\t\t<p>  I’m holding my son right now and talking to my WordPress blog and I am considering whether or not this is going to be a great way for me to start blogging regularly again and thinking a lot of different things in order to get my mind out there and produce something.</p><p class=\"powerpress_links powerpress_subscribe_links\"></p><!--powerpress_player--><div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-335-693717ef4907d\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=335&amp;origin=learningischange.com&amp;obj_id=113784134-335-693717ef4907d\" data-name=\"like-post-frame-113784134-335-693717ef4907d\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>\t\t\t\t\t\t\t\t\t\t\t",
-      "content_filtered": "I’m holding my son right now and talking to my WordPress blog and I am considering whether or not this is going to be a great way for me to start blogging regularly again and thinking a lot of different things in order to get my mind out there and produce something.",
+      "date_modified": "2026-01-30T22:44:41.148Z",
+      "date_modified_gmt": "2026-01-30T22:44:41.148Z",
+      "content": "\n\t\t\t\t\t\t<p>  I’m holding my son right now and talking to my WordPress blog and I am considering whether or not this is going to be a great way for me to start blogging regularly again and thinking a lot of different things in order to get my mind out there and produce something.</p><p>dial2do missing mp3...</p><p class=\"powerpress_links powerpress_subscribe_links\"></p><!--powerpress_player--><div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-335-693717ef4907d\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=335&amp;origin=learningischange.com&amp;obj_id=113784134-335-693717ef4907d\" data-name=\"like-post-frame-113784134-335-693717ef4907d\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>\t\t\t\t\t\t\t\t\t\t\t",
+      "content_filtered": "I’m holding my son right now and talking to my WordPress blog and I am considering whether or not this is going to be a great way for me to start blogging regularly again and thinking a lot of different things in order to get my mind out there and produce something.dial2do missing mp3...",
       "excerpt": "I’m holding my son right now and talking to my WordPress blog and I am considering whether or not this is going to be a great way for me to start blogging regularly again and thinking a lot of differe...",
       "guid": "https://learningischange.com/2008/11/13/im-holding-my-son-2/",
       "comment_status": "open",
@@ -13393,6 +13393,15 @@
         },
         {
           "date": "2026-01-30T22:29:06.520Z",
+          "action": "edited",
+          "tool": "page-editor",
+          "changes": [
+            "content-update"
+          ],
+          "notes": "Edited via Page Editor"
+        },
+        {
+          "date": "2026-01-30T22:44:41.151Z",
           "action": "edited",
           "tool": "page-editor",
           "changes": [
