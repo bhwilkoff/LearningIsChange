@@ -1084,6 +1084,7 @@
         let selectedTags = [];
         let uploadedImages = [];
         let generatedFiles = {};
+        let pendingRssWorkflow = null; // For triggering RSS update after publish
         
         // Site components extracted from homepage (for building new archive pages)
         let siteComponents = {
@@ -2199,9 +2200,6 @@
                 
                 updateProgress(65, 'Updating RSS feeds...');
                 
-                let triggerRssWorkflow = false;
-                let rssWorkflowParams = null;
-                
                 if (document.getElementById('updateRssFeed').checked) {
                     // Update summary feed (feed/index.xml) - small enough for API
                     const rssUpdate = await generateRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
@@ -2212,11 +2210,12 @@
                     
                     // full.xml is too large (40MB+) for GitHub API - trigger workflow instead
                     log(`  Will trigger GitHub Action to update feed/full.xml`, 'info');
-                    triggerRssWorkflow = true;
-                    rssWorkflowParams = {
+                    pendingRssWorkflow = {
                         post_url: postUrl,
                         post_year: year
                     };
+                } else {
+                    pendingRssWorkflow = null;
                 }
                 
                 updateProgress(80, 'Updating database...');
@@ -3494,10 +3493,10 @@ ${siteComponents.head}
                 const result = await LiCAdmin.commitMultipleFiles(files, `New post: ${document.getElementById('postTitle').value}`);
                 
                 // Trigger RSS workflow if needed
-                if (triggerRssWorkflow && rssWorkflowParams) {
+                if (pendingRssWorkflow) {
                     log('Triggering GitHub Action to update RSS feeds...', 'info');
                     try {
-                        await LiCAdmin.triggerWorkflow('update-rss.yml', rssWorkflowParams);
+                        await LiCAdmin.triggerWorkflow('update-rss.yml', pendingRssWorkflow);
                         log('✓ RSS update workflow triggered', 'success');
                     } catch (workflowError) {
                         log(`⚠️ Could not trigger RSS workflow: ${workflowError.message}`, 'warning');
