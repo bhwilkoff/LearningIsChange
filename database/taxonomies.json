@@ -216,7 +216,7 @@
         "name": "Typewriter",
         "slug": "Typewriter",
         "url": "/category/Typewriter/",
-        "count": 2
+        "count": 3
       },
       "family": {
         "name": "Family",
@@ -2621,7 +2621,7 @@
         "name": "belief",
         "slug": "belief",
         "url": "/tag/belief/",
-        "count": 7
+        "count": 8
       },
       "first-drafts": {
         "name": "first drafts",
@@ -3335,7 +3335,7 @@
         "name": "money",
         "slug": "money",
         "url": "/tag/money/",
-        "count": 9
+        "count": 10
       },
       "net-worth": {
         "name": "Net worth",
@@ -8429,7 +8429,7 @@
       "laserdiscs": {
         "name": "Laserdiscs",
         "slug": "laserdiscs",
-        "count": 1
+        "count": 2
       }
     }
   }
