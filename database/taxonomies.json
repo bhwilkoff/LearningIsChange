@@ -216,7 +216,7 @@
         "name": "Typewriter",
         "slug": "Typewriter",
         "url": "/category/Typewriter/",
-        "count": 3
+        "count": 4
       },
       "family": {
         "name": "Family",
@@ -2735,7 +2735,7 @@
         "name": "family",
         "slug": "family",
         "url": "/tag/family/",
-        "count": 13
+        "count": 14
       },
       "breadwinner": {
         "name": "breadwinner",
@@ -3755,7 +3755,7 @@
         "name": "holiday",
         "slug": "holiday",
         "url": "/tag/holiday/",
-        "count": 2
+        "count": 3
       },
       "metaphor": {
         "name": "metaphor",
@@ -8430,6 +8430,11 @@
         "name": "Laserdiscs",
         "slug": "laserdiscs",
         "count": 2
+      },
+      "obligation": {
+        "name": "Obligation",
+        "slug": "obligation",
+        "count": 1
       }
     }
   }
