@@ -3,6 +3,21 @@
   "count": 5,
   "posts": [
     {
+      "title": "The Weight of Valentines Day",
+      "url": "/2026/02/15/the-weight-of-valentines-day/",
+      "date_published": "2026-02-15",
+      "excerpt": "",
+      "categories": [
+        "Typewriter"
+      ],
+      "tags": [
+        "holiday",
+        "family",
+        "obligation"
+      ],
+      "content_preview": ""
+    },
+    {
       "title": "Laserdiscs and Sacred Cows",
       "url": "/2026/02/05/laserdiscs-and-sacred-cows/",
       "date_published": "2026-02-05",
@@ -476,5 +491,5 @@
       ]
     }
   ],
-  "post_count": 13
+  "post_count": 14
 }
