@@ -1,0 +1,115 @@
+name: Remove Post from RSS Feeds
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_url:
+        description: 'Full URL of the removed post (e.g. https://learningischange.com/2024/01/15/my-post-slug/)'
+        required: true
+        type: string
+
+jobs:
+  remove-from-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Remove post from RSS feeds
+        run: |
+          cat > remove-from-rss.js << 'SCRIPT_EOF'
+          const fs = require('fs');
+
+          const postUrl = process.env.POST_URL;
+          const target = postUrl.replace(/\/$/, '');
+
+          console.log(`Removing post from RSS feeds: ${postUrl}`);
+
+          function removeFromFeed(feedPath) {
+            if (!fs.existsSync(feedPath)) {
+              console.log(`Feed not found: ${feedPath}`);
+              return false;
+            }
+
+            let content = fs.readFileSync(feedPath, 'utf8');
+
+            // Check the post is actually present before doing any work
+            if (!content.includes(target)) {
+              console.log(`Post not found in ${feedPath} — skipping`);
+              return false;
+            }
+
+            let searchFrom = 0;
+            let removed = false;
+
+            while (true) {
+              const itemStart = content.indexOf('<item>', searchFrom);
+              if (itemStart === -1) break;
+              const itemEnd = content.indexOf('</item>', itemStart);
+              if (itemEnd === -1) break;
+
+              const itemContent = content.slice(itemStart, itemEnd + '</item>'.length);
+
+              // Match either with or without trailing slash
+              const found = itemContent.includes(target + '/') || itemContent.includes(target + '<');
+
+              if (found) {
+                const before = content.slice(0, itemStart);
+                let after = content.slice(itemEnd + '</item>'.length);
+                // Remove the blank line the deletion leaves behind
+                after = after.replace(/^\s*\n/, '\n');
+                content = before + after;
+                removed = true;
+                console.log(`Removed <item> from ${feedPath}`);
+                break;
+              } else {
+                searchFrom = itemEnd + '</item>'.length;
+              }
+            }
+
+            if (removed) {
+              const now = new Date().toUTCString();
+              content = content.replace(
+                /<lastBuildDate>.*?<\/lastBuildDate>/,
+                `<lastBuildDate>${now}</lastBuildDate>`
+              );
+              fs.writeFileSync(feedPath, content, 'utf8');
+              return true;
+            }
+
+            return false;
+          }
+
+          // full.xml is the main target (too large for the GitHub API)
+          const fullRemoved = removeFromFeed('feed/full.xml');
+          // index.xml is updated by the browser tool but process it here too as a safety net
+          const indexRemoved = removeFromFeed('feed/index.xml');
+
+          if (!fullRemoved && !indexRemoved) {
+            console.log('No changes needed — post may have already been removed from feeds');
+          }
+          SCRIPT_EOF
+
+          POST_URL="${{ inputs.post_url }}" node remove-from-rss.js
+          rm remove-from-rss.js
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add feed/full.xml feed/index.xml 2>/dev/null || true
+            git commit -m "Remove post from RSS feeds: ${{ inputs.post_url }}"
+            git push
+            echo "RSS feeds updated and pushed"
+          fi

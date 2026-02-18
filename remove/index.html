@@ -1453,13 +1453,22 @@ async function commitToGitHub() {
         const branch = document.getElementById('repoBranch').value;
         const commitUrl = `https://github.com/${repoOwner}/${repoName}/commit/${result.commitSha}`;
 
+        // Dispatch the RSS removal workflow to handle full.xml (too large for the API)
+        let rssNote = '';
+        try {
+            log('\nDispatching RSS removal workflow for full.xml…', 'info');
+            await dispatchRssWorkflow(selectedPost.postUrl);
+            log('✓ RSS workflow dispatched — full.xml will update in ~1 minute', 'success');
+            rssNote = '<span style="font-size:0.85rem; margin-top:6px; display:block; color:#155724;">RSS workflow dispatched — full.xml will be updated shortly by GitHub Actions.</span>';
+        } catch (e) {
+            log(`⚠ RSS workflow dispatch failed: ${e.message}`, 'warn');
+            rssNote = `<span style="font-size:0.85rem; margin-top:6px; display:block; color:#856404;">⚠ RSS workflow could not be dispatched (${e.message}). You can trigger it manually from the Actions tab.</span>`;
+        }
+
         document.getElementById('commitResult').innerHTML = `
             <strong>✓ Post successfully removed!</strong>
             <a href="${commitUrl}" target="_blank">View commit on GitHub →</a><br>
-            <span style="font-size:0.85rem; margin-top:6px; display:block; color:#155724;">
-                Note: The full.xml RSS feed is too large for the GitHub API (~40MB).
-                If needed, run the RSS Creator tool to regenerate it.
-            </span>
+            ${rssNote}
         `;
         document.getElementById('commitResult').classList.remove('hidden');
         document.getElementById('commitBtn').classList.add('hidden');
@@ -1471,6 +1480,40 @@ async function commitToGitHub() {
         btn.disabled = false;
         btn.textContent = '🚀 Commit Removal to GitHub';
     }
+}
+
+// ============================================================
+// RSS WORKFLOW DISPATCH
+// Triggers the remove-from-rss.yml GitHub Actions workflow to
+// remove the post from feed/full.xml (too large for the API).
+// ============================================================
+async function dispatchRssWorkflow(postUrl) {
+    const settings = LiCAdmin.getSettings();
+    const repoOwner = document.getElementById('repoOwner')?.value || settings.repoOwner;
+    const repoName  = document.getElementById('repoName')?.value  || settings.repoName;
+    const branch    = document.getElementById('repoBranch')?.value || settings.branch;
+    const token     = document.getElementById('githubToken')?.value.trim() || settings.githubToken;
+    if (!token) throw new Error('No GitHub token');
+
+    const fullUrl = `${LiCAdmin.CONFIG.SITE_URL}${postUrl}`;
+    const response = await fetch(
+        `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/remove-from-rss.yml/dispatches`,
+        {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Accept': 'application/vnd.github+json',
+                'Content-Type': 'application/json',
+                'X-GitHub-Api-Version': '2022-11-28'
+            },
+            body: JSON.stringify({ ref: branch, inputs: { post_url: fullUrl } })
+        }
+    );
+    if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.message || `HTTP ${response.status}`);
+    }
+    // 204 No Content on success — nothing to parse
 }
 
 // ============================================================
