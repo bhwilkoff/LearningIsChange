@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-02-15T16:16:47.575Z",
+  "generated": "2026-02-18T22:40:05.159Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -8,7 +8,7 @@
     "description": "My name is Ben Wilkoff, and I Teach. And Learn. A Lot."
   },
   "stats": {
-    "total_posts": 5738,
+    "total_posts": 5737,
     "total_pages": 497,
     "total_categories": 38,
     "total_tags": 1361,
@@ -98,7 +98,7 @@
         "hash": "2412c47a"
       },
       "2026": {
-        "count": 14,
+        "count": 13,
         "hash": "-2f5236ab"
       }
     }
