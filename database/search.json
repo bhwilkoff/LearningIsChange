@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "title": "Ben.md",
+      "url": "/2026/02/23/benmd/",
+      "date": "2026-02-23",
+      "excerpt": "",
+      "categories": [
+        "Typewriter"
+      ],
+      "tags": [
+        "ben wilkoff",
+        "learning",
+        "AI",
+        "Productivity"
+      ],
+      "keywords": "ben.md  typewriter ben wilkoff learning ai productivity"
+    },
+    {
       "title": "The Weight of Valentines Day",
       "url": "/2026/02/15/the-weight-of-valentines-day/",
       "date": "2026-02-15",

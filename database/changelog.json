@@ -19,6 +19,19 @@
   ],
   "entries": [
     {
+      "timestamp": "2026-02-23T22:35:08.835Z",
+      "action": "post_created",
+      "title": "Ben.md",
+      "url": "/2026/02/23/benmd/",
+      "category": "Typewriter",
+      "tags": [
+        "ben wilkoff",
+        "learning",
+        "AI",
+        "Productivity"
+      ]
+    },
+    {
       "timestamp": "2026-02-18T22:40:05.304Z",
       "action": "post_removed",
       "title": "Laserdiscs and Sacred Cows",
