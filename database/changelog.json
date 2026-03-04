@@ -19,6 +19,18 @@
   ],
   "entries": [
     {
+      "timestamp": "2026-03-04T23:38:23.139Z",
+      "action": "post_created",
+      "title": "Computer-Shaped Problems",
+      "url": "/2026/03/04/computer-shaped-problems/",
+      "category": "Typewriter",
+      "tags": [
+        "Claude",
+        "Claude Code",
+        "AI"
+      ]
+    },
+    {
       "timestamp": "2026-02-23T22:35:08.835Z",
       "action": "post_created",
       "title": "Ben.md",

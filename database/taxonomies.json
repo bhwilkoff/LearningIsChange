@@ -216,7 +216,7 @@
         "name": "Typewriter",
         "slug": "Typewriter",
         "url": "/category/Typewriter/",
-        "count": 4
+        "count": 5
       },
       "family": {
         "name": "Family",
@@ -4181,7 +4181,7 @@
         "name": "ai",
         "slug": "ai",
         "url": "/tag/ai/",
-        "count": 3
+        "count": 4
       },
       "al-michaels": {
         "name": "al michaels",
@@ -8434,6 +8434,16 @@
       "obligation": {
         "name": "Obligation",
         "slug": "obligation",
+        "count": 1
+      },
+      "claude": {
+        "name": "Claude",
+        "slug": "claude",
+        "count": 1
+      },
+      "claude-code": {
+        "name": "Claude Code",
+        "slug": "claude-code",
         "count": 1
       }
     }
