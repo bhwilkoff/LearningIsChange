@@ -216,7 +216,7 @@
         "name": "Typewriter",
         "slug": "Typewriter",
         "url": "/category/Typewriter/",
-        "count": 6
+        "count": 7
       },
       "family": {
         "name": "Family",
@@ -2657,7 +2657,7 @@
         "name": "space",
         "slug": "space",
         "url": "/tag/space/",
-        "count": 4
+        "count": 5
       },
       "want-ads": {
         "name": "want ads",
@@ -2771,7 +2771,7 @@
         "name": "time",
         "slug": "time",
         "url": "/tag/time/",
-        "count": 3
+        "count": 4
       },
       "time-theft": {
         "name": "time theft",
@@ -8444,6 +8444,11 @@
       "claude-code": {
         "name": "Claude Code",
         "slug": "claude-code",
+        "count": 1
+      },
+      "ihop": {
+        "name": "IHOP",
+        "slug": "ihop",
         "count": 1
       }
     }
