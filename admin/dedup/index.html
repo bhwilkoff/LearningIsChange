@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dedup Review · LiC Admin</title>
+  <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #0085b2;
+      --accent-hover: #006a8e;
+      --text-primary: #333;
+      --text-secondary: #666;
+      --text-muted: #999;
+      --bg-primary: #fff;
+      --bg-secondary: #f8f9fa;
+      --border-light: #e5e5e5;
+      --success: #28a745;
+      --danger: #d9534f;
+      --warning: #f0ad4e;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--bg-secondary); line-height: 1.5; }
+    a { color: var(--accent); }
+    header { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 16px 24px; display: flex; align-items: center; gap: 16px; }
+    header h1 { font-size: 1.3rem; font-weight: 700; margin: 0; }
+    header .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
+    header .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+    header .spacer { flex: 1; }
+    header button { background: var(--bg-secondary); border: 1px solid var(--border-light); color: var(--text-primary); padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; }
+    header button:hover { background: #eee; }
+    main { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    .tabs { display: flex; gap: 2px; border-bottom: 2px solid var(--border-light); margin-bottom: 20px; overflow-x: auto; }
+    .tab { background: none; border: none; padding: 10px 16px; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; white-space: nowrap; }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab .count { color: var(--text-muted); font-weight: 400; font-size: 0.8rem; margin-left: 4px; }
+    .card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 6px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow); }
+    .card h2 { font-size: 1.1rem; margin-bottom: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .metric { background: var(--bg-secondary); border-radius: 4px; padding: 12px; }
+    .metric .label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+    .metric .value { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-top: 4px; }
+    .metric .sub { font-size: 0.8rem; color: var(--text-muted); }
+    .alert { padding: 12px 16px; border-radius: 4px; margin-bottom: 12px; border: 1px solid; }
+    .alert.info { background: #e8f4f8; border-color: #b8dce8; color: #055; }
+    .alert.warning { background: #fff8e0; border-color: #f0d080; color: #664; }
+    .alert.danger { background: #fdecea; border-color: #f0b0ac; color: #711; }
+    .toolbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-bottom: 1px solid var(--border-light); margin-bottom: 12px; }
+    .toolbar button { background: var(--bg-primary); border: 1px solid var(--border-light); padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; font-weight: 600; }
+    .toolbar button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .toolbar button.primary:hover { background: var(--accent-hover); }
+    .toolbar button.danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+    .toolbar button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .toolbar input[type="text"] { padding: 6px 10px; border: 1px solid var(--border-light); border-radius: 4px; font-size: 0.85rem; width: 280px; font-family: inherit; }
+    .toolbar .status { color: var(--text-muted); font-size: 0.85rem; margin-left: auto; }
+    .item-list { display: flex; flex-direction: column; gap: 6px; }
+    .item { display: grid; grid-template-columns: 40px 120px 1fr 100px 220px; gap: 12px; align-items: center; padding: 8px 12px; background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 4px; font-size: 0.88rem; }
+    .item.decision-delete { border-color: var(--danger); background: #fff5f4; }
+    .item.decision-keep { border-color: var(--success); background: #f5fbf6; }
+    .item input[type="checkbox"] { width: 18px; height: 18px; }
+    .item .thumb { width: 100px; height: 80px; border: 1px solid var(--border-light); background: #fafafa; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--text-muted); overflow: hidden; }
+    .item .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .item .thumb.audio { background: #f0e8f5; color: #652; font-weight: 600; }
+    .item .thumb.broken { background: #fdecea; color: #711; }
+    .item .path { font-family: ui-monospace, Menlo, monospace; font-size: 0.8rem; word-break: break-all; color: var(--text-secondary); }
+    .item .path strong { color: var(--text-primary); font-family: inherit; font-weight: 600; }
+    .item .size { color: var(--text-muted); text-align: right; font-variant-numeric: tabular-nums; }
+    .item .actions { display: flex; gap: 4px; }
+    .item .actions button { flex: 1; padding: 5px 8px; font-size: 0.78rem; border: 1px solid var(--border-light); background: var(--bg-primary); border-radius: 3px; cursor: pointer; font-weight: 600; color: var(--text-secondary); }
+    .item .actions button.active-keep { background: var(--success); color: #fff; border-color: var(--success); }
+    .item .actions button.active-delete { background: var(--danger); color: #fff; border-color: var(--danger); }
+    .item .actions button.active-pending { background: var(--warning); color: #fff; border-color: var(--warning); }
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; padding: 16px 0; }
+    .pagination button { background: var(--bg-primary); border: 1px solid var(--border-light); padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+    .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .pagination .info { color: var(--text-muted); font-size: 0.85rem; margin: 0 12px; }
+    .settings-panel { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 6px; padding: 16px; margin-bottom: 16px; display: none; }
+    .settings-panel.open { display: block; }
+    .settings-panel label { display: block; margin-bottom: 8px; font-size: 0.85rem; }
+    .settings-panel input { width: 100%; padding: 6px 10px; border: 1px solid var(--border-light); border-radius: 4px; font-family: inherit; font-size: 0.9rem; margin-top: 4px; }
+    .dup-cluster { border: 1px solid var(--border-light); border-radius: 4px; padding: 12px; margin-bottom: 8px; background: var(--bg-primary); }
+    .dup-cluster .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .dup-cluster .thumb-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .dup-cluster .thumb-row img { width: 80px; height: 60px; object-fit: contain; border: 1px solid var(--border-light); border-radius: 3px; }
+    .dup-cluster .path-row { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 0.85rem; }
+    .dup-cluster .path-row.referenced { color: var(--success); font-weight: 600; }
+    .dup-cluster .path-row .path { font-family: ui-monospace, Menlo, monospace; font-size: 0.78rem; }
+    .legend { display: flex; gap: 16px; font-size: 0.82rem; color: var(--text-secondary); padding-bottom: 8px; }
+    .legend .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+    code { font-family: ui-monospace, Menlo, monospace; font-size: 0.85em; background: var(--bg-secondary); padding: 1px 4px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="breadcrumb"><a href="/admin/">Admin</a> / Dedup</div>
+    <h1 id="page-title">Loading…</h1>
+    <span class="spacer"></span>
+    <button id="settings-btn">⚙ Settings</button>
+    <button id="export-btn">⬇ Export decisions</button>
+    <button id="import-btn">⬆ Import decisions</button>
+    <input type="file" id="import-file" accept="application/json" style="display:none">
+  </header>
+
+  <main>
+    <div class="settings-panel" id="settings-panel">
+      <label>GitHub Personal Access Token (for execution)
+        <input type="password" id="pat-input" placeholder="ghp_...">
+      </label>
+      <label><input type="checkbox" id="remember-token"> Remember token in this browser</label>
+      <button class="primary" id="save-settings">Save</button>
+      <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 12px;">Token is used only to execute the chosen deletions. Needs <code>repo</code> scope.</span>
+    </div>
+
+    <div id="content">Loading manifest…</div>
+  </main>
+
+  <script type="module">
+    import { CONFIG, photonUrl } from '../lib/config.js';
+    import { GitHubAPI } from '../lib/github.js';
+
+    // ---------- State ----------
+    let MANIFEST = null;
+    let DECISIONS = {};         // { path: 'keep' | 'delete' | 'pending' }
+    let CURRENT_TAB = 'summary';
+    let CURRENT_PAGE = 0;
+    let SEARCH = '';
+    const PAGE_SIZE = 100;
+    const DECISIONS_KEY = 'licDedupDecisions';
+    const SETTINGS_KEY = 'licAdminSettings';
+
+    const TABS = [
+      { id: 'summary',     label: 'Summary' },
+      { id: 'variants',    label: 'Variants',        category: 'variants',    default: 'delete',   thumb: 'image' },
+      { id: 'images',      label: 'Orphan images',   category: 'images',      default: 'pending',  thumb: 'image' },
+      { id: 'audio_video', label: 'Audio / video',   category: 'audio_video', default: 'keep',     thumb: 'audio' },
+      { id: 'documents',   label: 'Documents',       category: 'documents',   default: 'pending',  thumb: 'doc' },
+      { id: 'broken_refs', label: 'Broken refs',     default: 'pending' },
+      { id: 'duplicates',  label: 'Duplicate clusters', default: 'pending' },
+    ];
+
+    // ---------- Load ----------
+    async function init() {
+      try {
+        const res = await fetch(`data/manifest.json?v=${Date.now()}`);
+        MANIFEST = await res.json();
+      } catch (e) {
+        document.getElementById('content').innerHTML = `<div class="alert danger">Failed to load manifest.json: ${e.message}<br>Run <code>node admin/dedup/scan.js</code> from the repo root first.</div>`;
+        return;
+      }
+      const saved = localStorage.getItem(DECISIONS_KEY);
+      if (saved) {
+        try { DECISIONS = JSON.parse(saved); } catch {}
+      }
+      document.getElementById('page-title').textContent = `Dedup — ${fmtBytes(MANIFEST.summary.total_bytes)} on disk, ${fmtBytes(MANIFEST.summary.orphan_bytes)} reclaimable`;
+      render();
+    }
+
+    function render() {
+      const root = document.getElementById('content');
+      const counts = computeCounts();
+      root.innerHTML = `
+        <div class="tabs">${TABS.map(t => {
+          const n = counts[t.id] != null ? `<span class="count">${counts[t.id].toLocaleString()}</span>` : '';
+          return `<button class="tab ${t.id === CURRENT_TAB ? 'active' : ''}" data-tab="${t.id}">${t.label}${n}</button>`;
+        }).join('')}</div>
+        <div id="tab-body"></div>
+      `;
+      root.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => { CURRENT_TAB = b.dataset.tab; CURRENT_PAGE = 0; SEARCH = ''; render(); }));
+      renderTabBody();
+    }
+
+    function computeCounts() {
+      const c = {};
+      for (const tab of TABS) {
+        if (tab.id === 'summary') continue;
+        if (tab.id === 'broken_refs') c[tab.id] = MANIFEST.broken_refs.length;
+        else if (tab.id === 'duplicates') c[tab.id] = MANIFEST.duplicate_clusters.length;
+        else c[tab.id] = MANIFEST.orphans[tab.category].length;
+      }
+      return c;
+    }
+
+    function renderTabBody() {
+      const body = document.getElementById('tab-body');
+      if (CURRENT_TAB === 'summary') {
+        body.innerHTML = renderSummary();
+        bindSummary();
+        return;
+      }
+      if (CURRENT_TAB === 'broken_refs') return renderBrokenRefs(body);
+      if (CURRENT_TAB === 'duplicates') return renderDuplicates(body);
+      renderOrphanList(body);
+    }
+
+    // ---------- Summary ----------
+    function renderSummary() {
+      const s = MANIFEST.summary;
+      const dAll = Object.values(DECISIONS);
+      const keepN = dAll.filter(v => v === 'keep').length;
+      const delN = dAll.filter(v => v === 'delete').length;
+      return `
+        <div class="card">
+          <h2>Baseline</h2>
+          <div class="grid">
+            <div class="metric"><div class="label">Files on disk</div><div class="value">${s.files_on_disk.toLocaleString()}</div><div class="sub">${fmtBytes(s.total_bytes)} total</div></div>
+            <div class="metric"><div class="label">Unique references</div><div class="value">${s.unique_refs.toLocaleString()}</div></div>
+            <div class="metric"><div class="label">Orphans</div><div class="value">${s.orphan_count.toLocaleString()}</div><div class="sub">${fmtBytes(s.orphan_bytes)} reclaimable</div></div>
+            <div class="metric"><div class="label">Duplicate clusters</div><div class="value">${s.dup_clusters.toLocaleString()}</div><div class="sub">${fmtBytes(s.dup_waste_bytes)} waste (extra copies)</div></div>
+            <div class="metric"><div class="label">Broken references</div><div class="value">${s.broken_refs.toLocaleString()}</div><div class="sub">HTML/XML points to missing files</div></div>
+            <div class="metric"><div class="label">Refs to variant sizes</div><div class="value">${s.variant_refs.toLocaleString()}</div><div class="sub">Need rewrite if variants deleted</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Orphans by class</h2>
+          <div class="grid">
+            <div class="metric"><div class="label">Variants (safe to delete)</div><div class="value">${s.orphan_variants.toLocaleString()}</div><div class="sub">Jetpack CDN regenerates from originals</div></div>
+            <div class="metric"><div class="label">Original images</div><div class="value">${s.orphan_images.toLocaleString()}</div><div class="sub">Needs manual review</div></div>
+            <div class="metric"><div class="label">Audio / video</div><div class="value">${s.orphan_audio_video.toLocaleString()}</div><div class="sub">Default: keep</div></div>
+            <div class="metric"><div class="label">Documents</div><div class="value">${s.orphan_documents.toLocaleString()}</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Current decisions</h2>
+          <div class="grid">
+            <div class="metric"><div class="label">Marked keep</div><div class="value" style="color:var(--success)">${keepN.toLocaleString()}</div></div>
+            <div class="metric"><div class="label">Marked delete</div><div class="value" style="color:var(--danger)">${delN.toLocaleString()}</div></div>
+            <div class="metric"><div class="label">Undecided</div><div class="value" style="color:var(--warning)">${(s.orphan_count + s.broken_refs + s.dup_clusters - dAll.length).toLocaleString()}</div></div>
+          </div>
+          <div style="margin-top:12px">Decisions are saved to <code>localStorage</code> as you work. Use <strong>Export</strong> to download <code>decisions.json</code> for backup or sharing.</div>
+        </div>
+        <div class="card">
+          <h2>Suggested workflow</h2>
+          <ol style="margin-left: 20px">
+            <li>Variants tab: verify sample, click <em>Mark all as delete</em>.</li>
+            <li>Images tab: review thumbnails, keep anything you want.</li>
+            <li>Audio / video: confirmed to keep — leave alone.</li>
+            <li>Broken refs: fix or remove the HTML references.</li>
+            <li>Duplicates: pick one canonical copy per cluster, mark the rest delete.</li>
+            <li>Dry-run below to preview; Execute to delete via the <code>dedup-execute.yml</code> workflow.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h2>Execute</h2>
+          <p style="margin-bottom:12px">Commits <code>admin/dedup/data/decisions.json</code> and dispatches the <code>dedup-execute.yml</code> workflow. Deletions happen server-side on GitHub Actions — the repo's <code>.git</code> never needs to see thousands of loose deletes from your laptop.</p>
+          <div class="grid" style="margin-bottom:12px">
+            <div class="metric"><div class="label">To delete (resolved)</div><div class="value" style="color:var(--danger)" id="exec-delete-count">—</div><div class="sub" id="exec-delete-bytes">—</div></div>
+            <div class="metric"><div class="label">To keep (resolved)</div><div class="value" style="color:var(--success)" id="exec-keep-count">—</div></div>
+            <div class="metric"><div class="label">GitHub PAT</div><div class="value" id="exec-pat-status">—</div><div class="sub">Set via ⚙ Settings</div></div>
+          </div>
+          <div class="toolbar">
+            <button class="primary" id="btn-dry-run">Dry run — commit decisions &amp; list</button>
+            <button class="danger" id="btn-execute">Execute — delete for real</button>
+          </div>
+          <div id="execute-status" style="margin-top:12px"></div>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-top:12px">Execute asks you to type <code>DELETE N FILES</code> to confirm. The workflow runs on ubuntu-latest, deletes, commits, pushes. Hard-capped at 20,000 deletions per run.</p>
+        </div>
+        <div class="card">
+          <h2>Manifest</h2>
+          <div>Generated: <code>${MANIFEST.generated_at}</code></div>
+          <div>Repo: <code>${MANIFEST.repo.owner}/${MANIFEST.repo.name}</code> branch <code>${MANIFEST.repo.branch}</code></div>
+          <div>To regenerate: <code>node admin/dedup/scan.js</code> from repo root.</div>
+        </div>
+      `;
+    }
+
+    // ---------- Orphan list (variants/images/audio_video/documents) ----------
+    function renderOrphanList(body) {
+      const tab = TABS.find(t => t.id === CURRENT_TAB);
+      const items = MANIFEST.orphans[tab.category];
+      const filtered = SEARCH ? items.filter(i => i.path.includes(SEARCH.toLowerCase())) : items;
+      const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+      CURRENT_PAGE = Math.min(CURRENT_PAGE, pages - 1);
+      const slice = filtered.slice(CURRENT_PAGE * PAGE_SIZE, (CURRENT_PAGE + 1) * PAGE_SIZE);
+
+      const paths = items.map(i => i.path);
+      const { keep, del, pend } = tallyDecisions(paths, tab.default);
+      const totalBytes = items.reduce((s, i) => s + i.size, 0);
+      const markedDeleteBytes = items.filter(i => effectiveDecision(i.path, tab.default) === 'delete').reduce((s, i) => s + i.size, 0);
+
+      body.innerHTML = `
+        <div class="alert ${tab.default === 'delete' ? 'info' : 'warning'}">
+          <strong>Default action for this class: <em>${tab.default}</em>.</strong>
+          ${tab.default === 'delete' ? ' Items are considered deleted unless you mark them to keep.' : ' Items stay until you mark them otherwise.'}
+          Total in class: ${items.length.toLocaleString()} files / ${fmtBytes(totalBytes)}.
+          Currently marked delete: ${del.toLocaleString()} files / ${fmtBytes(markedDeleteBytes)}.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="search" placeholder="Filter by path…" value="${escapeHtml(SEARCH)}">
+          <button data-bulk="keep">Mark all visible: keep</button>
+          <button data-bulk="delete" class="danger">Mark all visible: delete</button>
+          <button data-bulk-all="keep">Mark ENTIRE class: keep</button>
+          <button data-bulk-all="delete" class="danger">Mark ENTIRE class: delete</button>
+          <button data-clear-class>Clear decisions in class</button>
+          <span class="status">Keep: ${keep} · Delete: ${del} · Pending: ${pend}</span>
+        </div>
+        <div class="legend">
+          <span><span class="swatch" style="background:var(--success)"></span>Keep</span>
+          <span><span class="swatch" style="background:var(--danger)"></span>Delete</span>
+          <span><span class="swatch" style="background:var(--warning)"></span>Pending (uses default)</span>
+        </div>
+        <div class="item-list">${slice.map(i => renderItem(i, tab)).join('')}</div>
+        ${renderPagination(filtered.length, pages)}
+      `;
+      bindItemActions(body, tab);
+      document.getElementById('search').addEventListener('input', e => { SEARCH = e.target.value; CURRENT_PAGE = 0; renderTabBody(); });
+      body.querySelectorAll('[data-bulk]').forEach(b => b.addEventListener('click', () => { slice.forEach(i => setDecision(i.path, b.dataset.bulk)); renderTabBody(); }));
+      body.querySelectorAll('[data-bulk-all]').forEach(b => b.addEventListener('click', () => {
+        if (!confirm(`Apply '${b.dataset.bulkAll}' to all ${items.length.toLocaleString()} items in this class?`)) return;
+        items.forEach(i => setDecision(i.path, b.dataset.bulkAll));
+        renderTabBody();
+      }));
+      body.querySelector('[data-clear-class]').addEventListener('click', () => {
+        if (!confirm(`Clear decisions for all ${items.length.toLocaleString()} items in this class?`)) return;
+        items.forEach(i => clearDecision(i.path)); renderTabBody();
+      });
+    }
+
+    function renderItem(item, tab) {
+      const decision = effectiveDecision(item.path, tab.default);
+      const userDecision = DECISIONS[item.path];
+      const cls = userDecision ? `decision-${userDecision}` : '';
+      const thumb = thumbnailFor(item, tab.thumb);
+      return `
+        <div class="item ${cls}" data-path="${escapeHtml(item.path)}">
+          <div></div>
+          <div class="thumb ${tab.thumb === 'audio' ? 'audio' : ''}">${thumb}</div>
+          <div class="path"><strong>${escapeHtml(path.basename(item.path))}</strong><br>${escapeHtml(item.path)}</div>
+          <div class="size">${fmtBytes(item.size)}</div>
+          <div class="actions">
+            <button data-set="keep"   class="${userDecision === 'keep'   ? 'active-keep'   : ''}">Keep</button>
+            <button data-set="delete" class="${userDecision === 'delete' ? 'active-delete' : ''}">Delete</button>
+            <button data-set="clear"  class="${!userDecision             ? 'active-pending': ''}">Auto (${tab.default})</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function thumbnailFor(item, thumbType) {
+      if (thumbType === 'image') {
+        // Jetpack Photon URL with fixed thumbnail size
+        const url = photonUrl(item.path, { fit: '200,150' });
+        return `<img src="${url}" alt="" loading="lazy" onerror="this.parentElement.textContent='(no preview)'">`;
+      }
+      if (thumbType === 'audio') {
+        const ext = item.path.split('.').pop().toUpperCase();
+        return `<span>${ext}</span>`;
+      }
+      if (thumbType === 'doc') {
+        return `<span>DOC</span>`;
+      }
+      return `<span>?</span>`;
+    }
+
+    // ---------- Broken refs ----------
+    function renderBrokenRefs(body) {
+      const items = MANIFEST.broken_refs;
+      body.innerHTML = `
+        <div class="alert warning">
+          ${items.length} references in HTML/XML/JSON point to files that don't exist on disk. Each is a candidate for deletion from the referencing file — or for restoring the missing file.
+        </div>
+        <div class="item-list">
+          ${items.map(ref => `
+            <div class="item" style="grid-template-columns: 40px 120px 1fr 220px">
+              <div></div>
+              <div class="thumb broken">404</div>
+              <div class="path">${escapeHtml(ref)}</div>
+              <div class="actions">
+                <button disabled>Search repo</button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // ---------- Duplicate clusters ----------
+    function renderDuplicates(body) {
+      const clusters = MANIFEST.duplicate_clusters;
+      const filtered = SEARCH ? clusters.filter(c => c.paths.some(p => p.includes(SEARCH.toLowerCase()))) : clusters;
+      const pages = Math.max(1, Math.ceil(filtered.length / 50));
+      CURRENT_PAGE = Math.min(CURRENT_PAGE, pages - 1);
+      const slice = filtered.slice(CURRENT_PAGE * 50, (CURRENT_PAGE + 1) * 50);
+
+      body.innerHTML = `
+        <div class="alert info">
+          ${clusters.length.toLocaleString()} clusters of byte-identical files (${fmtBytes(MANIFEST.summary.dup_waste_bytes)} of waste from extra copies).
+          <br>Patterns: WP re-upload suffixes (<code>-1</code>, <code>-2</code>, <code>-3</code>), identical thumbnails across posts.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="search" placeholder="Filter paths…" value="${escapeHtml(SEARCH)}">
+          <span class="status">Showing ${slice.length} of ${filtered.length} clusters</span>
+        </div>
+        <div>${slice.map(cluster => renderCluster(cluster)).join('')}</div>
+        ${renderPagination(filtered.length, pages, 50)}
+      `;
+      document.getElementById('search').addEventListener('input', e => { SEARCH = e.target.value; CURRENT_PAGE = 0; renderTabBody(); });
+      body.querySelectorAll('[data-cluster-path]').forEach(b => b.addEventListener('click', () => { setDecision(b.dataset.clusterPath, b.dataset.set); renderTabBody(); }));
+      bindPagination(body);
+    }
+
+    function renderCluster(cluster) {
+      const firstImage = cluster.paths.find(p => /\.(jpg|jpeg|png|gif|webp)$/i.test(p));
+      const thumb = firstImage ? `<img src="${photonUrl(firstImage, { fit: '160,120' })}" alt="" loading="lazy">` : '';
+      return `
+        <div class="dup-cluster">
+          <div class="header">
+            <strong>${cluster.count} copies — ${fmtBytes(cluster.size_per_copy)} each — ${fmtBytes(cluster.wasted_bytes)} wasted</strong>
+            ${cluster.any_referenced ? '<span style="color:var(--success)">• has referenced copies</span>' : '<span style="color:var(--text-muted)">• no references</span>'}
+          </div>
+          ${firstImage ? `<div class="thumb-row">${thumb}</div>` : ''}
+          ${cluster.paths.map(p => {
+            const isRef = cluster.referenced_paths.includes(p);
+            const userDec = DECISIONS[p];
+            return `
+              <div class="path-row ${isRef ? 'referenced' : ''}">
+                <span class="path">${isRef ? '★ ' : '  '}${escapeHtml(p)}</span>
+                <span style="flex:1"></span>
+                <button data-cluster-path="${escapeHtml(p)}" data-set="keep"   class="${userDec === 'keep'   ? 'active-keep'   : ''}">Keep</button>
+                <button data-cluster-path="${escapeHtml(p)}" data-set="delete" class="${userDec === 'delete' ? 'active-delete' : ''}">Delete</button>
+                <button data-cluster-path="${escapeHtml(p)}" data-set="clear">Clear</button>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    // ---------- Item actions ----------
+    function bindItemActions(body, tab) {
+      body.querySelectorAll('.item .actions button').forEach(b => {
+        b.addEventListener('click', () => {
+          const item = b.closest('.item');
+          const p = item.dataset.path;
+          setDecision(p, b.dataset.set);
+          renderTabBody();
+        });
+      });
+      bindPagination(body);
+    }
+
+    function bindPagination(body) {
+      body.querySelectorAll('[data-page]').forEach(b => b.addEventListener('click', () => {
+        CURRENT_PAGE = parseInt(b.dataset.page); renderTabBody(); window.scrollTo({ top: 0, behavior: 'smooth' });
+      }));
+    }
+
+    function renderPagination(total, pages, pageSize = PAGE_SIZE) {
+      if (pages <= 1) return '';
+      return `<div class="pagination">
+        <button data-page="0" ${CURRENT_PAGE === 0 ? 'disabled' : ''}>« First</button>
+        <button data-page="${Math.max(0, CURRENT_PAGE - 1)}" ${CURRENT_PAGE === 0 ? 'disabled' : ''}>‹ Prev</button>
+        <span class="info">Page ${CURRENT_PAGE + 1} of ${pages} (${total.toLocaleString()} items)</span>
+        <button data-page="${Math.min(pages - 1, CURRENT_PAGE + 1)}" ${CURRENT_PAGE >= pages - 1 ? 'disabled' : ''}>Next ›</button>
+        <button data-page="${pages - 1}" ${CURRENT_PAGE >= pages - 1 ? 'disabled' : ''}>Last »</button>
+      </div>`;
+    }
+
+    // ---------- Decisions ----------
+    function setDecision(p, v) {
+      if (v === 'clear') { delete DECISIONS[p]; }
+      else DECISIONS[p] = v;
+      localStorage.setItem(DECISIONS_KEY, JSON.stringify(DECISIONS));
+    }
+    function clearDecision(p) { delete DECISIONS[p]; localStorage.setItem(DECISIONS_KEY, JSON.stringify(DECISIONS)); }
+    function effectiveDecision(p, defaultDec) { return DECISIONS[p] || defaultDec; }
+    function tallyDecisions(paths, defaultDec) {
+      let keep = 0, del = 0, pend = 0;
+      for (const p of paths) {
+        const d = DECISIONS[p];
+        if (d === 'keep') keep++;
+        else if (d === 'delete') del++;
+        else pend++;
+      }
+      // pending still rolls up to the default
+      if (defaultDec === 'keep') { keep += pend; pend = 0; }
+      else if (defaultDec === 'delete') { del += pend; pend = 0; }
+      return { keep, del, pend };
+    }
+
+    // ---------- Export / import ----------
+    document.getElementById('export-btn').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify({
+        exported_at: new Date().toISOString(),
+        manifest_generated_at: MANIFEST?.generated_at,
+        decisions: DECISIONS,
+      }, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `decisions-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+    });
+    document.getElementById('import-btn').addEventListener('click', () => document.getElementById('import-file').click());
+    document.getElementById('import-file').addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          if (!data.decisions) throw new Error('No decisions field');
+          if (!confirm(`Replace current decisions with ${Object.keys(data.decisions).length} imported entries?`)) return;
+          DECISIONS = data.decisions;
+          localStorage.setItem(DECISIONS_KEY, JSON.stringify(DECISIONS));
+          render();
+        } catch (err) { alert('Invalid decisions file: ' + err.message); }
+      };
+      reader.readAsText(file);
+    });
+
+    // ---------- Settings ----------
+    document.getElementById('settings-btn').addEventListener('click', () => {
+      document.getElementById('settings-panel').classList.toggle('open');
+      const s = getSettings();
+      document.getElementById('pat-input').value = s.githubToken || '';
+      document.getElementById('remember-token').checked = s.rememberToken || false;
+    });
+    document.getElementById('save-settings').addEventListener('click', () => {
+      const s = getSettings();
+      s.githubToken = document.getElementById('pat-input').value;
+      s.rememberToken = document.getElementById('remember-token').checked;
+      if (s.rememberToken) localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+      else localStorage.setItem(SETTINGS_KEY, JSON.stringify({ ...s, githubToken: '' }));
+      document.getElementById('settings-panel').classList.remove('open');
+    });
+    function getSettings() {
+      const stored = localStorage.getItem(SETTINGS_KEY);
+      if (stored) { try { return JSON.parse(stored); } catch {} }
+      return { githubToken: '', repoOwner: CONFIG.repo.owner, repoName: CONFIG.repo.name, rememberToken: false };
+    }
+
+    // ---------- Execute (workflow dispatch) ----------
+    function resolveDecisions() {
+      // Combine user decisions + class defaults, keyed by path.
+      // Duplicate clusters contribute user-decision-only (no default action).
+      const resolved = {};
+      const sizes = new Map();
+      for (const tab of TABS) {
+        if (!tab.category) continue;
+        for (const item of MANIFEST.orphans[tab.category]) {
+          sizes.set(item.path, item.size);
+          const user = DECISIONS[item.path];
+          if (user) resolved[item.path] = user;
+          else if (tab.default === 'keep' || tab.default === 'delete') resolved[item.path] = tab.default;
+          // 'pending' → skip (not in output)
+        }
+      }
+      for (const cluster of MANIFEST.duplicate_clusters) {
+        for (const p of cluster.paths) {
+          if (!sizes.has(p)) sizes.set(p, cluster.size_per_copy);
+          if (DECISIONS[p]) resolved[p] = DECISIONS[p]; // duplicate_clusters: user-only
+        }
+      }
+      return { resolved, sizes };
+    }
+
+    function executeStats() {
+      const { resolved, sizes } = resolveDecisions();
+      const entries = Object.entries(resolved);
+      const deletes = entries.filter(([, v]) => v === 'delete');
+      const keeps = entries.filter(([, v]) => v === 'keep');
+      const bytesToDelete = deletes.reduce((s, [p]) => s + (sizes.get(p) || 0), 0);
+      return {
+        deleteCount: deletes.length,
+        keepCount: keeps.length,
+        bytesToDelete,
+        resolved,
+      };
+    }
+
+    function bindSummary() {
+      const stats = executeStats();
+      const token = getSettings().githubToken;
+      const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+      setText('exec-delete-count', stats.deleteCount.toLocaleString());
+      setText('exec-delete-bytes', fmtBytes(stats.bytesToDelete));
+      setText('exec-keep-count', stats.keepCount.toLocaleString());
+      setText('exec-pat-status', token ? 'configured' : 'not set');
+      const dryBtn = document.getElementById('btn-dry-run');
+      const execBtn = document.getElementById('btn-execute');
+      if (!dryBtn || !execBtn) return;
+      if (!token || stats.deleteCount === 0) {
+        dryBtn.disabled = true;
+        execBtn.disabled = true;
+      }
+      dryBtn.addEventListener('click', () => runExecute(true));
+      execBtn.addEventListener('click', () => runExecute(false));
+    }
+
+    async function commitDecisionsFile(api, payload) {
+      const content = toBase64(JSON.stringify(payload, null, 2));
+      const filePath = 'admin/dedup/data/decisions.json';
+      let sha = null;
+      try {
+        const existing = await api.getFile(filePath);
+        sha = existing.sha;
+      } catch { /* doesn't exist yet */ }
+      const body = {
+        message: `dedup: update decisions (${Object.keys(payload.decisions).length} entries)`,
+        content,
+        branch: CONFIG.repo.branch,
+      };
+      if (sha) body.sha = sha;
+      return api.request(`/repos/${api.owner}/${api.name}/contents/${filePath}`, {
+        method: 'PUT',
+        body: JSON.stringify(body),
+      });
+    }
+
+    function setStatus(msg, level = 'info') {
+      const el = document.getElementById('execute-status');
+      if (!el) return;
+      el.innerHTML = `<div class="alert ${level}">${msg}</div>`;
+    }
+
+    async function runExecute(dryRun) {
+      const settings = getSettings();
+      const token = settings.githubToken;
+      if (!token) { alert('Set a GitHub PAT in Settings first. Needs repo + workflow scope.'); return; }
+      const stats = executeStats();
+      if (stats.deleteCount === 0) { alert('No files are marked for deletion.'); return; }
+
+      if (!dryRun) {
+        const phrase = `DELETE ${stats.deleteCount} FILES`;
+        const typed = prompt(`This will permanently delete ${stats.deleteCount.toLocaleString()} files (${fmtBytes(stats.bytesToDelete)}).\n\nType: ${phrase}`);
+        if (typed !== phrase) { setStatus('Cancelled — confirmation phrase did not match.', 'warning'); return; }
+      }
+
+      setStatus('Committing <code>admin/dedup/data/decisions.json</code>…', 'info');
+
+      const api = new GitHubAPI({
+        token,
+        owner: CONFIG.repo.owner,
+        name: CONFIG.repo.name,
+        branch: CONFIG.repo.branch,
+      });
+
+      const payload = {
+        exported_at: new Date().toISOString(),
+        manifest_generated_at: MANIFEST.generated_at,
+        tool: 'admin/dedup',
+        decisions: stats.resolved,
+      };
+
+      try {
+        await commitDecisionsFile(api, payload);
+        setStatus(`Committed decisions.json. Dispatching workflow (dry_run=${dryRun})…`, 'info');
+        await api.dispatchWorkflow('dedup-execute.yml', {
+          dry_run: dryRun ? 'true' : 'false',
+          confirm_count: String(stats.deleteCount),
+        });
+        const actionsUrl = `https://github.com/${CONFIG.repo.owner}/${CONFIG.repo.name}/actions/workflows/dedup-execute.yml`;
+        setStatus(`✓ Workflow dispatched (dry_run=${dryRun}). <a href="${actionsUrl}" target="_blank" rel="noopener">Open Actions →</a>`, 'info');
+      } catch (err) {
+        setStatus(`✗ ${escapeHtml(err.message)}`, 'danger');
+      }
+    }
+
+    function toBase64(str) {
+      // Paths are ASCII but go through TextEncoder for safety.
+      const bytes = new TextEncoder().encode(str);
+      let binary = '';
+      const chunk = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunk) {
+        binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+      }
+      return btoa(binary);
+    }
+
+    // ---------- Utils ----------
+    function fmtBytes(n) {
+      if (n < 1024) return `${n} B`;
+      if (n < 1048576) return `${(n / 1024).toFixed(1)} KB`;
+      if (n < 1073741824) return `${(n / 1048576).toFixed(1)} MB`;
+      return `${(n / 1073741824).toFixed(2)} GB`;
+    }
+    function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+    const path = { basename: (p) => p.split('/').pop() };
+
+    init();
+  </script>
+</body>
+</html>

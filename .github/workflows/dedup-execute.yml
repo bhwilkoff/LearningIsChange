@@ -1,0 +1,157 @@
+name: Dedup Execute
+
+# Reads admin/dedup/data/decisions.json and deletes the paths marked "delete".
+# Safety gates:
+#   - dry_run input (default 'true') — prints the plan without deleting
+#   - confirm_count input must match the number of deletions in decisions.json
+#   - every path must live under wp-content/uploads/
+#   - at most 20,000 deletions per run
+#
+# Triggered from admin/dedup/ via the "Execute" button.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (list the deletions without committing)'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'true'
+      confirm_count:
+        description: 'Expected number of files to delete (safety check — must match decisions.json)'
+        required: true
+        type: string
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run dedup execute
+        run: |
+          cat > execute.js << 'SCRIPT_EOF'
+          const fs = require('fs');
+          const DRY = process.env.DRY_RUN === 'true';
+          const EXPECTED = parseInt(process.env.CONFIRM_COUNT, 10);
+          const MAX_DELETIONS = 20000;
+
+          const decisionsPath = 'admin/dedup/data/decisions.json';
+          if (!fs.existsSync(decisionsPath)) {
+            console.error(`ERROR: ${decisionsPath} not found in repo.`);
+            console.error(`The admin/dedup/ tool must commit decisions before this workflow runs.`);
+            process.exit(1);
+          }
+
+          const data = JSON.parse(fs.readFileSync(decisionsPath, 'utf8'));
+          const decisions = data.decisions || {};
+          const toDelete = Object.entries(decisions)
+            .filter(([, v]) => v === 'delete')
+            .map(([p]) => p);
+
+          console.log(`decisions.json exported at: ${data.exported_at || 'unknown'}`);
+          console.log(`Against manifest generated at: ${data.manifest_generated_at || 'unknown'}`);
+          console.log(`Paths marked delete: ${toDelete.length}`);
+          console.log(`Workflow input confirm_count: ${EXPECTED}`);
+          console.log(`Dry run: ${DRY}`);
+
+          if (!Number.isFinite(EXPECTED)) {
+            console.error('confirm_count must be a number');
+            process.exit(1);
+          }
+          if (toDelete.length !== EXPECTED) {
+            console.error(`Count mismatch: decisions.json has ${toDelete.length} deletions, workflow input said ${EXPECTED}.`);
+            console.error('Refusing to run — re-export decisions or correct the count.');
+            process.exit(1);
+          }
+          if (toDelete.length === 0) {
+            console.log('Nothing to delete.');
+            process.exit(0);
+          }
+          if (toDelete.length > MAX_DELETIONS) {
+            console.error(`Refusing to delete ${toDelete.length} files in a single run (max ${MAX_DELETIONS}).`);
+            console.error('Split the work into smaller batches.');
+            process.exit(1);
+          }
+
+          for (const p of toDelete) {
+            if (!p.startsWith('wp-content/uploads/')) {
+              console.error(`ERROR: path outside wp-content/uploads/: ${p}`);
+              process.exit(1);
+            }
+            if (p.includes('..') || p.startsWith('/')) {
+              console.error(`ERROR: suspicious path: ${p}`);
+              process.exit(1);
+            }
+          }
+
+          let totalBytes = 0;
+          let missing = 0;
+          for (const p of toDelete) {
+            try { totalBytes += fs.statSync(p).size; }
+            catch { missing++; }
+          }
+          const mb = (totalBytes / 1048576).toFixed(1);
+          console.log(`Total size: ${totalBytes} bytes (${mb} MB)`);
+          if (missing > 0) console.log(`Note: ${missing} paths are missing on disk (will be skipped).`);
+
+          console.log('');
+          console.log('=== First 30 paths ===');
+          for (const p of toDelete.slice(0, 30)) console.log('  ' + p);
+          if (toDelete.length > 30) console.log(`  (${toDelete.length - 30} more...)`);
+          console.log('');
+
+          if (DRY) {
+            console.log('DRY RUN — no files deleted.');
+            process.exit(0);
+          }
+
+          console.log('=== Deleting ===');
+          let deleted = 0;
+          for (const p of toDelete) {
+            try { fs.unlinkSync(p); deleted++; }
+            catch { /* already gone */ }
+          }
+          console.log(`Deleted ${deleted} files.`);
+
+          fs.writeFileSync('.dedup-commit-info.json', JSON.stringify({
+            count: deleted,
+            bytes: totalBytes,
+            mb,
+            manifest_generated_at: data.manifest_generated_at,
+          }));
+          SCRIPT_EOF
+
+          DRY_RUN="${{ inputs.dry_run }}" \
+          CONFIRM_COUNT="${{ inputs.confirm_count }}" \
+          node execute.js
+          rm execute.js
+
+      - name: Commit and push deletions
+        if: inputs.dry_run == 'false'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          if [ ! -f .dedup-commit-info.json ]; then
+            echo "No commit info; nothing happened."
+            exit 0
+          fi
+
+          count=$(node -e "console.log(JSON.parse(require('fs').readFileSync('.dedup-commit-info.json')).count)")
+          mb=$(node -e "console.log(JSON.parse(require('fs').readFileSync('.dedup-commit-info.json')).mb)")
+          rm .dedup-commit-info.json
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No staged changes — nothing to commit."
+          else
+            git commit -m "dedup: delete ${count} orphan media files (${mb} MB)"
+            git push
+            echo "Pushed."
+          fi
