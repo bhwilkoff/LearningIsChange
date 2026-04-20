@@ -305,7 +305,7 @@
       fragments: {},      // { MASTHEAD: { original, current, sha } }
       activeTab: 'visual',
       siteHead: null,     // <head> content from the live homepage, for Preview
-      menus: null,        // [{ ulId, parentNavId, items }]  — only while Menu tab is active
+      menu: null,         // { items, targets, divergence }  — single synced menu for MASTHEAD
     };
 
     // ---------- Init ----------
@@ -372,7 +372,7 @@
     function selectZone(zone) {
       if (state.zone && !confirmDiscardChanges(zone)) return;
       state.zone = zone;
-      state.menus = null;
+      state.menu = null;
       document.getElementById('editor-card').style.display = '';
       document.getElementById('log-card').style.display = '';
       document.getElementById('editor-zone-label').textContent = ZONE_META[zone].title;
@@ -481,7 +481,7 @@
         renderPreview(content);
       } else if (state.activeTab === 'menu') {
         // Parse menus from the current fragment HTML and render the tree editor
-        state.menus = parseMenusFromHtml(content);
+        state.menu = parseMenuFromHtml(content);
         renderMenuEditor();
       }
     }
@@ -493,36 +493,72 @@
         f.current = document.getElementById('visual-editor').innerHTML;
       } else if (state.activeTab === 'source') {
         f.current = document.getElementById('source-editor').value;
-      } else if (state.activeTab === 'menu' && state.menus) {
-        f.current = serializeMenusIntoHtml(f.current, state.menus);
+      } else if (state.activeTab === 'menu' && state.menu) {
+        f.current = serializeMenuIntoHtml(f.current, state.menu);
       }
       // Preview is read-only; no sync from it.
       updateSaveChip();
     }
 
     // ---------- Menu parser / serializer ----------
-    function parseMenusFromHtml(html) {
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      // A "menu" is any <ul> whose direct children include <li class*="menu-item">
-      const menuUls = [...doc.querySelectorAll('ul')].filter(ul =>
+    //
+    // Only TOP-LEVEL menus count. Sub-menus are nested inside LIs inside a
+    // top-level menu UL; they surface as children[] on each item, not as
+    // separate menus.
+    //
+    // The masthead fragment historically has TWO top-level menus:
+    //   #mobile-nav (inside <nav id="mobile-menu">)
+    //   #prime_nav  (inside <nav id="access">)
+    // They are the same site-wide navigation rendered twice by the theme.
+    // This editor treats them as ONE menu; save writes to both ULs, so the
+    // mobile and desktop menus stay in sync automatically.
+    function findTopLevelMenuUls(doc) {
+      const all = [...doc.querySelectorAll('ul')].filter(ul =>
         [...ul.children].some(li => li.tagName === 'LI' &&
           (li.className || '').split(/\s+/).some(c => c === 'menu-item' || c.startsWith('menu-item-')))
       );
-      return menuUls.map((ul, i) => {
+      // Exclude any UL whose ancestor chain contains another UL — those are sub-menus.
+      return all.filter(ul => {
+        let p = ul.parentElement;
+        while (p) {
+          if (p.tagName === 'UL') return false;
+          p = p.parentElement;
+        }
+        return true;
+      });
+    }
+
+    function parseMenuFromHtml(html) {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const topUls = findTopLevelMenuUls(doc);
+      if (topUls.length === 0) {
+        return { items: [], targets: [], divergence: null };
+      }
+      const targets = topUls.map(ul => {
         const parentNav = ul.closest('nav');
-        const navId = parentNav && parentNav.id ? parentNav.id : '';
-        const ulId = ul.id || '';
-        const title = ulId ? `#${ulId}` :
-                      navId ? `#${navId}` :
-                      `Menu ${i + 1}`;
+        const hasIdsOnItems = [...ul.querySelectorAll('li')].some(li => li.id);
         return {
-          index: i,
-          ulId,
-          navId,
-          title,
-          items: parseMenuItems(ul),
+          ulId: ul.id || '',
+          navId: parentNav?.id || '',
+          preserveIds: hasIdsOnItems,
         };
       });
+      // Source of truth for the tree: the first target that carries IDs (so
+      // "menu-item-12290" survives the round-trip). If none do, use the first.
+      const sourceUl = topUls.find((_, i) => targets[i].preserveIds) || topUls[0];
+      const items = parseMenuItems(sourceUl);
+      // Divergence check — compare label+URL shapes between the targets.
+      let divergence = null;
+      if (topUls.length > 1) {
+        const others = topUls.filter(ul => ul !== sourceUl);
+        const sig = (items) => items.map(it => it.kind === 'raw' ? 'RAW' : `${it.label}|${it.url}|[${sig(it.children || [])}]`).join(',');
+        const mine = sig(items);
+        const mismatches = others.map(ul => sig(parseMenuItems(ul))).filter(s => s !== mine);
+        if (mismatches.length > 0) {
+          divergence = `${mismatches.length} other menu location(s) have different content. Saving will overwrite them to match this tree.`;
+        }
+      }
+      return { items, targets, divergence };
     }
 
     function parseMenuItems(ul) {
@@ -552,12 +588,13 @@
       return out;
     }
 
-    function serializeMenuItems(items, depth = 1) {
-      const tab = '\t'.repeat(depth);
+    function serializeMenuItems(items, depth = 1, opts = { preserveIds: true }) {
       const lines = [];
       for (const item of items) {
         if (item.kind === 'raw') {
-          lines.push(item.html);
+          // Strip the outer <li id> if this target doesn't want IDs
+          const html = opts.preserveIds ? item.html : item.html.replace(/^(<li)\s+id="[^"]*"/, '$1');
+          lines.push(html);
           continue;
         }
         const hasChildren = item.children && item.children.length > 0;
@@ -566,11 +603,11 @@
           .filter(c => c && c !== 'menu-item-has-children');
         if (!classes.includes('menu-item')) classes.unshift('menu-item');
         if (hasChildren) classes.push('menu-item-has-children');
-        const idAttr = item.id ? ` id="${escapeAttr(item.id)}"` : '';
+        const idAttr = (opts.preserveIds && item.id) ? ` id="${escapeAttr(item.id)}"` : '';
         const cls = classes.join(' ');
         const linkHtml = `<a href="${escapeAttr(item.url || '#')}"><span>${escapeHtml(item.label)}</span></a>`;
         if (hasChildren) {
-          lines.push(`<li${idAttr} class="${escapeAttr(cls)}">${linkHtml}\n<ul class="sub-menu">\n${serializeMenuItems(item.children, depth + 1).split('\n').map(l => l ? '\t' + l : l).join('\n')}\n</ul>\n</li>`);
+          lines.push(`<li${idAttr} class="${escapeAttr(cls)}">${linkHtml}\n<ul class="sub-menu">\n${serializeMenuItems(item.children, depth + 1, opts).split('\n').map(l => l ? '\t' + l : l).join('\n')}\n</ul>\n</li>`);
         } else {
           lines.push(`<li${idAttr} class="${escapeAttr(cls)}">${linkHtml}</li>`);
         }
@@ -578,25 +615,20 @@
       return lines.join('\n');
     }
 
-    function serializeMenusIntoHtml(originalHtml, menus) {
-      // Parse original HTML, locate each menu UL, replace its innerHTML with
-      // the freshly-serialized tree. Preserves all non-menu content verbatim.
+    function serializeMenuIntoHtml(originalHtml, menu) {
+      // Single source-of-truth tree (menu.items) writes to all top-level
+      // menu ULs (menu.targets). Items preserve their `id=` only for targets
+      // where the original had IDs on items (mobile menu in Fluida; desktop
+      // primary doesn't).
+      if (!menu || !menu.items) return originalHtml;
       const doc = new DOMParser().parseFromString(originalHtml, 'text/html');
-      const menuUls = [...doc.querySelectorAll('ul')].filter(ul =>
-        [...ul.children].some(li => li.tagName === 'LI' &&
-          (li.className || '').split(/\s+/).some(c => c === 'menu-item' || c.startsWith('menu-item-')))
-      );
-      menus.forEach((menu, i) => {
-        const ul = menuUls[menu.index] || menuUls[i];
-        if (!ul) return;
-        ul.innerHTML = serializeMenuItems(menu.items, 1);
+      const topUls = findTopLevelMenuUls(doc);
+      topUls.forEach((ul, i) => {
+        const target = menu.targets[i] || { preserveIds: false };
+        ul.innerHTML = serializeMenuItems(menu.items, 1, { preserveIds: target.preserveIds });
       });
-      // The masthead fragment starts with <header id="masthead">. Return that
-      // element's outerHTML so we don't accidentally include the <html>/<head>
-      // wrappers DOMParser adds.
       const headerEl = doc.querySelector('#masthead');
       if (headerEl) return headerEl.outerHTML;
-      // Fall back to body innerHTML for unexpected shapes
       return doc.body ? doc.body.innerHTML : originalHtml;
     }
 
@@ -605,17 +637,27 @@
     // ---------- Menu editor UI ----------
     function renderMenuEditor() {
       const root = document.getElementById('menu-editor');
-      if (!state.menus || state.menus.length === 0) {
-        root.innerHTML = `<div class="alert info">No menus found in this fragment. Use the Source tab to add one.</div>`;
+      const menu = state.menu;
+      if (!menu || menu.items.length === 0) {
+        root.innerHTML = `<div class="alert info">No menu items found. Use the Source tab to inspect the HTML directly.</div>`;
         return;
       }
-      root.innerHTML = state.menus.map((menu, mi) => `
-        <div class="menu-block" data-menu="${mi}">
-          <div class="menu-title">${escapeHtml(menu.title)} <span class="badge">${countItems(menu.items)} items</span></div>
-          <div class="menu-items-wrap" data-path="${mi}">${renderItemList(menu.items, [mi])}</div>
-          <button type="button" class="add-item-btn" data-add-path="${mi}">+ Add item to this menu</button>
+      const targetList = menu.targets.map(t => `#${t.ulId || t.navId || '?'}`).join(', ');
+      const divergenceBlock = menu.divergence
+        ? `<div class="alert warning">⚠ ${escapeHtml(menu.divergence)}</div>`
+        : '';
+      root.innerHTML = `
+        ${divergenceBlock}
+        <div class="menu-block">
+          <div class="menu-title">
+            Site Navigation
+            <span class="badge">${countItems(menu.items)} items</span>
+            <span class="badge">synced → ${escapeHtml(targetList)}</span>
+          </div>
+          <div class="menu-items-wrap" data-path="">${renderItemList(menu.items, [])}</div>
+          <button type="button" class="add-item-btn" data-add-path="">+ Add top-level item</button>
         </div>
-      `).join('');
+      `;
       bindMenuEditor();
     }
 
@@ -695,15 +737,17 @@
       });
     }
 
-    function parsePath(s) { return s.split('.').map(n => parseInt(n, 10)); }
+    function parsePath(s) {
+      if (!s) return [];
+      return s.split('.').map(n => parseInt(n, 10));
+    }
 
-    // Paths are [menuIndex, childIdx, grandChildIdx, ...] — the first number
-    // indexes into state.menus; subsequent ones walk into children arrays.
+    // Paths index into state.menu.items. `[]` = add-to-top-level container.
+    // `[0]` = first top-level item. `[0, 2]` = first item's third child. Etc.
     function getContainerAndIndex(path) {
-      // Returns { arr, index }  where arr is the parent array and index is the position within it.
-      if (path.length < 2) return { arr: state.menus[path[0]]?.items, index: NaN };
-      let node = state.menus[path[0]].items;
-      for (let i = 1; i < path.length - 1; i++) {
+      if (path.length === 0) return { arr: state.menu.items, index: NaN };
+      let node = state.menu.items;
+      for (let i = 0; i < path.length - 1; i++) {
         node = node[path[i]].children;
       }
       return { arr: node, index: path[path.length - 1] };
@@ -744,7 +788,7 @@
 
     function outdentAtPath(path) {
       // Un-nest: move item up one level, placed after its parent
-      if (path.length <= 2) return; // already at top level of the menu
+      if (path.length <= 1) return; // already at top level
       const { arr, index } = getContainerAndIndex(path);
       const [item] = arr.splice(index, 1);
       const parentPath = path.slice(0, -1);
@@ -753,7 +797,7 @@
     }
 
     function addItemAtPath(path) {
-      // path is [menuIndex] (append to top level) or [menuIndex, i, j, ...] (append into that item's children)
+      // path is [] (append to top level) or [i, j, ...] (append into that item's children)
       const newItem = {
         kind: 'standard',
         id: '',
@@ -762,8 +806,8 @@
         url: '/',
         children: [],
       };
-      if (path.length === 1) {
-        state.menus[path[0]].items.push(newItem);
+      if (path.length === 0) {
+        state.menu.items.push(newItem);
       } else {
         const item = getItemByPath(path);
         if (!item) return;
@@ -774,8 +818,8 @@
 
     function markFragmentDirty() {
       const f = state.fragments[state.zone];
-      if (!f || !state.menus) return;
-      f.current = serializeMenusIntoHtml(f.current, state.menus);
+      if (!f || !state.menu) return;
+      f.current = serializeMenuIntoHtml(f.current, state.menu);
       updateSaveChip();
     }
 
