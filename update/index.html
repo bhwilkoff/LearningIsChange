@@ -1501,6 +1501,12 @@
         <p>Mass Updater Tool — Part of the <a href="/admin/">Learning is Change Admin Tools</a></p>
     </footer>
 
+    <!-- admin/lib integration -->
+    <script type="module">
+      import { slugify, formatDate } from '/admin/lib/slug.js';
+      window.LIB = Object.assign(window.LIB || {}, { slugify, formatDate });
+    </script>
+
     <!-- Shared Admin Library -->
     <script>
         // ============================================
@@ -1812,6 +1818,7 @@
             
             function formatDate(dateString) {
                 if (!dateString) return '';
+                if (window.LIB && window.LIB.formatDate) return window.LIB.formatDate(dateString);
                 return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             }
             

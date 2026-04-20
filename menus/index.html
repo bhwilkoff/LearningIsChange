@@ -357,6 +357,12 @@
         </div>
     </div>
 
+    <!-- admin/lib integration -->
+    <script type="module">
+      import { slugify, formatDate } from '/admin/lib/slug.js';
+      window.LIB = Object.assign(window.LIB || {}, { slugify, formatDate });
+    </script>
+
     <script>
         // ============================================
         // COMMON MODULE (LiCAdmin) - Matching NewPost.html pattern
@@ -495,11 +501,13 @@
             }
             
             function slugify(text) {
-                return text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
+                if (window.LIB && window.LIB.slugify) return window.LIB.slugify(text);
+                return String(text || '').toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
             }
-            
+
             function formatDate(dateString) {
                 if (!dateString) return '';
+                if (window.LIB && window.LIB.formatDate) return window.LIB.formatDate(dateString);
                 return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             }
             

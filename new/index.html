@@ -784,10 +784,68 @@
         <p>Post Generator for <a href="https://learningischange.com">Learning is Change</a> • Built with ❤️ and Claude AI</p>
     </footer>
 
-    <!-- v2 lib integration: module imports attach lib functions to window; classic script delegates to them. -->
+    <!-- admin/lib integration: module imports attach lib functions to window; classic script delegates to them. -->
     <script type="module">
       import { slugify, formatDate, postPath, postUrl, isoDate } from '/admin/lib/slug.js';
       window.LIB = Object.assign(window.LIB || {}, { slugify, formatDate, postPath, postUrl, isoDate });
+    </script>
+
+    <!-- M4: template-based post rendering -->
+    <script>
+      // Fetch templates/post.html and substitute placeholders with the new
+      // post's data. Returns the rendered HTML, or null on fetch failure
+      // (caller falls back to the inline generatePostHtml).
+      //
+      // Placeholders (9 — must match scripts/regenerate-posts.js):
+      //   {{title}} {{content}} {{excerpt}} {{url}} {{abs_url}}
+      //   {{date_iso}} {{date_formatted}} {{post_id}}
+      //   {{body_classes}} {{article_classes}}
+      async function renderPostFromTemplate(data) {
+        try {
+          const r = await fetch(`https://learningischange.com/templates/post.html?t=${Date.now()}`);
+          if (!r.ok) return null;
+          const tmpl = await r.text();
+
+          const { title, date, slug, content, excerpt, category, tags, year, month, day } = data;
+          const url = `/${year}/${month}/${day}/${slug}/`;
+          const absUrl = `https://learningischange.com${url}`;
+          const MONTHS = ['January','February','March','April','May','June',
+                          'July','August','September','October','November','December'];
+          const [y, m, d] = date.split('-');
+          const dateFormatted = `${MONTHS[parseInt(m, 10) - 1]} ${parseInt(d, 10)}, ${y}`;
+          const dateIso = `${date}T12:00:00+00:00`;
+          const cats = category ? `category-${category.slug}` : '';
+          const tagClasses = (tags || []).map(t => `tag-${t.slug}`).join(' ');
+          const classes = [cats, tagClasses].filter(Boolean).join(' ');
+
+          const values = {
+            '{{title}}': escapeHtmlInline(title),
+            '{{content}}': content,
+            '{{excerpt}}': escapeHtmlInline(excerpt),
+            '{{url}}': url,
+            '{{abs_url}}': absUrl,
+            '{{date_iso}}': dateIso,
+            '{{date_formatted}}': dateFormatted,
+            '{{date_utc}}': dateIso,
+            '{{post_id}}': slug,
+            '{{body_classes}}': classes,
+            '{{article_classes}}': classes,
+          };
+          let html = tmpl;
+          for (const [k, v] of Object.entries(values)) {
+            html = html.split(k).join(v);
+          }
+          return html;
+        } catch (e) {
+          console.warn('renderPostFromTemplate failed:', e);
+          return null;
+        }
+      }
+
+      function escapeHtmlInline(s) {
+        return String(s ?? '').replace(/[&<>"']/g, c =>
+          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      }
     </script>
 
     <script>
@@ -2135,14 +2193,25 @@
                 }
                 
                 updateProgress(10, 'Generating post HTML...');
-                
+
                 const content = getEditorContent();
                 const plainText = getEditorText();
                 const excerpt = plainText.substring(0, 200).trim() + (plainText.length > 200 ? '...' : '');
-                
-                const postHtml = generatePostHtml({ title, date, slug, content, excerpt, category: selectedCategory, tags: selectedTags, year, month, day });
+
+                // M4: prefer template-based rendering. The template
+                // (templates/post.html) is the single source of truth for post
+                // page markup; all data is substituted from the form. If the
+                // template can't be fetched, fall back to the inline
+                // generatePostHtml() that's embedded in this tool.
+                let postHtml = await renderPostFromTemplate({ title, date, slug, content, excerpt, category: selectedCategory, tags: selectedTags, year, month, day });
+                if (postHtml) {
+                    log(`✓ Generated post from templates/post.html`, 'success');
+                } else {
+                    postHtml = generatePostHtml({ title, date, slug, content, excerpt, category: selectedCategory, tags: selectedTags, year, month, day });
+                    log(`⚠ Template fetch failed, used inline generator`, 'warning');
+                }
                 generatedFiles[`${postPath}/index.html`] = postHtml;
-                log(`✓ Generated post: ${postPath}/index.html`, 'success');
+                log(`✓ Post HTML: ${postPath}/index.html`, 'success');
                 
                 updateProgress(20, 'Processing images...');
                 for (const img of uploadedImages) {
@@ -3205,7 +3274,10 @@ ${siteComponents.head}
                     excerpt: newPost.excerpt || '',
                     categories: newPost.category ? [newPost.category.slug] : [],
                     tags: tags.map(t => t && t.slug ? t.slug : String(t)),
-                    content_preview: newPost.excerpt || ''
+                    content_preview: newPost.excerpt || '',
+                    // M4: JSON is the source of truth for post body.
+                    // regenerate-posts.js rebuilds HTML from this field.
+                    content: newPost.content || ''
                 };
                 
                 // Check if post already exists (by URL) and update or add

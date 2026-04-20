@@ -329,6 +329,43 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — M4 final for /new/, M1.3 delegations (session 13)
+- **M4 final — /new/**: post HTML now renders from
+  `templates/post.html` at publish time. New `renderPostFromTemplate()`
+  fetches the template via the live URL, substitutes 11 placeholders
+  (title, content, excerpt, url, abs_url, date_iso, date_formatted,
+  post_id, body_classes, article_classes), returns HTML. Falls back
+  to the legacy inline `generatePostHtml()` if the template fetch
+  fails — no behavior change in the bad-network case.
+- **M4 final — /new/ JSON**: `generateDatabaseUpdate()` now writes
+  the post body to `posts[i].content` (in addition to the existing
+  `content_preview` excerpt). New posts are immediately
+  template-renderable via `regenerate-posts.js`.
+- **M4 final — /edit/**: confirmed already M4-compliant. Its
+  `updateDatabase()` (line 2143) extracts `entry-content` innerHTML
+  from the user's edited HTML and writes to `posts[i].content` on
+  save. No changes needed.
+- **M1.3 — lib delegations** for the three remaining tools that have
+  delegatable helpers:
+  - `/update/`: module script + `formatDate` delegate
+  - `/menus/`: module script + `slugify` + `formatDate` delegate
+  - `/search/`: module script + `formatDate` delegate
+  - Other tools (`/remove/`, `/archive-sync/`, `/rss-creator/`,
+    `/podcast-rss/`, `/links/`) don't use slugify/formatDate/base64
+    in their inline code — adding a module script is decoration-only
+    until they're refactored more deeply. Skipping for this pass.
+- **Migration coverage** — admin/lib/ is now wired into:
+  `admin/dedup/`, `admin/regenerate/`, `/new/`, `/edit/`, `/update/`,
+  `/menus/`, `/search/`. 7 of 11 tools.
+- **Left**:
+  - Run full backfill across pre-2026 years
+  - Dispatch `regenerate-posts.yml` with `scope=all` for site-wide
+    template regeneration (one big commit)
+  - Deeper helper migrations (githubAPI, commitMultipleFiles, etc.)
+    for tools that need them
+  - M5 — define the Mass Updater's narrowed scope after full
+    regeneration lands
+
 ### 2026-04-20 — M4 dedup + template + regenerator (session 12)
 - **Dedup date-archive entries**: ran
   `scripts/dedup-date-archives.js --apply` across all year shards.
