@@ -329,6 +329,33 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — /new/v2 reset to copy-first (session 7)
+- **Found**: Session 6's from-scratch v2 shipped broken — slug auto-gen,
+  settings button, editor toolbar buttons, and image-insert flow were
+  all non-functional. Root cause: I rewrote the UI shell from memory
+  instead of porting the working code. The lib modules themselves are
+  fine; the v2 tool never exercised them.
+- **Did**:
+  1. Scrapped the broken v2 file.
+  2. Copied `/new/index.html` verbatim to `/new/v2/index.html`.
+  3. Added a visible `v2` badge to the page heading and updated the
+     `<title>` + breadcrumb so Ben can tell them apart in his browser.
+  4. Verified `diff` is three cosmetic lines only — v2 should behave
+     identically to v1.
+  5. Reset M1.1b task to in_progress with a new, correct description:
+     progressive lib integration rather than from-scratch rewrite.
+- **Next**: swap ONE helper at a time. Candidate order (simplest →
+  hairiest): `slugify`, `formatDate`, `arrayBufferToBase64`,
+  `fetchDatabase`/`fetchPostsByYear`, `getSettings`/`saveSettings`,
+  `fetchFileFromGithub`, `githubAPI`, `commitMultipleFiles`,
+  `triggerWorkflow`. Then the generators (RSS, archives, DB mutators)
+  delegate to lib/feeds, lib/archives, lib/mutate respectively.
+- **Lesson learned for my own memory**: when porting a substantial
+  tool, start from the working code and do targeted swaps. Never
+  recreate the UI shell from an audit — auditing captures surface
+  features, not invisible behaviors (keyboard bindings, focus
+  handling, IIFE closures, DOM event chains).
+
 ### 2026-04-17 — M1.1b /new/v2 built (session 6)
 - **Found**: Full `/new/` audit showed the orchestration flow is
   self-contained and the tool-specific logic (post page assembly,
