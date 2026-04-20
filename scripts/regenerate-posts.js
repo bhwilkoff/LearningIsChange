@@ -69,9 +69,14 @@ function renderPost(post) {
   const url = cleanUrl(post.url);
   const parts = urlParts(post.url);
   const [year, , , slug] = parts;
-  const date = post.date_published || `${parts[0]}-${parts[1]}-${parts[2]}`;
-  const dateFormatted = formatDate(date);
-  const dateIso = `${date}T12:00:00+00:00`;
+  const rawDate = post.date_published || `${parts[0]}-${parts[1]}-${parts[2]}`;
+  // date_published comes in two shapes across the database:
+  //   newer shards: "2026-03-26"             (date only)
+  //   older shards: "2014-01-01T12:00:00Z"   (already ISO datetime)
+  // Normalize: dateOnly for display formatting, ISO for the <time datetime=...>.
+  const dateOnly = rawDate.slice(0, 10);
+  const dateFormatted = formatDate(dateOnly);
+  const dateIso = /T\d/.test(rawDate) ? rawDate.replace(/Z$/, '+00:00') : `${dateOnly}T12:00:00+00:00`;
 
   const cats = (Array.isArray(post.categories) ? post.categories : [])
     .map(c => `category-${typeof c === 'string' ? c : c?.slug}`).filter(Boolean).join(' ');

@@ -811,9 +811,11 @@
           const absUrl = `https://learningischange.com${url}`;
           const MONTHS = ['January','February','March','April','May','June',
                           'July','August','September','October','November','December'];
-          const [y, m, d] = date.split('-');
+          // Handle both "YYYY-MM-DD" and "YYYY-MM-DDTHH:MM:SSZ" inputs (older shards have full ISO).
+          const dateOnly = date.slice(0, 10);
+          const [y, m, d] = dateOnly.split('-');
           const dateFormatted = `${MONTHS[parseInt(m, 10) - 1]} ${parseInt(d, 10)}, ${y}`;
-          const dateIso = `${date}T12:00:00+00:00`;
+          const dateIso = /T\d/.test(date) ? date.replace(/Z$/, '+00:00') : `${dateOnly}T12:00:00+00:00`;
           const cats = category ? `category-${category.slug}` : '';
           const tagClasses = (tags || []).map(t => `tag-${t.slug}`).join(' ');
           const classes = [cats, tagClasses].filter(Boolean).join(' ');
