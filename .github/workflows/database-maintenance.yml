@@ -1,0 +1,57 @@
+name: Database Maintenance
+
+# Recomputes counts in manifest.json + taxonomies.json + search.json
+# from the actual contents of database/posts/YYYY.json + pages.json.
+#
+# Triggered from /admin/db-maintenance/ or manually from the Actions tab.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (show summary; do not write)'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'true'
+
+jobs:
+  recompute:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run recompute-database-stats.js
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/recompute-database-stats.js
+          else
+            node scripts/recompute-database-stats.js --apply
+          fi
+
+      - name: Commit and push
+        if: inputs.dry_run == 'false'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add database/manifest.json database/taxonomies.json database/search.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            for attempt in 1 2 3 4 5; do
+              if git commit -m "database maintenance — recompute stats, taxonomies, search" 2>&1 && git push 2>&1; then
+                echo "Pushed"
+                exit 0
+              fi
+              echo "Push rejected (attempt $attempt) — pulling and retrying..."
+              git fetch origin
+              git rebase origin/main
+              sleep 5
+            done
+            exit 1
+          fi

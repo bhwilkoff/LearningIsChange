@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-03-26T22:45:31.078Z",
+  "generated": "2026-04-20T21:29:42.174Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -8,98 +8,98 @@
     "description": "My name is Ben Wilkoff, and I Teach. And Learn. A Lot."
   },
   "stats": {
-    "total_posts": 5741,
+    "total_posts": 3914,
     "total_pages": 497,
     "total_categories": 38,
-    "total_tags": 1361,
+    "total_tags": 1371,
     "total_authors": 2,
     "date_range": {
       "earliest": "2005-04-20T12:00:00Z",
-      "latest": "2026-01-14T12:00:00Z"
+      "latest": "2026-03-26T12:00:00Z"
     },
-    "last_modified": "2026-01-16T18:56:54.911Z"
+    "last_modified": "2026-04-20T21:29:42.174Z"
   },
   "shards": {
     "posts": {
       "2005": {
-        "count": 2,
-        "hash": "-107f522c"
+        "count": 1,
+        "hash": null
       },
       "2006": {
-        "count": 191,
-        "hash": "-3037abeb"
+        "count": 109,
+        "hash": null
       },
       "2007": {
-        "count": 468,
-        "hash": "-7b28171b"
+        "count": 282,
+        "hash": null
       },
       "2008": {
-        "count": 226,
-        "hash": "2da79ef1"
+        "count": 124,
+        "hash": null
       },
       "2009": {
-        "count": 269,
-        "hash": "-2ef79823"
+        "count": 146,
+        "hash": null
       },
       "2010": {
-        "count": 689,
-        "hash": "-30ec1587"
+        "count": 391,
+        "hash": null
       },
       "2011": {
-        "count": 287,
-        "hash": "18f14a75"
+        "count": 204,
+        "hash": null
       },
       "2012": {
-        "count": 274,
-        "hash": "27f6bfcd"
+        "count": 189,
+        "hash": null
       },
       "2013": {
-        "count": 1140,
-        "hash": "-6998bfe2"
+        "count": 887,
+        "hash": null
       },
       "2014": {
-        "count": 1180,
-        "hash": "27a4ca2f"
+        "count": 951,
+        "hash": null
       },
       "2015": {
-        "count": 445,
-        "hash": "314e3962"
+        "count": 306,
+        "hash": null
       },
       "2016": {
-        "count": 254,
-        "hash": "bb495d8"
+        "count": 150,
+        "hash": null
       },
       "2017": {
-        "count": 130,
-        "hash": "-168dd825"
+        "count": 71,
+        "hash": null
       },
       "2018": {
-        "count": 54,
-        "hash": "-fb5bbda"
+        "count": 27,
+        "hash": null
       },
       "2019": {
-        "count": 25,
-        "hash": "-6dbd555b"
+        "count": 13,
+        "hash": null
       },
       "2021": {
-        "count": 2,
-        "hash": "53a5e551"
+        "count": 1,
+        "hash": null
       },
       "2022": {
-        "count": 74,
-        "hash": "-542a87cf"
+        "count": 37,
+        "hash": null
       },
       "2024": {
-        "count": 10,
-        "hash": "-746fbd2"
+        "count": 5,
+        "hash": null
       },
       "2025": {
-        "count": 4,
-        "hash": "2412c47a"
+        "count": 3,
+        "hash": null
       },
       "2026": {
         "count": 17,
-        "hash": "-2f5236ab"
+        "hash": null
       }
     }
   },
