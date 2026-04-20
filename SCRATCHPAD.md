@@ -329,6 +329,38 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — visual fragment editor + M3 end-to-end (session 10)
+- **Found**: Ben tested the first regenerate-fragments UI and the full
+  M3 pipeline worked — one footer edit → one workflow dispatch →
+  `94da78ea2 regenerate fragments (FOOTER) — 8160 files changed`.
+  Feedback: editing fragments in GitHub's raw textarea is not
+  user-friendly; Ben's other tools are WYSIWYG / visual.
+- **Did**: Rewrote `/admin/regenerate/` as a proper in-browser editor.
+  - **Zone sidebar** with 'modified' dots for unsaved changes.
+  - **Three tabs per fragment**:
+    - Visual: native contenteditable with a formatting toolbar.
+    - Source: authoritative monospace textarea.
+    - Preview: sandboxed iframe that renders the fragment wrapped in
+      the live site's `<head>` (fetched at init) — pixel-accurate.
+  - **Save** commits the fragment via Contents API directly (lazy SHA
+    fetch, so page load doesn't need a token).
+  - **Apply to site** dispatches `regenerate-fragments.yml` for the
+    current zone only, with a dry-run toggle.
+  - Tab switching syncs content between tabs so the authoritative
+    state is always `state.fragments[zone].current`.
+  - `beforeunload` warning for unsaved changes.
+- **Testable outcome**: Ben opens `/admin/regenerate/`, clicks FOOTER,
+  edits text in Visual, sees Preview match, clicks Save → one-file
+  commit, then Apply to site → workflow dispatch with dry-run
+  preview. Much better experience than `Edit on GitHub` → textarea.
+- **Not yet delivered (known gaps Ben may want next)**:
+  - Structured menu editor for MASTHEAD (edit nav items as
+    label + URL pairs, reorder, nest).
+  - Widget-card editor for SIDEBAR (each widget as its own editable
+    block).
+  - Mass-updater-style DOM picker inside the Visual editor (click to
+    target a specific element region).
+
 ### 2026-04-20 — /new/ swapped, markers applied, regenerate tool shipped (session 9)
 - **Found**: Ben confirmed /new/v2/ works identically to /new/ after
   the lib-delegate pass. Approved larger batch work with a single
