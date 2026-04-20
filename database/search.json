@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "title": "This is a test",
+      "url": "/2026/04/20/this-is-a-test/",
+      "date": "2026-04-20",
+      "excerpt": "Wow. So much testing.",
+      "categories": [
+        "Blog 2"
+      ],
+      "tags": [
+        "testing"
+      ],
+      "keywords": "this is a test wow. so much testing. blog 2 testing"
+    },
+    {
       "title": "60 Minutes in Space",
       "url": "/2026/03/26/60-minutes-in-space/",
       "date": "2026-03-26",

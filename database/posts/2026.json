@@ -3,6 +3,19 @@
   "count": 5,
   "posts": [
     {
+      "title": "This is a test",
+      "url": "/2026/04/20/this-is-a-test/",
+      "date_published": "2026-04-20",
+      "excerpt": "Wow. So much testing.",
+      "categories": [
+        "blog-2"
+      ],
+      "tags": [
+        "testing"
+      ],
+      "content_preview": "Wow. So much testing."
+    },
+    {
       "title": "60 Minutes in Space",
       "url": "/2026/03/26/60-minutes-in-space/",
       "date_published": "2026-03-26",
@@ -537,5 +550,5 @@
       ]
     }
   ],
-  "post_count": 17
+  "post_count": 18
 }
