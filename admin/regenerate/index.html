@@ -108,6 +108,29 @@
     #preview-frame { width: 100%; min-height: 480px; border: none; background: #fff; }
     .preview-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }
 
+    /* Menu editor */
+    .menu-block { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 5px; padding: 12px 14px; margin-bottom: 14px; }
+    .menu-block .menu-title { font-weight: 700; margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+    .menu-block .menu-title .badge { font-size: 0.7rem; font-weight: 600; background: var(--bg-tertiary); color: var(--text-secondary); padding: 2px 8px; border-radius: 10px; }
+    .menu-items-wrap { display: flex; flex-direction: column; gap: 4px; }
+    .menu-items-wrap .menu-items-wrap { margin-left: 22px; border-left: 2px solid var(--border-light); padding-left: 8px; margin-top: 4px; }
+    .menu-item-row { display: grid; grid-template-columns: 1fr 1.2fr auto; gap: 6px; align-items: center; padding: 4px 6px; border-radius: 3px; }
+    .menu-item-row:hover { background: var(--bg-tertiary); }
+    .menu-item-row input[type="text"] { margin: 0; padding: 5px 8px; font-size: 0.85rem; background: var(--bg-primary); }
+    .menu-item-row .label-input { border-left: 3px solid var(--accent); }
+    .menu-item-row .actions { display: flex; gap: 2px; align-items: center; }
+    .menu-item-row .actions button { background: var(--bg-primary); border: 1px solid var(--border-light); padding: 3px 7px; font-size: 0.75rem; border-radius: 3px; cursor: pointer; color: var(--text-secondary); }
+    .menu-item-row .actions button:hover:not(:disabled) { background: var(--bg-tertiary); color: var(--text-primary); }
+    .menu-item-row .actions button:disabled { opacity: 0.3; cursor: not-allowed; }
+    .menu-item-row .actions button.danger { color: var(--danger); }
+    .menu-item-row .actions button.danger:hover { background: #fdecea; }
+    .menu-item-raw { display: grid; grid-template-columns: 1fr auto; gap: 6px; align-items: center; padding: 6px 10px; background: #fff8e0; border: 1px solid #f0d080; border-radius: 3px; font-size: 0.82rem; }
+    .menu-item-raw .raw-label { font-weight: 600; color: #664; }
+    .menu-item-raw code { background: #fff; }
+    .add-item-btn { background: none; border: 1px dashed var(--border-med); color: var(--text-secondary); padding: 5px 12px; font-size: 0.82rem; border-radius: 3px; cursor: pointer; margin-top: 6px; align-self: flex-start; }
+    .add-item-btn:hover { background: var(--bg-tertiary); color: var(--text-primary); border-color: var(--accent); }
+    .menu-help { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px; line-height: 1.5; }
+
     /* Action bar */
     .action-bar { display: flex; align-items: center; gap: 10px; padding: 14px 16px; background: var(--bg-secondary); border-top: 1px solid var(--border-light); flex-wrap: wrap; }
     .action-bar .save-group { display: flex; gap: 6px; align-items: center; }
@@ -190,6 +213,7 @@
         </div>
 
         <div class="tabs" role="tablist">
+          <button class="tab" data-tab="menu" role="tab" id="tab-menu" style="display:none">🧭 Menu</button>
           <button class="tab active" data-tab="visual" role="tab">Visual</button>
           <button class="tab" data-tab="source" role="tab">Source</button>
           <button class="tab" data-tab="preview" role="tab">Preview</button>
@@ -233,6 +257,14 @@
           <div class="preview-frame-wrapper"><iframe id="preview-frame" sandbox="allow-same-origin"></iframe></div>
         </div>
 
+        <div class="tab-pane" id="pane-menu">
+          <p class="menu-help">
+            Edit each menu as a tree. Each item has a <strong>label</strong> (what visitors see) and a <strong>URL</strong> (where they go). Use the buttons to move, nest (<strong>▶</strong>) or un-nest (<strong>◀</strong>) items. Special items like the search box are preserved as-is.
+            <br>The rest of the masthead (site title, header image, social icons) is preserved verbatim — switch to <strong>Source</strong> to edit those directly.
+          </p>
+          <div id="menu-editor"></div>
+        </div>
+
         <div class="action-bar">
           <div class="save-group">
             <button class="btn primary" id="btn-save">💾 Save fragment</button>
@@ -273,6 +305,7 @@
       fragments: {},      // { MASTHEAD: { original, current, sha } }
       activeTab: 'visual',
       siteHead: null,     // <head> content from the live homepage, for Preview
+      menus: null,        // [{ ulId, parentNavId, items }]  — only while Menu tab is active
     };
 
     // ---------- Init ----------
@@ -339,13 +372,30 @@
     function selectZone(zone) {
       if (state.zone && !confirmDiscardChanges(zone)) return;
       state.zone = zone;
+      state.menus = null;
       document.getElementById('editor-card').style.display = '';
       document.getElementById('log-card').style.display = '';
       document.getElementById('editor-zone-label').textContent = ZONE_META[zone].title;
       document.getElementById('editor-zone-sub').textContent = ZONE_META[zone].desc;
+      // Menu tab is only useful for MASTHEAD (the only fragment with menu structures)
+      const menuTab = document.getElementById('tab-menu');
+      if (zone === 'MASTHEAD') {
+        menuTab.style.display = '';
+        // Default to the Menu tab for MASTHEAD for a better first-run experience
+        if (state.activeTab !== 'menu' && state.activeTab !== 'source') state.activeTab = 'menu';
+      } else {
+        menuTab.style.display = 'none';
+        if (state.activeTab === 'menu') state.activeTab = 'visual';
+      }
+      updateTabUi();
       renderZoneList();
       renderActiveTab();
       updateSaveChip();
+    }
+
+    function updateTabUi() {
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === state.activeTab));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.toggle('active', p.id === `pane-${state.activeTab}`));
     }
 
     function confirmDiscardChanges(_newZone) {
@@ -415,8 +465,7 @@
       if (tab === state.activeTab) return;
       syncFromActiveTab();
       state.activeTab = tab;
-      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
-      document.querySelectorAll('.tab-pane').forEach(p => p.classList.toggle('active', p.id === `pane-${tab}`));
+      updateTabUi();
       renderActiveTab();
     }
 
@@ -430,6 +479,10 @@
         document.getElementById('source-editor').value = content;
       } else if (state.activeTab === 'preview') {
         renderPreview(content);
+      } else if (state.activeTab === 'menu') {
+        // Parse menus from the current fragment HTML and render the tree editor
+        state.menus = parseMenusFromHtml(content);
+        renderMenuEditor();
       }
     }
 
@@ -440,8 +493,289 @@
         f.current = document.getElementById('visual-editor').innerHTML;
       } else if (state.activeTab === 'source') {
         f.current = document.getElementById('source-editor').value;
+      } else if (state.activeTab === 'menu' && state.menus) {
+        f.current = serializeMenusIntoHtml(f.current, state.menus);
       }
       // Preview is read-only; no sync from it.
+      updateSaveChip();
+    }
+
+    // ---------- Menu parser / serializer ----------
+    function parseMenusFromHtml(html) {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      // A "menu" is any <ul> whose direct children include <li class*="menu-item">
+      const menuUls = [...doc.querySelectorAll('ul')].filter(ul =>
+        [...ul.children].some(li => li.tagName === 'LI' &&
+          (li.className || '').split(/\s+/).some(c => c === 'menu-item' || c.startsWith('menu-item-')))
+      );
+      return menuUls.map((ul, i) => {
+        const parentNav = ul.closest('nav');
+        const navId = parentNav && parentNav.id ? parentNav.id : '';
+        const ulId = ul.id || '';
+        const title = ulId ? `#${ulId}` :
+                      navId ? `#${navId}` :
+                      `Menu ${i + 1}`;
+        return {
+          index: i,
+          ulId,
+          navId,
+          title,
+          items: parseMenuItems(ul),
+        };
+      });
+    }
+
+    function parseMenuItems(ul) {
+      const out = [];
+      for (const li of [...ul.children]) {
+        if (li.tagName !== 'LI') continue;
+        const anchor = [...li.children].find(c => c.tagName === 'A');
+        const span = anchor && [...anchor.children].find(c => c.tagName === 'SPAN');
+        const form = [...li.children].find(c => c.tagName === 'FORM');
+        const subMenu = [...li.children].find(c => c.tagName === 'UL');
+
+        // "Standard" menu item: <li>…<a><span>text</span></a>[<ul class=sub-menu>…</ul>]</li>
+        // with no inline form. The search item in Fluida is NOT standard.
+        if (anchor && span && !form) {
+          out.push({
+            kind: 'standard',
+            id: li.id || '',
+            classes: li.className || 'menu-item',
+            label: span.textContent,
+            url: anchor.getAttribute('href') || '',
+            children: subMenu ? parseMenuItems(subMenu) : [],
+          });
+        } else {
+          out.push({ kind: 'raw', html: li.outerHTML });
+        }
+      }
+      return out;
+    }
+
+    function serializeMenuItems(items, depth = 1) {
+      const tab = '\t'.repeat(depth);
+      const lines = [];
+      for (const item of items) {
+        if (item.kind === 'raw') {
+          lines.push(item.html);
+          continue;
+        }
+        const hasChildren = item.children && item.children.length > 0;
+        let classes = (item.classes || 'menu-item')
+          .split(/\s+/)
+          .filter(c => c && c !== 'menu-item-has-children');
+        if (!classes.includes('menu-item')) classes.unshift('menu-item');
+        if (hasChildren) classes.push('menu-item-has-children');
+        const idAttr = item.id ? ` id="${escapeAttr(item.id)}"` : '';
+        const cls = classes.join(' ');
+        const linkHtml = `<a href="${escapeAttr(item.url || '#')}"><span>${escapeHtml(item.label)}</span></a>`;
+        if (hasChildren) {
+          lines.push(`<li${idAttr} class="${escapeAttr(cls)}">${linkHtml}\n<ul class="sub-menu">\n${serializeMenuItems(item.children, depth + 1).split('\n').map(l => l ? '\t' + l : l).join('\n')}\n</ul>\n</li>`);
+        } else {
+          lines.push(`<li${idAttr} class="${escapeAttr(cls)}">${linkHtml}</li>`);
+        }
+      }
+      return lines.join('\n');
+    }
+
+    function serializeMenusIntoHtml(originalHtml, menus) {
+      // Parse original HTML, locate each menu UL, replace its innerHTML with
+      // the freshly-serialized tree. Preserves all non-menu content verbatim.
+      const doc = new DOMParser().parseFromString(originalHtml, 'text/html');
+      const menuUls = [...doc.querySelectorAll('ul')].filter(ul =>
+        [...ul.children].some(li => li.tagName === 'LI' &&
+          (li.className || '').split(/\s+/).some(c => c === 'menu-item' || c.startsWith('menu-item-')))
+      );
+      menus.forEach((menu, i) => {
+        const ul = menuUls[menu.index] || menuUls[i];
+        if (!ul) return;
+        ul.innerHTML = serializeMenuItems(menu.items, 1);
+      });
+      // The masthead fragment starts with <header id="masthead">. Return that
+      // element's outerHTML so we don't accidentally include the <html>/<head>
+      // wrappers DOMParser adds.
+      const headerEl = doc.querySelector('#masthead');
+      if (headerEl) return headerEl.outerHTML;
+      // Fall back to body innerHTML for unexpected shapes
+      return doc.body ? doc.body.innerHTML : originalHtml;
+    }
+
+    function escapeAttr(s) { return String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;'); }
+
+    // ---------- Menu editor UI ----------
+    function renderMenuEditor() {
+      const root = document.getElementById('menu-editor');
+      if (!state.menus || state.menus.length === 0) {
+        root.innerHTML = `<div class="alert info">No menus found in this fragment. Use the Source tab to add one.</div>`;
+        return;
+      }
+      root.innerHTML = state.menus.map((menu, mi) => `
+        <div class="menu-block" data-menu="${mi}">
+          <div class="menu-title">${escapeHtml(menu.title)} <span class="badge">${countItems(menu.items)} items</span></div>
+          <div class="menu-items-wrap" data-path="${mi}">${renderItemList(menu.items, [mi])}</div>
+          <button type="button" class="add-item-btn" data-add-path="${mi}">+ Add item to this menu</button>
+        </div>
+      `).join('');
+      bindMenuEditor();
+    }
+
+    function renderItemList(items, pathPrefix) {
+      if (!items.length) return '';
+      return items.map((item, i) => {
+        const path = [...pathPrefix, i];
+        if (item.kind === 'raw') {
+          // Preserve-only: show a short label, keep the HTML untouched
+          const preview = item.html.replace(/\s+/g, ' ').slice(0, 80);
+          return `<div class="menu-item-raw"><span><span class="raw-label">preserved</span> <code>${escapeHtml(preview)}${item.html.length > 80 ? '…' : ''}</code></span><div class="actions"><button data-action="delete" data-path="${path.join('.')}" class="danger" title="Delete">🗑</button></div></div>`;
+        }
+        const sub = item.children && item.children.length
+          ? `<div class="menu-items-wrap" data-path="${path.join('.')}">${renderItemList(item.children, path)}</div>`
+          : '';
+        const addChildBtn = `<button type="button" class="add-item-btn" data-add-path="${path.join('.')}">+ Add child</button>`;
+        return `
+          <div class="menu-item-row" data-path="${path.join('.')}">
+            <input type="text" class="label-input" data-field="label" data-path="${path.join('.')}" value="${escapeAttr(item.label)}" placeholder="Label">
+            <input type="text" class="url-input" data-field="url" data-path="${path.join('.')}" value="${escapeAttr(item.url)}" placeholder="URL (/path/ or https://…)">
+            <div class="actions">
+              <button data-action="up" data-path="${path.join('.')}" title="Move up">▲</button>
+              <button data-action="down" data-path="${path.join('.')}" title="Move down">▼</button>
+              <button data-action="outdent" data-path="${path.join('.')}" title="Un-nest">◀</button>
+              <button data-action="indent" data-path="${path.join('.')}" title="Nest under previous sibling">▶</button>
+              <button data-action="delete" data-path="${path.join('.')}" class="danger" title="Delete">🗑</button>
+            </div>
+          </div>
+          ${sub}
+          ${item.children && item.children.length ? addChildBtn : ''}
+        `;
+      }).join('');
+    }
+
+    function countItems(items) {
+      let n = 0;
+      for (const it of items) { n++; if (it.children) n += countItems(it.children); }
+      return n;
+    }
+
+    function bindMenuEditor() {
+      const root = document.getElementById('menu-editor');
+
+      // Edit label / url
+      root.querySelectorAll('input[data-field]').forEach(input => {
+        input.addEventListener('input', () => {
+          const item = getItemByPath(parsePath(input.dataset.path));
+          if (!item) return;
+          item[input.dataset.field] = input.value;
+          markFragmentDirty();
+        });
+      });
+
+      // Actions
+      root.querySelectorAll('button[data-action]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const path = parsePath(btn.dataset.path);
+          const action = btn.dataset.action;
+          if (action === 'delete') deleteAtPath(path);
+          else if (action === 'up') moveAtPath(path, -1);
+          else if (action === 'down') moveAtPath(path, +1);
+          else if (action === 'indent') indentAtPath(path);
+          else if (action === 'outdent') outdentAtPath(path);
+          markFragmentDirty();
+          renderMenuEditor();
+        });
+      });
+
+      // Add buttons
+      root.querySelectorAll('button[data-add-path]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const parent = parsePath(btn.dataset.addPath);
+          addItemAtPath(parent);
+          markFragmentDirty();
+          renderMenuEditor();
+        });
+      });
+    }
+
+    function parsePath(s) { return s.split('.').map(n => parseInt(n, 10)); }
+
+    // Paths are [menuIndex, childIdx, grandChildIdx, ...] — the first number
+    // indexes into state.menus; subsequent ones walk into children arrays.
+    function getContainerAndIndex(path) {
+      // Returns { arr, index }  where arr is the parent array and index is the position within it.
+      if (path.length < 2) return { arr: state.menus[path[0]]?.items, index: NaN };
+      let node = state.menus[path[0]].items;
+      for (let i = 1; i < path.length - 1; i++) {
+        node = node[path[i]].children;
+      }
+      return { arr: node, index: path[path.length - 1] };
+    }
+    function getItemByPath(path) {
+      const { arr, index } = getContainerAndIndex(path);
+      return arr ? arr[index] : null;
+    }
+
+    function deleteAtPath(path) {
+      const item = getItemByPath(path);
+      if (!item) return;
+      const label = item.kind === 'raw' ? 'this preserved item' : `"${item.label || '(empty)'}"`;
+      if (!confirm(`Delete ${label}?${item.children && item.children.length ? ' All its children will be deleted too.' : ''}`)) return;
+      const { arr, index } = getContainerAndIndex(path);
+      arr.splice(index, 1);
+    }
+
+    function moveAtPath(path, delta) {
+      const { arr, index } = getContainerAndIndex(path);
+      if (!arr) return;
+      const target = index + delta;
+      if (target < 0 || target >= arr.length) return;
+      const [item] = arr.splice(index, 1);
+      arr.splice(target, 0, item);
+    }
+
+    function indentAtPath(path) {
+      // Nest into the previous sibling's children
+      const { arr, index } = getContainerAndIndex(path);
+      if (!arr || index === 0) return;
+      const prev = arr[index - 1];
+      if (prev.kind !== 'standard') return; // can't nest under a raw/search item
+      if (!prev.children) prev.children = [];
+      const [item] = arr.splice(index, 1);
+      prev.children.push(item);
+    }
+
+    function outdentAtPath(path) {
+      // Un-nest: move item up one level, placed after its parent
+      if (path.length <= 2) return; // already at top level of the menu
+      const { arr, index } = getContainerAndIndex(path);
+      const [item] = arr.splice(index, 1);
+      const parentPath = path.slice(0, -1);
+      const { arr: parentArr, index: parentIndex } = getContainerAndIndex(parentPath);
+      parentArr.splice(parentIndex + 1, 0, item);
+    }
+
+    function addItemAtPath(path) {
+      // path is [menuIndex] (append to top level) or [menuIndex, i, j, ...] (append into that item's children)
+      const newItem = {
+        kind: 'standard',
+        id: '',
+        classes: 'menu-item menu-item-type-custom menu-item-object-custom',
+        label: 'New item',
+        url: '/',
+        children: [],
+      };
+      if (path.length === 1) {
+        state.menus[path[0]].items.push(newItem);
+      } else {
+        const item = getItemByPath(path);
+        if (!item) return;
+        if (!item.children) item.children = [];
+        item.children.push(newItem);
+      }
+    }
+
+    function markFragmentDirty() {
+      const f = state.fragments[state.zone];
+      if (!f || !state.menus) return;
+      f.current = serializeMenusIntoHtml(f.current, state.menus);
       updateSaveChip();
     }
 
