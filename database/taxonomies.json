@@ -12,7 +12,7 @@
         "name": "Blog 2",
         "slug": "blog-2",
         "url": "/category/blog-2/",
-        "count": 1306
+        "count": 1305
       },
       "lesson-plans": {
         "name": "Lesson Plans",
@@ -1199,7 +1199,7 @@
         "name": "testing",
         "slug": "testing",
         "url": "/tag/testing/",
-        "count": 3
+        "count": 2
       },
       "unreal": {
         "name": "unreal",
