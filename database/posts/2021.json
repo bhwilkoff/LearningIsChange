@@ -1,6 +1,6 @@
 {
   "year": 2021,
-  "count": 2,
+  "count": 1,
   "posts": [
     {
       "id": 5779,
@@ -57,62 +57,7 @@
           "notes": "Initial database generation"
         }
       ]
-    },
-    {
-      "id": 5780,
-      "wp_post_id": 18127,
-      "title": "Day: May 27, 2021",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2021-05-27T12:00:00Z",
-      "date_published_gmt": "2021-05-27T12:00:00Z",
-      "date_modified": "2021-05-27T21:19:54+00:00",
-      "date_modified_gmt": "2021-05-27T21:19:54+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2021/05/27/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [],
-      "path": "2021/05/27/index.html",
-      "url": "https://learningischange.com/2021/05/27/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:53:06.327Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
     }
-  ]
+  ],
+  "post_count": 1
 }

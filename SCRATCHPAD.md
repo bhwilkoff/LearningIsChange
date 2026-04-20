@@ -329,6 +329,50 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — M4 dedup + template + regenerator (session 12)
+- **Dedup date-archive entries**: ran
+  `scripts/dedup-date-archives.js --apply` across all year shards.
+  Removed 1,827 entries whose URLs are date archives
+  (`/YYYY/MM/DD/`) not actual posts. 5,741 → 3,914 real posts.
+  Idempotent.
+- **Post template captured**: `templates/post.html` is a 90 KB template
+  with `{{title}}`, `{{content}}`, `{{excerpt}}`, `{{url}}`,
+  `{{abs_url}}`, `{{date_iso}}`, `{{date_formatted}}`,
+  `{{post_id}}`, `{{body_classes}}`, `{{article_classes}}`.
+  Captured from the canonical `2026/03/26/60-minutes-in-space/` post.
+  Preserves the Fluida structure AND the LIC zone markers — so
+  regenerated posts still work with regenerate-fragments.
+- **Regenerator written**: `scripts/regenerate-posts.js` loads the
+  template + each post entry from `database/posts/YYYY.json` and
+  writes the HTML file. Dry-run by default; `--year=` filters;
+  `--url=` targets one post; `--diff` shows line-level diff against
+  the current HTML file.
+- **Round-trip verified** on the canonical post:
+  - 559 lines same, 6 lines differ
+  - All 6 differences are *improvements*:
+    - `postid-new` (stale Post Generator placeholder) → proper
+      slug-based ID
+    - Displayed date: the old tool had a timezone bug
+      (`new Date('2026-03-26').toLocaleDateString()` → "March 25,
+      2026" in TZs west of UTC). My regenerator formats from the
+      date string directly → correct "March 26, 2026".
+    - Whitespace in the content block (cosmetic; rendering unchanged)
+- **Workflow**: `.github/workflows/regenerate-posts.yml` dispatches
+  the regenerator with `scope` (year or "all") and `dry_run` inputs.
+  Output is a single commit from GitHub Actions Bot.
+- **Applied dry-run for all years — summary**:
+  - 3,914 real posts remain after dedup
+  - Regenerator successfully rendered 17 2026 posts in dry-run mode
+    (others skipped because they lack the `content` field — backfill
+    for pre-2026 needs to run before full regeneration).
+- **Left**:
+  - Full backfill: `node scripts/backfill-posts-content.js --apply` (all years)
+  - Full regeneration: dispatch `regenerate-posts.yml` with `scope=all`
+    + `dry_run=false` after backfill
+  - Flip `/new/` and `/edit/` to write JSON first; HTML becomes
+    derived (M4 final step)
+  - M1.3: per-tool lib delegations for remaining tools
+
 ### 2026-04-20 — menu sync, /edit/ lib, M4 backfill (session 11)
 - **Menu parser bug fix**: previous parser treated every `<ul>` containing
   menu-item children as a top-level menu — including sub-menus. Result

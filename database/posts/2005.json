@@ -1,63 +1,7 @@
 {
   "year": 2005,
-  "count": 2,
+  "count": 1,
   "posts": [
-    {
-      "id": 129,
-      "wp_post_id": 18797,
-      "title": "Day: April 20, 2005",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2005-04-20T12:00:00Z",
-      "date_published_gmt": "2005-04-20T12:00:00Z",
-      "date_modified": "2022-01-02T16:46:46+00:00",
-      "date_modified_gmt": "2022-01-02T16:46:46+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2005/04/20/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Uncategorized",
-          "slug": "uncategorized",
-          "url": "/category/uncategorized/"
-        }
-      ],
-      "tags": [],
-      "path": "2005/04/20/index.html",
-      "url": "https://learningischange.com/2005/04/20/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:21:41.969Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
     {
       "id": 130,
       "wp_post_id": 18797,
@@ -116,5 +60,6 @@
         }
       ]
     }
-  ]
+  ],
+  "post_count": 1
 }

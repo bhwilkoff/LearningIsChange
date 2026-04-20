@@ -1,6 +1,6 @@
 {
   "year": 2016,
-  "count": 254,
+  "count": 150,
   "posts": [
     {
       "id": 5315,
@@ -54,67 +54,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:24.550Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5316,
-      "wp_post_id": 10304,
-      "title": "Day: January 1, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-01T12:00:00Z",
-      "date_published_gmt": "2016-01-01T12:00:00Z",
-      "date_modified": "2016-01-01T22:04:17+00:00",
-      "date_modified_gmt": "2016-01-01T22:04:17+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/01/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/01/index.html",
-      "url": "https://learningischange.com/2016/01/01/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:24.992Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -180,67 +119,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:25.425Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5318,
-      "wp_post_id": 10309,
-      "title": "Day: January 3, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-03T12:00:00Z",
-      "date_published_gmt": "2016-01-03T12:00:00Z",
-      "date_modified": "2016-01-03T19:54:20+00:00",
-      "date_modified_gmt": "2016-01-03T19:54:20+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/03/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/03/index.html",
-      "url": "https://learningischange.com/2016/01/03/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:25.867Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -386,67 +264,6 @@
       ]
     },
     {
-      "id": 5321,
-      "wp_post_id": 10312,
-      "title": "Day: January 4, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-04T12:00:00Z",
-      "date_published_gmt": "2016-01-04T12:00:00Z",
-      "date_modified": "2016-01-04T22:09:34+00:00",
-      "date_modified_gmt": "2016-01-04T22:09:34+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/04/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/04/index.html",
-      "url": "https://learningischange.com/2016/01/04/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:27.188Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5322,
       "wp_post_id": 10317,
       "title": "6: I will be healthy. #LifeWideLearning16",
@@ -502,67 +319,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:27.671Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5323,
-      "wp_post_id": 10317,
-      "title": "Day: January 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-06T12:00:00Z",
-      "date_published_gmt": "2016-01-06T12:00:00Z",
-      "date_modified": "2016-01-06T20:28:00+00:00",
-      "date_modified_gmt": "2016-01-06T20:28:00+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/06/index.html",
-      "url": "https://learningischange.com/2016/01/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:28.121Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -703,67 +459,6 @@
       ]
     },
     {
-      "id": 5326,
-      "wp_post_id": 10324,
-      "title": "Day: January 8, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-08T12:00:00Z",
-      "date_published_gmt": "2016-01-08T12:00:00Z",
-      "date_modified": "2016-01-08T21:27:50+00:00",
-      "date_modified_gmt": "2016-01-08T21:27:50+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/08/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/08/index.html",
-      "url": "https://learningischange.com/2016/01/08/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:29.477Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5327,
       "wp_post_id": 10324,
       "title": "8: Innovation #LifeWideLearning16",
@@ -884,67 +579,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:30.384Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5329,
-      "wp_post_id": 10326,
-      "title": "Day: January 10, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-10T12:00:00Z",
-      "date_published_gmt": "2016-01-10T12:00:00Z",
-      "date_modified": "2016-01-10T16:49:27+00:00",
-      "date_modified_gmt": "2016-01-10T16:49:27+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/10/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/10/index.html",
-      "url": "https://learningischange.com/2016/01/10/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:30.931Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1148,73 +782,6 @@
       ]
     },
     {
-      "id": 5333,
-      "wp_post_id": 12568,
-      "title": "Day: January 11, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-11T12:00:00Z",
-      "date_published_gmt": "2016-01-11T12:00:00Z",
-      "date_modified": "2016-07-24T13:32:58+00:00",
-      "date_modified_gmt": "2016-07-24T13:32:58+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/11/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "AskBenW",
-          "slug": "askbenw",
-          "url": "/tag/askbenw/"
-        },
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/01/11/index.html",
-      "url": "https://learningischange.com/2016/01/11/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:32.701Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5334,
       "wp_post_id": 10331,
       "title": "11: I hope that makes sense. #LifeWideLearning16",
@@ -1270,67 +837,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:33.158Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5335,
-      "wp_post_id": 10331,
-      "title": "Day: January 12, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-12T12:00:00Z",
-      "date_published_gmt": "2016-01-12T12:00:00Z",
-      "date_modified": "2016-01-12T03:51:12+00:00",
-      "date_modified_gmt": "2016-01-12T03:51:12+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/12/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/12/index.html",
-      "url": "https://learningischange.com/2016/01/12/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:33.595Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1414,67 +920,6 @@
       ]
     },
     {
-      "id": 5337,
-      "wp_post_id": 10529,
-      "title": "Day: January 13, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-13T12:00:00Z",
-      "date_published_gmt": "2016-01-13T12:00:00Z",
-      "date_modified": "2016-01-13T12:47:08+00:00",
-      "date_modified_gmt": "2016-01-13T12:47:08+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/13/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/13/index.html",
-      "url": "https://learningischange.com/2016/01/13/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:34.465Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5338,
       "wp_post_id": 10531,
       "title": "13: The Trackball and the Touch Screen #LifeWideLearning16",
@@ -1540,67 +985,6 @@
       ]
     },
     {
-      "id": 5339,
-      "wp_post_id": 10531,
-      "title": "Day: January 14, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-14T12:00:00Z",
-      "date_published_gmt": "2016-01-14T12:00:00Z",
-      "date_modified": "2016-01-14T04:38:47+00:00",
-      "date_modified_gmt": "2016-01-14T04:38:47+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/14/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/14/index.html",
-      "url": "https://learningischange.com/2016/01/14/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:35.400Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5340,
       "wp_post_id": 10533,
       "title": "14: The \"ba, ba, ba\" of a new idea. #LifeWideLearning16",
@@ -1656,67 +1040,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:35.844Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5341,
-      "wp_post_id": 10533,
-      "title": "Day: January 15, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-15T12:00:00Z",
-      "date_published_gmt": "2016-01-15T12:00:00Z",
-      "date_modified": "2016-01-15T12:32:31+00:00",
-      "date_modified_gmt": "2016-01-15T12:32:31+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/15/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/15/index.html",
-      "url": "https://learningischange.com/2016/01/15/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:36.303Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -1857,67 +1180,6 @@
       ]
     },
     {
-      "id": 5344,
-      "wp_post_id": 10538,
-      "title": "Day: January 17, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-17T12:00:00Z",
-      "date_published_gmt": "2016-01-17T12:00:00Z",
-      "date_modified": "2016-01-17T14:04:57+00:00",
-      "date_modified_gmt": "2016-01-17T14:04:57+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/17/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/17/index.html",
-      "url": "https://learningischange.com/2016/01/17/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:37.619Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5345,
       "wp_post_id": 10540,
       "title": "17: To feign a made up mind. #LifeWideLearning16",
@@ -1973,67 +1235,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:38.069Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5346,
-      "wp_post_id": 10540,
-      "title": "Day: January 18, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-18T12:00:00Z",
-      "date_published_gmt": "2016-01-18T12:00:00Z",
-      "date_modified": "2016-01-18T02:31:35+00:00",
-      "date_modified_gmt": "2016-01-18T02:31:35+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/18/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/18/index.html",
-      "url": "https://learningischange.com/2016/01/18/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:38.503Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2236,62 +1437,6 @@
       ]
     },
     {
-      "id": 5350,
-      "wp_post_id": 12567,
-      "title": "Day: January 20, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-20T12:00:00Z",
-      "date_published_gmt": "2016-01-20T12:00:00Z",
-      "date_modified": "2022-02-06T21:32:49+00:00",
-      "date_modified_gmt": "2022-02-06T21:32:49+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/20/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/20/index.html",
-      "url": "https://learningischange.com/2016/01/20/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:40.276Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5351,
       "wp_post_id": 10548,
       "title": "20: Expanding my horizons, every five minutes. #LifeWideLearning16",
@@ -2359,67 +1504,6 @@
       ]
     },
     {
-      "id": 5352,
-      "wp_post_id": 10548,
-      "title": "Day: January 21, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-21T12:00:00Z",
-      "date_published_gmt": "2016-01-21T12:00:00Z",
-      "date_modified": "2016-01-21T13:46:19+00:00",
-      "date_modified_gmt": "2016-01-21T13:46:19+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/21/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/21/index.html",
-      "url": "https://learningischange.com/2016/01/21/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:41.428Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5353,
       "wp_post_id": 10550,
       "title": "21: Fair-Mongering #LifeWideLearning16",
@@ -2475,67 +1559,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:41.871Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5354,
-      "wp_post_id": 10550,
-      "title": "Day: January 22, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-22T12:00:00Z",
-      "date_published_gmt": "2016-01-22T12:00:00Z",
-      "date_modified": "2016-01-22T13:39:58+00:00",
-      "date_modified_gmt": "2016-01-22T13:39:58+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/22/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/22/index.html",
-      "url": "https://learningischange.com/2016/01/22/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:42.317Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -2681,67 +1704,6 @@
       ]
     },
     {
-      "id": 5357,
-      "wp_post_id": 10554,
-      "title": "Day: January 24, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-24T12:00:00Z",
-      "date_published_gmt": "2016-01-24T12:00:00Z",
-      "date_modified": "2016-01-24T14:52:30+00:00",
-      "date_modified_gmt": "2016-01-24T14:52:30+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/24/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/24/index.html",
-      "url": "https://learningischange.com/2016/01/24/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:43.814Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5358,
       "wp_post_id": 10556,
       "title": "24: Apathy Overrides Everything #LifeWideLearning16",
@@ -2807,67 +1769,6 @@
       ]
     },
     {
-      "id": 5359,
-      "wp_post_id": 10556,
-      "title": "Day: January 25, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-25T12:00:00Z",
-      "date_published_gmt": "2016-01-25T12:00:00Z",
-      "date_modified": "2016-01-25T12:45:10+00:00",
-      "date_modified_gmt": "2016-01-25T12:45:10+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/25/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/25/index.html",
-      "url": "https://learningischange.com/2016/01/25/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:44.708Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5360,
       "wp_post_id": 10558,
       "title": "25: Mean words and crying #lifewidelearning16",
@@ -2923,67 +1824,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:45.175Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5361,
-      "wp_post_id": 10558,
-      "title": "Day: January 26, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-26T12:00:00Z",
-      "date_published_gmt": "2016-01-26T12:00:00Z",
-      "date_modified": "2016-01-26T13:23:52+00:00",
-      "date_modified_gmt": "2016-01-26T13:23:52+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/26/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/26/index.html",
-      "url": "https://learningischange.com/2016/01/26/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:45.618Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3128,67 +1968,6 @@
       ]
     },
     {
-      "id": 5364,
-      "wp_post_id": 10564,
-      "title": "Day: January 28, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-28T12:00:00Z",
-      "date_published_gmt": "2016-01-28T12:00:00Z",
-      "date_modified": "2016-01-28T12:27:57+00:00",
-      "date_modified_gmt": "2016-01-28T12:27:57+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/28/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/28/index.html",
-      "url": "https://learningischange.com/2016/01/28/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:46.974Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5365,
       "wp_post_id": 10567,
       "title": "28: The whole internet. #LifeWideLearning16",
@@ -3250,67 +2029,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:47.416Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5366,
-      "wp_post_id": 10567,
-      "title": "Day: January 29, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-01-29T12:00:00Z",
-      "date_published_gmt": "2016-01-29T12:00:00Z",
-      "date_modified": "2016-01-29T13:30:21+00:00",
-      "date_modified_gmt": "2016-01-29T13:30:21+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/01/29/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/01/29/index.html",
-      "url": "https://learningischange.com/2016/01/29/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:47.884Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -3647,67 +2365,6 @@
       ]
     },
     {
-      "id": 5372,
-      "wp_post_id": 10579,
-      "title": "Day: February 2, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-02T12:00:00Z",
-      "date_published_gmt": "2016-02-02T12:00:00Z",
-      "date_modified": "2016-02-02T14:37:04+00:00",
-      "date_modified_gmt": "2016-02-02T14:37:04+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/02/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/02/index.html",
-      "url": "https://learningischange.com/2016/02/02/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:50.506Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5373,
       "wp_post_id": 1793,
       "title": "#AskBenW: What should we do about snow days?",
@@ -3826,73 +2483,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:51.435Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5375,
-      "wp_post_id": 12566,
-      "title": "Day: February 3, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-03T12:00:00Z",
-      "date_published_gmt": "2016-02-03T12:00:00Z",
-      "date_modified": "2022-02-06T21:02:21+00:00",
-      "date_modified_gmt": "2022-02-06T21:02:21+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/03/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "AskBenW",
-          "slug": "askbenw",
-          "url": "/tag/askbenw/"
-        },
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/02/03/index.html",
-      "url": "https://learningischange.com/2016/02/03/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:51.904Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4027,68 +2617,6 @@
       ]
     },
     {
-      "id": 5378,
-      "wp_post_id": 1789,
-      "title": "Day: February 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-06T12:00:00Z",
-      "date_published_gmt": "2016-02-06T12:00:00Z",
-      "date_modified": "2016-02-06T16:27:59+00:00",
-      "date_modified_gmt": "2016-02-06T16:27:59+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/02/06/index.html",
-      "url": "https://learningischange.com/2016/02/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:53.254Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5379,
       "wp_post_id": 10581,
       "title": "34: Five types of collaboration gone bad. #LifeWideLearning16",
@@ -4144,67 +2672,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:53.687Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5380,
-      "wp_post_id": 10581,
-      "title": "Day: February 7, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-07T12:00:00Z",
-      "date_published_gmt": "2016-02-07T12:00:00Z",
-      "date_modified": "2016-02-07T15:10:08+00:00",
-      "date_modified_gmt": "2016-02-07T15:10:08+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/07/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/07/index.html",
-      "url": "https://learningischange.com/2016/02/07/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:54.107Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4341,62 +2808,6 @@
       ]
     },
     {
-      "id": 5383,
-      "wp_post_id": 12565,
-      "title": "Day: February 8, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-08T12:00:00Z",
-      "date_published_gmt": "2016-02-08T12:00:00Z",
-      "date_modified": "2022-02-06T20:23:02+00:00",
-      "date_modified_gmt": "2022-02-06T20:23:02+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/08/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/08/index.html",
-      "url": "https://learningischange.com/2016/02/08/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:55.482Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5384,
       "wp_post_id": 10585,
       "title": "36: The Tidy Bow at the End of the Episode. #LifeWideLearning16",
@@ -4452,67 +2863,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:55.940Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5385,
-      "wp_post_id": 10585,
-      "title": "Day: February 9, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-09T12:00:00Z",
-      "date_published_gmt": "2016-02-09T12:00:00Z",
-      "date_modified": "2016-02-09T12:55:43+00:00",
-      "date_modified_gmt": "2016-02-09T12:55:43+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/09/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/09/index.html",
-      "url": "https://learningischange.com/2016/02/09/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:56.388Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -4588,67 +2938,6 @@
       ]
     },
     {
-      "id": 5387,
-      "wp_post_id": 10590,
-      "title": "Day: February 10, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-10T12:00:00Z",
-      "date_published_gmt": "2016-02-10T12:00:00Z",
-      "date_modified": "2016-02-10T13:11:12+00:00",
-      "date_modified_gmt": "2016-02-10T13:11:12+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/10/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/10/index.html",
-      "url": "https://learningischange.com/2016/02/10/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:57.328Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5388,
       "wp_post_id": 10592,
       "title": "38: Surrogates for Success #LifeWideLearning16",
@@ -4714,67 +3003,6 @@
       ]
     },
     {
-      "id": 5389,
-      "wp_post_id": 10592,
-      "title": "Day: February 11, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-11T12:00:00Z",
-      "date_published_gmt": "2016-02-11T12:00:00Z",
-      "date_modified": "2016-02-11T14:02:33+00:00",
-      "date_modified_gmt": "2016-02-11T14:02:33+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/11/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/11/index.html",
-      "url": "https://learningischange.com/2016/02/11/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:58.255Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5390,
       "wp_post_id": 10596,
       "title": "39: Buzzfeed made me do it. #LifeWideLearning16",
@@ -4830,67 +3058,6 @@
       "history": [
         {
           "date": "2026-01-16T18:49:58.707Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5391,
-      "wp_post_id": 10596,
-      "title": "Day: February 15, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-15T12:00:00Z",
-      "date_published_gmt": "2016-02-15T12:00:00Z",
-      "date_modified": "2016-02-15T20:50:34+00:00",
-      "date_modified_gmt": "2016-02-15T20:50:34+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/15/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/15/index.html",
-      "url": "https://learningischange.com/2016/02/15/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:59.149Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5017,118 +3184,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:00.037Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5394,
-      "wp_post_id": 12564,
-      "title": "Day: February 16, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-16T12:00:00Z",
-      "date_published_gmt": "2016-02-16T12:00:00Z",
-      "date_modified": "2022-02-06T20:11:47+00:00",
-      "date_modified_gmt": "2022-02-06T20:11:47+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/16/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/16/index.html",
-      "url": "https://learningischange.com/2016/02/16/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:00.507Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5395,
-      "wp_post_id": 10594,
-      "title": "Day: February 17, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-17T12:00:00Z",
-      "date_published_gmt": "2016-02-17T12:00:00Z",
-      "date_modified": "2016-02-17T05:31:06+00:00",
-      "date_modified_gmt": "2016-02-17T05:31:06+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/17/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/17/index.html",
-      "url": "https://learningischange.com/2016/02/17/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:00.959Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5279,67 +3334,6 @@
       ]
     },
     {
-      "id": 5398,
-      "wp_post_id": 10600,
-      "title": "Day: February 19, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-19T12:00:00Z",
-      "date_published_gmt": "2016-02-19T12:00:00Z",
-      "date_modified": "2016-02-19T13:58:34+00:00",
-      "date_modified_gmt": "2016-02-19T13:58:34+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/19/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/19/index.html",
-      "url": "https://learningischange.com/2016/02/19/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:02.287Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5399,
       "wp_post_id": 10602,
       "title": "42: Fiddling with Style Sheets #LifeWideLearning16",
@@ -5405,67 +3399,6 @@
       ]
     },
     {
-      "id": 5400,
-      "wp_post_id": 10602,
-      "title": "Day: February 20, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-20T12:00:00Z",
-      "date_published_gmt": "2016-02-20T12:00:00Z",
-      "date_modified": "2016-02-20T03:09:17+00:00",
-      "date_modified_gmt": "2016-02-20T03:09:17+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/20/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/20/index.html",
-      "url": "https://learningischange.com/2016/02/20/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:03.222Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5401,
       "wp_post_id": 10604,
       "title": "43: I have been lost for years. #LifeWideLearning16",
@@ -5521,67 +3454,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:03.657Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5402,
-      "wp_post_id": 10604,
-      "title": "Day: February 21, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-21T12:00:00Z",
-      "date_published_gmt": "2016-02-21T12:00:00Z",
-      "date_modified": "2016-02-21T06:59:05+00:00",
-      "date_modified_gmt": "2016-02-21T06:59:05+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/21/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/21/index.html",
-      "url": "https://learningischange.com/2016/02/21/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:04.201Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -5783,62 +3655,6 @@
       ]
     },
     {
-      "id": 5406,
-      "wp_post_id": 12563,
-      "title": "Day: February 22, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-22T12:00:00Z",
-      "date_published_gmt": "2016-02-22T12:00:00Z",
-      "date_modified": "2022-02-06T20:09:35+00:00",
-      "date_modified_gmt": "2022-02-06T20:09:35+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/22/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/22/index.html",
-      "url": "https://learningischange.com/2016/02/22/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:06.013Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5407,
       "wp_post_id": 12562,
       "title": "#AskBenW Live: Reflecting when it hurts",
@@ -5900,62 +3716,6 @@
       ]
     },
     {
-      "id": 5408,
-      "wp_post_id": 12562,
-      "title": "Day: February 24, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-24T12:00:00Z",
-      "date_published_gmt": "2016-02-24T12:00:00Z",
-      "date_modified": "2022-02-06T20:08:24+00:00",
-      "date_modified_gmt": "2022-02-06T20:08:24+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/24/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/24/index.html",
-      "url": "https://learningischange.com/2016/02/24/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:06.923Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5409,
       "wp_post_id": 12561,
       "title": "#AskBenW Live: Listening vs. Facilitating",
@@ -6007,62 +3767,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:07.369Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5410,
-      "wp_post_id": 12561,
-      "title": "Day: February 25, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-25T12:00:00Z",
-      "date_published_gmt": "2016-02-25T12:00:00Z",
-      "date_modified": "2022-02-06T20:07:01+00:00",
-      "date_modified_gmt": "2022-02-06T20:07:01+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/25/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/25/index.html",
-      "url": "https://learningischange.com/2016/02/25/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:07.850Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6138,67 +3842,6 @@
       ]
     },
     {
-      "id": 5412,
-      "wp_post_id": 10610,
-      "title": "Day: February 26, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-26T12:00:00Z",
-      "date_published_gmt": "2016-02-26T12:00:00Z",
-      "date_modified": "2016-02-26T13:42:07+00:00",
-      "date_modified_gmt": "2016-02-26T13:42:07+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/26/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/26/index.html",
-      "url": "https://learningischange.com/2016/02/26/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:08.741Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5413,
       "wp_post_id": 10631,
       "title": "47: Dessert, Bedtime, Electronics, and Love. #LifeWideLearning16",
@@ -6254,67 +3897,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:09.201Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5414,
-      "wp_post_id": 10631,
-      "title": "Day: February 27, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-27T12:00:00Z",
-      "date_published_gmt": "2016-02-27T12:00:00Z",
-      "date_modified": "2016-02-27T20:08:24+00:00",
-      "date_modified_gmt": "2016-02-27T20:08:24+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/27/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/27/index.html",
-      "url": "https://learningischange.com/2016/02/27/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:09.662Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6455,67 +4037,6 @@
       ]
     },
     {
-      "id": 5417,
-      "wp_post_id": 10635,
-      "title": "Day: February 29, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-02-29T12:00:00Z",
-      "date_published_gmt": "2016-02-29T12:00:00Z",
-      "date_modified": "2016-02-29T15:11:54+00:00",
-      "date_modified_gmt": "2016-02-29T15:11:54+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/02/29/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/02/29/index.html",
-      "url": "https://learningischange.com/2016/02/29/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:11.023Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5418,
       "wp_post_id": 10637,
       "title": "50: Ten Rules For My Mac-Based Workflow #LifeWideLearning16",
@@ -6595,67 +4116,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:11.486Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5419,
-      "wp_post_id": 10637,
-      "title": "Day: March 5, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-05T12:00:00Z",
-      "date_published_gmt": "2016-03-05T12:00:00Z",
-      "date_modified": "2016-03-05T20:43:29+00:00",
-      "date_modified_gmt": "2016-03-05T20:43:29+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/05/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/05/index.html",
-      "url": "https://learningischange.com/2016/03/05/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:11.940Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -6848,62 +4308,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:13.347Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5423,
-      "wp_post_id": 7663,
-      "title": "Day: March 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-06T12:00:00Z",
-      "date_published_gmt": "2016-03-06T12:00:00Z",
-      "date_modified": "2016-03-06T21:54:35+00:00",
-      "date_modified_gmt": "2016-03-06T21:54:35+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/06/index.html",
-      "url": "https://learningischange.com/2016/03/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:13.786Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7172,62 +4576,6 @@
       ]
     },
     {
-      "id": 5428,
-      "wp_post_id": 11084,
-      "title": "Day: March 7, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-07T12:00:00Z",
-      "date_published_gmt": "2016-03-07T12:00:00Z",
-      "date_modified": "2016-03-07T19:49:51+00:00",
-      "date_modified_gmt": "2016-03-07T19:49:51+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/07/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/07/index.html",
-      "url": "https://learningischange.com/2016/03/07/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:16.009Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5429,
       "wp_post_id": 11084,
       "title": "The Case for NOT blocking Proxy Server Google Chrome Extensions in Schools",
@@ -7345,62 +4693,6 @@
       ]
     },
     {
-      "id": 5431,
-      "wp_post_id": 12559,
-      "title": "Day: March 8, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-08T12:00:00Z",
-      "date_published_gmt": "2016-03-08T12:00:00Z",
-      "date_modified": "2022-02-06T19:52:46+00:00",
-      "date_modified_gmt": "2022-02-06T19:52:46+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/08/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/08/index.html",
-      "url": "https://learningischange.com/2016/03/08/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:17.635Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5432,
       "wp_post_id": 12558,
       "title": "#AskBenW Live: Where is Your Home Online?",
@@ -7447,62 +4739,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:18.095Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5433,
-      "wp_post_id": 12558,
-      "title": "Day: March 9, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-09T12:00:00Z",
-      "date_published_gmt": "2016-03-09T12:00:00Z",
-      "date_modified": "2022-02-06T19:52:03+00:00",
-      "date_modified_gmt": "2022-02-06T19:52:03+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/09/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/09/index.html",
-      "url": "https://learningischange.com/2016/03/09/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:18.554Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7579,67 +4815,6 @@
       ]
     },
     {
-      "id": 5435,
-      "wp_post_id": 10650,
-      "title": "Day: March 11, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-11T12:00:00Z",
-      "date_published_gmt": "2016-03-11T12:00:00Z",
-      "date_modified": "2016-03-11T13:54:07+00:00",
-      "date_modified_gmt": "2016-03-11T13:54:07+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/11/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/11/index.html",
-      "url": "https://learningischange.com/2016/03/11/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:19.502Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5436,
       "wp_post_id": 11154,
       "title": "57: Planning and Promises #LifeWideLearning16",
@@ -7695,67 +4870,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:19.994Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5437,
-      "wp_post_id": 11154,
-      "title": "Day: March 13, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-13T12:00:00Z",
-      "date_published_gmt": "2016-03-13T12:00:00Z",
-      "date_modified": "2016-03-13T16:03:15+00:00",
-      "date_modified_gmt": "2016-03-13T16:03:15+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/13/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/13/index.html",
-      "url": "https://learningischange.com/2016/03/13/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:20.438Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -7861,67 +4975,6 @@
       ]
     },
     {
-      "id": 5439,
-      "wp_post_id": 11156,
-      "title": "Day: March 16, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-16T12:00:00Z",
-      "date_published_gmt": "2016-03-16T12:00:00Z",
-      "date_modified": "2016-03-16T19:10:35+00:00",
-      "date_modified_gmt": "2016-03-16T19:10:35+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/16/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/16/index.html",
-      "url": "https://learningischange.com/2016/03/16/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:21.385Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5440,
       "wp_post_id": 11158,
       "title": "61: The Most I Can Hope for My Students #LifeWideLearning16",
@@ -7977,67 +5030,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:21.836Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5441,
-      "wp_post_id": 11158,
-      "title": "Day: March 22, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-22T12:00:00Z",
-      "date_published_gmt": "2016-03-22T12:00:00Z",
-      "date_modified": "2016-03-22T12:07:36+00:00",
-      "date_modified_gmt": "2016-03-22T12:07:36+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/22/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/22/index.html",
-      "url": "https://learningischange.com/2016/03/22/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:22.294Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8118,67 +5110,6 @@
       ]
     },
     {
-      "id": 5443,
-      "wp_post_id": 11161,
-      "title": "Day: March 23, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-23T12:00:00Z",
-      "date_published_gmt": "2016-03-23T12:00:00Z",
-      "date_modified": "2016-03-23T13:45:42+00:00",
-      "date_modified_gmt": "2016-03-23T13:45:42+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/23/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/23/index.html",
-      "url": "https://learningischange.com/2016/03/23/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:23.203Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5444,
       "wp_post_id": 11162,
       "title": "62: Aging Compounds Change #LifeWideLearning16",
@@ -8237,67 +5168,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:23.677Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5445,
-      "wp_post_id": 11162,
-      "title": "Day: March 24, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-24T12:00:00Z",
-      "date_published_gmt": "2016-03-24T12:00:00Z",
-      "date_modified": "2016-03-24T13:46:09+00:00",
-      "date_modified_gmt": "2016-03-24T13:46:09+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/24/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Lifewidelearning16",
-          "slug": "lifewidelearning16",
-          "url": "/category/lifewidelearning16/"
-        },
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/03/24/index.html",
-      "url": "https://learningischange.com/2016/03/24/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:24.148Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8432,68 +5302,6 @@
       ]
     },
     {
-      "id": 5448,
-      "wp_post_id": 1777,
-      "title": "Day: March 30, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-03-30T12:00:00Z",
-      "date_published_gmt": "2016-03-30T12:00:00Z",
-      "date_modified": "2022-02-06T19:35:36+00:00",
-      "date_modified_gmt": "2022-02-06T19:35:36+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/30/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/03/30/index.html",
-      "url": "https://learningischange.com/2016/03/30/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:25.515Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5449,
       "wp_post_id": 12557,
       "title": "#AskBenW: What PD event would you create?",
@@ -8550,62 +5358,6 @@
       ]
     },
     {
-      "id": 5450,
-      "wp_post_id": 12557,
-      "title": "Day: April 4, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-04T12:00:00Z",
-      "date_published_gmt": "2016-04-04T12:00:00Z",
-      "date_modified": "2022-02-06T19:35:15+00:00",
-      "date_modified_gmt": "2022-02-06T19:35:15+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/04/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/04/index.html",
-      "url": "https://learningischange.com/2016/04/04/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:26.427Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5451,
       "wp_post_id": 12556,
       "title": "#AskBenW: How do we change the conversation from Presentations to People?",
@@ -8652,62 +5404,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:26.862Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5452,
-      "wp_post_id": 12556,
-      "title": "Day: April 5, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-05T12:00:00Z",
-      "date_published_gmt": "2016-04-05T12:00:00Z",
-      "date_modified": "2022-02-06T19:32:42+00:00",
-      "date_modified_gmt": "2022-02-06T19:32:42+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/05/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/05/index.html",
-      "url": "https://learningischange.com/2016/04/05/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:27.367Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -8836,68 +5532,6 @@
       ]
     },
     {
-      "id": 5455,
-      "wp_post_id": 12555,
-      "title": "Day: April 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-06T12:00:00Z",
-      "date_published_gmt": "2016-04-06T12:00:00Z",
-      "date_modified": "2022-02-06T19:28:22+00:00",
-      "date_modified_gmt": "2022-02-06T19:28:22+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/04/06/index.html",
-      "url": "https://learningischange.com/2016/04/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:28.730Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5456,
       "wp_post_id": 12554,
       "title": "#AskBenW: How do we support sustaining relationships in PD?",
@@ -8944,62 +5578,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:29.196Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5457,
-      "wp_post_id": 12554,
-      "title": "Day: April 7, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-07T12:00:00Z",
-      "date_published_gmt": "2016-04-07T12:00:00Z",
-      "date_modified": "2022-02-06T19:11:00+00:00",
-      "date_modified_gmt": "2022-02-06T19:11:00+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/07/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/07/index.html",
-      "url": "https://learningischange.com/2016/04/07/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:29.641Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9066,62 +5644,6 @@
       ]
     },
     {
-      "id": 5459,
-      "wp_post_id": 12553,
-      "title": "Day: April 8, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-08T12:00:00Z",
-      "date_published_gmt": "2016-04-08T12:00:00Z",
-      "date_modified": "2022-02-04T00:50:49+00:00",
-      "date_modified_gmt": "2022-02-04T00:50:49+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/08/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/08/index.html",
-      "url": "https://learningischange.com/2016/04/08/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:30.549Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5460,
       "wp_post_id": 12552,
       "title": "#AskBenW: How should we compensate learning?",
@@ -9168,62 +5690,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:31.016Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5461,
-      "wp_post_id": 12552,
-      "title": "Day: April 11, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-11T12:00:00Z",
-      "date_published_gmt": "2016-04-11T12:00:00Z",
-      "date_modified": "2022-02-04T00:50:16+00:00",
-      "date_modified_gmt": "2022-02-04T00:50:16+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/11/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/11/index.html",
-      "url": "https://learningischange.com/2016/04/11/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:31.444Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9290,62 +5756,6 @@
       ]
     },
     {
-      "id": 5463,
-      "wp_post_id": 12551,
-      "title": "Day: April 13, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-13T12:00:00Z",
-      "date_published_gmt": "2016-04-13T12:00:00Z",
-      "date_modified": "2022-02-04T00:48:58+00:00",
-      "date_modified_gmt": "2022-02-04T00:48:58+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/13/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/13/index.html",
-      "url": "https://learningischange.com/2016/04/13/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:32.339Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5464,
       "wp_post_id": 12550,
       "title": "#AskBenW: How do you invite others to learn?",
@@ -9392,62 +5802,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:32.783Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5465,
-      "wp_post_id": 12550,
-      "title": "Day: April 15, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-15T12:00:00Z",
-      "date_published_gmt": "2016-04-15T12:00:00Z",
-      "date_modified": "2022-02-04T00:47:55+00:00",
-      "date_modified_gmt": "2022-02-04T00:47:55+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/15/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/15/index.html",
-      "url": "https://learningischange.com/2016/04/15/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:33.219Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9514,62 +5868,6 @@
       ]
     },
     {
-      "id": 5467,
-      "wp_post_id": 12549,
-      "title": "Day: April 19, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-19T12:00:00Z",
-      "date_published_gmt": "2016-04-19T12:00:00Z",
-      "date_modified": "2022-02-04T00:45:57+00:00",
-      "date_modified_gmt": "2022-02-04T00:45:57+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/19/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/19/index.html",
-      "url": "https://learningischange.com/2016/04/19/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:34.136Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5468,
       "wp_post_id": 12548,
       "title": "#AskBenW: Which teacher stories are worth telling?",
@@ -9616,62 +5914,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:34.607Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5469,
-      "wp_post_id": 12548,
-      "title": "Day: April 21, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-21T12:00:00Z",
-      "date_published_gmt": "2016-04-21T12:00:00Z",
-      "date_modified": "2022-02-04T00:45:21+00:00",
-      "date_modified_gmt": "2022-02-04T00:45:21+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/21/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/21/index.html",
-      "url": "https://learningischange.com/2016/04/21/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:35.069Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9738,62 +5980,6 @@
       ]
     },
     {
-      "id": 5471,
-      "wp_post_id": 12547,
-      "title": "Day: April 25, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-25T12:00:00Z",
-      "date_published_gmt": "2016-04-25T12:00:00Z",
-      "date_modified": "2022-02-04T00:44:49+00:00",
-      "date_modified_gmt": "2022-02-04T00:44:49+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/25/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/25/index.html",
-      "url": "https://learningischange.com/2016/04/25/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:35.967Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5472,
       "wp_post_id": 12546,
       "title": "#AskBenW: How do we involve school leadersâ visions in PD decisions for teachers?",
@@ -9840,62 +6026,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:36.416Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5473,
-      "wp_post_id": 12546,
-      "title": "Day: April 26, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-26T12:00:00Z",
-      "date_published_gmt": "2016-04-26T12:00:00Z",
-      "date_modified": "2022-02-04T00:43:55+00:00",
-      "date_modified_gmt": "2022-02-04T00:43:55+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/26/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/26/index.html",
-      "url": "https://learningischange.com/2016/04/26/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:36.857Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -9962,62 +6092,6 @@
       ]
     },
     {
-      "id": 5475,
-      "wp_post_id": 12545,
-      "title": "Day: April 27, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-27T12:00:00Z",
-      "date_published_gmt": "2016-04-27T12:00:00Z",
-      "date_modified": "2022-02-04T00:43:05+00:00",
-      "date_modified_gmt": "2022-02-04T00:43:05+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/27/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/27/index.html",
-      "url": "https://learningischange.com/2016/04/27/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:37.752Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5476,
       "wp_post_id": 12544,
       "title": "#AskBenW: What is the best memento of our learning?",
@@ -10064,62 +6138,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:38.190Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5477,
-      "wp_post_id": 12544,
-      "title": "Day: April 28, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-04-28T12:00:00Z",
-      "date_published_gmt": "2016-04-28T12:00:00Z",
-      "date_modified": "2022-02-04T00:41:55+00:00",
-      "date_modified_gmt": "2022-02-04T00:41:55+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/04/28/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/04/28/index.html",
-      "url": "https://learningischange.com/2016/04/28/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:38.626Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10186,62 +6204,6 @@
       ]
     },
     {
-      "id": 5479,
-      "wp_post_id": 12543,
-      "title": "Day: May 2, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-02T12:00:00Z",
-      "date_published_gmt": "2016-05-02T12:00:00Z",
-      "date_modified": "2022-02-04T00:37:26+00:00",
-      "date_modified_gmt": "2022-02-04T00:37:26+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/02/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/02/index.html",
-      "url": "https://learningischange.com/2016/05/02/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:39.497Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5480,
       "wp_post_id": 12542,
       "title": "#AskBenW: What is the role for students in professional learning?",
@@ -10288,62 +6250,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:39.943Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5481,
-      "wp_post_id": 12542,
-      "title": "Day: May 3, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-03T12:00:00Z",
-      "date_published_gmt": "2016-05-03T12:00:00Z",
-      "date_modified": "2022-02-04T00:34:03+00:00",
-      "date_modified_gmt": "2022-02-04T00:34:03+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/03/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/03/index.html",
-      "url": "https://learningischange.com/2016/05/03/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:40.387Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10410,62 +6316,6 @@
       ]
     },
     {
-      "id": 5483,
-      "wp_post_id": 12541,
-      "title": "Day: May 4, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-04T12:00:00Z",
-      "date_published_gmt": "2016-05-04T12:00:00Z",
-      "date_modified": "2022-02-04T00:33:28+00:00",
-      "date_modified_gmt": "2022-02-04T00:33:28+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/04/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/04/index.html",
-      "url": "https://learningischange.com/2016/05/04/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:41.381Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5484,
       "wp_post_id": 12540,
       "title": "#AskBenW: How can we become documentarians of learning?",
@@ -10512,62 +6362,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:41.825Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5485,
-      "wp_post_id": 12540,
-      "title": "Day: May 5, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-05T12:00:00Z",
-      "date_published_gmt": "2016-05-05T12:00:00Z",
-      "date_modified": "2022-02-04T00:32:52+00:00",
-      "date_modified_gmt": "2022-02-04T00:32:52+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/05/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/05/index.html",
-      "url": "https://learningischange.com/2016/05/05/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:42.281Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10634,62 +6428,6 @@
       ]
     },
     {
-      "id": 5487,
-      "wp_post_id": 12539,
-      "title": "Day: May 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-06T12:00:00Z",
-      "date_published_gmt": "2016-05-06T12:00:00Z",
-      "date_modified": "2022-02-04T00:32:22+00:00",
-      "date_modified_gmt": "2022-02-04T00:32:22+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/06/index.html",
-      "url": "https://learningischange.com/2016/05/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:43.232Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5488,
       "wp_post_id": 12538,
       "title": "#AskBenW: How can teachers be their âwhole selvesâ in PD?",
@@ -10736,62 +6474,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:43.691Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5489,
-      "wp_post_id": 12538,
-      "title": "Day: May 9, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-09T12:00:00Z",
-      "date_published_gmt": "2016-05-09T12:00:00Z",
-      "date_modified": "2022-02-04T00:31:58+00:00",
-      "date_modified_gmt": "2022-02-04T00:31:58+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/09/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/09/index.html",
-      "url": "https://learningischange.com/2016/05/09/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:44.149Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -10858,62 +6540,6 @@
       ]
     },
     {
-      "id": 5491,
-      "wp_post_id": 12537,
-      "title": "Day: May 10, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-10T12:00:00Z",
-      "date_published_gmt": "2016-05-10T12:00:00Z",
-      "date_modified": "2022-02-04T00:31:28+00:00",
-      "date_modified_gmt": "2022-02-04T00:31:28+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/10/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/10/index.html",
-      "url": "https://learningischange.com/2016/05/10/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:45.053Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5492,
       "wp_post_id": 12536,
       "title": "#AskBenW: What do we mean when we say, âItâs not about the techâ?",
@@ -10960,62 +6586,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:45.494Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5493,
-      "wp_post_id": 12536,
-      "title": "Day: May 11, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-11T12:00:00Z",
-      "date_published_gmt": "2016-05-11T12:00:00Z",
-      "date_modified": "2022-02-04T00:38:25+00:00",
-      "date_modified_gmt": "2022-02-04T00:38:25+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/11/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/11/index.html",
-      "url": "https://learningischange.com/2016/05/11/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:45.939Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11082,62 +6652,6 @@
       ]
     },
     {
-      "id": 5495,
-      "wp_post_id": 12535,
-      "title": "Day: May 12, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-12T12:00:00Z",
-      "date_published_gmt": "2016-05-12T12:00:00Z",
-      "date_modified": "2022-02-04T00:29:55+00:00",
-      "date_modified_gmt": "2022-02-04T00:29:55+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/12/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/12/index.html",
-      "url": "https://learningischange.com/2016/05/12/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:46.843Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5496,
       "wp_post_id": 12534,
       "title": "#AskBenW: How do we support introverts in PD?",
@@ -11184,62 +6698,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:47.289Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5497,
-      "wp_post_id": 12534,
-      "title": "Day: May 16, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-16T12:00:00Z",
-      "date_published_gmt": "2016-05-16T12:00:00Z",
-      "date_modified": "2022-02-04T00:29:09+00:00",
-      "date_modified_gmt": "2022-02-04T00:29:09+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/16/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/16/index.html",
-      "url": "https://learningischange.com/2016/05/16/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:47.767Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11311,62 +6769,6 @@
       ]
     },
     {
-      "id": 5499,
-      "wp_post_id": 12533,
-      "title": "Day: May 17, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-17T12:00:00Z",
-      "date_published_gmt": "2016-05-17T12:00:00Z",
-      "date_modified": "2022-01-20T01:29:39+00:00",
-      "date_modified_gmt": "2022-01-20T01:29:39+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/17/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/17/index.html",
-      "url": "https://learningischange.com/2016/05/17/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:48.707Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5500,
       "wp_post_id": 12532,
       "title": "#AskBenW: How can we best support new teachers in PD?",
@@ -11413,62 +6815,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:49.164Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5501,
-      "wp_post_id": 12532,
-      "title": "Day: May 19, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-19T12:00:00Z",
-      "date_published_gmt": "2016-05-19T12:00:00Z",
-      "date_modified": "2022-01-20T01:28:06+00:00",
-      "date_modified_gmt": "2022-01-20T01:28:06+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/19/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/19/index.html",
-      "url": "https://learningischange.com/2016/05/19/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:49.632Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11535,62 +6881,6 @@
       ]
     },
     {
-      "id": 5503,
-      "wp_post_id": 12531,
-      "title": "Day: May 24, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-24T12:00:00Z",
-      "date_published_gmt": "2016-05-24T12:00:00Z",
-      "date_modified": "2022-01-20T01:27:20+00:00",
-      "date_modified_gmt": "2022-01-20T01:27:20+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/24/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/24/index.html",
-      "url": "https://learningischange.com/2016/05/24/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:50.569Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5504,
       "wp_post_id": 12530,
       "title": "#AskBenW: What is the difference between agency and advocacy?",
@@ -11637,62 +6927,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:51.040Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5505,
-      "wp_post_id": 12530,
-      "title": "Day: May 31, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-05-31T12:00:00Z",
-      "date_published_gmt": "2016-05-31T12:00:00Z",
-      "date_modified": "2022-01-20T01:25:54+00:00",
-      "date_modified_gmt": "2022-01-20T01:25:54+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/05/31/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/05/31/index.html",
-      "url": "https://learningischange.com/2016/05/31/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:51.500Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11759,62 +6993,6 @@
       ]
     },
     {
-      "id": 5507,
-      "wp_post_id": 12529,
-      "title": "Day: June 1, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-06-01T12:00:00Z",
-      "date_published_gmt": "2016-06-01T12:00:00Z",
-      "date_modified": "2022-01-20T00:52:47+00:00",
-      "date_modified_gmt": "2022-01-20T00:52:47+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/06/01/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/06/01/index.html",
-      "url": "https://learningischange.com/2016/06/01/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:52.414Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5508,
       "wp_post_id": 12528,
       "title": "#AskBenW: How do we share our values in PD?",
@@ -11861,62 +7039,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:52.898Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5509,
-      "wp_post_id": 12528,
-      "title": "Day: June 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-06-06T12:00:00Z",
-      "date_published_gmt": "2016-06-06T12:00:00Z",
-      "date_modified": "2022-01-20T00:40:52+00:00",
-      "date_modified_gmt": "2022-01-20T00:40:52+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/06/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/06/06/index.html",
-      "url": "https://learningischange.com/2016/06/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:53.345Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -11983,62 +7105,6 @@
       ]
     },
     {
-      "id": 5511,
-      "wp_post_id": 12527,
-      "title": "Day: July 1, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-07-01T12:00:00Z",
-      "date_published_gmt": "2016-07-01T12:00:00Z",
-      "date_modified": "2022-01-20T00:24:50+00:00",
-      "date_modified_gmt": "2022-01-20T00:24:50+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/07/01/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/07/01/index.html",
-      "url": "https://learningischange.com/2016/07/01/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:54.245Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5512,
       "wp_post_id": 12526,
       "title": "#AskBenW: How should we use maps to support schools?",
@@ -12085,62 +7151,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:54.691Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5513,
-      "wp_post_id": 12526,
-      "title": "Day: July 5, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-07-05T12:00:00Z",
-      "date_published_gmt": "2016-07-05T12:00:00Z",
-      "date_modified": "2022-01-20T00:20:19+00:00",
-      "date_modified_gmt": "2022-01-20T00:20:19+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/07/05/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/07/05/index.html",
-      "url": "https://learningischange.com/2016/07/05/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:55.132Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12209,62 +7219,6 @@
       ]
     },
     {
-      "id": 5515,
-      "wp_post_id": 12525,
-      "title": "Day: July 19, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-07-19T12:00:00Z",
-      "date_published_gmt": "2016-07-19T12:00:00Z",
-      "date_modified": "2019-06-23T04:12:01+00:00",
-      "date_modified_gmt": "2019-06-23T04:12:01+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/07/19/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/07/19/index.html",
-      "url": "https://learningischange.com/2016/07/19/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:56.035Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5516,
       "wp_post_id": 12524,
       "title": "#AskBenW: How many schools and classrooms should you visit each year?",
@@ -12321,62 +7275,6 @@
       ]
     },
     {
-      "id": 5517,
-      "wp_post_id": 12524,
-      "title": "Day: July 22, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-07-22T12:00:00Z",
-      "date_published_gmt": "2016-07-22T12:00:00Z",
-      "date_modified": "2019-06-23T04:11:17+00:00",
-      "date_modified_gmt": "2019-06-23T04:11:17+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/07/22/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/07/22/index.html",
-      "url": "https://learningischange.com/2016/07/22/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:56.931Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5518,
       "wp_post_id": 15204,
       "title": "#AskBenW: What are the right questions to ask someone you have never met?",
@@ -12423,62 +7321,6 @@
       "history": [
         {
           "date": "2026-01-16T18:50:57.379Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5519,
-      "wp_post_id": 12875,
-      "title": "Day: July 25, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-07-25T12:00:00Z",
-      "date_published_gmt": "2016-07-25T12:00:00Z",
-      "date_modified": "2016-08-12T15:09:38+00:00",
-      "date_modified_gmt": "2016-08-12T15:09:38+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/07/25/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/07/25/index.html",
-      "url": "https://learningischange.com/2016/07/25/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:57.808Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -12608,118 +7450,6 @@
       ]
     },
     {
-      "id": 5522,
-      "wp_post_id": 15203,
-      "title": "Day: July 29, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-07-29T12:00:00Z",
-      "date_published_gmt": "2016-07-29T12:00:00Z",
-      "date_modified": "2022-01-20T00:12:06+00:00",
-      "date_modified_gmt": "2022-01-20T00:12:06+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/07/29/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Askbenw",
-          "slug": "askbenw",
-          "url": "/category/askbenw/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/07/29/index.html",
-      "url": "https://learningischange.com/2016/07/29/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:59.149Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5523,
-      "wp_post_id": 12897,
-      "title": "Day: August 7, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-07T12:00:00Z",
-      "date_published_gmt": "2016-08-07T12:00:00Z",
-      "date_modified": "2022-02-04T00:15:16+00:00",
-      "date_modified_gmt": "2022-02-04T00:15:16+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/07/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/07/index.html",
-      "url": "https://learningischange.com/2016/08/07/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:59.588Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5524,
       "wp_post_id": 12889,
       "title": "Launching #WHOISaps: Will you respond to the call?",
@@ -12832,62 +7562,6 @@
       "history": [
         {
           "date": "2026-01-16T18:51:00.490Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5526,
-      "wp_post_id": 12896,
-      "title": "Day: August 8, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-08T12:00:00Z",
-      "date_published_gmt": "2016-08-08T12:00:00Z",
-      "date_modified": "2022-02-04T00:12:22+00:00",
-      "date_modified_gmt": "2022-02-04T00:12:22+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/08/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/08/index.html",
-      "url": "https://learningischange.com/2016/08/08/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:00.973Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13122,62 +7796,6 @@
       ]
     },
     {
-      "id": 5530,
-      "wp_post_id": 12917,
-      "title": "Day: August 12, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-12T12:00:00Z",
-      "date_published_gmt": "2016-08-12T12:00:00Z",
-      "date_modified": "2022-02-01T02:10:11+00:00",
-      "date_modified_gmt": "2022-02-01T02:10:11+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/12/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/12/index.html",
-      "url": "https://learningischange.com/2016/08/12/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:02.867Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5531,
       "wp_post_id": 12917,
       "title": "#WHOISaps: Which resources do you need in order to learn?",
@@ -13241,62 +7859,6 @@
       ]
     },
     {
-      "id": 5532,
-      "wp_post_id": 12926,
-      "title": "Day: August 15, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-15T12:00:00Z",
-      "date_published_gmt": "2016-08-15T12:00:00Z",
-      "date_modified": "2022-02-01T02:01:27+00:00",
-      "date_modified_gmt": "2022-02-01T02:01:27+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/15/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/15/index.html",
-      "url": "https://learningischange.com/2016/08/15/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:03.833Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5533,
       "wp_post_id": 12926,
       "title": "#WHOISaps: What are our biggest barriers to equity?",
@@ -13350,62 +7912,6 @@
       "history": [
         {
           "date": "2026-01-16T18:51:04.307Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5534,
-      "wp_post_id": 12933,
-      "title": "Day: August 18, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-18T12:00:00Z",
-      "date_published_gmt": "2016-08-18T12:00:00Z",
-      "date_modified": "2022-02-01T01:57:44+00:00",
-      "date_modified_gmt": "2022-02-01T01:57:44+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/18/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/18/index.html",
-      "url": "https://learningischange.com/2016/08/18/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:04.755Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13599,62 +8105,6 @@
       ]
     },
     {
-      "id": 5538,
-      "wp_post_id": 12972,
-      "title": "Day: August 22, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-22T12:00:00Z",
-      "date_published_gmt": "2016-08-22T12:00:00Z",
-      "date_modified": "2022-02-01T01:55:35+00:00",
-      "date_modified_gmt": "2022-02-01T01:55:35+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/22/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/22/index.html",
-      "url": "https://learningischange.com/2016/08/22/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:06.627Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5539,
       "wp_post_id": 12972,
       "title": "#WHOISaps: What is âthe howâ of creating equity?",
@@ -13706,62 +8156,6 @@
       "history": [
         {
           "date": "2026-01-16T18:51:07.084Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5540,
-      "wp_post_id": 12983,
-      "title": "Day: August 25, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-25T12:00:00Z",
-      "date_published_gmt": "2016-08-25T12:00:00Z",
-      "date_modified": "2022-02-01T01:51:31+00:00",
-      "date_modified_gmt": "2022-02-01T01:51:31+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/25/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/25/index.html",
-      "url": "https://learningischange.com/2016/08/25/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:07.610Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -13894,62 +8288,6 @@
       ]
     },
     {
-      "id": 5543,
-      "wp_post_id": 12993,
-      "title": "Day: August 28, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-08-28T12:00:00Z",
-      "date_published_gmt": "2016-08-28T12:00:00Z",
-      "date_modified": "2022-02-01T01:49:30+00:00",
-      "date_modified_gmt": "2022-02-01T01:49:30+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/08/28/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/08/28/index.html",
-      "url": "https://learningischange.com/2016/08/28/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:08.950Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5544,
       "wp_post_id": 12993,
       "title": "#WHOISaps: Do we really mean All Means All?",
@@ -14062,68 +8400,6 @@
       "history": [
         {
           "date": "2026-01-16T18:51:09.941Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5546,
-      "wp_post_id": 1624,
-      "title": "Day: September 6, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-09-06T12:00:00Z",
-      "date_published_gmt": "2016-09-06T12:00:00Z",
-      "date_modified": "2022-02-01T01:41:58+00:00",
-      "date_modified_gmt": "2022-02-01T01:41:58+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/09/06/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/09/06/index.html",
-      "url": "https://learningischange.com/2016/09/06/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:10.409Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -14563,68 +8839,6 @@
       ]
     },
     {
-      "id": 5554,
-      "wp_post_id": 1612,
-      "title": "Day: September 12, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-09-12T12:00:00Z",
-      "date_published_gmt": "2016-09-12T12:00:00Z",
-      "date_modified": "2022-01-23T22:11:05+00:00",
-      "date_modified_gmt": "2022-01-23T22:11:05+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/09/12/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/09/12/index.html",
-      "url": "https://learningischange.com/2016/09/12/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:14.308Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5555,
       "wp_post_id": 13056,
       "title": "#WHOISaps: How can we inspire students to be self-directed learners?",
@@ -14934,124 +9148,6 @@
       ]
     },
     {
-      "id": 5560,
-      "wp_post_id": 1607,
-      "title": "Day: September 20, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-09-20T12:00:00Z",
-      "date_published_gmt": "2016-09-20T12:00:00Z",
-      "date_modified": "2022-01-23T22:09:46+00:00",
-      "date_modified_gmt": "2022-01-23T22:09:46+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/09/20/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/09/20/index.html",
-      "url": "https://learningischange.com/2016/09/20/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:17.127Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5561,
-      "wp_post_id": 13094,
-      "title": "Day: October 3, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-10-03T12:00:00Z",
-      "date_published_gmt": "2016-10-03T12:00:00Z",
-      "date_modified": "2022-01-23T22:01:03+00:00",
-      "date_modified_gmt": "2022-01-23T22:01:03+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/10/03/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Whoisaps",
-          "slug": "whoisaps",
-          "url": "/category/whoisaps/"
-        }
-      ],
-      "tags": [],
-      "path": "2016/10/03/index.html",
-      "url": "https://learningischange.com/2016/10/03/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:17.600Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5562,
       "wp_post_id": 13094,
       "title": "#WHOISaps: When will teachers have enough time?",
@@ -15180,73 +9276,6 @@
       ]
     },
     {
-      "id": 5564,
-      "wp_post_id": 1600,
-      "title": "Day: October 28, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-10-28T12:00:00Z",
-      "date_published_gmt": "2016-10-28T12:00:00Z",
-      "date_modified": "2019-06-23T04:04:29+00:00",
-      "date_modified_gmt": "2019-06-23T04:04:29+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/10/28/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        },
-        {
-          "name": "observeme",
-          "slug": "observeme",
-          "url": "/tag/observeme/"
-        }
-      ],
-      "path": "2016/10/28/index.html",
-      "url": "https://learningischange.com/2016/10/28/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:19.048Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
       "id": 5565,
       "wp_post_id": 14127,
       "title": "First session on co-creating the vision for Blended and Personalized Learning in @aurorak12. Long but worth it!",
@@ -15299,68 +9328,6 @@
       "history": [
         {
           "date": "2026-01-16T18:51:19.518Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 5566,
-      "wp_post_id": 14127,
-      "title": "Day: December 16, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-12-16T12:00:00Z",
-      "date_published_gmt": "2016-12-16T12:00:00Z",
-      "date_modified": "2019-06-23T04:00:28+00:00",
-      "date_modified_gmt": "2019-06-23T04:00:28+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/12/16/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/12/16/index.html",
-      "url": "https://learningischange.com/2016/12/16/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:19.983Z",
           "action": "created",
           "tool": "database-generator",
           "changes": [
@@ -15441,78 +9408,7 @@
           "notes": "Initial database generation"
         }
       ]
-    },
-    {
-      "id": 5568,
-      "wp_post_id": 14126,
-      "title": "Day: December 31, 2016",
-      "slug": "index.html",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "",
-        "bio": ""
-      },
-      "date_published": "2016-12-31T12:00:00Z",
-      "date_published_gmt": "2016-12-31T12:00:00Z",
-      "date_modified": "2019-06-23T04:00:19+00:00",
-      "date_modified_gmt": "2019-06-23T04:00:19+00:00",
-      "content": "",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/12/31/",
-      "comment_status": "closed",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        },
-        {
-          "name": "enjoy",
-          "slug": "enjoy",
-          "url": "/tag/enjoy/"
-        },
-        {
-          "name": "lastminute",
-          "slug": "lastminute",
-          "url": "/tag/lastminute/"
-        }
-      ],
-      "path": "2016/12/31/index.html",
-      "url": "https://learningischange.com/2016/12/31/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:51:20.922Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
     }
-  ]
+  ],
+  "post_count": 150
 }

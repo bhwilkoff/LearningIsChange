@@ -1,0 +1,71 @@
+name: Regenerate Posts
+
+# Renders posts from templates/post.html + database/posts/YYYY.json.
+# The JSON content field is the source of truth; the HTML file is derived.
+#
+# Safety gates:
+#   - `scope` selects which posts get regenerated (a specific year or all)
+#   - `dry_run` prints the plan without writing
+#   - the regenerator skips posts without a `content` field (must run
+#     backfill-posts-content.js first)
+#
+# Triggered from admin/ (or manually via the Actions tab).
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Year to regenerate (e.g. "2026") or "all"'
+        required: true
+        type: string
+        default: '2026'
+      dry_run:
+        description: 'Dry run (summary only; do not write)'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'true'
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run regenerate-posts.js
+        run: |
+          set -euo pipefail
+
+          SCOPE_ARG=""
+          if [ "${{ inputs.scope }}" != "all" ] && [ -n "${{ inputs.scope }}" ]; then
+            SCOPE_ARG="--year=${{ inputs.scope }}"
+          fi
+
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "=== DRY RUN ==="
+            node scripts/regenerate-posts.js $SCOPE_ARG
+          else
+            echo "=== APPLY ==="
+            node scripts/regenerate-posts.js --apply $SCOPE_ARG
+          fi
+
+      - name: Commit and push
+        if: inputs.dry_run == 'false'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            scope="${{ inputs.scope }}"
+            changed=$(git diff --cached --stat | tail -1)
+            git commit -m "regenerate posts ($scope) — $changed"
+            git push
+            echo "Pushed post regeneration"
+          fi
