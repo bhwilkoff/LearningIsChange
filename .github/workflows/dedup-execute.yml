@@ -84,8 +84,16 @@ jobs:
               console.error(`ERROR: path outside wp-content/uploads/: ${p}`);
               process.exit(1);
             }
-            if (p.includes('..') || p.startsWith('/')) {
-              console.error(`ERROR: suspicious path: ${p}`);
+            if (p.startsWith('/')) {
+              console.error(`ERROR: absolute path: ${p}`);
+              process.exit(1);
+            }
+            // Block actual path traversal — a path SEGMENT of ".." — without
+            // rejecting filenames that legitimately contain dots (the legacy
+            // WP-import filenames sometimes have things like "twitter...http-").
+            const segments = p.split('/');
+            if (segments.some(s => s === '..' || s === '.' || s === '')) {
+              console.error(`ERROR: path traversal segment: ${p}`);
               process.exit(1);
             }
           }
