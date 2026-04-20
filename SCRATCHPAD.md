@@ -329,6 +329,43 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — the big move: site-wide post regeneration (session 14)
+- **Backfill**: ran across all 20 year shards. All 3,914 posts already
+  had `content` from prior partial migrations — 0 newly extracted, 0
+  missing, 0 errors. JSON is canonical.
+- **Template fix**: removed a duplicate `<title>` + meta block from
+  `templates/post.html`. The canonical post had two `<title>` tags
+  (one with post title, one with site title from
+  `siteComponents.head`); my capture had preserved both. Now there's
+  exactly one `<title>` per regenerated post.
+- **Fragment match check**: verified the template's embedded
+  MASTHEAD/SIDEBAR/COLOPHON/FOOTER content is identical to
+  `templates/fragments/*.html` — so regeneration won't roll back
+  Ben's recent footer edit.
+- **Dry run dispatched**: workflow 24689411405 — `scope=all`,
+  `dry_run=true`. 3,914 posts rendered cleanly, 0 errors.
+- **Apply dispatched**: workflow 24690193674 — `scope=all`,
+  `dry_run=false`. ETA 5–15 min for the GH Actions runner to render
+  all 3,914 posts and push one commit.
+- **Expected impact**:
+  - Every post page (3,914 files) gets a unified Fluida structure
+    derived from template + JSON
+  - **Timezone bug fixed everywhere**: posts dated YYYY-MM-DD whose
+    display date was off-by-one (in TZs west of UTC) now show the
+    correct day
+  - `postid-new` placeholder (legacy bug from /new/) replaced with
+    actual slug-based IDs
+  - Some WordPress-era cruft removed (legacy oEmbed link tags,
+    duplicate dns-prefetch, plugin-injected related-posts script
+    fragments) — site is more compact and consistent
+  - Per-post inline scripts that shipped with old posts get dropped
+    in favor of the template's standard set
+  - Fragment markers preserved on every post so future
+    regenerate-fragments runs work uniformly
+- **Risk acknowledged**: this is a 3,914-file commit. If anything
+  looks wrong post-deploy, the commit can be reverted (one git
+  revert).
+
 ### 2026-04-20 — M4 final for /new/, M1.3 delegations (session 13)
 - **M4 final — /new/**: post HTML now renders from
   `templates/post.html` at publish time. New `renderPostFromTemplate()`
