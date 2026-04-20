@@ -5,61 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regenerate Fragments · LiC Admin</title>
   <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent: #0085b2; --accent-hover: #006a8e;
+      --accent: #e67e22; --accent-hover: #cf6a10;
       --text-primary: #222; --text-secondary: #555; --text-muted: #888;
-      --bg-primary: #fff; --bg-secondary: #f5f7f9; --border-light: #e0e4e8;
-      --success: #28a745; --danger: #d9534f; --warning: #e08e0b;
+      --bg-primary: #fff; --bg-secondary: #f5f7f9; --bg-tertiary: #edf1f4;
+      --border-light: #e0e4e8; --border-med: #c8cfd6;
+      --success: #28a745; --danger: #d9534f; --warning: #f0ad4e;
       --shadow: 0 2px 10px rgba(0,0,0,0.06);
+      --code-bg: #1e2126; --code-fg: #e4ebef;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text-primary); background: var(--bg-secondary); line-height: 1.55; }
     a { color: var(--accent); }
-    code { font-family: ui-monospace, Menlo, monospace; font-size: 0.88em; background: var(--bg-secondary); padding: 1px 5px; border-radius: 3px; }
-    header { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 16px 24px; display: flex; align-items: center; gap: 14px; }
-    header h1 { font-size: 1.25rem; font-weight: 700; }
+    code { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 0.88em; background: var(--bg-tertiary); padding: 1px 6px; border-radius: 3px; }
+
+    header { background: var(--bg-primary); border-bottom: 1px solid var(--border-light); padding: 14px 24px; display: flex; align-items: center; gap: 14px; }
+    header h1 { font-size: 1.2rem; font-weight: 700; }
     header .breadcrumb { color: var(--text-muted); font-size: 0.9rem; }
     header .breadcrumb a { color: var(--text-secondary); text-decoration: none; }
     header .spacer { flex: 1; }
     header button { background: var(--bg-secondary); border: 1px solid var(--border-light); color: var(--text-primary); padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; }
-    header button:hover { background: #eef2f5; }
-    main { max-width: 1100px; margin: 0 auto; padding: 24px; }
-    .card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 6px; padding: 18px; margin-bottom: 16px; box-shadow: var(--shadow); }
-    .card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+    header button:hover { background: var(--bg-tertiary); }
+
+    main { max-width: 1400px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 20px; }
+    @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+
+    .card { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 8px; padding: 16px; margin-bottom: 16px; box-shadow: var(--shadow); }
+    .card h2 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+
+    /* Zone selector — sidebar */
+    .zone-list { display: flex; flex-direction: column; gap: 4px; }
+    .zone-btn {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+      padding: 10px 12px; background: var(--bg-primary); border: 1px solid var(--border-light);
+      border-radius: 5px; text-align: left; cursor: pointer; font-family: inherit;
+    }
+    .zone-btn:hover { background: var(--bg-tertiary); border-color: var(--border-med); }
+    .zone-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .zone-btn .name { font-weight: 700; font-size: 0.92rem; }
+    .zone-btn .meta { font-size: 0.78rem; opacity: 0.8; }
+    .zone-btn.modified .name::after { content: " •"; color: var(--warning); font-size: 1.1em; }
+    .zone-btn.active.modified .name::after { color: #ffe08a; }
+
     .settings-panel { display: none; }
     .settings-panel.open { display: block; }
-    label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 4px; color: var(--text-secondary); }
-    input[type="password"], input[type="text"] { width: 100%; padding: 8px 10px; border: 1px solid var(--border-light); border-radius: 4px; font-family: inherit; font-size: 0.95rem; margin-bottom: 12px; }
+
+    label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 4px; color: var(--text-secondary); }
+    label.inline { display: inline-flex; align-items: center; gap: 6px; font-weight: 400; margin-bottom: 0; }
+    input[type="password"], input[type="text"] { width: 100%; padding: 8px 10px; border: 1px solid var(--border-light); border-radius: 4px; font-family: inherit; font-size: 0.92rem; margin-bottom: 10px; }
+
     .btn { background: var(--bg-primary); border: 1px solid var(--border-light); padding: 8px 14px; border-radius: 4px; font-family: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
-    .btn:hover { background: #eef2f5; }
+    .btn:hover:not(:disabled) { background: var(--bg-tertiary); }
     .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .btn.primary:hover { background: var(--accent-hover); }
+    .btn.primary:hover:not(:disabled) { background: var(--accent-hover); }
+    .btn.success { background: var(--success); color: #fff; border-color: var(--success); }
     .btn.danger { background: var(--danger); color: #fff; border-color: var(--danger); }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .zone-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
-    .zone-card { border: 1px solid var(--border-light); border-radius: 6px; padding: 14px; background: var(--bg-secondary); }
-    .zone-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: var(--accent); }
-    .zone-card .meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px; }
-    .zone-card .actions { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
-    .zone-card .actions button { flex: 1 1 auto; font-size: 0.8rem; padding: 5px 8px; }
-    .zone-card details { margin-top: 8px; }
-    .zone-card details summary { cursor: pointer; font-size: 0.82rem; color: var(--text-secondary); }
-    .zone-card pre { margin-top: 8px; padding: 10px; background: #111; color: #d4e8f0; font-family: ui-monospace, Menlo, monospace; font-size: 0.76rem; border-radius: 4px; max-height: 260px; overflow: auto; white-space: pre-wrap; word-break: break-all; }
-    .check-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; font-size: 0.9rem; font-weight: 400; }
-    .bulk-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
-    .status-log { background: #111; color: #d4e8f0; font-family: ui-monospace, Menlo, monospace; font-size: 0.82rem; padding: 12px; border-radius: 4px; max-height: 240px; overflow-y: auto; }
-    .status-log .entry { margin-bottom: 2px; }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn.small { padding: 5px 10px; font-size: 0.82rem; font-weight: 600; }
+
+    /* Editor card */
+    .editor-card { padding: 0; overflow: hidden; }
+    .editor-head { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border-light); flex-wrap: wrap; background: var(--bg-primary); }
+    .editor-head .zone-label { font-weight: 700; font-size: 1.02rem; }
+    .editor-head .zone-sub { color: var(--text-muted); font-size: 0.85rem; }
+    .editor-head .spacer { flex: 1; }
+
+    .tabs { display: flex; gap: 2px; padding: 0 16px; background: var(--bg-primary); border-bottom: 1px solid var(--border-light); }
+    .tab { background: none; border: none; padding: 10px 14px; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px; }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab-pane { display: none; padding: 16px; }
+    .tab-pane.active { display: block; }
+
+    /* Visual editor */
+    .visual-toolbar { display: flex; flex-wrap: wrap; gap: 3px; padding: 8px 10px; background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 4px 4px 0 0; border-bottom: none; }
+    .visual-toolbar button { background: var(--bg-primary); border: 1px solid var(--border-light); border-radius: 3px; padding: 4px 9px; font-size: 0.82rem; cursor: pointer; font-weight: 600; }
+    .visual-toolbar button:hover { background: var(--bg-tertiary); }
+    .visual-toolbar .divider { width: 1px; background: var(--border-light); margin: 2px 5px; }
+    .visual-toolbar select { padding: 4px 8px; font-size: 0.82rem; border: 1px solid var(--border-light); border-radius: 3px; background: var(--bg-primary); font-family: inherit; }
+    #visual-editor {
+      min-height: 400px; max-height: 640px; overflow-y: auto;
+      border: 1px solid var(--border-light); border-radius: 0 0 4px 4px; padding: 12px 14px;
+      background: var(--bg-primary); font-size: 0.95rem; line-height: 1.55;
+    }
+    #visual-editor:focus { outline: none; border-color: var(--accent); }
+    #visual-editor img { max-width: 100%; height: auto; }
+
+    /* Source editor */
+    #source-editor {
+      width: 100%; min-height: 460px;
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 0.82rem;
+      line-height: 1.55; tab-size: 2; padding: 12px 14px;
+      background: var(--code-bg); color: var(--code-fg);
+      border: 1px solid var(--border-med); border-radius: 4px;
+      resize: vertical;
+    }
+    #source-editor:focus { outline: none; border-color: var(--accent); }
+
+    /* Preview */
+    .preview-frame-wrapper { border: 1px solid var(--border-light); border-radius: 4px; background: #fff; overflow: hidden; }
+    #preview-frame { width: 100%; min-height: 480px; border: none; background: #fff; }
+    .preview-note { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }
+
+    /* Action bar */
+    .action-bar { display: flex; align-items: center; gap: 10px; padding: 14px 16px; background: var(--bg-secondary); border-top: 1px solid var(--border-light); flex-wrap: wrap; }
+    .action-bar .save-group { display: flex; gap: 6px; align-items: center; }
+    .action-bar .apply-group { display: flex; gap: 6px; align-items: center; }
+    .action-bar .spacer { flex: 1; }
+    .status-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 11px; font-size: 0.78rem; font-weight: 600; }
+    .status-chip.clean { background: #e8f6ec; color: #155724; border: 1px solid #b7d9c2; }
+    .status-chip.dirty { background: #fff4d9; color: #8a5a00; border: 1px solid #f0d080; }
+
+    /* Alerts */
+    .alert { padding: 10px 14px; border-radius: 4px; margin-bottom: 10px; border: 1px solid; font-size: 0.92rem; }
+    .alert.info { background: #e8f4f8; border-color: #b8dce8; color: #055; }
+    .alert.success { background: #e8f6ec; border-color: #b7d9c2; color: #155724; }
+    .alert.warning { background: #fff8e0; border-color: #f0d080; color: #664; }
+    .alert.danger { background: #fdecea; border-color: #f0b0ac; color: #711; }
+    .alert a { color: inherit; font-weight: 600; }
+
+    .hidden { display: none !important; }
+
+    .status-log {
+      background: var(--code-bg); color: var(--code-fg);
+      font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 0.8rem;
+      padding: 10px 12px; border-radius: 4px; max-height: 200px; overflow-y: auto;
+    }
+    .status-log .entry { padding: 1px 0; }
     .status-log .success { color: #7dd87a; }
     .status-log .error   { color: #ff7870; }
     .status-log .info    { color: #9ecae8; }
     .status-log .warning { color: #f0c060; }
-    .alert { padding: 10px 14px; border-radius: 4px; margin-top: 12px; border: 1px solid; }
-    .alert.info { background: #e8f4f8; border-color: #b8dce8; color: #055; }
-    .alert.warning { background: #fff8e0; border-color: #f0d080; color: #664; }
-    .alert.danger { background: #fdecea; border-color: #f0b0ac; color: #711; }
-    .alert a { color: inherit; text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -71,46 +148,111 @@
   </header>
 
   <main>
-    <div class="card settings-panel" id="settings-panel">
-      <h2>Settings</h2>
-      <label>GitHub Personal Access Token (needs <code>repo</code> + <code>workflow</code>)
-        <input type="password" id="pat-input" autocomplete="off" placeholder="ghp_...">
-      </label>
-      <label><input type="checkbox" id="remember-token"> Remember token</label>
-      <button class="btn primary" id="save-settings">Save</button>
-    </div>
-
-    <div class="card">
-      <h2>How this works</h2>
-      <ol style="margin-left: 20px">
-        <li>Edit a fragment in <code>templates/fragments/&lt;zone&gt;.html</code> locally or via GitHub's web editor.</li>
-        <li>Commit the fragment change to <code>main</code>.</li>
-        <li>Come here, pick the zones you changed, and Dispatch.</li>
-        <li>The <code>regenerate-fragments.yml</code> workflow walks every HTML page, replaces the content between <code>LIC:&lt;ZONE&gt;:START</code>/<code>:END</code> markers with the fragment, commits the result.</li>
-      </ol>
-      <p style="margin-top: 10px; color: var(--text-muted); font-size: 0.9rem">Pages without markers (e.g. admin tools) are skipped automatically. The operation is idempotent — running twice on an unchanged fragment is a no-op.</p>
-    </div>
-
-    <div class="card">
-      <h2>Fragments</h2>
-      <div class="zone-grid" id="zones"></div>
-    </div>
-
-    <div class="card">
-      <h2>Dispatch</h2>
-      <div id="zone-checks"></div>
-      <div class="bulk-actions">
-        <button class="btn" id="btn-dry-run">Dry run — show summary, don't write</button>
-        <button class="btn danger" id="btn-apply">Apply — write to all pages + commit</button>
-        <span id="dispatch-status" style="color:var(--text-muted);font-size:0.85rem"></span>
+    <aside>
+      <div class="card">
+        <h2>Fragments</h2>
+        <div class="zone-list" id="zone-list"></div>
       </div>
-      <div id="run-alert"></div>
-    </div>
 
-    <div class="card">
-      <h2>Log</h2>
-      <div class="status-log" id="log"><div class="entry info">Ready.</div></div>
-    </div>
+      <div class="card settings-panel" id="settings-panel">
+        <h2>Settings</h2>
+        <label>GitHub PAT <small style="font-weight:400;color:var(--text-muted)">(<code>repo</code> + <code>workflow</code>)</small>
+          <input type="password" id="pat-input" autocomplete="off" placeholder="ghp_...">
+        </label>
+        <label class="inline"><input type="checkbox" id="remember-token"> Remember token</label>
+        <div style="margin-top: 10px">
+          <button class="btn primary small" id="save-settings">Save</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>How it works</h2>
+        <ol style="margin-left:18px;font-size:0.9rem;color:var(--text-secondary);line-height:1.5">
+          <li>Pick a fragment on the left.</li>
+          <li>Edit in Visual, Source, or see Preview.</li>
+          <li><strong>Save</strong> commits the fragment to the repo.</li>
+          <li><strong>Apply to site</strong> dispatches the workflow that propagates the fragment to every HTML page.</li>
+        </ol>
+      </div>
+    </aside>
+
+    <section id="main-content">
+      <div id="boot-alert"></div>
+
+      <div class="card editor-card" id="editor-card" style="display:none">
+        <div class="editor-head">
+          <div>
+            <div class="zone-label" id="editor-zone-label">—</div>
+            <div class="zone-sub" id="editor-zone-sub">—</div>
+          </div>
+          <span class="spacer"></span>
+          <span class="status-chip clean" id="save-state-chip">saved</span>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="visual" role="tab">Visual</button>
+          <button class="tab" data-tab="source" role="tab">Source</button>
+          <button class="tab" data-tab="preview" role="tab">Preview</button>
+        </div>
+
+        <div class="tab-pane active" id="pane-visual">
+          <div class="visual-toolbar">
+            <select id="vt-block">
+              <option value="">Format</option>
+              <option value="h1">Heading 1</option>
+              <option value="h2">Heading 2</option>
+              <option value="h3">Heading 3</option>
+              <option value="p">Paragraph</option>
+              <option value="blockquote">Quote</option>
+            </select>
+            <button type="button" data-cmd="bold"><b>B</b></button>
+            <button type="button" data-cmd="italic"><i>I</i></button>
+            <button type="button" data-cmd="underline" style="text-decoration:underline">U</button>
+            <div class="divider"></div>
+            <button type="button" data-cmd="insertUnorderedList">• List</button>
+            <button type="button" data-cmd="insertOrderedList">1. List</button>
+            <div class="divider"></div>
+            <button type="button" data-action="link">🔗 Link</button>
+            <button type="button" data-cmd="removeFormat">✕ Clear</button>
+            <div class="divider"></div>
+            <button type="button" data-action="sync-to-source" title="Copy visual-mode HTML into Source tab">↓ Source</button>
+          </div>
+          <div id="visual-editor" contenteditable="true"></div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px">
+            Visual mode is best for text-focused fragments (footer, colophon). For complex markup with menus or widgets, use <strong>Source</strong>.
+          </p>
+        </div>
+
+        <div class="tab-pane" id="pane-source">
+          <p class="preview-note">HTML source. Edits here are authoritative when you Save.</p>
+          <textarea id="source-editor" spellcheck="false"></textarea>
+        </div>
+
+        <div class="tab-pane" id="pane-preview">
+          <p class="preview-note">Rendered in a sandboxed iframe using the site's main stylesheets. Live edits from Source/Visual appear on tab switch.</p>
+          <div class="preview-frame-wrapper"><iframe id="preview-frame" sandbox="allow-same-origin"></iframe></div>
+        </div>
+
+        <div class="action-bar">
+          <div class="save-group">
+            <button class="btn primary" id="btn-save">💾 Save fragment</button>
+            <button class="btn" id="btn-revert">↺ Revert</button>
+          </div>
+          <span class="spacer"></span>
+          <div class="apply-group">
+            <label class="inline" title="Preview without writing"><input type="checkbox" id="dry-run" checked> Dry run</label>
+            <button class="btn success" id="btn-apply">🚀 Apply to site</button>
+          </div>
+        </div>
+
+        <div style="padding: 0 16px 14px" id="action-alert"></div>
+      </div>
+
+      <div class="card" id="log-card" style="display:none">
+        <h2>Log</h2>
+        <div class="status-log" id="log"><div class="entry info">Ready.</div></div>
+      </div>
+    </section>
   </main>
 
   <script type="module">
@@ -119,67 +261,135 @@
     import { GitHubAPI } from '/admin/lib/github.js';
 
     const ZONES = ['MASTHEAD', 'SIDEBAR', 'COLOPHON', 'FOOTER'];
-    const fragments = {}; // { MASTHEAD: { text, bytes } }
+    const ZONE_META = {
+      MASTHEAD: { title: 'Masthead', desc: 'Top of every page: site title, header image, primary & mobile navigation.' },
+      SIDEBAR:  { title: 'Sidebar',  desc: 'Right-column widgets on posts and archives.' },
+      COLOPHON: { title: 'Colophon', desc: 'Pre-footer widget zone (often empty).' },
+      FOOTER:   { title: 'Footer',   desc: 'Site-wide footer text, back-to-top, credits.' },
+    };
 
+    const state = {
+      zone: null,
+      fragments: {},      // { MASTHEAD: { original, current, sha } }
+      activeTab: 'visual',
+      siteHead: null,     // <head> content from the live homepage, for Preview
+    };
+
+    // ---------- Init ----------
     async function init() {
-      loadSettingsIntoPanel();
-      bindUi();
-      await loadFragments();
-      renderZones();
-      renderZoneChecks();
-    }
-
-    async function loadFragments() {
-      for (const zone of ZONES) {
-        try {
-          const r = await fetch(`${CONFIG.site.base}/templates/fragments/${zone.toLowerCase()}.html?t=${Date.now()}`);
-          if (!r.ok) { fragments[zone] = { text: null, bytes: 0 }; continue; }
-          const text = await r.text();
-          fragments[zone] = { text, bytes: new Blob([text]).size };
-          log(`Loaded ${zone}: ${fragments[zone].bytes} bytes`, 'success');
-        } catch (e) {
-          fragments[zone] = { text: null, bytes: 0 };
-          log(`Could not load ${zone}: ${e.message}`, 'warning');
-        }
+      // Fetch fragment text from the public Pages URL (no auth needed) —
+      // the SHA for each file is fetched later at save time.
+      const [fragmentResults, siteHead] = await Promise.all([
+        Promise.all(ZONES.map(async (zone) => {
+          const url = `${CONFIG.site.base}/templates/fragments/${zone.toLowerCase()}.html?t=${Date.now()}`;
+          try {
+            const r = await fetch(url);
+            if (!r.ok) return { zone, original: null };
+            const text = await r.text();
+            return { zone, original: text };
+          } catch { return { zone, original: null }; }
+        })),
+        fetchSiteHead(),
+      ]);
+      for (const { zone, original } of fragmentResults) {
+        state.fragments[zone] = {
+          original: original ?? '',
+          current: original ?? '',
+          sha: null,            // lazily fetched on first save
+        };
       }
+      state.siteHead = siteHead;
+
+      loadSettingsIntoPanel();
+      renderZoneList();
+      bindUi();
+      const first = ZONES.find(z => state.fragments[z].original) || ZONES[0];
+      selectZone(first);
     }
 
-    function renderZones() {
-      const root = document.getElementById('zones');
+    async function fetchSiteHead() {
+      try {
+        const r = await fetch(`${CONFIG.site.base}/?t=${Date.now()}`);
+        if (!r.ok) return null;
+        const html = await r.text();
+        const match = html.match(/<head[^>]*>([\s\S]*?)<\/head>/i);
+        return match ? match[1] : null;
+      } catch { return null; }
+    }
+
+    // ---------- Zone list ----------
+    function renderZoneList() {
+      const root = document.getElementById('zone-list');
       root.innerHTML = ZONES.map(zone => {
-        const f = fragments[zone];
-        const hasFragment = f && f.text != null;
+        const f = state.fragments[zone];
+        const bytes = (f.current || '').length;
+        const modified = f.current !== f.original;
         return `
-          <div class="zone-card">
-            <h3>${zone}</h3>
-            <div class="meta">${hasFragment ? `${f.bytes.toLocaleString()} bytes` : '(fragment not found)'}</div>
-            <div class="actions">
-              <a class="btn" href="https://github.com/${CONFIG.repo.owner}/${CONFIG.repo.name}/edit/main/templates/fragments/${zone.toLowerCase()}.html" target="_blank" rel="noopener">Edit on GitHub</a>
-              <a class="btn" href="/templates/fragments/${zone.toLowerCase()}.html" target="_blank" rel="noopener">View raw</a>
-            </div>
-            ${hasFragment ? `<details><summary>Preview ${f.bytes > 2000 ? 'first 2KB' : 'full'}</summary><pre>${escapeHtml(f.text.slice(0, 2000))}${f.text.length > 2000 ? '\n…(truncated)' : ''}</pre></details>` : ''}
-          </div>
+          <button type="button" class="zone-btn ${state.zone === zone ? 'active' : ''} ${modified ? 'modified' : ''}" data-zone="${zone}">
+            <span class="name">${ZONE_META[zone].title}</span>
+            <span class="meta">${bytes.toLocaleString()} bytes${f.original == null ? ' · not found' : ''}</span>
+          </button>
         `;
       }).join('');
+      root.querySelectorAll('[data-zone]').forEach(b => {
+        b.addEventListener('click', () => selectZone(b.dataset.zone));
+      });
     }
 
-    function renderZoneChecks() {
-      const root = document.getElementById('zone-checks');
-      root.innerHTML = ZONES.map(zone => `
-        <label class="check-row">
-          <input type="checkbox" data-zone="${zone}" checked>
-          <code>${zone}</code>
-          <span style="color:var(--text-muted);font-size:0.82rem;margin-left:6px">${fragments[zone]?.bytes || 0} bytes</span>
-        </label>
-      `).join('');
+    function selectZone(zone) {
+      if (state.zone && !confirmDiscardChanges(zone)) return;
+      state.zone = zone;
+      document.getElementById('editor-card').style.display = '';
+      document.getElementById('log-card').style.display = '';
+      document.getElementById('editor-zone-label').textContent = ZONE_META[zone].title;
+      document.getElementById('editor-zone-sub').textContent = ZONE_META[zone].desc;
+      renderZoneList();
+      renderActiveTab();
+      updateSaveChip();
     }
 
-    function selectedZones() {
-      return Array.from(document.querySelectorAll('#zone-checks input[type="checkbox"]:checked'))
-        .map(cb => cb.dataset.zone);
+    function confirmDiscardChanges(_newZone) {
+      const f = state.fragments[state.zone];
+      if (!f) return true;
+      syncFromActiveTab();
+      if (f.current === f.original) return true;
+      return confirm(`You have unsaved changes to ${state.zone}. Discard and switch?`);
     }
 
+    // ---------- Tabs ----------
     function bindUi() {
+      document.querySelectorAll('.tab').forEach(t => {
+        t.addEventListener('click', () => switchTab(t.dataset.tab));
+      });
+
+      // Toolbar
+      document.querySelectorAll('.visual-toolbar [data-cmd]').forEach(btn => {
+        btn.addEventListener('mousedown', (e) => e.preventDefault()); // keep caret
+        btn.addEventListener('click', () => execFormat(btn.dataset.cmd));
+      });
+      document.getElementById('vt-block').addEventListener('change', (e) => {
+        if (e.target.value) execFormat('formatBlock', e.target.value);
+        e.target.selectedIndex = 0;
+      });
+      document.querySelector('[data-action="link"]').addEventListener('mousedown', (e) => e.preventDefault());
+      document.querySelector('[data-action="link"]').addEventListener('click', () => {
+        const url = prompt('URL:');
+        if (url) document.execCommand('createLink', false, url);
+      });
+      document.querySelector('[data-action="sync-to-source"]').addEventListener('click', () => {
+        syncFromActiveTab();
+        switchTab('source');
+      });
+
+      document.getElementById('visual-editor').addEventListener('input', onVisualEdit);
+      document.getElementById('source-editor').addEventListener('input', onSourceEdit);
+
+      // Action buttons
+      document.getElementById('btn-save').addEventListener('click', saveFragment);
+      document.getElementById('btn-revert').addEventListener('click', revertFragment);
+      document.getElementById('btn-apply').addEventListener('click', applyToSite);
+
+      // Settings
       document.getElementById('settings-btn').addEventListener('click', () => {
         document.getElementById('settings-panel').classList.toggle('open');
       });
@@ -190,46 +400,212 @@
         saveSettings(s);
         log('Settings saved', 'success');
       });
-      document.getElementById('btn-dry-run').addEventListener('click', () => dispatch(true));
-      document.getElementById('btn-apply').addEventListener('click', () => dispatch(false));
+
+      // Warn on navigation if unsaved changes
+      window.addEventListener('beforeunload', (e) => {
+        const f = state.fragments[state.zone];
+        if (f && f.current !== f.original) {
+          e.preventDefault();
+          e.returnValue = '';
+        }
+      });
     }
 
+    function switchTab(tab) {
+      if (tab === state.activeTab) return;
+      syncFromActiveTab();
+      state.activeTab = tab;
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.toggle('active', p.id === `pane-${tab}`));
+      renderActiveTab();
+    }
+
+    function renderActiveTab() {
+      const f = state.fragments[state.zone];
+      if (!f) return;
+      const content = f.current || '';
+      if (state.activeTab === 'visual') {
+        document.getElementById('visual-editor').innerHTML = content;
+      } else if (state.activeTab === 'source') {
+        document.getElementById('source-editor').value = content;
+      } else if (state.activeTab === 'preview') {
+        renderPreview(content);
+      }
+    }
+
+    function syncFromActiveTab() {
+      const f = state.fragments[state.zone];
+      if (!f) return;
+      if (state.activeTab === 'visual') {
+        f.current = document.getElementById('visual-editor').innerHTML;
+      } else if (state.activeTab === 'source') {
+        f.current = document.getElementById('source-editor').value;
+      }
+      // Preview is read-only; no sync from it.
+      updateSaveChip();
+    }
+
+    function onVisualEdit() {
+      const f = state.fragments[state.zone];
+      if (!f) return;
+      f.current = document.getElementById('visual-editor').innerHTML;
+      updateSaveChip();
+    }
+
+    function onSourceEdit() {
+      const f = state.fragments[state.zone];
+      if (!f) return;
+      f.current = document.getElementById('source-editor').value;
+      updateSaveChip();
+    }
+
+    function execFormat(command, value) {
+      document.getElementById('visual-editor').focus();
+      document.execCommand(command, false, value);
+      onVisualEdit();
+    }
+
+    function renderPreview(content) {
+      const iframe = document.getElementById('preview-frame');
+      const head = state.siteHead || '';
+      const doc = `<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8">
+${head}
+<style>body { margin: 0; padding: 0; } /* fragment-preview isolation */</style>
+</head><body>${content}</body></html>`;
+      iframe.srcdoc = doc;
+    }
+
+    // ---------- Save + Revert ----------
+    function updateSaveChip() {
+      const f = state.fragments[state.zone];
+      const chip = document.getElementById('save-state-chip');
+      const saveBtn = document.getElementById('btn-save');
+      const revertBtn = document.getElementById('btn-revert');
+      if (!f) return;
+      const modified = f.current !== f.original;
+      chip.textContent = modified ? 'unsaved' : 'saved';
+      chip.className = `status-chip ${modified ? 'dirty' : 'clean'}`;
+      saveBtn.disabled = !modified;
+      revertBtn.disabled = !modified;
+      renderZoneList();
+    }
+
+    function revertFragment() {
+      const f = state.fragments[state.zone];
+      if (!f) return;
+      if (!confirm(`Revert ${state.zone} to the last saved version?`)) return;
+      f.current = f.original;
+      renderActiveTab();
+      updateSaveChip();
+      log(`Reverted ${state.zone}`, 'info');
+    }
+
+    async function saveFragment() {
+      const f = state.fragments[state.zone];
+      if (!f) return;
+      syncFromActiveTab();
+      if (f.current === f.original) { log('Nothing to save.', 'info'); return; }
+      const creds = getGitHubCreds();
+      if (!creds.token) { setAlert('Set a GitHub PAT in Settings.', 'warning'); return; }
+
+      const path = `templates/fragments/${state.zone.toLowerCase()}.html`;
+      setAlert(`Committing <code>${path}</code>…`, 'info');
+      log(`Saving ${state.zone} → ${path}`, 'info');
+      try {
+        const gh = new GitHubAPI(creds);
+
+        // Lazily fetch the current SHA if we don't already have one
+        let sha = f.sha;
+        if (!sha) {
+          try {
+            const meta = await gh.getFile(path);
+            sha = meta.sha;
+          } catch (err) {
+            if (!/\b404\b/.test(err.message)) throw err; // 404 = new file (unusual for fragments)
+          }
+        }
+
+        // Ensure the file always ends with a single newline (matches capture script output)
+        const content = f.current.endsWith('\n') ? f.current : f.current + '\n';
+        const body = {
+          message: `Edit fragment: ${state.zone}`,
+          content: toBase64Utf8(content),
+          branch: creds.branch,
+        };
+        if (sha) body.sha = sha;
+
+        const res = await gh.request(`/repos/${creds.owner}/${creds.name}/contents/${path}`, {
+          method: 'PUT',
+          body: JSON.stringify(body),
+        });
+        f.original = f.current;
+        f.sha = res.content && res.content.sha;
+        updateSaveChip();
+        setAlert(`✓ Saved. Click <strong>Apply to site</strong> to propagate across every HTML page.`, 'success');
+        log(`✓ Saved ${state.zone}`, 'success');
+      } catch (err) {
+        setAlert(`✗ ${escapeHtml(err.message)}`, 'danger');
+        log(`✗ Save failed: ${err.message}`, 'error');
+      }
+    }
+
+    // ---------- Apply (dispatch) ----------
+    async function applyToSite() {
+      const creds = getGitHubCreds();
+      if (!creds.token) { setAlert('Set a GitHub PAT in Settings.', 'warning'); return; }
+      // Prompt: if unsaved → save first
+      const f = state.fragments[state.zone];
+      if (f && f.current !== f.original) {
+        if (!confirm(`${state.zone} has unsaved changes. Save first?`)) return;
+        await saveFragment();
+        if (f.current !== f.original) return; // save failed
+      }
+
+      const dryRun = document.getElementById('dry-run').checked;
+      const zones = state.zone; // apply only the current zone by default
+      if (!dryRun) {
+        const ok = confirm(`Apply ${zones} across every HTML page with markers?\nA single commit will modify thousands of files.`);
+        if (!ok) return;
+      }
+
+      setAlert(`Dispatching regenerate-fragments.yml (zones=${zones}, dry_run=${dryRun})…`, 'info');
+      log(`Dispatch: zones=${zones}, dry_run=${dryRun}`, 'info');
+      try {
+        const gh = new GitHubAPI(creds);
+        await gh.dispatchWorkflow('regenerate-fragments.yml', {
+          dry_run: dryRun ? 'true' : 'false',
+          zones,
+        });
+        const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/regenerate-fragments.yml`;
+        setAlert(`✓ Dispatched. <a href="${actionsUrl}" target="_blank" rel="noopener">Open Actions run →</a> (Pages rebuild takes ~10 min after the workflow completes.)`, 'success');
+        log(`✓ Dispatched`, 'success');
+      } catch (err) {
+        setAlert(`✗ ${escapeHtml(err.message)}`, 'danger');
+        log(`✗ Dispatch failed: ${err.message}`, 'error');
+      }
+    }
+
+    // ---------- Settings panel ----------
     function loadSettingsIntoPanel() {
       const s = getSettings();
       document.getElementById('pat-input').value = s.githubToken || '';
       document.getElementById('remember-token').checked = !!s.rememberToken;
     }
 
-    async function dispatch(dryRun) {
-      const creds = getGitHubCreds();
-      if (!creds.token) { setAlert('Set a GitHub PAT first (Settings).', 'warning'); return; }
-      const zones = selectedZones();
-      if (zones.length === 0) { setAlert('Select at least one zone.', 'warning'); return; }
-
-      if (!dryRun) {
-        const confirmed = confirm(`Apply fragments (${zones.join(', ')}) across every HTML page with markers?\n\nA dry run is recommended first.`);
-        if (!confirmed) return;
+    // ---------- Utils ----------
+    function toBase64Utf8(str) {
+      const bytes = new TextEncoder().encode(str);
+      let binary = '';
+      const CHUNK = 0x8000;
+      for (let i = 0; i < bytes.length; i += CHUNK) {
+        binary += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
       }
-
-      const api = new GitHubAPI(creds);
-      setAlert(`Dispatching workflow (dry_run=${dryRun}, zones=${zones.join(',')})…`, 'info');
-      log(`Dispatching regenerate-fragments.yml — dry_run=${dryRun}, zones=${zones.join(',')}`, 'info');
-      try {
-        await api.dispatchWorkflow('regenerate-fragments.yml', {
-          dry_run: dryRun ? 'true' : 'false',
-          zones: zones.join(','),
-        });
-        const url = `https://github.com/${CONFIG.repo.owner}/${CONFIG.repo.name}/actions/workflows/regenerate-fragments.yml`;
-        setAlert(`✓ Dispatched. <a href="${url}" target="_blank" rel="noopener">Open Actions →</a>`, 'info');
-        log('✓ Workflow dispatched', 'success');
-      } catch (err) {
-        setAlert(`✗ ${escapeHtml(err.message)}`, 'danger');
-        log(`✗ ${err.message}`, 'error');
-      }
+      return btoa(binary);
     }
 
-    function setAlert(html, level) {
-      const el = document.getElementById('run-alert');
+    function setAlert(html, level = 'info') {
+      const el = document.getElementById('action-alert');
       el.innerHTML = `<div class="alert ${level}">${html}</div>`;
     }
     function log(msg, level = 'info') {
@@ -244,7 +620,11 @@
       return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     }
 
-    init();
+    init().catch(err => {
+      document.getElementById('boot-alert').innerHTML =
+        `<div class="alert danger">Init failed: ${escapeHtml(err.message)}</div>`;
+      console.error(err);
+    });
   </script>
 </body>
 </html>
