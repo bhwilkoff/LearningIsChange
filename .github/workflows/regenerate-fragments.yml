@@ -1,0 +1,71 @@
+name: Regenerate Fragments
+
+# Walks every HTML file with LIC:<ZONE>:START / LIC:<ZONE>:END markers
+# and replaces the marker-bounded content with the corresponding fragment
+# under templates/fragments/.
+#
+# Safety gates:
+#   - `zones` input chooses which fragments to apply (default: all)
+#   - `dry_run` input shows the summary without committing
+#
+# Triggered from admin/regenerate/ via the "Apply fragment(s) across site" button.
+
+on:
+  workflow_dispatch:
+    inputs:
+      zones:
+        description: 'Zones to regenerate (comma-separated): MASTHEAD,SIDEBAR,COLOPHON,FOOTER. Leave empty for all.'
+        required: false
+        type: string
+        default: ''
+      dry_run:
+        description: 'Dry run (show the plan; do not write)'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'true'
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run regenerate-fragments.js
+        run: |
+          set -euo pipefail
+
+          ZONES_ARG=""
+          if [ -n "${{ inputs.zones }}" ]; then
+            ZONES_ARG="--zones=${{ inputs.zones }}"
+          fi
+
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "=== DRY RUN ==="
+            node scripts/regenerate-fragments.js $ZONES_ARG
+          else
+            echo "=== APPLY ==="
+            node scripts/regenerate-fragments.js --apply $ZONES_ARG
+          fi
+
+      - name: Commit and push
+        if: inputs.dry_run == 'false'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            zones="${{ inputs.zones }}"
+            [ -z "$zones" ] && zones="ALL"
+            changed=$(git diff --cached --stat | tail -1)
+            git commit -m "regenerate fragments ($zones) — $changed"
+            git push
+            echo "Pushed fragment regeneration"
+          fi

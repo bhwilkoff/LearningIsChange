@@ -784,9 +784,15 @@
         <p>Post Generator for <a href="https://learningischange.com">Learning is Change</a> • Built with ❤️ and Claude AI</p>
     </footer>
 
+    <!-- v2 lib integration: module imports attach lib functions to window; classic script delegates to them. -->
+    <script type="module">
+      import { slugify, formatDate, postPath, postUrl, isoDate } from '/admin/lib/slug.js';
+      window.LIB = Object.assign(window.LIB || {}, { slugify, formatDate, postPath, postUrl, isoDate });
+    </script>
+
     <script>
         // ============================================
-        // COMMON MODULE (INLINED)
+        // COMMON MODULE (INLINED, delegating to admin/lib/ where swapped)
         // ============================================
         const LiCAdmin = (function() {
             const CONFIG = {
@@ -1022,12 +1028,18 @@
                 } catch (e) { return []; }
             }
             
+            // v2 swap: delegate to admin/lib/slug.js when loaded.
+            // Fallback retained for the split-second before the ES module script runs
+            // (though inline-script init runs before user interaction, so fallback is
+            // mostly belt-and-suspenders).
             function slugify(text) {
-                return text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
+                if (window.LIB && window.LIB.slugify) return window.LIB.slugify(text);
+                return String(text || '').toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
             }
-            
+
             function formatDate(dateString) {
                 if (!dateString) return '';
+                if (window.LIB && window.LIB.formatDate) return window.LIB.formatDate(dateString);
                 return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             }
             
