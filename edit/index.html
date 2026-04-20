@@ -822,9 +822,16 @@
         <p>Page Editor for <a href="https://learningischange.com">Learning is Change</a> &bull; Built with Claude AI</p>
     </footer>
 
+    <!-- admin/lib integration: lib helpers attach to window.LIB; classic script delegates. -->
+    <script type="module">
+      import { bytesToBase64 } from '/admin/lib/base64.js';
+      import { slugify, formatDate } from '/admin/lib/slug.js';
+      window.LIB = Object.assign(window.LIB || {}, { bytesToBase64, slugify, formatDate });
+    </script>
+
     <script>
         // ============================================
-        // LiCAdmin Module (shared config)
+        // LiCAdmin Module (shared config; delegates to admin/lib/ where swapped)
         // ============================================
         const LiCAdmin = (function() {
             const CONFIG = {
@@ -1074,7 +1081,9 @@
             
             // Convert ArrayBuffer/Uint8Array to base64 in chunks (avoids call stack overflow)
             function arrayBufferToBase64(bytes) {
-                const CHUNK_SIZE = 0x8000; // 32KB chunks
+                if (window.LIB && window.LIB.bytesToBase64) return window.LIB.bytesToBase64(bytes);
+                // Fallback — identical implementation from admin/lib/base64.js
+                const CHUNK_SIZE = 0x8000;
                 let result = '';
                 for (let i = 0; i < bytes.length; i += CHUNK_SIZE) {
                     const chunk = bytes.subarray(i, i + CHUNK_SIZE);

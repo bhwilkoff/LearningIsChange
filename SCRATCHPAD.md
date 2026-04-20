@@ -329,6 +329,58 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — menu sync, /edit/ lib, M4 backfill (session 11)
+- **Menu parser bug fix**: previous parser treated every `<ul>` containing
+  menu-item children as a top-level menu — including sub-menus. Result
+  was 14 "menus" in the editor instead of 2. Fixed with an
+  ancestor-UL filter: a menu is top-level only if no parent UL exists.
+- **Mobile/desktop sync**: two top-level menu ULs (`#mobile-nav` inside
+  `<nav id="mobile-menu">` and `#prime_nav` inside `<nav id="access">`)
+  are now edited as ONE tree. Save writes to both targets — IDs
+  preserved for the target that originally had them (mobile),
+  stripped from the target that didn't (desktop). Matches Fluida's
+  original shape. Divergence warning shown if the two targets ever
+  get out of sync.
+- **Pages missing MASTHEAD markers audit**:
+  - 6 `portfolio/` pages — intentional custom microsite, different
+    visual identity (Inter + Source Serif fonts, own nav). Ben
+    confirmed not to fold into Fluida.
+  - 1 `feed/podcast/index.html` — 9-line redirect to `feed.xml`.
+  - No action needed; all 8,160 Fluida-themed pages share the synced menu.
+- **M1.2 — /edit/ lib delegation**: minimal pass matching the /new/
+  pattern. Module script imports `bytesToBase64`, `slugify`,
+  `formatDate` from `admin/lib/`; `arrayBufferToBase64` delegates to
+  `window.LIB.bytesToBase64` with a byte-identical fallback.
+- **M4 — backfill script**: `scripts/backfill-posts-content.js`
+  extracts each post's `<div class="entry-content">` innerHTML and
+  writes it as the post's `content` field in `database/posts/YYYY.json`.
+  - Dry run: 5,741 post entries, **3,976 already have content**
+    (backfill was partially done in past migrations), 12 newly
+    extracted (2026 posts), 1,753 "noContent".
+  - The 1,753 are **date archive pages** like `/2006/02/21/` — they
+    shouldn't be in the posts DB at all (they're listing pages, not
+    individual posts). Known data-quality issue to fix separately.
+  - URL normalization handles both forms: `https://...` (older
+    shards) and `/...` (newer shards).
+  - Idempotent: skips entries that already have content. `--overwrite`
+    re-extracts.
+  - Applied for 2026 only to validate the extraction — all 17 posts
+    now have a `content` field. Backfill for other years pending
+    Ben's review.
+- **M4 — next deliverables (deferred)**:
+  - `scripts/capture-post-template.js` — take a canonical post, mark
+    placeholders (`{{title}}`, `{{content}}`, etc.), save as
+    `templates/post.html`.
+  - `scripts/regenerate-posts.js` — for each post, render HTML from
+    template + JSON data.
+  - Flip `/new/` and `/edit/` to write JSON first; HTML becomes
+    derived.
+  - Clean up 1,753 date-archive entries from posts DB.
+- **M5 — unified bulk-update**: deferred until M4 regenerator lands.
+  Once posts are template-driven, bulk theme changes go through
+  `templates/` edits + regenerate, and the Mass Updater's scope can
+  shrink to genuinely one-off string replacements.
+
 ### 2026-04-20 — visual fragment editor + M3 end-to-end (session 10)
 - **Found**: Ben tested the first regenerate-fragments UI and the full
   M3 pipeline worked — one footer edit → one workflow dispatch →
