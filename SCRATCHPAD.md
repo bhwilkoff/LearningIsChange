@@ -329,6 +329,40 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — lock fix, revert, first lib swap (session 8)
+- **Found**: Ben identified the git-index lock as recurring and
+  uniquely triggered by Claude Code on this repo. Traced to
+  `PID 3852: git ls-files --others --exclude-standard`
+  parented by `PID 17800: claude` — Claude Code's built-in repo poll.
+  On a 7.4 GB, 25k-file repo with many untracked files, each poll
+  takes seconds, holding `.git/index.lock` intermittently and
+  blocking commits from GHD or the CLI.
+- **Did**:
+  1. **Lock mitigation**: enabled `core.untrackedCache true` and
+     `feature.manyFiles true` on this repo. The untracked cache means
+     `ls-files --others` reads cached results instead of stat-ing the
+     filesystem, so polls complete much faster and hold the lock for
+     milliseconds instead of seconds.
+  2. **Revert test post**: pulled the test post commit (`f1e0dc192`,
+     "New post: This is a test") that Ben created from the browser;
+     reverted locally (`7d9867ede`); pushed. Dispatched
+     `remove-from-rss.yml` via `gh` CLI to remove the test post from
+     `feed/full.xml` (which the RSS action had added server-side).
+  3. **First real lib swap in /new/v2/**: added a
+     `<script type="module">` block that imports `slugify` +
+     `formatDate` (and `postPath`, `postUrl`, `isoDate` for future
+     swaps) from `/admin/lib/slug.js` and attaches them to
+     `window.LIB`. The existing `LiCAdmin.slugify` and
+     `LiCAdmin.formatDate` inside the classic script now delegate to
+     `window.LIB.*` with the original inline code retained as a
+     fallback. This is the first concrete lib integration in v2 —
+     Ben can diff v1 vs v2 and see the new wiring.
+- **Left**:
+  - Swap the remaining helpers one at a time (base64, database
+    fetches, auth, github API, commit, RSS, archives, DB mutators).
+  - Monitor the lock situation with the new config — should be much
+    better but still gated on polls completing quickly.
+
 ### 2026-04-20 — /new/v2 reset to copy-first (session 7)
 - **Found**: Session 6's from-scratch v2 shipped broken — slug auto-gen,
   settings button, editor toolbar buttons, and image-insert flow were
