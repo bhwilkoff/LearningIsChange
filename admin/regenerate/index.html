@@ -197,6 +197,23 @@
           <li><strong>Apply to site</strong> dispatches the workflow that propagates the fragment to every HTML page.</li>
         </ol>
       </div>
+
+      <div class="card">
+        <h2>Regenerate Posts</h2>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin:0 0 10px">
+          Rebuild post HTMLs from <code>templates/post.html</code> +
+          <code>database/posts/YYYY.json</code>. Use this after editing
+          the post template or a post's JSON content.
+        </p>
+        <label style="font-size:0.85rem">Scope
+          <input id="rp-scope" type="text" value="2026" placeholder='"2026" or "all"' style="width:100%;margin-top:4px">
+        </label>
+        <label style="font-size:0.85rem;margin-top:8px;display:block">Single URL <small style="color:var(--text-muted)">(overrides scope)</small>
+          <input id="rp-url" type="text" placeholder="/2026/03/26/foo/" style="width:100%;margin-top:4px">
+        </label>
+        <label class="inline" style="margin-top:8px"><input id="rp-dry" type="checkbox" checked> Dry run</label>
+        <button class="btn primary small" id="rp-dispatch" style="margin-top:8px;width:100%">Dispatch regenerate-posts</button>
+      </div>
     </aside>
 
     <section id="main-content">
@@ -438,6 +455,7 @@
       document.getElementById('btn-save').addEventListener('click', saveFragment);
       document.getElementById('btn-revert').addEventListener('click', revertFragment);
       document.getElementById('btn-apply').addEventListener('click', applyToSite);
+      document.getElementById('rp-dispatch').addEventListener('click', dispatchRegeneratePosts);
 
       // Settings
       document.getElementById('settings-btn').addEventListener('click', () => {
@@ -957,6 +975,44 @@ ${head}
         });
         const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/regenerate-fragments.yml`;
         setAlert(`✓ Dispatched. <a href="${actionsUrl}" target="_blank" rel="noopener">Open Actions run →</a> (Pages rebuild takes ~10 min after the workflow completes.)`, 'success');
+        log(`✓ Dispatched`, 'success');
+      } catch (err) {
+        setAlert(`✗ ${escapeHtml(err.message)}`, 'danger');
+        log(`✗ Dispatch failed: ${err.message}`, 'error');
+      }
+    }
+
+    // ---------- Dispatch regenerate-posts ----------
+    async function dispatchRegeneratePosts() {
+      const creds = getGitHubCreds();
+      if (!creds.token) { setAlert('Set a GitHub PAT in Settings.', 'warning'); return; }
+
+      const scope = (document.getElementById('rp-scope').value || '').trim();
+      const url = (document.getElementById('rp-url').value || '').trim();
+      const dryRun = document.getElementById('rp-dry').checked;
+
+      if (!url && !scope) {
+        setAlert('Pick a scope (year or "all") or enter a single URL.', 'warning');
+        return;
+      }
+
+      const label = url ? `url=${url}` : `scope=${scope}`;
+      if (!dryRun) {
+        const ok = confirm(`Apply regenerate-posts for ${label}?\nThis rewrites HTML files and commits them.`);
+        if (!ok) return;
+      }
+
+      setAlert(`Dispatching regenerate-posts.yml (${label}, dry_run=${dryRun})…`, 'info');
+      log(`Dispatch: regenerate-posts ${label}, dry_run=${dryRun}`, 'info');
+      try {
+        const gh = new GitHubAPI(creds);
+        await gh.dispatchWorkflow('regenerate-posts.yml', {
+          scope: scope || '2026',
+          url,
+          dry_run: dryRun ? 'true' : 'false',
+        });
+        const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/regenerate-posts.yml`;
+        setAlert(`✓ Dispatched. <a href="${actionsUrl}" target="_blank" rel="noopener">Open Actions run →</a>`, 'success');
         log(`✓ Dispatched`, 'success');
       } catch (err) {
         setAlert(`✗ ${escapeHtml(err.message)}`, 'danger');

@@ -15,10 +15,15 @@ on:
   workflow_dispatch:
     inputs:
       scope:
-        description: 'Year to regenerate (e.g. "2026") or "all"'
+        description: 'Year to regenerate (e.g. "2026") or "all". Ignored if url is set.'
         required: true
         type: string
         default: '2026'
+      url:
+        description: 'Single post URL to regenerate (e.g. /2026/03/26/foo/). Overrides scope when set.'
+        required: false
+        type: string
+        default: ''
       dry_run:
         description: 'Dry run (summary only; do not write)'
         required: true
@@ -41,7 +46,9 @@ jobs:
           set -euo pipefail
 
           SCOPE_ARG=""
-          if [ "${{ inputs.scope }}" != "all" ] && [ -n "${{ inputs.scope }}" ]; then
+          if [ -n "${{ inputs.url }}" ]; then
+            SCOPE_ARG="--url=${{ inputs.url }}"
+          elif [ "${{ inputs.scope }}" != "all" ] && [ -n "${{ inputs.scope }}" ]; then
             SCOPE_ARG="--year=${{ inputs.scope }}"
           fi
 
