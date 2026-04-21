@@ -329,6 +329,48 @@ appears under multiple post slugs.
 
 <!-- Append-only. Format: state found → work done → state left -->
 
+### 2026-04-20 — dedup apply + `.git` rewrite abandoned (session 15)
+- **Dedup applied**: `7de4d454d dedup: delete 13641 orphan media files
+  (758.7 MB)`. Working tree dropped from 3.5 GB → 2.7 GB in
+  `wp-content/uploads/`. Jetpack CDN verified still serves variants
+  on-demand from originals (HTTP 200 on a just-deleted `-150x150`).
+- **Database Maintenance tool** shipped (replaces the dead Database
+  Generator card): `scripts/recompute-database-stats.js` + workflow
+  + `admin/db-maintenance/` UI. Applied locally: posts 5741→3914,
+  search.json 12→3914 (was badly stale), 10 missing tags picked up.
+- **M1.3 full migrations**: `/podcast-rss/`, `/links/`, `/remove/`
+  IIFEs replaced with delegating wrappers. `admin/lib/bootstrap.js`
+  consolidates imports — single `<script type="module" src=".../bootstrap.js">`
+  tag per tool. `/rss-creator/` and `/archive-sync/` got the bootstrap
+  tag only (deeper inline-fetch refactor deferred).
+- **M5 doc**: `/update/` Mass Updater's intro now directs users to
+  `admin/regenerate/` for theme-wide changes and Page Editor +
+  regenerate-posts for content — keeps the mass updater scoped to
+  ad-hoc one-offs.
+- **`.git` history rewrite — attempted, abandoned**:
+  - Goal: reclaim the ~758 MB of deleted variant blobs from `.git`.
+  - Took a backup mirror at `/tmp/LearningIsChange-backup.git`.
+  - Extracted 13,641 actual-case paths from the dedup commit
+    (`git diff-tree`, because decisions.json had lowercased paths).
+  - Ran `git-filter-repo --invert-paths --paths-from-file` against
+    381 commits. Result: `.git` went 3.1 GB → 2.9 GB. Only ~200 MB
+    recovered because git had already deduped many byte-identical
+    variant blobs — the working-tree 758 MB was mostly duplicate
+    bytes that git only stored once.
+  - Force-push kept failing with GitHub HTTP 500 (2.9 GB pack is
+    too big for GitHub's HTTPS push endpoint). SSH not configured.
+  - Decision: **not worth pursuing**. Saved only 200 MB in `.git`
+    and invalidates all clones. Reset local to match origin/main.
+    Backup mirror kept at `/tmp/LearningIsChange-backup.git` if Ben
+    ever wants to retry via SSH.
+- **Subdomain rollout — playbook delivered**:
+  `docs/SUBDOMAIN_ROLLOUT.md` documents the step-by-step process for
+  porting the admin toolkit to `BothAndPodcast`,
+  `Masculinity-Detox`, `WhitfordWest-Family`. I didn't actually run
+  it on those repos because each is a substantial port with
+  subdomain-specific template capture needed. Ben can execute the
+  playbook when he wants the same admin experience on those sites.
+
 ### 2026-04-20 — the big move: site-wide post regeneration (session 14)
 - **Backfill**: ran across all 20 year shards. All 3,914 posts already
   had `content` from prior partial migrations — 0 newly extracted, 0
