@@ -6,19 +6,19 @@
         "name": "Uncategorized",
         "slug": "uncategorized",
         "url": "/category/uncategorized/",
-        "count": 970
+        "count": 942
       },
       "blog-2": {
         "name": "Blog 2",
         "slug": "blog-2",
         "url": "/category/blog-2/",
-        "count": 855
+        "count": 846
       },
       "lesson-plans": {
         "name": "Lesson Plans",
         "slug": "lesson-plans",
         "url": "/category/lesson-plans/",
-        "count": 309
+        "count": 306
       },
       "questions": {
         "name": "Questions",
@@ -36,25 +36,25 @@
         "name": "Ben Wilkoff",
         "slug": "ben-wilkoff",
         "url": "/category/ben-wilkoff/",
-        "count": 1888
+        "count": 1672
       },
       "im-learning": {
         "name": "Im Learning",
         "slug": "im-learning",
         "url": "/category/im-learning/",
-        "count": 69
+        "count": 68
       },
       "using": {
         "name": "Using",
         "slug": "using",
         "url": "/category/using/",
-        "count": 148
+        "count": 146
       },
       "learning-is-change-list": {
         "name": "Learning Is Change List",
         "slug": "learning-is-change-list",
         "url": "/category/learning-is-change-list/",
-        "count": 27
+        "count": 26
       },
       "project-roundtable": {
         "name": "Project Roundtable",
@@ -66,13 +66,13 @@
         "name": "C4c15",
         "slug": "c4c15",
         "url": "/category/c4c15/",
-        "count": 99
+        "count": 95
       },
       "askbenw": {
         "name": "Askbenw",
         "slug": "askbenw",
         "url": "/category/askbenw/",
-        "count": 80
+        "count": 72
       },
       "lifewidelearning16": {
         "name": "Lifewidelearning16",
@@ -96,7 +96,7 @@
         "name": "Newsletter Archive",
         "slug": "newsletter-archive",
         "url": "/category/newsletter-archive/",
-        "count": 70
+        "count": 69
       },
       "growth": {
         "name": "Growth",
@@ -180,7 +180,7 @@
         "name": "Humanity",
         "slug": "humanity",
         "url": "/category/humanity/",
-        "count": 10
+        "count": 9
       },
       "metaphors": {
         "name": "Metaphors",
@@ -233,7 +233,7 @@
     }
   },
   "tags": {
-    "count": 1371,
+    "count": 1365,
     "items": {
       "teaching-theory": {
         "name": "teaching theory",
@@ -425,7 +425,7 @@
         "name": "help",
         "slug": "help",
         "url": "/tag/help/",
-        "count": 3
+        "count": 2
       },
       "ict": {
         "name": "ict",
@@ -587,7 +587,7 @@
         "name": "teaching",
         "slug": "teaching",
         "url": "/tag/teaching/",
-        "count": 9
+        "count": 8
       },
       "ted": {
         "name": "ted",
@@ -839,7 +839,7 @@
         "name": "education",
         "slug": "education",
         "url": "/tag/education/",
-        "count": 29
+        "count": 24
       },
       "the-future": {
         "name": "the future",
@@ -1265,7 +1265,7 @@
         "name": "teacher",
         "slug": "teacher",
         "url": "/tag/teacher/",
-        "count": 8
+        "count": 7
       },
       "web-design-and-development": {
         "name": "web design and development",
@@ -2369,7 +2369,7 @@
         "name": "safety",
         "slug": "safety",
         "url": "/tag/safety/",
-        "count": 2
+        "count": 1
       },
       "social-network": {
         "name": "social network",
@@ -2987,7 +2987,7 @@
         "name": "software",
         "slug": "software",
         "url": "/tag/software/",
-        "count": 5
+        "count": 1
       },
       "facts": {
         "name": "facts",
@@ -6287,7 +6287,7 @@
         "name": "literacy",
         "slug": "literacy",
         "url": "/tag/literacy/",
-        "count": 5
+        "count": 1
       },
       "the-great-gatsby": {
         "name": "The Great Gatsby",
@@ -7307,7 +7307,7 @@
         "name": "ben wilkoff",
         "slug": "ben-wilkoff",
         "url": "/tag/ben-wilkoff/",
-        "count": 1529
+        "count": 1339
       },
       "ux": {
         "name": "ux",
@@ -7325,13 +7325,13 @@
         "name": "photography",
         "slug": "photography",
         "url": "/tag/photography/",
-        "count": 2
+        "count": 1
       },
       "pictures": {
         "name": "pictures",
         "slug": "pictures",
         "url": "/tag/pictures/",
-        "count": 2
+        "count": 1
       },
       "etmooc": {
         "name": "etmooc",
@@ -7469,25 +7469,25 @@
         "name": "googleplustips",
         "slug": "googleplustips",
         "url": "/tag/googleplustips/",
-        "count": 2
+        "count": 1
       },
       "hangoutphonecalls": {
         "name": "hangoutphonecalls",
         "slug": "hangoutphonecalls",
         "url": "/tag/hangoutphonecalls/",
-        "count": 2
+        "count": 1
       },
       "hangoutssidebar": {
         "name": "hangoutssidebar",
         "slug": "hangoutssidebar",
         "url": "/tag/hangoutssidebar/",
-        "count": 2
+        "count": 1
       },
       "hangoutstips": {
         "name": "hangoutstips",
         "slug": "hangoutstips",
         "url": "/tag/hangoutstips/",
-        "count": 2
+        "count": 1
       },
       "teamdavinci": {
         "name": "TeamDaVinci",
@@ -7511,7 +7511,7 @@
         "name": "ntchat",
         "slug": "ntchat",
         "url": "/tag/ntchat/",
-        "count": 3
+        "count": 2
       },
       "giesummit": {
         "name": "giesummit",
@@ -7523,7 +7523,7 @@
         "name": "connectedclassrooms",
         "slug": "connectedclassrooms",
         "url": "/tag/connectedclassrooms/",
-        "count": 5
+        "count": 3
       },
       "virtualfieldtrip": {
         "name": "virtualfieldtrip",
@@ -7535,31 +7535,25 @@
         "name": "hangoutsonair",
         "slug": "hangoutsonair",
         "url": "/tag/hangoutsonair/",
-        "count": 9
+        "count": 3
       },
       "throughglass": {
         "name": "throughglass",
         "slug": "throughglass",
         "url": "/tag/throughglass/",
-        "count": 17
+        "count": 5
       },
       "edcampdenver": {
         "name": "edcampdenver",
         "slug": "edcampdenver",
         "url": "/tag/edcampdenver/",
-        "count": 16
+        "count": 15
       },
       "codecombat": {
         "name": "CodeCombat",
         "slug": "codecombat",
         "url": "/tag/codecombat/",
         "count": 1
-      },
-      "cartoon": {
-        "name": "cartoon",
-        "slug": "cartoon",
-        "url": "/tag/cartoon/",
-        "count": 4
       },
       "digitalstorytellingisnotdead": {
         "name": "DigitalStorytellingIsNotDead",
@@ -7577,7 +7571,7 @@
         "name": "digitallearningday",
         "slug": "digitallearningday",
         "url": "/tag/digitallearningday/",
-        "count": 7
+        "count": 3
       },
       "professionaldevelopment": {
         "name": "ProfessionalDevelopment",
@@ -7589,13 +7583,13 @@
         "name": "chromeos",
         "slug": "chromeos",
         "url": "/tag/chromeos/",
-        "count": 4
+        "count": 2
       },
       "coedchat": {
         "name": "coedchat",
         "slug": "coedchat",
         "url": "/tag/coedchat/",
-        "count": 3
+        "count": 2
       },
       "nextgenlearning": {
         "name": "nextgenlearning",
@@ -7645,17 +7639,17 @@
         "url": "/tag/linktoilets/",
         "count": 1
       },
-      "2minpd": {
-        "name": "2minpd",
-        "slug": "2minpd",
-        "url": "/tag/2minpd/",
-        "count": 8
-      },
       "postcardselfies": {
         "name": "postcardselfies",
         "slug": "postcardselfies",
         "url": "/tag/postcardselfies/",
         "count": 1
+      },
+      "2minpd": {
+        "name": "2minpd",
+        "slug": "2minpd",
+        "url": "/tag/2minpd/",
+        "count": 7
       },
       "innedco14": {
         "name": "innedco14",
@@ -7681,17 +7675,11 @@
         "url": "/tag/trustteachers/",
         "count": 1
       },
-      "hangoutpost": {
-        "name": "hangoutpost",
-        "slug": "hangoutpost",
-        "url": "/tag/hangoutpost/",
-        "count": 7
-      },
       "innedcomemes": {
         "name": "innedcomemes",
         "slug": "innedcomemes",
         "url": "/tag/innedcomemes/",
-        "count": 4
+        "count": 2
       },
       "feedly": {
         "name": "feedly",
@@ -7715,13 +7703,13 @@
         "name": "GoogleEDU",
         "slug": "googleedu",
         "url": "/tag/googleedu/",
-        "count": 4
+        "count": 1
       },
       "iste2014": {
         "name": "ISTE2014",
         "slug": "iste2014",
         "url": "/tag/iste2014/",
-        "count": 4
+        "count": 1
       },
       "sixsecondscience": {
         "name": "sixsecondscience",
@@ -7747,23 +7735,23 @@
         "url": "/tag/osx/",
         "count": 1
       },
+      "hangoutpost": {
+        "name": "hangoutpost",
+        "slug": "hangoutpost",
+        "url": "/tag/hangoutpost/",
+        "count": 1
+      },
       "c4c15": {
         "name": "c4c15",
         "slug": "c4c15",
         "url": "/tag/c4c15/",
         "count": 6
       },
-      "hwy21": {
-        "name": "hwy21",
-        "slug": "hwy21",
-        "url": "/tag/hwy21/",
-        "count": 1
-      },
       "askbenw": {
         "name": "askbenw",
         "slug": "askbenw",
         "url": "/tag/askbenw/",
-        "count": 25
+        "count": 15
       },
       "personalized": {
         "name": "personalized",
@@ -7787,7 +7775,7 @@
         "name": "ProjCO",
         "slug": "projco",
         "url": "/tag/projco/",
-        "count": 2
+        "count": 1
       },
       "iste2016": {
         "name": "iste2016",
@@ -8021,30 +8009,6 @@
         "name": "maus",
         "slug": "maus",
         "url": "/tag/maus/",
-        "count": 1
-      },
-      "anti-racist": {
-        "name": "anti racist",
-        "slug": "anti-racist",
-        "url": "/tag/anti-racist/",
-        "count": 1
-      },
-      "blm": {
-        "name": "blm",
-        "slug": "blm",
-        "url": "/tag/blm/",
-        "count": 1
-      },
-      "bourgeois": {
-        "name": "bourgeois",
-        "slug": "bourgeois",
-        "url": "/tag/bourgeois/",
-        "count": 1
-      },
-      "oppression": {
-        "name": "oppression",
-        "slug": "oppression",
-        "url": "/tag/oppression/",
         "count": 1
       },
       "course-hero": {

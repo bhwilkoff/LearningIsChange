@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-04-20T21:29:42.174Z",
+  "generated": "2026-04-21T16:24:46.241Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -8,16 +8,16 @@
     "description": "My name is Ben Wilkoff, and I Teach. And Learn. A Lot."
   },
   "stats": {
-    "total_posts": 3914,
+    "total_posts": 3651,
     "total_pages": 497,
     "total_categories": 38,
-    "total_tags": 1371,
+    "total_tags": 1365,
     "total_authors": 2,
     "date_range": {
       "earliest": "2005-04-20T12:00:00Z",
       "latest": "2026-03-26T12:00:00Z"
     },
-    "last_modified": "2026-04-20T21:29:42.174Z"
+    "last_modified": "2026-04-21T16:24:46.241Z"
   },
   "shards": {
     "posts": {
@@ -26,19 +26,19 @@
         "hash": null
       },
       "2006": {
-        "count": 109,
+        "count": 107,
         "hash": null
       },
       "2007": {
-        "count": 282,
+        "count": 256,
         "hash": null
       },
       "2008": {
-        "count": 124,
+        "count": 123,
         "hash": null
       },
       "2009": {
-        "count": 146,
+        "count": 145,
         "hash": null
       },
       "2010": {
@@ -46,27 +46,27 @@
         "hash": null
       },
       "2011": {
-        "count": 204,
+        "count": 193,
         "hash": null
       },
       "2012": {
-        "count": 189,
+        "count": 176,
         "hash": null
       },
       "2013": {
-        "count": 887,
+        "count": 842,
         "hash": null
       },
       "2014": {
-        "count": 951,
+        "count": 837,
         "hash": null
       },
       "2015": {
-        "count": 306,
+        "count": 259,
         "hash": null
       },
       "2016": {
-        "count": 150,
+        "count": 149,
         "hash": null
       },
       "2017": {
@@ -74,7 +74,7 @@
         "hash": null
       },
       "2018": {
-        "count": 27,
+        "count": 26,
         "hash": null
       },
       "2019": {
@@ -86,7 +86,7 @@
         "hash": null
       },
       "2022": {
-        "count": 37,
+        "count": 36,
         "hash": null
       },
       "2024": {
