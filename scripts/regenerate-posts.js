@@ -37,6 +37,16 @@ if (!fs.existsSync(TEMPLATE_PATH)) {
 }
 const TEMPLATE = fs.readFileSync(TEMPLATE_PATH, 'utf8');
 
+const TAXONOMIES = (() => {
+  const p = path.join(REPO_ROOT, 'database', 'taxonomies.json');
+  try { return JSON.parse(fs.readFileSync(p, 'utf8')); }
+  catch { return { categories: { items: {} }, tags: { items: {} } }; }
+})();
+
+function taxonomyEntry(kind, slug) {
+  return TAXONOMIES?.[kind]?.items?.[slug] || null;
+}
+
 const MONTHS = [
   'January','February','March','April','May','June',
   'July','August','September','October','November','December',
@@ -62,6 +72,38 @@ function escapeHtml(s) {
 
 function escapeAttr(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+}
+
+function buildBreadcrumbCrumbs(post) {
+  const parts = [];
+  const cats = Array.isArray(post.categories) ? post.categories : [];
+  if (cats.length) {
+    const firstSlug = typeof cats[0] === 'string' ? cats[0] : cats[0]?.slug;
+    if (firstSlug) {
+      const info = taxonomyEntry('categories', firstSlug);
+      const name = info?.name || firstSlug;
+      const catUrl = info?.url || `/category/${firstSlug}/`;
+      parts.push(`<i class="icon-angle-right"></i> <a href="${escapeAttr(catUrl)}">${escapeHtml(name)}</a>`);
+    }
+  }
+  parts.push(`<i class="icon-angle-right"></i> <span class="current">${escapeHtml(post.title || 'Untitled')}</span>`);
+  return parts.join('');
+}
+
+function buildFooterTagsBlock(post) {
+  const tags = Array.isArray(post.tags) ? post.tags : [];
+  const links = tags.map(t => {
+    const slug = typeof t === 'string' ? t : t?.slug;
+    if (!slug) return null;
+    const info = taxonomyEntry('tags', slug);
+    const name = info?.name || slug;
+    const tagUrl = info?.url || `/tag/${slug}/`;
+    return `<a href="${escapeAttr(tagUrl)}" rel="tag">${escapeHtml(name)}</a>`;
+  }).filter(Boolean);
+  if (!links.length) return '';
+  return `<span class="footer-tags" itemprop="keywords">
+                    <i class="icon-tag icon-metas" title="Tagged"></i>&nbsp;${links.join(', ')}
+                </span>`;
 }
 
 function renderPost(post) {
@@ -97,6 +139,8 @@ function renderPost(post) {
     '{{post_id}}': postId,
     '{{body_classes}}': classes,
     '{{article_classes}}': classes,
+    '{{breadcrumb_crumbs}}': buildBreadcrumbCrumbs(post),
+    '{{footer_tags_block}}': buildFooterTagsBlock(post),
   };
 
   let html = TEMPLATE;
