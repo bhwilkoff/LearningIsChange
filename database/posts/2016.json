@@ -61,7 +61,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5317,
@@ -126,7 +127,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5319,
@@ -191,7 +193,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5320,
@@ -261,7 +264,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5322,
@@ -326,7 +330,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5324,
@@ -391,7 +396,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5325,
@@ -456,7 +462,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5327,
@@ -521,7 +528,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5328,
@@ -586,7 +594,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5330,
@@ -651,74 +660,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 5331,
-      "wp_post_id": 1801,
-      "title": "#AskBenW: When is generalization better than specialization?",
-      "slug": "askbenw-when-is-generalization-better-than-specialization-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2016-01-11T12:00:00Z",
-      "date_published_gmt": "2016-01-11T12:00:00Z",
-      "date_modified": "2016-01-11T16:49:31+00:00",
-      "date_modified_gmt": "2016-01-11T16:49:31+00:00",
-      "content": "<p>#AskBenW: When is generalization better than specialization?</p>\n\n\n\n<figure class=\"wp-block-embed\">\n<div class=\"wp-block-embed__wrapper\">\nhttp://youtu.be/-XvY8qT4yZw?feature=autosharec</div>\n</figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-1801-6937111df16db\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=1801&amp;origin=learningischange.com&amp;obj_id=113784134-1801-6937111df16db\" data-name=\"like-post-frame-113784134-1801-6937111df16db\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "#AskBenW: When is generalization better than specialization? http://youtu.be/-XvY8qT4yZw?feature=autosharec",
-      "excerpt": "#AskBenW: When is generalization better than specialization? http://youtu.be/-XvY8qT4yZw?feature=autosharec",
-      "guid": "https://learningischange.com/2016/01/11/askbenw-when-is-generalization-better-than-specialization-2/",
-      "comment_status": "open",
-      "comment_count": 4,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "askbenw",
-          "slug": "askbenw",
-          "url": "/tag/askbenw/"
-        },
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/01/11/askbenw-when-is-generalization-better-than-specialization-2/index.html",
-      "url": "https://learningischange.com/2016/01/11/askbenw-when-is-generalization-better-than-specialization-2/",
-      "word_count": 8,
-      "reading_time_minutes": 1,
-      "content_hash": "221404a4",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:31.823Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2016.json"
     },
     {
       "id": 5332,
@@ -779,7 +722,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5334,
@@ -844,7 +788,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5336,
@@ -917,7 +862,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5338,
@@ -982,7 +928,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5340,
@@ -1047,7 +994,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5342,
@@ -1112,7 +1060,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5343,
@@ -1177,7 +1126,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5345,
@@ -1242,7 +1192,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5347,
@@ -1308,7 +1259,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5348,
@@ -1373,7 +1325,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5349,
@@ -1434,7 +1387,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5351,
@@ -1501,7 +1455,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5353,
@@ -1566,7 +1521,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5355,
@@ -1636,7 +1592,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5356,
@@ -1701,7 +1658,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5358,
@@ -1766,7 +1724,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5360,
@@ -1831,7 +1790,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5362,
@@ -1898,7 +1858,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5363,
@@ -1965,7 +1926,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5365,
@@ -2036,7 +1998,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5367,
@@ -2101,7 +2064,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5368,
@@ -2167,7 +2131,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5369,
@@ -2232,7 +2197,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5370,
@@ -2297,7 +2263,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5371,
@@ -2362,74 +2329,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 5373,
-      "wp_post_id": 1793,
-      "title": "#AskBenW: What should we do about snow days?",
-      "slug": "askbenw-what-should-we-do-about-snow-days-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2016-02-03T12:00:00Z",
-      "date_published_gmt": "2016-02-03T12:00:00Z",
-      "date_modified": "2016-02-03T16:54:21+00:00",
-      "date_modified_gmt": "2016-02-03T16:54:21+00:00",
-      "content": "<p>#AskBenW: What should we do about snow days?</p>\n\n\n\n<figure class=\"wp-block-embed\">\n<div class=\"wp-block-embed__wrapper\">\nhttp://youtu.be/2XvD1GfxvlM?feature=autosharec</div>\n</figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-1793-69371110ed4ae\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=1793&amp;origin=learningischange.com&amp;obj_id=113784134-1793-69371110ed4ae\" data-name=\"like-post-frame-113784134-1793-69371110ed4ae\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "#AskBenW: What should we do about snow days? http://youtu.be/2XvD1GfxvlM?feature=autosharec",
-      "excerpt": "#AskBenW: What should we do about snow days? http://youtu.be/2XvD1GfxvlM?feature=autosharec",
-      "guid": "https://learningischange.com/2016/02/03/askbenw-what-should-we-do-about-snow-days-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "askbenw",
-          "slug": "askbenw",
-          "url": "/tag/askbenw/"
-        },
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/02/03/askbenw-what-should-we-do-about-snow-days-2/index.html",
-      "url": "https://learningischange.com/2016/02/03/askbenw-what-should-we-do-about-snow-days-2/",
-      "word_count": 9,
-      "reading_time_minutes": 1,
-      "content_hash": "67454833",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:49:50.955Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2016.json"
     },
     {
       "id": 5374,
@@ -2490,7 +2391,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5376,
@@ -2552,7 +2454,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5377,
@@ -2614,7 +2517,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5379,
@@ -2679,7 +2583,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5381,
@@ -2744,7 +2649,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5382,
@@ -2805,7 +2711,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5384,
@@ -2870,7 +2777,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5386,
@@ -2935,7 +2843,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5388,
@@ -3000,7 +2909,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5390,
@@ -3065,7 +2975,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5392,
@@ -3130,7 +3041,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5393,
@@ -3191,7 +3103,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5396,
@@ -3266,7 +3179,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5397,
@@ -3331,7 +3245,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5399,
@@ -3396,7 +3311,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5401,
@@ -3461,7 +3377,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5403,
@@ -3526,7 +3443,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5404,
@@ -3591,7 +3509,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5405,
@@ -3652,7 +3571,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5407,
@@ -3713,7 +3633,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5409,
@@ -3774,7 +3695,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5411,
@@ -3839,7 +3761,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5413,
@@ -3904,7 +3827,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5415,
@@ -3969,7 +3893,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5416,
@@ -4034,7 +3959,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5418,
@@ -4123,7 +4049,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5420,
@@ -4192,7 +4119,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5421,
@@ -4257,7 +4185,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5422,
@@ -4315,7 +4244,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5424,
@@ -4387,7 +4317,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5425,
@@ -4452,7 +4383,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5426,
@@ -4517,7 +4449,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5427,
@@ -4573,7 +4506,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5429,
@@ -4634,7 +4568,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5430,
@@ -4690,7 +4625,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5432,
@@ -4746,7 +4682,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5434,
@@ -4812,7 +4749,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5436,
@@ -4877,7 +4815,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5438,
@@ -4972,7 +4911,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5440,
@@ -5037,7 +4977,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5442,
@@ -5107,7 +5048,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5444,
@@ -5175,69 +5117,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 5446,
-      "wp_post_id": 1777,
-      "title": "Curated Learning Networks",
-      "slug": "curated-learning-networks-3",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2016-03-30T12:00:00Z",
-      "date_published_gmt": "2016-03-30T12:00:00Z",
-      "date_modified": "2022-02-06T19:35:36+00:00",
-      "date_modified_gmt": "2022-02-06T19:35:36+00:00",
-      "content": "<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\n<iframe title=\"Curated Learning Networks\" width=\"1225\" height=\"689\" src=\"https://www.youtube.com/embed/n6GTyr6AKzE?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen=\"\"></iframe>\n</div></figure>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-1777-693710e4b351e\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=1777&amp;origin=learningischange.com&amp;obj_id=113784134-1777-693710e4b351e\" data-name=\"like-post-frame-113784134-1777-693710e4b351e\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "",
-      "excerpt": "",
-      "guid": "https://learningischange.com/2016/03/30/curated-learning-networks-3/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2016/03/30/curated-learning-networks-3/index.html",
-      "url": "https://learningischange.com/2016/03/30/curated-learning-networks-3/",
-      "word_count": 0,
-      "reading_time_minutes": 0,
-      "content_hash": "24674bf8",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:50:24.585Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2016.json"
     },
     {
       "id": 5447,
@@ -5299,7 +5180,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5449,
@@ -5355,7 +5237,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5451,
@@ -5411,7 +5294,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5453,
@@ -5467,7 +5351,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5454,
@@ -5529,7 +5414,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5456,
@@ -5585,7 +5471,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5458,
@@ -5641,7 +5528,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5460,
@@ -5697,7 +5585,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5462,
@@ -5753,7 +5642,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5464,
@@ -5809,7 +5699,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5466,
@@ -5865,7 +5756,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5468,
@@ -5921,7 +5813,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5470,
@@ -5977,7 +5870,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5472,
@@ -6033,7 +5927,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5474,
@@ -6089,7 +5984,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5476,
@@ -6145,7 +6041,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5478,
@@ -6201,7 +6098,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5480,
@@ -6257,7 +6155,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5482,
@@ -6313,7 +6212,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5484,
@@ -6369,7 +6269,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5486,
@@ -6425,7 +6326,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5488,
@@ -6481,7 +6383,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5490,
@@ -6537,7 +6440,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5492,
@@ -6593,7 +6497,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5494,
@@ -6649,7 +6554,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5496,
@@ -6705,7 +6611,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5498,
@@ -6766,7 +6673,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5500,
@@ -6822,7 +6730,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5502,
@@ -6878,7 +6787,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5504,
@@ -6934,7 +6844,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5506,
@@ -6990,7 +6901,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5508,
@@ -7046,7 +6958,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5510,
@@ -7102,7 +7015,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5512,
@@ -7158,7 +7072,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5514,
@@ -7216,7 +7131,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5516,
@@ -7272,7 +7188,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5518,
@@ -7328,7 +7245,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5520,
@@ -7391,7 +7309,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5521,
@@ -7447,7 +7366,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5524,
@@ -7508,7 +7428,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5525,
@@ -7569,7 +7490,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5527,
@@ -7630,7 +7552,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5528,
@@ -7692,7 +7615,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5529,
@@ -7793,7 +7717,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5531,
@@ -7856,7 +7781,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5533,
@@ -7919,7 +7845,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5535,
@@ -7980,7 +7907,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5536,
@@ -8041,7 +7969,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5537,
@@ -8102,7 +8031,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5539,
@@ -8163,7 +8093,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5541,
@@ -8224,7 +8155,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5542,
@@ -8285,7 +8217,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5544,
@@ -8346,7 +8279,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5545,
@@ -8407,7 +8341,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5547,
@@ -8469,7 +8404,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5548,
@@ -8530,7 +8466,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5549,
@@ -8591,7 +8528,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5550,
@@ -8652,7 +8590,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5551,
@@ -8713,7 +8652,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5552,
@@ -8774,7 +8714,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5553,
@@ -8836,7 +8777,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5555,
@@ -8897,7 +8839,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5556,
@@ -8958,7 +8901,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5557,
@@ -9019,7 +8963,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5558,
@@ -9080,7 +9025,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5559,
@@ -9145,7 +9091,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5562,
@@ -9206,7 +9153,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5563,
@@ -9273,7 +9221,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5565,
@@ -9335,7 +9284,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
     },
     {
       "id": 5567,
@@ -9407,7 +9357,78 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2016.json"
+    },
+    {
+      "id": 1003915,
+      "wp_post_id": 900000,
+      "title": "Preceding Reputations",
+      "slug": "preceding-reputations",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/"
+      },
+      "date_published": "2016-07-23T12:00:00Z",
+      "date_published_gmt": "2016-07-23T12:00:00Z",
+      "date_modified": "2016-07-23T12:00:00Z",
+      "date_modified_gmt": "2016-07-23T12:00:00Z",
+      "content": "<div class=\"powerpress_player\" id=\"powerpress_player_900000\"><audio class=\"wp-audio-shortcode\" id=\"audio-900000-1\" preload=\"none\" style=\"width: 100%;\" controls=\"controls\"><source type=\"audio/mp4\" src=\"https://learningischange.com/wp-content/uploads/2016/07/Preceding_Reputations.m4a?_=1\"><a href=\"https://learningischange.com/wp-content/uploads/2016/07/Preceding_Reputations.m4a\">https://learningischange.com/wp-content/uploads/2016/07/Preceding_Reputations.m4a</a></audio></div><p class=\"powerpress_links powerpress_links_m4a\" style=\"margin-bottom: 1px !important;\">Podcast: <a href=\"https://learningischange.com/wp-content/uploads/2016/07/Preceding_Reputations.m4a\" class=\"powerpress_link_pinw\" target=\"_blank\" title=\"Play in new window\" rel=\"nofollow\">Play in new window</a> | <a href=\"https://learningischange.com/wp-content/uploads/2016/07/Preceding_Reputations.m4a\" class=\"powerpress_link_d\" title=\"Download\" rel=\"nofollow\" download=\"Preceding_Reputations.m4a\">Download</a></p><p class=\"powerpress_links powerpress_subscribe_links\">Subscribe: <a href=\"/feed/podcast/\" class=\"powerpress_link_subscribe powerpress_link_subscribe_rss\" target=\"_blank\" title=\"Subscribe via RSS\" rel=\"nofollow\">RSS</a></p><!--powerpress_player-->",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2016/07/23/preceding-reputations/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Uncategorized",
+          "slug": "uncategorized",
+          "url": "/category/uncategorized/"
+        }
+      ],
+      "tags": [],
+      "path": "2016/07/23/preceding-reputations/index.html",
+      "url": "https://learningischange.com/2016/07/23/preceding-reputations/",
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "_shard": "2016.json"
+    },
+    {
+      "id": 1003916,
+      "wp_post_id": 900001,
+      "title": "YTMND — Breakup Letter, Dramatic reading",
+      "slug": "ytmnd-breakup-letter-dramatic-reading",
+      "type": "post",
+      "status": "publish",
+      "author": {
+        "name": "Ben Wilkoff",
+        "slug": "bhwilkoff",
+        "url": "/author/bhwilkoff/"
+      },
+      "date_published": "2016-07-23T12:00:00Z",
+      "date_published_gmt": "2016-07-23T12:00:00Z",
+      "date_modified": "2016-07-23T12:00:00Z",
+      "date_modified_gmt": "2016-07-23T12:00:00Z",
+      "content": "<div class=\"powerpress_player\" id=\"powerpress_player_900001\"><audio class=\"wp-audio-shortcode\" id=\"audio-900001-1\" preload=\"none\" style=\"width: 100%;\" controls=\"controls\"><source type=\"audio/mpeg\" src=\"https://learningischange.com/wp-content/uploads/2016/07/YTMND%20-%20Breakup%20Letter%2C%20Dramatic%20reading.mp3?_=1\"><a href=\"https://learningischange.com/wp-content/uploads/2016/07/YTMND%20-%20Breakup%20Letter%2C%20Dramatic%20reading.mp3\">https://learningischange.com/wp-content/uploads/2016/07/YTMND%20-%20Breakup%20Letter%2C%20Dramatic%20reading.mp3</a></audio></div><p class=\"powerpress_links powerpress_links_mp3\" style=\"margin-bottom: 1px !important;\">Podcast: <a href=\"https://learningischange.com/wp-content/uploads/2016/07/YTMND%20-%20Breakup%20Letter%2C%20Dramatic%20reading.mp3\" class=\"powerpress_link_pinw\" target=\"_blank\" title=\"Play in new window\" rel=\"nofollow\">Play in new window</a> | <a href=\"https://learningischange.com/wp-content/uploads/2016/07/YTMND%20-%20Breakup%20Letter%2C%20Dramatic%20reading.mp3\" class=\"powerpress_link_d\" title=\"Download\" rel=\"nofollow\" download=\"YTMND - Breakup Letter, Dramatic reading.mp3\">Download</a></p><p class=\"powerpress_links powerpress_subscribe_links\">Subscribe: <a href=\"/feed/podcast/\" class=\"powerpress_link_subscribe powerpress_link_subscribe_rss\" target=\"_blank\" title=\"Subscribe via RSS\" rel=\"nofollow\">RSS</a></p><!--powerpress_player-->",
+      "excerpt": "",
+      "guid": "https://learningischange.com/2016/07/23/ytmnd-breakup-letter-dramatic-reading/",
+      "comment_status": "closed",
+      "comment_count": 0,
+      "categories": [
+        {
+          "name": "Uncategorized",
+          "slug": "uncategorized",
+          "url": "/category/uncategorized/"
+        }
+      ],
+      "tags": [],
+      "path": "2016/07/23/ytmnd-breakup-letter-dramatic-reading/index.html",
+      "url": "https://learningischange.com/2016/07/23/ytmnd-breakup-letter-dramatic-reading/",
+      "schema_type": "Article",
+      "publisher": "Learning is Change",
+      "_shard": "2016.json"
     }
   ],
   "post_count": 150

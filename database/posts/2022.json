@@ -63,7 +63,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5783,
@@ -121,7 +122,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5785,
@@ -196,7 +198,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5788,
@@ -274,7 +277,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5790,
@@ -332,7 +336,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5792,
@@ -411,7 +416,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5794,
@@ -479,7 +485,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5796,
@@ -563,7 +570,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5798,
@@ -649,7 +657,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5800,
@@ -730,7 +739,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5802,
@@ -829,7 +839,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5803,
@@ -887,7 +898,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5806,
@@ -958,7 +970,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5808,
@@ -1042,7 +1055,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5810,
@@ -1119,7 +1133,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5812,
@@ -1214,7 +1229,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5813,
@@ -1285,7 +1301,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5816,
@@ -1357,7 +1374,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5818,
@@ -1451,7 +1469,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5820,
@@ -1547,7 +1566,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5821,
@@ -1640,7 +1660,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5824,
@@ -1743,103 +1764,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 5826,
-      "wp_post_id": 19166,
-      "title": "Safe",
-      "slug": "safe-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2022-01-31T12:00:00Z",
-      "date_published_gmt": "2022-01-31T12:00:00Z",
-      "date_modified": "2022-01-31T15:58:10+00:00",
-      "date_modified_gmt": "2022-01-31T15:58:10+00:00",
-      "content": "<figure class=\"wp-block-image size-large\"><img data-recalc-dims=\"1\" fetchpriority=\"high\" decoding=\"async\" width=\"768\" height=\"1024\" data-attachment-id=\"19167\" data-permalink=\"/2022/01/31/safe-2/img_8599/\" data-orig-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?fit=1920%2C2560&amp;ssl=1\" data-orig-size=\"1920,2560\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;1.6&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 12 Pro&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1642844546&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.2&quot;,&quot;iso&quot;:&quot;125&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}\" data-image-title=\"IMG_8599\" data-image-description=\"\" data-image-caption=\"\" data-medium-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?fit=225%2C300&amp;ssl=1\" data-large-file=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?fit=768%2C1024&amp;ssl=1\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599.jpeg?resize=768%2C1024&amp;ssl=1\" alt=\"\" class=\"wp-image-19167\" srcset=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?resize=768%2C1024&amp;ssl=1 768w, https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?resize=225%2C300&amp;ssl=1 225w, https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?resize=1152%2C1536&amp;ssl=1 1152w, https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?resize=1536%2C2048&amp;ssl=1 1536w, https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?resize=375%2C500&amp;ssl=1 375w, https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599-scaled.jpeg?w=1920&amp;ssl=1 1920w\" sizes=\"(max-width: 768px) 100vw, 768px\"><figcaption>Art Credit: Oliver Wilkoff (Paint and Marker on Canvas)</figcaption></figure>\n\n\n\n<p>Feeling safe is a privilege. Not everyone does. </p>\n\n\n\n<p>I donât fear for my life in the way that many <a href=\"https://graphics.reuters.com/RUSSIA-UKRAINE/dwpkrkwkgvm/\">Ukrainians are just waiting for Russia to rein down upon them</a>. I donât worry about <a href=\"https://www.zdnet.com/article/how-todays-technologies-become-weapons-in-modern-domestic-abuse/\">domestic abuse or being tracked by a jealous spouse</a>. <a href=\"https://www.nytimes.com/2020/05/18/sports/running-while-black-ahmaud-arbery.html\">I donât fear others around me as I walk or run</a> down the streets of my neighborhood. I am not even a little concerned that <a href=\"https://www.latimes.com/california/story/2022-01-03/san-francisco-property-crime-spikes\">my windows will get smashed out of my car while it is parked</a>. </p>\n\n\n\n<p>In fact, I have almost nothing to fear from others in my safe little existence. And so, what are my responsibilities to others as I traverse the world unmolested?</p>\n\n\n\n<p>Late last week I heard a quote that traces back to <a href=\"https://en.wikipedia.org/wiki/Lilla_Watson\">Lilla Watson</a> (an aboriginal/human rights activist from Australia in the 1970s and 80s) that resonated deeply and presents an answer to this question:</p>\n\n\n\n<p>âIf you have come here to help me, you are wasting your time. But if you have come because your liberation is bound up with mine, then let us work together.â</p>\n\n\n\n<p>I believe that my liberation is not the same as my relative safety. I am not free, until others can feel the kind of safety I feel as I walk into a mall as a white man. I am not fully liberated until others are not <a href=\"https://tribunemag.co.uk/2022/01/amazon-algorithm-human-resource-management-tech-worker-surveillance\">tracked and policed with black-box technology.</a> And, my responsibility to others is to ensure that my safety doesnât make other people less safe. </p>\n\n\n\n<p>By retreating from the city-center of Denver, I am taking my resources and my attention away from the spaces where safety is not assured. But, I can also bring those issues (of scarcity, of institutional racism, of poverty-induced crime, and of mental health needs) to my own environment. I can speak about and amplify the voices of those who are working to create the kind of safety I feel. </p>\n\n\n\n<p>And, get this, I am willing to <strong>feel</strong> less safe. Because my feelings, at the end of the day, do not matter. I am not less safe for having a more diverse world. I am not less safe because traditionally excluded individuals becomes more included in circles of power and influence. I am not less safe when more of the population has access to the basic rights of health care, education, and a economic opportunity. </p>\n\n\n\n<p>And conversely, I am not willing to feel more safe by ignoring the oppression of others (or, actively working toward it). My safety is bound up with the safety of those who do not already have it. And, yours is too.</p>\n\n\n\n<p></p>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-19166-693710766b43d\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=19166&amp;origin=learningischange.com&amp;obj_id=113784134-19166-693710766b43d\" data-name=\"like-post-frame-113784134-19166-693710766b43d\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Art Credit: Oliver Wilkoff (Paint and Marker on Canvas) Feeling safe is a privilege. Not everyone does. I donât fear for my life in the way that many Ukrainians are just waiting for Russia to rein down upon them. I donât worry about domestic abuse or being tracked by a jealous spouse. I donât fear others around me as I walk or run down the streets of my neighborhood. I am not even a little concerned that my windows will get smashed out of my car while it is parked. In fact, I have almost nothing to fear from others in my safe little existence. And so, what are my responsibilities to others as I traverse the world unmolested? Late last week I heard a quote that traces back to Lilla Watson (an aboriginal/human rights activist from Australia in the 1970s and 80s) that resonated deeply and presents an answer to this question: âIf you have come here to help me, you are wasting your time. But if you have come because your liberation is bound up with mine, then let us work together.â I believe that my liberation is not the same as my relative safety. I am not free, until others can feel the kind of safety I feel as I walk into a mall as a white man. I am not fully liberated until others are not tracked and policed with black-box technology. And, my responsibility to others is to ensure that my safety doesnât make other people less safe. By retreating from the city-center of Denver, I am taking my resources and my attention away from the spaces where safety is not assured. But, I can also bring those issues (of scarcity, of institutional racism, of poverty-induced crime, and of mental health needs) to my own environment. I can speak about and amplify the voices of those who are working to create the kind of safety I feel. And, get this, I am willing to feel less safe. Because my feelings, at the end of the day, do not matter. I am not less safe for having a more diverse world. I am not less safe because traditionally excluded individuals becomes more included in circles of power and influence. I am not less safe when more of the population has access to the basic rights of health care, education, and a economic opportunity. And conversely, I am not willing to feel more safe by ignoring the oppression of others (or, actively working toward it). My safety is bound up with the safety of those who do not already have it. And, yours is too.",
-      "excerpt": "Art Credit: Oliver Wilkoff (Paint and Marker on Canvas) Feeling safe is a privilege. Not everyone does. I donât fear for my life in the way that many Ukrainians are just waiting for Russia to rein d...",
-      "guid": "https://learningischange.com/2022/01/31/safe-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Blog 2",
-          "slug": "blog-2",
-          "url": "/category/blog-2/"
-        },
-        {
-          "name": "Humanity",
-          "slug": "humanity",
-          "url": "/category/humanity/"
-        }
       ],
-      "tags": [
-        {
-          "name": "anti racist",
-          "slug": "anti-racist",
-          "url": "/tag/anti-racist/"
-        },
-        {
-          "name": "blm",
-          "slug": "blm",
-          "url": "/tag/blm/"
-        },
-        {
-          "name": "bourgeois",
-          "slug": "bourgeois",
-          "url": "/tag/bourgeois/"
-        },
-        {
-          "name": "oppression",
-          "slug": "oppression",
-          "url": "/tag/oppression/"
-        },
-        {
-          "name": "safety",
-          "slug": "safety",
-          "url": "/tag/safety/"
-        }
-      ],
-      "path": "2022/01/31/safe-2/index.html",
-      "url": "https://learningischange.com/2022/01/31/safe-2/",
-      "word_count": 438,
-      "reading_time_minutes": 3,
-      "content_hash": "-23dc5645",
-      "images": [
-        "https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8599.jpeg?resize=768%2C1024&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://graphics.reuters.com/RUSSIA-UKRAINE/dwpkrkwkgvm/",
-          "https://www.zdnet.com/article/how-todays-technologies-become-weapons-in-modern-domestic-abuse/",
-          "https://www.nytimes.com/2020/05/18/sports/running-while-black-ahmaud-arbery.html",
-          "https://www.latimes.com/california/story/2022-01-03/san-francisco-property-crime-spikes",
-          "https://en.wikipedia.org/wiki/Lilla_Watson",
-          "https://tribunemag.co.uk/2022/01/amazon-algorithm-human-resource-management-tech-worker-surveillance"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:53:29.956Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2022.json"
     },
     {
       "id": 5828,
@@ -1940,7 +1866,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5829,
@@ -2027,7 +1954,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5831,
@@ -2115,7 +2043,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5834,
@@ -2226,7 +2155,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5835,
@@ -2313,7 +2243,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5837,
@@ -2394,7 +2325,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5839,
@@ -2479,7 +2411,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5842,
@@ -2573,7 +2506,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5843,
@@ -2660,7 +2594,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5846,
@@ -2744,7 +2679,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5847,
@@ -2871,7 +2807,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5850,
@@ -3030,7 +2967,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5852,
@@ -3134,7 +3072,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     },
     {
       "id": 5853,
@@ -3223,7 +3162,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2022.json"
     }
   ],
   "post_count": 37

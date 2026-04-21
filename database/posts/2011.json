@@ -60,7 +60,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1977,
@@ -120,7 +121,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1978,
@@ -180,7 +182,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1980,
@@ -252,7 +255,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1982,
@@ -316,7 +320,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1984,
@@ -389,7 +394,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1985,
@@ -445,7 +451,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1987,
@@ -505,7 +512,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1989,
@@ -570,7 +578,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1990,
@@ -628,7 +637,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1991,
@@ -693,7 +703,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1992,
@@ -758,7 +769,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1993,
@@ -816,7 +828,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1996,
@@ -875,7 +888,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 1997,
@@ -940,71 +954,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 1999,
-      "wp_post_id": 11153,
-      "title": "Does anyone else see this really bad looking sidebar in their new Google Calendar view (i.e., everything is reallyâ¦",
-      "slug": "does-anyone-else-see-this-really-bad-looking-sidebar-in-their-new-google-calendar-view-ie-everything-is-really-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-06-30T12:00:00Z",
-      "date_published_gmt": "2011-06-30T12:00:00Z",
-      "date_modified": "2011-06-30T16:11:02+00:00",
-      "date_modified_gmt": "2011-06-30T16:11:02+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh5.googleusercontent.com/-Z1yNfxXsK8A/TgygBtA6XZI/AAAAAAAAANU/yvSovqMWdug/s0/Google%2BCalendar.png?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>Does anyone else see this really bad looking sidebar in their new Google Calendar view (i.e., everything is really cut off):</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-11153-693716baed416\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=11153&amp;origin=learningischange.com&amp;obj_id=113784134-11153-693716baed416\" data-name=\"like-post-frame-113784134-11153-693716baed416\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Does anyone else see this really bad looking sidebar in their new Google Calendar view (i.e., everything is really cut off):",
-      "excerpt": "Does anyone else see this really bad looking sidebar in their new Google Calendar view (i.e., everything is really cut off):",
-      "guid": "https://learningischange.com/2011/06/30/does-anyone-else-see-this-really-bad-looking-sidebar-in-their-new-google-calendar-view-ie-everything-is-really-2/",
-      "comment_status": "open",
-      "comment_count": 2,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/06/30/does-anyone-else-see-this-really-bad-looking-sidebar-in-their-new-google-calendar-view-ie-everything-is-really-2/index.html",
-      "url": "https://learningischange.com/2011/06/30/does-anyone-else-see-this-really-bad-looking-sidebar-in-their-new-google-calendar-view-ie-everything-is-really-2/",
-      "word_count": 21,
-      "reading_time_minutes": 1,
-      "content_hash": "-2a64dc14",
-      "images": [
-        "https://i0.wp.com/lh5.googleusercontent.com/-Z1yNfxXsK8A/TgygBtA6XZI/AAAAAAAAANU/yvSovqMWdug/s0/Google%2BCalendar.png?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:29:52.879Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2000,
@@ -1068,7 +1019,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2001,
@@ -1129,7 +1081,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2002,
@@ -1192,7 +1145,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2003,
@@ -1250,7 +1204,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2004,
@@ -1317,7 +1272,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2005,
@@ -1373,7 +1329,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2006,
@@ -1435,7 +1392,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2007,
@@ -1499,7 +1457,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2008,
@@ -1561,71 +1520,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2010,
-      "wp_post_id": 14704,
-      "title": "Is it my theme in Gmail that makes my nav bar an ugly gray rather than the black that it seems to be on every otherâ¦",
-      "slug": "is-it-my-theme-in-gmail-that-makes-my-nav-bar-an-ugly-gray-rather-than-the-black-that-it-seems-to-be-on-every-other-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-06-30T12:00:00Z",
-      "date_published_gmt": "2011-06-30T12:00:00Z",
-      "date_modified": "2011-06-30T15:14:22+00:00",
-      "date_modified_gmt": "2011-06-30T15:14:22+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh5.googleusercontent.com/-8xDegF6KK5k/TgySoz2BPrI/AAAAAAAAAM8/TbZ-ptpi8iI/s0/Gmail%2B-%2BSettings%2B-%2Bbenwilkoff%2540gmail.com.png?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>Is it my theme in Gmail that makes my nav bar an ugly gray rather than the black that it seems to be on every other app? Is there any way to change this?</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14704-693716bcecaf0\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14704&amp;origin=learningischange.com&amp;obj_id=113784134-14704-693716bcecaf0\" data-name=\"like-post-frame-113784134-14704-693716bcecaf0\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Is it my theme in Gmail that makes my nav bar an ugly gray rather than the black that it seems to be on every other app? Is there any way to change this?",
-      "excerpt": "Is it my theme in Gmail that makes my nav bar an ugly gray rather than the black that it seems to be on every other app? Is there any way to change this?",
-      "guid": "https://learningischange.com/2011/06/30/is-it-my-theme-in-gmail-that-makes-my-nav-bar-an-ugly-gray-rather-than-the-black-that-it-seems-to-be-on-every-other-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/06/30/is-it-my-theme-in-gmail-that-makes-my-nav-bar-an-ugly-gray-rather-than-the-black-that-it-seems-to-be-on-every-other-2/index.html",
-      "url": "https://learningischange.com/2011/06/30/is-it-my-theme-in-gmail-that-makes-my-nav-bar-an-ugly-gray-rather-than-the-black-that-it-seems-to-be-on-every-other-2/",
-      "word_count": 34,
-      "reading_time_minutes": 1,
-      "content_hash": "2b995081",
-      "images": [
-        "https://i0.wp.com/lh5.googleusercontent.com/-8xDegF6KK5k/TgySoz2BPrI/AAAAAAAAAM8/TbZ-ptpi8iI/s0/Gmail%2B-%2BSettings%2B-%2Bbenwilkoff%2540gmail.com.png?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:29:55.923Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2011,
@@ -1689,7 +1585,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2012,
@@ -1751,7 +1648,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2014,
@@ -1813,71 +1711,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2015,
-      "wp_post_id": 5150,
-      "title": "This is awesome.",
-      "slug": "this-is-awesome-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-07-01T12:00:00Z",
-      "date_published_gmt": "2011-07-01T12:00:00Z",
-      "date_modified": "2011-07-01T15:36:28+00:00",
-      "date_modified_gmt": "2011-07-01T15:36:28+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh4.googleusercontent.com/-wEWxp2r-QAM/Tg3nNCPGo8I/AAAAAAAAADM/8YPrXjoFzSM/s0/MINIMALIST-CONAN.jpg?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>This is awesome.</p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Fontina Turner</p>\n\n\n\n<p></p>\n\n\n\n<p>I accidentally made âMinimalist Conanâ while working on some logos today.</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-5150-693716b90892f\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=5150&amp;origin=learningischange.com&amp;obj_id=113784134-5150-693716b90892f\" data-name=\"like-post-frame-113784134-5150-693716b90892f\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "This is awesome. Originally shared by Fontina Turner I accidentally made âMinimalist Conanâ while working on some logos today.",
-      "excerpt": "This is awesome. Originally shared by Fontina Turner I accidentally made âMinimalist Conanâ while working on some logos today.",
-      "guid": "https://learningischange.com/2011/07/01/this-is-awesome-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/07/01/this-is-awesome-2/index.html",
-      "url": "https://learningischange.com/2011/07/01/this-is-awesome-2/",
-      "word_count": 19,
-      "reading_time_minutes": 1,
-      "content_hash": "7535199f",
-      "images": [
-        "https://i0.wp.com/lh4.googleusercontent.com/-wEWxp2r-QAM/Tg3nNCPGo8I/AAAAAAAAADM/8YPrXjoFzSM/s0/MINIMALIST-CONAN.jpg?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:29:57.288Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2016,
@@ -1941,7 +1776,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2018,
@@ -2003,7 +1839,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2019,
@@ -2067,7 +1904,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2021,
@@ -2131,7 +1969,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2022,
@@ -2193,7 +2032,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2024,
@@ -2255,7 +2095,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2025,
@@ -2317,7 +2158,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2026,
@@ -2379,7 +2221,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2028,
@@ -2441,7 +2284,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2029,
@@ -2504,7 +2348,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2031,
@@ -2567,7 +2412,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2033,
@@ -2629,7 +2475,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2034,
@@ -2691,7 +2538,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2035,
@@ -2755,73 +2603,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2037,
-      "wp_post_id": 11092,
-      "title": "What do you all think about the idea of an Khan Acadey iPad app?",
-      "slug": "what-do-you-all-think-about-the-idea-of-an-khan-acadey-ipad-app-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-07-13T12:00:00Z",
-      "date_published_gmt": "2011-07-13T12:00:00Z",
-      "date_modified": "2011-07-13T19:04:45+00:00",
-      "date_modified_gmt": "2011-07-13T19:04:45+00:00",
-      "content": "<p>What do you all think about the idea of an Khan Acadey iPad app?</p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by John Resig</p>\n\n\n\n<p></p>\n\n\n\n<p>The Khan Academy iPad app is coming along really well. Weâre getting near to a 1.0 release. This initial release will have video navigation and viewing as well as an interactive transcripts and offline support. Exercises will be coming in the next release. Iâve tossed a couple (very alpha) screenshots here. Huge thanks to Adam Ernst and Jason Rosoff for making this happen.</p>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh3.googleusercontent.com/-ZY8uB0qaxXI/Th3q0y1eSHI/AAAAAAAAApo/EXn5KVkL6yQ/s0/landscape-view-video.png?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh3.googleusercontent.com/-fJbpLpDeYK8/Th3q3IulwmI/AAAAAAAAAps/-Y1LqQ9Uwws/s0/portrait-video-navigation-popover.png?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh4.googleusercontent.com/-7LLRY4gMeNo/Th3q-UKtJaI/AAAAAAAAApw/vSWz_HuhB3Y/s0/filter-playlist-for-downloaded-videos.png?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-11092-693716ac481b9\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=11092&amp;origin=learningischange.com&amp;obj_id=113784134-11092-693716ac481b9\" data-name=\"like-post-frame-113784134-11092-693716ac481b9\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "What do you all think about the idea of an Khan Acadey iPad app? Originally shared by John Resig The Khan Academy iPad app is coming along really well. Weâre getting near to a 1.0 release. This initial release will have video navigation and viewing as well as an interactive transcripts and offline support. Exercises will be coming in the next release. Iâve tossed a couple (very alpha) screenshots here. Huge thanks to Adam Ernst and Jason Rosoff for making this happen.",
-      "excerpt": "What do you all think about the idea of an Khan Acadey iPad app? Originally shared by John Resig The Khan Academy iPad app is coming along really well. Weâre getting near to a 1.0 release. This init...",
-      "guid": "https://learningischange.com/2011/07/13/what-do-you-all-think-about-the-idea-of-an-khan-acadey-ipad-app-2/",
-      "comment_status": "open",
-      "comment_count": 10,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/07/13/what-do-you-all-think-about-the-idea-of-an-khan-acadey-ipad-app-2/index.html",
-      "url": "https://learningischange.com/2011/07/13/what-do-you-all-think-about-the-idea-of-an-khan-acadey-ipad-app-2/",
-      "word_count": 82,
-      "reading_time_minutes": 1,
-      "content_hash": "130c0e6c",
-      "images": [
-        "https://i0.wp.com/lh3.googleusercontent.com/-ZY8uB0qaxXI/Th3q0y1eSHI/AAAAAAAAApo/EXn5KVkL6yQ/s0/landscape-view-video.png?w=1225&ssl=1",
-        "https://i0.wp.com/lh3.googleusercontent.com/-fJbpLpDeYK8/Th3q3IulwmI/AAAAAAAAAps/-Y1LqQ9Uwws/s0/portrait-video-navigation-popover.png?w=1225&ssl=1",
-        "https://i0.wp.com/lh4.googleusercontent.com/-7LLRY4gMeNo/Th3q-UKtJaI/AAAAAAAAApw/vSWz_HuhB3Y/s0/filter-playlist-for-downloaded-videos.png?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:03.534Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2038,
@@ -2887,7 +2670,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2039,
@@ -2949,7 +2733,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2040,
@@ -3015,7 +2800,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2042,
@@ -3079,7 +2865,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2043,
@@ -3141,7 +2928,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2045,
@@ -3203,7 +2991,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2046,
@@ -3265,7 +3054,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2047,
@@ -3334,7 +3124,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2048,
@@ -3397,7 +3188,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2049,
@@ -3459,7 +3251,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2051,
@@ -3521,7 +3314,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2052,
@@ -3583,7 +3377,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2053,
@@ -3645,7 +3440,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2054,
@@ -3701,7 +3497,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2055,
@@ -3767,7 +3564,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2056,
@@ -3831,7 +3629,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2057,
@@ -3893,7 +3692,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2058,
@@ -3951,7 +3751,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2060,
@@ -4013,7 +3814,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2061,
@@ -4075,7 +3877,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2062,
@@ -4137,7 +3940,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2063,
@@ -4199,7 +4003,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2064,
@@ -4261,7 +4066,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2066,
@@ -4323,7 +4129,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2067,
@@ -4379,7 +4186,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2068,
@@ -4441,7 +4249,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2069,
@@ -4503,7 +4312,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2070,
@@ -4565,7 +4375,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2072,
@@ -4623,7 +4434,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2073,
@@ -4679,7 +4491,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2074,
@@ -4741,7 +4554,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2075,
@@ -4797,7 +4611,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2076,
@@ -4859,7 +4674,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2077,
@@ -4921,7 +4737,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2078,
@@ -4983,7 +4800,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2080,
@@ -5045,7 +4863,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2082,
@@ -5107,7 +4926,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2083,
@@ -5163,7 +4983,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2084,
@@ -5225,7 +5046,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2086,
@@ -5288,7 +5110,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2087,
@@ -5350,7 +5173,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2088,
@@ -5412,69 +5236,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2089,
-      "wp_post_id": 14104,
-      "title": "You see this?",
-      "slug": "you-see-this-4",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-07-26T12:00:00Z",
-      "date_published_gmt": "2011-07-26T12:00:00Z",
-      "date_modified": "2011-07-26T21:08:29+00:00",
-      "date_modified_gmt": "2011-07-26T21:08:29+00:00",
-      "content": "<p>You see this?</p>\n\n\n\n<figure class=\"wp-block-embed\">\n<div class=\"wp-block-embed__wrapper\">\nhttps://plus.google.com/101483533411566453214/posts</div>\n</figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14104-693716957bef5\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14104&amp;origin=learningischange.com&amp;obj_id=113784134-14104-693716957bef5\" data-name=\"like-post-frame-113784134-14104-693716957bef5\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "You see this? https://plus.google.com/101483533411566453214/posts",
-      "excerpt": "You see this? https://plus.google.com/101483533411566453214/posts",
-      "guid": "https://learningischange.com/2011/07/26/you-see-this-4/",
-      "comment_status": "open",
-      "comment_count": 8,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/07/26/you-see-this-4/index.html",
-      "url": "https://learningischange.com/2011/07/26/you-see-this-4/",
-      "word_count": 4,
-      "reading_time_minutes": 1,
-      "content_hash": "731b0af0",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:18.247Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2091,
@@ -5538,7 +5301,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2093,
@@ -5601,7 +5365,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2094,
@@ -5663,7 +5428,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2095,
@@ -5726,7 +5492,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2097,
@@ -5788,7 +5555,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2099,
@@ -5850,7 +5618,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2100,
@@ -5915,69 +5684,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2101,
-      "wp_post_id": 4989,
-      "title": "This.",
-      "slug": "this-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-08-02T12:00:00Z",
-      "date_published_gmt": "2011-08-02T12:00:00Z",
-      "date_modified": "2011-08-02T16:50:58+00:00",
-      "date_modified_gmt": "2011-08-02T16:50:58+00:00",
-      "content": "<p>This.</p>\n\n\n\n<figure class=\"wp-block-embed\">\n<div class=\"wp-block-embed__wrapper\">\nhttp://lifehacker.com/5826449/lifehacker-pack-for-mac-our-list-of-the-best-free-mac-downloads?utm_medium=referral&amp;utm_source=pulsenews</div>\n</figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-4989-693716920a841\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=4989&amp;origin=learningischange.com&amp;obj_id=113784134-4989-693716920a841\" data-name=\"like-post-frame-113784134-4989-693716920a841\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "This. http://lifehacker.com/5826449/lifehacker-pack-for-mac-our-list-of-the-best-free-mac-downloads?utm_medium=referral&utm_source=pulsenews",
-      "excerpt": "This. http://lifehacker.com/5826449/lifehacker-pack-for-mac-our-list-of-the-best-free-mac-downloads?utm_medium=referral&utm_source=pulsenews",
-      "guid": "https://learningischange.com/2011/08/02/this-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/08/02/this-2/index.html",
-      "url": "https://learningischange.com/2011/08/02/this-2/",
-      "word_count": 2,
-      "reading_time_minutes": 1,
-      "content_hash": "-4649c77b",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:21.858Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2102,
@@ -6033,7 +5741,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2103,
@@ -6099,7 +5808,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2105,
@@ -6161,7 +5871,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2106,
@@ -6224,7 +5935,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2108,
@@ -6286,7 +5998,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2109,
@@ -6342,7 +6055,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2110,
@@ -6404,7 +6118,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2111,
@@ -6466,7 +6181,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2113,
@@ -6526,7 +6242,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2114,
@@ -6588,7 +6305,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2116,
@@ -6650,7 +6368,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2117,
@@ -6708,7 +6427,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2118,
@@ -6766,7 +6486,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2120,
@@ -6834,7 +6555,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2122,
@@ -6898,7 +6620,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2123,
@@ -6960,7 +6683,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2125,
@@ -7018,7 +6742,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2126,
@@ -7086,7 +6811,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2127,
@@ -7144,7 +6870,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2129,
@@ -7208,7 +6935,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2130,
@@ -7276,7 +7004,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2132,
@@ -7338,7 +7067,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2133,
@@ -7408,71 +7138,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2134,
-      "wp_post_id": 14099,
-      "title": "You see this?",
-      "slug": "you-see-this-3",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-08-18T12:00:00Z",
-      "date_published_gmt": "2011-08-18T12:00:00Z",
-      "date_modified": "2011-08-18T20:47:21+00:00",
-      "date_modified_gmt": "2011-08-18T20:47:21+00:00",
-      "content": "<p>You see this?</p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Yoon S. Lim</p>\n\n\n\n<p></p>\n\n\n\n<p>Page-Level Permission on Google Sites now! </p>\n\n\n\n<p><a href=\"http://is.gd/DY0Xpi\">http://is.gd/DY0Xpi</a> &lt;&lt; yes!</p>\n\n\n\n<figure class=\"wp-block-embed\">\n<div class=\"wp-block-embed__wrapper\">\nhttp://googledocs.blogspot.com/2011/08/better-control-in-google-sites-with.html</div>\n</figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14099-693716862d690\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14099&amp;origin=learningischange.com&amp;obj_id=113784134-14099-693716862d690\" data-name=\"like-post-frame-113784134-14099-693716862d690\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "You see this? Originally shared by Yoon S. Lim Page-Level Permission on Google Sites now! http://is.gd/DY0Xpi << yes! http://googledocs.blogspot.com/2011/08/better-control-in-google-sites-with.html",
-      "excerpt": "You see this? Originally shared by Yoon S. Lim Page-Level Permission on Google Sites now! http://is.gd/DY0Xpi << yes! http://googledocs.blogspot.com/2011/08/better-control-in-google-sites-with.html",
-      "guid": "https://learningischange.com/2011/08/18/you-see-this-3/",
-      "comment_status": "open",
-      "comment_count": 12,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/08/18/you-see-this-3/index.html",
-      "url": "https://learningischange.com/2011/08/18/you-see-this-3/",
-      "word_count": 19,
-      "reading_time_minutes": 1,
-      "content_hash": "-3fd412bb",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://is.gd/DY0Xpi"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:31.363Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2136,
@@ -7528,7 +7195,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2137,
@@ -7590,7 +7258,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2139,
@@ -7658,7 +7327,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2141,
@@ -7727,7 +7397,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2143,
@@ -7789,7 +7460,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2144,
@@ -7851,69 +7523,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2146,
-      "wp_post_id": 14098,
-      "title": "Benjamin Wilkoff hung out with 1 person.Ephram Wilkoff",
-      "slug": "benjamin-wilkoff-hung-out-with-1-personephram-wilkoff-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-09-07T12:00:00Z",
-      "date_published_gmt": "2011-09-07T12:00:00Z",
-      "date_modified": "2011-09-07T22:58:57+00:00",
-      "date_modified_gmt": "2011-09-07T22:58:57+00:00",
-      "content": "<p>Benjamin Wilkoff hung out with 1 person.Ephram Wilkoff</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14098-693716823f6df\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14098&amp;origin=learningischange.com&amp;obj_id=113784134-14098-693716823f6df\" data-name=\"like-post-frame-113784134-14098-693716823f6df\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out with 1 person.Ephram Wilkoff",
-      "excerpt": "Benjamin Wilkoff hung out with 1 person.Ephram Wilkoff",
-      "guid": "https://learningischange.com/2011/09/07/benjamin-wilkoff-hung-out-with-1-personephram-wilkoff-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/09/07/benjamin-wilkoff-hung-out-with-1-personephram-wilkoff-2/index.html",
-      "url": "https://learningischange.com/2011/09/07/benjamin-wilkoff-hung-out-with-1-personephram-wilkoff-2/",
-      "word_count": 8,
-      "reading_time_minutes": 1,
-      "content_hash": "-451e4c6f",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:34.662Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2147,
@@ -7975,7 +7586,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2149,
@@ -8037,7 +7649,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2152,
@@ -8099,7 +7712,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2153,
@@ -8161,7 +7775,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2155,
@@ -8229,7 +7844,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2157,
@@ -8285,7 +7901,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2158,
@@ -8351,7 +7968,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2159,
@@ -8419,7 +8037,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2160,
@@ -8487,7 +8106,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2162,
@@ -8549,7 +8169,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2163,
@@ -8611,7 +8232,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2164,
@@ -8667,7 +8289,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2165,
@@ -8729,7 +8352,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2167,
@@ -8791,7 +8415,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2168,
@@ -8847,7 +8472,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2169,
@@ -8909,7 +8535,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2170,
@@ -8974,7 +8601,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2171,
@@ -9036,7 +8664,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2173,
@@ -9096,7 +8725,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2174,
@@ -9158,7 +8788,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2176,
@@ -9223,7 +8854,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2178,
@@ -9281,7 +8913,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2179,
@@ -9345,7 +8978,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2180,
@@ -9407,7 +9041,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2182,
@@ -9471,73 +9106,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2184,
-      "wp_post_id": 14550,
-      "title": "So.",
-      "slug": "so-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-09-27T12:00:00Z",
-      "date_published_gmt": "2011-09-27T12:00:00Z",
-      "date_modified": "2011-09-27T19:14:07+00:00",
-      "date_modified_gmt": "2011-09-27T19:14:07+00:00",
-      "content": "<p>So. I didnât know this site existed before now. Pretty cool way to host a video discussion. Kind of exactly what I was looking for. Also, mobile app is pretty good too.</p>\n\n\n<p><a href=\"http://vyou.com/\" class=\"embedly-card\" data-card-recommend=\"0\" data-card-width=\"100%\">http://vyou.com/</a><a href=\"//cdn.embedly.com/widgets/platform.js\">//cdn.embedly.com/widgets/platform.js</a></p>\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14550-69371670c0d8e\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14550&amp;origin=learningischange.com&amp;obj_id=113784134-14550-69371670c0d8e\" data-name=\"like-post-frame-113784134-14550-69371670c0d8e\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "So. I didnât know this site existed before now. Pretty cool way to host a video discussion. Kind of exactly what I was looking for. Also, mobile app is pretty good too. http://vyou.com///cdn.embedly.com/widgets/platform.js",
-      "excerpt": "So. I didnât know this site existed before now. Pretty cool way to host a video discussion. Kind of exactly what I was looking for. Also, mobile app is pretty good too. http://vyou.com///cdn.embedly...",
-      "guid": "https://learningischange.com/2011/09/27/so-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/09/27/so-2/index.html",
-      "url": "https://learningischange.com/2011/09/27/so-2/",
-      "word_count": 33,
-      "reading_time_minutes": 1,
-      "content_hash": "5402968",
-      "images": [],
-      "links": {
-        "internal": [
-          "//cdn.embedly.com/widgets/platform.js"
-        ],
-        "external": [
-          "http://vyou.com/"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:45.726Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2185,
@@ -9593,7 +9163,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2186,
@@ -9661,7 +9232,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2187,
@@ -9723,7 +9295,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2188,
@@ -9785,7 +9358,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2190,
@@ -9847,7 +9421,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2191,
@@ -9909,7 +9484,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2192,
@@ -9971,139 +9547,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2193,
-      "wp_post_id": 4610,
-      "title": "Did you see this?",
-      "slug": "did-you-see-this-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-09-29T12:00:00Z",
-      "date_published_gmt": "2011-09-29T12:00:00Z",
-      "date_modified": "2011-09-29T16:59:05+00:00",
-      "date_modified_gmt": "2011-09-29T16:59:05+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2011/09/baseballfinal-3-1.jpg?w=1225\" alt=\"\"></figure>\n\n\n\n<p>Did you see this?</p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Tom Anderson</p>\n\n\n\n<p></p>\n\n\n\n<p><strong>Why I Donât Want a Job + Why I love Google+</strong></p>\n\n\n\n<p></p>\n\n\n\n<p>A decent number of <strong>people seem confused, mystified and / or generally have the wrong impression about my âreappearanceâ in the land of the DUB-DUB-DUB (www)</strong>. Thereâs probably a story to tell of my JD Salinger-to- Jeff Jarvis transformation (recluse to sharing enthusiast), and maybe some day Iâll tell it. But for right now, Iâd like to dispel a story (or set of ideas) that seem to be going around quite a bit. There are three variants of a similar idea, which, when combined with three social sites, form <strong>9 possible untruths</strong>: </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>1. I work for Google+</strong> (or Facebook or Twitter)</p>\n\n\n\n<p><strong>2. I want to work for Google+</strong> (or Facebook or Twitter)</p>\n\n\n\n<p><strong>3. Iâm secretly being paid by Google+</strong> (or Facebook or Twitter)</p>\n\n\n\n<p></p>\n\n\n\n<p>The truth is, I donât want a âjob.â Iâve never thought about my life in terms of âjobs.â Iâve thought about my life in terms of whatâs interesting to me. Thatâs how I approached things when I ate a soup kitchens and couldnât afford a candy bar, and thatâs how I approach things now. Of course itâs a lot easier to do that now that Iâll never need to worry about money againâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>In any case, since people also seem to have trouble grappling with the idea that I donât want to start another dotcom, or with the fact that my bio says âretired,â <strong>I thought Iâd give you an idea of a âjobâ that sounds appealing to me.</strong> Keep in mind, this is just <strong>one</strong> of my dream âjobâ scenarios. Iâm putting âjobsâ in quotes, because, I think youâll see that I donât really think of these sorts of things as âjobsâ â I think more about how to make life more interestingâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Before laying it out, <strong>itâs best to give a little historyâ¦</strong> </p>\n\n\n\n<p></p>\n\n\n\n<p>In early 2009, I left MySpace. In 2010, free from the concerns of work and necessity, I decided to return to <strong>one of my great loves, Baseball.</strong> (Capital B.) I had been a huge baseball fan since the 1998 season. In 1999, while living abroad, I even listened to every SF Giants game on Internet radio and printed their boxscores to use as wallpaper for my miserable little Dostoevskian flat. My beloved Giants reached the World Series in 2002, but alas did not win. </p>\n\n\n\n<p></p>\n\n\n\n<p>In any case, in 2003, MySpace happened. For the next six years, I literally did not watch a single game or hear anything about the Giants. I even missed the Barry Bonds scandal. I just didnât have time to think about it. (During this time (2003-2008) I was basically unaware of pop culture in all its forms, except as it was delivered to me through MySpace.) So, it was with great pleasure that I returned to my Giants in 2010 â¦ Just in time, I learned, for the to not suck again. Theyâd absolutely sucked for the 6 years I was busy not paying attention. [_On a side note (baseball fans only): at first, I wondered if Iâd have any emotional connection at all to the team, since not a single player was left from the players I knew in 2002. Lo and behold, with the strangeness that is sport team allegiance, I fell right back into my groove. I had to learn to pronounce crazy names like âLincecumâ and learned that my Closer (who used to be Rob Nenn) now was a Twitter-user who apparently had caused a ruckus and shut down his Twitter account so he could focus on baseball (fear the beard!)._] </p>\n\n\n\n<p></p>\n\n\n\n<p>So in 2010 while I was going to nearly every game, traveling around the country visiting all the baseball parks I would never had the time or money to visit before (visiting them all is on my bucket list), and idea began to form in my mindâ¦ (And some of you might call this a âjobâ!) </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>What if I could start my own MLB baseball team?</strong> And what if the team was in Las Vegas (one of my new homes â I live in several cities now). Now of course this idea was just me being selfish at first â I love Vegas, and I want baseball there. Iâd rather not travel to every city to see games. And the only way to break the hold my Giants had for me was to literally create my own team. But after the selfish thought, the more I considered it, the more I thought Las Vegas and baseball were perfect for each other. The experience of baseball would be so cool in Sin City! </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>Las Vegas Baseball</strong>: Imagine iPads on the back of every seat allowing you to bet, not just on the winner, but on every facet of the game: next pitch, strike or ball? will this batter fly out, ground out, hit a homerun? (Extra income, no other team can profit from this!) Now imagine visiting tourists looking for something to do during the day before they go out and party â foreigners from all over the world would get to experience âAmerican baseballâ in an environment that wouldnât bore them. (The stadiumâs always full!) Next imagine the truckloads of merchandise sold to tourists and locals alike (yes there is such thing as a local community in Vegas!). A Las Vegas baseball team shirt would be so much cooler than a Las Vegas sign shirt, and even cooler than a fridge magnet. Lastly, imagine the price box suites would go for in Vegas â a town where every night of the week people routinely throw down $10K for a table thatâs main privilege is the right to buy alcohol at a 900% markup.</p>\n\n\n\n<p></p>\n\n\n\n<p>If youâre more of a purist and the vision of gambling, tourists and big money box suites are clouding your vision of my fantasy baseball park, forget everything Iâve written and imagine this â imagine an icy cold beer on a hot summer day, served to you with hot dogs and crackerjacks from the most beautiful girl youâve ever seen in a ballpark. Beautiful girls from all over the country move to Vegas to serve drinks at day clubs, night clubs and barsâ¦ Heck, we could even have a section for the ladies where Thunder from Down Under men serve drinks. So, anywayâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Letâs take action, Tom thought. At first, I started buying some books about the business of baseball. There are quite a few, actually, mainly focusing on the idea of whether sports teams actually help or hurt communities. (This is a topic of public import, since many localities decide to fund stadium construction via tax dollars.) From this research, I got a general understanding of baseball business and a rough estimate that starting a team would cost around $600 million â give or take $300 mil, depending on whether the city will fund the stadium. What do you know, a little more research reveals that Las Vegas city officials are dying to have a baseball team thereâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>Once I got a sense for the cost, I immediately thought â what to do? I donât want to risk all my own money doing this. What if I lose it all and have to go do real work again? No way. I need investors. But if I was actually able to raise the money, why would anyone need me? What did I bring to the table besides the original idea (worthless) and my money (also pretty worthless if Iâm raising money from others). Then I came up with a more nuanced idea. And I realized it was probably unique enough that no one else would want or care to bring it all together. Thus, I would be making myself valuable for being âthe deal guyâ â something I never aspired to be. But hey, this is baseball, and I want my own team. </p>\n\n\n\n<p></p>\n\n\n\n<p>So, the more nuanced ideaâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>For years, Iâd been a follower of Bill James, the founder of a âscienceâ of baseball called Sabremetrics. <strong>The idea behind Sabremetrics is that you can analyze baseball to uncover âobjective knowledge.â</strong> Baseball has always been a stats-heavy sport. But Bill James came up with new stats, new âeventsâ to be measured, and by doing so, he uncovered things about baseball that formerly, we could only use our gut to understand. Itâs easy to measure how many hits a batter gets, but how do you measure how good a defensive player is? It was clear to me, that the technical innovation of tracking players &amp; the ball on video coupled with a James-ian approach was ripe for an explosion of even more data about baseball, thus unlocking even more secrets.</p>\n\n\n\n<p></p>\n\n\n\n<p>Now why would one care about these this data? Well, because it can help you to WIN! </p>\n\n\n\n<p></p>\n\n\n\n<p>So, my friends, the idea was this: <strong>gather together enough tech nerd-ness with enough silly dotcom payout money and create a </strong><strong>âbaseball think tankâ</strong><strong> that owns the Las Vegas baseball team.</strong> You might think this was some simple nerds against jocks fantasy. Not true. With smart thinkers in technology (camera / recording visual) and analysis (thinking about how to measure and interpret the recorded data to create meaningful new statistical categories) we come up with metrics that not only allow us to scout and choose the best players, but we also learn how to best position our defense, help batters predict what pitch is coming, and help coaches predict what the opposing coach will do in a given situation. Who knows, our tech group may even break ground in kinesthetic research to help players with their pitch and swing mechanics? The sky was really the limit if you invested the money. On top of all this, think how this data would be useful for our gambling business model? Since we â the owner of âbaseball think tankâ â know baseball better than any other living creature, we can set the odds for the bets we take, thus insuring we donât lose it all to two-bit gamblers who think they know baseball better than we do. </p>\n\n\n\n<p></p>\n\n\n\n<p>As I started to poke around and send feelers out about the idea, I learned that Rupert Murdoch (the man who bought my company MySpace) used to own the Dodgers. (Wow, the things you learn with a little researchâ¦!) And it also turns out that Rupert (News Corp) also owned STATS, Inc, a company that tracked baseball stats based on Bill James SABR principles. In fact, STATS, Inc was first a grassroots movement formed at Bill James suggestion in late 70s, and a company he became part of in the 80s. And Rupert owns it!? Wow, this was all starting to look too easy â it was as if I had all the connections to make this nutty idea take off. âIâll just call Uncle Rupe and get this thing rolling!â, I thought. Actually, I wondered to myself, maybe Rupert had the same idea when he bought the Dodgers, why would he even own this STATS company? It seemed an unusual acquisition for Newscorp. Turns out, no he hadnât been thinking about it. And, unfortunately, Rupert was done with baseball in general. Idea squashed? Nope. No problem. Rupert could still teach me all about profiting from television rights. Having his experience was still another ace in the hole, even if he wasnât interested. </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>So with my plan in hand, I was preparing to start approaching some dotcom billionaires, but only in a casual way.</strong> Didnât want to scare them. This was all in good fun. My initial dream team was Mark Cuban (for the balls), Larry Page &amp; Sergey Brin (for the brains), +Ron Conway (for the network), +George Will (the writer, for the respectability) and maybe even +Bill James himself (for the creative vision). What a dream team, eh?</p>\n\n\n\n<p></p>\n\n\n\n<p>WOW this post is getting long, OK, promise going to wrap this upâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>So, why arenât you buying tickets for a Las Vegas baseball game this year? Well, I read a little book called Money Ball, by Michael Lewis (<a href=\"http://amzn.to/q0Xt0X\">http://amzn.to/q0Xt0X</a>). In it, he describes how the Oakland Aâs (a team with very little money), was able to use similar strategies in stat analysis (minus the technology piece Iâd mentioned) to capitalize on âmarket efficienciesâ in baseball players. By favoring .OBP (on base percentage) over .BA (batting average), the Aâs found that they could get players on the cheap, and, as it turns out, .OBP was a better statistic to pay attention to than batting average, because it was severely undervalued in the player-trade market. This unique approach allowed the the Oakland Aâs to be competitive even though they had a tiny payroll. Uh-oh, I thought, this Billy Beane guy (the Aâs general manager) is on to my idea. But thatâs no problem, I rationalized, itâs actually just confirmation of the basic idea. While other teams are stuck in the past scouting players cause they look like they were âbuilt to play baseball,â weâll have our secret weapon that nobody â not even Billy Beane â is thinking about. </p>\n\n\n\n<p></p>\n\n\n\n<p>But the more I started to look into, the more I realized that the Billy Beane / Sabremetric mindset was permeating other teamsâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Like any startup (which Billy Beaneâs internal team really was a âstartupâ of sorts), the people involved eventually and gradually branch out and take their knowledge elsewhere. Turns out that people trained in the Oakland Aâs system had taken the ideas to other teams. The Boston Red Sox had even hired Bill James himself. Then, right in the middle of my idea, it was announced that Moneyball (great book, btw) was set to become a major motion picture starring Brad Pitt (and written by Aaron Sorkin, creator of The Social Network no less). <strong>(Side note: Why is this Aaron Sorkin guy always making movies about people who can do things better than I can!?)</strong> &lt;â <em>best part of post, btw</em> (Side Side Note: Canât wait to see the movie!)</p>\n\n\n\n<p></p>\n\n\n\n<p>So, to make a long story short, I started to conclude that the power of Brad Pitt (just think of the way an announcer says his name in a theatre, BRADDD PITTTT) was going to make my semi-serious idea look like I was trying to ride the wave of some Hollywood fantasy about baseball. That, coupled with the idea that most teams had moved beyond the old model of baseball scouting baseball and into the new era of statistical analysis, led me to let my fun idea drift away. I opened the lines of communication with Mark Cuban , but I never even mentioned this idea to him.. (Hey Mark, what do you think of it now that Iâve told the world?) </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>So in the end, my month or so of dreaming about this was sorta like a gigantic homerun destined for the upper deck that had just a little too much hang time. Meaning my homerun was just a fly ball and it landed squarely in the centerfielders mitt, just short of the wall. Meaning I was out. O-U-T.</strong> I gave up on the idea and started thinking about other thingsâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>So two lessons here. <strong>One, I had fun with it, which I encourage you to do with all your dreams and hopes for your work life, which, after all, takes up most of the time in your regular life. Two, when you pursue whatâs fun for you, giving up on an idea is not a waste of time. Not at all. If you pursue things you love, you will enjoy the journey, and the outcome is not so important.</strong> I had great fun thinking of my baseball dream âjob.â </p>\n\n\n\n<p></p>\n\n\n\n<p>And when you wonder, why does Tomâs bio say âEnjoying being retiredâ or why does he say he doesnât want a job? Just remember my little (OK, my massive) baseball story. I donât structure my life around a âjobâ â for me, itâs about having fun. I âworkâ on things all the time. But theyâre things <strong>I</strong> want to work on. A âjobâ probably just isnât the right word for anything Iâve done in my life. I had a richly satisfying life when I was unknown and penniless can you imagine how much fun I have now that I donât have to worry about moneyâ¦? </p>\n\n\n\n<p></p>\n\n\n\n<p>So, uh yeahâ¦ To bring this back to the beginning, <strong>why exactly do I spend time on Google+ then? Because itâs one of the funnest things going right now.</strong> Itâs brought wonderful things into my life. In fact, itâs given me a new hobby (photography) which, if things continue like they have been, will probably become a major force in my life. (And also the reason I havenât posted much in the last few daysâ¦!) </p>\n\n\n\n<p></p>\n\n\n\n<p>Note: I took the attached photo a few nights ago at one of the last Giants games of the season, here in Los Angeles. Not the greatest shot with that net in the way, but hey itâs baseball â check out some of the other shots Iâve posted. ð</p>\n\n\n\n<p></p>\n\n\n\n<p>Note 2: If youâve read this far, you deserve a cookie and not the ad-tracking kind.</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-4610-6937166c3cec8\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=4610&amp;origin=learningischange.com&amp;obj_id=113784134-4610-6937166c3cec8\" data-name=\"like-post-frame-113784134-4610-6937166c3cec8\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Did you see this? Originally shared by Tom Anderson Why I Donât Want a Job + Why I love Google+ A decent number of people seem confused, mystified and / or generally have the wrong impression about my âreappearanceâ in the land of the DUB-DUB-DUB (www). Thereâs probably a story to tell of my JD Salinger-to- Jeff Jarvis transformation (recluse to sharing enthusiast), and maybe some day Iâll tell it. But for right now, Iâd like to dispel a story (or set of ideas) that seem to be going around quite a bit. There are three variants of a similar idea, which, when combined with three social sites, form 9 possible untruths: 1. I work for Google+ (or Facebook or Twitter) 2. I want to work for Google+ (or Facebook or Twitter) 3. Iâm secretly being paid by Google+ (or Facebook or Twitter) The truth is, I donât want a âjob.â Iâve never thought about my life in terms of âjobs.â Iâve thought about my life in terms of whatâs interesting to me. Thatâs how I approached things when I ate a soup kitchens and couldnât afford a candy bar, and thatâs how I approach things now. Of course itâs a lot easier to do that now that Iâll never need to worry about money againâ¦ In any case, since people also seem to have trouble grappling with the idea that I donât want to start another dotcom, or with the fact that my bio says âretired,â I thought Iâd give you an idea of a âjobâ that sounds appealing to me. Keep in mind, this is just one of my dream âjobâ scenarios. Iâm putting âjobsâ in quotes, because, I think youâll see that I donât really think of these sorts of things as âjobsâ â I think more about how to make life more interestingâ¦ Before laying it out, itâs best to give a little historyâ¦ In early 2009, I left MySpace. In 2010, free from the concerns of work and necessity, I decided to return to one of my great loves, Baseball. (Capital B.) I had been a huge baseball fan since the 1998 season. In 1999, while living abroad, I even listened to every SF Giants game on Internet radio and printed their boxscores to use as wallpaper for my miserable little Dostoevskian flat. My beloved Giants reached the World Series in 2002, but alas did not win. In any case, in 2003, MySpace happened. For the next six years, I literally did not watch a single game or hear anything about the Giants. I even missed the Barry Bonds scandal. I just didnât have time to think about it. (During this time (2003-2008) I was basically unaware of pop culture in all its forms, except as it was delivered to me through MySpace.) So, it was with great pleasure that I returned to my Giants in 2010 â¦ Just in time, I learned, for the to not suck again. Theyâd absolutely sucked for the 6 years I was busy not paying attention. [_On a side note (baseball fans only): at first, I wondered if Iâd have any emotional connection at all to the team, since not a single player was left from the players I knew in 2002. Lo and behold, with the strangeness that is sport team allegiance, I fell right back into my groove. I had to learn to pronounce crazy names like âLincecumâ and learned that my Closer (who used to be Rob Nenn) now was a Twitter-user who apparently had caused a ruckus and shut down his Twitter account so he could focus on baseball (fear the beard!)._] So in 2010 while I was going to nearly every game, traveling around the country visiting all the baseball parks I would never had the time or money to visit before (visiting them all is on my bucket list), and idea began to form in my mindâ¦ (And some of you might call this a âjobâ!) What if I could start my own MLB baseball team? And what if the team was in Las Vegas (one of my new homes â I live in several cities now). Now of course this idea was just me being selfish at first â I love Vegas, and I want baseball there. Iâd rather not travel to every city to see games. And the only way to break the hold my Giants had for me was to literally create my own team. But after the selfish thought, the more I considered it, the more I thought Las Vegas and baseball were perfect for each other. The experience of baseball would be so cool in Sin City! Las Vegas Baseball: Imagine iPads on the back of every seat allowing you to bet, not just on the winner, but on every facet of the game: next pitch, strike or ball? will this batter fly out, ground out, hit a homerun? (Extra income, no other team can profit from this!) Now imagine visiting tourists looking for something to do during the day before they go out and party â foreigners from all over the world would get to experience âAmerican baseballâ in an environment that wouldnât bore them. (The stadiumâs always full!) Next imagine the truckloads of merchandise sold to tourists and locals alike (yes there is such thing as a local community in Vegas!). A Las Vegas baseball team shirt would be so much cooler than a Las Vegas sign shirt, and even cooler than a fridge magnet. Lastly, imagine the price box suites would go for in Vegas â a town where every night of the week people routinely throw down $10K for a table thatâs main privilege is the right to buy alcohol at a 900% markup. If youâre more of a purist and the vision of gambling, tourists and big money box suites are clouding your vision of my fantasy baseball park, forget everything Iâve written and imagine this â imagine an icy cold beer on a hot summer day, served to you with hot dogs and crackerjacks from the most beautiful girl youâve ever seen in a ballpark. Beautiful girls from all over the country move to Vegas to serve drinks at day clubs, night clubs and barsâ¦ Heck, we could even have a section for the ladies where Thunder from Down Under men serve drinks. So, anywayâ¦ Letâs take action, Tom thought. At first, I started buying some books about the business of baseball. There are quite a few, actually, mainly focusing on the idea of whether sports teams actually help or hurt communities. (This is a topic of public import, since many localities decide to fund stadium construction via tax dollars.) From this research, I got a general understanding of baseball business and a rough estimate that starting a team would cost around $600 million â give or take $300 mil, depending on whether the city will fund the stadium. What do you know, a little more research reveals that Las Vegas city officials are dying to have a baseball team thereâ¦ Once I got a sense for the cost, I immediately thought â what to do? I donât want to risk all my own money doing this. What if I lose it all and have to go do real work again? No way. I need investors. But if I was actually able to raise the money, why would anyone need me? What did I bring to the table besides the original idea (worthless) and my money (also pretty worthless if Iâm raising money from others). Then I came up with a more nuanced idea. And I realized it was probably unique enough that no one else would want or care to bring it all together. Thus, I would be making myself valuable for being âthe deal guyâ â something I never aspired to be. But hey, this is baseball, and I want my own team. So, the more nuanced ideaâ¦ For years, Iâd been a follower of Bill James, the founder of a âscienceâ of baseball called Sabremetrics. The idea behind Sabremetrics is that you can analyze baseball to uncover âobjective knowledge.â Baseball has always been a stats-heavy sport. But Bill James came up with new stats, new âeventsâ to be measured, and by doing so, he uncovered things about baseball that formerly, we could only use our gut to understand. Itâs easy to measure how many hits a batter gets, but how do you measure how good a defensive player is? It was clear to me, that the technical innovation of tracking players & the ball on video coupled with a James-ian approach was ripe for an explosion of even more data about baseball, thus unlocking even more secrets. Now why would one care about these this data? Well, because it can help you to WIN! So, my friends, the idea was this: gather together enough tech nerd-ness with enough silly dotcom payout money and create a âbaseball think tankâ that owns the Las Vegas baseball team. You might think this was some simple nerds against jocks fantasy. Not true. With smart thinkers in technology (camera / recording visual) and analysis (thinking about how to measure and interpret the recorded data to create meaningful new statistical categories) we come up with metrics that not only allow us to scout and choose the best players, but we also learn how to best position our defense, help batters predict what pitch is coming, and help coaches predict what the opposing coach will do in a given situation. Who knows, our tech group may even break ground in kinesthetic research to help players with their pitch and swing mechanics? The sky was really the limit if you invested the money. On top of all this, think how this data would be useful for our gambling business model? Since we â the owner of âbaseball think tankâ â know baseball better than any other living creature, we can set the odds for the bets we take, thus insuring we donât lose it all to two-bit gamblers who think they know baseball better than we do. As I started to poke around and send feelers out about the idea, I learned that Rupert Murdoch (the man who bought my company MySpace) used to own the Dodgers. (Wow, the things you learn with a little researchâ¦!) And it also turns out that Rupert (News Corp) also owned STATS, Inc, a company that tracked baseball stats based on Bill James SABR principles. In fact, STATS, Inc was first a grassroots movement formed at Bill James suggestion in late 70s, and a company he became part of in the 80s. And Rupert owns it!? Wow, this was all starting to look too easy â it was as if I had all the connections to make this nutty idea take off. âIâll just call Uncle Rupe and get this thing rolling!â, I thought. Actually, I wondered to myself, maybe Rupert had the same idea when he bought the Dodgers, why would he even own this STATS company? It seemed an unusual acquisition for Newscorp. Turns out, no he hadnât been thinking about it. And, unfortunately, Rupert was done with baseball in general. Idea squashed? Nope. No problem. Rupert could still teach me all about profiting from television rights. Having his experience was still another ace in the hole, even if he wasnât interested. So with my plan in hand, I was preparing to start approaching some dotcom billionaires, but only in a casual way. Didnât want to scare them. This was all in good fun. My initial dream team was Mark Cuban (for the balls), Larry Page & Sergey Brin (for the brains), +Ron Conway (for the network), +George Will (the writer, for the respectability) and maybe even +Bill James himself (for the creative vision). What a dream team, eh? WOW this post is getting long, OK, promise going to wrap this upâ¦ So, why arenât you buying tickets for a Las Vegas baseball game this year? Well, I read a little book called Money Ball, by Michael Lewis (http://amzn.to/q0Xt0X). In it, he describes how the Oakland Aâs (a team with very little money), was able to use similar strategies in stat analysis (minus the technology piece Iâd mentioned) to capitalize on âmarket efficienciesâ in baseball players. By favoring .OBP (on base percentage) over .BA (batting average), the Aâs found that they could get players on the cheap, and, as it turns out, .OBP was a better statistic to pay attention to than batting average, because it was severely undervalued in the player-trade market. This unique approach allowed the the Oakland Aâs to be competitive even though they had a tiny payroll. Uh-oh, I thought, this Billy Beane guy (the Aâs general manager) is on to my idea. But thatâs no problem, I rationalized, itâs actually just confirmation of the basic idea. While other teams are stuck in the past scouting players cause they look like they were âbuilt to play baseball,â weâll have our secret weapon that nobody â not even Billy Beane â is thinking about. But the more I started to look into, the more I realized that the Billy Beane / Sabremetric mindset was permeating other teamsâ¦ Like any startup (which Billy Beaneâs internal team really was a âstartupâ of sorts), the people involved eventually and gradually branch out and take their knowledge elsewhere. Turns out that people trained in the Oakland Aâs system had taken the ideas to other teams. The Boston Red Sox had even hired Bill James himself. Then, right in the middle of my idea, it was announced that Moneyball (great book, btw) was set to become a major motion picture starring Brad Pitt (and written by Aaron Sorkin, creator of The Social Network no less). (Side note: Why is this Aaron Sorkin guy always making movies about people who can do things better than I can!?) <â best part of post, btw (Side Side Note: Canât wait to see the movie!) So, to make a long story short, I started to conclude that the power of Brad Pitt (just think of the way an announcer says his name in a theatre, BRADDD PITTTT) was going to make my semi-serious idea look like I was trying to ride the wave of some Hollywood fantasy about baseball. That, coupled with the idea that most teams had moved beyond the old model of baseball scouting baseball and into the new era of statistical analysis, led me to let my fun idea drift away. I opened the lines of communication with Mark Cuban , but I never even mentioned this idea to him.. (Hey Mark, what do you think of it now that Iâve told the world?) So in the end, my month or so of dreaming about this was sorta like a gigantic homerun destined for the upper deck that had just a little too much hang time. Meaning my homerun was just a fly ball and it landed squarely in the centerfielders mitt, just short of the wall. Meaning I was out. O-U-T. I gave up on the idea and started thinking about other thingsâ¦ So two lessons here. One, I had fun with it, which I encourage you to do with all your dreams and hopes for your work life, which, after all, takes up most of the time in your regular life. Two, when you pursue whatâs fun for you, giving up on an idea is not a waste of time. Not at all. If you pursue things you love, you will enjoy the journey, and the outcome is not so important. I had great fun thinking of my baseball dream âjob.â And when you wonder, why does Tomâs bio say âEnjoying being retiredâ or why does he say he doesnât want a job? Just remember my little (OK, my massive) baseball story. I donât structure my life around a âjobâ â for me, itâs about having fun. I âworkâ on things all the time. But theyâre things I want to work on. A âjobâ probably just isnât the right word for anything Iâve done in my life. I had a richly satisfying life when I was unknown and penniless can you imagine how much fun I have now that I donât have to worry about moneyâ¦? So, uh yeahâ¦ To bring this back to the beginning, why exactly do I spend time on Google+ then? Because itâs one of the funnest things going right now. Itâs brought wonderful things into my life. In fact, itâs given me a new hobby (photography) which, if things continue like they have been, will probably become a major force in my life. (And also the reason I havenât posted much in the last few daysâ¦!) Note: I took the attached photo a few nights ago at one of the last Giants games of the season, here in Los Angeles. Not the greatest shot with that net in the way, but hey itâs baseball â check out some of the other shots Iâve posted. ð Note 2: If youâve read this far, you deserve a cookie and not the ad-tracking kind.",
-      "excerpt": "Did you see this? Originally shared by Tom Anderson Why I Donât Want a Job + Why I love Google+ A decent number of people seem confused, mystified and / or generally have the wrong impression about ...",
-      "guid": "https://learningischange.com/2011/09/29/did-you-see-this-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/09/29/did-you-see-this-2/index.html",
-      "url": "https://learningischange.com/2011/09/29/did-you-see-this-2/",
-      "word_count": 2866,
-      "reading_time_minutes": 15,
-      "content_hash": "-31f60197",
-      "images": [
-        "https://i0.wp.com/learningischange.com/wp-content/uploads/2011/09/baseballfinal-3-1.jpg?w=1225"
-      ],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://amzn.to/q0Xt0X"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:48.209Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 2194,
-      "wp_post_id": 14685,
-      "title": "Did you see this?",
-      "slug": "did-you-see-this-3",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2011-09-29T12:00:00Z",
-      "date_published_gmt": "2011-09-29T12:00:00Z",
-      "date_modified": "2011-09-29T16:59:05+00:00",
-      "date_modified_gmt": "2011-09-29T16:59:05+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh4.googleusercontent.com/-hgG7DIvyxhI/ToSaaM2zS8I/AAAAAAAAnJQ/j6FPW92-3fQ/s0/baseballfinal-3.jpg?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>Did you see this?</p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Tom Anderson</p>\n\n\n\n<p></p>\n\n\n\n<p><strong>Why I Donât Want a Job + Why I love Google+</strong></p>\n\n\n\n<p></p>\n\n\n\n<p>A decent number of <strong>people seem confused, mystified and / or generally have the wrong impression about my âreappearanceâ in the land of the DUB-DUB-DUB (www)</strong>. Thereâs probably a story to tell of my JD Salinger-to- Jeff Jarvis transformation (recluse to sharing enthusiast), and maybe some day Iâll tell it. But for right now, Iâd like to dispel a story (or set of ideas) that seem to be going around quite a bit. There are three variants of a similar idea, which, when combined with three social sites, form <strong>9 possible untruths</strong>: </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>1. I work for Google+</strong> (or Facebook or Twitter)</p>\n\n\n\n<p><strong>2. I want to work for Google+</strong> (or Facebook or Twitter)</p>\n\n\n\n<p><strong>3. Iâm secretly being paid by Google+</strong> (or Facebook or Twitter)</p>\n\n\n\n<p></p>\n\n\n\n<p>The truth is, I donât want a âjob.â Iâve never thought about my life in terms of âjobs.â Iâve thought about my life in terms of whatâs interesting to me. Thatâs how I approached things when I ate a soup kitchens and couldnât afford a candy bar, and thatâs how I approach things now. Of course itâs a lot easier to do that now that Iâll never need to worry about money againâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>In any case, since people also seem to have trouble grappling with the idea that I donât want to start another dotcom, or with the fact that my bio says âretired,â <strong>I thought Iâd give you an idea of a âjobâ that sounds appealing to me.</strong> Keep in mind, this is just <strong>one</strong> of my dream âjobâ scenarios. Iâm putting âjobsâ in quotes, because, I think youâll see that I donât really think of these sorts of things as âjobsâ â I think more about how to make life more interestingâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Before laying it out, <strong>itâs best to give a little historyâ¦</strong> </p>\n\n\n\n<p></p>\n\n\n\n<p>In early 2009, I left MySpace. In 2010, free from the concerns of work and necessity, I decided to return to <strong>one of my great loves, Baseball.</strong> (Capital B.) I had been a huge baseball fan since the 1998 season. In 1999, while living abroad, I even listened to every SF Giants game on Internet radio and printed their boxscores to use as wallpaper for my miserable little Dostoevskian flat. My beloved Giants reached the World Series in 2002, but alas did not win. </p>\n\n\n\n<p></p>\n\n\n\n<p>In any case, in 2003, MySpace happened. For the next six years, I literally did not watch a single game or hear anything about the Giants. I even missed the Barry Bonds scandal. I just didnât have time to think about it. (During this time (2003-2008) I was basically unaware of pop culture in all its forms, except as it was delivered to me through MySpace.) So, it was with great pleasure that I returned to my Giants in 2010 â¦ Just in time, I learned, for the to not suck again. Theyâd absolutely sucked for the 6 years I was busy not paying attention. [_On a side note (baseball fans only): at first, I wondered if Iâd have any emotional connection at all to the team, since not a single player was left from the players I knew in 2002. Lo and behold, with the strangeness that is sport team allegiance, I fell right back into my groove. I had to learn to pronounce crazy names like âLincecumâ and learned that my Closer (who used to be Rob Nenn) now was a Twitter-user who apparently had caused a ruckus and shut down his Twitter account so he could focus on baseball (fear the beard!)._] </p>\n\n\n\n<p></p>\n\n\n\n<p>So in 2010 while I was going to nearly every game, traveling around the country visiting all the baseball parks I would never had the time or money to visit before (visiting them all is on my bucket list), and idea began to form in my mindâ¦ (And some of you might call this a âjobâ!) </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>What if I could start my own MLB baseball team?</strong> And what if the team was in Las Vegas (one of my new homes â I live in several cities now). Now of course this idea was just me being selfish at first â I love Vegas, and I want baseball there. Iâd rather not travel to every city to see games. And the only way to break the hold my Giants had for me was to literally create my own team. But after the selfish thought, the more I considered it, the more I thought Las Vegas and baseball were perfect for each other. The experience of baseball would be so cool in Sin City! </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>Las Vegas Baseball</strong>: Imagine iPads on the back of every seat allowing you to bet, not just on the winner, but on every facet of the game: next pitch, strike or ball? will this batter fly out, ground out, hit a homerun? (Extra income, no other team can profit from this!) Now imagine visiting tourists looking for something to do during the day before they go out and party â foreigners from all over the world would get to experience âAmerican baseballâ in an environment that wouldnât bore them. (The stadiumâs always full!) Next imagine the truckloads of merchandise sold to tourists and locals alike (yes there is such thing as a local community in Vegas!). A Las Vegas baseball team shirt would be so much cooler than a Las Vegas sign shirt, and even cooler than a fridge magnet. Lastly, imagine the price box suites would go for in Vegas â a town where every night of the week people routinely throw down $10K for a table thatâs main privilege is the right to buy alcohol at a 900% markup.</p>\n\n\n\n<p></p>\n\n\n\n<p>If youâre more of a purist and the vision of gambling, tourists and big money box suites are clouding your vision of my fantasy baseball park, forget everything Iâve written and imagine this â imagine an icy cold beer on a hot summer day, served to you with hot dogs and crackerjacks from the most beautiful girl youâve ever seen in a ballpark. Beautiful girls from all over the country move to Vegas to serve drinks at day clubs, night clubs and barsâ¦ Heck, we could even have a section for the ladies where Thunder from Down Under men serve drinks. So, anywayâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Letâs take action, Tom thought. At first, I started buying some books about the business of baseball. There are quite a few, actually, mainly focusing on the idea of whether sports teams actually help or hurt communities. (This is a topic of public import, since many localities decide to fund stadium construction via tax dollars.) From this research, I got a general understanding of baseball business and a rough estimate that starting a team would cost around $600 million â give or take $300 mil, depending on whether the city will fund the stadium. What do you know, a little more research reveals that Las Vegas city officials are dying to have a baseball team thereâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>Once I got a sense for the cost, I immediately thought â what to do? I donât want to risk all my own money doing this. What if I lose it all and have to go do real work again? No way. I need investors. But if I was actually able to raise the money, why would anyone need me? What did I bring to the table besides the original idea (worthless) and my money (also pretty worthless if Iâm raising money from others). Then I came up with a more nuanced idea. And I realized it was probably unique enough that no one else would want or care to bring it all together. Thus, I would be making myself valuable for being âthe deal guyâ â something I never aspired to be. But hey, this is baseball, and I want my own team. </p>\n\n\n\n<p></p>\n\n\n\n<p>So, the more nuanced ideaâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>For years, Iâd been a follower of Bill James, the founder of a âscienceâ of baseball called Sabremetrics. <strong>The idea behind Sabremetrics is that you can analyze baseball to uncover âobjective knowledge.â</strong> Baseball has always been a stats-heavy sport. But Bill James came up with new stats, new âeventsâ to be measured, and by doing so, he uncovered things about baseball that formerly, we could only use our gut to understand. Itâs easy to measure how many hits a batter gets, but how do you measure how good a defensive player is? It was clear to me, that the technical innovation of tracking players &amp; the ball on video coupled with a James-ian approach was ripe for an explosion of even more data about baseball, thus unlocking even more secrets.</p>\n\n\n\n<p></p>\n\n\n\n<p>Now why would one care about these this data? Well, because it can help you to WIN! </p>\n\n\n\n<p></p>\n\n\n\n<p>So, my friends, the idea was this: <strong>gather together enough tech nerd-ness with enough silly dotcom payout money and create a </strong><strong>âbaseball think tankâ</strong><strong> that owns the Las Vegas baseball team.</strong> You might think this was some simple nerds against jocks fantasy. Not true. With smart thinkers in technology (camera / recording visual) and analysis (thinking about how to measure and interpret the recorded data to create meaningful new statistical categories) we come up with metrics that not only allow us to scout and choose the best players, but we also learn how to best position our defense, help batters predict what pitch is coming, and help coaches predict what the opposing coach will do in a given situation. Who knows, our tech group may even break ground in kinesthetic research to help players with their pitch and swing mechanics? The sky was really the limit if you invested the money. On top of all this, think how this data would be useful for our gambling business model? Since we â the owner of âbaseball think tankâ â know baseball better than any other living creature, we can set the odds for the bets we take, thus insuring we donât lose it all to two-bit gamblers who think they know baseball better than we do. </p>\n\n\n\n<p></p>\n\n\n\n<p>As I started to poke around and send feelers out about the idea, I learned that Rupert Murdoch (the man who bought my company MySpace) used to own the Dodgers. (Wow, the things you learn with a little researchâ¦!) And it also turns out that Rupert (News Corp) also owned STATS, Inc, a company that tracked baseball stats based on Bill James SABR principles. In fact, STATS, Inc was first a grassroots movement formed at Bill James suggestion in late 70s, and a company he became part of in the 80s. And Rupert owns it!? Wow, this was all starting to look too easy â it was as if I had all the connections to make this nutty idea take off. âIâll just call Uncle Rupe and get this thing rolling!â, I thought. Actually, I wondered to myself, maybe Rupert had the same idea when he bought the Dodgers, why would he even own this STATS company? It seemed an unusual acquisition for Newscorp. Turns out, no he hadnât been thinking about it. And, unfortunately, Rupert was done with baseball in general. Idea squashed? Nope. No problem. Rupert could still teach me all about profiting from television rights. Having his experience was still another ace in the hole, even if he wasnât interested. </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>So with my plan in hand, I was preparing to start approaching some dotcom billionaires, but only in a casual way.</strong> Didnât want to scare them. This was all in good fun. My initial dream team was Mark Cuban (for the balls), Larry Page &amp; Sergey Brin (for the brains), +Ron Conway (for the network), +George Will (the writer, for the respectability) and maybe even +Bill James himself (for the creative vision). What a dream team, eh?</p>\n\n\n\n<p></p>\n\n\n\n<p>WOW this post is getting long, OK, promise going to wrap this upâ¦ </p>\n\n\n\n<p></p>\n\n\n\n<p>So, why arenât you buying tickets for a Las Vegas baseball game this year? Well, I read a little book called Money Ball, by Michael Lewis (<a href=\"http://amzn.to/q0Xt0X\">http://amzn.to/q0Xt0X</a>). In it, he describes how the Oakland Aâs (a team with very little money), was able to use similar strategies in stat analysis (minus the technology piece Iâd mentioned) to capitalize on âmarket efficienciesâ in baseball players. By favoring .OBP (on base percentage) over .BA (batting average), the Aâs found that they could get players on the cheap, and, as it turns out, .OBP was a better statistic to pay attention to than batting average, because it was severely undervalued in the player-trade market. This unique approach allowed the the Oakland Aâs to be competitive even though they had a tiny payroll. Uh-oh, I thought, this Billy Beane guy (the Aâs general manager) is on to my idea. But thatâs no problem, I rationalized, itâs actually just confirmation of the basic idea. While other teams are stuck in the past scouting players cause they look like they were âbuilt to play baseball,â weâll have our secret weapon that nobody â not even Billy Beane â is thinking about. </p>\n\n\n\n<p></p>\n\n\n\n<p>But the more I started to look into, the more I realized that the Billy Beane / Sabremetric mindset was permeating other teamsâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Like any startup (which Billy Beaneâs internal team really was a âstartupâ of sorts), the people involved eventually and gradually branch out and take their knowledge elsewhere. Turns out that people trained in the Oakland Aâs system had taken the ideas to other teams. The Boston Red Sox had even hired Bill James himself. Then, right in the middle of my idea, it was announced that Moneyball (great book, btw) was set to become a major motion picture starring Brad Pitt (and written by Aaron Sorkin, creator of The Social Network no less). <strong>(Side note: Why is this Aaron Sorkin guy always making movies about people who can do things better than I can!?)</strong> &lt;â <em>best part of post, btw</em> (Side Side Note: Canât wait to see the movie!)</p>\n\n\n\n<p></p>\n\n\n\n<p>So, to make a long story short, I started to conclude that the power of Brad Pitt (just think of the way an announcer says his name in a theatre, BRADDD PITTTT) was going to make my semi-serious idea look like I was trying to ride the wave of some Hollywood fantasy about baseball. That, coupled with the idea that most teams had moved beyond the old model of baseball scouting baseball and into the new era of statistical analysis, led me to let my fun idea drift away. I opened the lines of communication with Mark Cuban , but I never even mentioned this idea to him.. (Hey Mark, what do you think of it now that Iâve told the world?) </p>\n\n\n\n<p></p>\n\n\n\n<p><strong>So in the end, my month or so of dreaming about this was sorta like a gigantic homerun destined for the upper deck that had just a little too much hang time. Meaning my homerun was just a fly ball and it landed squarely in the centerfielders mitt, just short of the wall. Meaning I was out. O-U-T.</strong> I gave up on the idea and started thinking about other thingsâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>So two lessons here. <strong>One, I had fun with it, which I encourage you to do with all your dreams and hopes for your work life, which, after all, takes up most of the time in your regular life. Two, when you pursue whatâs fun for you, giving up on an idea is not a waste of time. Not at all. If you pursue things you love, you will enjoy the journey, and the outcome is not so important.</strong> I had great fun thinking of my baseball dream âjob.â </p>\n\n\n\n<p></p>\n\n\n\n<p>And when you wonder, why does Tomâs bio say âEnjoying being retiredâ or why does he say he doesnât want a job? Just remember my little (OK, my massive) baseball story. I donât structure my life around a âjobâ â for me, itâs about having fun. I âworkâ on things all the time. But theyâre things <strong>I</strong> want to work on. A âjobâ probably just isnât the right word for anything Iâve done in my life. I had a richly satisfying life when I was unknown and penniless can you imagine how much fun I have now that I donât have to worry about moneyâ¦? </p>\n\n\n\n<p></p>\n\n\n\n<p>So, uh yeahâ¦ To bring this back to the beginning, <strong>why exactly do I spend time on Google+ then? Because itâs one of the funnest things going right now.</strong> Itâs brought wonderful things into my life. In fact, itâs given me a new hobby (photography) which, if things continue like they have been, will probably become a major force in my life. (And also the reason I havenât posted much in the last few daysâ¦!) </p>\n\n\n\n<p></p>\n\n\n\n<p>Note: I took the attached photo a few nights ago at one of the last Giants games of the season, here in Los Angeles. Not the greatest shot with that net in the way, but hey itâs baseball â check out some of the other shots Iâve posted. ð</p>\n\n\n\n<p></p>\n\n\n\n<p>Note 2: If youâve read this far, you deserve a cookie and not the ad-tracking kind.</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14685-6937166b3c74c\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14685&amp;origin=learningischange.com&amp;obj_id=113784134-14685-6937166b3c74c\" data-name=\"like-post-frame-113784134-14685-6937166b3c74c\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Did you see this? Originally shared by Tom Anderson Why I Donât Want a Job + Why I love Google+ A decent number of people seem confused, mystified and / or generally have the wrong impression about my âreappearanceâ in the land of the DUB-DUB-DUB (www). Thereâs probably a story to tell of my JD Salinger-to- Jeff Jarvis transformation (recluse to sharing enthusiast), and maybe some day Iâll tell it. But for right now, Iâd like to dispel a story (or set of ideas) that seem to be going around quite a bit. There are three variants of a similar idea, which, when combined with three social sites, form 9 possible untruths: 1. I work for Google+ (or Facebook or Twitter) 2. I want to work for Google+ (or Facebook or Twitter) 3. Iâm secretly being paid by Google+ (or Facebook or Twitter) The truth is, I donât want a âjob.â Iâve never thought about my life in terms of âjobs.â Iâve thought about my life in terms of whatâs interesting to me. Thatâs how I approached things when I ate a soup kitchens and couldnât afford a candy bar, and thatâs how I approach things now. Of course itâs a lot easier to do that now that Iâll never need to worry about money againâ¦ In any case, since people also seem to have trouble grappling with the idea that I donât want to start another dotcom, or with the fact that my bio says âretired,â I thought Iâd give you an idea of a âjobâ that sounds appealing to me. Keep in mind, this is just one of my dream âjobâ scenarios. Iâm putting âjobsâ in quotes, because, I think youâll see that I donât really think of these sorts of things as âjobsâ â I think more about how to make life more interestingâ¦ Before laying it out, itâs best to give a little historyâ¦ In early 2009, I left MySpace. In 2010, free from the concerns of work and necessity, I decided to return to one of my great loves, Baseball. (Capital B.) I had been a huge baseball fan since the 1998 season. In 1999, while living abroad, I even listened to every SF Giants game on Internet radio and printed their boxscores to use as wallpaper for my miserable little Dostoevskian flat. My beloved Giants reached the World Series in 2002, but alas did not win. In any case, in 2003, MySpace happened. For the next six years, I literally did not watch a single game or hear anything about the Giants. I even missed the Barry Bonds scandal. I just didnât have time to think about it. (During this time (2003-2008) I was basically unaware of pop culture in all its forms, except as it was delivered to me through MySpace.) So, it was with great pleasure that I returned to my Giants in 2010 â¦ Just in time, I learned, for the to not suck again. Theyâd absolutely sucked for the 6 years I was busy not paying attention. [_On a side note (baseball fans only): at first, I wondered if Iâd have any emotional connection at all to the team, since not a single player was left from the players I knew in 2002. Lo and behold, with the strangeness that is sport team allegiance, I fell right back into my groove. I had to learn to pronounce crazy names like âLincecumâ and learned that my Closer (who used to be Rob Nenn) now was a Twitter-user who apparently had caused a ruckus and shut down his Twitter account so he could focus on baseball (fear the beard!)._] So in 2010 while I was going to nearly every game, traveling around the country visiting all the baseball parks I would never had the time or money to visit before (visiting them all is on my bucket list), and idea began to form in my mindâ¦ (And some of you might call this a âjobâ!) What if I could start my own MLB baseball team? And what if the team was in Las Vegas (one of my new homes â I live in several cities now). Now of course this idea was just me being selfish at first â I love Vegas, and I want baseball there. Iâd rather not travel to every city to see games. And the only way to break the hold my Giants had for me was to literally create my own team. But after the selfish thought, the more I considered it, the more I thought Las Vegas and baseball were perfect for each other. The experience of baseball would be so cool in Sin City! Las Vegas Baseball: Imagine iPads on the back of every seat allowing you to bet, not just on the winner, but on every facet of the game: next pitch, strike or ball? will this batter fly out, ground out, hit a homerun? (Extra income, no other team can profit from this!) Now imagine visiting tourists looking for something to do during the day before they go out and party â foreigners from all over the world would get to experience âAmerican baseballâ in an environment that wouldnât bore them. (The stadiumâs always full!) Next imagine the truckloads of merchandise sold to tourists and locals alike (yes there is such thing as a local community in Vegas!). A Las Vegas baseball team shirt would be so much cooler than a Las Vegas sign shirt, and even cooler than a fridge magnet. Lastly, imagine the price box suites would go for in Vegas â a town where every night of the week people routinely throw down $10K for a table thatâs main privilege is the right to buy alcohol at a 900% markup. If youâre more of a purist and the vision of gambling, tourists and big money box suites are clouding your vision of my fantasy baseball park, forget everything Iâve written and imagine this â imagine an icy cold beer on a hot summer day, served to you with hot dogs and crackerjacks from the most beautiful girl youâve ever seen in a ballpark. Beautiful girls from all over the country move to Vegas to serve drinks at day clubs, night clubs and barsâ¦ Heck, we could even have a section for the ladies where Thunder from Down Under men serve drinks. So, anywayâ¦ Letâs take action, Tom thought. At first, I started buying some books about the business of baseball. There are quite a few, actually, mainly focusing on the idea of whether sports teams actually help or hurt communities. (This is a topic of public import, since many localities decide to fund stadium construction via tax dollars.) From this research, I got a general understanding of baseball business and a rough estimate that starting a team would cost around $600 million â give or take $300 mil, depending on whether the city will fund the stadium. What do you know, a little more research reveals that Las Vegas city officials are dying to have a baseball team thereâ¦ Once I got a sense for the cost, I immediately thought â what to do? I donât want to risk all my own money doing this. What if I lose it all and have to go do real work again? No way. I need investors. But if I was actually able to raise the money, why would anyone need me? What did I bring to the table besides the original idea (worthless) and my money (also pretty worthless if Iâm raising money from others). Then I came up with a more nuanced idea. And I realized it was probably unique enough that no one else would want or care to bring it all together. Thus, I would be making myself valuable for being âthe deal guyâ â something I never aspired to be. But hey, this is baseball, and I want my own team. So, the more nuanced ideaâ¦ For years, Iâd been a follower of Bill James, the founder of a âscienceâ of baseball called Sabremetrics. The idea behind Sabremetrics is that you can analyze baseball to uncover âobjective knowledge.â Baseball has always been a stats-heavy sport. But Bill James came up with new stats, new âeventsâ to be measured, and by doing so, he uncovered things about baseball that formerly, we could only use our gut to understand. Itâs easy to measure how many hits a batter gets, but how do you measure how good a defensive player is? It was clear to me, that the technical innovation of tracking players & the ball on video coupled with a James-ian approach was ripe for an explosion of even more data about baseball, thus unlocking even more secrets. Now why would one care about these this data? Well, because it can help you to WIN! So, my friends, the idea was this: gather together enough tech nerd-ness with enough silly dotcom payout money and create a âbaseball think tankâ that owns the Las Vegas baseball team. You might think this was some simple nerds against jocks fantasy. Not true. With smart thinkers in technology (camera / recording visual) and analysis (thinking about how to measure and interpret the recorded data to create meaningful new statistical categories) we come up with metrics that not only allow us to scout and choose the best players, but we also learn how to best position our defense, help batters predict what pitch is coming, and help coaches predict what the opposing coach will do in a given situation. Who knows, our tech group may even break ground in kinesthetic research to help players with their pitch and swing mechanics? The sky was really the limit if you invested the money. On top of all this, think how this data would be useful for our gambling business model? Since we â the owner of âbaseball think tankâ â know baseball better than any other living creature, we can set the odds for the bets we take, thus insuring we donât lose it all to two-bit gamblers who think they know baseball better than we do. As I started to poke around and send feelers out about the idea, I learned that Rupert Murdoch (the man who bought my company MySpace) used to own the Dodgers. (Wow, the things you learn with a little researchâ¦!) And it also turns out that Rupert (News Corp) also owned STATS, Inc, a company that tracked baseball stats based on Bill James SABR principles. In fact, STATS, Inc was first a grassroots movement formed at Bill James suggestion in late 70s, and a company he became part of in the 80s. And Rupert owns it!? Wow, this was all starting to look too easy â it was as if I had all the connections to make this nutty idea take off. âIâll just call Uncle Rupe and get this thing rolling!â, I thought. Actually, I wondered to myself, maybe Rupert had the same idea when he bought the Dodgers, why would he even own this STATS company? It seemed an unusual acquisition for Newscorp. Turns out, no he hadnât been thinking about it. And, unfortunately, Rupert was done with baseball in general. Idea squashed? Nope. No problem. Rupert could still teach me all about profiting from television rights. Having his experience was still another ace in the hole, even if he wasnât interested. So with my plan in hand, I was preparing to start approaching some dotcom billionaires, but only in a casual way. Didnât want to scare them. This was all in good fun. My initial dream team was Mark Cuban (for the balls), Larry Page & Sergey Brin (for the brains), +Ron Conway (for the network), +George Will (the writer, for the respectability) and maybe even +Bill James himself (for the creative vision). What a dream team, eh? WOW this post is getting long, OK, promise going to wrap this upâ¦ So, why arenât you buying tickets for a Las Vegas baseball game this year? Well, I read a little book called Money Ball, by Michael Lewis (http://amzn.to/q0Xt0X). In it, he describes how the Oakland Aâs (a team with very little money), was able to use similar strategies in stat analysis (minus the technology piece Iâd mentioned) to capitalize on âmarket efficienciesâ in baseball players. By favoring .OBP (on base percentage) over .BA (batting average), the Aâs found that they could get players on the cheap, and, as it turns out, .OBP was a better statistic to pay attention to than batting average, because it was severely undervalued in the player-trade market. This unique approach allowed the the Oakland Aâs to be competitive even though they had a tiny payroll. Uh-oh, I thought, this Billy Beane guy (the Aâs general manager) is on to my idea. But thatâs no problem, I rationalized, itâs actually just confirmation of the basic idea. While other teams are stuck in the past scouting players cause they look like they were âbuilt to play baseball,â weâll have our secret weapon that nobody â not even Billy Beane â is thinking about. But the more I started to look into, the more I realized that the Billy Beane / Sabremetric mindset was permeating other teamsâ¦ Like any startup (which Billy Beaneâs internal team really was a âstartupâ of sorts), the people involved eventually and gradually branch out and take their knowledge elsewhere. Turns out that people trained in the Oakland Aâs system had taken the ideas to other teams. The Boston Red Sox had even hired Bill James himself. Then, right in the middle of my idea, it was announced that Moneyball (great book, btw) was set to become a major motion picture starring Brad Pitt (and written by Aaron Sorkin, creator of The Social Network no less). (Side note: Why is this Aaron Sorkin guy always making movies about people who can do things better than I can!?) <â best part of post, btw (Side Side Note: Canât wait to see the movie!) So, to make a long story short, I started to conclude that the power of Brad Pitt (just think of the way an announcer says his name in a theatre, BRADDD PITTTT) was going to make my semi-serious idea look like I was trying to ride the wave of some Hollywood fantasy about baseball. That, coupled with the idea that most teams had moved beyond the old model of baseball scouting baseball and into the new era of statistical analysis, led me to let my fun idea drift away. I opened the lines of communication with Mark Cuban , but I never even mentioned this idea to him.. (Hey Mark, what do you think of it now that Iâve told the world?) So in the end, my month or so of dreaming about this was sorta like a gigantic homerun destined for the upper deck that had just a little too much hang time. Meaning my homerun was just a fly ball and it landed squarely in the centerfielders mitt, just short of the wall. Meaning I was out. O-U-T. I gave up on the idea and started thinking about other thingsâ¦ So two lessons here. One, I had fun with it, which I encourage you to do with all your dreams and hopes for your work life, which, after all, takes up most of the time in your regular life. Two, when you pursue whatâs fun for you, giving up on an idea is not a waste of time. Not at all. If you pursue things you love, you will enjoy the journey, and the outcome is not so important. I had great fun thinking of my baseball dream âjob.â And when you wonder, why does Tomâs bio say âEnjoying being retiredâ or why does he say he doesnât want a job? Just remember my little (OK, my massive) baseball story. I donât structure my life around a âjobâ â for me, itâs about having fun. I âworkâ on things all the time. But theyâre things I want to work on. A âjobâ probably just isnât the right word for anything Iâve done in my life. I had a richly satisfying life when I was unknown and penniless can you imagine how much fun I have now that I donât have to worry about moneyâ¦? So, uh yeahâ¦ To bring this back to the beginning, why exactly do I spend time on Google+ then? Because itâs one of the funnest things going right now. Itâs brought wonderful things into my life. In fact, itâs given me a new hobby (photography) which, if things continue like they have been, will probably become a major force in my life. (And also the reason I havenât posted much in the last few daysâ¦!) Note: I took the attached photo a few nights ago at one of the last Giants games of the season, here in Los Angeles. Not the greatest shot with that net in the way, but hey itâs baseball â check out some of the other shots Iâve posted. ð Note 2: If youâve read this far, you deserve a cookie and not the ad-tracking kind.",
-      "excerpt": "Did you see this? Originally shared by Tom Anderson Why I Donât Want a Job + Why I love Google+ A decent number of people seem confused, mystified and / or generally have the wrong impression about ...",
-      "guid": "https://learningischange.com/2011/09/29/did-you-see-this-3/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2011/09/29/did-you-see-this-3/index.html",
-      "url": "https://learningischange.com/2011/09/29/did-you-see-this-3/",
-      "word_count": 2866,
-      "reading_time_minutes": 15,
-      "content_hash": "-1d18abec",
-      "images": [
-        "https://i0.wp.com/lh4.googleusercontent.com/-hgG7DIvyxhI/ToSaaM2zS8I/AAAAAAAAnJQ/j6FPW92-3fQ/s0/baseballfinal-3.jpg?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://amzn.to/q0Xt0X"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:30:48.500Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2011.json"
     },
     {
       "id": 2195,
@@ -10169,7 +9614,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2197,
@@ -10231,7 +9677,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2198,
@@ -10293,7 +9740,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2199,
@@ -10355,7 +9803,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2201,
@@ -10417,7 +9866,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2202,
@@ -10473,7 +9923,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2203,
@@ -10539,7 +9990,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2206,
@@ -10601,7 +10053,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2207,
@@ -10657,7 +10110,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2208,
@@ -10723,7 +10177,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2210,
@@ -10779,7 +10234,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2211,
@@ -10845,7 +10301,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2213,
@@ -10909,7 +10366,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2214,
@@ -10971,7 +10429,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2216,
@@ -11039,7 +10498,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2217,
@@ -11101,7 +10561,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2218,
@@ -11163,7 +10624,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2220,
@@ -11231,7 +10693,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2221,
@@ -11293,7 +10756,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2224,
@@ -11355,7 +10819,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2225,
@@ -11417,7 +10882,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2227,
@@ -11479,7 +10945,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2229,
@@ -11541,7 +11008,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2230,
@@ -11603,7 +11071,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2233,
@@ -11665,7 +11134,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2234,
@@ -11733,7 +11203,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2236,
@@ -11797,7 +11268,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2238,
@@ -11853,7 +11325,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2239,
@@ -11919,7 +11392,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2240,
@@ -11981,7 +11455,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2243,
@@ -12037,7 +11512,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2244,
@@ -12103,7 +11579,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2245,
@@ -12159,7 +11636,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2246,
@@ -12221,7 +11699,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2249,
@@ -12283,7 +11762,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2250,
@@ -12345,7 +11825,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2252,
@@ -12407,7 +11888,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2253,
@@ -12463,7 +11945,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2254,
@@ -12525,7 +12008,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2256,
@@ -12587,7 +12071,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2259,
@@ -12643,7 +12128,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     },
     {
       "id": 2260,
@@ -12705,7 +12191,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2011.json"
     }
   ],
   "post_count": 204

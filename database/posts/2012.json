@@ -62,7 +62,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2268,
@@ -118,7 +119,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2269,
@@ -184,7 +186,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2271,
@@ -246,7 +249,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2273,
@@ -302,7 +306,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2274,
@@ -364,7 +369,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2276,
@@ -422,7 +428,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2277,
@@ -489,7 +496,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2278,
@@ -551,71 +559,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2281,
-      "wp_post_id": 10803,
-      "title": "On a day when the kids are off of school (teacher in service), I have been incredibly convenienced by systems thatâ¦",
-      "slug": "on-a-day-when-the-kids-are-off-of-school-teacher-in-service-i-have-been-incredibly-convenienced-by-systems-that-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-01-17T12:00:00Z",
-      "date_published_gmt": "2012-01-17T12:00:00Z",
-      "date_modified": "2012-01-17T17:32:14+00:00",
-      "date_modified_gmt": "2012-01-17T17:32:14+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh3.googleusercontent.com/-fkaGzfky3QY/TxWwnX8aoJI/AAAAAAAFTb0/jMRmreKxOKo/s0/12%2B-%2B1.jpeg?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>On a day when the kids are off of school (teacher in service), I have been incredibly convenienced by systems that were built for me. </p>\n\n\n\n<p></p>\n\n\n\n<p>1. Emissions testing, which used to be a pain was quick and right by my house. </p>\n\n\n\n<p></p>\n\n\n\n<p>2. Barnes an Noble, which used to be a book store had more things for my kids to do than the childrenâs museum (great books, learning toys, and nooks). </p>\n\n\n\n<p></p>\n\n\n\n<p>3. Ikea, which didnât exist until recently in Denver, has free coffee and has a kids play area that takes care of children for an hour while you shop. </p>\n\n\n\n<p></p>\n\n\n\n<p>Today is ridiculous. How did everything get so easy and free?</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-10803-693716426cb70\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=10803&amp;origin=learningischange.com&amp;obj_id=113784134-10803-693716426cb70\" data-name=\"like-post-frame-113784134-10803-693716426cb70\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "On a day when the kids are off of school (teacher in service), I have been incredibly convenienced by systems that were built for me. 1. Emissions testing, which used to be a pain was quick and right by my house. 2. Barnes an Noble, which used to be a book store had more things for my kids to do than the childrenâs museum (great books, learning toys, and nooks). 3. Ikea, which didnât exist until recently in Denver, has free coffee and has a kids play area that takes care of children for an hour while you shop. Today is ridiculous. How did everything get so easy and free?",
-      "excerpt": "On a day when the kids are off of school (teacher in service), I have been incredibly convenienced by systems that were built for me. 1. Emissions testing, which used to be a pain was quick and right ...",
-      "guid": "https://learningischange.com/2012/01/17/on-a-day-when-the-kids-are-off-of-school-teacher-in-service-i-have-been-incredibly-convenienced-by-systems-that-2/",
-      "comment_status": "open",
-      "comment_count": 2,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/01/17/on-a-day-when-the-kids-are-off-of-school-teacher-in-service-i-have-been-incredibly-convenienced-by-systems-that-2/index.html",
-      "url": "https://learningischange.com/2012/01/17/on-a-day-when-the-kids-are-off-of-school-teacher-in-service-i-have-been-incredibly-convenienced-by-systems-that-2/",
-      "word_count": 110,
-      "reading_time_minutes": 1,
-      "content_hash": "575c9f7e",
-      "images": [
-        "https://i0.wp.com/lh3.googleusercontent.com/-fkaGzfky3QY/TxWwnX8aoJI/AAAAAAAFTb0/jMRmreKxOKo/s0/12%2B-%2B1.jpeg?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:14.000Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2282,
@@ -679,7 +624,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2283,
@@ -735,7 +681,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2284,
@@ -801,7 +748,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2286,
@@ -857,7 +805,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2287,
@@ -919,7 +868,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2289,
@@ -981,7 +931,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2291,
@@ -1037,7 +988,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2292,
@@ -1099,7 +1051,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2295,
@@ -1161,7 +1114,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2296,
@@ -1217,7 +1171,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2297,
@@ -1282,7 +1237,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2299,
@@ -1346,7 +1302,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2300,
@@ -1408,7 +1365,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2301,
@@ -1474,7 +1432,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2302,
@@ -1530,7 +1489,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2304,
@@ -1596,7 +1556,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2305,
@@ -1652,7 +1613,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2307,
@@ -1714,7 +1676,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2308,
@@ -1770,7 +1733,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2309,
@@ -1836,7 +1800,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2310,
@@ -1898,7 +1863,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2312,
@@ -1960,7 +1926,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2313,
@@ -2022,7 +1989,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2314,
@@ -2084,7 +2052,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2315,
@@ -2146,7 +2115,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2317,
@@ -2208,7 +2178,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2318,
@@ -2270,7 +2241,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2320,
@@ -2335,7 +2307,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2322,
@@ -2397,7 +2370,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2324,
@@ -2464,7 +2438,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2325,
@@ -2526,7 +2501,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2326,
@@ -2588,7 +2564,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2327,
@@ -2650,7 +2627,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2328,
@@ -2712,7 +2690,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2329,
@@ -2768,7 +2747,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2330,
@@ -2834,7 +2814,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2332,
@@ -2898,7 +2879,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2334,
@@ -2954,7 +2936,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2335,
@@ -3020,7 +3003,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2336,
@@ -3082,7 +3066,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2337,
@@ -3144,7 +3129,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2339,
@@ -3206,7 +3192,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2340,
@@ -3267,7 +3254,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2342,
@@ -3323,7 +3311,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2343,
@@ -3389,7 +3378,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2344,
@@ -3451,7 +3441,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2345,
@@ -3509,7 +3500,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2346,
@@ -3565,7 +3557,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2347,
@@ -3631,7 +3624,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2349,
@@ -3693,7 +3687,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2351,
@@ -3755,7 +3750,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2352,
@@ -3815,7 +3811,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2355,
@@ -3877,7 +3874,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2356,
@@ -3939,7 +3937,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2359,
@@ -4000,7 +3999,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2361,
@@ -4062,7 +4062,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2363,
@@ -4123,7 +4124,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2364,
@@ -4185,7 +4187,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2365,
@@ -4247,7 +4250,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2367,
@@ -4309,7 +4313,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2369,
@@ -4365,7 +4370,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2370,
@@ -4431,7 +4437,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2372,
@@ -4487,7 +4494,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2373,
@@ -4553,7 +4561,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2375,
@@ -4615,7 +4624,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2377,
@@ -4679,7 +4689,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2379,
@@ -4735,7 +4746,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2380,
@@ -4801,7 +4813,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2381,
@@ -4863,7 +4876,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2382,
@@ -4925,7 +4939,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2384,
@@ -4989,7 +5004,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2385,
@@ -5053,7 +5069,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2386,
@@ -5117,7 +5134,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2387,
@@ -5181,7 +5199,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2388,
@@ -5245,7 +5264,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2389,
@@ -5309,71 +5329,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2392,
-      "wp_post_id": 14698,
-      "title": "This is a flow chart I made a while back for types of communication and I just ran across it again today.",
-      "slug": "this-is-a-flow-chart-i-made-a-while-back-for-types-of-communication-and-i-just-ran-across-it-again-today-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-05-02T12:00:00Z",
-      "date_published_gmt": "2012-05-02T12:00:00Z",
-      "date_modified": "2012-05-02T20:35:30+00:00",
-      "date_modified_gmt": "2012-05-02T20:35:30+00:00",
-      "content": "<p>This is a flow chart I made a while back for types of communication and I just ran across it again today.</p>\n\n\n\n<p></p>\n\n\n\n<p>Red Arrows = No</p>\n\n\n\n<p></p>\n\n\n\n<p>Green Arrows = Yes</p>\n\n\n\n<p></p>\n\n\n\n<p>Blue Arrows = Next Step</p>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh3.googleusercontent.com/-h6x6SKgs7qE/T6GaM-UiM7I/AAAAAAAGogs/AJFDDHhCfGcaG2CK9-bTDwllPHQ2q1XkA/s0/2012-05-02.jpeg?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14698-693716174a9b1\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14698&amp;origin=learningischange.com&amp;obj_id=113784134-14698-693716174a9b1\" data-name=\"like-post-frame-113784134-14698-693716174a9b1\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "This is a flow chart I made a while back for types of communication and I just ran across it again today. Red Arrows = No Green Arrows = Yes Blue Arrows = Next Step",
-      "excerpt": "This is a flow chart I made a while back for types of communication and I just ran across it again today. Red Arrows = No Green Arrows = Yes Blue Arrows = Next Step",
-      "guid": "https://learningischange.com/2012/05/02/this-is-a-flow-chart-i-made-a-while-back-for-types-of-communication-and-i-just-ran-across-it-again-today-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/05/02/this-is-a-flow-chart-i-made-a-while-back-for-types-of-communication-and-i-just-ran-across-it-again-today-2/index.html",
-      "url": "https://learningischange.com/2012/05/02/this-is-a-flow-chart-i-made-a-while-back-for-types-of-communication-and-i-just-ran-across-it-again-today-2/",
-      "word_count": 35,
-      "reading_time_minutes": 1,
-      "content_hash": "-1c7588f6",
-      "images": [
-        "https://i0.wp.com/lh3.googleusercontent.com/-h6x6SKgs7qE/T6GaM-UiM7I/AAAAAAAGogs/AJFDDHhCfGcaG2CK9-bTDwllPHQ2q1XkA/s0/2012-05-02.jpeg?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:45.988Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2393,
@@ -5437,7 +5394,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2394,
@@ -5501,7 +5459,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2396,
@@ -5563,7 +5522,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2398,
@@ -5625,149 +5585,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2399,
-      "wp_post_id": 14621,
-      "title": "Canât wait to dig into a lot of these.",
-      "slug": "cant-wait-to-dig-into-a-lot-of-these-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-05-18T12:00:00Z",
-      "date_published_gmt": "2012-05-18T12:00:00Z",
-      "date_modified": "2012-05-18T15:38:48+00:00",
-      "date_modified_gmt": "2012-05-18T15:38:48+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/learningischange.com/wp-content/uploads/2012/05/Gplus_F12Bv3-1.jpg?w=1225\" alt=\"\"></figure>\n\n\n\n<p>Canât wait to dig into a lot of these. </p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Shamil Weerakoon</p>\n\n\n\n<p></p>\n\n\n\n<p>Google+<strong> âF1â Directory ~ Final Edition</strong> : <a href=\"http://goo.gl/rr4mi\">http://goo.gl/rr4mi</a></p>\n\n\n\n<p><em>The Largest Compilation of Google+ Related Posts</em> </p>\n\n\n\n<p></p>\n\n\n\n<p>Iâve been addicted to Google+ since August, 2011; and has been ever known  for Google+ Tutorials, &amp; Tips</p>\n\n\n\n<p></p>\n\n\n\n<p>My first post was a simple comparison of G+ and FB illustrating the awesome features of Google+. (Link : <a href=\"http://goo.gl/oTlff\">http://goo.gl/oTlff</a> ) For my surprise, the post had 100+ shares within a week; and my follower count reached from tens to hundreds</p>\n\n\n\n<p>I later added and revised the post and had 2 other newer lists of G+ features.</p>\n\n\n\n<p></p>\n\n\n\n<p>After a few days I created a Guide for the Google+ Main Stream; followed by Guides to the Profile, Circles, &amp; Photos.</p>\n\n\n\n<p></p>\n\n\n\n<p>Thanks to a number of Plussers such as; Gabriel Vasile, Jaana NystrÃ¶m, Peter G McDermott, Lee Smallwood, Denis Labelle, Rahul Roy, Sean Cowen, Anthony Fox, etc. whose shared circles made be get thousands of Followers. More the number of followers increased, more I was inspired to help the community with Google+ related stuff.</p>\n\n\n\n<p></p>\n\n\n\n<p>One thing Iâve learned from my experience on Google+ is that People tend to love and are more attracted to visual stuff than just long Posts of simple text.</p>\n\n\n\n<p>Also, people make less clicks on LINKS than on Images.</p>\n\n\n\n<p>And, users tend to read lists or short points than Long paragraphs.</p>\n\n\n\n<p></p>\n\n\n\n<p>Hence, Iâve been helping most beginners to learn the basics of Google+ to achieve higher targets in being an influential Plusser to the Community.</p>\n\n\n\n<p></p>\n\n\n\n<p>My First compilation of 104 Google+ Related posts ( <a href=\"http://goo.gl/sPEOF\">http://goo.gl/sPEOF</a> ), and the second list containing more than 150 posts ( <a href=\"http://goo.gl/jAHkK\">http://goo.gl/jAHkK</a> ) were two of my greatest lists.</p>\n\n\n\n<p></p>\n\n\n\n<p>To come up with the version 3.0, Iâve made use of Google Docs to compile the Full list of G+ related posts to total <strong>425+ posts</strong>.</p>\n\n\n\n<p></p>\n\n\n\n<p><strong>++++++++++++++++++++++++++++++++++++++++++++++++</strong></p>\n\n\n\n<p><strong>Hereâs the Link :</strong></p>\n\n\n\n<p><a href=\"https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E\">https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E</a></p>\n\n\n\n<p><strong>++++++++++++++++++++++++++++++++++++++++++++++++</strong></p>\n\n\n\n<p></p>\n\n\n\n<p>TIP : To see whether you post is listed, use the âCtrl + Fâ function.</p>\n\n\n\n<p></p>\n\n\n\n<p></p>\n\n\n\n<p>FEEL FREE TO PASS THE MESSAGE OF THIS GREAT LIST OF POSTS TO WHOEVER NEEDS HELP REGARDING GOOGLE PLUS.</p>\n\n\n\n<p></p>\n\n\n\n<p><em>Thanks n Regards</em></p>\n\n\n\n<p>My Other Posts : <a href=\"http://goo.gl/PfqqK\">http://goo.gl/PfqqK</a></p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14621-693716147791f\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14621&amp;origin=learningischange.com&amp;obj_id=113784134-14621-693716147791f\" data-name=\"like-post-frame-113784134-14621-693716147791f\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Canât wait to dig into a lot of these. Originally shared by Shamil Weerakoon Google+ âF1â Directory ~ Final Edition : http://goo.gl/rr4mi The Largest Compilation of Google+ Related Posts Iâve been addicted to Google+ since August, 2011; and has been ever known for Google+ Tutorials, & Tips My first post was a simple comparison of G+ and FB illustrating the awesome features of Google+. (Link : http://goo.gl/oTlff ) For my surprise, the post had 100+ shares within a week; and my follower count reached from tens to hundreds I later added and revised the post and had 2 other newer lists of G+ features. After a few days I created a Guide for the Google+ Main Stream; followed by Guides to the Profile, Circles, & Photos. Thanks to a number of Plussers such as; Gabriel Vasile, Jaana NystrÃ¶m, Peter G McDermott, Lee Smallwood, Denis Labelle, Rahul Roy, Sean Cowen, Anthony Fox, etc. whose shared circles made be get thousands of Followers. More the number of followers increased, more I was inspired to help the community with Google+ related stuff. One thing Iâve learned from my experience on Google+ is that People tend to love and are more attracted to visual stuff than just long Posts of simple text. Also, people make less clicks on LINKS than on Images. And, users tend to read lists or short points than Long paragraphs. Hence, Iâve been helping most beginners to learn the basics of Google+ to achieve higher targets in being an influential Plusser to the Community. My First compilation of 104 Google+ Related posts ( http://goo.gl/sPEOF ), and the second list containing more than 150 posts ( http://goo.gl/jAHkK ) were two of my greatest lists. To come up with the version 3.0, Iâve made use of Google Docs to compile the Full list of G+ related posts to total 425+ posts. ++++++++++++++++++++++++++++++++++++++++++++++++ Hereâs the Link : https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E ++++++++++++++++++++++++++++++++++++++++++++++++ TIP : To see whether you post is listed, use the âCtrl + Fâ function. FEEL FREE TO PASS THE MESSAGE OF THIS GREAT LIST OF POSTS TO WHOEVER NEEDS HELP REGARDING GOOGLE PLUS. Thanks n Regards My Other Posts : http://goo.gl/PfqqK",
-      "excerpt": "Canât wait to dig into a lot of these. Originally shared by Shamil Weerakoon Google+ âF1â Directory ~ Final Edition : http://goo.gl/rr4mi The Largest Compilation of Google+ Related Posts Iâve ...",
-      "guid": "https://learningischange.com/2012/05/18/cant-wait-to-dig-into-a-lot-of-these-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/05/18/cant-wait-to-dig-into-a-lot-of-these-2/index.html",
-      "url": "https://learningischange.com/2012/05/18/cant-wait-to-dig-into-a-lot-of-these-2/",
-      "word_count": 358,
-      "reading_time_minutes": 2,
-      "content_hash": "eda32a4",
-      "images": [
-        "https://i0.wp.com/learningischange.com/wp-content/uploads/2012/05/Gplus_F12Bv3-1.jpg?w=1225"
-      ],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://goo.gl/rr4mi",
-          "http://goo.gl/oTlff",
-          "http://goo.gl/sPEOF",
-          "http://goo.gl/jAHkK",
-          "https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E",
-          "http://goo.gl/PfqqK"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:48.008Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 2400,
-      "wp_post_id": 8343,
-      "title": "Canât wait to dig into a lot of these.",
-      "slug": "cant-wait-to-dig-into-a-lot-of-these-3",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-05-18T12:00:00Z",
-      "date_published_gmt": "2012-05-18T12:00:00Z",
-      "date_modified": "2012-05-18T15:38:48+00:00",
-      "date_modified_gmt": "2012-05-18T15:38:48+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh4.googleusercontent.com/-dIycnrWKVFI/T6vMWJbwsjI/AAAAAAAATDs/nJ0ZUu-UJR8/s0/Gplus_F1%2Bv3.jpg?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>Canât wait to dig into a lot of these. </p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Shamil Weerakoon</p>\n\n\n\n<p></p>\n\n\n\n<p>Google+<strong> âF1â Directory ~ Final Edition</strong> : <a href=\"http://goo.gl/rr4mi\">http://goo.gl/rr4mi</a></p>\n\n\n\n<p><em>The Largest Compilation of Google+ Related Posts</em> </p>\n\n\n\n<p></p>\n\n\n\n<p>Iâve been addicted to Google+ since August, 2011; and has been ever known  for Google+ Tutorials, &amp; Tips</p>\n\n\n\n<p></p>\n\n\n\n<p>My first post was a simple comparison of G+ and FB illustrating the awesome features of Google+. (Link : <a href=\"http://goo.gl/oTlff\">http://goo.gl/oTlff</a> ) For my surprise, the post had 100+ shares within a week; and my follower count reached from tens to hundreds</p>\n\n\n\n<p>I later added and revised the post and had 2 other newer lists of G+ features.</p>\n\n\n\n<p></p>\n\n\n\n<p>After a few days I created a Guide for the Google+ Main Stream; followed by Guides to the Profile, Circles, &amp; Photos.</p>\n\n\n\n<p></p>\n\n\n\n<p>Thanks to a number of Plussers such as; Gabriel Vasile, Jaana NystrÃ¶m, Peter G McDermott, Lee Smallwood, Denis Labelle, Rahul Roy, Sean Cowen, Anthony Fox, etc. whose shared circles made be get thousands of Followers. More the number of followers increased, more I was inspired to help the community with Google+ related stuff.</p>\n\n\n\n<p></p>\n\n\n\n<p>One thing Iâve learned from my experience on Google+ is that People tend to love and are more attracted to visual stuff than just long Posts of simple text.</p>\n\n\n\n<p>Also, people make less clicks on LINKS than on Images.</p>\n\n\n\n<p>And, users tend to read lists or short points than Long paragraphs.</p>\n\n\n\n<p></p>\n\n\n\n<p>Hence, Iâve been helping most beginners to learn the basics of Google+ to achieve higher targets in being an influential Plusser to the Community.</p>\n\n\n\n<p></p>\n\n\n\n<p>My First compilation of 104 Google+ Related posts ( <a href=\"http://goo.gl/sPEOF\">http://goo.gl/sPEOF</a> ), and the second list containing more than 150 posts ( <a href=\"http://goo.gl/jAHkK\">http://goo.gl/jAHkK</a> ) were two of my greatest lists.</p>\n\n\n\n<p></p>\n\n\n\n<p>To come up with the version 3.0, Iâve made use of Google Docs to compile the Full list of G+ related posts to total <strong>425+ posts</strong>.</p>\n\n\n\n<p></p>\n\n\n\n<p><strong>++++++++++++++++++++++++++++++++++++++++++++++++</strong></p>\n\n\n\n<p><strong>Hereâs the Link :</strong></p>\n\n\n\n<p><a href=\"https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E\">https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E</a></p>\n\n\n\n<p><strong>++++++++++++++++++++++++++++++++++++++++++++++++</strong></p>\n\n\n\n<p></p>\n\n\n\n<p>TIP : To see whether you post is listed, use the âCtrl + Fâ function.</p>\n\n\n\n<p></p>\n\n\n\n<p></p>\n\n\n\n<p>FEEL FREE TO PASS THE MESSAGE OF THIS GREAT LIST OF POSTS TO WHOEVER NEEDS HELP REGARDING GOOGLE PLUS.</p>\n\n\n\n<p></p>\n\n\n\n<p><em>Thanks n Regards</em></p>\n\n\n\n<p>My Other Posts : <a href=\"http://goo.gl/PfqqK\">http://goo.gl/PfqqK</a></p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-8343-693716157389b\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=8343&amp;origin=learningischange.com&amp;obj_id=113784134-8343-693716157389b\" data-name=\"like-post-frame-113784134-8343-693716157389b\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Canât wait to dig into a lot of these. Originally shared by Shamil Weerakoon Google+ âF1â Directory ~ Final Edition : http://goo.gl/rr4mi The Largest Compilation of Google+ Related Posts Iâve been addicted to Google+ since August, 2011; and has been ever known for Google+ Tutorials, & Tips My first post was a simple comparison of G+ and FB illustrating the awesome features of Google+. (Link : http://goo.gl/oTlff ) For my surprise, the post had 100+ shares within a week; and my follower count reached from tens to hundreds I later added and revised the post and had 2 other newer lists of G+ features. After a few days I created a Guide for the Google+ Main Stream; followed by Guides to the Profile, Circles, & Photos. Thanks to a number of Plussers such as; Gabriel Vasile, Jaana NystrÃ¶m, Peter G McDermott, Lee Smallwood, Denis Labelle, Rahul Roy, Sean Cowen, Anthony Fox, etc. whose shared circles made be get thousands of Followers. More the number of followers increased, more I was inspired to help the community with Google+ related stuff. One thing Iâve learned from my experience on Google+ is that People tend to love and are more attracted to visual stuff than just long Posts of simple text. Also, people make less clicks on LINKS than on Images. And, users tend to read lists or short points than Long paragraphs. Hence, Iâve been helping most beginners to learn the basics of Google+ to achieve higher targets in being an influential Plusser to the Community. My First compilation of 104 Google+ Related posts ( http://goo.gl/sPEOF ), and the second list containing more than 150 posts ( http://goo.gl/jAHkK ) were two of my greatest lists. To come up with the version 3.0, Iâve made use of Google Docs to compile the Full list of G+ related posts to total 425+ posts. ++++++++++++++++++++++++++++++++++++++++++++++++ Hereâs the Link : https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E ++++++++++++++++++++++++++++++++++++++++++++++++ TIP : To see whether you post is listed, use the âCtrl + Fâ function. FEEL FREE TO PASS THE MESSAGE OF THIS GREAT LIST OF POSTS TO WHOEVER NEEDS HELP REGARDING GOOGLE PLUS. Thanks n Regards My Other Posts : http://goo.gl/PfqqK",
-      "excerpt": "Canât wait to dig into a lot of these. Originally shared by Shamil Weerakoon Google+ âF1â Directory ~ Final Edition : http://goo.gl/rr4mi The Largest Compilation of Google+ Related Posts Iâve ...",
-      "guid": "https://learningischange.com/2012/05/18/cant-wait-to-dig-into-a-lot-of-these-3/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/05/18/cant-wait-to-dig-into-a-lot-of-these-3/index.html",
-      "url": "https://learningischange.com/2012/05/18/cant-wait-to-dig-into-a-lot-of-these-3/",
-      "word_count": 358,
-      "reading_time_minutes": 2,
-      "content_hash": "5a470079",
-      "images": [
-        "https://i0.wp.com/lh4.googleusercontent.com/-dIycnrWKVFI/T6vMWJbwsjI/AAAAAAAATDs/nJ0ZUu-UJR8/s0/Gplus_F1%2Bv3.jpg?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://goo.gl/rr4mi",
-          "http://goo.gl/oTlff",
-          "http://goo.gl/sPEOF",
-          "http://goo.gl/jAHkK",
-          "https://docs.google.com/spreadsheet/ccc?key=0Ag0ysqpT1gQUdE8tcnhwbjVyTmVQUHc1NW54MXcxT1E",
-          "http://goo.gl/PfqqK"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:48.294Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2401,
@@ -5838,7 +5657,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2404,
@@ -5900,7 +5720,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2405,
@@ -5962,7 +5783,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2407,
@@ -6018,7 +5840,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2408,
@@ -6084,69 +5907,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2409,
-      "wp_post_id": 14077,
-      "title": "Benjamin Wilkoff hung out with 1 person.Zac Chase",
-      "slug": "benjamin-wilkoff-hung-out-with-1-personzac-chase-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-05-30T12:00:00Z",
-      "date_published_gmt": "2012-05-30T12:00:00Z",
-      "date_modified": "2012-05-30T17:07:45+00:00",
-      "date_modified_gmt": "2012-05-30T17:07:45+00:00",
-      "content": "<p>Benjamin Wilkoff hung out with 1 person.Zac Chase</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14077-693716122d18e\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14077&amp;origin=learningischange.com&amp;obj_id=113784134-14077-693716122d18e\" data-name=\"like-post-frame-113784134-14077-693716122d18e\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out with 1 person.Zac Chase",
-      "excerpt": "Benjamin Wilkoff hung out with 1 person.Zac Chase",
-      "guid": "https://learningischange.com/2012/05/30/benjamin-wilkoff-hung-out-with-1-personzac-chase-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/05/30/benjamin-wilkoff-hung-out-with-1-personzac-chase-2/index.html",
-      "url": "https://learningischange.com/2012/05/30/benjamin-wilkoff-hung-out-with-1-personzac-chase-2/",
-      "word_count": 8,
-      "reading_time_minutes": 1,
-      "content_hash": "-78b91fb2",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:50.852Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2411,
@@ -6210,7 +5972,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2412,
@@ -6274,7 +6037,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2414,
@@ -6336,7 +6100,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2415,
@@ -6398,7 +6163,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2417,
@@ -6462,7 +6228,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2418,
@@ -6526,7 +6293,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2420,
@@ -6588,7 +6356,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2421,
@@ -6644,7 +6413,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2422,
@@ -6710,7 +6480,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2424,
@@ -6772,7 +6543,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2426,
@@ -6828,7 +6600,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2427,
@@ -6894,7 +6667,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2428,
@@ -6956,7 +6730,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2430,
@@ -7018,71 +6793,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2431,
-      "wp_post_id": 14070,
-      "title": "Benjamin Wilkoff hung out. #hangoutsonair",
-      "slug": "benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-06-25T12:00:00Z",
-      "date_published_gmt": "2012-06-25T12:00:00Z",
-      "date_modified": "2012-06-25T17:29:41+00:00",
-      "date_modified_gmt": "2012-06-25T17:29:41+00:00",
-      "content": "<p>Benjamin Wilkoff hung out. <a class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23hangoutsonair\">#hangoutsonair</a></p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14070-6937160aa8c3b\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14070&amp;origin=learningischange.com&amp;obj_id=113784134-14070-6937160aa8c3b\" data-name=\"like-post-frame-113784134-14070-6937160aa8c3b\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out. #hangoutsonair",
-      "excerpt": "Benjamin Wilkoff hung out. #hangoutsonair",
-      "guid": "https://learningischange.com/2012/06/25/benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/06/25/benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-2/index.html",
-      "url": "https://learningischange.com/2012/06/25/benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-2/",
-      "word_count": 5,
-      "reading_time_minutes": 1,
-      "content_hash": "16c72bc",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://plus.google.com/s/%23hangoutsonair"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:57.187Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2434,
@@ -7144,7 +6856,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2436,
@@ -7206,7 +6919,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2438,
@@ -7268,71 +6982,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2439,
-      "wp_post_id": 4604,
-      "title": "Benjamin Wilkoff hung out. #hangoutsonair",
-      "slug": "benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-3",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-07-30T12:00:00Z",
-      "date_published_gmt": "2012-07-30T12:00:00Z",
-      "date_modified": "2012-07-30T18:43:52+00:00",
-      "date_modified_gmt": "2012-07-30T18:43:52+00:00",
-      "content": "<p>Benjamin Wilkoff hung out. <a class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23hangoutsonair\">#hangoutsonair</a></p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-4604-693716057afc3\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=4604&amp;origin=learningischange.com&amp;obj_id=113784134-4604-693716057afc3\" data-name=\"like-post-frame-113784134-4604-693716057afc3\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out. #hangoutsonair",
-      "excerpt": "Benjamin Wilkoff hung out. #hangoutsonair",
-      "guid": "https://learningischange.com/2012/07/30/benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-3/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/07/30/benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-3/index.html",
-      "url": "https://learningischange.com/2012/07/30/benjamin-wilkoff-hung-out-lessa-classot-hashtag-hrefhttpsplusgooglecoms23hangoutsonairgreaterhangoutsonairlessagreater-3/",
-      "word_count": 5,
-      "reading_time_minutes": 1,
-      "content_hash": "582f23dd",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://plus.google.com/s/%23hangoutsonair"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:31:59.474Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2440,
@@ -7396,7 +7047,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2441,
@@ -7458,7 +7110,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2442,
@@ -7520,7 +7173,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2444,
@@ -7578,7 +7232,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2445,
@@ -7645,7 +7300,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2446,
@@ -7707,7 +7363,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2448,
@@ -7769,7 +7426,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2450,
@@ -7835,7 +7493,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2451,
@@ -7909,7 +7568,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2453,
@@ -7967,7 +7627,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2454,
@@ -8031,129 +7692,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2455,
-      "wp_post_id": 866,
-      "title": "Benjamin Wilkoff hung out with 4 people.",
-      "slug": "benjamin-wilkoff-hung-out-with-4-people-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-08-08T12:00:00Z",
-      "date_published_gmt": "2012-08-08T12:00:00Z",
-      "date_modified": "2012-08-08T19:47:53+00:00",
-      "date_modified_gmt": "2012-08-08T19:47:53+00:00",
-      "content": "<p>Benjamin Wilkoff hung out with 4 people. <a class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23hangoutsonair\">#hangoutsonair</a>Two Red Chairs ., Timothy Whalin, Ben Wilkoff and Adam Kochanowicz</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-866-693716008567e\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=866&amp;origin=learningischange.com&amp;obj_id=113784134-866-693716008567e\" data-name=\"like-post-frame-113784134-866-693716008567e\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out with 4 people. #hangoutsonairTwo Red Chairs ., Timothy Whalin, Ben Wilkoff and Adam Kochanowicz",
-      "excerpt": "Benjamin Wilkoff hung out with 4 people. #hangoutsonairTwo Red Chairs ., Timothy Whalin, Ben Wilkoff and Adam Kochanowicz",
-      "guid": "https://learningischange.com/2012/08/08/benjamin-wilkoff-hung-out-with-4-people-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/08/08/benjamin-wilkoff-hung-out-with-4-people-2/index.html",
-      "url": "https://learningischange.com/2012/08/08/benjamin-wilkoff-hung-out-with-4-people-2/",
-      "word_count": 18,
-      "reading_time_minutes": 1,
-      "content_hash": "7aa602f9",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://plus.google.com/s/%23hangoutsonair"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:32:04.258Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 2456,
-      "wp_post_id": 14064,
-      "title": "Benjamin Wilkoff hung out with 4 people. <a class='ot-hashtag'â¦",
-      "slug": "benjamin-wilkoff-hung-out-with-4-people-lessa-classot-hashtag-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-08-08T12:00:00Z",
-      "date_published_gmt": "2012-08-08T12:00:00Z",
-      "date_modified": "2012-08-08T19:47:53+00:00",
-      "date_modified_gmt": "2012-08-08T19:47:53+00:00",
-      "content": "<p>Benjamin Wilkoff hung out with 4 people. <a class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23hangoutsonair\">#hangoutsonair</a>Two Red Chairs ., Timothy Whalin, Ben Wilkoff and Adam Kochanowicz</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14064-693716002f5a7\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14064&amp;origin=learningischange.com&amp;obj_id=113784134-14064-693716002f5a7\" data-name=\"like-post-frame-113784134-14064-693716002f5a7\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out with 4 people. #hangoutsonairTwo Red Chairs ., Timothy Whalin, Ben Wilkoff and Adam Kochanowicz",
-      "excerpt": "Benjamin Wilkoff hung out with 4 people. #hangoutsonairTwo Red Chairs ., Timothy Whalin, Ben Wilkoff and Adam Kochanowicz",
-      "guid": "https://learningischange.com/2012/08/08/benjamin-wilkoff-hung-out-with-4-people-lessa-classot-hashtag-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [],
-      "path": "2012/08/08/benjamin-wilkoff-hung-out-with-4-people-lessa-classot-hashtag-2/index.html",
-      "url": "https://learningischange.com/2012/08/08/benjamin-wilkoff-hung-out-with-4-people-lessa-classot-hashtag-2/",
-      "word_count": 18,
-      "reading_time_minutes": 1,
-      "content_hash": "1a6e4409",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://plus.google.com/s/%23hangoutsonair"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:32:04.528Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2457,
@@ -8211,7 +7751,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2458,
@@ -8275,73 +7816,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2461,
-      "wp_post_id": 14676,
-      "title": "Zac Chase This is funny.",
-      "slug": "zac-chase-this-is-funny-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-08-09T12:00:00Z",
-      "date_published_gmt": "2012-08-09T12:00:00Z",
-      "date_modified": "2012-08-09T15:00:20+00:00",
-      "date_modified_gmt": "2012-08-09T15:00:20+00:00",
-      "content": "<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh5.googleusercontent.com/-SqEKzWiUAL0/UCPPtKltZsI/AAAAAAAAG_4/RHhqVgtI6DY/s0/mario333_1000.jpeg?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<p>Zac Chase&nbsp;This is funny.</p>\n\n\n\n<p></p>\n\n\n\n<p>Originally shared by Jeffrey Powers</p>\n\n\n\n<p></p>\n\n\n\n<p>We thought they were fighting for the Princess. We were wrong.&nbsp;</p>\n\n\n\n<p></p>\n\n\n\n<p>One for George Takei&nbsp;wallâ¦</p>\n\n\n\n<p></p>\n\n\n\n<p>Andrew B. Meyers â&nbsp;<a href=\"http://www.andrewbmyers.com/\">http://www.andrewbmyers.com/</a></p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14676-693715fdbf92a\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14676&amp;origin=learningischange.com&amp;obj_id=113784134-14676-693715fdbf92a\" data-name=\"like-post-frame-113784134-14676-693715fdbf92a\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Zac Chase This is funny. Originally shared by Jeffrey Powers We thought they were fighting for the Princess. We were wrong. One for George Takei wallâ¦ Andrew B. Meyers â http://www.andrewbmyers.com/",
-      "excerpt": "Zac Chase This is funny. Originally shared by Jeffrey Powers We thought they were fighting for the Princess. We were wrong. One for George Takei wallâ¦ Andrew B. Meyers â http://www.andrewbmyers.co...",
-      "guid": "https://learningischange.com/2012/08/09/zac-chase-this-is-funny-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/08/09/zac-chase-this-is-funny-2/index.html",
-      "url": "https://learningischange.com/2012/08/09/zac-chase-this-is-funny-2/",
-      "word_count": 31,
-      "reading_time_minutes": 1,
-      "content_hash": "-44e978f4",
-      "images": [
-        "https://i0.wp.com/lh5.googleusercontent.com/-SqEKzWiUAL0/UCPPtKltZsI/AAAAAAAAG_4/RHhqVgtI6DY/s0/mario333_1000.jpeg?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://www.andrewbmyers.com/"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:32:06.033Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2462,
@@ -8407,7 +7883,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2464,
@@ -8473,7 +7950,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2465,
@@ -8535,7 +8013,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2466,
@@ -8597,129 +8076,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2468,
-      "wp_post_id": 861,
-      "title": "Benjamin Wilkoff hung out with 3 people.",
-      "slug": "benjamin-wilkoff-hung-out-with-3-people-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-08-24T12:00:00Z",
-      "date_published_gmt": "2012-08-24T12:00:00Z",
-      "date_modified": "2012-08-24T19:21:53+00:00",
-      "date_modified_gmt": "2012-08-24T19:21:53+00:00",
-      "content": "<p>Benjamin Wilkoff hung out with 3 people. <a class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23hangoutsonair\">#hangoutsonair</a>Two Red Chairs, Mitchell Fairrais and Tom Rubens</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-861-693715fae3fb4\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=861&amp;origin=learningischange.com&amp;obj_id=113784134-861-693715fae3fb4\" data-name=\"like-post-frame-113784134-861-693715fae3fb4\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out with 3 people. #hangoutsonairTwo Red Chairs, Mitchell Fairrais and Tom Rubens",
-      "excerpt": "Benjamin Wilkoff hung out with 3 people. #hangoutsonairTwo Red Chairs, Mitchell Fairrais and Tom Rubens",
-      "guid": "https://learningischange.com/2012/08/24/benjamin-wilkoff-hung-out-with-3-people-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        }
-      ],
-      "path": "2012/08/24/benjamin-wilkoff-hung-out-with-3-people-2/index.html",
-      "url": "https://learningischange.com/2012/08/24/benjamin-wilkoff-hung-out-with-3-people-2/",
-      "word_count": 15,
-      "reading_time_minutes": 1,
-      "content_hash": "7363251a",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://plus.google.com/s/%23hangoutsonair"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:32:08.046Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
-    },
-    {
-      "id": 2469,
-      "wp_post_id": 14060,
-      "title": "Benjamin Wilkoff hung out with 3 people. <a class='ot-hashtag'â¦",
-      "slug": "benjamin-wilkoff-hung-out-with-3-people-lessa-classot-hashtag-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-08-24T12:00:00Z",
-      "date_published_gmt": "2012-08-24T12:00:00Z",
-      "date_modified": "2012-08-24T19:21:53+00:00",
-      "date_modified_gmt": "2012-08-24T19:21:53+00:00",
-      "content": "<p>Benjamin Wilkoff hung out with 3 people. <a class=\"ot-hashtag\" href=\"https://plus.google.com/s/%23hangoutsonair\">#hangoutsonair</a>Two Red Chairs, Mitchell Fairrais and Tom Rubens</p>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14060-693715fa6d904\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14060&amp;origin=learningischange.com&amp;obj_id=113784134-14060-693715fa6d904\" data-name=\"like-post-frame-113784134-14060-693715fa6d904\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "Benjamin Wilkoff hung out with 3 people. #hangoutsonairTwo Red Chairs, Mitchell Fairrais and Tom Rubens",
-      "excerpt": "Benjamin Wilkoff hung out with 3 people. #hangoutsonairTwo Red Chairs, Mitchell Fairrais and Tom Rubens",
-      "guid": "https://learningischange.com/2012/08/24/benjamin-wilkoff-hung-out-with-3-people-lessa-classot-hashtag-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
-      ],
-      "tags": [],
-      "path": "2012/08/24/benjamin-wilkoff-hung-out-with-3-people-lessa-classot-hashtag-2/index.html",
-      "url": "https://learningischange.com/2012/08/24/benjamin-wilkoff-hung-out-with-3-people-lessa-classot-hashtag-2/",
-      "word_count": 15,
-      "reading_time_minutes": 1,
-      "content_hash": "62e7b33f",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "https://plus.google.com/s/%23hangoutsonair"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:32:08.333Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2470,
@@ -8779,7 +8137,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2471,
@@ -8848,7 +8207,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2473,
@@ -8906,7 +8266,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2474,
@@ -8970,7 +8331,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2475,
@@ -9028,7 +8390,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2476,
@@ -9092,7 +8455,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2477,
@@ -9154,7 +8518,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2479,
@@ -9210,7 +8575,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2480,
@@ -9270,7 +8636,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2482,
@@ -9330,7 +8697,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2483,
@@ -9390,7 +8758,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2484,
@@ -9450,7 +8819,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2485,
@@ -9510,7 +8880,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2486,
@@ -9570,7 +8941,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2487,
@@ -9630,7 +9002,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2490,
@@ -9686,7 +9059,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2492,
@@ -9748,7 +9122,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2493,
@@ -9810,7 +9185,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2494,
@@ -9872,7 +9248,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2496,
@@ -9934,7 +9311,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2498,
@@ -9992,7 +9370,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2499,
@@ -10056,7 +9435,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2500,
@@ -10117,7 +9497,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2501,
@@ -10187,7 +9568,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2503,
@@ -10247,7 +9629,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2505,
@@ -10309,7 +9692,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2507,
@@ -10378,7 +9762,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2508,
@@ -10440,7 +9825,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2509,
@@ -10505,7 +9891,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2510,
@@ -10561,7 +9948,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2511,
@@ -10623,7 +10011,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2512,
@@ -10688,7 +10077,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2514,
@@ -10758,85 +10148,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 2517,
-      "wp_post_id": 14697,
-      "title": "My Mixels.  #photography   #pictures",
-      "slug": "my-mixels-photography-pictures-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2012-10-30T12:00:00Z",
-      "date_published_gmt": "2012-10-30T12:00:00Z",
-      "date_modified": "2012-10-30T16:25:20+00:00",
-      "date_modified_gmt": "2012-10-30T16:25:20+00:00",
-      "content": "<p>My Mixels.  #photography &nbsp; #pictures &nbsp;</p>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh6.googleusercontent.com/-n6YP9yTd7U8/UI__EB5SFyI/AAAAAAAACdU/JTVBYTerGRg/s0/129050FC-6686-469C-8A6C-9213F58D6ADB.JPG?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh5.googleusercontent.com/-pQrLijtMZYw/UI__EJsJzgI/AAAAAAAACdU/u64lPQgn3D0/s0/39CCB767-6F2C-4341-9D20-97075895D3CA.JPG?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh6.googleusercontent.com/-aiD9BPhJttA/UI__EKhqr_I/AAAAAAAACdU/4GNzFvIQ1ac/s0/01C8E26F-AAF9-4EFD-8DA1-8F544CF8BFB4.JPG?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh5.googleusercontent.com/-XAIVEKdI1XY/UI__EJ65S3I/AAAAAAAACdU/DoO-4diNeAk/s0/58931B40-AEF2-4D9D-A1CA-A4B26E8D31DD.JPG?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n\n\n<figure class=\"wp-block-image\"><img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/lh4.googleusercontent.com/-QCvvyAac_Pc/UI__EPfgwyI/AAAAAAAACdU/snoNe2VrQ4s/s0/ECF9B467-0D26-4753-BCE4-DD8A7C7EC9A0.JPG?w=1225&amp;ssl=1\" alt=\"\"></figure>\n\n      <div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-14697-693715e904022\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=14697&amp;origin=learningischange.com&amp;obj_id=113784134-14697-693715e904022\" data-name=\"like-post-frame-113784134-14697-693715e904022\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "My Mixels. #photography #pictures",
-      "excerpt": "My Mixels. #photography #pictures",
-      "guid": "https://learningischange.com/2012/10/30/my-mixels-photography-pictures-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Ben Wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/category/ben-wilkoff/"
-        }
       ],
-      "tags": [
-        {
-          "name": "ben wilkoff",
-          "slug": "ben-wilkoff",
-          "url": "/tag/ben-wilkoff/"
-        },
-        {
-          "name": "photography",
-          "slug": "photography",
-          "url": "/tag/photography/"
-        },
-        {
-          "name": "pictures",
-          "slug": "pictures",
-          "url": "/tag/pictures/"
-        }
-      ],
-      "path": "2012/10/30/my-mixels-photography-pictures-2/index.html",
-      "url": "https://learningischange.com/2012/10/30/my-mixels-photography-pictures-2/",
-      "word_count": 4,
-      "reading_time_minutes": 1,
-      "content_hash": "5af39222",
-      "images": [
-        "https://i0.wp.com/lh6.googleusercontent.com/-n6YP9yTd7U8/UI__EB5SFyI/AAAAAAAACdU/JTVBYTerGRg/s0/129050FC-6686-469C-8A6C-9213F58D6ADB.JPG?w=1225&ssl=1",
-        "https://i0.wp.com/lh5.googleusercontent.com/-pQrLijtMZYw/UI__EJsJzgI/AAAAAAAACdU/u64lPQgn3D0/s0/39CCB767-6F2C-4341-9D20-97075895D3CA.JPG?w=1225&ssl=1",
-        "https://i0.wp.com/lh6.googleusercontent.com/-aiD9BPhJttA/UI__EKhqr_I/AAAAAAAACdU/4GNzFvIQ1ac/s0/01C8E26F-AAF9-4EFD-8DA1-8F544CF8BFB4.JPG?w=1225&ssl=1",
-        "https://i0.wp.com/lh5.googleusercontent.com/-XAIVEKdI1XY/UI__EJ65S3I/AAAAAAAACdU/DoO-4diNeAk/s0/58931B40-AEF2-4D9D-A1CA-A4B26E8D31DD.JPG?w=1225&ssl=1",
-        "https://i0.wp.com/lh4.googleusercontent.com/-QCvvyAac_Pc/UI__EPfgwyI/AAAAAAAACdU/snoNe2VrQ4s/s0/ECF9B467-0D26-4753-BCE4-DD8A7C7EC9A0.JPG?w=1225&ssl=1"
-      ],
-      "links": {
-        "internal": [],
-        "external": []
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:32:22.677Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2012.json"
     },
     {
       "id": 2518,
@@ -10914,7 +10227,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2519,
@@ -10976,7 +10290,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2520,
@@ -11032,7 +10347,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2521,
@@ -11094,7 +10410,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2524,
@@ -11154,7 +10471,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2525,
@@ -11216,7 +10534,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2527,
@@ -11278,7 +10597,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2530,
@@ -11334,7 +10654,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2531,
@@ -11400,7 +10721,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2532,
@@ -11462,7 +10784,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2533,
@@ -11524,7 +10847,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2534,
@@ -11580,7 +10904,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2535,
@@ -11646,7 +10971,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2536,
@@ -11708,7 +11034,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     },
     {
       "id": 2537,
@@ -11770,7 +11097,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2012.json"
     }
   ],
   "post_count": 189

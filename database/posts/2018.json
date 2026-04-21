@@ -60,7 +60,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5701,
@@ -120,7 +121,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5704,
@@ -180,7 +182,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5705,
@@ -240,7 +243,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5707,
@@ -300,67 +304,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
-    },
-    {
-      "id": 5710,
-      "wp_post_id": 13546,
-      "title": "Surprise",
-      "slug": "surprise-2",
-      "type": "post",
-      "status": "publish",
-      "author": {
-        "name": "Ben Wilkoff",
-        "slug": "bhwilkoff",
-        "url": "/author/bhwilkoff/",
-        "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=80&d=mm&r=g",
-        "bio": "He owns a typewriter and collects Laserdiscs. He loves his three children quite a bit (aged 11, 16 and 18). He is passionate about authentic learning, technology with purpose, and creating at least one new thing every day. In short, he teaches, and learns. A lot.\n\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\tView all posts by Ben Wilkoff â"
-      },
-      "date_published": "2018-01-25T12:00:00Z",
-      "date_published_gmt": "2018-01-25T12:00:00Z",
-      "date_modified": "2018-04-19T16:07:24+00:00",
-      "date_modified_gmt": "2018-04-19T16:07:24+00:00",
-      "content": "<p>I am surprised often. By others, and even by myself.</p>\n<p>Mostly this is because my expectations are a few degrees off (or massively). I am surprised each time, and I chuckle to myself that I should probably have predicted behavior different. But I donât.</p>\n<p><a class=\"js-update-body-link-color\" href=\"http://www.npr.org/sections/ed/2018/01/24/578437957/laptops-and-phones-in-the-classroom-yea-nay-or-a-third-way\">Laptops And Phones In The Classroom: Yea, Nay Or A Third Way?</a></p>\n<blockquote><p>We are still engaged in this debate about devices in the classroom, at all levels. But, knowing why you believe they should or should not be there is probably more important than just believing it. See what others think here!</p></blockquote>\n<p><a class=\"js-update-body-link-color\" href=\"http://www.edsurge.com/news/2018-01-19-ferpa-ruling-provides-privacy-advocates-and-educators-with-clearer-interpretation-of-rights?mkt_tok=eyJpIjoiTUdGa04yTXhOVFEzWlRVeCIsInQiOiJWOEZ5VXJraGZTMGYxZVAyek55dHJWTnVYUGN0N0dvVk1IZ2FZdHF5M2xMRnlLemdaUGlBVkx5Kzlv\">FERPA Ruling Provides Privacy Advocates and Educators with Clearer Interpretation of Rights â EdSurge News</a></p>\n<blockquote><p>This conversation about student data privacy will continue to expand in importance. Fortunately, we are moving forward with more guidance and understanding.</p></blockquote>\n<p><a class=\"js-update-body-link-color\" href=\"http://barbarabray.net/2018/01/21/the-why-and-the-way-of-inquiry-and-pbl-with-ross-cooper/\">The Why and The Way of Inquiry and PBL</a></p>\n<blockquote><p>In this podcast episode and article, Barbara Bray interviews and expands upon ideas of PBL from Ross Cooper. I particularly like the discussion of how teachers can create a space that promotes risk taking.</p></blockquote>\n<div class=\"sharedaddy sd-sharing-enabled\"></div><div class=\"sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded\" id=\"like-post-wrapper-113784134-13546-693710966e8ac\" data-src=\"https://widgets.wp.com/likes/?ver=15.3.1#blog_id=113784134&amp;post_id=13546&amp;origin=learningischange.com&amp;obj_id=113784134-13546-693710966e8ac\" data-name=\"like-post-frame-113784134-13546-693710966e8ac\" data-title=\"Like or Reblog\"><span class=\"sd-text-color\"></span><a class=\"sd-link-color\"></a></div>\n<div id=\"jp-relatedposts\" class=\"jp-relatedposts\">\n\t\n</div>",
-      "content_filtered": "I am surprised often. By others, and even by myself. Mostly this is because my expectations are a few degrees off (or massively). I am surprised each time, and I chuckle to myself that I should probably have predicted behavior different. But I donât. Laptops And Phones In The Classroom: Yea, Nay Or A Third Way? We are still engaged in this debate about devices in the classroom, at all levels. But, knowing why you believe they should or should not be there is probably more important than just believing it. See what others think here! FERPA Ruling Provides Privacy Advocates and Educators with Clearer Interpretation of Rights â EdSurge News This conversation about student data privacy will continue to expand in importance. Fortunately, we are moving forward with more guidance and understanding. The Why and The Way of Inquiry and PBL In this podcast episode and article, Barbara Bray interviews and expands upon ideas of PBL from Ross Cooper. I particularly like the discussion of how teachers can create a space that promotes risk taking.",
-      "excerpt": "I am surprised often. By others, and even by myself. Mostly this is because my expectations are a few degrees off (or massively). I am surprised each time, and I chuckle to myself that I should probab...",
-      "guid": "https://learningischange.com/2018/01/25/surprise-2/",
-      "comment_status": "open",
-      "comment_count": 0,
-      "categories": [
-        {
-          "name": "Newsletter Archive",
-          "slug": "newsletter-archive",
-          "url": "/category/newsletter-archive/"
-        }
       ],
-      "tags": [],
-      "path": "2018/01/25/surprise-2/index.html",
-      "url": "https://learningischange.com/2018/01/25/surprise-2/",
-      "word_count": 176,
-      "reading_time_minutes": 1,
-      "content_hash": "6b5bb6ee",
-      "images": [],
-      "links": {
-        "internal": [],
-        "external": [
-          "http://www.npr.org/sections/ed/2018/01/24/578437957/laptops-and-phones-in-the-classroom-yea-nay-or-a-third-way",
-          "http://www.edsurge.com/news/2018-01-19-ferpa-ruling-provides-privacy-advocates-and-educators-with-clearer-interpretation-of-rights?mkt_tok=eyJpIjoiTUdGa04yTXhOVFEzWlRVeCIsInQiOiJWOEZ5VXJraGZTMGYxZVAyek55dHJWTnVYUGN0N0dvVk1IZ2FZdHF5M2xMRnlLemdaUGlBVkx5Kzlv",
-          "http://barbarabray.net/2018/01/21/the-why-and-the-way-of-inquiry-and-pbl-with-ross-cooper/"
-        ]
-      },
-      "schema_type": "Article",
-      "publisher": "Learning is Change",
-      "history": [
-        {
-          "date": "2026-01-16T18:52:30.497Z",
-          "action": "created",
-          "tool": "database-generator",
-          "changes": [
-            "initial-scan"
-          ],
-          "notes": "Initial database generation"
-        }
-      ]
+      "_shard": "2018.json"
     },
     {
       "id": 5712,
@@ -420,7 +365,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5714,
@@ -480,7 +426,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5716,
@@ -540,7 +487,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5717,
@@ -607,7 +555,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5720,
@@ -667,7 +616,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5721,
@@ -727,7 +677,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5724,
@@ -787,7 +738,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5726,
@@ -847,7 +799,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5728,
@@ -907,7 +860,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5729,
@@ -967,7 +921,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5731,
@@ -1027,7 +982,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5734,
@@ -1087,7 +1043,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5735,
@@ -1149,7 +1106,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5738,
@@ -1209,7 +1167,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5740,
@@ -1269,7 +1228,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5741,
@@ -1331,7 +1291,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5743,
@@ -1399,7 +1360,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5746,
@@ -1462,7 +1424,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5748,
@@ -1522,7 +1485,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5750,
@@ -1592,7 +1556,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     },
     {
       "id": 5752,
@@ -1648,7 +1613,8 @@
           ],
           "notes": "Initial database generation"
         }
-      ]
+      ],
+      "_shard": "2018.json"
     }
   ],
   "post_count": 27
