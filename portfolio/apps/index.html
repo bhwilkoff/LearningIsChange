@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native Apps | Ben Wilkoff</title>
+  <meta name="description" content="Native apps by Ben Wilkoff — shipping to iOS, iPadOS, tvOS, macOS, Android, and the web. Archive Watch, Bsky Dreams, Tidbits Trivia, and Boba Playbook, built end-to-end from one codebase.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/portfolio/" class="nav-brand">
+        <span class="brand-mark">BW</span>
+        Ben Wilkoff
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/portfolio/">Home</a></li>
+        <li><a href="/portfolio/career/">Career</a></li>
+        <li><a href="/portfolio/apps/" class="active">Apps</a></li>
+        <li><a href="/portfolio/projects/">Projects</a></li>
+        <li><a href="/portfolio/writing/">Writing</a></li>
+        <li><a href="/portfolio/video/">Video</a></li>
+        <li><a href="/portfolio/about/">About</a></li>
+        <li><a href="/">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-container">
+
+    <div class="page-header page-header-decorated">
+      <div class="hero-subtitle">iOS &middot; iPadOS &middot; tvOS &middot; macOS &middot; Android &middot; Web</div>
+      <h1>Native Apps</h1>
+      <p class="lead">I design and ship real, native apps &mdash; end to end, from concept through App Store and Google Play release. One shared core, six platforms, no servers to run. Here's what's live and what's in beta.</p>
+    </div>
+
+    <!-- Featured: Archive Watch -->
+    <section class="section">
+      <div class="app-hero">
+        <span class="card-tag">Featured &middot; Live on every platform</span>
+        <h2 style="margin-bottom: var(--space-xs);">Archive Watch</h2>
+        <div class="platform-badges" style="margin-top: var(--space-md);">
+          <span class="pbadge live">iOS</span>
+          <span class="pbadge live">iPadOS</span>
+          <span class="pbadge live">tvOS</span>
+          <span class="pbadge live">macOS</span>
+          <span class="pbadge live">Android</span>
+          <span class="pbadge live">Web</span>
+        </div>
+        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch turns the Internet Archive's ~37,000 public-domain films, classic TV, silent cinema, animation, and vintage commercials into a beautiful, curated, ad-free viewing experience &mdash; on your phone, tablet, TV, Mac, and browser.</p>
+        <p style="max-width: 680px;">It's the fullest expression of how I build: a single SQLite catalog published over HTTP (queried in place by the web, downloaded and inflated by native clients), a resilient streaming layer that survives flaky origins, deterministic "Live Channels" that play the same on every device, CloudKit sync across Apple hardware, and a self-healing content pipeline running entirely on GitHub Actions &mdash; no backend to pay for.</p>
+        <div class="app-links">
+          <a href="https://apps.apple.com/us/app/archive-watch/id6776697407" class="app-link primary">App Store &mdash; iPhone, iPad &amp; Apple&nbsp;TV</a>
+          <a href="https://play.google.com/store/apps/details?id=com.archivewatch.app" class="app-link">Google Play</a>
+          <a href="https://archivewatch.org/" class="app-link">archivewatch.org</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shipped & in-beta apps -->
+    <section class="section">
+      <div class="section-header">
+        <div class="accent-line"></div>
+        <h2>The App Portfolio</h2>
+        <p class="lead">Each app starts from a real need and ships as a genuinely native experience on every platform it targets &mdash; SwiftUI on Apple devices, Jetpack Compose on Android, a zero-dependency PWA on the web.</p>
+      </div>
+
+      <div class="card-grid">
+
+        <!-- Bsky Dreams -->
+        <div class="app-card card-accent fade-up">
+          <span class="card-tag">Social &middot; Live</span>
+          <h3>Bsky Dreams</h3>
+          <div class="platform-badges">
+            <span class="pbadge live">iOS</span>
+            <span class="pbadge live">iPadOS</span>
+            <span class="pbadge live">Web</span>
+          </div>
+          <p class="app-oneliner">A custom Bluesky client built for learning and connection over passive scrolling.</p>
+          <ul class="app-features">
+            <li>Force-directed Network Constellation for topic discovery</li>
+            <li>Depth-colored conversation threading &amp; hybrid multi-source feeds</li>
+            <li>Cross-device sync through your own AT Protocol repo &mdash; no server</li>
+            <li>Zero-dependency: raw XRPC, Swift 6 / SwiftUI, vanilla JS on the web</li>
+          </ul>
+          <div class="app-links">
+            <a href="https://apps.apple.com/us/app/bsky-dreams/id6760909675" class="app-link primary">App Store</a>
+            <a href="https://bskydreams.com" class="app-link">bskydreams.com</a>
+          </div>
+        </div>
+
+        <!-- Tidbits Trivia -->
+        <div class="app-card card-warm fade-up">
+          <span class="card-tag">Game &middot; Web live, apps in beta</span>
+          <h3>Tidbits Trivia</h3>
+          <div class="platform-badges">
+            <span class="pbadge live">Web</span>
+            <span class="pbadge beta">iOS</span>
+            <span class="pbadge beta">iPadOS</span>
+            <span class="pbadge beta">tvOS</span>
+            <span class="pbadge beta">Android</span>
+            <span class="pbadge soon">macOS</span>
+          </div>
+          <p class="app-oneliner">The whole of Wikipedia, turned into fact-checked trivia &mdash; where every question teaches you something.</p>
+          <ul class="app-features">
+            <li>11,000+ questions across 22 types, generated &amp; fact-checked from Wikipedia + Wikidata</li>
+            <li>A deterministic Daily that's byte-identical across Swift, Kotlin &amp; JS</li>
+            <li>Serverless cross-platform multiplayer &mdash; Apple &harr; Android, no server</li>
+            <li>No account, no analytics, no data collection</li>
+          </ul>
+          <div class="app-links">
+            <a href="https://tidbitstrivia.com" class="app-link primary">tidbitstrivia.com</a>
+            <span class="app-link" style="cursor: default; opacity: 0.75;">iOS &middot; tvOS &middot; Android in beta</span>
+          </div>
+        </div>
+
+        <!-- Boba Playbook -->
+        <div class="app-card card-coral fade-up">
+          <span class="card-tag">Utility &middot; Web live, apps in beta</span>
+          <h3>Boba Playbook</h3>
+          <div class="platform-badges">
+            <span class="pbadge live">Web</span>
+            <span class="pbadge beta">iOS</span>
+            <span class="pbadge beta">iPadOS</span>
+            <span class="pbadge beta">Android</span>
+          </div>
+          <p class="app-oneliner">A fan-built companion for the Bo Jackson Battle Arena trading card game.</p>
+          <ul class="app-features">
+            <li>Browse 17,000+ cards with live eBay market pricing</li>
+            <li>On-device card scanning via Apple's Vision framework &mdash; no image ever uploaded</li>
+            <li>RealityKit 3D "Hero Shot" card animations on iOS</li>
+            <li>Collections &amp; decks that sync across devices and share as public pages</li>
+          </ul>
+          <div class="app-links">
+            <a href="https://bobaplaybook.com" class="app-link primary">bobaplaybook.com</a>
+            <span class="app-link" style="cursor: default; opacity: 0.75;">iOS &amp; Android in beta</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- How I Build -->
+    <section class="section">
+      <div class="section-header">
+        <div class="accent-line"></div>
+        <h2>How I Build: One Codebase, Five Platforms</h2>
+        <p class="lead">Shipping the same app to iOS, iPadOS, tvOS, macOS, Android, and the web is a systems problem. I solved it once and turned the solution into open-source starter templates &mdash; each adds a platform tier, all share the same discipline.</p>
+      </div>
+
+      <div class="card-grid">
+        <a href="https://github.com/bhwilkoff/DualAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
+          <span class="card-tag">2 platforms</span>
+          <h3>Dual App Template</h3>
+          <p>Web + iOS. The foundation &mdash; a shared Swift core, a zero-build web app, and the parity conventions everything else grows from.</p>
+          <span class="card-link">View on GitHub</span>
+        </a>
+
+        <a href="https://github.com/bhwilkoff/TriAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
+          <span class="card-tag">3 platforms</span>
+          <h3>Tri App Template</h3>
+          <p>Web + iOS + Android. Adds a native Kotlin/Jetpack Compose module, Android CI, and universal links (AASA + assetlinks) across all three.</p>
+          <span class="card-link">View on GitHub</span>
+        </a>
+
+        <a href="https://github.com/bhwilkoff/QuadAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
+          <span class="card-tag">4 platforms</span>
+          <h3>Quad App Template</h3>
+          <p>Web + iOS/iPadOS + Apple TV + Android. Restructures the Apple side into a shared core with per-platform iOS and tvOS targets.</p>
+          <span class="card-link">View on GitHub</span>
+        </a>
+
+        <a href="https://github.com/bhwilkoff/QuintAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
+          <span class="card-tag">5 platforms</span>
+          <h3>Quint App Template</h3>
+          <p>Web + iOS/iPadOS + macOS + Apple TV + Android. The full set &mdash; five native experiences from one shared core.</p>
+          <span class="card-link">View on GitHub</span>
+        </a>
+      </div>
+
+      <div class="feature-banner bg-gradient mt-xl">
+        <div class="feature-banner-text">
+          <h3>The principles behind the templates</h3>
+          <p><strong>Feature parity, not design consistency.</strong> Every app does the same things on every platform, but expresses them in each platform's native idiom &mdash; a SwiftUI <code>.sheet</code>, a Compose bottom sheet, a native web <code>&lt;dialog&gt;</code>, a tvOS focus picker. A single-source-of-truth parity matrix, audited against the real code, keeps every platform honest.</p>
+          <p><strong>No servers, no paid tiers.</strong> Sync rides on each ecosystem's own cloud &mdash; CloudKit for Apple, the user's Drive or AT Protocol repo elsewhere. Data ships as static files. Everything deploys through free GitHub Actions, including the cloud-CI App Store and Play Store submission pipelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section">
+      <div class="feature-banner">
+        <div class="feature-banner-text">
+          <span class="card-tag">The through line</span>
+          <h3>Twenty years of teaching, now in the shape of software</h3>
+          <p>Every app I build carries the same conviction that runs through the classroom, the blog, and the district work: technology should serve people and deepen understanding, not replace it. Archive Watch preserves culture. Tidbits makes every answer a lesson. Bsky Dreams trades passive scrolling for genuine connection. The craft is new; the purpose isn't.</p>
+          <a href="/portfolio/about/" class="btn btn-primary mt-md">More about me</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <ul class="footer-links">
+        <li><a href="/">Learning is Change Blog</a></li>
+        <li><a href="https://github.com/bhwilkoff">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/bhwilkoff/">LinkedIn</a></li>
+        <li><a href="https://bsky.app/profile/laserdiscleftist.bsky.social">Bluesky</a></li>
+        <li><a href="https://masculinitydetox.org">The Masculinity Detox</a></li>
+      </ul>
+      <p class="footer-note">Ben Wilkoff &middot; Educator, Builder, Writer</p>
+    </div>
+  </footer>
+
+</body>
+</html>

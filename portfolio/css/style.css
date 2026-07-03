@@ -248,3 +248,35 @@ blockquote cite { display: block; font-size: 0.85rem; color: var(--color-muted);
   background-size: 300% 300%;
   animation: gradientShift 8s ease infinite;
 }
+
+/* --- Platform Badges (native apps) --- */
+.platform-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--space-md); }
+.pbadge { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.01em; padding: 3px 10px; border-radius: 100px; border: 1px solid var(--color-border); color: var(--color-muted); background: var(--color-surface); display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.pbadge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--color-light); flex-shrink: 0; }
+.pbadge.live { color: var(--color-accent-dark); background: var(--color-accent-light); border-color: transparent; }
+.pbadge.live::before { background: var(--color-accent); }
+.pbadge.beta { color: #9a7a1e; background: var(--color-warm-light); border-color: transparent; }
+.pbadge.beta::before { background: var(--color-warm); }
+.pbadge.soon { color: var(--color-muted); }
+.pbadge.soon::before { background: var(--color-light); }
+
+/* --- App Store / web link buttons --- */
+.app-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--space-md); }
+.app-link { font-size: 0.82rem; font-weight: 600; padding: 7px 15px; border-radius: 8px; border: 1px solid var(--color-border); color: var(--color-text); display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s ease; }
+.app-link::after { content: none; }
+.app-link:hover { border-color: var(--color-accent); color: var(--color-accent-dark); background: var(--color-accent-light); transform: translateY(-1px); }
+.app-link.primary { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+.app-link.primary:hover { background: var(--color-accent-dark); color: #fff; }
+
+/* --- App showcase card (larger, for the Apps page) --- */
+.app-card { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 14px; padding: var(--space-xl); transition: all 0.25s ease; }
+.app-card:hover { border-color: var(--color-accent); box-shadow: 0 8px 30px rgba(42, 157, 143, 0.1); transform: translateY(-3px); }
+.app-card h3 { margin-bottom: var(--space-xs); }
+.app-card .app-oneliner { color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); }
+.app-card .app-features { list-style: none; margin: var(--space-md) 0 0; padding: 0; }
+.app-card .app-features li { position: relative; padding-left: 1.4rem; font-size: 0.9rem; color: var(--color-muted); margin-bottom: var(--space-xs); }
+.app-card .app-features li::before { content: '\2713'; position: absolute; left: 0; color: var(--color-accent); font-weight: 700; }
+
+/* --- Featured app (Archive Watch hero card) --- */
+.app-hero { background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-surface) 100%); border: 1px solid var(--color-border); border-radius: 16px; padding: var(--space-2xl); position: relative; overflow: hidden; }
+.app-hero .card-tag { background: var(--color-bg); }
