@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Native Apps | Ben Wilkoff</title>
-  <meta name="description" content="Native apps by Ben Wilkoff — shipping to iOS, iPadOS, tvOS, macOS, Android, and the web. Archive Watch, Bsky Dreams, Tidbits Trivia, and Boba Playbook, built end-to-end from one codebase.">
+  <meta name="description" content="Native apps by Ben Wilkoff — shipping to iOS, iPadOS, tvOS, macOS, Android, Android TV, Fire TV, Roku, Windows, and the web. Archive Watch, Tidbits Trivia, Bsky Dreams, and Boba Playbook, built end-to-end from one codebase and available on the App Store, Google Play, Amazon Appstore, Roku Channel Store, and Microsoft Store.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -37,15 +37,15 @@
   <main class="page-container">
 
     <div class="page-header page-header-decorated">
-      <div class="hero-subtitle">iOS &middot; iPadOS &middot; tvOS &middot; macOS &middot; Android &middot; Web</div>
+      <div class="hero-subtitle">iOS &middot; iPadOS &middot; tvOS &middot; macOS &middot; Android &middot; Android TV &middot; Fire TV &middot; Roku &middot; Windows &middot; Web</div>
       <h1>Native Apps</h1>
-      <p class="lead">I design and ship real, native apps &mdash; end to end, from concept through App Store and Google Play release. One shared core, six platforms, no servers to run. Here's what's live and what's in beta.</p>
+      <p class="lead">I design and ship real, native apps &mdash; end to end, from concept through App Store, Google Play, Amazon Appstore, Roku Channel Store, and Microsoft Store release. One shared core, ten platforms, five stores, no servers to run. Here's what's live and where to get it.</p>
     </div>
 
     <!-- Featured: Archive Watch -->
     <section class="section">
       <div class="app-hero">
-        <span class="card-tag">Featured &middot; Live on every platform</span>
+        <span class="card-tag">Featured &middot; Live on ten platforms across four stores</span>
         <h2 style="margin-bottom: var(--space-xs);">Archive Watch</h2>
         <div class="platform-badges" style="margin-top: var(--space-md);">
           <span class="pbadge live">iOS</span>
@@ -53,14 +53,50 @@
           <span class="pbadge live">tvOS</span>
           <span class="pbadge live">macOS</span>
           <span class="pbadge live">Android</span>
+          <span class="pbadge live">Google TV</span>
+          <span class="pbadge live">Fire TV</span>
+          <span class="pbadge live">Roku</span>
+          <span class="pbadge live">Chromecast</span>
           <span class="pbadge live">Web</span>
+          <span class="pbadge beta">Samsung TV &middot; in review</span>
         </div>
-        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch turns the Internet Archive's ~37,000 public-domain films, classic TV, silent cinema, animation, and vintage commercials into a beautiful, curated, ad-free viewing experience &mdash; on your phone, tablet, TV, Mac, and browser.</p>
-        <p style="max-width: 680px;">It's the fullest expression of how I build: a single SQLite catalog published over HTTP (queried in place by the web, downloaded and inflated by native clients), a resilient streaming layer that survives flaky origins, deterministic "Live Channels" that play the same on every device, CloudKit sync across Apple hardware, and a self-healing content pipeline running entirely on GitHub Actions &mdash; no backend to pay for.</p>
+        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch turns the Internet Archive's ~32,000 public-domain feature films, classic TV, silent cinema, animation, newsreels, and vintage commercials into a curated, ad-free viewing experience with the dignity of a modern streaming service and none of its machinery &mdash; free, no account, no tracking, on every screen you own.</p>
+        <p style="max-width: 680px;">Since summer 2026 it has grown from a phone-and-TV app into a living-room platform: a <strong>Roku channel</strong> written in BrightScript that runs on a 2011 Roku 2 XD, a <strong>Fire TV</strong> build on the Amazon Appstore, a Google Cast receiver, and a smart-TV web layer packaged for Samsung Tizen and LG webOS. Alongside: deterministic <strong>Live Channels</strong> (a TV-guide grid that plays the same on every device), <strong>Watch Together</strong> over SharePlay, offline downloads, live on-device captions, <strong>Clip Studio</strong> on iPhone and Android, and a <strong>Creation Studio</strong> on the Mac whose supercut engine searches every subtitle line in the archive and cuts the moments you name.</p>
+        <p style="max-width: 680px;">It's the fullest expression of how I build: a single SQLite catalog published over HTTP, a resilient streaming layer that survives flaky origins, sync through each ecosystem's own cloud (iCloud, Google Drive), a published rights audit with numbers, and a self-healing content pipeline running on a fleet of 30+ scheduled GitHub Actions workflows &mdash; no backend to pay for.</p>
         <div class="app-links">
-          <a href="https://apps.apple.com/us/app/archive-watch/id6776697407" class="app-link primary">App Store &mdash; iPhone, iPad &amp; Apple&nbsp;TV</a>
-          <a href="https://play.google.com/store/apps/details?id=com.archivewatch.app" class="app-link">Google Play</a>
+          <a href="https://apps.apple.com/us/app/archive-watch/id6776697407" class="app-link primary">App Store &mdash; iPhone, iPad, Apple&nbsp;TV &amp; Mac</a>
+          <a href="https://play.google.com/store/apps/details?id=com.archivewatch.app" class="app-link">Google Play &mdash; Android &amp; Google&nbsp;TV</a>
+          <a href="https://www.amazon.com/gp/mas/dl/android?p=com.archivewatch.app" class="app-link">Amazon Appstore &mdash; Fire&nbsp;TV</a>
+          <a href="https://channelstore.roku.com/details/12a571a872732e40fe8d1d6c59f3849f:5ec8f46dcec2324229c8d096ea23c089/archive-watch" class="app-link">Roku Channel Store</a>
           <a href="https://archivewatch.org/" class="app-link">archivewatch.org</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured: Tidbits Trivia -->
+    <section class="section">
+      <div class="app-hero" style="background: linear-gradient(135deg, var(--color-warm-light) 0%, var(--color-surface) 100%);">
+        <span class="card-tag">Featured &middot; Live on the App Store, Google Play &amp; Microsoft Store</span>
+        <h2 style="margin-bottom: var(--space-xs);">Tidbits Trivia</h2>
+        <div class="platform-badges" style="margin-top: var(--space-md);">
+          <span class="pbadge live">iOS</span>
+          <span class="pbadge live">iPadOS</span>
+          <span class="pbadge live">tvOS</span>
+          <span class="pbadge live">macOS</span>
+          <span class="pbadge live">Android</span>
+          <span class="pbadge live">Windows</span>
+          <span class="pbadge live">Web</span>
+          <span class="pbadge live">iMessage</span>
+          <span class="pbadge beta">Android TV &middot; rolling out</span>
+        </div>
+        <p style="max-width: 680px;">The whole of Wikipedia, turned into fact-checked trivia &mdash; where every question teaches you something. Nearly 100,000 questions across dozens of question types, generated and fact-checked from Wikipedia and Wikidata; a deterministic Daily that is byte-identical across Swift, Kotlin, JavaScript, and C#; serverless online play between Apple and Android; no account required and no data collection.</p>
+        <p style="max-width: 680px;">Two things arrived in 2026 that most trivia apps never attempt. <strong>Tidbits Live</strong> turns a Mac or a Windows PC into a pub-trivia host: build a night (or import a Kahoot), drive a projected big screen, and let every team answer on their own phones through any Tidbits app or the web &mdash; with wager rounds, jokers, pictures, clips, live scoreboards, and a phone remote for the host. Hosting is free forever. And <strong>Tidbits in iMessage</strong> lets you send a round to a group chat and have everyone play in the thread.</p>
+        <p style="max-width: 680px;">The Windows app is native Avalonia + .NET, written and shipped to the Microsoft Store from a Mac through a CI-only pipeline &mdash; the whole platform was built, observed through headless screenshots, and released without ever owning a Windows machine. One Android build serves phones, tablets, and the TV launcher.</p>
+        <div class="app-links">
+          <a href="https://apps.apple.com/us/app/tidbits-trivia/id6782202277" class="app-link primary">App Store &mdash; iPhone, iPad, Apple&nbsp;TV &amp; Mac</a>
+          <a href="https://play.google.com/store/apps/details?id=com.tidbitstrivia.app" class="app-link">Google Play &mdash; Android</a>
+          <a href="https://apps.microsoft.com/detail/9NRKS9LDRCWC" class="app-link">Microsoft Store &mdash; Windows</a>
+          <a href="https://tidbitstrivia.com" class="app-link">tidbitstrivia.com</a>
         </div>
       </div>
     </section>
@@ -70,10 +106,10 @@
       <div class="section-header">
         <div class="accent-line"></div>
         <h2>The App Portfolio</h2>
-        <p class="lead">Each app starts from a real need and ships as a genuinely native experience on every platform it targets &mdash; SwiftUI on Apple devices, Jetpack Compose on Android, a zero-dependency PWA on the web.</p>
+        <p class="lead">Each app starts from a real need and ships as a genuinely native experience on every platform it targets &mdash; SwiftUI on Apple devices, Jetpack Compose on Android, BrightScript on Roku, Avalonia on Windows, a zero-dependency PWA on the web.</p>
       </div>
 
-      <div class="card-grid">
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
 
         <!-- Bsky Dreams -->
         <div class="app-card card-accent fade-up">
@@ -97,100 +133,128 @@
           </div>
         </div>
 
-        <!-- Tidbits Trivia -->
-        <div class="app-card card-warm fade-up">
-          <span class="card-tag">Game &middot; Web live, apps in beta</span>
-          <h3>Tidbits Trivia</h3>
-          <div class="platform-badges">
-            <span class="pbadge live">Web</span>
-            <span class="pbadge beta">iOS</span>
-            <span class="pbadge beta">iPadOS</span>
-            <span class="pbadge beta">tvOS</span>
-            <span class="pbadge beta">Android</span>
-            <span class="pbadge soon">macOS</span>
-          </div>
-          <p class="app-oneliner">The whole of Wikipedia, turned into fact-checked trivia &mdash; where every question teaches you something.</p>
-          <ul class="app-features">
-            <li>11,000+ questions across 22 types, generated &amp; fact-checked from Wikipedia + Wikidata</li>
-            <li>A deterministic Daily that's byte-identical across Swift, Kotlin &amp; JS</li>
-            <li>Serverless cross-platform multiplayer &mdash; Apple &harr; Android, no server</li>
-            <li>No account, no analytics, no data collection</li>
-          </ul>
-          <div class="app-links">
-            <a href="https://tidbitstrivia.com" class="app-link primary">tidbitstrivia.com</a>
-            <span class="app-link" style="cursor: default; opacity: 0.75;">iOS &middot; tvOS &middot; Android in beta</span>
-          </div>
-        </div>
-
         <!-- Boba Playbook -->
         <div class="app-card card-coral fade-up">
-          <span class="card-tag">Utility &middot; Web live, apps in beta</span>
+          <span class="card-tag">Utility &middot; Web &amp; Android live, iOS in beta</span>
           <h3>Boba Playbook</h3>
           <div class="platform-badges">
             <span class="pbadge live">Web</span>
+            <span class="pbadge live">Android</span>
             <span class="pbadge beta">iOS</span>
             <span class="pbadge beta">iPadOS</span>
-            <span class="pbadge beta">Android</span>
           </div>
           <p class="app-oneliner">A fan-built companion for the Bo Jackson Battle Arena trading card game.</p>
           <ul class="app-features">
-            <li>Browse 17,000+ cards with live eBay market pricing</li>
-            <li>On-device card scanning via Apple's Vision framework &mdash; no image ever uploaded</li>
+            <li>Browse 31,000+ cards (including the full Tecmo Bowl Edition set) with live eBay market pricing</li>
+            <li>On-device card scanning via Apple's Vision framework and ML Kit &mdash; no image ever uploaded</li>
             <li>RealityKit 3D "Hero Shot" card animations on iOS</li>
             <li>Collections &amp; decks that sync across devices and share as public pages</li>
           </ul>
           <div class="app-links">
-            <a href="https://bobaplaybook.com" class="app-link primary">bobaplaybook.com</a>
-            <span class="app-link" style="cursor: default; opacity: 0.75;">iOS &amp; Android in beta</span>
+            <a href="https://play.google.com/store/apps/details?id=com.bobaplaybook.app" class="app-link primary">Google Play</a>
+            <a href="https://bobaplaybook.com" class="app-link">bobaplaybook.com</a>
+            <a href="https://testflight.apple.com/join/YN52Dgu2" class="app-link">iOS beta on TestFlight</a>
           </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Store directory -->
+    <section class="section">
+      <div class="section-header">
+        <div class="accent-line"></div>
+        <h2>Where to Get Them</h2>
+        <p class="lead">Every store listing in one place. Five stores, four apps, one developer account for each.</p>
+      </div>
+
+      <div class="store-table-wrap">
+        <table class="store-table">
+          <thead>
+            <tr>
+              <th scope="col">App</th>
+              <th scope="col">Apple App Store</th>
+              <th scope="col">Google Play</th>
+              <th scope="col">Amazon Appstore</th>
+              <th scope="col">Roku Channel Store</th>
+              <th scope="col">Microsoft Store</th>
+              <th scope="col">Web</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Archive Watch</th>
+              <td><a href="https://apps.apple.com/us/app/archive-watch/id6776697407">iPhone, iPad, Apple&nbsp;TV, Mac</a></td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.archivewatch.app">Android, Google&nbsp;TV</a></td>
+              <td><a href="https://www.amazon.com/gp/mas/dl/android?p=com.archivewatch.app">Fire&nbsp;TV</a></td>
+              <td><a href="https://channelstore.roku.com/details/12a571a872732e40fe8d1d6c59f3849f:5ec8f46dcec2324229c8d096ea23c089/archive-watch">Roku</a></td>
+              <td class="store-none">&mdash;</td>
+              <td><a href="https://archivewatch.org/">archivewatch.org</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Tidbits Trivia</th>
+              <td><a href="https://apps.apple.com/us/app/tidbits-trivia/id6782202277">iPhone, iPad, Apple&nbsp;TV, Mac</a></td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.tidbitstrivia.app">Android</a></td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td><a href="https://apps.microsoft.com/detail/9NRKS9LDRCWC">Windows</a></td>
+              <td><a href="https://tidbitstrivia.com">tidbitstrivia.com</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Bsky Dreams</th>
+              <td><a href="https://apps.apple.com/us/app/bsky-dreams/id6760909675">iPhone, iPad</a></td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td><a href="https://bskydreams.com">bskydreams.com</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Boba Playbook</th>
+              <td><a href="https://testflight.apple.com/join/YN52Dgu2">TestFlight beta</a></td>
+              <td><a href="https://play.google.com/store/apps/details?id=com.bobaplaybook.app">Android</a></td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td><a href="https://bobaplaybook.com">bobaplaybook.com</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted" style="font-size: 0.85rem; margin-top: var(--space-sm);">Need help with any of them? There's a single <a href="/support.html">support page</a> for every app.</p>
+    </section>
+
     <!-- How I Build -->
     <section class="section">
       <div class="section-header">
         <div class="accent-line"></div>
-        <h2>How I Build: One Codebase, Five Platforms</h2>
-        <p class="lead">Shipping the same app to iOS, iPadOS, tvOS, macOS, Android, and the web is a systems problem. I solved it once and turned the solution into open-source starter templates &mdash; each adds a platform tier, all share the same discipline.</p>
+        <h2>How I Build: One Codebase, Every Platform</h2>
+        <p class="lead">Shipping the same app to phones, tablets, desktops, and five kinds of television is a systems problem. I solved it once and turned the solution into a single open-source starter template that grows with the apps.</p>
       </div>
 
-      <div class="card-grid">
-        <a href="https://github.com/bhwilkoff/DualAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
-          <span class="card-tag">2 platforms</span>
-          <h3>Dual App Template</h3>
-          <p>Web + iOS. The foundation &mdash; a shared Swift core, a zero-build web app, and the parity conventions everything else grows from.</p>
-          <span class="card-link">View on GitHub</span>
-        </a>
-
-        <a href="https://github.com/bhwilkoff/TriAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
-          <span class="card-tag">3 platforms</span>
-          <h3>Tri App Template</h3>
-          <p>Web + iOS + Android. Adds a native Kotlin/Jetpack Compose module, Android CI, and universal links (AASA + assetlinks) across all three.</p>
-          <span class="card-link">View on GitHub</span>
-        </a>
-
-        <a href="https://github.com/bhwilkoff/QuadAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
-          <span class="card-tag">4 platforms</span>
-          <h3>Quad App Template</h3>
-          <p>Web + iOS/iPadOS + Apple TV + Android. Restructures the Apple side into a shared core with per-platform iOS and tvOS targets.</p>
-          <span class="card-link">View on GitHub</span>
-        </a>
-
-        <a href="https://github.com/bhwilkoff/QuintAppTemplate" class="card fade-up" style="text-decoration: none; color: inherit;">
-          <span class="card-tag">5 platforms</span>
-          <h3>Quint App Template</h3>
-          <p>Web + iOS/iPadOS + macOS + Apple TV + Android. The full set &mdash; five native experiences from one shared core.</p>
-          <span class="card-link">View on GitHub</span>
-        </a>
+      <div class="feature-banner">
+        <div class="feature-banner-text">
+          <span class="card-tag">Open Source &middot; Claude Code&ndash;aware</span>
+          <h3>The App Template</h3>
+          <p>One template, one method: web + iOS/iPadOS + macOS + tvOS + Android (including Android TV and Fire TV) + smart-TV web (LG webOS, Samsung Tizen, Chromecast) + optional Windows, from one repository. It carries everything the live apps taught &mdash; the parity matrix, binding per-platform design docs, the data-plane contract, per-ecosystem sync, resilient streaming, CI fleet engineering, device-observation harnesses with screen OCR, and fully CLI-driven submission to every store &mdash; vendored as skills so a fresh clone already knows how to build this way.</p>
+          <p>It grew one platform per generation &mdash; Dual (web + iOS), Tri (+ Android), Quad (+ Apple TV), Quint (+ macOS) &mdash; and is now a single rolling <strong>Universal App Template</strong> that absorbs new findings from Archive Watch and Tidbits Trivia continuously instead of forking a next letter. The earlier generations stay published for anyone who wants a smaller platform set.</p>
+          <div class="app-links">
+            <a href="https://github.com/bhwilkoff/UniversalAppTemplate" class="app-link primary">Universal App Template</a>
+            <a href="https://github.com/bhwilkoff/QuintAppTemplate" class="app-link">Quint</a>
+            <a href="https://github.com/bhwilkoff/QuadAppTemplate" class="app-link">Quad</a>
+            <a href="https://github.com/bhwilkoff/TriAppTemplate" class="app-link">Tri</a>
+            <a href="https://github.com/bhwilkoff/DualAppTemplate" class="app-link">Dual</a>
+          </div>
+        </div>
       </div>
 
       <div class="feature-banner bg-gradient mt-xl">
         <div class="feature-banner-text">
-          <h3>The principles behind the templates</h3>
-          <p><strong>Feature parity, not design consistency.</strong> Every app does the same things on every platform, but expresses them in each platform's native idiom &mdash; a SwiftUI <code>.sheet</code>, a Compose bottom sheet, a native web <code>&lt;dialog&gt;</code>, a tvOS focus picker. A single-source-of-truth parity matrix, audited against the real code, keeps every platform honest.</p>
-          <p><strong>No servers, no paid tiers.</strong> Sync rides on each ecosystem's own cloud &mdash; CloudKit for Apple, the user's Drive or AT Protocol repo elsewhere. Data ships as static files. Everything deploys through free GitHub Actions, including the cloud-CI App Store and Play Store submission pipelines.</p>
+          <h3>The principles behind the template</h3>
+          <p><strong>Feature parity, not design consistency.</strong> Every app does the same things on every platform, but expresses them in each platform's native idiom &mdash; a SwiftUI <code>.sheet</code>, a Compose bottom sheet, a native web <code>&lt;dialog&gt;</code>, a tvOS focus picker, a Roku SceneGraph dialog, a Fluent <code>ContentDialog</code> on Windows. A single-source-of-truth parity matrix, audited against the real code, keeps every platform honest.</p>
+          <p><strong>Native everywhere, no third-party frameworks.</strong> Swift and SwiftUI on Apple, Kotlin and Compose on Android, BrightScript on Roku, C# and Avalonia on Windows, plain HTML and JavaScript on the web with an additive ten-foot layer for smart TVs.</p>
+          <p><strong>Measured, not assumed.</strong> Features ship when they've been seen working on real hardware &mdash; an Apple TV, a Pixel, a Fire TV, a 2011 Roku &mdash; through scenario harnesses that drive the device and read the screen back with OCR. Every store's own validator is treated as the specification.</p>
+          <p><strong>No servers, no paid tiers.</strong> Sync rides on each ecosystem's own cloud &mdash; CloudKit for Apple, the user's Drive or AT Protocol repo elsewhere. Data ships as static files. Everything deploys through free GitHub Actions, including fully API-driven submissions to the App Store, Google Play, Amazon, Roku, and the Microsoft Store.</p>
         </div>
       </div>
     </section>
@@ -201,7 +265,7 @@
         <div class="feature-banner-text">
           <span class="card-tag">The through line</span>
           <h3>Twenty years of teaching, now in the shape of software</h3>
-          <p>Every app I build carries the same conviction that runs through the classroom, the blog, and the district work: technology should serve people and deepen understanding, not replace it. Archive Watch preserves culture. Tidbits makes every answer a lesson. Bsky Dreams trades passive scrolling for genuine connection. The craft is new; the purpose isn't.</p>
+          <p>Every app I build carries the same conviction that runs through the classroom, the blog, and the district work: technology should serve people and deepen understanding, not replace it. Archive Watch preserves culture and hands you the tools to make with it. Tidbits makes every answer a lesson and gives any bar or classroom a free trivia night. Bsky Dreams trades passive scrolling for genuine connection. The craft is new; the purpose isn't.</p>
           <a href="/portfolio/about/" class="btn btn-primary mt-md">More about me</a>
         </div>
       </div>

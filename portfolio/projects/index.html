@@ -59,9 +59,51 @@
       <div class="feature-banner bg-gradient">
         <div class="feature-banner-text">
           <span class="card-tag">Native Apps</span>
-          <h3>iOS, iPadOS, tvOS, macOS, Android &amp; Web</h3>
-          <p>My native app work &mdash; Archive Watch (live on all six platforms), Bsky Dreams, Tidbits Trivia, and Boba Playbook, plus the open-source templates behind them &mdash; now has a page of its own, with platform badges and store links for each.</p>
+          <h3>Apple, Android, Roku, Windows &amp; Web</h3>
+          <p>My native app work &mdash; Archive Watch (live on ten platforms across four stores), Tidbits Trivia (App Store, Google Play, and Microsoft Store), Bsky Dreams, and Boba Playbook, plus the open-source templates behind them &mdash; has a page of its own, with platform badges and a directory of every store listing.</p>
           <a href="/portfolio/apps/" class="btn btn-primary mt-md">Explore the apps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- New in 2026 -->
+    <section class="section">
+      <div class="section-header">
+        <div class="accent-line"></div>
+        <h2>New in 2026</h2>
+        <p class="lead">The most recent work: civic tools, a measured approach to a hobby, and the infrastructure that lets one person ship to every platform.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card card-accent fade-up">
+          <span class="card-tag">Civic &middot; Live</span>
+          <h3>Yes on 4A &mdash; Tell the Story of Our Schools</h3>
+          <p>A volunteer-built storytelling toolkit for supporters of the Littleton Public Schools mill levy override on the November 2026 ballot. Story prompts by who you are, a Share Studio that hands your words to each network with the least friction the platform allows, a share-card generator, a cost calculator that shows the county assessor's actual math with every source linked, and a team playbook. Every fact carries a source; nothing untrue, ever.</p>
+          <a href="https://yeson4a.org" class="card-link">yeson4a.org</a>
+          <a href="https://github.com/bhwilkoff/YesOnMLO" class="card-link">View project</a>
+        </div>
+
+        <div class="card card-warm fade-up">
+          <span class="card-tag">Data &amp; Simulation</span>
+          <h3>Harvey Cup Draft Assistant</h3>
+          <p>A fantasy-football projection engine, draft simulator, and live advisor that runs inside the Yahoo draft room. Blends four sources' stat projections, scores them under the league's own rules, values against a simulated replacement level, and picks strategy by running thousands of drafts and seasons scored on title odds &mdash; every clever rule was tested and most of them lost. Twenty-six mock drafts and two real ones, every pick graded against the advice.</p>
+          <a href="https://bhwilkoff.github.io/fantasy-draft-assistant/web/" class="card-link">Open the board</a>
+          <a href="https://github.com/bhwilkoff/fantasy-draft-assistant" class="card-link">View project</a>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-tag">Open Source &middot; Templates</span>
+          <h3>The App Template</h3>
+          <p>One open-source, Claude Code&ndash;aware starter for building web, iOS/iPadOS, macOS, tvOS, Android and Android TV/Fire TV, smart-TV web, and optional Windows apps from one repository with feature parity. It grew one platform per generation (Dual, Tri, Quad, Quint) and is now a single rolling Universal App Template, with the store-submission pipelines and device harnesses from the live apps vendored in.</p>
+          <a href="https://github.com/bhwilkoff/UniversalAppTemplate" class="card-link">View project</a>
+          <a href="/portfolio/apps/" class="card-link">How I build</a>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-tag">AI &amp; Education</span>
+          <h3>Minerva Web App Template</h3>
+          <p>An ethical-first template for Minerva University students and staff to build learning-oriented web apps with Gemini CLI (or any AI tool). The Minerva AI guardrails &mdash; human-centered learning, named accountability, zero-trust on student data &mdash; are wired into how the project works, not a page you read once. Refreshed in August 2026 with multi-tool support.</p>
+          <a href="https://github.com/bhwilkoff/Minerva-GeminiCLI-Context-Template" class="card-link">View project</a>
         </div>
       </div>
     </section>
@@ -180,8 +222,16 @@
 
         <div class="card fade-up">
           <span class="card-tag">Infrastructure</span>
+          <h3>CI Fleet &amp; Device Harnesses</h3>
+          <p>Archive Watch's content pipeline runs as 30+ scheduled GitHub Actions workflows &mdash; discovering titles, auditing rights, verifying that every file plays, and publishing one catalog to every app. Keeping that fleet honest meant building the compute/apply lock split, budgets that publish, a self-healing sweeper, a health auditor where a red X is reserved for broken, and a product-health dashboard that reads every store's metrics. On the device side: scenario harnesses that drive real Apple TVs, Pixels, Fire TVs, and Rokus and read the screen back with OCR, so a feature ships when it has been seen working. All of it is documented in the Universal App Template.</p>
+          <a href="https://github.com/bhwilkoff/UniversalAppTemplate/blob/main/docs/CI-FLEET.md" class="card-link">CI fleet engineering</a>
+          <a href="https://github.com/bhwilkoff/UniversalAppTemplate/blob/main/docs/DEVICE-HARNESSES.md" class="card-link">Device harnesses</a>
+        </div>
+
+        <div class="card fade-up">
+          <span class="card-tag">Infrastructure</span>
           <h3>Multiple Ongoing Projects &amp; Sites</h3>
-          <p>A constellation of ongoing projects across multiple domains &mdash; learningischange.com, bothand.learningischange.com, theapplehunter.learningischange.com, quantifiedben.learningischange.com, whitfordwest.family, and masculinitydetox.org &mdash; each serving a different community and purpose, all maintained as static sites.</p>
+          <p>A constellation of ongoing projects across multiple domains &mdash; learningischange.com, archivewatch.org, tidbitstrivia.com, bskydreams.com, bobaplaybook.com, yeson4a.org, bothand.learningischange.com, theapplehunter.learningischange.com, quantifiedben.learningischange.com, whitfordwest.family, and masculinitydetox.org &mdash; each serving a different community and purpose, all maintained as static sites on GitHub Pages with no servers to run.</p>
         </div>
       </div>
     </section>
