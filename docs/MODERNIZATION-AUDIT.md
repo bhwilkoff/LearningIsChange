@@ -178,7 +178,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | Portfolio (`/portfolio/*`) | 🟩 | On the shared shell since tick 15: `site.css` (dark/light tokens) + nav/footer partials spliced by `scripts/render-shell.js` via `LIC:NAV`/`LIC:FOOTER` markers. **Standing item (Ben, 2026-09-16): keep the portfolio consistent with the blog as the loop continues** — any shell/design change lands on both |
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
 | Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟩 | **Done 2026-09-16.** `scripts/render-feeds.js` from JSON; every original GUID retained; podcast feed untouched. `update-rss.yml`/`remove-from-rss.yml` retire in P5 when the tools dispatch `render-site.yml` |
-| Search (`/search/`) | 🟨 | Keep engine; reskin on the portfolio system |
+| Search (`/search/`) | 🟩 | **P5.6 done 2026-09-16.** Rebuilt on the blog shell (nav/rail/footer partials via `render-shell.js`, `site.css`); engine kept, now skips tombstones and accepts `?q=` (homepage form) as well as `?s=`; admin bar removed (user-facing page) |
 | Masthead / sidebar / colophon / footer fragments | 🟩 | **Deleted (P4).** Shell partials in `templates/partials/` replace them; `render-site.yml` replaces `regenerate-fragments.yml` |
 | `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | 🟩 | **Deleted 2026-09-16 (P4, D-6).** −52 MB. `wp-content/uploads/` (media) stays |
 | `wp-content/uploads/` (1.3 GB) | ⬜ | Stays (media); size workstream is separate (SCRATCHPAD M2) |
@@ -502,12 +502,20 @@ resolves them on its own.)*
   hard-coded light-blue panels in `/links/` and `/rss-creator/`. Verified
   by contact sheet in dark mode: no coffee headers left, panels and
   alerts on tokens in all 13 tools.
-  **Next**: P5.6 rebuild `/search/` as a real site page on the blog
-  shell (it is user-facing: nav/rail/footer partials, `site.css`,
-  search box in the hero; keep the search.json/FTS engine); then
-  `/menus/` (fold into Render Site or retire), `/update/`,
-  `/rss-creator/` audit against the JSON pipeline; then the `/new/`
-  simplify pass (strip dead generators). promote
+  **Next**: see tick 20.
+- **2026-09-16 · tick 20 (P5.6)** — `/search/` rebuilt as a site page:
+  hero with the search form and filters, results and pagination styled
+  on the tokens, top categories/tags as a "browse" section, rail from
+  the partial (`render-shell.js` now fills `LIC:RAIL` and covers
+  `search/`). Engine untouched except: skips tombstoned posts, accepts
+  `?q=`. Verified live query in the browser (28 results, highlights,
+  no console errors).
+  **Next**: audit the remaining tools against the JSON pipeline —
+  `/menus/` (edited Fluida menus; fold into Render Site's partial editor
+  or retire with a redirect), `/update/` (Mass Updater: its find/replace
+  over HTML now needs to target JSON content), `/rss-creator/`
+  (superseded by `render-feeds.js` — retire or keep as a preview tool);
+  then the `/new/` simplify pass. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

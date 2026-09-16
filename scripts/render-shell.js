@@ -9,10 +9,10 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { REPO_ROOT, nav, footer, navKeyFor } from './lib/shell.js';
+import { REPO_ROOT, nav, footer, rail, navKeyFor, loadAllPosts, loadTaxonomies } from './lib/shell.js';
 
 const APPLY = process.argv.includes('--apply');
-const FILES = ['support.html', 'meet/index.html', 'portfolio/index.html',
+const FILES = ['support.html', 'meet/index.html', 'search/index.html', 'portfolio/index.html',
   ...fs.readdirSync(path.join(REPO_ROOT, 'portfolio'), { withFileTypes: true })
     .filter((e) => e.isDirectory() && fs.existsSync(path.join(REPO_ROOT, 'portfolio', e.name, 'index.html')))
     .map((e) => `portfolio/${e.name}/index.html`)];
@@ -24,12 +24,14 @@ function splice(html, zone, replacement) {
   return html.slice(0, i + open.length) + '\n' + replacement + '\n' + html.slice(j);
 }
 
+const RAIL = rail(loadAllPosts(), loadTaxonomies());
 let changed = 0;
 for (const rel of FILES) {
   const f = path.join(REPO_ROOT, rel);
   const url = '/' + rel.replace(/index\.html$/, '');
   const prior = fs.readFileSync(f, 'utf8');
   let html = splice(prior, 'NAV', nav({ active: navKeyFor(url) }));
+  html = splice(html, 'RAIL', RAIL);
   html = splice(html, 'FOOTER', footer());
   if (html === prior) continue;
   changed++;

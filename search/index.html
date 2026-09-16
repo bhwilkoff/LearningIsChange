@@ -1,649 +1,143 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search - Learning is Change</title>
-    <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&amp;ssl=1" sizes="32x32">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A%7COpen+Sans+Condensed%3A300%7COpen+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7COpen+Sans%3A700%7COpen+Sans%3A300">
-    <style>
-        /* Reset and base - matching Fluida */
-        *, *::before, *::after { box-sizing: border-box; }
-        html { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; line-height: 1.8; }
-        body { margin: 0; padding: 0; color: #555; background-color: #F3F3F3; -webkit-font-smoothing: antialiased; }
-        a { color: #0085b2; text-decoration: none; }
-        a:hover { color: #f42b00; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans Condensed', sans-serif; font-weight: 300; color: #333; margin: 0; }
-        
-        /* Site wrapper */
-        #site-wrapper { max-width: 1920px; margin: 0 auto; overflow: hidden; }
-        
-        /* Header - matching Fluida fixed header */
-        #masthead { position: relative; }
-        
-        #site-header-main {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 101;
-            height: 100px;
-            background-color: #fff;
-            box-shadow: 0 0 3px rgba(0,0,0,0.2);
-        }
-        
-        #site-header-main-inside {
-            max-width: 1920px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
-            padding: 0 2%;
-        }
-        
-        #branding { display: flex; align-items: center; height: 100%; }
-        
-        #site-title {
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-size: 150%;
-            font-weight: 300;
-            text-transform: uppercase;
-            line-height: 1.5;
-        }
-        
-        #site-title a { color: #0085b2; text-decoration: none; }
-        #site-title a:hover { color: #f42b00; }
-        
-        #site-title a span:first-child {
-            background-color: #0085b2;
-            color: #fff;
-            width: 1.4em;
-            margin-right: .1em;
-            text-align: center;
-            line-height: 1.4;
-            font-weight: 300;
-            display: inline-block;
-        }
-        
-        #site-title a:hover span:first-child { background-color: #f42b00; }
-        
-        #site-description {
-            display: none;
-            font-size: .9em;
-            opacity: .75;
-        }
-        
-        /* Navigation */
-        #access {
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-        
-        #access ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        
-        #access ul li a {
-            display: block;
-            padding: 0 1.6em;
-            line-height: 98px;
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-size: 105%;
-            font-weight: 300;
-            text-transform: uppercase;
-            color: #0085b2;
-            border-top: 2px solid transparent;
-            transition: all 0.2s;
-        }
-        
-        #access ul li a:hover {
-            background-color: #0085b2;
-            color: #fff;
-        }
-        
-        /* Header image area - matching Fluida responsive header */
-        #header-image-main {
-            margin-top: 100px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        #header-image-main-inside {
-            max-width: 1920px;
-            max-height: 250px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        
-        #header-image-main .header-image {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-        
-        #header-image-main div.header-image {
-            display: none;
-        }
-        
-        /* Breadcrumbs - matching Fluida */
-        #breadcrumbs-container {
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #eee;
-        }
-        
-        #breadcrumbs-nav {
-            max-width: 1920px;
-            margin: 0 auto;
-            padding: 0.8em 2%;
-            font-size: 0.9em;
-            color: #9a9a9a;
-        }
-        
-        #breadcrumbs-nav a { color: #0085b2; }
-        #breadcrumbs-nav a:hover { color: #f42b00; }
-        
-        #breadcrumbs-nav .separator {
-            color: #9a9a9a;
-            margin: 0 0.5em;
-        }
-        
-        /* Content area - matching Fluida two-column layout */
-        #content {
-            max-width: 1920px;
-            margin: 20px auto 0;
-            padding: 0 20px;
-            display: flex;
-            gap: 2%;
-        }
-        
-        .main {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        #secondary {
-            width: 320px;
-            flex-shrink: 0;
-        }
-        
-        @media (max-width: 900px) {
-            #content { flex-direction: column; }
-            #secondary { width: 100%; order: -1; margin-bottom: 20px; }
-        }
-        
-        /* Article/Card styling - matching Fluida */
-        article.hentry, .search-card {
-            background-color: #fff;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        
-        .article-inner, .card-inner {
-            padding: 2em 10%;
-        }
-        
-        .entry-title, .card-title {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 200%;
-            font-weight: 300;
-            color: #333;
-            margin-bottom: 0.5em;
-            border-top: 3px solid #0085b2;
-            padding-top: 0.5em;
-        }
-        
-        .entry-title a, .card-title a { color: #0085b2; }
-        .entry-title a:hover, .card-title a:hover { color: #f42b00; }
-        
-        /* Search box styling */
-        .search-box {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 1.5em;
-        }
-        
-        .search-input {
-            flex: 1;
-            padding: 0.7em 1em;
-            font-size: inherit;
-            font-family: inherit;
-            border: 1px solid #e9e9e9;
-            background: transparent;
-            transition: border-color 0.3s;
-        }
-        
-        .search-input:hover, .search-input:focus {
-            border-color: #cdcdcd;
-            outline: none;
-        }
-        
-        .search-btn {
-            padding: 0.7em 1.5em;
-            font-size: 0.9em;
-            font-family: inherit;
-            background-color: #0085b2;
-            color: #fff;
-            border: 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .search-btn:hover { background-color: #f42b00; }
-        
-        /* Filters */
-        .filters {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-            margin-bottom: 1em;
-        }
-        
-        .filter-group label {
-            display: block;
-            font-size: 0.85em;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        
-        .filter-group select {
-            width: 100%;
-            padding: 0.5em;
-            font-size: inherit;
-            font-family: inherit;
-            border: 1px solid #e9e9e9;
-            background: #fff;
-        }
-        
-        .filter-group select:hover { border-color: #cdcdcd; }
-        
-        /* Results */
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 1em;
-            margin-bottom: 1em;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .results-count {
-            font-size: 0.9em;
-            color: #9a9a9a;
-        }
-        
-        .result-item {
-            padding: 1.5em 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .result-item:last-child { border-bottom: none; }
-        
-        .result-title {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.3em;
-            font-weight: 400;
-            margin-bottom: 0.3em;
-        }
-        
-        .result-title a { color: #0085b2; }
-        .result-title a:hover { color: #f42b00; text-decoration: underline; }
-        
-        .result-meta {
-            font-size: 0.85em;
-            color: #9a9a9a;
-            margin-bottom: 0.5em;
-        }
-        
-        .result-meta .icon-metas::before {
-            color: #f42b00;
-            margin-right: 0.3em;
-        }
-        
-        .result-meta span { margin-right: 1.5em; }
-        
-        .result-excerpt {
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        .result-excerpt mark {
-            background: #fff3cd;
-            padding: 0 2px;
-        }
-        
-        .result-tags {
-            margin-top: 0.8em;
-        }
-        
-        .tag {
-            display: inline-block;
-            padding: 3px 10px;
-            margin: 2px;
-            font-size: 0.8em;
-            background-color: #0085b2;
-            color: #fff;
-            border-radius: 2px;
-        }
-        
-        .tag:hover { background-color: #f42b00; }
-        
-        .tag.category { background-color: #f42b00; }
-        
-        /* Empty state */
-        .empty-state {
-            text-align: center;
-            padding: 3em;
-            color: #9a9a9a;
-        }
-        
-        .empty-state .icon {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-            opacity: 0.5;
-        }
-        
-        /* Pagination */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-top: 2em;
-            padding-top: 1.5em;
-            border-top: 1px solid #eee;
-        }
-        
-        .pagination button {
-            padding: 0.5em 1em;
-            font-size: 0.9em;
-            font-family: inherit;
-            background: #f6f6f6;
-            color: #555;
-            border: 1px solid #e9e9e9;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .pagination button:hover:not(:disabled) {
-            background-color: #0085b2;
-            color: #fff;
-            border-color: #0085b2;
-        }
-        
-        .pagination button.active {
-            background-color: #0085b2;
-            color: #fff;
-            border-color: #0085b2;
-        }
-        
-        .pagination button:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
-        
-        /* Sidebar widgets - matching Fluida */
-        .widget-container {
-            background-color: #fff;
-            padding: 1.5em;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        
-        .widget-title {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 100%;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 1em;
-            padding-bottom: 0.5em;
-            border-bottom: 2px solid #0085b2;
-        }
-        
-        .widget-container ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .widget-container li {
-            padding: 0.5em 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .widget-container li:last-child { border-bottom: none; }
-        
-        .widget-container li a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .widget-container .count {
-            font-size: 0.8em;
-            color: #9a9a9a;
-            background: #f6f6f6;
-            padding: 2px 8px;
-            border-radius: 10px;
-        }
-        
-        .stat-box {
-            text-align: center;
-            padding: 1em;
-            background: #f6f6f6;
-            margin-bottom: 10px;
-            border-radius: 3px;
-        }
-        
-        .stat-box:last-child { margin-bottom: 0; }
-        
-        .stat-box .value {
-            font-size: 2em;
-            font-weight: 700;
-            color: #0085b2;
-            line-height: 1.2;
-        }
-        
-        .stat-box .label {
-            font-size: 0.85em;
-            color: #9a9a9a;
-        }
-        
-        /* Footer - matching Fluida */
-        #footer {
-            background-color: #222226;
-            color: #AAA;
-            padding: 2em;
-            margin-top: 40px;
-            text-align: center;
-            border-top: 3px solid #36363a;
-        }
-        
-        #footer a { color: #0085b2; }
-        #footer a:hover { color: #f42b00; }
-        
-        /* Loading */
-        .loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 3em;
-            color: #9a9a9a;
-        }
-        
-        .loading::after {
-            content: '';
-            width: 20px;
-            height: 20px;
-            border: 2px solid #eee;
-            border-top-color: #0085b2;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            margin-left: 10px;
-        }
-        
-        @keyframes spin { to { transform: rotate(360deg); } }
-        
-        /* Mobile menu toggle (hidden on desktop) */
-        #nav-toggle { display: none; }
-        
-        @media (max-width: 800px) {
-            #access { display: none; }
-            #nav-toggle {
-                display: block;
-                padding: 1em;
-                font-size: 1.5em;
-                color: #0085b2;
-                cursor: pointer;
-            }
-            #site-title { font-size: 120%; }
-            .article-inner, .card-inner { padding: 1.5em 5%; }
-            .entry-title, .card-title { font-size: 150%; }
-        }
-    </style>
-    <link rel="stylesheet" href="/admin/admin.css">
-    <script src="/admin/admin-bar.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search – Learning is Change</title>
+<meta name="description" content="Search every post and page on Learning is Change — twenty years of writing on education, technology, and change.">
+<link rel="canonical" href="https://learningischange.com/search/">
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learning is Change">
+<meta property="og:title" content="Search – Learning is Change">
+<meta property="og:url" content="https://learningischange.com/search/">
+<meta property="og:image" content="https://learningischange.com/meet/ben.jpg">
+<meta name="theme-color" content="#2a9d8f">
+<link rel="icon" href="/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg" sizes="192x192">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/portfolio/css/style.css">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+  /* search page: layout on top of site.css; the engine below renders .result-item etc. */
+  .search-hero { padding: var(--space-xl) 0 var(--space-md); }
+  .search-hero h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: var(--space-sm); }
+  .search-box { max-width: none; }
+  .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-md); margin-top: var(--space-md); }
+  .filter-group label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 4px; }
+  .filter-group select { width: 100%; padding: 9px 12px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-bg); color: var(--color-text); font: inherit; font-size: 0.9rem; }
+  .results-header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-md); margin: var(--space-xl) 0 var(--space-sm); }
+  .results-header h2 { font-size: 1.25rem; }
+  .results-count { font-size: 0.85rem; color: var(--color-muted); }
+  .result-item { padding: var(--space-md) 0; border-top: 1px solid var(--color-border); }
+  .result-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 600; }
+  .result-title a { color: var(--color-ink); }
+  .result-title a:hover { color: var(--color-accent-dark); }
+  .result-meta { font-size: 0.8rem; color: var(--color-light); font-family: var(--font-mono); margin: 4px 0 6px; }
+  .result-meta span { margin-right: 1.2em; }
+  .result-meta .icon-metas::before { content: ''; }
+  .result-excerpt { font-size: 0.95rem; color: var(--color-muted); line-height: 1.55; }
+  .result-excerpt mark { background: var(--color-warm-light); color: var(--color-ink); padding: 0 2px; border-radius: 3px; }
+  .result-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .result-tags .tag.category { color: var(--color-accent-dark); background: var(--color-accent-light); border-color: transparent; }
+  .empty-state { text-align: center; padding: var(--space-2xl) var(--space-md); color: var(--color-muted); border: 1px dashed var(--color-border); border-radius: 14px; }
+  .empty-state .icon { font-size: 2rem; margin-bottom: var(--space-sm); }
+  .loading { color: var(--color-muted); padding: var(--space-lg) 0; }
+  .pagination { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: var(--space-xl); }
+  .pagination button { font: inherit; font-size: 0.85rem; padding: 6px 12px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg); color: var(--color-text); cursor: pointer; }
+  .pagination button:hover:not(:disabled) { border-color: var(--color-accent); color: var(--color-accent-dark); }
+  .pagination button.active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+  .pagination button:disabled { opacity: 0.4; cursor: default; }
+  .browse { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-border); }
+  .browse h3 { font-size: 0.78rem; font-family: var(--font-body); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin-bottom: var(--space-sm); }
+  .browse ul { list-style: none; }
+  .browse li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+  .browse li:first-child { border-top: none; }
+  .browse li a { color: var(--color-text); }
+  .browse li a:hover { color: var(--color-accent-dark); }
+  .browse li .count, .browse li span { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-light); }
+  .stat-row { padding: var(--space-md) 0 0; justify-content: flex-start; gap: var(--space-2xl); }
+</style>
 </head>
 <body class="search-page">
-    <div id="site-wrapper">
-        <header id="masthead">
-            <div id="site-header-main">
-                <div id="site-header-main-inside">
-                    <div id="branding">
-                        <h1 id="site-title">
-                            <span>
-                                <a href="/" title="My name is Ben Wilkoff, and I Teach. And Learn. A Lot." rel="home">
-                                    <span>L</span><span>earning is Change</span>
-                                </a>
-                            </span>
-                        </h1>
-                    </div>
-                    
-                    <nav id="access">
-                        <ul>
-                            <li><a href="/"><span>Home</span></a></li>
-                            <li><a href="/services/"><span>Services</span></a></li>
-                            <li><a href="/services/contact/"><span>Contact</span></a></li>
-                        </ul>
-                    </nav>
-                    
-                    <a id="nav-toggle" href="#">&#9776;</a>
-                </div>
-            </div>
-            
-            <div id="header-image-main">
-                <div id="header-image-main-inside">
-                    <img class="header-image" alt="Learning is Change" src="/wp-content/uploads/2016/07/cropped-14747.jpg">
-                </div>
-            </div>
-        </header>
-        
-        <div id="breadcrumbs-container">
-            <nav id="breadcrumbs-nav">
-                <a href="/">Home</a><span class="separator">&#8250;</span><span>Search</span>
-            </nav>
-        </div>
-        
-        <div id="content">
-            <main class="main">
-                <!-- Search Box -->
-                <article class="hentry search-card">
-                    <div class="article-inner card-inner">
-                        <form class="search-box" onsubmit="performSearch(); return false;">
-                            <input type="text" class="search-input" id="searchInput" name="s" placeholder="Search posts, pages, and content..." autofocus>
-                            <button type="submit" class="search-btn">Search</button>
-                        </form>
-                        
-                        <div class="filters">
-                            <div class="filter-group">
-                                <label>Type</label>
-                                <select id="filterType" onchange="performSearch()">
-                                    <option value="">All Types</option>
-                                    <option value="post">Posts</option>
-                                    <option value="page">Pages</option>
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <label>Category</label>
-                                <select id="filterCategory" onchange="performSearch()">
-                                    <option value="">All Categories</option>
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <label>Year</label>
-                                <select id="filterYear" onchange="performSearch()">
-                                    <option value="">All Years</option>
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <label>Sort By</label>
-                                <select id="sortBy" onchange="performSearch()">
-                                    <option value="relevance">Relevance</option>
-                                    <option value="date-desc">Newest First</option>
-                                    <option value="date-asc">Oldest First</option>
-                                    <option value="title">Title A-Z</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Results -->
-                <article class="hentry search-card">
-                    <div class="article-inner card-inner">
-                        <div class="results-header">
-                            <h2 class="card-title" style="border: none; padding: 0; margin: 0; font-size: 1.5em;">Results</h2>
-                            <div class="results-count" id="resultsCount"></div>
-                        </div>
-                        <div id="resultsContainer">
-                            <div class="loading">Loading database...</div>
-                        </div>
-                        <div class="pagination" id="pagination" style="display: none;"></div>
-                    </div>
-                </article>
-            </main>
-            
-            <aside id="secondary">
-                <div class="widget-container">
-                    <h3 class="widget-title">Database Stats</h3>
-                    <div class="stat-box">
-                        <div class="value" id="statTotalPosts">&#8212;</div>
-                        <div class="label">Total Posts</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="value" id="statTotalPages">&#8212;</div>
-                        <div class="label">Total Pages</div>
-                    </div>
-                </div>
-                
-                <div class="widget-container">
-                    <h3 class="widget-title">Top Categories</h3>
-                    <ul id="topCategories">
-                        <li>Loading...</li>
-                    </ul>
-                </div>
-                
-                <div class="widget-container">
-                    <h3 class="widget-title">Popular Tags</h3>
-                    <ul id="topTags">
-                        <li>Loading...</li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
-        
-        <footer id="footer">
-            <p>&#169; 2005&#8211;2026 <a href="/">Learning is Change</a> &#183; Ben Wilkoff</p>
-        </footer>
-    </div>
+<!-- LIC:NAV:START -->
+<nav class="site-nav"><div class="nav-inner">
+  <a href="/" class="nav-brand"><span class="brand-mark">BW</span> Ben Wilkoff <small>· Learning is Change</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  <ul class="nav-links">
+    <li><a href="/" data-nav="blog">Blog</a></li>
+    <li><a href="/portfolio/" data-nav="portfolio">Portfolio</a></li>
+    <li><a href="/portfolio/career/" data-nav="career">Career</a></li>
+    <li><a href="/portfolio/apps/" data-nav="apps">Apps</a></li>
+    <li><a href="/portfolio/projects/" data-nav="projects">Projects</a></li>
+    <li><a href="/portfolio/writing/" data-nav="writing">Writing</a></li>
+    <li><a href="/portfolio/video/" data-nav="video">Video</a></li>
+    <li><a href="/portfolio/about/" data-nav="about">About</a></li>
+    <li><a href="/meet/" data-nav="meet" class="nav-cta">Meet</a></li>
+  </ul>
+</div></nav>
+<!-- LIC:NAV:END -->
 
-    <!-- admin/lib integration -->
+<main class="page-container"><div class="blog-layout">
+<div>
+  <header class="search-hero">
+    <div class="hero-subtitle">Search</div>
+    <h1>Find something I wrote</h1>
+    <p class="lead">Every post and page since 2005, searched in your browser.</p>
+    <form class="search-box" role="search" onsubmit="performSearch(); return false;">
+      <input type="search" class="search-input" id="searchInput" name="q" placeholder="Search posts, pages, and content…" aria-label="Search" autofocus>
+      <button type="submit" class="btn btn-primary search-btn">Search</button>
+    </form>
+    <div class="filters">
+      <div class="filter-group"><label for="filterType">Type</label><select id="filterType" onchange="performSearch()"><option value="">All types</option><option value="post">Posts</option><option value="page">Pages</option></select></div>
+      <div class="filter-group"><label for="filterCategory">Category</label><select id="filterCategory" onchange="performSearch()"><option value="">All categories</option></select></div>
+      <div class="filter-group"><label for="filterYear">Year</label><select id="filterYear" onchange="performSearch()"><option value="">All years</option></select></div>
+      <div class="filter-group"><label for="sortBy">Sort by</label><select id="sortBy" onchange="performSearch()"><option value="relevance">Relevance</option><option value="date-desc">Newest first</option><option value="date-asc">Oldest first</option><option value="title">Title A–Z</option></select></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-number" id="statTotalPosts">&#8212;</div><div class="stat-label">posts</div></div>
+      <div class="stat"><div class="stat-number" id="statTotalPages">&#8212;</div><div class="stat-label">pages</div></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="results-header"><h2>Results</h2><div class="results-count" id="resultsCount"></div></div>
+    <div id="resultsContainer"><div class="loading">Loading the index…</div></div>
+    <div class="pagination" id="pagination" style="display: none;"></div>
+  </section>
+
+  <section class="browse">
+    <div><h3>Top categories</h3><ul id="topCategories"></ul></div>
+    <div><h3>Top tags</h3><ul id="topTags"></ul></div>
+  </section>
+</div>
+<!-- LIC:RAIL:START -->
+<aside class="rail">
+  <div class="rail-card rail-meet"><div class="rail-me"><img src="/meet/ben.jpg" alt="" width="64" height="64" loading="lazy"><div><strong>Did you just meet Ben?</strong><span>Save my contact, try my apps, and see how I build.</span><span><a href="/meet/">Meet →</a></span></div></div></div>
+  <div class="rail-card"><h3>Recent</h3><ul><li><a href="/2026/03/26/60-minutes-in-space/">60 Minutes in Space</a><time>2026-03-26</time></li><li><a href="/2026/03/19/help-in-the-grocery-store/">Help in the grocery store</a><time>2026-03-19</time></li><li><a href="/2026/03/04/computer-shaped-problems/">Computer-Shaped Problems</a><time>2026-03-04</time></li><li><a href="/2026/02/23/benmd/">Ben.md</a><time>2026-02-23</time></li><li><a href="/2026/02/15/the-weight-of-valentines-day/">The Weight of Valentines Day</a><time>2026-02-15</time></li></ul></div>
+  <div class="rail-card"><h3>Topics</h3><div class="topics"><a href="/category/blogging-projects/questions/">365 Questions That Google Can’t Answer</a><a href="/category/classroom-resources/lesson-plans/">Lesson Plans</a><a href="/category/recs/using/">What I’m Using</a><a href="/category/blogging-projects/c4c15/">#C4C15</a><a href="/category/videos/askbenw/">#AskBenW</a><a href="/category/newsletter-archive/">Newsletter Archive</a><a href="/category/recs/im-learning/">What I’m Learning</a><a href="/category/blogging-projects/lifewidelearning16/">#LifeWideLearning16</a><a href="/category/blog-2/whoisaps/">#WHOISaps</a><a href="/category/learning-is-change-list/">Learning Is Change List</a><a href="/category/learning/">Learning</a><a href="/category/inspiration/">Inspiration</a></div></div>
+  <div class="rail-card"><h3>Archive</h3><div class="years"><a href="/2026/">2026</a><a href="/2025/">2025</a><a href="/2024/">2024</a><a href="/2022/">2022</a><a href="/2021/">2021</a><a href="/2019/">2019</a><a href="/2018/">2018</a><a href="/2017/">2017</a><a href="/2016/">2016</a><a href="/2015/">2015</a><a href="/2014/">2014</a><a href="/2013/">2013</a><a href="/2012/">2012</a><a href="/2011/">2011</a><a href="/2010/">2010</a><a href="/2009/">2009</a><a href="/2008/">2008</a><a href="/2007/">2007</a><a href="/2006/">2006</a><a href="/2005/">2005</a></div></div>
+</aside>
+<!-- LIC:RAIL:END -->
+</div></main>
+
+<!-- LIC:FOOTER:START -->
+<footer class="site-footer"><div class="footer-inner">
+  <ul class="footer-links">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/feed/">RSS</a></li>
+    <li><a href="/feed/podcast/">Podcast</a></li>
+    <li><a href="https://github.com/bhwilkoff">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/bhwilkoff/">LinkedIn</a></li>
+    <li><a href="https://bsky.app/profile/laserdiscleftist.bsky.social">Bluesky</a></li>
+    <li><a href="/meet/">Meet me</a></li>
+  </ul>
+  <p class="footer-note">Ben Wilkoff · Educator, Builder, Writer · Writing here since 2005</p>
+</div></footer>
+<!-- LIC:FOOTER:END -->
+
     <script type="module">
       import { slugify, formatDate } from '/admin/lib/slug.js';
       window.LIB = Object.assign(window.LIB || {}, { slugify, formatDate });
@@ -726,7 +220,7 @@
                     const res = await fetch(baseUrl + '/posts/' + year + '.json');
                     if (!res.ok) return [];
                     const data = await res.json();
-                    return data.posts || [];
+                    return (data.posts || []).filter(function (p) { return p && !p.removed; });
                 } catch (e) {
                     return [];
                 }
@@ -814,7 +308,7 @@
         
         document.addEventListener('DOMContentLoaded', async function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('s');
+            const query = urlParams.get('q') || urlParams.get('s');
             if (query) {
                 document.getElementById('searchInput').value = query;
             }
