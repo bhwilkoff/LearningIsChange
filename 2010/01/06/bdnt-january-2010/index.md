@@ -4,7 +4,7 @@ date: 2010-01-06
 url: https://learningischange.com/2010/01/06/bdnt-january-2010/
 author: Ben Wilkoff
 categories: ["Uncategorized"]
-tags: ["bdnt", "Learning", "startups"]
+tags: ["Learning"]
 ---
 
 # #BDNT January 2010

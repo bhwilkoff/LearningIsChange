@@ -4,7 +4,7 @@ date: 2007-11-05
 url: https://learningischange.com/2007/11/05/evangelists-for-learning/
 author: Ben Wilkoff
 categories: ["Uncategorized"]
-tags: ["nacol", "professional development", "Reflection", "vss2007", "VSS2007"]
+tags: ["nacol", "professional development", "Reflection", "vss2007"]
 ---
 
 # Evangelists for Learning

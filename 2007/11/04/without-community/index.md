@@ -4,7 +4,7 @@ date: 2007-11-04
 url: https://learningischange.com/2007/11/04/without-community/
 author: Ben Wilkoff
 categories: ["Uncategorized"]
-tags: ["nacol", "professional development", "Reflection", "teaching theory", "vss2007", "VSS2007"]
+tags: ["nacol", "professional development", "Reflection", "teaching theory", "vss2007"]
 ---
 
 # Without Community…

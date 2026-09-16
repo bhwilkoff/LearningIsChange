@@ -32,7 +32,7 @@ In addition to the video above, if you were ever curious to know what getting of
 
 Additional images of the process can be found within [this photo album](https://goo.gl/photos/4R6jGXb7KFgDhPqS8), but I will embed them in a gallery as well for ease of use on this site:
 
-[supsystic-gallery id=1 position=center]![gallery](https://i0.wp.com/learningischange.com/wp-content/plugins/ckeditor-for-wordpress/plugins/wpgallery/images/spacer.gif?w=1225)
+[supsystic-gallery id=1 position=center]
 
 A special thanks to everyone who reviewed poster sessions (or any sessions) this year. It was an amazing process, and I am so glad that I was able to take part. Please leave any questions you might have in the comments, as I would love to continue to think through this with others.
 

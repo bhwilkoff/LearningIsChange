@@ -98,7 +98,18 @@ function renderHome() {
     ['Newsletter Archive', 'newsletter-archive', 'The Weekly Authentic, every issue.'],
     ['Lesson Plans', 'lesson-plans', 'Two decades of classroom plans.'],
   ].map(([name, slug, blurb]) => { const c = TAX.categories[slug]; return c ? `<a class="series" href="${escapeAttr(c.url)}"><strong>${escapeHtml(c.name || name)}</strong><span>${escapeHtml(blurb)}</span><span class="n">${plural(c.count || 0, 'post')}</span></a>` : ''; }).join('');
-  const start = ['/2007/06/07/the-ripe-environment/', '/2005/04/20/the-reason-for-the-blog/'].map((u) => ALL.find((p) => p.url === u)).filter(Boolean);
+  // D-3: "Start here" is whatever /important-posts/ (pages.json) links to, in order
+  const start = (() => {
+    try {
+      const raw = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'database', 'pages.json'), 'utf8'));
+      const pages = Array.isArray(raw) ? raw : raw.pages || Object.values(raw);
+      const page = pages.find((p) => String(p.url || '').replace(/^https?:\/\/[^/]+/, '') === '/important-posts/');
+      const byUrl = new Map(ALL.map((p) => [p.url, p]));
+      const links = [...String(page?.content || '').matchAll(/href="(?:https?:\/\/learningischange\.com)?(\/\d{4}\/\d{2}\/\d{2}\/[^"#?]+\/)"/g)].map((m) => m[1]);
+      const picked = [...new Set(links)].map((u) => byUrl.get(u)).filter(Boolean);
+      return picked.length ? picked : ['/2007/06/07/the-ripe-environment/', '/2005/04/20/the-reason-for-the-blog/'].map((u) => byUrl.get(u)).filter(Boolean);
+    } catch { return []; }
+  })();
   // B-5: sections for the category subtrees the old menu featured
   const subtree = (prefix) => { const slugs = Object.values(TAX.categories).filter((c) => c && c.url && c.url.startsWith(prefix)).map((c) => c.slug); return NEWEST.filter((p) => terms(p, 'categories').some((t) => slugs.includes(t.slug))); };
   const watch = subtree('/category/videos/').slice(0, 5);

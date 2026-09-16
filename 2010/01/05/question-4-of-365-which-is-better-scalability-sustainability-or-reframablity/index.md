@@ -4,7 +4,7 @@ date: 2010-01-05
 url: https://learningischange.com/2010/01/05/question-4-of-365-which-is-better-scalability-sustainability-or-reframablity/
 author: Ben Wilkoff
 categories: ["365 Questions That Google Can’t Answer", "Uncategorized"]
-tags: ["Learning", "reframability", "scalability", "startup", "sustainability", "twitter", "Learning Twitter Scalability", "Sustainability", "Reframability", "Startup"]
+tags: ["Learning", "reframability", "scalability", "startup", "sustainability", "twitter"]
 ---
 
 # Question 4 of 365: Which is better: Scalability, Sustainability or Reframablity?

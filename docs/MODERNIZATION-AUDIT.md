@@ -278,15 +278,15 @@ items get done in a later tick and moved to *Done*.
   only 432 of 1,365 tag pages and skipped 3 categories), so most tag
   links in post footers are 404s today. P2's renderer generates every
   term page from JSON; no permalink is lost (they never existed).
-- C-11 Three posts embed WordPress plugin decoration images through the
+- ✅ **Done tick 29** C-11 Three posts embed WordPress plugin decoration images through the
   Jetpack CDN (`ckeditor…/spacer.gif`, `powerpress/play_video.png`,
   `black.png`); one 2009 post links a smilie GIF at a path that never
   existed. The plugin dirs are gone, so those images will 404 when the CDN
   refetches. Leave (they were decorative) or strip the `<img>` tags?
-- C-10 Twelve "tags" in `taxonomies.json` are 2007 Technorati links
+- ✅ **Done tick 29** C-10 Twelve "tags" in `taxonomies.json` are 2007 Technorati links
   (`http://technorati.com/tag/VSS2007` …). The renderer skips them;
   remove from the taxonomy and from the ~12 posts that carry them?
-- C-8 `/category/Typewriter/` — capitalized slug created by `/new/`
+- ✅ **Done tick 29** C-8 `/category/Typewriter/` — capitalized slug created by `/new/`
   (all other terms are lowercase). The URL is live and protected; when
   the archive renderer lands, emit `/category/typewriter/` as canonical
   and keep `/category/Typewriter/` as a redirect. Same for 5 tags
@@ -307,7 +307,7 @@ items get done in a later tick and moved to *Done*.
 ### D. Content that may deserve an update (not rewrites — Ben decides)
 - ✅ D-1 `/about/`, `/bio/` → redirect to `/portfolio/about/`.
 - ✅ D-2 `/services/`, `/pd/` → retired (out of nav + sitemap, `noindex`, files kept).
-- D-3 `/important-posts/` — a curated list; candidate for becoming
+- ✅ **Done tick 29** D-3 `/important-posts/` — a curated list; candidate for becoming
   the "start here" page in the new homepage.
 
 *(The loop appends to these lists as the audit continues; it never
@@ -586,9 +586,22 @@ resolves them on its own.)*
   they are real pages now (+73 category pages). Homepage gained
   **Watch** (latest video posts) and **Recommendations** (latest + the
   sub-category chips). Permalink list re-snapshotted; sitemap rebuilt.
-  **Next**: decisions C-8, C-10, C-11, D-3 for Ben; then a final
-  review pass (accessibility/perf check of the rendered pages, README
-  for `scripts/`, SCRATCHPAD milestone table). promote
+  **Next**: see tick 29.
+- **2026-09-16 · tick 29 (C-8, C-10, C-11, D-3 — all approved)** —
+  C-10: 12 Technorati pseudo-tags removed from the taxonomy and 15 post
+  tag entries. C-8: the five odd tag slugs were those same Technorati
+  entries; `Typewriter` → `typewriter` (canonical page at the lowercase
+  URL, `/category/Typewriter/` kept as an alias with canonical). C-11:
+  4 dead plugin `<img>` tags stripped from 4 post bodies (approved
+  content edit; text untouched). D-3: homepage "Start here" now renders
+  the links found in `/important-posts/` (5 resolve to live posts;
+  the rest of that list point at pages/external URLs). Rail Topics now
+  include the restored parent categories. Everything re-rendered,
+  permalink list 8,771, sitemap 8,741, check OK.
+  **Next**: final review pass — accessibility/perf spot-check of the
+  rendered pages (Lighthouse on a post, the homepage, a category page),
+  `scripts/README.md`, SCRATCHPAD milestone table update, and a summary
+  for Ben of what is done and what remains optional. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

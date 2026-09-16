@@ -54,8 +54,6 @@ So that’s it. We have seen incredible success with Edmodo because we saw it as
 
 [![Enhanced by Zemanta](https://i0.wp.com/img.zemanta.com/zemified_e.png?w=1225)](http://www.zemanta.com/)
 
-[![Play](https://i0.wp.com/learningischange.com/wp-content/plugins/powerpress/black.png?w=1225&ssl=1)![Play](https://i0.wp.com/learningischange.com/wp-content/plugins/powerpress/play_video.png?w=1225&ssl=1)](http://media.blubrry.com/learningischange/s3.amazonaws.com/edmodo/thebermudasoda/beatbox.wma)
-
 Podcast: [Play in new window](http://media.blubrry.com/learningischange/s3.amazonaws.com/edmodo/thebermudasoda/beatbox.wma) | [Download](http://media.blubrry.com/learningischange/s3.amazonaws.com/edmodo/thebermudasoda/beatbox.wma)
 
 Subscribe: [RSS](/feed/podcast/)

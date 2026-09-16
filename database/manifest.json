@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-09-16T21:27:51.935Z",
+  "generated": "2026-09-16T21:47:50.700Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -11,13 +11,13 @@
     "total_posts": 3651,
     "total_pages": 72,
     "total_categories": 47,
-    "total_tags": 1365,
+    "total_tags": 1355,
     "total_authors": 2,
     "date_range": {
       "earliest": "2005-04-20T12:00:00Z",
       "latest": "2026-03-26T12:00:00Z"
     },
-    "last_modified": "2026-09-16T21:27:51.935Z"
+    "last_modified": "2026-09-16T21:47:50.700Z"
   },
   "shards": {
     "posts": {

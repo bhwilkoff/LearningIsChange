@@ -212,10 +212,10 @@
         "url": "/category/politics/",
         "count": 2
       },
-      "Typewriter": {
+      "typewriter": {
         "name": "Typewriter",
-        "slug": "Typewriter",
-        "url": "/category/Typewriter/",
+        "slug": "typewriter",
+        "url": "/category/typewriter/",
         "count": 7
       },
       "family": {
@@ -296,7 +296,7 @@
     }
   },
   "tags": {
-    "count": 1365,
+    "count": 1355,
     "items": {
       "teaching-theory": {
         "name": "teaching theory",
@@ -357,12 +357,6 @@
         "slug": "vss2007",
         "url": "/tag/vss2007/",
         "count": 4
-      },
-      "VSS2007": {
-        "name": "VSS2007",
-        "slug": "VSS2007",
-        "url": "http://technorati.com/tag/VSS2007",
-        "count": 3
       },
       "learning-20": {
         "name": "learning 20",
@@ -548,7 +542,7 @@
         "name": "pd",
         "slug": "pd",
         "url": "/tag/pd/",
-        "count": 3
+        "count": 2
       },
       "pdf": {
         "name": "pdf",
@@ -856,36 +850,6 @@
         "url": "/tag/words/",
         "count": 1
       },
-      "response": {
-        "name": "response",
-        "slug": "response",
-        "url": "http://technorati.com/tag/response",
-        "count": 1
-      },
-      "online": {
-        "name": "online",
-        "slug": "online",
-        "url": "http://technorati.com/tag/online",
-        "count": 3
-      },
-      "elearning": {
-        "name": "elearning",
-        "slug": "elearning",
-        "url": "http://technorati.com/tag/elearning",
-        "count": 1
-      },
-      "professional%20development": {
-        "name": "professional development",
-        "slug": "professional%20development",
-        "url": "http://technorati.com/tag/professional%20development",
-        "count": 1
-      },
-      "paulbogush": {
-        "name": "paulbogush",
-        "slug": "paulbogush",
-        "url": "http://technorati.com/tag/paulbogush",
-        "count": 1
-      },
       "questions": {
         "name": "questions",
         "slug": "questions",
@@ -1000,30 +964,6 @@
         "url": "/tag/twitter/",
         "count": 37
       },
-      "Learning%20Twitter%20Scalability": {
-        "name": "Learning Twitter Scalability",
-        "slug": "Learning%20Twitter%20Scalability",
-        "url": "http://technorati.com/tag/Learning%20Twitter%20Scalability",
-        "count": 1
-      },
-      "Sustainability": {
-        "name": "Sustainability",
-        "slug": "Sustainability",
-        "url": "http://technorati.com/tag/Sustainability",
-        "count": 1
-      },
-      "Reframability": {
-        "name": "Reframability",
-        "slug": "Reframability",
-        "url": "http://technorati.com/tag/Reframability",
-        "count": 1
-      },
-      "Startup": {
-        "name": "Startup",
-        "slug": "Startup",
-        "url": "http://technorati.com/tag/Startup",
-        "count": 1
-      },
       "following": {
         "name": "following",
         "slug": "following",
@@ -1053,18 +993,6 @@
         "slug": "social-networking",
         "url": "/tag/social-networking/",
         "count": 6
-      },
-      "bdnt": {
-        "name": "bdnt",
-        "slug": "bdnt",
-        "url": "http://technorati.com/tag/bdnt",
-        "count": 1
-      },
-      "startups": {
-        "name": "startups",
-        "slug": "startups",
-        "url": "http://technorati.com/tag/startups",
-        "count": 7
       },
       "digital-footprint": {
         "name": "digital footprint",
@@ -2026,6 +1954,12 @@
         "url": "/tag/ideals/",
         "count": 1
       },
+      "startups": {
+        "slug": "startups",
+        "name": "startups",
+        "url": "/tag/startups/",
+        "count": 6
+      },
       "beliefs": {
         "name": "beliefs",
         "slug": "beliefs",
@@ -2427,6 +2361,12 @@
         "slug": "connection",
         "url": "/tag/connection/",
         "count": 1
+      },
+      "online": {
+        "slug": "online",
+        "name": "online",
+        "url": "/tag/online/",
+        "count": 2
       },
       "safety": {
         "name": "safety",

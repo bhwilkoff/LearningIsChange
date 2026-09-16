@@ -4,7 +4,7 @@ date: 2009-11-20
 url: https://learningischange.com/2009/11/20/response-to-paul-on-pd-must-be-better/
 author: Ben Wilkoff
 categories: ["Uncategorized"]
-tags: ["Learning", "pd", "response", "online", "elearning", "professional development", "paulbogush"]
+tags: ["Learning"]
 ---
 
 # Response to Paul (on PD must be better)
