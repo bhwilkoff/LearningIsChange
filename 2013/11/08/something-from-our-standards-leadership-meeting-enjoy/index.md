@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # Something from our standards leadership meeting. Enjoy.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/IMG_2285.jpg?w=1225)
+![](/wp-content/uploads/2013/11/IMG_2285.jpg)
 
 Something from our standards leadership meeting. Enjoy.

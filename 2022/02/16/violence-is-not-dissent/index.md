@@ -9,7 +9,7 @@ tags: ["Free Speech", "technology", "writing"]
 
 # Violence is not Dissent
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/83A0D478-9BBC-4AE2-9F0C-97A537B2C202.jpeg?resize=1024%2C1024&ssl=1)
+![](/wp-content/uploads/2022/02/83A0D478-9BBC-4AE2-9F0C-97A537B2C202.jpeg)
 
 Language is powerful. It has the ability to make us cry or move us to action in an instant. A few words, when written out and written on paper or pumped into our eyeballs on a screen can inspire a generation or topple a government. And because the cost of “printing” those words has gone through the floor, we no longer understand what they are capable of, *what we are capable of*when we use words to threaten or advocate violence.
 

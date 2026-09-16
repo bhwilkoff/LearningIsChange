@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: Getting It Right: When It Comes To Creativity And Innovation | DCulberhouse
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/cropped-cropped-img_21161.jpg?w=1225)](https://dculberh.wordpress.com/2014/12/17/think-right-when-it-comes-to-creativity-and-innovation/)
+[![](/wp-content/uploads/2015/01/cropped-cropped-img_21161.jpg)](https://dculberh.wordpress.com/2014/12/17/think-right-when-it-comes-to-creativity-and-innovation/)
 
 I think this might be an important post for thinking through just WHO is responsible for change within a school:
 

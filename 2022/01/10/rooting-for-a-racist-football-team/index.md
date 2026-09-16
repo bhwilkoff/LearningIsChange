@@ -9,7 +9,7 @@ tags: []
 
 # Rooting for a Racist Football Team
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/2B71B4A9-8C55-4820-B038-3407CB99EF92.jpeg?resize=768%2C1024&ssl=1)
+![](/wp-content/uploads/2022/01/2B71B4A9-8C55-4820-B038-3407CB99EF92.jpeg)
 
 I have been a fan on the Football Team from Kansas City since I met my wife in 2002. She introduced me to the wonderful world of [Priest Holmes](https://en.wikipedia.org/wiki/Priest_Holmes), [Trent Green](https://en.wikipedia.org/wiki/Trent_Green), and [Tony Gonzalez](https://en.wikipedia.org/wiki/Tony_Gonzalez). She introduced me to winning, as I had only known The Cleveland Browns growing up (for those of you who don’t follow football, the Browns lose more than they win). And while I had certainly been aware of the problematic use of Native Americans as props and mascots with my hometown Cleveland Indians, I mostly ignored “The Chiefs” as a racist construct.
 

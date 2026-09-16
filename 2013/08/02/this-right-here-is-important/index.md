@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # This right here is important.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/08/photo.jpg?w=1225)
+![](/wp-content/uploads/2013/08/photo.jpg)
 
 This right here is important.

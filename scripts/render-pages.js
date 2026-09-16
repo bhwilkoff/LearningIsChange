@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   REPO_ROOT, SITE, SITE_NAME, AUTHOR, DEFAULT_IMAGE, escapeHtml, escapeAttr, describe, dates, plainText,
-  firstImage, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, headCommon,
+  firstImage, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, headCommon, selfHostImages,
 } from './lib/shell.js';
 
 const APPLY = process.argv.includes('--apply');
@@ -60,7 +60,7 @@ for (const p of PAGES) {
     kicker: isIndex ? '<span class="card-tag">Archive</span>' : '<span class="card-tag">Page</span>',
     meta: mod ? `<div class="post-meta"><span>Updated <time datetime="${mod}">${dates({ date_published: mod }).formatted}</time></span></div>` : '',
     ...SHELL,
-  }).split('{{content}}').join(content);
+  }).split('{{content}}').join(selfHostImages(content));
   out.set(url, html); pages++;
 }
 

@@ -9,7 +9,7 @@ tags: []
 
 # I'm Painting Ideas
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/01/20110101-032851.jpg?resize=697%2C933)](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/01/20110101-032851.jpg)
+[![](/wp-content/uploads/2011/01/20110101-032851.jpg)](/wp-content/uploads/2011/01/20110101-032851.jpg)
 
 I got this for Christmas and I can’t wait to start drawing up ideas on it.
 

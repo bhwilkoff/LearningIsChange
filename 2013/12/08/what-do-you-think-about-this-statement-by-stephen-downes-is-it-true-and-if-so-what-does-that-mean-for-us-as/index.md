@@ -9,7 +9,7 @@ tags: []
 
 # What do you think about this statement by Stephen Downes? Is it true, and if so what does that mean for us as…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/12/LMS.png?w=1225)
+![](/wp-content/uploads/2013/12/LMS.png)
 
 What do you think about this statement by Stephen Downes? Is it true, and if so what does that mean for us as teachers and leaders?
 

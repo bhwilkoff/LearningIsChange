@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # To all of you driving into work today, don’t worry.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/IMG_2915-1.jpg?w=1225)
+![](/wp-content/uploads/2014/01/IMG_2915-1.jpg)
 
 To all of you driving into work today, don’t worry. We have nearly 600 cups of coffee and a whole a lot of learning coming tomorrow. I don’t even see the snow.

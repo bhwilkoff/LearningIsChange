@@ -11,7 +11,7 @@ tags: []
 
 I am finding the simplicity of this website to be pretty amazing:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/12/VisualPing_-_Visual_Website_Monitoring__Simplified_.jpg?resize=321%2C251)
+![](/wp-content/uploads/2013/12/VisualPing_-_Visual_Website_Monitoring__Simplified_.jpg)
 
 [VisualPing – Visual Website Monitoring. Simplified.](http://visualping.io/)
 

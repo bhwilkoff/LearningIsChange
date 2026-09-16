@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # Perhaps our classrooms aren’t just a relic of the Industrial Age.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/132B-2B1-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/10/132B-2B1-1.jpeg)
 
 Perhaps our classrooms aren’t just a relic of the Industrial Age.

@@ -9,7 +9,7 @@ tags: []
 
 # Tweet from Google Calendar (because it's awesome)
 
-![Ifttt  Tweet from Google Calendar](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/03/ifttt-_-Tweet-from-Google-Calendar.png?resize=559%2C348)
+![Ifttt  Tweet from Google Calendar](/wp-content/uploads/2012/03/ifttt-_-Tweet-from-Google-Calendar.png)
 
 I have been playing around with [http://ifttt.com](http://ifttt.com/) for a while now, but I hadn’t used all that many of their channels (their inputs and outputs for creating amazing workflows). Today, I found one that I REALLY like.
 

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Can’t wait to dig into a lot of these.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/05/Gplus_F12Bv3.jpg?w=1225)
+![](/wp-content/uploads/2012/05/Gplus_F12Bv3.jpg)
 
 Can’t wait to dig into a lot of these.
 

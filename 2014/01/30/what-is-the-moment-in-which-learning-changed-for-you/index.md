@@ -15,4 +15,4 @@ I also think through how important it is to do reflections about moments that it
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.m4a)
 
-![What Is The Moment In Which Learning Changed For You?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.jpg?w=600)
+![What Is The Moment In Which Learning Changed For You?](/wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.jpg)

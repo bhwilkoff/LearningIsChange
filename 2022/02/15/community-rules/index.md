@@ -37,7 +37,7 @@ But, that may be changing.
 
 Yesterday, I was invited to take part in the [Twitter Communities beta.](https://help.twitter.com/en/using-twitter/communities) This means that I can now have a space (exactly one, actually) with a set of community rules and a shared understanding for what should happen there. These are the ones that I came up with:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/img_0254.jpg?resize=621%2C1449&ssl=1)
+![](/wp-content/uploads/2022/02/img_0254.jpg)
 
 While these may change over time as the community grows, these were my first instincts for how to create a space that is only the best of what Twitter has to offer. And when I finally created [the “Regular Progress” community](https://twitter.com/i/communities/1493354158228795392), it felt like I was getting back what it felt like to scream into the void in 2007 and have a dozen or so strangers respond.
 

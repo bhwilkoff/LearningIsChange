@@ -15,4 +15,4 @@ If you have thoughts, please leave a comment on this post.
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.m4a)
 
-![How Are You Defending The New And Promoting The Good?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.jpg?w=300)
+![How Are You Defending The New And Promoting The Good?](/wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.jpg)

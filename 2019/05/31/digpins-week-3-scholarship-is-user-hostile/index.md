@@ -25,13 +25,13 @@ While I do love listening to a PDF using [Voice Dream](https://www.voicedream.co
 
 #### Pay-Walls and On-Campus Network access create User-Hostile platforms
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.29.36-PM.png?resize=1004%2C194)
+- ![](/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.29.36-PM.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.28.18-PM.png?resize=424%2C116)
+- ![](/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.28.18-PM.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.28.10-PM.png?resize=502%2C154)
+- ![](/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.28.10-PM.png)
 
-- ![](https://i2.wp.com/learningischange.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.30.34-PM.png?fit=1024%2C57&ssl=1)
+- ![](/wp-content/uploads/2019/05/Screen-Shot-2019-05-31-at-2.30.34-PM.png)
 
 For the most part, the scholarship that I most want to read requires one of two authentication methods. Either I need to have direct access via my own login and membership information OR I need to be on the wireless network for my institution (which show up as the partial screenshots above). Either of these things allows me to download full-text versions of research articles or to do advanced searches throughout all of the Pay-walled materials of a given repository. Clearly, I am grateful to our library for having the forethought to work with all of these partners to keep me from having to sign up (and pay for) each scholarly resource I would like to read or use within my work. But, this doesn’t change the fact that the moment I am off campus, I no longer have the “global credentials” that I require in order to conduct my research.
 

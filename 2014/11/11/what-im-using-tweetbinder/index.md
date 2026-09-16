@@ -9,7 +9,7 @@ tags: []
 
 # What I'm Using: TweetBinder
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/11/2014-11-11_07-25-26.png?resize=229%2C320)
+![](/wp-content/uploads/2014/11/2014-11-11_07-25-26.png)
 
 I haven’t seen a new (and good) analytics tool for Twitter in years, but this one does so many things that I need for capturing and analyzing events and hashtags. Go ahead and put in #EdChat or #BFC530 and see what comes up. It is fascinating.
 

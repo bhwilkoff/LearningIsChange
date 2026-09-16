@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # I thought this was pretty perfect.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/IMG_4044.jpg?w=1225)
+![](/wp-content/uploads/2014/06/IMG_4044.jpg)
 
 I thought this was pretty perfect.

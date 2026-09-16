@@ -9,7 +9,7 @@ tags: []
 
 # About – Do Lectures
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/09/NewImage.png?resize=560%2C300)
+![NewImage](/wp-content/uploads/2011/09/NewImage.png)
 
 Kinda like Tedx or Ignite, but more oriented around action and getting things done to change the world. Nice.
 

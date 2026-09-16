@@ -15,4 +15,4 @@ Just like if you are upside down in your house, you are paying more than it is w
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.m4a)
 
-![Are We Making Upside Down Investments In Education?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.jpg?w=300)
+![Are We Making Upside Down Investments In Education?](/wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.jpg)

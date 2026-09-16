@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # I have a quick question for anyone who is trying to figure out better ways of handling multiple Google Apps accounts.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/04/Screenshot_4_24_14__8_51_AM.jpg?w=1225)
+![](/wp-content/uploads/2014/04/Screenshot_4_24_14__8_51_AM.jpg)
 
 I have a quick question for anyone who is trying to figure out better ways of handling multiple Google Apps accounts.
 

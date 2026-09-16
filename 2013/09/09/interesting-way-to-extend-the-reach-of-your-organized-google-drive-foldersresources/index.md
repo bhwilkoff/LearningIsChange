@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Interesting way to extend the reach of your organized Google Drive folders/resources.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/09/formFolio_icon.gif?w=1225)
+![](/wp-content/uploads/2013/09/formFolio_icon.gif)
 
 Interesting way to extend the reach of your organized Google Drive folders/resources.
 

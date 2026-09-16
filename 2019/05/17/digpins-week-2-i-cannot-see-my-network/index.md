@@ -27,7 +27,7 @@ But, what is the best way to make my network visible?
 
 Is it in using tools like [TAGS](https://hawksey.info/tagsexplorer/?key=1MM7wGqN-Y83uuDjdKJTbQwjwQSw27vCpQzA9sgFa9t0&gid=400689247)?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/2019-05-17_09-54-36.png?fit=1024%2C718&ssl=1)
+![](/wp-content/uploads/2019/05/2019-05-17_09-54-36.png)
 
 I don’t think so. That tool is great for visualization but not explanation. It doesn’t help someone to know “the how” or “the why”. The best way to show a network and the power of that network is through telling the stories of what a network **feels like** and what a network**can do**.
 

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # This seems like such a no-brainer.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/Screen2BShot2B2014-06-062Bat2B1.44.222BPM.png?w=1225)
+![](/wp-content/uploads/2014/06/Screen2BShot2B2014-06-062Bat2B1.44.222BPM.png)
 
 This seems like such a no-brainer.
 

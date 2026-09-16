@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # And…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/07/0b.png?w=1225)
+![](/wp-content/uploads/2011/07/0b.png)
 
 And…
 

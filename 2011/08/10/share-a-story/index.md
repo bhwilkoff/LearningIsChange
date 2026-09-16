@@ -9,7 +9,7 @@ tags: []
 
 # Share a Story
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/08/NewImage.png?resize=600%2C271)
+![NewImage](/wp-content/uploads/2011/08/NewImage.png)
 
 [About : Share a Story](http://www.shareastory.org/about):
 

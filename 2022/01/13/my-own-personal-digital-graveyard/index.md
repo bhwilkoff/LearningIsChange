@@ -9,7 +9,7 @@ tags: ["Digital Graveyard", "Looking Back", "Reflection"]
 
 # My Own Personal Digital Graveyard
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/annie-spratt-925xo0pf83o-unsplash.jpg?resize=1024%2C768&ssl=1)
+![](/wp-content/uploads/2022/01/annie-spratt-925xo0pf83o-unsplash.jpg)
 
 A huge amount of my life has been spent in the effort to create digital files of one sort or another. There are absolutely images, videos, and text files. But far more numerous are the inscrutable file formats of the web. There are xml files that can be rendered in thousands of ways. There are php and css files that determine what content on the web looks like. A quick look through my Google Drive(s) or my Dropbox or even my external hard drives that have my high school essays will show the thousands of cycles of excitement, creation, and abandonment that I have embarked on throughout my 38 years.
 

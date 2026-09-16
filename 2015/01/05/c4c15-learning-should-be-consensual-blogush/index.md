@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: Learning should be consensual… | Blogush
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/user-43853-96.png?w=1225)](http://blogush.edublogs.org/2015/01/02/learning-is-consensual/)
+[![](/wp-content/uploads/2015/01/user-43853-96.png)](http://blogush.edublogs.org/2015/01/02/learning-is-consensual/)
 
 While I do find applying the term “consensual” to any type of learning experience as somewhat off-putting, I think Paul’s post is rather important.
 

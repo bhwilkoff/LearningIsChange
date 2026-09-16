@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: The Colorful Principal: Give it a TRY
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/image.jpg?w=1225)](http://colorfulprincipal.blogspot.com/2015/01/give-it-try.html?showComment=1420902764181#c625671597745135072)
+[![](/wp-content/uploads/2015/01/image.jpg)](http://colorfulprincipal.blogspot.com/2015/01/give-it-try.html?showComment=1420902764181#c625671597745135072)
 
 My thoughts about how trying is harder than you think:
 

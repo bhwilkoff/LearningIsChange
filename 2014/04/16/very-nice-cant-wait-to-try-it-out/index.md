@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Very nice. Can’t wait to try it out.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/04/CrOS2Bdocking.png?w=1225)
+![](/wp-content/uploads/2014/04/CrOS2Bdocking.png)
 
 Very nice. Can’t wait to try it out.
 

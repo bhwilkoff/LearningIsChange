@@ -9,7 +9,7 @@ tags: ["Apple Pay", "Banking", "money"]
 
 # Am I a Bank now?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/fabian-blank-pelskgra2nu-unsplash-scaled.jpg?resize=1225%2C817&ssl=1)
+![](/wp-content/uploads/2022/02/fabian-blank-pelskgra2nu-unsplash-scaled.jpg)
 
 I set up my first bank account with Wells Fargo when I arrived for college in Colorado during the fall in 2001. It was in the local Safeway branch that was within walking distance from The University of Denver. It was convenient-ish to go down the street and get money out for the weekend. What really got the hooks in, though, was when I met my wife. She too had a Wells Fargo account and we just ended up merging all of the finances.
 

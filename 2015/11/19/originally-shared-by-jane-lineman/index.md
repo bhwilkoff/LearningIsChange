@@ -9,7 +9,7 @@ tags: []
 
 # Originally shared by Jane Lineman
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/11/IMG_31062B252812529.MOV.gif?w=1225)
+![](/wp-content/uploads/2015/11/IMG_31062B252812529.MOV.gif)
 
 Originally shared by Jane Lineman
 

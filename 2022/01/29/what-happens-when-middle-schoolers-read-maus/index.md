@@ -35,8 +35,8 @@ These are some of their responses that I found most relevant for the current deb
 
 **[Hanna's maus2](https://www.slideshare.net/guesta7b956b/hannas-maus2-presentation)** from **[guesta7b956b](https://www.slideshare.net/guesta7b956b)**
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/C011C947-6DB1-4176-8AA6-57F591953A50.jpeg?resize=1024%2C791&ssl=1)
+![](/wp-content/uploads/2022/01/C011C947-6DB1-4176-8AA6-57F591953A50.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/B152BFB1-A219-4E2C-AAD8-8E0B87471983.jpeg?resize=1024%2C738&ssl=1)
+![](/wp-content/uploads/2022/01/B152BFB1-A219-4E2C-AAD8-8E0B87471983.jpeg)
 
 When I read these passages from my former 7th and 8th grade students, I know just what we are giving up by banning these books and encouraging censorship in our classrooms. This is what is at stake, and while I know that there is no “sacred text” that should be taught in every classroom, this should always be an option for students. Our kids are smart enough, empathetic enough, and mature enough to handle these important issues. We should not be afraid to let them do so.

@@ -146,6 +146,7 @@ grow long — accept that; append-only is the invariant.
 ---
 
 ## Decision 009 — Rely on Jetpack CDN for resized image variants
+*Superseded for rendered pages on 2026-09-16 (Decision 014 / C-3): renderers re-point own uploads at `/wp-content/uploads/` when the file exists; the CDN remains only for third-party images and the few uploads without a local file.*
 *Date: 2026-04-17*
 
 **Decision**: Delete WP-generated size variants (`-150x150.jpg`,

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "education", "ntchat", "teacher", "teaching"]
 
 # Just a good example of a new content type to put in your communities: Visual Quotations
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/LisaMessyQuote.jpg?w=1225)
+![](/wp-content/uploads/2013/10/LisaMessyQuote.jpg)
 
 Just a good example of a new content type to put in your communities: Visual Quotations
 

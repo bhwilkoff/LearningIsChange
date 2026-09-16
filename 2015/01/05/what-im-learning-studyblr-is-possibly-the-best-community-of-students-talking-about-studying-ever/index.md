@@ -9,9 +9,9 @@ tags: []
 
 # What I'm Learning: #studyblr is possibly the best community of students talking about studying. Ever.
 
-[![studyblr | Tumblr](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/tumblr_nhpzzbcPb11u71ic7o1_400.jpg?w=1225)](https://www.tumblr.com/tagged/studyblr)
+[![studyblr | Tumblr](/wp-content/uploads/2015/01/tumblr_nhpzzbcPb11u71ic7o1_400.jpg)](https://www.tumblr.com/tagged/studyblr)
 
-[![studyblr | Tumblr](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/tumblr_nhpzc0oD681u3j0olo1_1280.jpg?w=1225)](https://www.tumblr.com/tagged/studyblr)
+[![studyblr | Tumblr](/wp-content/uploads/2015/01/tumblr_nhpzc0oD681u3j0olo1_1280.jpg)](https://www.tumblr.com/tagged/studyblr)
 
 [![studyblr | Tumblr](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/tumblr_nhpz95uA4U1sw0wr0o1_1280.jpg?w=1225)](https://www.tumblr.com/tagged/studyblr)
 

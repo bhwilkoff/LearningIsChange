@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff", "throughglass"]
 
 # I’m pretty sure I just said the, and I’m not entirely sure I like the idea of sharing everything always #throughglass
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/12/20131218_120811_662.mp4.gif?w=1225)
+![](/wp-content/uploads/2013/12/20131218_120811_662.mp4.gif)
 
 I’m pretty sure I just said the, and I’m not entirely sure I like the idea of sharing everything always #throughglass

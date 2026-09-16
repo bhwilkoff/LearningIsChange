@@ -9,7 +9,7 @@ tags: ["metaphor", "Past"]
 
 # Popcorn ceilings and Past decisions
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/09AACC59-996A-441A-A9AC-D8304FD07D37.jpeg?resize=768%2C1024&ssl=1)
+![](/wp-content/uploads/2022/01/09AACC59-996A-441A-A9AC-D8304FD07D37.jpeg)
 
 It is a great wonder to me that [Popcorn ceilings](https://en.wikipedia.org/wiki/Popcorn_ceiling) still exist. They have never been particularly attractive, even when every ceiling was covered with this polystyrene concoction. My particular Popcorn ceiling is good for dampening the noise from my three children and covering over whatever cosmetic imperfections would otherwise be there. And yet, if we (or anyone else) were building this house today, there is a 0% chance that we would resort to a Popcorn ceiling, even though the vast majority of my life has been under the watchful eye of this texture. In my parent’s house, I slept a foot or two below my own personal Popcorn batch in a lofted bed for years. Perhaps it is the familiarity that has bred this brand of contempt.
 

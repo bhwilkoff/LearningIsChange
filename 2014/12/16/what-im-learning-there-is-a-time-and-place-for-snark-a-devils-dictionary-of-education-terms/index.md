@@ -13,6 +13,6 @@ I find this kind of work to be both funny and sad. I hate that we have to be sna
 
 So, I am sharing this in order to see whether or not other folks feel like this list is valuable. Is it?
 
-[![A Devil’s Dictionary of Education Terms — Teaching, Learning, & Education — Medium](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/12/1D6vTnhHH4Q2GN85EhL0riw.jpeg?w=1225)](https://medium.com/teaching-learning/a-devils-dictionary-of-education-terms-17fd13acf6fc)
+[![A Devil’s Dictionary of Education Terms — Teaching, Learning, & Education — Medium](/wp-content/uploads/2014/12/1D6vTnhHH4Q2GN85EhL0riw.jpeg)](https://medium.com/teaching-learning/a-devils-dictionary-of-education-terms-17fd13acf6fc)
 
 > A Devil’s Dictionary of Education Terms All you need to navigate the murky waters of the profession. via [A Devil’s Dictionary of Education Terms — Teaching, Learning, & Education — Medium](https://medium.com/teaching-learning/a-devils-dictionary-of-education-terms-17fd13acf6fc).

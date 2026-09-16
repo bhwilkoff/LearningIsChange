@@ -9,7 +9,7 @@ tags: []
 
 # Host a Learning Open House
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/02/NewImage.png?resize=500%2C333)
+![NewImage](/wp-content/uploads/2012/02/NewImage.png)
 
 I’m not sure where this idea came from, but I wanted to get it out before I moved on to the next thing:
 

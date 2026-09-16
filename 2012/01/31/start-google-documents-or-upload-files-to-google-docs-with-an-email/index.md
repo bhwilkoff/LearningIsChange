@@ -37,7 +37,7 @@ This will take whatever is in the body of your email message and create a file i
 
 It looks like this:
 
-![Send To Dropbox  Email files to your Dropbox](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/01/Send-To-Dropbox-Email-files-to-your-Dropbox.jpg?resize=600%2C424)
+![Send To Dropbox  Email files to your Dropbox](/wp-content/uploads/2012/01/Send-To-Dropbox-Email-files-to-your-Dropbox.jpg)
 
 #### Step 3: Send a test email to the email address that Send to Dropbox gave you
 
@@ -53,7 +53,7 @@ The Automator is going to watch a folder for new files. The folder you want to s
 
 It looks like this:
 
-![Choose a folder you want to automate](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/01/Choose-a-folder-you-want-to-automate.jpg?resize=600%2C311)
+![Choose a folder you want to automate](/wp-content/uploads/2012/01/Choose-a-folder-you-want-to-automate.jpg)
 
 #### Step 6: Choose “Upload to Google Docs” as the action in the Automation you are creating
 
@@ -65,13 +65,13 @@ Tips: You can also have the Automator do lots of different things to those files
 
 It looks like this:
 
-![Choose an action](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/01/Choose-an-action.jpg?resize=600%2C244)
+![Choose an action](/wp-content/uploads/2012/01/Choose-an-action.jpg)
 
 #### Step 7: After you are done adding actions, click “Finished” at the top of the page
 
 It looks like this:
 
-![Choose an action 1](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/01/Choose-an-action-1.jpg?resize=600%2C128)
+![Choose an action 1](/wp-content/uploads/2012/01/Choose-an-action-1.jpg)
 
 **That’s it!**
 

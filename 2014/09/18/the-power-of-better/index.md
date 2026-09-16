@@ -9,7 +9,7 @@ tags: []
 
 # The power of Better.
 
-[![IMG_4835.JPG](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/09/IMG_4835.jpg?w=1225)](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/09/IMG_4835.jpg)
+[![IMG_4835.JPG](/wp-content/uploads/2014/09/IMG_4835.jpg)](/wp-content/uploads/2014/09/IMG_4835.jpg)
 
 There is a lot of juice in transformational change. Everyone is looking for it, coveting it above all other types of change.
 

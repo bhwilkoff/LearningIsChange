@@ -9,7 +9,7 @@ tags: []
 
 # Mobile Safari Extensions That Changed My Life
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/3210F4A0-6E10-43B9-9EBB-B056FBD0D3BA.png?resize=1024%2C788&ssl=1)
+![](/wp-content/uploads/2022/01/3210F4A0-6E10-43B9-9EBB-B056FBD0D3BA.png)
 
 It is no exaggeration to say that the web is my home away from home. It is the place where all of my work gets done ([Google Drive](https://drive.google.com/), [Slack](https://slack.com/), and [Email](https://airmailapp.com/) are just the starting point). It is also where the majority of my entertainment and commerce is served up ([YouTube](https://www.youtube.com/), [ShopGoodwill](https://shopgoodwill.com/home), and [Twitter](https://twitter.com/home)). And yet, the web mostly didn’t feel mine on my phone or iPad.
 

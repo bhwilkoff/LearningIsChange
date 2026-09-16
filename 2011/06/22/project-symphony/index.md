@@ -9,6 +9,6 @@ tags: []
 
 # Project Symphony
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/NewImage.png?resize=504%2C309)
+![NewImage](/wp-content/uploads/2011/06/NewImage.png)
 
 [Project Symphony](https://sites.google.com/site/littprojectsymphony/home):  Inspiring a new generation through classical music.

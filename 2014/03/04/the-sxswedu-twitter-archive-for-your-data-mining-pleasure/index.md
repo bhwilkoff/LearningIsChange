@@ -9,7 +9,7 @@ tags: []
 
 # The #sxswedu Twitter Archive (for your data mining pleasure)
 
-[![logo-1](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/logo-1.png?resize=300%2C251)](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/logo-1.png)
+[![logo-1](/wp-content/uploads/2014/03/logo-1.png)](/wp-content/uploads/2014/03/logo-1.png)
 
 I am a huge fan of learning from others, and I think one of the best ways to learn from #sxswedu is to look through all of the tweets. Unfortunately, they go by too fast to glean much of anything out of them other than people seem to be having a good time.
 

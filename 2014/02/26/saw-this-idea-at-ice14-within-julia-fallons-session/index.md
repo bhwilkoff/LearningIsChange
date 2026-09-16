@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "ice14"]
 
 # Saw this idea at #ice14 within Julia Fallon’s session.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/IMG_3293.jpg?w=1225)
+![](/wp-content/uploads/2014/02/IMG_3293.jpg)
 
 Saw this idea at #ice14 within Julia Fallon’s session.
 

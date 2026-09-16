@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: Too Soon? | Bailey & Derek's Daddy
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/image1.jpg?w=1225)
+![](/wp-content/uploads/2015/01/image1.jpg)
 
 My comment on a wonderful post regarding childhood, innocence and the modern sense”growing up”:
 

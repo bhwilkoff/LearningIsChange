@@ -19,32 +19,32 @@ If you would like to access the whole archive and comment on individual areas of
 
 Come and share your thoughts on what Digital Learning looks like!
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-FASquire-Student2B2540BirchwoodCobras2B...http-twitter.com-FASquire-statuses-431429841187926016-1.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-FASquire-Student2B2540BirchwoodCobras2B...http-twitter.com-FASquire-statuses-431429841187926016-1.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-KristenBrooks77-Digital2BLearning2BDay2Bin2Bmy2B...http-twitter.com-KristenBrooks77-statuses-431274798480891904.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-KristenBrooks77-Digital2BLearning2BDay2Bin2Bmy2B...http-twitter.com-KristenBrooks77-statuses-431274798480891904.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-plan3t_t3ch-A2Bgreat2Bturn2Bout2Bfor2B...http-twitter.com-plan3t_t3ch-statuses-431204476829974531.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-plan3t_t3ch-A2Bgreat2Bturn2Bout2Bfor2B...http-twitter.com-plan3t_t3ch-statuses-431204476829974531.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-klippert-Celebrating2Bwomen2Bteachers252C2B...http-twitter.com-klippert-statuses-431208984733687808.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-klippert-Celebrating2Bwomen2Bteachers252C2B...http-twitter.com-klippert-statuses-431208984733687808.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-BCPSDDL-First2B22B2523TeamBCPS2Bschools2Bto2B...http-twitter.com-BCPSDDL-statuses-431429125304500224-1.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-BCPSDDL-First2B22B2523TeamBCPS2Bschools2Bto2B...http-twitter.com-BCPSDDL-statuses-431429125304500224-1.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-CCohron-SC2Bkindergarten2BSs2Bworking2B...http-twitter.com-CCohron-statuses-431427973602766850.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-CCohron-SC2Bkindergarten2BSs2Bworking2B...http-twitter.com-CCohron-statuses-431427973602766850.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-cesteffen-.2540mrsgilbertnhs2Bthanks2Bfor2B...http-twitter.com-cesteffen-statuses-431420045190000640.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-cesteffen-.2540mrsgilbertnhs2Bthanks2Bfor2B...http-twitter.com-cesteffen-statuses-431420045190000640.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Willowridge2BHS2BAVID2Bteachers2B...http-twitter.com-DigitalFBISD-statuses-431418725258887168.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Willowridge2BHS2BAVID2Bteachers2B...http-twitter.com-DigitalFBISD-statuses-431418725258887168.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Mr.2BWilson2B25402BDMS2Bused2BGizmos2B...http-twitter.com-DigitalFBISD-statuses-431418467422437376.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Mr.2BWilson2B25402BDMS2Bused2BGizmos2B...http-twitter.com-DigitalFBISD-statuses-431418467422437376.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BRahamans25272Bstudents25402BJan2B...http-twitter.com-DigitalFBISD-statuses-431418252959313920.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BRahamans25272Bstudents25402BJan2B...http-twitter.com-DigitalFBISD-statuses-431418252959313920.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BTomlinson2B25402BJuan2BSeguin2B...http-twitter.com-DigitalFBISD-statuses-431417810112102401.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BTomlinson2B25402BJuan2BSeguin2B...http-twitter.com-DigitalFBISD-statuses-431417810112102401.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BPage2B25402BJuan2BSeguin2BES2Bused2B...http-twitter.com-DigitalFBISD-statuses-431417577751859200.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BPage2B25402BJuan2BSeguin2BES2Bused2B...http-twitter.com-DigitalFBISD-statuses-431417577751859200.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-OESMedia-2523DLDay2Blearning2Bcontinues2Bin2B...http-twitter.com-OESMedia-statuses-431417546563018752.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-OESMedia-2523DLDay2Blearning2Bcontinues2Bin2B...http-twitter.com-OESMedia-statuses-431417546563018752.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BAli2B25402BAustin2BParkway2BES2B...http-twitter.com-DigitalFBISD-statuses-431417355407618048.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BAli2B25402BAustin2BParkway2BES2B...http-twitter.com-DigitalFBISD-statuses-431417355407618048.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BMorris25272Bstudents2B25402BAustin2B...http-twitter.com-DigitalFBISD-statuses-431417034178441218.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-DigitalFBISD-Ms.2BMorris25272Bstudents2B25402BAustin2B...http-twitter.com-DigitalFBISD-statuses-431417034178441218.jpg)

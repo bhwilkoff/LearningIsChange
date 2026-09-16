@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Funny.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/07/cs0056.png?w=1225)
+![](/wp-content/uploads/2011/07/cs0056.png)
 
 Funny.
 

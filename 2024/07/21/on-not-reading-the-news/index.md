@@ -9,7 +9,7 @@ tags: ["election", "Information Literacy", "Mental Health", "news"]
 
 # On Not Reading the News
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg?resize=1225%2C1701&ssl=1)
+![](/wp-content/uploads/2024/07/jon-tyson-XmMsdtiGSfo-unsplash-edited.jpg)
 
 I used to read the news. At all times of the day and night. I used to perseverate upon every new headline and breaking story. For years I did this. And I wasn’t really sure how to stop. I knew that it wasn’t healthy for me. I knew that it wasn’t “life affirming” or giving me much hope for the future, and yet I did it. Constantly.
 

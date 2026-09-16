@@ -17,4 +17,4 @@ What should we call the artist formerly known as 21st-century learning?
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..m4a)
 
-![Any Learning Happening In The 21St-Century IS 21St-Century Learning.](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..jpg?w=600)
+![Any Learning Happening In The 21St-Century IS 21St-Century Learning.](/wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..jpg)

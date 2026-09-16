@@ -21,7 +21,7 @@ So, go to twitter and sign up for a new account, but instead of having to have a
 
 Here is what that looks like:
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/04/Picture-71-300x218.png?resize=300%2C218)](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/04/Picture-71.png)
+[![](/wp-content/uploads/2010/04/Picture-71-300x218.png)](/wp-content/uploads/2010/04/Picture-71.png)
 
 Step 2: Go into your [Google Voice](http://www.google.com/googlevoice/about.html) Account and turn on SMS forwarding to e-mail, which is a checkbox in Settings in the SMS and Voicemail tab (if you don’t have a Google Voice account, let me know, I have a few invites). It looks like this:
 

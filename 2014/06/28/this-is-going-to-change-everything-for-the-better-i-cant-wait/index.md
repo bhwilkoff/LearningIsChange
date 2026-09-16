@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # This is going to change everything (for the better)! I can’t wait!
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/Homescreens.withText.Alternate2B252822529.png?w=1225)
+![](/wp-content/uploads/2014/06/Homescreens.withText.Alternate2B252822529.png)
 
 This is going to change everything (for the better)! I can’t wait!
 

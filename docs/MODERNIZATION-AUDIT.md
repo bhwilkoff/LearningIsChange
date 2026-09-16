@@ -563,10 +563,20 @@ resolves them on its own.)*
   comments on 1,043 posts into the JSON (`scripts/recover-comments.js`),
   rendered under posts (`{{comments}}`, threaded, read-only, JSON-LD
   `commentCount`), all posts regenerated, permalink check OK.
-  **Next**: act on A-6 (page-rules redirects), C-3 (render-time
-  `i0.wp.com` → `/wp-content/uploads/` rewrite in HTML/feeds; supersede
-  Decision 009), B-5 (Watch + Recommendations homepage sections); then
-  the remaining decisions (C-8, C-10, C-11, D-3). promote
+  **Next**: see tick 27.
+- **2026-09-16 · tick 27 (A-6 + C-3)** — A-6: 9 empty WordPress shells
+  (`/events/*`, three tutorial pages, the Google Talk test) are now
+  redirects to `/` via `page-rules.json` (20 redirects, 10 noindex).
+  C-3: `selfHostImages()` in `shell.js` re-points Jetpack-CDN
+  references to *own* uploads at their self-hosted path when the file
+  exists — applied in post pages, Markdown twins, comments, static
+  pages and both feeds. 458 of 468 distinct paths re-pointed; the 10
+  with no local file (URL-encoded `+` names from a 2015 import) and all
+  third-party images proxied via the CDN (Zemanta, Skitch, S3, Flickr)
+  stay on the CDN. 267 posts changed. Permalink check OK.
+  **Next**: B-5 (Watch + Recommendations homepage sections from the
+  `videos/*` and `recs/*` categories); then decisions C-8, C-10, C-11,
+  D-3. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

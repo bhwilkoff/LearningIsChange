@@ -9,7 +9,7 @@ tags: ["documentary", "Fascism", "rebellion", "the youth"]
 
 # Fascism isn’t cool… for long.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/D716E8E2-4131-420F-AA45-F2B225D9A3C8.jpeg?resize=1024%2C820&ssl=1)
+![](/wp-content/uploads/2022/02/D716E8E2-4131-420F-AA45-F2B225D9A3C8.jpeg)
 
 Teenagers are a construct that has propelled popular culture forward for 100 years. But, prior to the end of the first World War, they mostly didn’t exist. It wasn’t that somehow people skipped from age 12 to 20, but rather that there was no pause between childhood and adulthood before the advent of child labor laws and the progressive political movements that supported them. [In 1900, children (10-15) made up nearly twenty percent of the work force](https://en.wikipedia.org/wiki/Child_labor_laws_in_the_United_States). A generation later, this was seen as an affront to the family and to the normal progress of young people.
 

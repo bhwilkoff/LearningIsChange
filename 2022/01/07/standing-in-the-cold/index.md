@@ -11,7 +11,7 @@ tags: []
 
 Yesterday I wore 2 hats, 2 pairs of gloves, a pair of long underwear and a black suit. I wore these clothes to attend the funeral of a family friend: Jamie Lynn Sullivan.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/99F7986D-5245-4C62-91DA-4997BCB94C73.jpeg?resize=1024%2C768&ssl=1)
+![](/wp-content/uploads/2022/01/99F7986D-5245-4C62-91DA-4997BCB94C73.jpeg)
 
 I stood outside at Fort Logan Cemetary with nearly a hundred others. It was far below freezing (hence the clothing), but I wasn’t cold. I was with those who loved her most, those who respected her work and her life. The community who gathered is one that has only grown in my estimation as I have gotten to know them further since Jamie was killed on December 4, 2021.
 

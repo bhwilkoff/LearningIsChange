@@ -9,7 +9,7 @@ tags: []
 
 # Skillshare — Classes to learn anything from anyone
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/NewImage1.png?resize=600%2C292)
+![NewImage](/wp-content/uploads/2011/06/NewImage1.png)
 
 Are we moving in this direction?
 

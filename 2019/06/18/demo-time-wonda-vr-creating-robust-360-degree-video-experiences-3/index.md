@@ -17,7 +17,7 @@ tags: ["AMC", "Anschutz", "virtual reality", "Virtual Reality Committee"]
 
 - VR is no longer a technology that is unknown or hard to come by.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608895852805.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608895852805.png)￼
 
 #### However, the creation tools are still really hard!
 
@@ -25,49 +25,49 @@ tags: ["AMC", "Anschutz", "virtual reality", "Virtual Reality Committee"]
 
 - Language Learning “Immersion Programs”
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608896455500.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608896455500.png)￼
 
 - Creative Writing  Capturing videos and using them to present multiple environments for storytelling
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608896940569.jpg?w=1225)￼
+![](/wp-content/uploads/2019/06/15608896940569.jpg)￼
 
 - Leadership Training – Hearing the “internal monologue” of individual participants within a meeting
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608897354337.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608897354337.png)￼
 
 - Campus Tours
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901074316.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608901074316.png)￼
 
 - Medical Training – Branching for how to interact with patients or other roles
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901202097.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608901202097.png)￼
 
 ### Creation Tools:
 
 - [Web-based platform](https://youtu.be/nMaeYPWvkSo)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901496463.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608901496463.png)￼
 
 - Collaboration features within the web-based environment
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608901652034.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608901652034.png)￼
 
 - You can also see “results” for who is watching/experiencing the sessions
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929146804.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608929146804.png)￼
 
 - Multiple viewers can see the same experience at the same time
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929370427.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608929370427.png)￼
 
 ### Platform Availability
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929486414.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608929486414.png)￼
 
 ### Roadmap for Wonda VR
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15608929642876.png?w=1225)￼
+![](/wp-content/uploads/2019/06/15608929642876.png)￼
 
 ##### I’m super intrigued by this platform, and I am excited to play around with it. I wonder how the collaboration tools work. The branching scenarios could be huge for building rapidly and creating more robust experiences.
 

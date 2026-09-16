@@ -9,7 +9,7 @@ tags: ["littleton", "Outrage", "parental consent", "public schools", "Vaccines"]
 
 # For the Kids
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/hakan-nural-YCVUR2JgfHA-unsplash.jpg?resize=1225%2C1562&ssl=1)
+![](/wp-content/uploads/2022/01/hakan-nural-YCVUR2JgfHA-unsplash.jpg)
 
 COVID and Vaccination politics are making for some very strange communication coming from my children’s school district, [Littleton Public Schools](https://littletonpublicschools.net/). This week, every parent with at least one student in the district received a notice that Littleton was discontinuing the use of school buildings as community vaccination clinics. On the face of it, it seems reasonable enough. The school district can decide what it wants to do with its buildings during non-school hours (3-7 PM). And yet, the reason for this change is anything but reasonable.
 

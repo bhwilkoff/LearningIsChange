@@ -23,7 +23,7 @@ It feels simple. And yet, it is so incredibly hard. To ask. And to forgive.
 
 Which is why it was some kind of beautiful coincidence that I was also introduced to a simple way to facilitate such a conversation this week. Via a [LunchClub meeting](https://lunchclub.com/?invite_code=benw21) (a free networking service that I have used to meet over 90 incredible human beings during the pandemic), I was introduced to [Victoria Yeung](https://www.linkedin.com/in/yeungvictoria/). Through her Canadian consulting firm, [Nonsequitur](https://www.nonsequitur.ca/), she and her co-founder have built out a series of notecards that are “fill-in-the-blank” versions of apologies:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/9BBF75C9-6ECE-429B-BFED-3AD1EEC675D1.jpeg?resize=1024%2C724&ssl=1)
+![](/wp-content/uploads/2022/02/9BBF75C9-6ECE-429B-BFED-3AD1EEC675D1.jpeg)
 
 Along with their incredible [Apology Guide workflow](https://www.nonsequitur.ca/apology-guide), this kind of simplified version of asking for forgiveness makes me think that there is hope for us all to bring about a new reality, together. So, how might we use this process? How might we bring about new Political realities? Or, new Marital realities? Or, new realities for religious tolerance? Or, perhaps, just a new reality for the divided neighborhoods and communities we inhabit in 2022.
 

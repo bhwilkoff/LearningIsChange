@@ -9,7 +9,7 @@ tags: []
 
 # I almost bought a house.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/1501037888_featured.jpeg?resize=500%2C347&ssl=1)
+![](/wp-content/uploads/2017/07/1501037888_featured.jpeg)
 
 As we continue to build out this year, I would like to draw upon our own experiences for both strength and inspiration. With that in mind, I’d like to share that my wife and I ALMOST bought a house this summer. We put in an offer, it was accepted, and we went through the inspections. We were weeks away from closing and moving everyone 2.5 miles down the road. And it was stressful.
 

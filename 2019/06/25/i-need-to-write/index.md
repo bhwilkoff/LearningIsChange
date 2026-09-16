@@ -11,7 +11,7 @@ tags: ["Priviledge", "Reflection", "writing"]
 
 ## I write when I need to write. And lately, that has been all of the time.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/15614297273550.jpg?w=1225)￼
+![](/wp-content/uploads/2019/06/15614297273550.jpg)￼
 
 I guess I'm trying to see just how easily I can write when there is no one watching, when I know that it really will only be stumbled upon and not actively sought out.
 

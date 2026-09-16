@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: The Mythical Unicorn of Ed.Tech — The Saxifrage School — Medium
 
-[![The Mythical Unicorn of Ed.Tech — The Saxifrage School — Medium](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/0iKeVeeDiFmduraVJ.jpeg?w=1225)](https://medium.com/the-saxifrage-school/the-mythical-unicorn-of-ed-tech-98491f9b0e6)
+[![The Mythical Unicorn of Ed.Tech — The Saxifrage School — Medium](/wp-content/uploads/2015/01/0iKeVeeDiFmduraVJ.jpeg)](https://medium.com/the-saxifrage-school/the-mythical-unicorn-of-ed-tech-98491f9b0e6)
 
 Finding EdTech Unicorns is one of my favorite things:
 

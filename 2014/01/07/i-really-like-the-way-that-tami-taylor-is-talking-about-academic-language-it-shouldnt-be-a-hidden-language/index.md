@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # I really like the way that TAMI TAYLOR is talking about Academic Language. “It shouldn’t be a hidden language.”
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/20140107_115250_314.jpg?w=1225)
+![](/wp-content/uploads/2014/01/20140107_115250_314.jpg)
 
 I really like the way that TAMI TAYLOR is talking about Academic Language. “It shouldn’t be a hidden language.”

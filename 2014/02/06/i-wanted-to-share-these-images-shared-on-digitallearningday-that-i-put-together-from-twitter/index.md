@@ -15,7 +15,7 @@ What do you all think?
 
 Here are the files in Google Drive, if you want access to them there too: [http://bit.ly/digitallearningdayarchive](http://bit.ly/digitallearningdayarchive)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/Twitter2B-FASquire-Student2B2540BirchwoodCobras2B...http-twitter.com-FASquire-statuses-431429841187926016-3.jpg?w=1225)
+![](/wp-content/uploads/2014/02/Twitter2B-FASquire-Student2B2540BirchwoodCobras2B...http-twitter.com-FASquire-statuses-431429841187926016-3.jpg)
 
 ![](https://i0.wp.com/lh5.googleusercontent.com/-p9SxJ_5bI0g/UvPiAqfbiRI/AAAAAAAA9mg/D86ztzBE_84/s0/Twitter%2B-pammoran-%25E2%2580%259C%2540MrsBalazs-Giggling%2Bat%2B...http---twitter.com-pammoran-statuses-431252870500216832.jpg?w=1225&ssl=1)
 

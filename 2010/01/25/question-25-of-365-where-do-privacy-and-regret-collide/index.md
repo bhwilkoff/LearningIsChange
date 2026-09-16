@@ -19,7 +19,7 @@ Yet, the second collision is where the real debate should be. We should be tryin
 
 While I am absolutely terrible at creating diagrams, here is one that I think represents these two collisions quite well. The regret curve is parabola and your privacy settings are a straight ascending line. The two connect at the collision points (although this diagram does describe a situation that could be worse than the initial collision point, which is to have no privacy at all and your level of regret is just as high as if you had a really high privacy setting). I hope this all makes sense:
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/01/PrivacyAndRegret-300x208.jpg?resize=300%2C208)](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/01/PrivacyAndRegret.jpg)
+[![](/wp-content/uploads/2010/01/PrivacyAndRegret-300x208.jpg)](/wp-content/uploads/2010/01/PrivacyAndRegret.jpg)
 
 ###### Related articles by Zemanta
 

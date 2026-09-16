@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # I just asked Andrew Stillman and Jesse Spevack privately, but I thought I would share it with this community as…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/12/2014-12-01_12-19-50.png?w=1225)
+![](/wp-content/uploads/2014/12/2014-12-01_12-19-50.png)
 
 I just asked Andrew Stillman and Jesse Spevack privately, but I thought I would share it with this community as well, as I know how many of you folks might have insights too.
 

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "GIEsummit"]
 
 # Pretty amazing use of google sites.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/Screen2BShot2B2013-10-242Bat2B12.23.232BPM.png?w=1225)
+![](/wp-content/uploads/2013/10/Screen2BShot2B2013-10-242Bat2B12.23.232BPM.png)
 
 Pretty amazing use of google sites.
 

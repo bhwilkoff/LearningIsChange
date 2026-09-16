@@ -19,7 +19,7 @@ So, what I have decided to is to is to slowly take bits and pieces of things tha
 
 Here is the first set of objects, three visual representations of PLNs by members of this class:
 
-[![picture-3](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/06/picture-3.png?resize=405%2C398)](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/06/picture-3.png)[![picture-2](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/06/picture-2.png?resize=553%2C355)](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/06/picture-2.png)[![picture-1](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/06/picture-1.png?resize=529%2C425)](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/06/picture-1.png)
+[![picture-3](/wp-content/uploads/2009/06/picture-3.png)](/wp-content/uploads/2009/06/picture-3.png)[![picture-2](/wp-content/uploads/2009/06/picture-2.png)](/wp-content/uploads/2009/06/picture-2.png)[![picture-1](/wp-content/uploads/2009/06/picture-1.png)](/wp-content/uploads/2009/06/picture-1.png)
 
 I quite like how this activity turned out. I hope you do too.
 

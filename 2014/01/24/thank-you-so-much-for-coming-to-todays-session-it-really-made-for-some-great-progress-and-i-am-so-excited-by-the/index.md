@@ -9,6 +9,6 @@ tags: []
 
 # Thank you so much for coming to today’s session. It really made for some great progress, and I am so excited by the…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/IMG_2861-MOTION.gif?w=1225)
+![](/wp-content/uploads/2014/01/IMG_2861-MOTION.gif)
 
 Thank you so much for coming to today’s session. It really made for some great progress, and I am so excited by the group’s engagement.

@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # This is what we look like in ASCII art
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/2014-01-07_20-01-10.png?w=1225)
+![](/wp-content/uploads/2014/01/2014-01-07_20-01-10.png)
 
 This is what we look like in ASCII art

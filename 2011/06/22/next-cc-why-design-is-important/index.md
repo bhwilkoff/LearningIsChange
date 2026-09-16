@@ -9,7 +9,7 @@ tags: []
 
 # Next.cc – Why design is important.
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/NewImage2.png?resize=417%2C258)
+![NewImage](/wp-content/uploads/2011/06/NewImage2.png)
 
 [N E X T [ B E T A ] whatsnext](http://next.cc/whatsnext.htm):
 

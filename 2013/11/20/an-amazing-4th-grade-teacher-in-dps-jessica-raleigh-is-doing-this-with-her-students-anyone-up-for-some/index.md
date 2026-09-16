@@ -9,7 +9,7 @@ tags: []
 
 # An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students. Anyone up for some…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CSEdWeek.png?w=1225)
+![](/wp-content/uploads/2013/11/CSEdWeek.png)
 
 An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students. Anyone up for some collaboration?:
 

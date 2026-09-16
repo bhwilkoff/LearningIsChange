@@ -15,17 +15,17 @@ There are two such films that I have found to be incredibly helpful in this [mom
 
 In both of these movies, the central thesis is that all communities (or nations) are on a sliding scale from Democracy to Despotism:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/7D5815D4-B85A-4F24-AE1E-7ABB9F355CC8.jpeg?resize=491%2C432&ssl=1)
+![](/wp-content/uploads/2022/01/7D5815D4-B85A-4F24-AE1E-7ABB9F355CC8.jpeg)
 
 Where your community lands on this spectrum are dependent upon four key attributes, which have scales of their own:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/BF2EA5B3-CDB3-47E0-83A6-697AFCAB2E69.jpeg?resize=1024%2C907&ssl=1)
+![](/wp-content/uploads/2022/01/BF2EA5B3-CDB3-47E0-83A6-697AFCAB2E69.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/28DF5E48-E4E0-4EA3-83EA-00BA1C502388.jpeg?resize=1024%2C843&ssl=1)
+![](/wp-content/uploads/2022/01/28DF5E48-E4E0-4EA3-83EA-00BA1C502388.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/1FECBAC8-D06C-4177-9963-7C0A6A283E54.jpeg?resize=1024%2C926&ssl=1)
+![](/wp-content/uploads/2022/01/1FECBAC8-D06C-4177-9963-7C0A6A283E54.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/7FE8CFE6-439E-4BB5-B3B9-5681B9E242E1.jpeg?resize=1024%2C847&ssl=1)
+![](/wp-content/uploads/2022/01/7FE8CFE6-439E-4BB5-B3B9-5681B9E242E1.jpeg)
 
 I would like to reframe these scales as a series of questions that have really helped me to think about what kind of society we are currently living within:
 
@@ -36,11 +36,11 @@ I would like to reframe these scales as a series of questions that have really h
 
 Based upon your answers to those questions, you may see the signs of Democracy:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/5A8858C1-597B-4BA9-9B1E-E7B509131707-1024x713.jpeg?resize=642%2C447&ssl=1)
+![](/wp-content/uploads/2022/01/5A8858C1-597B-4BA9-9B1E-E7B509131707-1024x713.jpeg)
 
 And when you ask those questions of your community, you may find that the conditions for Democracy are present or absent:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/91EF63EF-9076-48FB-9961-9E08EB477CE3.jpeg?resize=659%2C484&ssl=1)
+![](/wp-content/uploads/2022/01/91EF63EF-9076-48FB-9961-9E08EB477CE3.jpeg)
 
 At the moment, I see the sliding scales moving toward despotism. I see respect only being offered to those we agree with. I see power being concentrated in the hands of those who are deemed to be “[real Americans](https://bit.ly/3qOp4xM).” I see [economic prosperity concentrating more and more in the hands of the wealthy](https://bit.ly/3nJwOii). And, I see information being controlled by[both algorithms and a strong distrust for anything that doesn’t fit into an already existing world view](https://bit.ly/3nJ2rZC).
 

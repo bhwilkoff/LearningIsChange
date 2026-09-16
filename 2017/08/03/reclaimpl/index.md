@@ -13,7 +13,7 @@ I was sitting in the Cultures of Thinking workshop yesterday, and I heard a lot 
 
 I looked in the book, and this is how the idea it is represented:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/1501129725_featured.jpeg?resize=1024%2C546&ssl=1)
+![](/wp-content/uploads/2017/07/1501129725_featured.jpeg)
 
 The key phrase there (for me, at least) is “as far as they wish.” Students should be both allowed and encouraged to think things through as far as they want. To put it another way, they should be able to “personalize” their learning because their teachers have planned for them to do so within a culture of thinking.
 

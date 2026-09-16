@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15 – Blend Me: Wanna See a Movie? How to Conduct a Meaningful Discussion about a Movie while WATCHING the Movie
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/hamlet96b-1ip27nq-300x206.jpg?resize=300%2C206)](http://medinablendme.blogspot.com/2013/06/wanna-see-movie-how-to-conduct.html?showComment=1420518555684#c1518876590479499618)
+[![](/wp-content/uploads/2015/01/hamlet96b-1ip27nq-300x206.jpg)](http://medinablendme.blogspot.com/2013/06/wanna-see-movie-how-to-conduct.html?showComment=1420518555684#c1518876590479499618)
 
 This is a great every day example of how a more connected classroom changes the way in which students learn:
 

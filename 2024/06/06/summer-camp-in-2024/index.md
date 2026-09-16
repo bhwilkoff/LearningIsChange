@@ -9,7 +9,7 @@ tags: ["camp", "children", "kids", "Learning", "summer", "video games"]
 
 # Summer Camp in 2024
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4052.jpg?resize=1024%2C768&ssl=1) *Super Smash Bros. camp*
+![](/wp-content/uploads/2024/06/img_4052.jpg) *Super Smash Bros. camp*
 
 Every summer, our children are out of school. And yet, I am not out of work over the summer. You can see the problem this poses for getting work done.
 

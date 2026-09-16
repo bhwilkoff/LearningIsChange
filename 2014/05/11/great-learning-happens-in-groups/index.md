@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Great learning happens in groups.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/05/IMG_3844.gif?w=1225)
+![](/wp-content/uploads/2014/05/IMG_3844.gif)
 
 Great learning happens in groups.
 

@@ -15,4 +15,4 @@ I also think through just how all of you, as teachers and learners, will help to
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/02/What-Will-Arlo-Know.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/02/What-Will-Arlo-Know.m4a)
 
-![What Will Arlo Know?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/What-Will-Arlo-Know.jpg?w=600)
+![What Will Arlo Know?](/wp-content/uploads/2014/02/What-Will-Arlo-Know.jpg)

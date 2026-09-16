@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # Yeah. This sounds about right.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/132B-2B1.jpeg?w=1225)
+![](/wp-content/uploads/2013/10/132B-2B1.jpeg)
 
 Yeah. This sounds about right.

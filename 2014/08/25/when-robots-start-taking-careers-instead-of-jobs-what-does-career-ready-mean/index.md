@@ -17,4 +17,4 @@ http://youtu.be/kYIfeZcXA9U
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.m4a)
 
-![When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.jpg?w=600)
+![When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?](/wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.jpg)

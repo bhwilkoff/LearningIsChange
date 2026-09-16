@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # I’m pretty sure this is how we should teach Irony to our students.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/BfF2uRlCEAA18oQ.jpg?w=1225)
+![](/wp-content/uploads/2014/01/BfF2uRlCEAA18oQ.jpg)
 
 I’m pretty sure this is how we should teach Irony to our students.

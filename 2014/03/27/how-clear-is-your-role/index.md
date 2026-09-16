@@ -15,4 +15,4 @@ While I don’t solve that confusion within this podcast, I do talk about the wa
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/03/How-Clear-Is-Your-Role.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/03/How-Clear-Is-Your-Role.m4a)
 
-![How Clear Is Your Role?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/How-Clear-Is-Your-Role.jpg?w=600)
+![How Clear Is Your Role?](/wp-content/uploads/2014/03/How-Clear-Is-Your-Role.jpg)

@@ -17,4 +17,4 @@ Here is the image of the three of them in the diagram, but this is the way I hav
 
 I hope this all makes sense.
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/Director_of_Personalized_Professional_Learning_Job_Description_-_Google_Drive.jpg?resize=1024%2C1024)](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/Director_of_Personalized_Professional_Learning_Job_Description_-_Google_Drive.jpg)
+[![](/wp-content/uploads/2013/10/Director_of_Personalized_Professional_Learning_Job_Description_-_Google_Drive.jpg)](/wp-content/uploads/2013/10/Director_of_Personalized_Professional_Learning_Job_Description_-_Google_Drive.jpg)

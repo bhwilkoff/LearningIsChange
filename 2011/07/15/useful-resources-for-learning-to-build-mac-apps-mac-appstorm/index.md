@@ -11,7 +11,7 @@ tags: []
 
 I have just started to learn how to build Apps. Here are some great resources and tools to make it happen.
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/07/NewImage.png?resize=200%2C200)
+![NewImage](/wp-content/uploads/2011/07/NewImage.png)
 
 [Useful Resources for Learning to Build Mac Apps | Mac.AppStorm](http://mac.appstorm.net/general/app-news/useful-resources-for-learning-to-build-mac-apps/):
 

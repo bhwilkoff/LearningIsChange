@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "GooglePlusTips", "HangoutPhoneCalls", "HangoutsSidebar", 
 
 # Awesome. I know this was available in the original Google Talk, but it is nice to see this coming back together.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/07/make2Bphone2Bcalls2Bfrom2Bhangout2Bsidebar.jpg?w=1225)
+![](/wp-content/uploads/2013/07/make2Bphone2Bcalls2Bfrom2Bhangout2Bsidebar.jpg)
 
 Awesome. I know this was available in the original Google Talk, but it is nice to see this coming back together.
 

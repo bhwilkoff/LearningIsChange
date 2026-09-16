@@ -19,4 +19,4 @@ It is my sincere hope that I am able to answer this question honestly, and that 
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.m4a)
 
-![What Will Your Learning Legacy Be?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.jpg?w=600)
+![What Will Your Learning Legacy Be?](/wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.jpg)

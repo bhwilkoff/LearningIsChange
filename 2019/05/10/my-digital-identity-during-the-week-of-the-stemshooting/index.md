@@ -15,7 +15,7 @@ I believe there are some events that fundamentally change the ways that we see o
 
 ### First, this is a visual representation of my digital identity this week ([according to the format laid out here](http://daveowhite.com/vandr/)):
 
-![](https://i2.wp.com/learningischange.com/wp-content/uploads/2019/05/Whiteboard.jpg?fit=1024%2C768&ssl=1) *My Digital Identity this week. The only change I would make is that Ferrite should be further to the right in the resident column. You can watch me make this in Explain Everything on this Youtube Video (sorry about the audio cutting in and out at the beginning of the video).*
+![](/wp-content/uploads/2019/05/Whiteboard.jpg) *My Digital Identity this week. The only change I would make is that Ferrite should be further to the right in the resident column. You can watch me make this in Explain Everything on this Youtube Video (sorry about the audio cutting in and out at the beginning of the video).*
 
 ### Second, these are the posts that I made and the reactions that they received from my community:
 
@@ -25,35 +25,35 @@ https://twitter.com/bhwilkoff/status/1126158255317590016
 
 ### Messages Shared in (Semi) Private Spaces:
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4171.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4171.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4172.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4172.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4173.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4173.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4174.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4174.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4175.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4175.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4176.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4176.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4177.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4177.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4178.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4178.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4179.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4179.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4180.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4180.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4181.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4181.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4182.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4182.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4183.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4183.png)
 
-- ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/05/IMG_4184.png?resize=1125%2C2436)
+- ![](/wp-content/uploads/2019/05/IMG_4184.png)
 
-- ![](https://i1.wp.com/learningischange.com/wp-content/uploads/2019/05/2019-05-10_09-02-02.png?fit=257%2C1024&ssl=1)
+- ![](/wp-content/uploads/2019/05/2019-05-10_09-02-02.png)
 
 ### My short reflective writing pieces that I wrote with the help of the [Writing Prompts App](https://itunes.apple.com/us/app/prompts-for-writing/id627192932?mt=8):
 

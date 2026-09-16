@@ -9,7 +9,7 @@ tags: []
 
 # Newsletters for Truth
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/solen-feyissa-LBNJi8qHIbA-unsplash.jpg?resize=1024%2C683&ssl=1)
+![](/wp-content/uploads/2022/01/solen-feyissa-LBNJi8qHIbA-unsplash.jpg)
 
 Email is simultaneously the default operating system for work and the cluttered antithesis of all productive activity. The convenience of having a single “inbox” for all of the messages that I might need is so seductive that I have subscribed to many different news resources that I regularly read. This is in addition to time reading [Twitter](https://twitter.com/home), [Apple News](https://www.apple.com/apple-news/), and [GoodLinks](https://goodlinks.app/) articles that I have saved for later (or possibly, never). I do not subscribe to these outlets because I want to distract myself from work. Rather, I have actively sought out these perspectives in the same way that I used to read blogs regularly. I want to hear from particular voices. I want to make sure that I am informed and I want that information to be intentional, not incidental. I wanted to enumerate these sources so that others can take advantage of the insights, or at least know how I am filling my morning reading time:
 

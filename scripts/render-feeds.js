@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { REPO_ROOT, SITE, SITE_NAME, describe, dates, terms, loadAllPosts, unescapeEntities } from './lib/shell.js';
+import { REPO_ROOT, SITE, SITE_NAME, describe, dates, terms, loadAllPosts, unescapeEntities, selfHostImages } from './lib/shell.js';
 
 const APPLY = process.argv.includes('--apply');
 const INDEX_COUNT = 50;
@@ -35,7 +35,7 @@ function item(p) {
       <dc:creator>${cdata('Ben')}</dc:creator>
       <guid isPermaLink="true">${SITE}${p.url}</guid>
 ${cats.map((c) => `      <category>${cdata(c.name)}</category>`).join('\n')}${cats.length ? '\n' : ''}      <description>${cdata(describe(p, 300))}</description>
-      <content:encoded>${cdata(absolutize(p.content))}</content:encoded>
+      <content:encoded>${cdata(absolutize(selfHostImages(p.content)))}</content:encoded>
     </item>`;
 }
 

@@ -11,7 +11,7 @@ tags: []
 
 We start off with our logo doughboy. It is amazing to see a logo come to life like this, especially with a high school band going on in the background.
 
-[![photo](https://i0.wp.com/learningischange.com/wp-content/uploads/2008/07/p-640-427-1b2c9316-173a-4087-9478-b7d3373667c7.jpeg?resize=200%2C300)](https://i0.wp.com/learningischange.com/wp-content/uploads/2008/07/p-640-427-1b2c9316-173a-4087-9478-b7d3373667c7.jpeg)
+[![photo](/wp-content/uploads/2008/07/p-640-427-1b2c9316-173a-4087-9478-b7d3373667c7.jpeg)](/wp-content/uploads/2008/07/p-640-427-1b2c9316-173a-4087-9478-b7d3373667c7.jpeg)
 
 We get some more band music (elenor rigby).
 

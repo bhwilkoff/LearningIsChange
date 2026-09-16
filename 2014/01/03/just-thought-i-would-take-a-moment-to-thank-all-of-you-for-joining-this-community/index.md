@@ -9,7 +9,7 @@ tags: []
 
 # Just thought I would take a moment to thank all of you for joining this community.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/IMG_2770.jpg?w=1225)
+![](/wp-content/uploads/2014/01/IMG_2770.jpg)
 
 Just thought I would take a moment to thank all of you for joining this community.
 

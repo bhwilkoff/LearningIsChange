@@ -23,7 +23,7 @@ I do not need another machine that does everything. I do not need another comput
 
 And all it took was realizing that one of the best keyboards that Apple ever made was the one that they attached to an iPad 1 dock:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/06/iPad_dock.jpg?resize=350%2C335)
+![](/wp-content/uploads/2019/06/iPad_dock.jpg)
 
 I bought this dock/keyboard on ebay for $10 (with free shipping!) and it was possibly the best money I have spent in quite a while.
 

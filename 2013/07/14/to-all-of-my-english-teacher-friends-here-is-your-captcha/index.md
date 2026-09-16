@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # To all of my English teacher friends, here is your captcha.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/07/photo-2.jpg?w=1225)
+![](/wp-content/uploads/2013/07/photo-2.jpg)
 
 To all of my English teacher friends, here is your captcha.
 

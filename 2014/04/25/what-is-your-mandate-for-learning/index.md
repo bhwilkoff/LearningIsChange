@@ -15,4 +15,4 @@ How do you ensure that others help you scale your work? How do you reach your ma
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.m4a)
 
-![What Is Your Mandate For Learning?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.jpg?w=150)
+![What Is Your Mandate For Learning?](/wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.jpg)

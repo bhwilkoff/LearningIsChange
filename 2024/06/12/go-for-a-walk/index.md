@@ -9,7 +9,7 @@ tags: ["Colorado", "exercise", "Reflection", "walking"]
 
 # Go for a Walk
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/img_4097.jpg?resize=1024%2C768&ssl=1) *My nightly walk.*
+![](/wp-content/uploads/2024/06/img_4097.jpg) *My nightly walk.*
 
 I have taken to walking our dog at night after the temperature dips just enough to make the evening air inviting. I started trying to listen to podcasts during my constitutional, but I found that I was just getting angry or tired, so I switched to music that I know and love.
 

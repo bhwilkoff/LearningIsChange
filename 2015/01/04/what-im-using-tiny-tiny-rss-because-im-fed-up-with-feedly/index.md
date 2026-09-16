@@ -9,7 +9,7 @@ tags: []
 
 # What I'm Using: Tiny Tiny RSS (Because I'm fed up with Feedly)
 
-![WikiStart - Tiny Tiny RSS](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/1.jpg?w=1225)
+![WikiStart - Tiny Tiny RSS](/wp-content/uploads/2015/01/1.jpg)
 
 In an effort to better own my reading and learning rituals, I have started hosting my own RSS Feed Reader. As it turns out, it is super easy to do, and I now I can organize and manipulate my feeds as much as I want without Feedly (or any other feed reader) lagging or losing my feeds.
 

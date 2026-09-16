@@ -9,7 +9,7 @@ tags: []
 
 # The space you inhabit.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/featuredImage.jpg?resize=1024%2C476&ssl=1)
+![](/wp-content/uploads/2017/07/featuredImage.jpg)
 
 I don’t make my bed. I never really have, either. Growing up, I lived in the basement or in a lofted bed. No one was looking st those spaces, so I never bothered. I don’t make my bed now because there are more important spaces to look after. Picking up the car bin from my 3 year old for the hundredth time is more pressing than the silly bit of rumpled blankets hnging off my bed. The dishes waiting in the sink are more valuable to spend time with, as my time has become extrememely scarce.
 

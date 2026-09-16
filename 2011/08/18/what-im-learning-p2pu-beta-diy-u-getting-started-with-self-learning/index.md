@@ -9,7 +9,7 @@ tags: []
 
 # What I'm Learning: P2PU (beta) | DIY U: Getting Started With Self Learning
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/08/NewImage1.png?resize=195%2C120)
+![NewImage](/wp-content/uploads/2011/08/NewImage1.png)
 
 This is going to be a fantastic course for actually becoming a life-long learner:
 

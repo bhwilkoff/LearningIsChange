@@ -9,7 +9,7 @@ tags: []
 
 # The Next Chapter
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2018/06/1.jpg?resize=948%2C298)
+![](/wp-content/uploads/2018/06/1.jpg)
 
 I’ve been looking forward to making this announcement for 2 and half months, and I’ve finally gotten approval to make it happen. After 5 interview rounds and two on-site visits, I can say these words: **I have a new job!**
 

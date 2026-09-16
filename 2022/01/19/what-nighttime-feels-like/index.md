@@ -9,7 +9,7 @@ tags: ["Night", "Reflection"]
 
 # What Nighttime Feels Like
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_0061.jpeg?resize=1024%2C652&ssl=1)
+![](/wp-content/uploads/2022/01/IMG_0061.jpeg)
 
 The night used to hold so much promise. It held the potential of my unthought thoughts and ideas unrealized. I remember getting into my first car (mid 90’s Geo Prism) and just driving around in the late night hours over the long brick road in my hometown and wondering openly at the darkness. “The Moon is a Folded Napkin,” I would say as I considered all of the metaphors for what is possible without the sun glaring down and exposing all of blatantly unrealistic ideas I had as a teenager.
 

@@ -9,7 +9,7 @@ tags: []
 
 # What I'm using: Mic Note for recording audio and syncing it to written notes on a Chromebook
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/10/2014-10-22_15-00-00.png?resize=490%2C329)
+![](/wp-content/uploads/2014/10/2014-10-22_15-00-00.png)
 
 I love how this works on a Chromebook and how there are a whole bunch of different features, like timestamping and editing the recording on the fly. I will be playing with this a bunch, as it syncs with Google drive so well.
 

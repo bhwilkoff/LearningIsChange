@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: Working in Education through the Language Lens: The Reach of your Shadow
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/02/IMG_7803.jpg?w=1225)](http://wellchat.blogspot.com/2015/02/the-reach-of-your-shadow.html?showComment=1422936639166#c5150146837894992916)
+[![](/wp-content/uploads/2015/02/IMG_7803.jpg)](http://wellchat.blogspot.com/2015/02/the-reach-of-your-shadow.html?showComment=1422936639166#c5150146837894992916)
 
 An analysis of shadows for Groundhog day:
 

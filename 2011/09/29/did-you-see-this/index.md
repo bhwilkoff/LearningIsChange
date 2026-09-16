@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Did you see this?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/09/baseballfinal-3.jpg?w=1225)
+![](/wp-content/uploads/2011/09/baseballfinal-3.jpg)
 
 Did you see this?
 

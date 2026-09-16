@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Do you think that we do more of the right or the left in DPS?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/Technology2BPurpose.jpg?w=1225)
+![](/wp-content/uploads/2013/10/Technology2BPurpose.jpg)
 
 Do you think that we do more of the right or the left in DPS?
 

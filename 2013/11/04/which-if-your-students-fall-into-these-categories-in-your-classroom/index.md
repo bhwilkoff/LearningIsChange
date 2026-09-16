@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # Which if your students fall into these categories in your classroom?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/IMG_2275.jpg?w=1225)
+![](/wp-content/uploads/2013/11/IMG_2275.jpg)
 
 Which if your students fall into these categories in your classroom?

@@ -9,7 +9,7 @@ tags: ["decorations", "Reflection", "Xmas"]
 
 # Taking down the Decorations
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/E1308278-A1AF-4C41-B065-7CD96790D2EB.jpeg?resize=768%2C1024&ssl=1)
+![](/wp-content/uploads/2022/01/E1308278-A1AF-4C41-B065-7CD96790D2EB.jpeg)
 
 I have often heard that the right time to take down holiday decorations is the first full weekend after we ring in the new year. That means that today and/or tomorrow is the exact right time for us. So, I will dutifully go down to the basement and into the crawl space. I will bring up the MANY different bins where we store the Xmas ornaments and the seemingly infinite strands of lights. And we will begin the work of putting away the past.
 

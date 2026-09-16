@@ -9,7 +9,7 @@ tags: []
 
 # Persistence
 
-![Hand above the water with a sparkler.](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/kristopher-roller-PC_lbSSxCZE-unsplash.jpg?w=700&ssl=1)
+![Hand above the water with a sparkler.](/wp-content/uploads/2022/01/kristopher-roller-PC_lbSSxCZE-unsplash.jpg)
 
 I often think about [persistence hunting](https://en.wikipedia.org/wiki/Persistence_hunting), even though I know very little about how it actually works. I think about chasing after a large animal and through sheer perseverance over a long period of time and distance, exhaust the animal and overwhelm it, capturing it for sustenance and resources. I understand it in concept, but not in practice. I have yet to persist in anything that doesn’t allow for a significant amount of coasting off of an initial effort. You see, I’m very good at initial effort, at starting things that have no hope of continuing after the moment passes.
 

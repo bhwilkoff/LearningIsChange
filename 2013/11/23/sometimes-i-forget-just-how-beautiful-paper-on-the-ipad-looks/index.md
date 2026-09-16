@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # Sometimes I forget just how beautiful Paper on the ipad looks.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/IMG_0334.png?w=1225)
+![](/wp-content/uploads/2013/11/IMG_0334.png)
 
 Sometimes I forget just how beautiful Paper on the ipad looks.

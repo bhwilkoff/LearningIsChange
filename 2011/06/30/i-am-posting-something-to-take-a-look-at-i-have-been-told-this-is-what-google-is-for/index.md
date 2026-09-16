@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # I am posting something to take a look at. I have been told this is what Google+ is for.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/Photo2Bon2B2010-11-182Bat2B16.282B25232.jpg?w=1225)
+![](/wp-content/uploads/2011/06/Photo2Bon2B2010-11-182Bat2B16.282B25232.jpg)
 
 I am posting something to take a look at. I have been told this is what Google+ is for.
 

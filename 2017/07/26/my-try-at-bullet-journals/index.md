@@ -9,7 +9,7 @@ tags: []
 
 # My Try At Bullet Journals
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/1501036945_featured.jpeg?resize=1024%2C683&ssl=1)
+![](/wp-content/uploads/2017/07/1501036945_featured.jpeg)
 
 I’ve recently been thinking a lot about my first two years of teaching and the lesson planning notebooks I used. This was the last time I used a paper-based planning method, and I didn’t realize how much I missed it until I started using the Apple Pencil consistently last year. While, clearly this is not paper-based, writing things out in my own (terrible) handwriting slows me down long enough to make sure I’m not forgetting anything.
 

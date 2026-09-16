@@ -9,7 +9,7 @@ tags: []
 
 # Back to School
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_7580.jpg?resize=768%2C1024&ssl=1)
+![](/wp-content/uploads/2022/01/IMG_7580.jpg)
 
 I have taken more pictures in the last three weeks than I typically take in 6 months. This is because my children have been home. I take more pictures of my children than I do of anything else in existence. They are the most photographed nouns in my house. And with that comes a huge amount of joy.
 

@@ -13,7 +13,7 @@ My commute is long and I’m trying to make it shorter.
 
 I’m looking for any route I can find that will shave off an additional minute. I just hooked up my bike rack (and put my Gary Fisher on it) to cut down the time between my car and my office. I am experimenting with different times to leave in the morning and afternoon.
 
-￼ ![](https://i0.wp.com/learningischange.com/wp-content/uploads/2018/07/img_2404.gif?resize=355%2C170)
+￼ ![](/wp-content/uploads/2018/07/img_2404.gif)
 
 My personal best is 27 minutes driving and 10 minutes walking in the morning, and just three minutes more in the afternoon. This may not seem like a lot, but when you are wanted home by three lovely children and wife, there is no amount of time that I can cut out that will be wasted.
 
@@ -28,4 +28,4 @@ I want to provide for our needs. I want to be with her. And not just for the mom
 So, I strive on to cut out another 30 seconds on my commute. Let me know if you have any time warping techniques.
 ￼
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2018/07/img_2405.gif?resize=310%2C181)
+![](/wp-content/uploads/2018/07/img_2405.gif)

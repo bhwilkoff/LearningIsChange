@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: The Landscape of Learning: 6 Reasons Why You Should Use 6 Laptops in Your Classroom
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/IMAG0138.jpg?w=1225)](http://www.thelandscapeoflearning.com/2012/01/6-reasons-why-you-should-use-6-laptops.html#comment-form)
+[![](/wp-content/uploads/2015/01/IMAG0138.jpg)](http://www.thelandscapeoflearning.com/2012/01/6-reasons-why-you-should-use-6-laptops.html#comment-form)
 
 This is an amazing post for how to make your few resources go further in your classroom. What a wonderful lens for learning:
 

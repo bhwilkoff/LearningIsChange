@@ -9,7 +9,7 @@ tags: []
 
 # An Extraordinary Gift
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/1501129600_featured.jpeg?resize=1024%2C768&ssl=1)
+![](/wp-content/uploads/2017/07/1501129600_featured.jpeg)
 
 I’ve been spending a lot of time thinking about the structures that support us and those that hold us back. Something that has been helping this thinking along is reading a book on Holacracy (a distributed, rather than hierarchical, structure for organizations): [http://a.co/d4TrGE0](http://a.co/d4TrGE0).
 

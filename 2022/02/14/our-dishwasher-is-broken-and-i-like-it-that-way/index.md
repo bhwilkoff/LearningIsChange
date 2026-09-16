@@ -13,7 +13,7 @@ I just finished cleaning up the last of the detritus from our Super Bowl Festivi
 
 It is a ritual I complete every morning. And more or less, my counter looks like this when I’m done:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/img_8822-scaled.jpg?resize=1225%2C919&ssl=1)
+![](/wp-content/uploads/2022/02/img_8822-scaled.jpg)
 
 You see, our dishwasher is broken. It stopped working over a year ago, and I don’t anticipate getting it fixed any time soon. It isn’t because I’m overly cheap or because I think that I can fix it myself (I’m not and I can’t). Rather, my dishwasher will remain broken because I like doing the dishes, by hand.
 

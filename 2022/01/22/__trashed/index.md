@@ -9,7 +9,7 @@ tags: ["conversation", "family"]
 
 # Car Conversations: The New Kitchen Table
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/chuttersnap-gts_Eh4g1lk-unsplash.jpg?resize=1024%2C684&ssl=1)
+![](/wp-content/uploads/2022/01/chuttersnap-gts_Eh4g1lk-unsplash.jpg)
 
 I do a lot of driving. Not because I particularly love it or because any one trip is all that important, but because I have so many point B’s in my life. Point A is our home, as it should be. I start here and branch off into a dozen mundane activities throughout the day. From picking up tampons at Target to taking my children to their numerous activities (Basketball, Gymnastics, Chess Club, Soccer, Volunteer work at the nature center, etc.), these short trips could be an annoyance or a hindrance to me getting things done. And yet, I don’t see them this way.
 

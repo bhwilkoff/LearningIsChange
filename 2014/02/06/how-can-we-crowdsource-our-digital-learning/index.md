@@ -15,4 +15,4 @@ I will be publishing the set later today, but I’m intrigued by this idea of cr
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.m4a)
 
-![How Can We Crowdsource Our Digital Learning?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.jpg?w=600)
+![How Can We Crowdsource Our Digital Learning?](/wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.jpg)

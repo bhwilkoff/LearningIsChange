@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff", "throughglass"]
 
 # #throughglass
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/07/20140724_185055_003.mp4.gif?w=1225)
+![](/wp-content/uploads/2014/07/20140724_185055_003.mp4.gif)
 
 #throughglass

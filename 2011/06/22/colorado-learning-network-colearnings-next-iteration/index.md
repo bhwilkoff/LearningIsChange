@@ -9,7 +9,7 @@ tags: []
 
 # Colorado Learning Network: CoLearning's next iteration?
 
-![NewImage](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/NewImage3.png?resize=600%2C469)
+![NewImage](/wp-content/uploads/2011/06/NewImage3.png)
 
 [Colorado Learning Network | Home](http://c21l.org/community/): “The CoLearning Network (CLN) will provide a community for collaborative learning and work. The network will feature: • Collective work space for projects • Support for work and learning not necessarily available within members’ own school districts • A calendar of network learning events, including monthly conversations
 

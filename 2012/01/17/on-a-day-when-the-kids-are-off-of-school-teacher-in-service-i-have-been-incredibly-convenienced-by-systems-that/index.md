@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # On a day when the kids are off of school (teacher in service), I have been incredibly convenienced by systems that…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/01/122B-2B1.jpeg?w=1225)
+![](/wp-content/uploads/2012/01/122B-2B1.jpeg)
 
 On a day when the kids are off of school (teacher in service), I have been incredibly convenienced by systems that were built for me.
 

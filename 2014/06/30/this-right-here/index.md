@@ -9,7 +9,7 @@ tags: ["googleedu", "iste2014"]
 
 # This. Right. Here.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/Screen2BShot2B2014-06-292Bat2B4.56.092BAM.png?w=1225)
+![](/wp-content/uploads/2014/06/Screen2BShot2B2014-06-292Bat2B4.56.092BAM.png)
 
 This. Right. Here.
 

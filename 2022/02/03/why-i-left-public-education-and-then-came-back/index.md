@@ -9,7 +9,7 @@ tags: ["course hero", "edmodo", "public education", "startup", "values"]
 
 # Why I left Public Education (and then came back).
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/levi-meir-clancy-HGYxst7kHVY-unsplash.jpg?resize=1024%2C991&ssl=1)
+![](/wp-content/uploads/2022/02/levi-meir-clancy-HGYxst7kHVY-unsplash.jpg)
 
 In November of 2010, I became the first ever Online Community Manager for [Edmodo](Https://Edmodo.com). I was the 13th employee at a startup that was barely two years old. It was my first remote position, and also my first role outside of public education. This is how I framed it to those I left behind in the Douglas County School District:
 

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "ChromeOS"]
 
 # I really like how useful this quick reference is for chromebooks. Could be good to use in schools.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/walkthrough.png?w=1225)
+![](/wp-content/uploads/2014/02/walkthrough.png)
 
 I really like how useful this quick reference is for chromebooks. Could be good to use in schools.
 

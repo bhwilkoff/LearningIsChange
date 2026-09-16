@@ -48,8 +48,23 @@ export function describe(post, max = 160) {
   if (text.length <= max) return text;
   return text.slice(0, max - 3).replace(/\s+\S*$/, '') + '…';
 }
+// Decision 014 / C-3: images proxied through the Jetpack CDN
+// (i0.wp.com/learningischange.com/wp-content/uploads/…?resize=…) are
+// re-pointed at the self-hosted file when it exists. Render-time only;
+// the JSON content is untouched. Third-party images stay on the CDN.
+const IMG_EXISTS = new Map();
+function selfHostedPath(encoded) {
+  let rel = encoded;
+  try { rel = decodeURIComponent(encoded); } catch { /* keep as-is */ }
+  if (!IMG_EXISTS.has(rel)) IMG_EXISTS.set(rel, fs.existsSync(path.join(REPO_ROOT, rel)) || fs.existsSync(path.join(REPO_ROOT, encoded)));
+  return IMG_EXISTS.get(rel) ? '/' + encoded : null;
+}
+export function selfHostImages(html) {
+  return String(html || '').replace(/https?:\/\/i[0-3]\.wp\.com\/learningischange\.com\/(wp-content\/uploads\/[^"'\s?&)]+)(\?[^"'\s)]*)?/g,
+    (m, rel) => selfHostedPath(rel) || m);
+}
 export function firstImage(html) {
-  const m = /<img[^>]+src=["']([^"']+)["']/i.exec(html || '');
+  const m = /<img[^>]+src=["']([^"']+)["']/i.exec(selfHostImages(html));
   if (!m) return '';
   return m[1].startsWith('/') ? SITE + m[1] : m[1];
 }

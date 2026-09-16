@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Sharing with a wider audience.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/132B-2B1-3.jpeg?w=1225)
+![](/wp-content/uploads/2013/10/132B-2B1-3.jpeg)
 
 Sharing with a wider audience.
 

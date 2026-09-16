@@ -9,7 +9,7 @@ tags: []
 
 # A Hobby Computer
 
-![emile-perron-xrVDYZRGdw4-unsplash.jpg](https://i0.wp.com/learningischange.com/wp-content/uploads/2019/12/emile-perron-xrVDYZRGdw4-unsplash.jpg?resize=1225%2C689)
+![emile-perron-xrVDYZRGdw4-unsplash.jpg](/wp-content/uploads/2019/12/emile-perron-xrVDYZRGdw4-unsplash.jpg)
 
 I have always been given a work computer. In every single role, since I began teaching in 2004. This is what they have been since I (or rather, my Apple ID) started keeping track:
 

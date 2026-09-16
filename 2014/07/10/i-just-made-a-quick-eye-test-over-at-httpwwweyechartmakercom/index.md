@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "dpsk12"]
 
 # I just made a quick eye test over at http://www.eyechartmaker.com
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/07/I2BTrust2BTeachers.png?w=1225)
+![](/wp-content/uploads/2014/07/I2BTrust2BTeachers.png)
 
 I just made a quick eye test over at [http://www.eyechartmaker.com](http://www.eyechartmaker.com/)
 

@@ -19,4 +19,4 @@ We can wonder again. Not about every new thing, but about every human thing. We 
 
 This is something I made. It is now a part of me. Let it become a part of you too.
 
-[![20121123-091941.jpg](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/11/20121123-0919411.jpg?w=1225)](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/11/20121123-0919411.jpg)
+[![20121123-091941.jpg](/wp-content/uploads/2012/11/20121123-0919411.jpg)](/wp-content/uploads/2012/11/20121123-0919411.jpg)

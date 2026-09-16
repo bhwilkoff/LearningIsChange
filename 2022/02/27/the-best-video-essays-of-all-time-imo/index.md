@@ -9,7 +9,7 @@ tags: ["Commentary", "Critique", "Modern Internet", "Pandemic", "video", "Video 
 
 # The Best Video Essays of All Time (IMO)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/03/marija-zaric-X1LEno0QBQY-unsplash.jpg?resize=1024%2C576&ssl=1)
+![](/wp-content/uploads/2022/03/marija-zaric-X1LEno0QBQY-unsplash.jpg)
 
 The video essay is not a brand new art form and it wasn’t created from scratch by YouTube’s algorithmic interest in long-form video that increases “watch time.”[People have been constructing commentaries on popular culture and on “important works of art”](https://blackbird.vcu.edu/v9n1/gallery/ve-bresland_j/ve-origin_page.shtml) since there was culture popular enough to be commented upon by others. And yet, the video essay as it exists today has grown into a community of thinkers and writers who have transformed the consumption of media into an urgent and participatory act.
 

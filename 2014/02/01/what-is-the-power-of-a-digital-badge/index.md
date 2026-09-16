@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # What is the power of a digital badge?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/IMG_2917.jpg?w=1225)
+![](/wp-content/uploads/2014/02/IMG_2917.jpg)
 
 What is the power of a digital badge?

@@ -15,4 +15,4 @@ How are you creating educational bat signals throughout your learning environmen
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.m4a)
 
-![What Does Your Educational Bat Signal Consist Of?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.jpg?w=600)
+![What Does Your Educational Bat Signal Consist Of?](/wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.jpg)

@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff", "SaveBigBird"]
 
 # My take on #SaveBigBird
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/10/110216_big_bird_ap_605.png?w=1225)
+![](/wp-content/uploads/2012/10/110216_big_bird_ap_605.png)
 
 My take on #SaveBigBird

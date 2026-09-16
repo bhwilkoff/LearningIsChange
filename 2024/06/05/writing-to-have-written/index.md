@@ -9,7 +9,7 @@ tags: []
 
 # Writing to Have Written
 
-![rewrite edit text on a typewriter](https://i0.wp.com/learningischange.com/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg?resize=1225%2C689&ssl=1) *Photo by Suzy Hazelwood on Pexels.com*
+![rewrite edit text on a typewriter](/wp-content/uploads/2024/06/pexels-photo-3631711.jpeg) *Photo by Suzy Hazelwood on Pexels.com*
 
 I deeply believe in the idea that no one actually wants to write a book.
 

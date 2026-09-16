@@ -9,7 +9,7 @@ tags: []
 
 # Waiting for Universal Control: The Future of Work with Screens
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_9859.jpg?resize=1024%2C768&ssl=1)
+![](/wp-content/uploads/2022/01/IMG_9859.jpg)
 
 224 days ago, during their annual WWDC keynote, Apple announced a feature that almost no one will use. It is called Universal Control, and it will allow you to share the use of the same mouse and keyboard across your Mac and iPad (at the same time). Beyond that, it will also let you [“push through” the edge of the display on your Mac and have the cursor show up on the iPad, as if by magic](https://youtu.be/0TD96VTf0Xs?t=4923). The reason why no one will use it is two-fold. First, most folks don’t use an iPad alongside a Mac (let alone have access to modern enough versions of both that it is possible). For most purposes, you don’t need an iPad when you are working on a Mac. Second, the sharing the input across multiple devices is already a well established (and extremely niche) category of solutions. The tool, whether in software or hardware, is called a [KVM switch](https://en.wikipedia.org/wiki/KVM_switch). So, most people that want to do this, already have found a solution. I currently use [Keypad](https://apps.apple.com/us/app/keypad-bluetooth-keyboard/id1491684442?mt=12) for just this purpose.
 

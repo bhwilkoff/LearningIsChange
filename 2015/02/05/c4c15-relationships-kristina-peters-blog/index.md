@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: Relationships | Kristina Peters' Blog
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/02/img_5692.jpg?w=1225)](https://kristinapeters.wordpress.com/2015/02/04/relationships/#comment-324)
+[![](/wp-content/uploads/2015/02/img_5692.jpg)](https://kristinapeters.wordpress.com/2015/02/04/relationships/#comment-324)
 
 Relationships are powerful:
 

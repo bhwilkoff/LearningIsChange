@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # You will find many of the links to your left that will be useful throughout this session. Enjoy.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/05/3May2013063A313A24.jpg?w=1225)
+![](/wp-content/uploads/2013/05/3May2013063A313A24.jpg)
 
 You will find many of the links to your left that will be useful throughout this session. Enjoy.

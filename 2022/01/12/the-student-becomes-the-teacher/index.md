@@ -9,7 +9,7 @@ tags: []
 
 # The Student Becomes the Teacher
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_0076.jpg?resize=1024%2C768&ssl=1) *On a field trip in 2007. My former student is among these boys. They are all older than 25 now.*
+![](/wp-content/uploads/2022/01/IMG_0076.jpg) *On a field trip in 2007. My former student is among these boys. They are all older than 25 now.*
 
 Last week, a former student reached out to me via an Instagram DM. To be clear, this is a student that I taught in 2007. He is a first year teacher in New York City, and was hoping to get some advice (and to catch up too!).  It is incredible to me that after all of these years, he would reach out to me, his 8th grade Language Arts teacher. While I found it incredibly flattering, I also found it concerning that he might not have encountered any other teachers in high school that resonated with him or had as much concern for him as a human.
 

@@ -11,6 +11,6 @@ tags: ["Ben Wilkoff"]
 
 [Ben Wilkoff](https://plus.google.com/+BenWilkoff) was tagged in [Tyler Amidon](https://plus.google.com/+TylerAmidon11)‘s album.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/2523innedco142B-2B27.jpeg?w=1225)
+![](/wp-content/uploads/2014/06/2523innedco142B-2B27.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/2523innedco142B-2B5.jpeg?w=1225)
+![](/wp-content/uploads/2014/06/2523innedco142B-2B5.jpeg)

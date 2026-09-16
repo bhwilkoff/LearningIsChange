@@ -9,7 +9,7 @@ tags: ["movies", "Reflection"]
 
 # Apocalypse Soon
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/nikhil-mitra-mxvRx5d_ADU-unsplash-1.jpg?resize=1024%2C681&ssl=1)
+![](/wp-content/uploads/2022/01/nikhil-mitra-mxvRx5d_ADU-unsplash-1.jpg)
 
 I have been watching a lot of (post-) apocalypse movies and television shows. I watch them because I find them both comforting and terrifying. Comforting because I know that our world has not actually devolved into killing one another for food or shelter. And terrifying because I see the seeds of each of the world-ending moments in my life.
 

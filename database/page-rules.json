@@ -11,13 +11,27 @@
     "/about/": "/portfolio/about/",
     "/bio/": "/portfolio/about/",
     "/blog/": "/",
-    "/home/": "/"
+    "/home/": "/",
+    "/events/": "/",
+    "/events/categories/": "/",
+    "/events/locations/": "/",
+    "/events/my-bookings/": "/",
+    "/events/tags/": "/",
+    "/jing-install-tutorial/": "/",
+    "/nvu-install/": "/",
+    "/nvu-linking-tutorial/": "/",
+    "/test-for-google-talk/": "/"
   },
   "noindex": [
-    "/services/", "/services/consulting/", "/services/speaking/", "/services/contact/",
-    "/pd/", "/pd/for-business/", "/pd/for-schools/", "/pd/for-teachers/",
-    "/events/", "/events/categories/", "/events/locations/", "/events/my-bookings/", "/events/tags/",
-    "/jing-install-tutorial/", "/nvu-install/", "/nvu-linking-tutorial/", "/test-for-google-talk/",
-    "/g-community-test/", "/hr10tech-test/"
+    "/services/",
+    "/services/consulting/",
+    "/services/speaking/",
+    "/services/contact/",
+    "/pd/",
+    "/pd/for-business/",
+    "/pd/for-schools/",
+    "/pd/for-teachers/",
+    "/g-community-test/",
+    "/hr10tech-test/"
   ]
 }

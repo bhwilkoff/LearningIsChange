@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Just saw this on Boing Boing.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/IMG_2787.png?w=1225)
+![](/wp-content/uploads/2014/01/IMG_2787.png)
 
 Just saw this on Boing Boing.
 

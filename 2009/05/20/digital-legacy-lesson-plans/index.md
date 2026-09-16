@@ -11,7 +11,7 @@ tags: []
 
 Today I will be working with a group of students at Ute Meadows Elementary on the idea of creating and tending their Digital Legacy (or what some people call their a Digital Footprint or Digital Identity). Here are the lesson plans for just such an event:
 
-- [Write-on: ![img_8866_morguefile](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/05/img_8866_morguefile.jpg?resize=271%2C449)](https://i0.wp.com/learningischange.com/wp-content/uploads/2009/05/img_8866_morguefile.jpg)
+- [Write-on: ![img_8866_morguefile](/wp-content/uploads/2009/05/img_8866_morguefile.jpg)](/wp-content/uploads/2009/05/img_8866_morguefile.jpg)
 - Types of Digital Legacies:
 
 - [The Good](http://vimeo.com/2293525)

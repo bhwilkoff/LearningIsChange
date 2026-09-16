@@ -13,4 +13,4 @@ In this podcast episode I discuss whether or not it is important for us to remov
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.m4a)
 
-![Should We Remove The Struggle From Professional Learning?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.jpg?w=600)
+![Should We Remove The Struggle From Professional Learning?](/wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.jpg)

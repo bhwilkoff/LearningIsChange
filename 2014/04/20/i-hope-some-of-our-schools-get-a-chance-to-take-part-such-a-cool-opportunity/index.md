@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "ConnectedClassrooms"]
 
 # I hope some of our schools get a chance to take part. Such a cool opportunity.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/04/ConnectedClassrooms_TYCTW_G252BPost_041814.gif?w=1225)
+![](/wp-content/uploads/2014/04/ConnectedClassrooms_TYCTW_G252BPost_041814.gif)
 
 I hope some of our schools get a chance to take part. Such a cool opportunity.
 

@@ -9,7 +9,7 @@ tags: []
 
 # New ways to authenticate
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/01/20110103-105829.jpg?w=1225)](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/01/20110103-105829.jpg)
+[![](/wp-content/uploads/2011/01/20110103-105829.jpg)](/wp-content/uploads/2011/01/20110103-105829.jpg)
 
 I was at my local fitness Mecca trying out their wares on a seven day pass that I tend to take advantage of once a year. I saw this sitting on the table and I noticed that it was a new way of checking in. If you can’t tell from the picture, this is a fingerprint scanner that gives you access to your gym.
 

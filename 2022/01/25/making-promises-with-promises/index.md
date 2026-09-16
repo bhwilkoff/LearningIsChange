@@ -9,7 +9,7 @@ tags: ["music", "vinyl"]
 
 # Making promises with promises
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_1512.jpeg?resize=1024%2C589&ssl=1)
+![](/wp-content/uploads/2022/01/IMG_1512.jpeg)
 
 In the beginning of the (current) pandemic, Kara and I decided to fundamentally change our living room. We decided to put away “the play room,” an ever expanding set of toys that were shoved into a [8 x 4 Kallax](https://www.ikea.com/us/en/cat/kallax-series-27534/). This was an acknowledgement that our children were no longer playing with blocks or puzzles or [klip klops](https://service.mattel.com/us/productDetail.aspx?prodno=Y3682&siteid=27). It was also an acceptance that we were ill-equipped to actually spend a significant time in our home that wasn’t about entertaining children. Up until 2020, most of the independent “adulting” we accomplished was outside of the home. We would go for a night out, a dinner or happy hour, sans children. It didn’t require us to change our home. It didn’t challenge the status quo that our house was focused upon the important work of parenting.
 

@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # Does anyone else see this really bad looking sidebar in their new Google Calendar view (i.e., everything is really…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/Google2BCalendar.png?w=1225)
+![](/wp-content/uploads/2011/06/Google2BCalendar.png)
 
 Does anyone else see this really bad looking sidebar in their new Google Calendar view (i.e., everything is really cut off):

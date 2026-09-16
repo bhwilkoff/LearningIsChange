@@ -13,4 +13,4 @@ In this podcast I discuss the concept of a job that is public facing. In educati
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.m4a)
 
-![Is Your Position Public-Facing?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.jpg?w=300)
+![Is Your Position Public-Facing?](/wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.jpg)

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # New script from the same guy who created autocrat and formmule.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/tallyHo_icon.gif?w=1225)
+![](/wp-content/uploads/2013/11/tallyHo_icon.gif)
 
 New script from the same guy who created autocrat and formmule.
 

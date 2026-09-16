@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Andrew Stillman Have you seen this?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/CMAS_and_PARCC_Planning_School_List.jpg?w=1225)
+![](/wp-content/uploads/2013/10/CMAS_and_PARCC_Planning_School_List.jpg)
 
 Andrew Stillman Have you seen this?
 

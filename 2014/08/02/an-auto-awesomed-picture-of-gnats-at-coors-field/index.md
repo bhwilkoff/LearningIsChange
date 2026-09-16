@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # An auto awesome’d picture of gnats at Coor’s field.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/08/20140721_211335_649-EFFECTS.jpg?w=1225)
+![](/wp-content/uploads/2014/08/20140721_211335_649-EFFECTS.jpg)
 
 An auto awesome’d picture of gnats at Coor’s field.

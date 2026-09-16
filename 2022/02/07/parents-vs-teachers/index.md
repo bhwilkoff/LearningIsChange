@@ -21,17 +21,17 @@ This thread struck such a chord with me because it seems so foreign and such a d
 
 I felt so strongly, that I felt compelled to respond. Not to poke fun at the outlandishness, but rather to delve into what is really being asked for and seeing if these words can stand on their own when they are taken out of the toxic cesspool that are Facebook parent groups:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/287D9430-1B00-4B84-A380-9A0FEBE0C45C.jpeg?resize=1024%2C266&ssl=1)
+![](/wp-content/uploads/2022/02/287D9430-1B00-4B84-A380-9A0FEBE0C45C.jpeg)
 
 This is the clearest indication that many parents do not know how to navigate the publicly available curriculum of their schools. The information about which books are being taught, which textbooks are being purchased, and which teaching resources are being utilized is not a secret. In fact, the vast majority of these decisions are made at a district level and are available via open records requests. The need for cameras is entirely misplaced, given the wealth of opportunity that is afforded to parents for engaging with the transparent way that public schools have to make purchases and provide records.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/IMG_0240.jpeg?resize=1024%2C311&ssl=1)
+![](/wp-content/uploads/2022/02/IMG_0240.jpeg)
 
 This seems like an innocent enough statement, as we have come to believe in the proliferation of “body cams” for police officers as a true asset for public awareness and accountability of bad actors among them. And yet, this would require us to see students as (potential) criminals, and I find it hard to believe that parents want their students to be thought of in that way.
 
 The issue is that Cameras do not discriminate. They will pick up hate speech from everyone. They pick up the vulnerable moments of kindness from all. They will pick up the mistakes of every single fifth grader who hasn’t figured out the boundaries of acceptable behavior. They will pick up the machinations of an ill-informed teen who is bullying a classmate for their differences (politically, socioeconomically, racially). It is a statement of belief that all behavior should be policed. And the results of that are that all children will be prosecuted for their transgressions, not just the adults that you think are “doing harm.” And yes, that includes your children. Read this statement another way, “If your children have nothing to hide, they will hide nothing.” When your kids are the ones under suspicion, how much do you want cameras in the classroom?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/IMG_0241.jpeg?resize=1024%2C337&ssl=1)
+![](/wp-content/uploads/2022/02/IMG_0241.jpeg)
 
 It is obvious from this statement that this individual does not trust teachers, but what is less obvious is she also do not trust her children (or the children of the other parents in this Facebook group). If she trusted her children, she would not worry about multiple viewpoints in the classroom. She would know that her children would be able to critically evaluate “woken, leftist or progressive beliefs” and reject them as inferior ideologies. Instead, she sees her hold on her children’s minds as so tenuous that even the mention of equity in a classroom will somehow turn them away from an “america first” perspective.
 
@@ -41,7 +41,7 @@ As for the respect argument, I would love to probe into what it would take to �
 
 Or, is it rather, that she is afraid that her children will learn to think for themselves and question the things that she has taught in her home? She would certainly see that as disrespectful! And that kind of disrespect is something that she will not stand for. Her children are her own. They are not independent thinkers. They are not capable of making their own decisions. They do not deserve respect. Oh wait…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/IMG_0242-1.jpeg?resize=1024%2C356&ssl=1)
+![](/wp-content/uploads/2022/02/IMG_0242-1.jpeg)
 
 My only response to such thinking is this:
 

@@ -9,7 +9,7 @@ tags: []
 
 # 23 Times from Behind the Arc
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/IMG_8504.jpg?resize=989%2C1024&ssl=1)
+![](/wp-content/uploads/2022/01/IMG_8504.jpg)
 
 The three-point-shot has always been my favorite thing about basketball. While some folks go in for the dunk or the “sick moves” of those who dominate under the basket, I can’t get enough of those long shots that have a devastating effect on opponents because there is no way to combat a 3 pointer other than with scoring one of your own. No matter how good you are at driving down the court and dutifully putting 2 points on the scoreboard, you will still fall behind when your opponent pulls up from behind the three-point line and rattles off another 3 points.
 

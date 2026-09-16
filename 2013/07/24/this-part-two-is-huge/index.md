@@ -9,6 +9,6 @@ tags: []
 
 # This part two is huge.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/07/photo.jpg?w=1225)
+![](/wp-content/uploads/2013/07/photo.jpg)
 
 This part two is huge.

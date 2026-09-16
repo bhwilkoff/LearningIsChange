@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # The Non-Google Hangout. ;)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/IMG_3494.jpg?w=1225)
+![](/wp-content/uploads/2014/03/IMG_3494.jpg)
 
 The Non-Google Hangout. 😉

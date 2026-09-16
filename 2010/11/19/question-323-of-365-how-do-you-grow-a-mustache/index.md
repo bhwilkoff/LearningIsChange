@@ -31,7 +31,7 @@ Why? Why will you not grow? Why do you haunt my upper lip as if you alone are in
 
 For verification, here is the mustache now:
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/11/Photo-on-2010-11-18-at-16.28-2.jpg?resize=512%2C384)](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/11/Photo-on-2010-11-18-at-16.28-2.jpg)
+[![](/wp-content/uploads/2010/11/Photo-on-2010-11-18-at-16.28-2.jpg)](/wp-content/uploads/2010/11/Photo-on-2010-11-18-at-16.28-2.jpg)
 
 If you would like to take part in giving this weak attempt at facial hair some meaning, would you please [go to our Donor’s choose page](http://www.donorschoose.org/taf-gp/104641) and give some money to the deserving teachers there. Otherwise, all of this humiliation and self-doubt will be for naught.
 

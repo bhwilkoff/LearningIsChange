@@ -9,7 +9,7 @@ tags: []
 
 # A Little Help From My Friends
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2018/03/IMG_1996-300x247.jpg?resize=300%2C247)
+![](/wp-content/uploads/2018/03/IMG_1996-300x247.jpg)
 
 *In case you are just skimming this blog post:** Ben Wilkoff is looking for a new job!***
 

@@ -15,4 +15,4 @@ I also ask the question as to whether or not we should all have this trait withi
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.m4a)
 
-![Do You Have A Tenacious Verve?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.jpg?w=300)
+![Do You Have A Tenacious Verve?](/wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.jpg)

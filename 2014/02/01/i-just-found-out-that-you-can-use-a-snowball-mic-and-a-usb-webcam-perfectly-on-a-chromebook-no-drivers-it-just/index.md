@@ -9,7 +9,7 @@ tags: ["edcampDenver"]
 
 # I just found out that you can use a snowball mic and a USB webcam perfectly on a chromebook. No drivers. It just…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/IMG_2916.jpg?w=1225)
+![](/wp-content/uploads/2014/02/IMG_2916.jpg)
 
 I just found out that you can use a snowball mic and a USB webcam perfectly on a chromebook. No drivers. It just works.
 

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Zac Chase This is funny.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/08/mario333_1000.jpeg?w=1225)
+![](/wp-content/uploads/2012/08/mario333_1000.jpeg)
 
 Zac Chase This is funny.
 

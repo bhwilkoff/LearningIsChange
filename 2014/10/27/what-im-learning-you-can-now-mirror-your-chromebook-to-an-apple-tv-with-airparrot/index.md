@@ -9,7 +9,7 @@ tags: []
 
 # What I'm Learning: You can now Mirror your Chromebook to an Apple TV with AirParrot
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/10/2014-10-27_11-23-452.png?resize=319%2C331)
+![](/wp-content/uploads/2014/10/2014-10-27_11-23-452.png)
 
 While this may not be a game changer for some. For those who heavily invested in Apple TVs and are now investing a lot in Chromebooks, this is huge! While it isn’t free, I think it could be important to think about strategically purchasing licenses for classrooms.
 

@@ -34,6 +34,6 @@ Because my innovation is in creating spaces, I have created a space that is spec
 
 The second thing I have created is an entrance into this question, one that I did not give to those who did a “Prenote” video. This scale allows you to place your own innovation somewhere in the playing field in order to see what it is that you truly value and what it is that you believe is really innovative. While we may all differ on where we would put a certain innovation, I feel as though it will lower the level of entry because anyone’s work is on the chart at some point, no matter how far they reach up into the top right quadrant.
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/01/InnovationMatters1.jpg?resize=679%2C593)](https://i0.wp.com/learningischange.com/wp-content/uploads/2010/01/InnovationMatters1.jpg)
+[![](/wp-content/uploads/2010/01/InnovationMatters1.jpg)](/wp-content/uploads/2010/01/InnovationMatters1.jpg)
 
 With this space and entrance, I would like to take this conversation to its logical end. I see that being the act of sharing the stories about valuable innovations going on in schools and organizations everywhere so that we can make them matter to as many people as possible. If we can pinpoint what it is that we need to be focused on when we look toward the future, then we will have answered more than this question. We will have found a truth worth holding on to. We will have found a story worthy of telling.

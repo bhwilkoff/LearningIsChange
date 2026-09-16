@@ -9,7 +9,7 @@ tags: []
 
 # Google Swiffy: Convert Flash to HTML5 for Free with a Google Lab
 
-![Gallery  Google Swiffy](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/06/Gallery-Google-Swiffy.png?resize=600%2C421)
+![Gallery  Google Swiffy](/wp-content/uploads/2011/06/Gallery-Google-Swiffy.png)
 
 I’m kind of amazed at how well this works. I tried a couple of simple flash files I had on my hard drive and it worked with almost all of them.
 

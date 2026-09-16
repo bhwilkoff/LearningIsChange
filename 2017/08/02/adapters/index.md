@@ -9,7 +9,7 @@ tags: []
 
 # Adapters
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/1501129557_featured.jpeg?resize=768%2C767&ssl=1)
+![](/wp-content/uploads/2017/07/1501129557_featured.jpeg)
 
 I promise, this story will make sense eventually:
 

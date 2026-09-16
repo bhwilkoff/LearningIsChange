@@ -17,7 +17,7 @@ Why should we strive to master concepts or disciplines in the same way that othe
 
 And it isn’t just [the word, its definition, or its origin that I am struggling with](https://bit.ly/3Jg3Xea). When you look up all of the other words you might replace it with, you realize just how gendered and fraught the whole endeavor is:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/img_0244.jpg?resize=1225%2C1702&ssl=1)
+![](/wp-content/uploads/2022/02/img_0244.jpg)
 
 We should not seek to be “Big Daddy’s” of our learning or the “owner” of all knowledge. As educators and leaders, it is not for us to be the opposite of our “pupils.” We are on the same journey, and it isn’t triangle shaped with the “Archetypes” at the top and everyone else who is striving to climb a fictional ladder to be installed as the final “champion” of education.
 

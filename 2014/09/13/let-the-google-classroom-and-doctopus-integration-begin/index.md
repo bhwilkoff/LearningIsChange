@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Let the Google Classroom and Doctopus integration begin!
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/09/integrating-classroom.png?w=1225)
+![](/wp-content/uploads/2014/09/integrating-classroom.png)
 
 Let the Google Classroom and Doctopus integration begin!
 

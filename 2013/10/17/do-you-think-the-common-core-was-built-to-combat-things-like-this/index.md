@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "math"]
 
 # Do you think the common core was built to combat things like this?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/G6cSVes.png?w=1225)
+![](/wp-content/uploads/2013/10/G6cSVes.png)
 
 Do you think the common core was built to combat things like this?
 

@@ -9,6 +9,6 @@ tags: []
 
 # This. Right. Here. Is. Important.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/07/photo-1.jpg?w=1225)
+![](/wp-content/uploads/2013/07/photo-1.jpg)
 
 This. Right. Here. Is. Important.

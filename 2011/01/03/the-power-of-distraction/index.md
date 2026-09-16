@@ -9,7 +9,7 @@ tags: []
 
 # The power of distraction
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/01/20110102-084448.jpg?resize=654%2C654)](https://i0.wp.com/learningischange.com/wp-content/uploads/2011/01/20110102-084448.jpg)
+[![](/wp-content/uploads/2011/01/20110102-084448.jpg)](/wp-content/uploads/2011/01/20110102-084448.jpg)
 
 I have played angry birds for at least 15 hours of my life. I know
 this because the game alerted me when it happened. I have received

@@ -9,7 +9,7 @@ tags: []
 
 # One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party. Do you agree…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/Parties2Band2BOnline2BCommunities.mp4.gif?w=1225)
+![](/wp-content/uploads/2013/10/Parties2Band2BOnline2BCommunities.mp4.gif)
 
 One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party. Do you agree with this metaphor? Is this one that you have used in your community building efforts?
 

@@ -9,7 +9,7 @@ tags: ["humanity", "Putin", "russia", "Ukraine", "war", "War crimes"]
 
 # The Best Case Scenario
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/03/tina-hartung-IwLY-pLic_U-unsplash.jpg?resize=1024%2C683&ssl=1)
+![](/wp-content/uploads/2022/03/tina-hartung-IwLY-pLic_U-unsplash.jpg)
 
 I heard [multiple](https://www.npr.org/2022/03/07/1084882294/russias-military-is-now-encircling-several-ukrainian-cities) [experts](https://www.washingtonpost.com/opinions/2022/03/03/putin-has-tactical-nuclear-advantage/) this weekend proclaiming that a “tactical nuclear weapon” was a likely outcome for Putin, especially if he believes he is losing the war in Ukraine. There was [a fire at the largest nuclear power plant in Europe](https://www.theguardian.com/world/2022/mar/04/ukraine-nuclear-power-plant-fire-zaporizhzhia-russian-shelling) after Putin’s forces attacked it. More than [1.5 million people have fled the war zone](https://www.motherjones.com/politics/2022/03/refugees-fleeing-ukraine-russian-invasion/) and are now refugees in need of care and protection. These are the terrifying realities of a global war that will impact us whether we like it or not. But, wars are not merely made up of worst case scenarios and doomsday proclamations.
 

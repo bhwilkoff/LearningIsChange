@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: Who’s Afraid of the Special School? | The Diary of a Not So Ordinary Boy
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/img_1424.jpg?w=1225)
+![](/wp-content/uploads/2015/01/img_1424.jpg)
 
 My thoughts on a different part of the Edublogosphere:
 

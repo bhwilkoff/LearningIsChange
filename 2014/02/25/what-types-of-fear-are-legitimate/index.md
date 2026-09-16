@@ -17,4 +17,4 @@ What types of fear are you encountering? How are you helping others to not be af
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.m4a)
 
-![What Types Of Fear Are Legitimate?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.jpg?w=600)
+![What Types Of Fear Are Legitimate?](/wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.jpg)

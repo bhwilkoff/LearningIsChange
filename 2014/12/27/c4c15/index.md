@@ -9,7 +9,7 @@ tags: []
 
 # Launching #C4C15: Comments for Community in 2015
 
-[![grandstand-330930_1280](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/12/grandstand-330930_1280-1024x682.jpg?resize=393%2C262)](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/12/grandstand-330930_1280.jpg)
+[![grandstand-330930_1280](/wp-content/uploads/2014/12/grandstand-330930_1280-1024x682.jpg)](/wp-content/uploads/2014/12/grandstand-330930_1280.jpg)
 
 Five years ago, I decided to write [one blog post every day](/365-questions-that-google-cant-answer/). 365 posts later, I knew myself and my world infinitely better. The project led to a great many changes in my life: [a new job](/blog/2010/10/30/question-302-of-365-how-much-notice-should-you-give/) and[a new startup](/blog/2010/03/05/question-64-of-365-how-can-we-be-for-ourselves-and-for-an-entity-at-the-same-time/) being the biggest. There is so much you can learn by simply making reflective practice a part of your daily life. The one thing that didn’t happen, though, is that I didn’t connect to very many new voices. There were folks who commented on my blog posts, but most of them had been commenting here for years. There were no brand new connections or communities created.
 

@@ -23,7 +23,7 @@ One such occurrence was last week, when it took **5 whole days** for the snow on
 
 It was during this time that I received a letter, presumably from one of my neighbors:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/dear-neighbor.jpg?resize=1225%2C760&ssl=1)
+![](/wp-content/uploads/2022/02/dear-neighbor.jpg)
 
 This letter certainly had the desired effect. I dutifully got out my shovel (a yard shovel, because I don’t own a snow shovel, as I am really committed to the bit about the magical sun) and got the icy-snow off of the sidewalk that measures less than two feet across. It took less than 10 minutes.
 
@@ -49,10 +49,10 @@ I’ll let you judge for yourself.
 
 This is what my driveway looked like this morning at 8:29:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/img_8789-scaled.jpg?resize=1225%2C1633&ssl=1)
+![](/wp-content/uploads/2022/02/img_8789-scaled.jpg)
 
 This is what it looked like at 2:50 this afternoon:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/img_8799-1-scaled.jpg?resize=1225%2C1633&ssl=1)
+![](/wp-content/uploads/2022/02/img_8799-1-scaled.jpg)
 
 Why would you want to interrupt this magic?

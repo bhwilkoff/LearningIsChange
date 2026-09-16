@@ -9,7 +9,7 @@ tags: []
 
 # #C4C15: It Can’t Be About Me ALL of the Time – Out of the Box
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/01/img_3515.jpg?w=1225)
+![](/wp-content/uploads/2015/01/img_3515.jpg)
 
 I love this vignette of a student and teacher making meaning together:
 

@@ -17,4 +17,4 @@ Green Arrows = Yes
 
 Blue Arrows = Next Step
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/05/2012-05-02.jpeg?w=1225)
+![](/wp-content/uploads/2012/05/2012-05-02.jpeg)

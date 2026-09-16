@@ -15,12 +15,12 @@ Originally shared by David Fry
 
 Added some more pictures
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/06/2013-03-12Powercordsinplace..jpg?w=1225)
+![](/wp-content/uploads/2013/06/2013-03-12Powercordsinplace..jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/06/2013-03-14Gettingreadytoroutecordsthroughaccesspanel..jpg?w=1225)
+![](/wp-content/uploads/2013/06/2013-03-14Gettingreadytoroutecordsthroughaccesspanel..jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/06/20130315Frontviewfromabove..jpg?w=1225)
+![](/wp-content/uploads/2013/06/20130315Frontviewfromabove..jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/06/20130315SideView.jpg?w=1225)
+![](/wp-content/uploads/2013/06/20130315SideView.jpg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/06/20130315Frontviewfrombelow..jpg?w=1225)
+![](/wp-content/uploads/2013/06/20130315Frontviewfrombelow..jpg)

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Alright, this is the last version. I promise.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/Frank2BNyan.png?w=1225)
+![](/wp-content/uploads/2014/01/Frank2BNyan.png)
 
 Alright, this is the last version. I promise.
 

@@ -9,7 +9,7 @@ tags: ["Reflection", "Regency", "Victoian"]
 
 # Victorian and Regency Viewing
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/abigail-keenan-l2JpNQF_qDc-unsplash.jpg?resize=1024%2C683&ssl=1)
+![](/wp-content/uploads/2022/01/abigail-keenan-l2JpNQF_qDc-unsplash.jpg)
 
 The Victorian era (and the Regency era that preceded) is fascinating to me. It was a time of great change, and of great reckoning for entrenched ideas of class and gender. It was a time in which marriage and the unions of property and status were major concerns (at least for wealthy white people who were powerful enough to have many popular stories written about them). It also established many of our notions of romantic love and feminine virtue. It is the original era that we rail against when we speak about progress, but also the one we turn to for the best hint about how things can change quickly (for the better).
 

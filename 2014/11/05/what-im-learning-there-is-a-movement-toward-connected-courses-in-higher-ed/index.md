@@ -9,7 +9,7 @@ tags: []
 
 # What I'm Learning: There is a movement toward "Connected Courses" in Higher Ed
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/11/2014-11-05_05-42-17.png?resize=487%2C228)
+![](/wp-content/uploads/2014/11/2014-11-05_05-42-17.png)
 
 I believe deeply in the power of connected learning, and I am so grateful to those who are pursuing it in all forms of education. I really like the structure of “Connected Courses” and [the online community that has sprung up around it](http://forum.connectedcourses.org/). Do you think we need something similar for K-12?
 

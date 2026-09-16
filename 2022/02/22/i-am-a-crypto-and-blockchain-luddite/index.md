@@ -9,7 +9,7 @@ tags: ["blockchain", "crypto", "cryptocoins", "nft"]
 
 # I am a Crypto and Blockchain Luddite.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/02/devin-avery-Ds7O9Y1_80-unsplash-1.jpg?resize=1024%2C683&ssl=1)
+![](/wp-content/uploads/2022/02/devin-avery-Ds7O9Y1_80-unsplash-1.jpg)
 
 In the 18th and 19th centuries, the industrialization of textile equipment allowed for cheaper production of clothing and disempowerment of skilled craftspeople across the industry. In the face of losing their livelihood to automated textile production technologies, the Luddites fought back. They fought for better working conditions in factories and they fought for a return to a pre-industrial era. They are known for [“Machine-breaking”](https://en.wikipedia.org/wiki/Destruction_of_Stocking_Frames,_etc._Act_1812) which was outlawed in the early 19th century as a way to ensure the Luddite movement would have severe consequences ([death, in many cases](https://www.smithsonianmag.com/history/what-the-luddites-really-fought-against-264412/)).
 

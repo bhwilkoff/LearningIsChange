@@ -9,7 +9,7 @@ tags: ["college", "guitar", "High school", "music"]
 
 # The Music I Used to Make – Personal Digital Graveyard #2
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/5682C05A-3C23-47AE-8E92-517935B985F0.jpeg?resize=1024%2C768&ssl=1)
+![](/wp-content/uploads/2022/01/5682C05A-3C23-47AE-8E92-517935B985F0.jpeg)
 
 I used a PC laptop in college. It initially ran [Windows Millennium Edition](https://en.wikipedia.org/wiki/Windows_Me) (considered by many to be the worst Windows release), but was later upgraded to Windows XP. I typed academic papers on this computer. I read [Karl’s Corner](https://www.weezerpedia.com/wiki/Karl%27s_Corner) (Weezer news) on it too. And even though I am not proud of it now, I downloaded (many) MP3s and Movies on [Gnutella](https://en.wikipedia.org/wiki/Gnutella). Oh, and I made my own music with a (pirated) copy of [Cool Edit Pro](https://www.soundonsound.com/reviews/syntrillium-cool-edit-pro-v2).
 

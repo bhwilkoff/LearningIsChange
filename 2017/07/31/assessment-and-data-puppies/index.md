@@ -15,4 +15,4 @@ We were asked to choose a metaphor for how we see might see assessment. The choi
 
 I share this with you all to encourage you to think in different ways about pillars of instruction (i.e., assessment, content, etc.). What metaphor is most apt for re-considering long standing issues or concepts in Education?
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2017/07/image_2_full.jpg?resize=905%2C1024&ssl=1)
+![](/wp-content/uploads/2017/07/image_2_full.jpg)

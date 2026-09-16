@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # I found a great app for stylized writing that may be useful for creating content for a community.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/132B-2B1-3.jpeg?w=1225)
+![](/wp-content/uploads/2013/10/132B-2B1-3.jpeg)
 
 I found a great app for stylized writing that may be useful for creating content for a community.
 

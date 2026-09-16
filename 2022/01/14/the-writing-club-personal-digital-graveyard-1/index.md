@@ -9,7 +9,7 @@ tags: ["writing"]
 
 # The Writing Club – Personal Digital Graveyard #1
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/01/joanna-kosinska-1_CMoFsPfso-unsplash.jpg?resize=1024%2C684&ssl=1)
+![](/wp-content/uploads/2022/01/joanna-kosinska-1_CMoFsPfso-unsplash.jpg)
 
 Every other Wednesday for two years, I called together a group of disaffected youth to write and talk and think together. We would move desks into a little huddle, allowing the kid who could solve Rubix cubes with one hand to perform when she wasn’t writing. We would share poems and short stories and art of all different kinds. And sometimes the kids would just talk. They mostly didn’t come because they wanted to write new words or to be inspired by a teacher who was clearly trying to get a new generation of punk kids to like him. They would come because they had something to say about their existence, something that many other kids and adults in their lives were not interested in (or perhaps capable of) hearing.
 

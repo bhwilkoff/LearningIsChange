@@ -13,7 +13,7 @@ I have been working on two ideas off and on for the past eight months and I thou
 
 First, here is my best thinking on what constitutes a personalized learning environment:
 
-[![easelly_visual (1)](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/easelly_visual-1-795x1024.jpg?resize=608%2C783)](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/easelly_visual-1.jpg)
+[![easelly_visual (1)](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/10/easelly_visual-1-795x1024.jpg?resize=608%2C783)](/wp-content/uploads/2013/10/easelly_visual-1.jpg)
 
 Essentially, I believe the learning environment we are all striving for is one in which the content and expertise are matched to learner needs within a choice-driven and data-supported adaptive learning path. The environment itself is based upon the intentional choices of the teacher and learner for when instructional and collaborative uses of people, online and physical uses of space, and synchronous and asynchronous uses of time are best suited for the learning experience. So, the activity we must pursue is in making our strategic choices within frame for each student in our care. The question we must ask ourselves is what is our “ands”, “ors”, and “withs” in this diagram.
 

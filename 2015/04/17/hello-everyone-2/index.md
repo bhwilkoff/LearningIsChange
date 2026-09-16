@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Hello Everyone!
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/04/Movie2Bon2B4-17-152Bat2B12.052BPM2B25232.mov.gif?w=1225)
+![](/wp-content/uploads/2015/04/Movie2Bon2B4-17-152Bat2B12.052BPM2B25232.mov.gif)
 
 Hello Everyone!
 

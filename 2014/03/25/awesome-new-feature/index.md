@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Awesome new feature!
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/Screen2BShot2B2014-03-252Bat2B12.03.15.png?w=1225)
+![](/wp-content/uploads/2014/03/Screen2BShot2B2014-03-252Bat2B12.03.15.png)
 
 Awesome new feature!
 

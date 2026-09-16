@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # I think this opportunity looks awesome!
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/04/ScratchDayCCSD2014.png?w=1225)
+![](/wp-content/uploads/2014/04/ScratchDayCCSD2014.png)
 
 I think this opportunity looks awesome!
 

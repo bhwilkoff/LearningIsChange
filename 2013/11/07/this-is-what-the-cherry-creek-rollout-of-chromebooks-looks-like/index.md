@@ -15,22 +15,22 @@ Originally shared by Jay Vean-CCSD
 
 The deployment of over 18,000 Chromebooks to Cherry Creek Schools has begun. A TON of work that has us very excited.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B1-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B1-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B2-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B2-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B3-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B3-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B4-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B4-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B5-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B5-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B6-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B6-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B7-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B7-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B8-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B8-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B9-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B9-1.jpeg)
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B10-1.jpeg?w=1225)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B10-1.jpeg)

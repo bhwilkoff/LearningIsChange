@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # I thought this infographic of Google Apps adoption in education makes a pretty compelling case for why these tools…
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/IMG_2771.jpg?w=1225)
+![](/wp-content/uploads/2014/01/IMG_2771.jpg)
 
 I thought this infographic of Google Apps adoption in education makes a pretty compelling case for why these tools make up a large part of the modern teacher/classroom toolkit.
 

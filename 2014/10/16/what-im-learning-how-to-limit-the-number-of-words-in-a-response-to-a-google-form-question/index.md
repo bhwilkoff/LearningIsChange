@@ -17,4 +17,4 @@ This regular expression will limit the response to 10 words. You can change the 
 
 This is what it looks like in a question:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/10/2015_InnEdCo_Call_for_Presentations_-_Google_Forms.jpg?resize=596%2C280)
+![](/wp-content/uploads/2014/10/2015_InnEdCo_Call_for_Presentations_-_Google_Forms.jpg)

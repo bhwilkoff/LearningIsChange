@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # My google photos is making some strange videos.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2015/06/152B-2B1.gif?w=1225)
+![](/wp-content/uploads/2015/06/152B-2B1.gif)
 
 My google photos is making some strange videos.

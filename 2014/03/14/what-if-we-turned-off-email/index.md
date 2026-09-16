@@ -15,4 +15,4 @@ What do you think? Would you turn off your email like this?
 
 [http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.m4a](http://media.blubrry.com/learningischange/learningischange.com/wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.m4a)
 
-![What If We Turned Off Email?](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.jpg?w=600)
+![What If We Turned Off Email?](/wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.jpg)

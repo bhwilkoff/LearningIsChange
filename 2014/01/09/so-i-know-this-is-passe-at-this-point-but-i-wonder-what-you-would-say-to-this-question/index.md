@@ -9,6 +9,6 @@ tags: []
 
 # So, I know this is passé at this point, but I wonder what you would say to this question.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/IMG_2777.jpg?w=1225)
+![](/wp-content/uploads/2014/01/IMG_2777.jpg)
 
 So, I know this is passé at this point, but I wonder what you would say to this question.

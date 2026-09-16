@@ -9,7 +9,7 @@ tags: []
 
 # What I'm Using: "Slides Carnival" for Gorgeous Presentations using Google Slides
 
-[![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/12/xnathaniel-700x525.png.pagespeed.ic_.krgqqkBb_y.png?w=1225)](http://www.slidescarnival.com/)
+[![](/wp-content/uploads/2014/12/xnathaniel-700x525.png.pagespeed.ic_.krgqqkBb_y.png)](http://www.slidescarnival.com/)
 
 I find myself feeling EXTREMELY underwhelmed regarding the templates that are available in Google Presentations. This site changes all that. I can’t wait to see some of these things in presentations around the web.
 

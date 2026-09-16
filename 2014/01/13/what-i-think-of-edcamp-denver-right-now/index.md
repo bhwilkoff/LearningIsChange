@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # What I think of EdCamp Denver right now.
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/01/RANDOM2BFACT2B252812529.png?w=1225)
+![](/wp-content/uploads/2014/01/RANDOM2BFACT2B252812529.png)
 
 What I think of EdCamp Denver right now.

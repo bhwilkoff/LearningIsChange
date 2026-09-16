@@ -9,7 +9,7 @@ tags: []
 
 # My Change is Your Change
 
-[![LiC](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/09/LiC-1024x1024.jpg?resize=261%2C261)](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/09/LiC.jpg)I am not so very good at being private with change.
+[![LiC](/wp-content/uploads/2012/09/LiC-1024x1024.jpg)](/wp-content/uploads/2012/09/LiC.jpg)I am not so very good at being private with change.
 
 In fact, I am much more likely to share than to simply observe.
 

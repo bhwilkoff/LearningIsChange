@@ -20,7 +20,7 @@ import path from 'node:path';
 import {
   REPO_ROOT, SITE, DEFAULT_IMAGE, cleanUrl, escapeHtml, escapeAttr, describe, dates, signalTerms,
   wordCount, readingMinutes, firstImage, loadAllPosts, loadTombstones, loadTaxonomies, neighbors, related,
-  nav, rail, footer, fill, jsonLdPost, markdownTwin, headCommon,
+  nav, rail, footer, fill, jsonLdPost, markdownTwin, headCommon, selfHostImages,
 } from './lib/shell.js';
 
 const args = process.argv.slice(2);
@@ -55,7 +55,7 @@ function renderComments(post) {
   const item = (c) => {
     const who = c.author_url ? `<a href="${escapeAttr(c.author_url)}" rel="ugc nofollow">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
     const kids = byParent.get(c.id) || [];
-    return `<li class="comment" id="comment-${escapeAttr(c.id)}"><div class="comment-head">${c.avatar ? `<img class="comment-avatar" src="${escapeAttr(c.avatar)}" alt="" width="40" height="40" loading="lazy">` : ''}<span class="comment-author">${who}</span><a class="comment-date" href="#comment-${escapeAttr(c.id)}"><time datetime="${escapeAttr(c.date)}">${fmt(c.date)}</time></a></div><div class="comment-body">${c.html}</div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
+    return `<li class="comment" id="comment-${escapeAttr(c.id)}"><div class="comment-head">${c.avatar ? `<img class="comment-avatar" src="${escapeAttr(c.avatar)}" alt="" width="40" height="40" loading="lazy">` : ''}<span class="comment-author">${who}</span><a class="comment-date" href="#comment-${escapeAttr(c.id)}"><time datetime="${escapeAttr(c.date)}">${fmt(c.date)}</time></a></div><div class="comment-body">${selfHostImages(c.html)}</div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
   };
   const roots = byParent.get(null) || [];
   return `<section class="comments" id="comments"><h2>${list.length} ${list.length === 1 ? 'comment' : 'comments'} <small>archived from the original blog; comments are closed</small></h2><ol class="comment-list">${roots.map(item).join('')}</ol></section>`;
@@ -93,8 +93,8 @@ function renderPost(post, index) {
     nav: NAV, rail: RAIL, footer: FOOTER, head_common: headCommon(),
   };
   // content last: a body that happens to contain "{{...}}" must never be expanded
-  const html = fill(TEMPLATE, values).split('{{content}}').join(post.content || '');
-  return { html, md: NO_MD ? null : markdownTwin(post, absUrl) };
+  const html = fill(TEMPLATE, values).split('{{content}}').join(selfHostImages(post.content));
+  return { html, md: NO_MD ? null : markdownTwin({ ...post, content: selfHostImages(post.content) }, absUrl) };
 }
 
 function outPaths(url) {

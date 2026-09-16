@@ -11,7 +11,7 @@ tags: []
 
 Alright, this was way easier than I thought it was going to be. You do have to copy and paste a couple of commands into your Terminal and turn on Developer mode in your Chrome extensions, but that is really all that there is to it. I’m just writing this out in case you are looking to do this and play around, but here is what Angry Birds Star Wars looks like on my Mac:
 
-![](https://i0.wp.com/learningischange.com/wp-content/uploads/2014/09/Jessica_Raleigh_and_Zac_Chase.jpg?resize=504%2C318)
+![](/wp-content/uploads/2014/09/Jessica_Raleigh_and_Zac_Chase.jpg)
 
 - Install Homebrew (follow the first instruction on this page… that’s it.): [Homebrew — The missing package manager for OS X](http://brew.sh/)
 
