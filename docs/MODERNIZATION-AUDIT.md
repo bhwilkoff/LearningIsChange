@@ -728,6 +728,9 @@ appended here as ticks complete.
   nested). Templates byte-identical when no cross-post exists.
   **v1 scope of Decision 015 is complete except the GitHub-App sign-in
   hand-off (Cloudflare) and A5 (retiring the legacy tools).**
+- **2026-09-16 · A1.6 progress** — GitHub App **installed** on
+  `bhwilkoff/LearningIsChange` only (installation 162330000). Client ID
+  recorded in `CONFIG.auth`; sign-in stays disabled until `worker` is set.
 - **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
   secrets, fill `CONFIG.auth`, test sign-in end to end. Then A5: retire the legacy
