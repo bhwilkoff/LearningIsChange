@@ -245,6 +245,18 @@ items get done in a later tick and moved to *Done*.
   posts and relative on 12 (the ones written by `/new/`). Normalize
   to relative in a maintenance pass? (Renderers must tolerate both
   until then; `generate-sitemap.js` already does.)
+- C-4 **Mojibake in 33 posts** (`â€™` for `’`, etc.) — present in the JSON
+  `content` and in the HTML since the original export (double-encoded
+  UTF-8). Mechanically reversible (`latin-1` → `utf-8` re-decode of the
+  affected runs). It is a content edit, so: approve the repair?
+- C-5 Newer shards (2025–2026, written by `/new/`) store `categories`
+  and `tags` as *stringified Python lists* (`"['Typewriter']"`) instead
+  of arrays of `{name, slug, url}`. Renderers tolerate it for now;
+  normalize in a maintenance pass?
+- C-6 `taxonomies.json` display names were slugified on export
+  (`C4c15`, `Im Learning`, `Askbenw`, `Lifewidelearning16`); the old
+  menu had the real names (`#C4C15`, `What I'm Learning`, `#AskBenW`).
+  Restore display names from the menu fragment where they exist?
 - C-1 Comments are gone from the whole archive. Attempt Wayback
   Machine recovery for high-traffic posts? (Effort: high; value:
   historical.)
@@ -291,7 +303,18 @@ resolves them on its own.)*
   dates, author/publisher Person, first image, keywords). Regenerated
   all 3,651 posts; permalink check OK; 0 posts missing JSON-LD, 0 with
   the old `og:url`, JSON-LD parses on all 3,651.
-  **Next**: static mockups `docs/mockups/post.html` and `home.html`
-  on the refreshed portfolio system (D-1) with right rail (D-2), unified
-  nav (B-1), tagline kept / header image dropped (B-2/B-3), for Ben to
-  approve before P1 regenerates site-wide.
+  **Next**: see tick 4.
+- **2026-09-16 · tick 4** — Mockups for Ben, rendered from real JSON
+  content: `docs/mockups/post.html` ("On Not Reading the News"),
+  `docs/mockups/home.html`, and `docs/mockups/site.css` (the refresh
+  layer over `portfolio/css/style.css`: warm-paper light tokens, full
+  dark mode, unified nav, content + sticky right rail, `.prose` styles
+  for WordPress-era bodies, post lists with thumbnails, series grid,
+  "on this day"). Verified desktop + 390px. Found and queued C-4
+  (mojibake, 33 posts), C-5 (stringified taxonomy lists in new shards),
+  C-6 (slugified taxonomy display names).
+  **Next**: on Ben's approval of the mockups → P1: promote
+  `site.css` to `/css/site.css`, write the real `templates/post.html`
+  on the new shell (fragments become nav/rail/footer partials), extend
+  `regenerate-posts.js` (related posts, prev/next, reading time,
+  Markdown twin), regenerate, permalink check, commit.
