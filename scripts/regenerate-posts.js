@@ -20,13 +20,14 @@ import path from 'node:path';
 import {
   REPO_ROOT, SITE, DEFAULT_IMAGE, cleanUrl, escapeHtml, escapeAttr, describe, dates, signalTerms,
   wordCount, readingMinutes, firstImage, loadAllPosts, loadTombstones, loadTaxonomies, neighbors, related,
-  nav, rail, footer, fill, jsonLdPost, markdownTwin, headCommon, selfHostImages, renderPostPage,
+  nav, rail, footer, fill, jsonLdPost, markdownTwin, headCommon, selfHostImages, renderPostPage, renderBlueskyThread,
 } from './lib/shell.js';
 
 const args = process.argv.slice(2);
 const APPLY = args.includes('--apply');
 const DIFF = args.includes('--diff');
 const NO_MD = args.includes('--no-md');
+const NO_BSKY = args.includes('--no-bluesky');
 const ONLY_YEAR = (args.find((a) => a.startsWith('--year=')) || '').slice(7) || null;
 const ONLY_URL = (args.find((a) => a.startsWith('--url=')) || '').slice(6) || null;
 
@@ -37,9 +38,23 @@ const NAV = nav({ active: '' });
 const RAIL = rail(ALL, TAX);
 const FOOTER = footer();
 
+// Bluesky reply threads for cross-posted posts, fetched once per run (public API, no auth)
+const THREADS = new Map();
+async function prefetchBluesky() {
+  const posts = ALL.filter((p) => p.bluesky?.uri && (!ONLY_YEAR || dates(p).year === ONLY_YEAR) && (!ONLY_URL || p.url === cleanUrl(ONLY_URL)));
+  for (const p of posts) {
+    try {
+      const res = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodeURIComponent(p.bluesky.uri)}&depth=6&parentHeight=0`);
+      if (res.ok) THREADS.set(p.url, (await res.json()).thread);
+    } catch { /* offline: render without replies */ }
+  }
+  if (posts.length) console.log(`bluesky: fetched ${THREADS.size}/${posts.length} thread(s)`);
+}
+
 function renderPost(post, index) {
   const { prev, next } = neighbors(ALL, index);
-  const html = renderPostPage(TEMPLATE, post, { prev, next, related: related(ALL, index, 4), shell: { nav: NAV, rail: RAIL, footer: FOOTER, head_common: headCommon() } });
+  const bluesky = THREADS.has(post.url) ? renderBlueskyThread(THREADS.get(post.url), post.url) : (post.bluesky?.uri && post.bluesky?.url ? `<section class="comments bluesky" id="conversation"><h2>Join the conversation on Bluesky <small><a href="${escapeAttr(post.bluesky.url)}" rel="nofollow">Reply to this post on Bluesky</a></small></h2></section>` : '');
+  const html = renderPostPage(TEMPLATE, post, { prev, next, related: related(ALL, index, 4), shell: { nav: NAV, rail: RAIL, footer: FOOTER, head_common: headCommon(), bluesky } });
   const absUrl = SITE + post.url;
   return { html, md: NO_MD ? null : markdownTwin({ ...post, content: selfHostImages(post.content) }, absUrl) };
 }
@@ -62,7 +77,8 @@ function lineDiff(a, b) {
   return out.length ? out.join('\n') : `  identical (${same} lines)`;
 }
 
-function main() {
+async function main() {
+  if (!NO_BSKY) await prefetchBluesky();
   const years = ONLY_YEAR ? [ONLY_YEAR] : [...new Set(ALL.map((p) => dates(p).year).filter(Boolean))].sort();
   console.log(`${APPLY ? 'APPLY' : 'DRY RUN'}${DIFF ? ' [DIFF]' : ''} — regenerate posts from template + JSON (${ALL.length} posts loaded)`);
   console.log(`${'year'.padEnd(6)} ${'total'.padStart(6)} ${'rendered'.padStart(9)} ${'noContent'.padStart(10)} ${'written'.padStart(8)} ${'unchanged'.padStart(10)} ${'err'.padStart(5)}`);
@@ -118,4 +134,4 @@ function main() {
   if (t.err) process.exitCode = 1;
 }
 
-main();
+await main();

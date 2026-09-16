@@ -246,6 +246,7 @@ export function renderPostPage(template, post, { prev = null, next = null, relat
     next_link: next ? `<a href="${escapeAttr(next.url)}" class="next" rel="next"><small>Next →</small><strong>${escapeHtml(next.title || 'Untitled')}</strong></a>` : '<span></span>',
     related: rel.length ? `<section class="related"><h2>Related</h2><ul class="post-list">${rel.map(listItem).join('')}</ul></section>` : '',
     comments: renderComments(post),
+    bluesky: '',
     ...shell,
   };
   // content last: a body that happens to contain "{{...}}" must never be expanded
@@ -268,3 +269,22 @@ export function renderStaticPage(template, page, { url, content, description, no
     ...shell,
   }).split('{{content}}').join(selfHostImages(content));
 }
+
+// ---------- Bluesky replies (A4) ----------
+// `thread` is app.bsky.feed.getPostThread's `thread` for the cross-posted
+// post. Renders the replies (not the root) as a nested, read-only list.
+export function renderBlueskyThread(thread, postUrl) {
+  if (!thread || !thread.post) return '';
+  const replies = (thread.replies || []).filter((r) => r && r.post);
+  const count = countReplies(thread);
+  const item = (node) => {
+    const p = node.post, a = p.author || {}, rec = p.record || {};
+    const when = rec.createdAt ? new Date(rec.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+    const link = `https://bsky.app/profile/${escapeAttr(a.handle || '')}/post/${escapeAttr(String(p.uri || '').split('/').pop())}`;
+    const kids = (node.replies || []).filter((r) => r && r.post);
+    return `<li class="comment"><div class="comment-head">${a.avatar ? `<img class="comment-avatar" src="${escapeAttr(a.avatar)}" alt="" width="32" height="32" loading="lazy">` : ''}<span class="comment-author"><a href="https://bsky.app/profile/${escapeAttr(a.handle || '')}" rel="ugc nofollow">${escapeHtml(a.displayName || a.handle || 'someone')}</a> <small class="mono">@${escapeHtml(a.handle || '')}</small></span><a class="comment-date" href="${link}" rel="nofollow">${escapeHtml(when)}</a></div><div class="comment-body"><p>${escapeHtml(rec.text || '')}</p></div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
+  };
+  const rootLink = `https://bsky.app/profile/${escapeAttr(thread.post.author?.handle || '')}/post/${escapeAttr(String(thread.post.uri || '').split('/').pop())}`;
+  return `<section class="comments bluesky" id="conversation"><h2>${count ? `${count} ${count === 1 ? 'reply' : 'replies'} on Bluesky` : 'Join the conversation on Bluesky'} <small><a href="${rootLink}" rel="nofollow">Reply to this post on Bluesky</a> — replies appear here at the next daily render.</small></h2>${replies.length ? `<ol class="comment-list">${replies.map(item).join('')}</ol>` : ''}</section>`;
+}
+function countReplies(node) { return (node.replies || []).filter((r) => r && r.post).reduce((n, r) => n + 1 + countReplies(r), 0); }

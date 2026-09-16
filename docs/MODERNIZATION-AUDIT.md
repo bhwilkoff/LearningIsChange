@@ -714,9 +714,26 @@ appended here as ticks complete.
   Posts view: Scheduled filter + status dots; editor shows a
   Draft/Scheduled/Published line. Simulated draft + scheduled + never-
   shipped posts: 2 redirects, 1 no-file, permalink check OK; reverted.
+- **2026-09-16 · A4 done** — Bluesky. `admin/lib/bluesky.js`
+  (createSession with app password against bsky.social, `crossPost` with
+  a link facet + external-embed card, grapheme-safe clipping, public
+  `getThread`). Editor: "Post to Bluesky" (text prefilled with title +
+  URL) → saves `bluesky: { uri, cid, url, posted_at }` on the record and
+  dispatches a render. Renderer: `regenerate-posts.js` prefetches the
+  thread for every cross-posted post (public API, no auth; `--no-bluesky`
+  to skip) and `renderBlueskyThread()` in `core.js` renders replies as a
+  read-only nested list under the post ("N replies on Bluesky" + a
+  reply link); the recovered WordPress threads stay as the archived
+  section. Verified against a real thread from Ben's account (4 replies,
+  nested). Templates byte-identical when no cross-post exists.
+  **v1 scope of Decision 015 is complete except the GitHub-App sign-in
+  hand-off (Cloudflare) and A5 (retiring the legacy tools).**
 - **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
-  secrets, fill `CONFIG.auth`, test sign-in end to end. In parallel, A2.2: the
+  secrets, fill `CONFIG.auth`, test sign-in end to end. Then A5: retire the legacy
+  tools (`/new/ /edit/ /remove/ /update/ /links/ /podcast-rss/
+  /admin/regenerate/ /admin/dedup/ /admin/db-maintenance/`) as redirects
+  into LiC Admin once Ben has used each view once; update docs. (Done: A2.2 the
   post editor (`#/posts/edit/<url>`: title, date, terms via
   `admin/lib/pickers.js`, body via `admin/lib/editor.js`, excerpt),
   **exact preview** (fetch `templates/post.html` + partials, render with
