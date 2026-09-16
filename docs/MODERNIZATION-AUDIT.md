@@ -245,10 +245,18 @@ items get done in a later tick and moved to *Done*.
   posts and relative on 12 (the ones written by `/new/`). Normalize
   to relative in a maintenance pass? (Renderers must tolerate both
   until then; `generate-sitemap.js` already does.)
-- ✅ (approved 2026-09-16, repair) C-4 **Mojibake in 33 posts** (`â€™` for `’`, etc.) — present in the JSON
-  `content` and in the HTML since the original export (double-encoded
-  UTF-8). Mechanically reversible (`latin-1` → `utf-8` re-decode of the
-  affected runs). It is a content edit, so: approve the repair?
+- ⚠️ C-4 **Mojibake — corrected scope: 2,587 posts (71%), not 33.**
+  The first count matched the cp1252 form (`â€™`); the data holds the
+  latin-1 form (`â\x80\x99`), which browsers render identically. Same
+  double-encoded-UTF-8 defect, present since the export, heaviest in
+  2010–2015 (2013: 1,024 posts; 2014: 1,145). Dry run with `ftfy`
+  (encoding fixes only, no quote/whitespace/HTML normalization) changes
+  4,528 fields; every introduced character is a curly quote (’ “ ” ‘
+  ×13,500), dash (– — ×1,067), ellipsis (…×1,050), bullet, accented
+  letter (é í ñ ú á …), emoji (🙂 🙁 🎁 😉), or an invisible BOM/object
+  placeholder that was already there in broken form. No run without a
+  mojibake lead byte changes. Ben approved 33; the loop stopped to ask
+  again at this scope (tick 7).
 - ✅ **Done tick 5** C-5 — 12 posts (2026 shard, written by `/new/`)
   stored `categories`/`tags` as plain string arrays (not stringified
   lists — earlier note over-read a `str()` dump). Normalized to
@@ -343,8 +351,12 @@ resolves them on its own.)*
   and propagated to 3,699 term entries in 2,850 posts. Regenerated all
   posts (2,850 changed), recomputed stats, permalink check OK, zero
   flat links remain. Found C-9 (1,153 terms with no archive page).
-  **Next**: C-4 mojibake repair (33 posts, byte-level re-decode,
-  diff-verified), then P1: promote
+  **Next**: see tick 7.
+- **2026-09-16 · tick 7 (C-4, paused)** — Dry-run only. Real scope is
+  2,587 posts (see C-4). Verified the repair touches nothing but
+  double-encoded runs. Waiting on Ben before applying.
+  **Next**: if approved, apply C-4 (rewrite shards, regenerate 2,587
+  posts, permalink check, commit); then P1: promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
