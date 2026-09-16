@@ -28,12 +28,12 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -94,12 +94,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -160,12 +160,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -226,14 +226,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -292,12 +292,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -359,19 +359,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -435,12 +435,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -502,12 +502,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -576,7 +576,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -696,7 +696,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -756,12 +756,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -830,7 +830,7 @@
       ],
       "tags": [
         {
-          "name": "c4c15",
+          "name": "C4C15",
           "slug": "c4c15",
           "url": "/tag/c4c15/"
         }
@@ -895,12 +895,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "c4c15",
+          "name": "C4C15",
           "slug": "c4c15",
           "url": "/tag/c4c15/"
         }
@@ -958,12 +958,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1032,7 +1032,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -1094,12 +1094,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1161,12 +1161,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1228,12 +1228,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1295,12 +1295,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1362,19 +1362,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -1434,12 +1434,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1501,12 +1501,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1568,12 +1568,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1635,12 +1635,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1702,12 +1702,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1766,12 +1766,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1834,12 +1834,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1901,19 +1901,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -1979,12 +1979,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2046,12 +2046,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2112,12 +2112,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2179,12 +2179,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2246,12 +2246,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2313,12 +2313,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2387,12 +2387,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "c4c15",
+          "name": "C4C15",
           "slug": "c4c15",
           "url": "/tag/c4c15/"
         }
@@ -2450,12 +2450,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2517,12 +2517,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2584,12 +2584,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2658,7 +2658,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -2714,12 +2714,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2778,12 +2778,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2845,12 +2845,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2909,12 +2909,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2973,12 +2973,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3040,12 +3040,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3107,12 +3107,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3174,12 +3174,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3238,12 +3238,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3302,12 +3302,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3369,12 +3369,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3434,12 +3434,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3501,12 +3501,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3565,12 +3565,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3632,14 +3632,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -3696,12 +3696,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3760,12 +3760,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3824,12 +3824,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3888,12 +3888,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -3952,12 +3952,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4016,12 +4016,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4087,7 +4087,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -4143,12 +4143,12 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4210,12 +4210,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4277,12 +4277,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4341,12 +4341,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4405,12 +4405,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4469,12 +4469,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4597,7 +4597,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -4657,12 +4657,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4721,12 +4721,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4785,12 +4785,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4849,12 +4849,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4913,12 +4913,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -4977,12 +4977,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5041,12 +5041,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5105,12 +5105,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5235,7 +5235,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -5296,7 +5296,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5358,12 +5358,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5422,12 +5422,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5486,12 +5486,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5550,12 +5550,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5621,12 +5621,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "c4c15",
+          "name": "C4C15",
           "slug": "c4c15",
           "url": "/tag/c4c15/"
         }
@@ -5684,12 +5684,12 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5748,12 +5748,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5812,12 +5812,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5940,7 +5940,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -6000,12 +6000,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6064,12 +6064,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6128,12 +6128,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6192,12 +6192,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6256,12 +6256,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6320,12 +6320,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6384,12 +6384,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6448,12 +6448,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6512,14 +6512,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -6577,12 +6577,12 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6648,7 +6648,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -6706,12 +6706,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6777,7 +6777,7 @@
       ],
       "tags": [
         {
-          "name": "c4c15",
+          "name": "C4C15",
           "slug": "c4c15",
           "url": "/tag/c4c15/"
         }
@@ -6842,12 +6842,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "c4c15",
+          "name": "C4C15",
           "slug": "c4c15",
           "url": "/tag/c4c15/"
         }
@@ -6905,14 +6905,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -6973,14 +6973,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7044,7 +7044,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -7100,14 +7100,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7164,7 +7164,7 @@
       "comment_count": 6,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7223,19 +7223,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7292,14 +7292,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7356,14 +7356,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7420,12 +7420,12 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7484,12 +7484,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7548,14 +7548,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7617,12 +7617,12 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7681,12 +7681,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7745,12 +7745,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7809,12 +7809,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7873,14 +7873,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -7938,12 +7938,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8002,12 +8002,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8066,12 +8066,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8130,12 +8130,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8194,12 +8194,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8258,12 +8258,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8323,14 +8323,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -8394,7 +8394,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -8452,12 +8452,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8516,12 +8516,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8580,12 +8580,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "C4c15",
+          "name": "#C4C15",
           "slug": "c4c15",
-          "url": "/category/c4c15/"
+          "url": "/category/blogging-projects/c4c15/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -8644,19 +8644,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -8720,7 +8720,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -8776,14 +8776,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -8847,7 +8847,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -8912,7 +8912,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -8975,7 +8975,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9040,7 +9040,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9103,7 +9103,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9159,19 +9159,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -9235,7 +9235,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9293,14 +9293,14 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -9357,7 +9357,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -9426,7 +9426,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9488,14 +9488,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -9552,19 +9552,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Im Learning",
+          "name": "What I’m Learning",
           "slug": "im-learning",
-          "url": "/category/im-learning/"
+          "url": "/category/recs/im-learning/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -9624,14 +9624,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -9752,7 +9752,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9815,7 +9815,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -9871,12 +9871,12 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -9945,12 +9945,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10070,7 +10070,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10130,7 +10130,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -10200,12 +10200,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10268,7 +10268,7 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         }
@@ -10331,12 +10331,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10403,12 +10403,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10471,7 +10471,7 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         }
@@ -10534,12 +10534,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10606,7 +10606,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10669,7 +10669,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
@@ -10737,12 +10737,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10805,12 +10805,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10873,12 +10873,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -10941,12 +10941,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -11066,7 +11066,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -11122,7 +11122,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -11190,12 +11190,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -11258,7 +11258,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -11321,12 +11321,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -11382,9 +11382,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11444,9 +11444,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11506,9 +11506,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11568,9 +11568,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11630,9 +11630,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11692,9 +11692,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11754,9 +11754,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11816,9 +11816,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11873,9 +11873,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -11935,14 +11935,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -11999,9 +11999,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -12068,12 +12068,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "ce15",
+          "name": "CE15",
           "slug": "ce15",
           "url": "/tag/ce15/"
         }
@@ -12193,7 +12193,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -12256,7 +12256,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -12319,12 +12319,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "cem15",
+          "name": "CEM15",
           "slug": "cem15",
           "url": "/tag/cem15/"
         }
@@ -12387,12 +12387,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "ce15",
+          "name": "CE15",
           "slug": "ce15",
           "url": "/tag/ce15/"
         }
@@ -12455,7 +12455,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -12511,14 +12511,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -12582,12 +12582,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -12643,14 +12643,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],
@@ -12708,9 +12708,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -12770,9 +12770,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -12839,7 +12839,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -12895,9 +12895,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -12964,7 +12964,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13020,9 +13020,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -13089,7 +13089,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13209,7 +13209,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13276,7 +13276,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13339,7 +13339,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13395,9 +13395,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -13457,9 +13457,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -13526,7 +13526,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13582,9 +13582,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -13646,7 +13646,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13711,7 +13711,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13778,7 +13778,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13843,7 +13843,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13910,7 +13910,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -13977,7 +13977,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14044,7 +14044,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14111,7 +14111,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14178,7 +14178,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14243,7 +14243,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14308,7 +14308,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14373,7 +14373,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14436,7 +14436,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
@@ -14508,7 +14508,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -14575,7 +14575,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -15334,7 +15334,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -15399,7 +15399,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -15459,9 +15459,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -15521,9 +15521,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -15583,7 +15583,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -15650,7 +15650,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -15713,7 +15713,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -15830,9 +15830,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -15892,7 +15892,7 @@
       "comment_count": 2,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -16017,7 +16017,7 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -16076,9 +16076,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -16138,9 +16138,9 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         }
       ],
       "tags": [],
@@ -16200,7 +16200,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -16273,12 +16273,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "iste2016",
+          "name": "ISTE2016",
           "slug": "iste2016",
           "url": "/tag/iste2016/"
         }
@@ -16341,12 +16341,12 @@
       ],
       "tags": [
         {
-          "name": "askbenw",
+          "name": "AskBenW",
           "slug": "askbenw",
           "url": "/tag/askbenw/"
         },
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         }
@@ -16402,12 +16402,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -16470,12 +16470,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Askbenw",
+          "name": "#AskBenW",
           "slug": "askbenw",
-          "url": "/category/askbenw/"
+          "url": "/category/videos/askbenw/"
         },
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -16538,7 +16538,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -16600,7 +16600,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -16663,14 +16663,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Using",
+          "name": "What I’m Using",
           "slug": "using",
-          "url": "/category/using/"
+          "url": "/category/recs/using/"
         }
       ],
       "tags": [],

@@ -254,13 +254,17 @@ items get done in a later tick and moved to *Done*.
   lists — earlier note over-read a `str()` dump). Normalized to
   `{name, slug, url}`; `admin/lib/mutate.js` (`taxonomyTerm`) and
   `/new/` now write that shape.
+- C-9 **1,153 of 1,403 terms have no archive page** (WordPress exported
+  only 432 of 1,365 tag pages and skipped 3 categories), so most tag
+  links in post footers are 404s today. P2's renderer generates every
+  term page from JSON; no permalink is lost (they never existed).
 - C-8 `/category/Typewriter/` — capitalized slug created by `/new/`
   (all other terms are lowercase). The URL is live and protected; when
   the archive renderer lands, emit `/category/typewriter/` as canonical
   and keep `/category/Typewriter/` as a redirect. Same for 5 tags
   (`VSS2007`, `Sustainability`, `Reframability`, `Startup`,
   `Learning%20Twitter%20Scalability`).
-- ✅ (approved, restore) C-6 `taxonomies.json` display names were slugified on export
+- ✅ **Done tick 6** C-6 `taxonomies.json` display names were slugified on export
   (`C4c15`, `Im Learning`, `Askbenw`, `Lifewidelearning16`); the old
   menu had the real names (`#C4C15`, `What I'm Learning`, `#AskBenW`).
   Restore display names from the menu fragment where they exist?
@@ -329,8 +333,18 @@ resolves them on its own.)*
   they now carry `category-*`/`tag-*` classes and footer tag links),
   `recompute-database-stats.js --apply`, permalink check OK. Queued C-8
   (capitalized slugs).
-  **Next**: C-6 restore taxonomy display names from the old menu
-  fragment, then C-4 mojibake repair, then P1: promote
+  **Next**: see tick 6.
+- **2026-09-16 · tick 6 (C-6)** — Harvested the original WordPress
+  names and hierarchical URLs from the 259 existing archive pages
+  (`Category: <span>…`). Repaired 107 terms in `taxonomies.json`
+  (104 names such as `#C4C15`, `What I’m Learning`, `365 Questions
+  That Google Can’t Answer`; 10 category URLs that were flat and
+  404ing, e.g. `/category/c4c15/` → `/category/blogging-projects/c4c15/`)
+  and propagated to 3,699 term entries in 2,850 posts. Regenerated all
+  posts (2,850 changed), recomputed stats, permalink check OK, zero
+  flat links remain. Found C-9 (1,153 terms with no archive page).
+  **Next**: C-4 mojibake repair (33 posts, byte-level re-decode,
+  diff-verified), then P1: promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

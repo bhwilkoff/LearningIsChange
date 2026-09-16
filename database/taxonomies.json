@@ -9,7 +9,7 @@
         "count": 942
       },
       "blog-2": {
-        "name": "Blog 2",
+        "name": "Blog",
         "slug": "blog-2",
         "url": "/category/blog-2/",
         "count": 846
@@ -17,19 +17,19 @@
       "lesson-plans": {
         "name": "Lesson Plans",
         "slug": "lesson-plans",
-        "url": "/category/lesson-plans/",
+        "url": "/category/classroom-resources/lesson-plans/",
         "count": 306
       },
       "questions": {
-        "name": "Questions",
+        "name": "365 Questions That Google Can’t Answer",
         "slug": "questions",
-        "url": "/category/questions/",
+        "url": "/category/blogging-projects/questions/",
         "count": 365
       },
       "curated-lists": {
         "name": "Curated Lists",
         "slug": "curated-lists",
-        "url": "/category/curated-lists/",
+        "url": "/category/recs/curated-lists/",
         "count": 1
       },
       "ben-wilkoff": {
@@ -39,15 +39,15 @@
         "count": 1672
       },
       "im-learning": {
-        "name": "Im Learning",
+        "name": "What I’m Learning",
         "slug": "im-learning",
-        "url": "/category/im-learning/",
+        "url": "/category/recs/im-learning/",
         "count": 68
       },
       "using": {
-        "name": "Using",
+        "name": "What I’m Using",
         "slug": "using",
-        "url": "/category/using/",
+        "url": "/category/recs/using/",
         "count": 146
       },
       "learning-is-change-list": {
@@ -59,31 +59,31 @@
       "project-roundtable": {
         "name": "Project Roundtable",
         "slug": "project-roundtable",
-        "url": "/category/project-roundtable/",
+        "url": "/category/videos/project-roundtable/",
         "count": 2
       },
       "c4c15": {
-        "name": "C4c15",
+        "name": "#C4C15",
         "slug": "c4c15",
-        "url": "/category/c4c15/",
+        "url": "/category/blogging-projects/c4c15/",
         "count": 95
       },
       "askbenw": {
-        "name": "Askbenw",
+        "name": "#AskBenW",
         "slug": "askbenw",
-        "url": "/category/askbenw/",
+        "url": "/category/videos/askbenw/",
         "count": 72
       },
       "lifewidelearning16": {
-        "name": "Lifewidelearning16",
+        "name": "#LifeWideLearning16",
         "slug": "lifewidelearning16",
-        "url": "/category/lifewidelearning16/",
+        "url": "/category/blogging-projects/lifewidelearning16/",
         "count": 61
       },
       "whoisaps": {
-        "name": "Whoisaps",
+        "name": "#WHOISaps",
         "slug": "whoisaps",
-        "url": "/category/whoisaps/",
+        "url": "/category/blog-2/whoisaps/",
         "count": 29
       },
       "personalized-learning": {
@@ -159,43 +159,43 @@
         "count": 1
       },
       "unsubscribe": {
-        "name": "Unsubscribe",
+        "name": "unsubscribe",
         "slug": "unsubscribe",
         "url": "/category/unsubscribe/",
         "count": 1
       },
       "holacracy": {
-        "name": "Holacracy",
+        "name": "holacracy",
         "slug": "holacracy",
         "url": "/category/holacracy/",
         "count": 1
       },
       "org-structure": {
-        "name": "Org Structure",
+        "name": "org structure",
         "slug": "org-structure",
         "url": "/category/org-structure/",
         "count": 1
       },
       "humanity": {
-        "name": "Humanity",
+        "name": "humanity",
         "slug": "humanity",
         "url": "/category/humanity/",
         "count": 9
       },
       "metaphors": {
-        "name": "Metaphors",
+        "name": "metaphors",
         "slug": "metaphors",
         "url": "/category/metaphors/",
         "count": 3
       },
       "cultures-of-thinking": {
-        "name": "Cultures Of Thinking",
+        "name": "Cultures of Thinking",
         "slug": "cultures-of-thinking",
         "url": "/category/cultures-of-thinking/",
         "count": 1
       },
       "digpins": {
-        "name": "Digpins",
+        "name": "DigPINS",
         "slug": "digpins",
         "url": "/category/digpins/",
         "count": 4
@@ -254,7 +254,7 @@
         "count": 17
       },
       "reflection": {
-        "name": "reflection",
+        "name": "Reflection",
         "slug": "reflection",
         "url": "/tag/reflection/",
         "count": 35
@@ -716,7 +716,7 @@
         "count": 1
       },
       "learning": {
-        "name": "learning",
+        "name": "Learning",
         "slug": "learning",
         "url": "/tag/learning/",
         "count": 160
@@ -1706,7 +1706,7 @@
         "count": 33
       },
       "outrage": {
-        "name": "outrage",
+        "name": "Outrage",
         "slug": "outrage",
         "url": "/tag/outrage/",
         "count": 2
@@ -3530,7 +3530,7 @@
         "count": 1
       },
       "high-school": {
-        "name": "high school",
+        "name": "High school",
         "slug": "high-school",
         "url": "/tag/high-school/",
         "count": 7
@@ -3710,7 +3710,7 @@
         "count": 2
       },
       "middle-school": {
-        "name": "middle school",
+        "name": "Middle school",
         "slug": "middle-school",
         "url": "/tag/middle-school/",
         "count": 4
@@ -6332,7 +6332,7 @@
         "count": 1
       },
       "colorado": {
-        "name": "colorado",
+        "name": "Colorado",
         "slug": "colorado",
         "url": "/tag/colorado/",
         "count": 2
@@ -7304,7 +7304,7 @@
         "count": 1
       },
       "ben-wilkoff": {
-        "name": "ben wilkoff",
+        "name": "Ben Wilkoff",
         "slug": "ben-wilkoff",
         "url": "/tag/ben-wilkoff/",
         "count": 1339
@@ -7316,7 +7316,7 @@
         "count": 2
       },
       "savebigbird": {
-        "name": "savebigbird",
+        "name": "SaveBigBird",
         "slug": "savebigbird",
         "url": "/tag/savebigbird/",
         "count": 1
@@ -7340,7 +7340,7 @@
         "count": 18
       },
       "dailycreate": {
-        "name": "dailycreate",
+        "name": "DailyCreate",
         "slug": "dailycreate",
         "url": "/tag/dailycreate/",
         "count": 1
@@ -7406,7 +7406,7 @@
         "count": 10
       },
       "goobric": {
-        "name": "goobric",
+        "name": "Goobric",
         "slug": "goobric",
         "url": "/tag/goobric/",
         "count": 1
@@ -7466,25 +7466,25 @@
         "count": 8
       },
       "googleplustips": {
-        "name": "googleplustips",
+        "name": "GooglePlusTips",
         "slug": "googleplustips",
         "url": "/tag/googleplustips/",
         "count": 1
       },
       "hangoutphonecalls": {
-        "name": "hangoutphonecalls",
+        "name": "HangoutPhoneCalls",
         "slug": "hangoutphonecalls",
         "url": "/tag/hangoutphonecalls/",
         "count": 1
       },
       "hangoutssidebar": {
-        "name": "hangoutssidebar",
+        "name": "HangoutsSidebar",
         "slug": "hangoutssidebar",
         "url": "/tag/hangoutssidebar/",
         "count": 1
       },
       "hangoutstips": {
-        "name": "hangoutstips",
+        "name": "HangoutsTips",
         "slug": "hangoutstips",
         "url": "/tag/hangoutstips/",
         "count": 1
@@ -7514,19 +7514,19 @@
         "count": 2
       },
       "giesummit": {
-        "name": "giesummit",
+        "name": "GIEsummit",
         "slug": "giesummit",
         "url": "/tag/giesummit/",
         "count": 1
       },
       "connectedclassrooms": {
-        "name": "connectedclassrooms",
+        "name": "ConnectedClassrooms",
         "slug": "connectedclassrooms",
         "url": "/tag/connectedclassrooms/",
         "count": 3
       },
       "virtualfieldtrip": {
-        "name": "virtualfieldtrip",
+        "name": "VirtualFieldTrip",
         "slug": "virtualfieldtrip",
         "url": "/tag/virtualfieldtrip/",
         "count": 2
@@ -7544,7 +7544,7 @@
         "count": 5
       },
       "edcampdenver": {
-        "name": "edcampdenver",
+        "name": "edcampDenver",
         "slug": "edcampdenver",
         "url": "/tag/edcampdenver/",
         "count": 15
@@ -7562,13 +7562,13 @@
         "count": 1
       },
       "ilearnfrom": {
-        "name": "ilearnfrom",
+        "name": "ILearnFrom",
         "slug": "ilearnfrom",
         "url": "/tag/ilearnfrom/",
         "count": 2
       },
       "digitallearningday": {
-        "name": "digitallearningday",
+        "name": "DigitalLearningDay",
         "slug": "digitallearningday",
         "url": "/tag/digitallearningday/",
         "count": 3
@@ -7580,7 +7580,7 @@
         "count": 1
       },
       "chromeos": {
-        "name": "chromeos",
+        "name": "ChromeOS",
         "slug": "chromeos",
         "url": "/tag/chromeos/",
         "count": 2
@@ -7640,13 +7640,13 @@
         "count": 1
       },
       "postcardselfies": {
-        "name": "postcardselfies",
+        "name": "PostcardSelfies",
         "slug": "postcardselfies",
         "url": "/tag/postcardselfies/",
         "count": 1
       },
       "2minpd": {
-        "name": "2minpd",
+        "name": "2minPD",
         "slug": "2minpd",
         "url": "/tag/2minpd/",
         "count": 7
@@ -7658,7 +7658,7 @@
         "count": 9
       },
       "edcampdenve": {
-        "name": "edcampdenve",
+        "name": "EdCampDenve",
         "slug": "edcampdenve",
         "url": "/tag/edcampdenve/",
         "count": 1
@@ -7670,19 +7670,19 @@
         "count": 1
       },
       "trustteachers": {
-        "name": "trustteachers",
+        "name": "TrustTeachers",
         "slug": "trustteachers",
         "url": "/tag/trustteachers/",
         "count": 1
       },
       "innedcomemes": {
-        "name": "innedcomemes",
+        "name": "InnEdCoMemes",
         "slug": "innedcomemes",
         "url": "/tag/innedcomemes/",
         "count": 2
       },
       "feedly": {
-        "name": "feedly",
+        "name": "Feedly",
         "slug": "feedly",
         "url": "/tag/feedly/",
         "count": 2
@@ -7718,7 +7718,7 @@
         "count": 1
       },
       "chrome": {
-        "name": "chrome",
+        "name": "Chrome",
         "slug": "chrome",
         "url": "/tag/chrome/",
         "count": 1
@@ -7742,13 +7742,13 @@
         "count": 1
       },
       "c4c15": {
-        "name": "c4c15",
+        "name": "C4C15",
         "slug": "c4c15",
         "url": "/tag/c4c15/",
         "count": 6
       },
       "askbenw": {
-        "name": "askbenw",
+        "name": "AskBenW",
         "slug": "askbenw",
         "url": "/tag/askbenw/",
         "count": 15
@@ -7760,13 +7760,13 @@
         "count": 1
       },
       "ce15": {
-        "name": "ce15",
+        "name": "CE15",
         "slug": "ce15",
         "url": "/tag/ce15/",
         "count": 2
       },
       "cem15": {
-        "name": "cem15",
+        "name": "CEM15",
         "slug": "cem15",
         "url": "/tag/cem15/",
         "count": 1
@@ -7778,37 +7778,37 @@
         "count": 1
       },
       "iste2016": {
-        "name": "iste2016",
+        "name": "ISTE2016",
         "slug": "iste2016",
         "url": "/tag/iste2016/",
         "count": 1
       },
       "observeme": {
-        "name": "observeme",
+        "name": "ObserveMe",
         "slug": "observeme",
         "url": "/tag/observeme/",
         "count": 1
       },
       "enjoy": {
-        "name": "enjoy",
+        "name": "Enjoy",
         "slug": "enjoy",
         "url": "/tag/enjoy/",
         "count": 1
       },
       "lastminute": {
-        "name": "lastminute",
+        "name": "LastMinute",
         "slug": "lastminute",
         "url": "/tag/lastminute/",
         "count": 1
       },
       "gsuiteedu": {
-        "name": "gsuiteedu",
+        "name": "GSuiteEdu",
         "slug": "gsuiteedu",
         "url": "/tag/gsuiteedu/",
         "count": 1
       },
       "refleciton": {
-        "name": "refleciton",
+        "name": "Refleciton",
         "slug": "refleciton",
         "url": "/tag/refleciton/",
         "count": 1
@@ -7820,19 +7820,19 @@
         "count": 1
       },
       "digpins": {
-        "name": "digpins",
+        "name": "DigPINS",
         "slug": "digpins",
         "url": "/tag/digpins/",
         "count": 4
       },
       "authority": {
-        "name": "authority",
+        "name": "Authority",
         "slug": "authority",
         "url": "/tag/authority/",
         "count": 1
       },
       "higher-education": {
-        "name": "higher education",
+        "name": "Higher Education",
         "slug": "higher-education",
         "url": "/tag/higher-education/",
         "count": 1
@@ -7850,19 +7850,19 @@
         "count": 1
       },
       "amc": {
-        "name": "amc",
+        "name": "AMC",
         "slug": "amc",
         "url": "/tag/amc/",
         "count": 1
       },
       "anschutz": {
-        "name": "anschutz",
+        "name": "Anschutz",
         "slug": "anschutz",
         "url": "/tag/anschutz/",
         "count": 1
       },
       "virtual-reality-committee": {
-        "name": "virtual reality committee",
+        "name": "Virtual Reality Committee",
         "slug": "virtual-reality-committee",
         "url": "/tag/virtual-reality-committee/",
         "count": 1
@@ -7880,7 +7880,7 @@
         "count": 1
       },
       "priviledge": {
-        "name": "priviledge",
+        "name": "Priviledge",
         "slug": "priviledge",
         "url": "/tag/priviledge/",
         "count": 1
@@ -7892,25 +7892,25 @@
         "count": 1
       },
       "xmas": {
-        "name": "xmas",
+        "name": "Xmas",
         "slug": "xmas",
         "url": "/tag/xmas/",
         "count": 1
       },
       "digital-graveyard": {
-        "name": "digital graveyard",
+        "name": "Digital Graveyard",
         "slug": "digital-graveyard",
         "url": "/tag/digital-graveyard/",
         "count": 1
       },
       "looking-back": {
-        "name": "looking back",
+        "name": "Looking Back",
         "slug": "looking-back",
         "url": "/tag/looking-back/",
         "count": 1
       },
       "night": {
-        "name": "night",
+        "name": "Night",
         "slug": "night",
         "url": "/tag/night/",
         "count": 1
@@ -7946,7 +7946,7 @@
         "count": 1
       },
       "past": {
-        "name": "past",
+        "name": "Past",
         "slug": "past",
         "url": "/tag/past/",
         "count": 1
@@ -7958,13 +7958,13 @@
         "count": 1
       },
       "regency": {
-        "name": "regency",
+        "name": "Regency",
         "slug": "regency",
         "url": "/tag/regency/",
         "count": 1
       },
       "victoian": {
-        "name": "victoian",
+        "name": "Victoian",
         "slug": "victoian",
         "url": "/tag/victoian/",
         "count": 1
@@ -7988,25 +7988,25 @@
         "count": 1
       },
       "vaccines": {
-        "name": "vaccines",
+        "name": "Vaccines",
         "slug": "vaccines",
         "url": "/tag/vaccines/",
         "count": 1
       },
       "banned-books": {
-        "name": "banned books",
+        "name": "Banned Books",
         "slug": "banned-books",
         "url": "/tag/banned-books/",
         "count": 1
       },
       "holocaust": {
-        "name": "holocaust",
+        "name": "Holocaust",
         "slug": "holocaust",
         "url": "/tag/holocaust/",
         "count": 1
       },
       "maus": {
-        "name": "maus",
+        "name": "Maus",
         "slug": "maus",
         "url": "/tag/maus/",
         "count": 1
@@ -8030,19 +8030,19 @@
         "count": 1
       },
       "forgiveness": {
-        "name": "forgiveness",
+        "name": "Forgiveness",
         "slug": "forgiveness",
         "url": "/tag/forgiveness/",
         "count": 1
       },
       "kindness": {
-        "name": "kindness",
+        "name": "Kindness",
         "slug": "kindness",
         "url": "/tag/kindness/",
         "count": 2
       },
       "moving-forward": {
-        "name": "moving forward",
+        "name": "Moving Forward",
         "slug": "moving-forward",
         "url": "/tag/moving-forward/",
         "count": 1
@@ -8054,7 +8054,7 @@
         "count": 1
       },
       "fascism": {
-        "name": "fascism",
+        "name": "Fascism",
         "slug": "fascism",
         "url": "/tag/fascism/",
         "count": 3
@@ -8072,19 +8072,19 @@
         "count": 1
       },
       "agency": {
-        "name": "agency",
+        "name": "Agency",
         "slug": "agency",
         "url": "/tag/agency/",
         "count": 1
       },
       "cameras-in-classrooms": {
-        "name": "cameras in classrooms",
+        "name": "Cameras in Classrooms",
         "slug": "cameras-in-classrooms",
         "url": "/tag/cameras-in-classrooms/",
         "count": 1
       },
       "crt": {
-        "name": "crt",
+        "name": "CRT",
         "slug": "crt",
         "url": "/tag/crt/",
         "count": 1
@@ -8102,7 +8102,7 @@
         "count": 1
       },
       "surveillance": {
-        "name": "surveillance",
+        "name": "Surveillance",
         "slug": "surveillance",
         "url": "/tag/surveillance/",
         "count": 1
@@ -8114,37 +8114,37 @@
         "count": 1
       },
       "mastery": {
-        "name": "mastery",
+        "name": "Mastery",
         "slug": "mastery",
         "url": "/tag/mastery/",
         "count": 1
       },
       "apple-pay": {
-        "name": "apple pay",
+        "name": "Apple Pay",
         "slug": "apple-pay",
         "url": "/tag/apple-pay/",
         "count": 1
       },
       "banking": {
-        "name": "banking",
+        "name": "Banking",
         "slug": "banking",
         "url": "/tag/banking/",
         "count": 1
       },
       "hoa": {
-        "name": "hoa",
+        "name": "HOA",
         "slug": "hoa",
         "url": "/tag/hoa/",
         "count": 1
       },
       "shoveling-snow": {
-        "name": "shoveling snow",
+        "name": "Shoveling snow",
         "slug": "shoveling-snow",
         "url": "/tag/shoveling-snow/",
         "count": 1
       },
       "dishes": {
-        "name": "dishes",
+        "name": "Dishes",
         "slug": "dishes",
         "url": "/tag/dishes/",
         "count": 1
@@ -8156,19 +8156,19 @@
         "count": 1
       },
       "life-hacks": {
-        "name": "life hacks",
+        "name": "Life Hacks",
         "slug": "life-hacks",
         "url": "/tag/life-hacks/",
         "count": 1
       },
       "super-bowl": {
-        "name": "super bowl",
+        "name": "Super Bowl",
         "slug": "super-bowl",
         "url": "/tag/super-bowl/",
         "count": 1
       },
       "free-speech": {
-        "name": "free speech",
+        "name": "Free Speech",
         "slug": "free-speech",
         "url": "/tag/free-speech/",
         "count": 1
@@ -8198,31 +8198,31 @@
         "count": 1
       },
       "commentary": {
-        "name": "commentary",
+        "name": "Commentary",
         "slug": "commentary",
         "url": "/tag/commentary/",
         "count": 1
       },
       "critique": {
-        "name": "critique",
+        "name": "Critique",
         "slug": "critique",
         "url": "/tag/critique/",
         "count": 1
       },
       "modern-internet": {
-        "name": "modern internet",
+        "name": "Modern Internet",
         "slug": "modern-internet",
         "url": "/tag/modern-internet/",
         "count": 1
       },
       "pandemic": {
-        "name": "pandemic",
+        "name": "Pandemic",
         "slug": "pandemic",
         "url": "/tag/pandemic/",
         "count": 1
       },
       "video-essays": {
-        "name": "video essays",
+        "name": "Video Essays",
         "slug": "video-essays",
         "url": "/tag/video-essays/",
         "count": 1
@@ -8234,7 +8234,7 @@
         "count": 1
       },
       "putin": {
-        "name": "putin",
+        "name": "Putin",
         "slug": "putin",
         "url": "/tag/putin/",
         "count": 1
@@ -8246,7 +8246,7 @@
         "count": 2
       },
       "ukraine": {
-        "name": "ukraine",
+        "name": "Ukraine",
         "slug": "ukraine",
         "url": "/tag/ukraine/",
         "count": 2
@@ -8258,13 +8258,13 @@
         "count": 2
       },
       "war-crimes": {
-        "name": "war crimes",
+        "name": "War crimes",
         "slug": "war-crimes",
         "url": "/tag/war-crimes/",
         "count": 2
       },
       "crimes-against-humanity": {
-        "name": "crimes against humanity",
+        "name": "Crimes Against Humanity",
         "slug": "crimes-against-humanity",
         "url": "/tag/crimes-against-humanity/",
         "count": 1
@@ -8288,31 +8288,31 @@
         "count": 1
       },
       "brennan-lee-mulligan": {
-        "name": "brennan lee mulligan",
+        "name": "Brennan Lee Mulligan",
         "slug": "brennan-lee-mulligan",
         "url": "/tag/brennan-lee-mulligan/",
         "count": 1
       },
       "dimension-20": {
-        "name": "dimension 20",
+        "name": "Dimension 20",
         "slug": "dimension-20",
         "url": "/tag/dimension-20/",
         "count": 1
       },
       "hank-green": {
-        "name": "hank green",
+        "name": "Hank Green",
         "slug": "hank-green",
         "url": "/tag/hank-green/",
         "count": 1
       },
       "study-hall": {
-        "name": "study hall",
+        "name": "Study Hall",
         "slug": "study-hall",
         "url": "/tag/study-hall/",
         "count": 1
       },
       "vlogbrothers": {
-        "name": "vlogbrothers",
+        "name": "Vlogbrothers",
         "slug": "vlogbrothers",
         "url": "/tag/vlogbrothers/",
         "count": 1
@@ -8336,13 +8336,13 @@
         "count": 1
       },
       "information-literacy": {
-        "name": "information literacy",
+        "name": "Information Literacy",
         "slug": "information-literacy",
         "url": "/tag/information-literacy/",
         "count": 1
       },
       "mental-health": {
-        "name": "mental health",
+        "name": "Mental Health",
         "slug": "mental-health",
         "url": "/tag/mental-health/",
         "count": 1

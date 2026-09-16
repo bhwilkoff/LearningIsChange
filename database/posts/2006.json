@@ -28,7 +28,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -91,7 +91,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -148,7 +148,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -218,7 +218,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -283,7 +283,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -356,7 +356,7 @@
       ],
       "tags": [
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -639,7 +639,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -840,7 +840,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -972,7 +972,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1039,7 +1039,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1108,7 +1108,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1175,7 +1175,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1305,7 +1305,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1454,7 +1454,7 @@
       ],
       "tags": [
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         }
@@ -1530,7 +1530,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1609,7 +1609,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1696,7 +1696,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1758,7 +1758,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1823,7 +1823,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -1964,7 +1964,7 @@
       ],
       "tags": [
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -2034,7 +2034,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2162,7 +2162,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2227,7 +2227,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2292,7 +2292,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2507,7 +2507,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2575,7 +2575,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2642,7 +2642,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2711,7 +2711,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2778,7 +2778,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -2918,7 +2918,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3054,7 +3054,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3118,7 +3118,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3183,7 +3183,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3247,7 +3247,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3317,7 +3317,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3603,7 +3603,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3665,7 +3665,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3735,7 +3735,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3811,7 +3811,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -3878,7 +3878,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4012,7 +4012,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4137,7 +4137,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4204,7 +4204,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4277,7 +4277,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4345,7 +4345,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4413,7 +4413,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4482,7 +4482,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4551,7 +4551,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4679,7 +4679,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4744,7 +4744,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4814,7 +4814,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4878,7 +4878,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -4947,7 +4947,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5009,7 +5009,7 @@
       "comment_count": 3,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5074,7 +5074,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5136,7 +5136,7 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5209,7 +5209,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5279,7 +5279,7 @@
       "comment_count": 4,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5347,7 +5347,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5411,7 +5411,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5477,7 +5477,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5539,7 +5539,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5623,7 +5623,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5687,7 +5687,7 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -5752,7 +5752,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5823,7 +5823,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5892,7 +5892,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -5955,7 +5955,7 @@
       "comment_count": 1,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6020,7 +6020,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6083,7 +6083,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6153,7 +6153,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6219,7 +6219,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6285,7 +6285,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6349,7 +6349,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6415,7 +6415,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6481,7 +6481,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6543,7 +6543,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6605,7 +6605,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6672,7 +6672,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6737,7 +6737,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6799,7 +6799,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -6881,7 +6881,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -6949,7 +6949,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -7016,7 +7016,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -7146,7 +7146,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",
@@ -7210,7 +7210,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         },
         {
           "name": "Uncategorized",

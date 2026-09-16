@@ -54,7 +54,7 @@
           "url": "/tag/family/"
         },
         {
-          "name": "kindness",
+          "name": "Kindness",
           "slug": "kindness",
           "url": "/tag/kindness/"
         }
@@ -110,12 +110,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "learning",
+          "name": "Learning",
           "slug": "learning",
           "url": "/tag/learning/"
         },
@@ -214,7 +214,7 @@
       ],
       "tags": [
         {
-          "name": "fascism",
+          "name": "Fascism",
           "slug": "fascism",
           "url": "/tag/fascism/"
         },
@@ -240,7 +240,7 @@
       "excerpt": "Purpose is in short supply. Belief not so much. When you match purpose with belief, you often times get magic. And yet, when you confuse the two, you often find tragedy.\n\nPurpose is something that ful...",
       "categories": [
         {
-          "name": "Metaphors",
+          "name": "metaphors",
           "slug": "metaphors",
           "url": "/category/metaphors/"
         }
@@ -384,7 +384,7 @@
           "url": "/tag/typewriter/"
         },
         {
-          "name": "fascism",
+          "name": "Fascism",
           "slug": "fascism",
           "url": "/tag/fascism/"
         }
@@ -419,7 +419,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }

@@ -151,7 +151,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -163,7 +163,7 @@
           "url": "/tag/movies/"
         },
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         }
@@ -227,7 +227,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -365,12 +365,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Metaphors",
+          "name": "metaphors",
           "slug": "metaphors",
           "url": "/category/metaphors/"
         }
@@ -382,12 +382,12 @@
           "url": "/tag/decorations/"
         },
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
         {
-          "name": "xmas",
+          "name": "Xmas",
           "slug": "xmas",
           "url": "/tag/xmas/"
         }
@@ -686,7 +686,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -698,17 +698,17 @@
       ],
       "tags": [
         {
-          "name": "digital graveyard",
+          "name": "Digital Graveyard",
           "slug": "digital-graveyard",
           "url": "/tag/digital-graveyard/"
         },
         {
-          "name": "looking back",
+          "name": "Looking Back",
           "slug": "looking-back",
           "url": "/tag/looking-back/"
         },
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         }
@@ -768,7 +768,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -780,7 +780,7 @@
         {
           "name": "Lesson Plans",
           "slug": "lesson-plans",
-          "url": "/category/lesson-plans/"
+          "url": "/category/classroom-resources/lesson-plans/"
         }
       ],
       "tags": [
@@ -927,7 +927,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -999,7 +999,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1016,7 +1016,7 @@
           "url": "/tag/guitar/"
         },
         {
-          "name": "high school",
+          "name": "High school",
           "slug": "high-school",
           "url": "/tag/high-school/"
         },
@@ -1084,7 +1084,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1096,12 +1096,12 @@
       ],
       "tags": [
         {
-          "name": "night",
+          "name": "Night",
           "slug": "night",
           "url": "/tag/night/"
         },
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         }
@@ -1162,7 +1162,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1258,7 +1258,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1330,7 +1330,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1342,7 +1342,7 @@
           "url": "/tag/metaphor/"
         },
         {
-          "name": "past",
+          "name": "Past",
           "slug": "past",
           "url": "/tag/past/"
         }
@@ -1403,7 +1403,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1498,7 +1498,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1510,17 +1510,17 @@
       ],
       "tags": [
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
         {
-          "name": "regency",
+          "name": "Regency",
           "slug": "regency",
           "url": "/tag/regency/"
         },
         {
-          "name": "victoian",
+          "name": "Victoian",
           "slug": "victoian",
           "url": "/tag/victoian/"
         }
@@ -1595,7 +1595,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1612,7 +1612,7 @@
           "url": "/tag/littleton/"
         },
         {
-          "name": "outrage",
+          "name": "Outrage",
           "slug": "outrage",
           "url": "/tag/outrage/"
         },
@@ -1627,7 +1627,7 @@
           "url": "/tag/public-schools/"
         },
         {
-          "name": "vaccines",
+          "name": "Vaccines",
           "slug": "vaccines",
           "url": "/tag/vaccines/"
         }
@@ -1689,7 +1689,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1701,22 +1701,22 @@
       ],
       "tags": [
         {
-          "name": "banned books",
+          "name": "Banned Books",
           "slug": "banned-books",
           "url": "/tag/banned-books/"
         },
         {
-          "name": "holocaust",
+          "name": "Holocaust",
           "slug": "holocaust",
           "url": "/tag/holocaust/"
         },
         {
-          "name": "maus",
+          "name": "Maus",
           "slug": "maus",
           "url": "/tag/maus/"
         },
         {
-          "name": "middle school",
+          "name": "Middle school",
           "slug": "middle-school",
           "url": "/tag/middle-school/"
         },
@@ -1793,7 +1793,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1895,7 +1895,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -1907,17 +1907,17 @@
       ],
       "tags": [
         {
-          "name": "forgiveness",
+          "name": "Forgiveness",
           "slug": "forgiveness",
           "url": "/tag/forgiveness/"
         },
         {
-          "name": "kindness",
+          "name": "Kindness",
           "slug": "kindness",
           "url": "/tag/kindness/"
         },
         {
-          "name": "moving forward",
+          "name": "Moving Forward",
           "slug": "moving-forward",
           "url": "/tag/moving-forward/"
         }
@@ -1983,12 +1983,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
@@ -2000,7 +2000,7 @@
           "url": "/tag/documentary/"
         },
         {
-          "name": "fascism",
+          "name": "Fascism",
           "slug": "fascism",
           "url": "/tag/fascism/"
         },
@@ -2072,7 +2072,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -2084,17 +2084,17 @@
       ],
       "tags": [
         {
-          "name": "agency",
+          "name": "Agency",
           "slug": "agency",
           "url": "/tag/agency/"
         },
         {
-          "name": "cameras in classrooms",
+          "name": "Cameras in Classrooms",
           "slug": "cameras-in-classrooms",
           "url": "/tag/cameras-in-classrooms/"
         },
         {
-          "name": "crt",
+          "name": "CRT",
           "slug": "crt",
           "url": "/tag/crt/"
         },
@@ -2114,7 +2114,7 @@
           "url": "/tag/students/"
         },
         {
-          "name": "surveillance",
+          "name": "Surveillance",
           "slug": "surveillance",
           "url": "/tag/surveillance/"
         },
@@ -2184,7 +2184,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -2211,7 +2211,7 @@
           "url": "/tag/language/"
         },
         {
-          "name": "mastery",
+          "name": "Mastery",
           "slug": "mastery",
           "url": "/tag/mastery/"
         }
@@ -2272,19 +2272,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
       ],
       "tags": [
         {
-          "name": "apple pay",
+          "name": "Apple Pay",
           "slug": "apple-pay",
           "url": "/tag/apple-pay/"
         },
         {
-          "name": "banking",
+          "name": "Banking",
           "slug": "banking",
           "url": "/tag/banking/"
         },
@@ -2354,7 +2354,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -2366,7 +2366,7 @@
           "url": "/tag/community/"
         },
         {
-          "name": "hoa",
+          "name": "HOA",
           "slug": "hoa",
           "url": "/tag/hoa/"
         },
@@ -2376,7 +2376,7 @@
           "url": "/tag/neighbors/"
         },
         {
-          "name": "shoveling snow",
+          "name": "Shoveling snow",
           "slug": "shoveling-snow",
           "url": "/tag/shoveling-snow/"
         }
@@ -2440,12 +2440,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         },
@@ -2457,7 +2457,7 @@
       ],
       "tags": [
         {
-          "name": "dishes",
+          "name": "Dishes",
           "slug": "dishes",
           "url": "/tag/dishes/"
         },
@@ -2467,12 +2467,12 @@
           "url": "/tag/domesticity/"
         },
         {
-          "name": "life hacks",
+          "name": "Life Hacks",
           "slug": "life-hacks",
           "url": "/tag/life-hacks/"
         },
         {
-          "name": "super bowl",
+          "name": "Super Bowl",
           "slug": "super-bowl",
           "url": "/tag/super-bowl/"
         }
@@ -2535,7 +2535,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -2552,7 +2552,7 @@
           "url": "/tag/community/"
         },
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -2623,19 +2623,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
       ],
       "tags": [
         {
-          "name": "free speech",
+          "name": "Free Speech",
           "slug": "free-speech",
           "url": "/tag/free-speech/"
         },
@@ -2708,12 +2708,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         },
@@ -2836,7 +2836,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
@@ -2853,22 +2853,22 @@
       ],
       "tags": [
         {
-          "name": "commentary",
+          "name": "Commentary",
           "slug": "commentary",
           "url": "/tag/commentary/"
         },
         {
-          "name": "critique",
+          "name": "Critique",
           "slug": "critique",
           "url": "/tag/critique/"
         },
         {
-          "name": "modern internet",
+          "name": "Modern Internet",
           "slug": "modern-internet",
           "url": "/tag/modern-internet/"
         },
         {
-          "name": "pandemic",
+          "name": "Pandemic",
           "slug": "pandemic",
           "url": "/tag/pandemic/"
         },
@@ -2878,7 +2878,7 @@
           "url": "/tag/video/"
         },
         {
-          "name": "video essays",
+          "name": "Video Essays",
           "slug": "video-essays",
           "url": "/tag/video-essays/"
         },
@@ -2996,12 +2996,12 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
@@ -3013,7 +3013,7 @@
           "url": "/tag/humanity/"
         },
         {
-          "name": "putin",
+          "name": "Putin",
           "slug": "putin",
           "url": "/tag/putin/"
         },
@@ -3023,7 +3023,7 @@
           "url": "/tag/russia/"
         },
         {
-          "name": "ukraine",
+          "name": "Ukraine",
           "slug": "ukraine",
           "url": "/tag/ukraine/"
         },
@@ -3033,7 +3033,7 @@
           "url": "/tag/war/"
         },
         {
-          "name": "war crimes",
+          "name": "War crimes",
           "slug": "war-crimes",
           "url": "/tag/war-crimes/"
         }
@@ -3101,19 +3101,19 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         },
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
       ],
       "tags": [
         {
-          "name": "crimes against humanity",
+          "name": "Crimes Against Humanity",
           "slug": "crimes-against-humanity",
           "url": "/tag/crimes-against-humanity/"
         },
@@ -3123,7 +3123,7 @@
           "url": "/tag/russia/"
         },
         {
-          "name": "ukraine",
+          "name": "Ukraine",
           "slug": "ukraine",
           "url": "/tag/ukraine/"
         },
@@ -3133,7 +3133,7 @@
           "url": "/tag/war/"
         },
         {
-          "name": "war crimes",
+          "name": "War crimes",
           "slug": "war-crimes",
           "url": "/tag/war-crimes/"
         }

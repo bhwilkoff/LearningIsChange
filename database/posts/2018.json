@@ -523,12 +523,12 @@
       ],
       "tags": [
         {
-          "name": "ben wilkoff",
+          "name": "Ben Wilkoff",
           "slug": "ben-wilkoff",
           "url": "/tag/ben-wilkoff/"
         },
         {
-          "name": "gsuiteedu",
+          "name": "GSuiteEdu",
           "slug": "gsuiteedu",
           "url": "/tag/gsuiteedu/"
         }
@@ -1072,7 +1072,7 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Blog 2",
+          "name": "Blog",
           "slug": "blog-2",
           "url": "/category/blog-2/"
         }
@@ -1526,7 +1526,7 @@
       ],
       "tags": [
         {
-          "name": "refleciton",
+          "name": "Refleciton",
           "slug": "refleciton",
           "url": "/tag/refleciton/"
         }

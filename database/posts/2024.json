@@ -111,7 +111,7 @@
           "url": "/tag/kids/"
         },
         {
-          "name": "learning",
+          "name": "Learning",
           "slug": "learning",
           "url": "/tag/learning/"
         },
@@ -179,14 +179,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
       ],
       "tags": [
         {
-          "name": "brennan lee mulligan",
+          "name": "Brennan Lee Mulligan",
           "slug": "brennan-lee-mulligan",
           "url": "/tag/brennan-lee-mulligan/"
         },
@@ -196,7 +196,7 @@
           "url": "/tag/college/"
         },
         {
-          "name": "dimension 20",
+          "name": "Dimension 20",
           "slug": "dimension-20",
           "url": "/tag/dimension-20/"
         },
@@ -206,12 +206,12 @@
           "url": "/tag/education/"
         },
         {
-          "name": "hank green",
+          "name": "Hank Green",
           "slug": "hank-green",
           "url": "/tag/hank-green/"
         },
         {
-          "name": "study hall",
+          "name": "Study Hall",
           "slug": "study-hall",
           "url": "/tag/study-hall/"
         },
@@ -221,7 +221,7 @@
           "url": "/tag/video/"
         },
         {
-          "name": "vlogbrothers",
+          "name": "Vlogbrothers",
           "slug": "vlogbrothers",
           "url": "/tag/vlogbrothers/"
         }
@@ -280,14 +280,14 @@
       "comment_count": 0,
       "categories": [
         {
-          "name": "Humanity",
+          "name": "humanity",
           "slug": "humanity",
           "url": "/category/humanity/"
         }
       ],
       "tags": [
         {
-          "name": "colorado",
+          "name": "Colorado",
           "slug": "colorado",
           "url": "/tag/colorado/"
         },
@@ -297,7 +297,7 @@
           "url": "/tag/exercise/"
         },
         {
-          "name": "reflection",
+          "name": "Reflection",
           "slug": "reflection",
           "url": "/tag/reflection/"
         },
@@ -377,12 +377,12 @@
           "url": "/tag/election/"
         },
         {
-          "name": "information literacy",
+          "name": "Information Literacy",
           "slug": "information-literacy",
           "url": "/tag/information-literacy/"
         },
         {
-          "name": "mental health",
+          "name": "Mental Health",
           "slug": "mental-health",
           "url": "/tag/mental-health/"
         },
