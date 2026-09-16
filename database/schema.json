@@ -1,0 +1,60 @@
+{
+  "$comment": "Content model for database/ (Decision 015, A0). Validated by scripts/validate-database.js before every render. `required` fields must exist with the given type; `optional` fields are checked only when present. Extra WordPress-export fields are tolerated (`allowExtra`).",
+  "version": 1,
+  "types": {
+    "term": {
+      "required": { "name": "string", "slug": "slug", "url": "path" },
+      "optional": { "count": "integer", "hierarchical": "boolean" }
+    },
+    "comment": {
+      "required": { "id": "string", "author": "string", "date": "datetime|null", "depth": "integer", "html": "string" },
+      "optional": { "author_url": "string", "avatar": "string", "parent": "string|null" }
+    },
+    "post": {
+      "required": {
+        "title": "string",
+        "url": "path",
+        "date_published": "date|datetime",
+        "content": "string",
+        "categories": "term[]",
+        "tags": "term[]"
+      },
+      "optional": {
+        "excerpt": "string",
+        "status": "enum:publish,draft",
+        "removed": "boolean",
+        "removed_at": "datetime",
+        "date_modified": "datetime",
+        "comments": "comment[]",
+        "bluesky": "object",
+        "content_preview": "string",
+        "history": "array"
+      },
+      "allowExtra": true,
+      "rules": [
+        "url must be /YYYY/MM/DD/slug/ and match date_published's date",
+        "url must be unique across all shards",
+        "a post lives in database/posts/<year of date_published>.json"
+      ]
+    },
+    "page": {
+      "required": { "title": "string", "url": "path", "content": "string" },
+      "optional": { "excerpt": "string", "status": "enum:publish,draft", "date_modified": "datetime|string", "slug": "string", "path": "string" },
+      "allowExtra": true,
+      "rules": ["url must be unique"]
+    }
+  },
+  "files": {
+    "database/posts/YYYY.json": { "year": "integer", "posts": "post[]", "count": "integer", "post_count": "integer" },
+    "database/pages.json": "page[] | { pages: page[] }",
+    "database/taxonomies.json": { "categories": { "count": "integer", "items": "map<slug, term>" }, "tags": { "count": "integer", "items": "map<slug, term>" } },
+    "database/page-rules.json": { "redirects": "map<path, path>", "noindex": "path[]" },
+    "database/permalinks.json": { "urls": "path[]", "guids": "map<file, string[]>" }
+  },
+  "scalars": {
+    "slug": "^[a-z0-9]+(?:-[a-z0-9]+)*$ (legacy exceptions tolerated with a warning)",
+    "path": "^/(?:[^/\\s]+/)*$ — site-relative, trailing slash",
+    "date": "YYYY-MM-DD",
+    "datetime": "ISO 8601"
+  }
+}

@@ -55,7 +55,7 @@ function renderComments(post) {
   const item = (c) => {
     const who = c.author_url ? `<a href="${escapeAttr(c.author_url)}" rel="ugc nofollow">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
     const kids = byParent.get(c.id) || [];
-    return `<li class="comment" id="comment-${escapeAttr(c.id)}"><div class="comment-head">${c.avatar ? `<img class="comment-avatar" src="${escapeAttr(c.avatar)}" alt="" width="40" height="40" loading="lazy">` : ''}<span class="comment-author">${who}</span><a class="comment-date" href="#comment-${escapeAttr(c.id)}"><time datetime="${escapeAttr(c.date)}">${fmt(c.date)}</time></a></div><div class="comment-body">${selfHostImages(c.html)}</div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
+    return `<li class="comment" id="comment-${escapeAttr(c.id)}"><div class="comment-head">${c.avatar ? `<img class="comment-avatar" src="${escapeAttr(c.avatar)}" alt="" width="40" height="40" loading="lazy">` : ''}<span class="comment-author">${who}</span>${c.date ? `<a class="comment-date" href="#comment-${escapeAttr(c.id)}"><time datetime="${escapeAttr(c.date)}">${fmt(c.date)}</time></a>` : ''}</div><div class="comment-body">${selfHostImages(c.html)}</div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
   };
   const roots = byParent.get(null) || [];
   return `<section class="comments" id="comments"><h2>${list.length} ${list.length === 1 ? 'comment' : 'comments'} <small>archived from the original blog; comments are closed</small></h2><ol class="comment-list">${roots.map(item).join('')}</ol></section>`;

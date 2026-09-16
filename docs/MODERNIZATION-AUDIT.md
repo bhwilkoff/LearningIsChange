@@ -631,15 +631,21 @@ One admin application on the JSON model; phases A0–A5 in
 `DECISIONS.md`. Same tick discipline as Program 1. Status lines are
 appended here as ticks complete.
 
-- **Next**: A0 — `database/schema.json` (post, page, term, comment
-  shapes as they exist today, plus `status` and `bluesky` fields for
-  A3/A4), `scripts/validate-database.js` (zero-dependency validator;
-  reports per-shard; gate in `render-site.yml` before rendering), and
-  the `shell.js` split into `scripts/lib/core.js` (browser-safe:
-  `fill`, `terms`, `dates`, `describe`, `plainText`, `toMarkdown`,
-  `jsonLdPost`, `selfHostImages` taking an `exists` callback) +
-  `scripts/lib/shell.js` (Node: fs/partials/loaders). Renders must stay
-  byte-identical. promote
+- **2026-09-16 · A0 done** — `database/schema.json` (post/page/term/
+  comment + `status`, `removed`, `bluesky`), `scripts/validate-database.js`
+  (zero deps; gate in `render-site.yml` before rendering). Running it
+  surfaced and fixed: C-0 (3,639 absolute post URLs → site-relative),
+  stale `count` in 12 shards, and 8 comments with WordPress's zero
+  date (now `date: null`, renderer omits the timestamp). Database
+  validates with 0 errors / 0 warnings. `scripts/lib/core.js` (192
+  lines, no Node imports — runs in the browser) split out of
+  `shell.js` (Node adapter, re-exports core); renders byte-identical.
+- **Next**: A1 — `admin/app/` core: `github.js` (REST + Git Data
+  commits + Actions dispatch/poll), `store.js` (shards, pages, terms,
+  ETag cache, `isLive`), `settings.js` (fine-grained token, Bluesky app
+  password), `jobs.js`, `router.js`, and the app shell
+  (`admin/app/index.html` on `admin/admin.css`) with a working
+  **Render** view (dispatch + live job status) as the first view. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
