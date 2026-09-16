@@ -399,6 +399,8 @@
         .commit-result strong { display: block; color: #155724; margin-bottom: 8px; }
         .commit-result a { color: #155724; text-decoration: underline; font-size: 0.9rem; }
     </style>
+    <link rel="stylesheet" href="/admin/admin.css">
+    <script src="/admin/admin-bar.js" defer></script>
 </head>
 <body>
 
@@ -419,7 +421,7 @@
 <div id="header-image-main">
     <div class="page-title-overlay">
         <h1>🗑️ Post Remover</h1>
-        <p>Remove a post from all pages, archives, RSS, and database</p>
+        <p>Retire a post: tombstone it in the database and re-render the site</p>
     </div>
 </div>
 
@@ -447,8 +449,8 @@
             <div class="card-title">🔍 Step 1: Find the Post to Remove</div>
 
             <div class="warning-box">
-                <strong>⚠️ This action cannot be easily undone.</strong>
-                This tool will permanently delete the post file and remove all references from archives, RSS feeds, and the database. Make sure you have selected the correct post.
+                <strong>ℹ️ Removal is reversible.</strong>
+                The post is marked as removed in its database shard (never deleted). The permalink becomes a redirect to its year archive and the post leaves the homepage, archives, feeds and search on the next render. Clear the <code>removed</code> flag in the JSON to restore it.
             </div>
 
             <div class="form-group">
@@ -569,16 +571,16 @@
 
     <aside id="sidebar">
         <div class="widget">
-            <h3>⚠️ What This Removes</h3>
+            <h3>⚠️ What the render updates</h3>
             <ul>
-                <li>Post HTML file</li>
-                <li>Homepage reference</li>
-                <li>Month &amp; year archive entries</li>
-                <li>Category archive entry</li>
-                <li>All tag archive entries</li>
-                <li>Author archive entry</li>
-                <li>RSS feed item</li>
-                <li>Database entries &amp; search index</li>
+                <li>Post page → redirect to its year archive</li>
+                <li>Homepage &amp; pagination</li>
+                <li>Year / month / day archives</li>
+                <li>Category archives</li>
+                <li>Tag archives</li>
+                <li>Author archive</li>
+                <li>RSS feeds (index &amp; full)</li>
+                <li>Search index, taxonomy counts, sitemap</li>
             </ul>
         </div>
 

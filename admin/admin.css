@@ -1,0 +1,93 @@
+/* =============================================
+   Learning is Change — admin tools theme
+   Loaded LAST in every admin tool. Remaps the tools' own CSS variables
+   (--bg-primary, --accent, --text-muted …) onto the site design tokens
+   from /css/site.css, sets the site fonts, adds dark mode, and restyles
+   the WordPress-era chrome the tools imitate (masthead, header image,
+   breadcrumbs). Per-tool rules live at the bottom.
+   ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* site tokens (mirror /css/site.css) */
+  --color-bg: #fffdf9; --color-surface: #f6f3ec; --color-border: #e6e1d6;
+  --color-ink: #1c1b22; --color-text: #2f2e3a; --color-muted: #6b6a78; --color-light: #9b9aa8;
+  --color-accent: #2a9d8f; --color-accent-dark: #1e7268; --color-accent-light: #e4f3f0;
+  --color-warm: #e9c46a; --color-coral: #e76f51;
+  --font-heading: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, monospace;
+
+  /* the tools' vocabulary → tokens */
+  --accent: var(--color-accent); --accent-hover: var(--color-accent-dark); --accent-light: var(--color-accent-light);
+  --text-primary: var(--color-text); --text-secondary: var(--color-muted); --text-muted: var(--color-light);
+  --bg-primary: var(--color-bg); --bg-secondary: var(--color-surface); --bg-tertiary: #ece8df;
+  --border-color: var(--color-border); --border-light: var(--color-border); --border-med: #d6d0c3;
+  --success: #2a9d8f; --success-hover: #1e7268; --warning: #b8860b; --error: #c0392b; --danger: #c0392b;
+  --shadow: 0 1px 3px rgba(28, 27, 34, 0.06);
+  --code-bg: var(--color-surface); --code-fg: var(--color-text);
+  /* rss-creator vocabulary */
+  --sitebg: var(--color-bg); --sitetext: var(--color-text); --light-bg: var(--color-surface); --headings: var(--color-ink);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #15161c; --color-surface: #1d1f27; --color-border: #2c2f3a;
+    --color-ink: #f2f1ec; --color-text: #d9d8d2; --color-muted: #a2a1ab; --color-light: #6f6e7a;
+    --color-accent: #4fc3b3; --color-accent-dark: #7fd8cb; --color-accent-light: #1b3a37;
+    --bg-tertiary: #262934; --border-med: #3a3e4c; --warning: #e9c46a; --error: #f08a6e; --danger: #f08a6e;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+
+/* --- base --- */
+html { -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body) !important; color: var(--text-primary); background: var(--bg-secondary) !important; line-height: 1.55; }
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--color-ink); letter-spacing: -0.01em; }
+a { color: var(--color-accent-dark); }
+code, pre, textarea.source, .source-editor, #source-editor, #full-source-editor, .mono, .log, #log, .log-container, .log-entry { font-family: var(--font-mono); }
+input[type="text"], input[type="password"], input[type="search"], input[type="url"], input[type="number"], input[type="date"], select, textarea {
+  font-family: inherit; background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 8px;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; border-color: transparent; }
+button, .btn { font-family: inherit; border-radius: 8px; }
+.btn-primary, .btn.primary, button.primary { background: var(--color-accent) !important; border-color: var(--color-accent) !important; color: #fff !important; }
+.btn-primary:hover, .btn.primary:hover, button.primary:hover { background: var(--color-accent-dark) !important; border-color: var(--color-accent-dark) !important; }
+.btn-secondary, .btn.secondary { background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border-color); }
+.card, .widget, .settings-section, .tool-card, .panel { background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: var(--shadow); }
+.card h2, .widget h3 { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); }
+hr { border: 0; border-top: 1px solid var(--border-color); }
+
+/* --- WordPress-era chrome the tools imitate --- */
+#masthead, .admin-header, header.site-header { background: var(--bg-primary); border-bottom: 1px solid var(--border-color); box-shadow: none; }
+#site-header-main { max-width: 1100px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+#site-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; margin: 0; }
+#site-title a { color: var(--color-ink); text-decoration: none; }
+#site-title a::before { content: 'BW'; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; margin-right: 8px; border-radius: 7px; background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)); color: #fff; font-size: 0.75rem; font-family: var(--font-body); vertical-align: middle; }
+#site-description { font-family: var(--font-body); font-size: 0.8rem; color: var(--text-secondary); margin-left: 8px; }
+.header-nav a { color: var(--text-secondary); font-size: 0.88rem; font-weight: 500; padding: 6px 10px; border-radius: 8px; text-decoration: none; }
+.header-nav a:hover { color: var(--color-accent-dark); background: var(--color-accent-light); }
+#header-image-main { background: none !important; background-image: none !important; min-height: 0 !important; height: auto !important; }
+#header-image-main::before, #header-image-main::after { display: none !important; }
+.page-title-overlay { position: static !important; transform: none !important; background: none !important; text-shadow: none !important; color: var(--color-ink) !important; max-width: 1100px; margin: 0 auto; padding: 28px 24px 4px !important; text-align: left !important; }
+.page-title-overlay h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--color-ink) !important; margin: 0 0 4px; }
+.page-title-overlay p { color: var(--text-secondary) !important; margin: 0; font-size: 0.95rem; }
+#breadcrumbs-container, #breadcrumbs { background: none !important; border: 0 !important; box-shadow: none !important; }
+#breadcrumbs { max-width: 1100px; margin: 0 auto; padding: 4px 24px 12px; font-size: 0.8rem; color: var(--text-muted); }
+#breadcrumbs a { color: var(--text-secondary); }
+footer, #footer, .site-footer, #colophon { background: transparent !important; color: var(--text-muted); border-top: 1px solid var(--border-color); }
+
+/* --- shared bar injected by /admin/admin-bar.js --- */
+.lic-admin-bar { position: sticky; top: 0; z-index: 500; background: var(--color-ink); color: #f2f1ec; font-family: var(--font-body); font-size: 0.8rem; display: flex; align-items: center; gap: 4px; padding: 0 16px; height: 36px; overflow-x: auto; white-space: nowrap; }
+.lic-admin-bar a { color: #c9c8d3; text-decoration: none; padding: 4px 8px; border-radius: 6px; }
+.lic-admin-bar a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.lic-admin-bar a.current { color: #fff; background: rgba(79,195,179,0.25); }
+.lic-admin-bar .brand { color: #fff; font-weight: 600; margin-right: 8px; }
+.lic-admin-bar .brand b { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 5px; background: linear-gradient(135deg, #2a9d8f, #1e7268); font-size: 0.65rem; margin-right: 6px; }
+.lic-admin-bar .spacer { flex: 1; }
+@media (prefers-color-scheme: dark) { .lic-admin-bar { background: #0f1014; } }
+
+/* --- dashboard (/admin/) --- */
+.tool-header { border-radius: 12px 12px 0 0; }
+.tool-link { border-radius: 8px !important; }

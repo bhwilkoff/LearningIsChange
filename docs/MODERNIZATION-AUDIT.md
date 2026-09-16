@@ -183,7 +183,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | 🟩 | **Deleted 2026-09-16 (P4, D-6).** −52 MB. `wp-content/uploads/` (media) stays |
 | `wp-content/uploads/` (1.3 GB) | ⬜ | Stays (media); size workstream is separate (SCRATCHPAD M2) |
 | WordPress stub routes (`/login/`, `/register/`, `/lostpassword/`, `/resetpass/`, `/logout/`) | 🟩 | Redirect pages → `/` (P3) |
-| Admin tools (10) | ⬜ | Each becomes "edit JSON → regenerate"; audit per-tool once renderers exist |
+| Admin tools (13) | 🟨 | `/admin/regenerate/`, `/new/`, `/edit/`, `/remove/` on JSON + `render-site.yml` (P5.1–5.3). **Look & feel (Ben, 2026-09-16)**: all 13 load `admin/admin.css` (site tokens, fonts, dark mode, WP chrome restyled) + `admin/admin-bar.js` (shared switcher). Per-tool polish continues |
 | `robots.txt`, `sitemap.xml` | 🟩 | Added 2026-09-16 (`scripts/generate-sitemap.js`) |
 | `llms.txt` | 🟩 | Added P4: start-here, archive, topics, apps, Markdown-twin note |
 
@@ -475,11 +475,21 @@ resolves them on its own.)*
   clearing the flag. Both tools pass `node --check`.
   Ben (2026-09-16): **the admin tools' look and feel must be updated
   too** — added as P5.5 below, started the same day.
+  **Next**: see tick 17b.
+- **2026-09-16 · tick 17b (P5.5 first pass)** — `admin/admin.css`:
+  remaps the tools' shared CSS variables (`--bg-*`, `--accent`,
+  `--text-*`, `--border-*`, rss-creator's `--sitebg` family) onto the
+  site tokens with light + dark mode, site fonts, and restyles the
+  WordPress-era chrome (masthead → BW brand bar, coffee header image
+  removed, breadcrumbs muted, cards/inputs/buttons on tokens).
+  `admin/admin-bar.js` injects a shared tool switcher. Both wired into
+  all 13 tools (document `<head>` only — several tools embed HTML
+  templates with their own `</head>`). Remove tool copy updated for
+  tombstone semantics. Verified: dashboard, /new/, /remove/.
   **Next**: P5.4 retire `update-rss.yml`, `remove-from-rss.yml`,
-  `regenerate-posts.yml`; P5.5 admin tools on the shared design system
-  (`admin/admin.css` mapping the tools' existing CSS variables onto the
-  site tokens + fonts + dark mode, then per-tool polish); P5.6 reskin
-  `/search/`. promote
+  `regenerate-posts.yml`; P5.5b per-tool polish (hard-coded colors in
+  alerts/tabs/tool-card headers, Lora/Source Sans leftovers, the four
+  tools without the shared variables); P5.6 reskin `/search/`. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
