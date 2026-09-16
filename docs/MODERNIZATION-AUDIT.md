@@ -610,8 +610,19 @@ resolves them on its own.)*
   100 / 100 / 100 on accessibility, best practices, SEO; perf 99–100.**
   Wrote `scripts/README.md`; refreshed SCRATCHPAD "Current State".
   **Program complete.** Remaining items are optional (SCRATCHPAD).
-  The loop can be stopped; if it keeps running, ticks are no-ops unless
-  Ben adds requests. promote
+- **2026-09-16 · tick 31 (C-12, post-completion check)** — Live-site
+  check found `/meet/` had never received `site.css` (tick-15 edit did
+  not persist) — fixed. Also found **Jetpack chrome inside the JSON
+  content of 3,629 posts** (empty share bar, "Like or Reblog" wrapper
+  pointing at widgets.wp.com, empty related-posts div — captured by the
+  M4 backfill). Ben approved stripping them: 7,271 share blocks and
+  3,627 empty related divs removed, no other bytes changed; two posts
+  whose related div wraps a PowerPress player were left intact. Three
+  title-only posts (empty body in the original export) now render
+  instead of being skipped. `feed/full.xml` 10.8 → 8.8 MB. Zero
+  `widgets.wp.com` references remain anywhere rendered.
+  **Next**: none scheduled — the loop stays idle unless Ben adds
+  requests; each tick re-checks the live site. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

@@ -126,7 +126,7 @@ function main() {
     ALL.forEach((post, index) => {
       if (dates(post).year !== year) return;
       s.total++;
-      if (!post.content) { s.noContent++; return; }
+      if (post.content == null) { s.noContent++; return; } // '' is a real (title-only) post
       if (ONLY_URL && post.url !== cleanUrl(ONLY_URL)) return;
       try {
         const { html, md } = renderPost(post, index);
