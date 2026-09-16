@@ -47,6 +47,10 @@ export function fetchPostsByYear(year) {
   });
 }
 
+// Live posts only — a post removed with /remove/ stays in its shard as a
+// tombstone ({ removed: true }) so its permalink keeps resolving.
+export const isLive = (post) => !!post && !post.removed;
+
 export async function fetchAllPosts() {
   const manifest = await fetchManifest();
   if (!manifest?.shards?.posts) return [];
@@ -54,7 +58,7 @@ export async function fetchAllPosts() {
   const all = [];
   for (const year of years) {
     const shard = await fetchPostsByYear(year);
-    if (shard.posts) all.push(...shard.posts);
+    if (shard.posts) all.push(...shard.posts.filter(isLive));
   }
   return all;
 }

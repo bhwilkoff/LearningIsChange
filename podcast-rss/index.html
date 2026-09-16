@@ -698,6 +698,7 @@
                     const posts = await LiCAdmin.fetchPostsByYear(year);
                     
                     for (const post of posts) {
+                        if (post.removed) continue; // tombstone (Decision 014)
                         postsScanned++;
                         
                         const content = post.content || post.content_filtered || '';

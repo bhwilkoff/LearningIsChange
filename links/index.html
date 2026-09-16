@@ -502,9 +502,9 @@
             async function fetchPostsByYear(year) {
                 if (window.LIB?.database) {
                     const shard = await window.LIB.database.fetchPostsByYear(year);
-                    return shard?.posts || [];
+                    return (shard?.posts || []).filter(p => p && !p.removed);
                 }
-                try { const r = await fetch(`${CONFIG.SITE_URL}${CONFIG.DATABASE_PATH}/posts/${year}.json`); return r.ok ? (await r.json()).posts || [] : []; }
+                try { const r = await fetch(`${CONFIG.SITE_URL}${CONFIG.DATABASE_PATH}/posts/${year}.json`); return r.ok ? ((await r.json()).posts || []).filter(p => p && !p.removed) : []; }
                 catch { return []; }
             }
 

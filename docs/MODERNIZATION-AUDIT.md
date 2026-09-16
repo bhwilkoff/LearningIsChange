@@ -535,11 +535,19 @@ resolves them on its own.)*
   `renderPostFromTemplate`, `siteComponents`, `pendingRssWorkflow`.
   3,570 → 2,245 lines. Tool loads with no console errors; all live
   entry points present.
-  **Next**: `/podcast-rss/` audit (scans HTML for PowerPress embeds →
-  read JSON content instead) and `/links/` check; then a `/simplify`
-  pass over `scripts/` + `templates/`; then revisit the open queue
-  items with Ben (A-6, B-5, C-1, C-3, C-8, C-9 closed by P2, C-10,
-  C-11, D-3). promote
+  **Next**: see tick 24.
+- **2026-09-16 · tick 24 (podcast + links audit)** — Both already read
+  the JSON shards (the podcast tool scans `post.content` for PowerPress
+  embeds and writes `feed/podcast/feed.xml` directly — correct, that
+  feed is its own artifact). Only gap: tombstones. `/podcast-rss/`,
+  `/links/` and the shared `admin/lib/database.js` (`isLive`,
+  `fetchAllPosts`) now skip removed posts. All 11 tools are on the JSON
+  pipeline; P5 is complete.
+  **Next**: `/simplify` pass over `scripts/` + `templates/` (shared
+  head partial for the four page templates, duplicated skip lists in
+  `generate-sitemap.js`/`check-permalinks.js`, `render-shell.js` file
+  list); then a decision batch for Ben on the open queue items (A-6,
+  B-5, C-1, C-3, C-8, C-10, C-11, D-3). promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
