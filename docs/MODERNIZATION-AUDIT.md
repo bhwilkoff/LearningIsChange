@@ -47,8 +47,8 @@ Representative post (`/2026/03/04/computer-shaped-problems/`):
 | `<script>` tags | 16 (9 external; jQuery, wp-emoji, Jetpack likes/carousel, stats.wp.com) |
 | External hosts referenced | gmpg.org, i0.wp.com, secure.gravatar.com, stats.wp.com, wp.me, facebook, twitter |
 | **The actual article** | **4.6 KB (5% of the page)** |
-| JSON-LD structured data | none |
-| `og:url` | `/` — *wrong on every post* (relative, and points at the homepage) |
+| JSON-LD structured data | none → `BlogPosting` on every post (tick 3) |
+| `og:url` | was `/` on every post → fixed tick 3 (absolute, per post) |
 | `<link rel="canonical">` | absolute, correct |
 | `<title>` | `Post – Learning is Change` (en dash, WP default) |
 
@@ -63,7 +63,7 @@ either no-ops or phones home to WordPress.com.
 | `robots.txt` | **absent** → added this tick | Crawlers had no sitemap pointer and could index admin tools |
 | `sitemap.xml` | **absent** → added this tick | 8k URLs discoverable only by link-crawl |
 | `llms.txt` | absent | Optional (see research); cheap to add later |
-| JSON-LD (`BlogPosting`, `Person`, `WebSite`) | absent | Main lever for AI-citation and rich results |
+| JSON-LD (`BlogPosting`, `Person`, `WebSite`) | `BlogPosting` on all posts (tick 3); `Person`/`WebSite` come with the new homepage | Main lever for AI-citation and rich results |
 
 ### Comments
 
@@ -82,7 +82,7 @@ protect; the Wayback Machine is the only possible recovery path
 | `database/posts/YYYY.json` with full `content` | ✅ | 3,651/3,651 posts (M4 backfill done — SCRATCHPAD checkbox stale) |
 | `templates/post.html` + `scripts/regenerate-posts.js` | ✅ | Renders **every post** from JSON; dry-run clean |
 | `templates/fragments/*` + `regenerate-fragments.js` | ✅ | Masthead/sidebar/colophon/footer zones on 7,473 pages |
-| `templates/post.html` composes fragments at render time | ❌ | It embeds a *copy* of the masthead → drifts (it lacks today's mobile banner) |
+| `templates/post.html` composes fragments at render time | ✅ | `regenerate-posts.js` splices `templates/fragments/*` into the zones at render (tick 3) |
 | Archive/category/tag/author/date renderer from JSON | ❌ | `admin/lib/archives.js` does HTML surgery on Fluida pages instead |
 | Homepage + `/page/N/` renderer | ❌ | " |
 | Feed renderer from JSON | ❌ | `update-rss.yml` patches `full.xml` in place |
@@ -281,6 +281,17 @@ resolves them on its own.)*
   URLs + 3,864 feed GUIDs; the list only grows). Negative test passes
   (hiding one post → exit 1). Wired as a gate before the commit step in
   `regenerate-posts.yml` and `regenerate-fragments.yml`.
-  **Next**: P0 `og:url` fix in `templates/post.html` (+ JSON-LD
-  `BlogPosting` while in there) → regenerate posts → check → commit;
-  then static mockups `docs/mockups/post.html` / `home.html`.
+  **Next**: see tick 3.
+- **2026-09-16 · tick 3 (P0)** — `regenerate-posts.js` now composes
+  `templates/fragments/*` into the zones at render time (root cause of
+  template drift fixed). Per-post `og:type=article`, `og:title`,
+  `og:url` (absolute), `og:description` + `<meta name=description>`
+  derived from excerpt/body at render (content untouched),
+  `article:published_time`, and a JSON-LD `BlogPosting` (headline,
+  dates, author/publisher Person, first image, keywords). Regenerated
+  all 3,651 posts; permalink check OK; 0 posts missing JSON-LD, 0 with
+  the old `og:url`, JSON-LD parses on all 3,651.
+  **Next**: static mockups `docs/mockups/post.html` and `home.html`
+  on the refreshed portfolio system (D-1) with right rail (D-2), unified
+  nav (B-1), tagline kept / header image dropped (B-2/B-3), for Ben to
+  approve before P1 regenerates site-wide.

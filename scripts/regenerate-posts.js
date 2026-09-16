@@ -35,7 +35,59 @@ if (!fs.existsSync(TEMPLATE_PATH)) {
   console.error('Run scripts/capture-post-template.js first.');
   process.exit(1);
 }
-const TEMPLATE = fs.readFileSync(TEMPLATE_PATH, 'utf8');
+// Compose the shared theme zones from templates/fragments/ at render
+// time so posts never drift from what regenerate-fragments.js applies
+// to the rest of the site (the template's own copies are placeholders).
+function composeFragments(html) {
+  const dir = path.join(REPO_ROOT, 'templates', 'fragments');
+  for (const zone of ['MASTHEAD', 'SIDEBAR', 'COLOPHON', 'FOOTER']) {
+    const fragPath = path.join(dir, `${zone.toLowerCase()}.html`);
+    if (!fs.existsSync(fragPath)) continue;
+    const open = `<!-- LIC:${zone}:START -->`, close = `<!-- LIC:${zone}:END -->`;
+    const i = html.indexOf(open), j = html.indexOf(close, i);
+    if (i === -1 || j === -1) continue;
+    const frag = fs.readFileSync(fragPath, 'utf8').replace(/\n$/, '');
+    html = html.slice(0, i + open.length) + '\n' + frag + '\n' + html.slice(j);
+  }
+  return html;
+}
+const TEMPLATE = composeFragments(fs.readFileSync(TEMPLATE_PATH, 'utf8'));
+
+// Plain-text description for og:description / meta description /
+// JSON-LD: the excerpt if there is one, else the first ~160 chars of
+// the body text. Derived at render time; the content itself is untouched.
+function describe(post) {
+  const src = post.excerpt || post.content || '';
+  const text = String(src).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&#0?39;|&#8217;/g, "'").replace(/&quot;|&#8220;|&#8221;/g, '"')
+    .replace(/\s+/g, ' ').trim();
+  if (!text) return 'My name is Ben Wilkoff, and I Teach. And Learn. A Lot.';
+  if (text.length <= 160) return text;
+  return text.slice(0, 157).replace(/\s+\S*$/, '') + '…';
+}
+
+function jsonLd(post, absUrl, dateIso, description) {
+  const img = /<img[^>]+src=["']([^"']+)["']/i.exec(post.content || '');
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': absUrl },
+    headline: post.title || 'Untitled',
+    datePublished: dateIso,
+    dateModified: post.date_modified || dateIso,
+    author: { '@type': 'Person', name: 'Ben Wilkoff', url: 'https://learningischange.com/portfolio/about/' },
+    publisher: { '@type': 'Person', name: 'Ben Wilkoff', url: 'https://learningischange.com/' },
+    isPartOf: { '@type': 'Blog', '@id': 'https://learningischange.com/#blog', name: 'Learning is Change' },
+    inLanguage: 'en-US',
+  };
+  if (description) data.description = description;
+  if (img) data.image = img[1].startsWith('/') ? `https://learningischange.com${img[1]}` : img[1];
+  const kw = [...(Array.isArray(post.categories) ? post.categories : []), ...(Array.isArray(post.tags) ? post.tags : [])]
+    .map(t => (typeof t === 'string' ? t : t?.name || t?.slug)).filter(Boolean);
+  if (kw.length) data.keywords = kw.join(', ');
+  // </script> inside a value would break out of the tag
+  return JSON.stringify(data).replace(/<\//g, '<\\/');
+}
 
 const TAXONOMIES = (() => {
   const p = path.join(REPO_ROOT, 'database', 'taxonomies.json');
@@ -133,6 +185,8 @@ function renderPost(post) {
     '{{excerpt}}': escapeHtml(post.excerpt || ''),
     '{{url}}': url,
     '{{abs_url}}': `https://learningischange.com${url}`,
+    '{{description}}': escapeHtml(describe(post)),
+    '{{json_ld}}': jsonLd(post, `https://learningischange.com${url}`, dateIso, describe(post)),
     '{{date_iso}}': dateIso,
     '{{date_formatted}}': dateFormatted,
     '{{date_utc}}': dateIso,
