@@ -598,10 +598,20 @@ resolves them on its own.)*
   the rest of that list point at pages/external URLs). Rail Topics now
   include the restored parent categories. Everything re-rendered,
   permalink list 8,771, sitemap 8,741, check OK.
-  **Next**: final review pass — accessibility/perf spot-check of the
-  rendered pages (Lighthouse on a post, the homepage, a category page),
-  `scripts/README.md`, SCRATCHPAD milestone table update, and a summary
-  for Ben of what is done and what remains optional. promote
+  **Next**: see tick 30.
+- **2026-09-16 · tick 30 (final review)** — Lighthouse (desktop) on the
+  homepage, a post, a category page and a portfolio page: initial
+  findings were list-date contrast (`--color-light`), the white-on-teal
+  primary button, the rail's `<h3>` skipping a level, undecorated
+  in-text links and a badge color on the portfolio, and a `favicon.ico`
+  404. Fixed at the token/partial level (`--btn-bg/--btn-fg`, darker
+  `--color-light` in both modes, rail `<h2>`, underlined text links,
+  `favicon.ico` + `apple-touch-icon.png`). Result: **all four pages
+  100 / 100 / 100 on accessibility, best practices, SEO; perf 99–100.**
+  Wrote `scripts/README.md`; refreshed SCRATCHPAD "Current State".
+  **Program complete.** Remaining items are optional (SCRATCHPAD).
+  The loop can be stopped; if it keeps running, ticks are no-ops unless
+  Ben adds requests. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

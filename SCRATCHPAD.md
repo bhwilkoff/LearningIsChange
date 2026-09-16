@@ -2,18 +2,19 @@
 
 ## Current State
 
-- **Status**: Migration complete; CMS systematization starting
-- **Active milestone**: M1 — extract shared admin plumbing (full overhaul
-  approved: M1 → M3 → M4 → M5 in order, 2026-04-17)
-- **Last session**: 2026-04-17 — Claude Code onboarded; docs seeded and
-  corrected after learning the admin tools are already committed
-- **Next actions**:
-  1. Answer scope questions (see "Open Questions")
-  2. Tool-by-tool audit: shared plumbing candidates (GitHub API client,
-     auth, template fetch, null-safe DB mutators) + per-tool behavior map
-  3. Decide the shared-lib layout (ES module under `admin/lib/` vs
-     inlined-per-tool with a build step vs copy-paste sync script)
-  4. Add the missing `/database-generator/`
+- **Status**: Decision 014 complete (2026-09-16). The site is rendered
+  entirely from JSON on the portfolio design system; no WordPress code
+  remains. All admin tools write JSON and dispatch `render-site.yml`.
+- **Where things are**: architecture `CLAUDE.md`; audit + tick log
+  `docs/MODERNIZATION-AUDIT.md`; generator `scripts/README.md`;
+  decisions `DECISIONS.md` (001–014).
+- **Lighthouse (desktop, local render, 2026-09-16)**: homepage, post,
+  category page, portfolio page — Perf 99–100 / A11y 100 / Best 100 /
+  SEO 100.
+- **Optional follow-ups** (none required): dark/light manual toggle;
+  `llms.txt` refresh when the homepage changes; per-tool polish in the
+  admin UIs; the 10 uploads referenced with `+` in their names (C-3)
+  could be renamed to drop the last own-image CDN dependency.
 
 ---
 

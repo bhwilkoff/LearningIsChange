@@ -14,7 +14,8 @@
   --color-ink: #1c1b22;
   --color-text: #2f2e3a;
   --color-muted: #6b6a78;
-  --color-light: #9b9aa8;
+  --color-light: #75748a;          /* 4.6:1 on --color-bg (WCAG AA small text) */
+  --btn-bg: #1e7268; --btn-fg: #ffffff;   /* 5.6:1 */
   --color-accent: #2a9d8f;
   --color-accent-dark: #1e7268;
   --color-accent-light: #e4f3f0;
@@ -37,7 +38,8 @@
     --color-ink: #f2f1ec;
     --color-text: #d9d8d2;
     --color-muted: #a2a1ab;
-    --color-light: #6f6e7a;
+    --color-light: #8f8e9c;          /* 5.3:1 on dark --color-bg */
+    --btn-bg: #4fc3b3; --btn-fg: #15161c;   /* 8.4:1 */
     --color-accent: #4fc3b3;
     --color-accent-dark: #7fd8cb;
     --color-accent-light: #1b3a37;
@@ -51,7 +53,7 @@
 }
 :root[data-theme="dark"] {
   --color-bg: #15161c; --color-surface: #1d1f27; --color-border: #2c2f3a;
-  --color-ink: #f2f1ec; --color-text: #d9d8d2; --color-muted: #a2a1ab; --color-light: #6f6e7a;
+  --color-ink: #f2f1ec; --color-text: #d9d8d2; --color-muted: #a2a1ab; --color-light: #8f8e9c; --btn-bg: #4fc3b3; --btn-fg: #15161c;
   --color-accent: #4fc3b3; --color-accent-dark: #7fd8cb; --color-accent-light: #1b3a37;
   --color-warm-light: #3a3220; --color-coral: #f08a6e; --color-coral-light: #3d2620;
   --nav-bg: rgba(21, 22, 28, 0.88); color-scheme: dark;
@@ -60,7 +62,9 @@
 /* portfolio css hard-codes a few whites; re-point them at tokens */
 .site-nav { background: var(--nav-bg); }
 .card, .app-card, .tile, .post-highlight { background: var(--color-bg); }
-.btn-primary, .app-link.primary { color: #fff; }
+.btn-primary, .app-link.primary, .search-btn { background: var(--btn-bg) !important; color: var(--btn-fg) !important; border-color: var(--btn-bg) !important; }
+.btn-primary:hover, .app-link.primary:hover { filter: brightness(1.08); }
+.pagination button.active { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-fg); }
 .nav-brand .brand-mark { color: #fff; }
 
 /* --- Unified nav: one row for blog + portfolio --- */
@@ -76,7 +80,7 @@
 }
 .rail { display: grid; gap: var(--space-md); }
 .rail-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 14px; padding: var(--space-lg); }
-.rail-card h3 { font-size: 0.78rem; font-family: var(--font-body); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin-bottom: var(--space-md); }
+.rail-card h2, .rail-card h3 { font-size: 0.78rem; font-family: var(--font-body); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); margin-bottom: var(--space-md); }
 .rail-card ul { list-style: none; }
 .rail-card li { padding: 6px 0; border-top: 1px solid var(--color-border); font-size: 0.9rem; line-height: 1.4; }
 .rail-card li:first-child { border-top: none; padding-top: 0; }
@@ -192,3 +196,9 @@
 .comment-body { font-size: 0.95rem; color: var(--color-text); line-height: 1.6; }
 .comment-body p { margin-bottom: 0.6em; }
 .comment-body a { text-decoration: underline; text-decoration-color: var(--color-accent-light); }
+
+/* --- a11y: in-text links are distinguishable without color; badge contrast --- */
+.page-container p a:not(.btn):not(.app-link):not(.card-tag):not(.tag), .card p a, .feature-banner-text p a, .app-hero p a, .rail-card p a { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 3px; }
+.pbadge.beta { color: #6b4f05; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pbadge.beta { color: #f0d27a; } }
+:root[data-theme="dark"] .pbadge.beta { color: #f0d27a; }
