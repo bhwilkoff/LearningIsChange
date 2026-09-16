@@ -12,10 +12,11 @@ import * as posts from './views/posts.js';
 import * as edit from './views/edit.js';
 import * as pages from './views/pages.js';
 import * as terms from './views/terms.js';
+import * as media from './views/media.js';
 
 const VIEWS = {
   posts, pages, terms,
-  media: { title: 'Media', soon: 'A2' }, render, settings,
+  media, render, settings,
 };
 const ORDER = ['posts', 'pages', 'terms', 'media', 'render', 'settings'];
 

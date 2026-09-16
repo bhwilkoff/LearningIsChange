@@ -57,3 +57,7 @@
 .preview-col { position: sticky; top: 64px; }
 .preview-head { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 6px; }
 .preview-frame { width: 100%; height: calc(100vh - 140px); min-height: 500px; border: 1px solid var(--border-color); border-radius: 10px; background: #fff; }
+/* media */
+.drop { border: 2px dashed var(--border-color); border-radius: 12px; padding: 34px 16px; text-align: center; color: var(--text-secondary); }
+.drop.over { border-color: var(--color-accent); background: var(--color-accent-light); }
+.linklike { color: var(--color-accent-dark); cursor: pointer; text-decoration: underline; }

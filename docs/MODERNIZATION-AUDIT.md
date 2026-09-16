@@ -696,6 +696,14 @@ appended here as ticks complete.
   entries in one commit + render). No console errors. Queue: A-7 a
   MailPoet plugin page at `/__qs/6b00bc294368/` sits in `pages.json` —
   retire → redirect?
+- **2026-09-16 · A2.4 done** — **Media** view + `admin/app/media.js`:
+  drag/drop or pick images; decoded with `createImageBitmap`, resized
+  to 1600w + 800w on an `OffscreenCanvas`, encoded WebP (JPEG fallback),
+  optional original kept; committed to `wp-content/uploads/YYYY/MM/`
+  via Git Data; a responsive `<figure><img srcset …>` snippet to paste.
+  Verified: 652 KB JPEG → 335 KB + 138 KB WebP in ~0.4 s, no console
+  errors. All six views exist; only Bluesky (A4) and drafts/scheduling
+  (A3) remain of the v1 scope, plus the auth hand-off.
 - **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
   secrets, fill `CONFIG.auth`, test sign-in end to end. In parallel, A2.2: the
