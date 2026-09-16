@@ -179,13 +179,13 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
 | Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟩 | **Done 2026-09-16.** `scripts/render-feeds.js` from JSON; every original GUID retained; podcast feed untouched. `update-rss.yml`/`remove-from-rss.yml` retire in P5 when the tools dispatch `render-site.yml` |
 | Search (`/search/`) | 🟨 | Keep engine; reskin on the portfolio system |
-| Masthead / sidebar / colophon / footer fragments | ⛔ | No page uses the Fluida zones any more (0 files carry `LIC:MASTHEAD`). Delete `templates/fragments/`, `regenerate-fragments.js`/`.yml`, `add-zone-markers.js`, `capture-fragments.js` in P4 |
-| `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | ⛔ | 52 MB of runtime nobody executes once templates change; delete after conversion (needs DECISIONS entry) |
+| Masthead / sidebar / colophon / footer fragments | 🟩 | **Deleted (P4).** Shell partials in `templates/partials/` replace them; `render-site.yml` replaces `regenerate-fragments.yml` |
+| `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | 🟩 | **Deleted 2026-09-16 (P4, D-6).** −52 MB. `wp-content/uploads/` (media) stays |
 | `wp-content/uploads/` (1.3 GB) | ⬜ | Stays (media); size workstream is separate (SCRATCHPAD M2) |
 | WordPress stub routes (`/login/`, `/register/`, `/lostpassword/`, `/resetpass/`, `/logout/`) | 🟩 | Redirect pages → `/` (P3) |
 | Admin tools (10) | ⬜ | Each becomes "edit JSON → regenerate"; audit per-tool once renderers exist |
 | `robots.txt`, `sitemap.xml` | 🟩 | Added 2026-09-16 (`scripts/generate-sitemap.js`) |
-| `llms.txt` | ⬜ | Optional; write after the new homepage exists |
+| `llms.txt` | 🟩 | Added P4: start-here, archive, topics, apps, Markdown-twin note |
 
 ---
 
@@ -275,6 +275,11 @@ items get done in a later tick and moved to *Done*.
   only 432 of 1,365 tag pages and skipped 3 categories), so most tag
   links in post footers are 404s today. P2's renderer generates every
   term page from JSON; no permalink is lost (they never existed).
+- C-11 Three posts embed WordPress plugin decoration images through the
+  Jetpack CDN (`ckeditor…/spacer.gif`, `powerpress/play_video.png`,
+  `black.png`); one 2009 post links a smilie GIF at a path that never
+  existed. The plugin dirs are gone, so those images will 404 when the CDN
+  refetches. Leave (they were decorative) or strip the `<img>` tags?
 - C-10 Twelve "tags" in `taxonomies.json` are 2007 Technorati links
   (`http://technorati.com/tag/VSS2007` …). The renderer skips them;
   remove from the taxonomy and from the ~12 posts that carry them?
@@ -417,11 +422,22 @@ resolves them on its own.)*
   GUIDs). Podcast feed untouched. Added `.github/workflows/render-site.yml`
   — the single pipeline (posts → archives → pages → feeds → stats →
   permalinks → sitemap → check → commit) the admin tools will dispatch.
-  **Next**: P4 — delete `wp-includes/`, `wp-content/plugins/`,
-  `wp-content/themes/` (D-6), the Fluida fragment machinery
-  (`templates/fragments/`, `templates/legacy/`, `regenerate-fragments.*`,
-  `add-zone-markers.js`, `capture-*.js`), and `docs/mockups/`; confirm no
-  page references any deleted asset; `llms.txt`. promote
+  **Next**: see tick 13.
+- **2026-09-16 · tick 13 (P4 shipped)** — Deleted `wp-includes/`,
+  `wp-content/plugins/`, `wp-content/themes/` (−52 MB, D-6), the Fluida
+  fragment machinery (`templates/fragments/`, `templates/legacy/`,
+  `regenerate-fragments.js` + `.yml`, `add-zone-markers.js`,
+  `capture-*.js`) and `docs/mockups/`. Verified beforehand: no rendered
+  page, tool, or feed links a deleted local path (3 post bodies reference
+  plugin images via the Jetpack CDN → C-11). Removed the dead Fluida font
+  link from `/search/` and `/menus/`. Added `llms.txt`. Permalink check OK.
+  **The repository no longer contains any WordPress code.**
+  **Next**: P5 — admin tools re-pointed at JSON + `render-site.yml`.
+  Order: (1) `admin/regenerate/` → dispatch `render-site.yml` (replace
+  the fragments panel); (2) `/new/` writes JSON only (no HTML/RSS
+  patching) then dispatches render; (3) `/edit/`, `/remove/` likewise;
+  (4) retire `update-rss.yml`, `remove-from-rss.yml`, `regenerate-posts.yml`;
+  (5) reskin `/search/` on the new shell. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

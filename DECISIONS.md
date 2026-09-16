@@ -354,6 +354,8 @@ P5 admin tools re-pointed at JSON.
 - D-6 **Delete `wp-includes/`, `wp-content/plugins/`,
   `wp-content/themes/`** after P1–P3 (−52 MB; this line is the
   size-impact record). Uploads untouched.
+  *Executed 2026-09-16 (P4): 29 MB + 19 MB + 3.9 MB removed from the
+  working tree; history retains them.*
 
 **Permalink guarantee**: `scripts/check-permalinks.js` snapshots every
 URL in `sitemap.xml` plus every feed GUID before a regeneration and

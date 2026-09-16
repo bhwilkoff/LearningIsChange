@@ -1,0 +1,28 @@
+# Learning is Change
+
+> Ben Wilkoff's blog since 2005: education, technology, and change — 3,600+ posts — plus a portfolio of native apps he designs and ships end to end.
+
+Every post has a Markdown twin at the same URL plus `index.md`
+(e.g. https://learningischange.com/2024/07/21/on-not-reading-the-news/index.md).
+Structured data: BlogPosting on every post, CollectionPage on archives, Person/WebSite on the homepage.
+
+## Start here
+
+- [About Ben](https://learningischange.com/portfolio/about/): who writes this
+- [Important posts](https://learningischange.com/important-posts/): the posts that resonated most
+- [The Ripe Environment](https://learningischange.com/2007/06/07/the-ripe-environment/): the framework at the heart of the blog
+- [All posts by year](https://learningischange.com/all-posts/): complete index, 2005–present
+
+## Archive
+
+- [Homepage / latest](https://learningischange.com/)
+- [RSS (recent)](https://learningischange.com/feed/) · [RSS (full archive)](https://learningischange.com/feed/full.xml) · [Podcast](https://learningischange.com/feed/podcast/)
+- [Sitemap](https://learningischange.com/sitemap.xml)
+- Topics: [365 Questions That Google Can’t Answer](https://learningischange.com/category/blogging-projects/questions/), [Lesson Plans](https://learningischange.com/category/classroom-resources/lesson-plans/), [#C4C15](https://learningischange.com/category/blogging-projects/c4c15/), [#AskBenW](https://learningischange.com/category/videos/askbenw/), [Newsletter Archive](https://learningischange.com/category/newsletter-archive/)
+
+## Apps and work
+
+- [Native apps](https://learningischange.com/portfolio/apps/): Archive Watch, Tidbits Trivia, Bsky Dreams, Boba Playbook
+- [Universal App Template](https://github.com/bhwilkoff/UniversalAppTemplate): one shared core, native shells for phones, TVs, desktops, web
+- [Career](https://learningischange.com/portfolio/career/) · [Projects](https://learningischange.com/portfolio/projects/) · [Writing elsewhere](https://learningischange.com/portfolio/writing/)
+- [Contact card](https://learningischange.com/meet/) · [App support](https://learningischange.com/support.html)
