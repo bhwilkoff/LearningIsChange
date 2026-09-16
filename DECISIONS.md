@@ -304,3 +304,55 @@ feasible.
   `pages.json` already works), not a structured content tree. Simpler
   and matches WordPress origin, at the cost of not being able to
   re-theme without an HTML-level transformation.
+
+## Decision 014 — Retire the Fluida theme: render the whole site from JSON in the portfolio design system
+*Date: 2026-09-16 · Status: **PROPOSED — awaiting Ben** (nothing regenerates until approved)*
+
+**Decision (proposed)**: The blog stops being a WordPress export
+wearing zone markers and becomes a fully generated site. Every public
+page — posts, homepage/pagination, date/category/tag/author archives,
+static pages, feeds — is rendered by `scripts/*.js` from
+`database/*.json` through templates that use `portfolio/css/style.css`
+(the design system already on `/portfolio/`, `/support.html`,
+`/meet/`). The Fluida theme, `wp-includes/`, and plugin CSS/JS are
+deleted after the last page that references them is regenerated.
+
+**Why now**: Decision 013 committed to content-as-data and the M4
+pipeline is real — `regenerate-posts.js` renders all 3,651 posts from
+JSON today. But it renders them into the *old* Fluida shell, so every
+improvement so far (fragments, the /meet/ widget) has been bolted onto
+a 2016 theme. A representative post is 92 KB of which the article is
+4.6 KB; it ships 16 scripts, 7 stylesheets and no structured data.
+Converting the templates is the smallest change that fixes page
+weight, mobile layout, AI/Google readability and maintainability at
+once, and it is the only path where the admin tools stop doing HTML
+surgery.
+
+**Constraints carried forward**: Decision 002 (every URL keeps
+working; feed GUIDs unchanged), no content rewrites (bodies rendered
+verbatim from JSON), no build framework (plain `node scripts/*.js`,
+no `node_modules`), free GitHub Pages + Actions only.
+
+**Phasing** (each phase = regenerate + one commit; see
+`docs/MODERNIZATION-AUDIT.md` §4 for the full table):
+P0 SEO plumbing → P1 post template → P2 archive/homepage renderer →
+P3 pages + feeds → P4 delete WordPress runtime, Markdown twins →
+P5 admin tools re-pointed at JSON.
+
+**Open sub-decisions (Ben)**: D-1 design variant, D-2 sidebar vs no
+sidebar, D-3 keep all 389 `/page/N/` URLs, D-4 Markdown twins, D-5
+allow training bots, D-6 delete `wp-includes/` + plugin/theme dirs
+(−52 MB; size-impact entry required by CLAUDE.md).
+
+**Alternatives considered**:
+- *Adopt Eleventy/Astro*: rejected — adds a dependency and a second
+  content model for no capability the existing renderer lacks;
+  revisit if the renderer grows past ~1,500 lines.
+- *Keep Fluida, keep patching*: rejected — this is the status quo the
+  audit was asked to end.
+- *Client-side rendering*: already rejected at Decisions 001/013.
+
+**Trade-offs**: One more full-tree churn (every page regenerated
+once per phase). Fluida's visual identity (header image, blue
+accent) is replaced; the header image and tagline are queued for
+Ben's call (queue B-2, B-3) rather than silently dropped.

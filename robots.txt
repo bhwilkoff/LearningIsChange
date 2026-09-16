@@ -1,0 +1,31 @@
+# learningischange.com
+# Public archive: everything is crawlable, including AI search and
+# training bots. Only the admin tools and WordPress-era runtime are
+# excluded. See docs/MODERNIZATION-AUDIT.md for the reasoning.
+
+User-agent: *
+Disallow: /admin/
+Disallow: /new/
+Disallow: /edit/
+Disallow: /update/
+Disallow: /remove/
+Disallow: /rss-creator/
+Disallow: /podcast-rss/
+Disallow: /menus/
+Disallow: /links/
+Disallow: /database/
+Disallow: /templates/
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /register/
+Disallow: /lostpassword/
+Disallow: /resetpass/
+Disallow: /__qs/
+
+Sitemap: https://learningischange.com/sitemap.xml

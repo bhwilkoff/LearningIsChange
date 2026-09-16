@@ -17,6 +17,15 @@
 
 ---
 
+## Modernization audit (/loop, started 2026-09-16)
+
+Living doc: `docs/MODERNIZATION-AUDIT.md`. Proposal: `DECISIONS.md`
+Decision 014 (awaiting Ben). Ben's review queue is §5 of the audit.
+Tick 1 shipped `robots.txt` + `sitemap.xml` (`scripts/generate-sitemap.js`).
+Note: M4 backfill + post regenerator are done (checkboxes below are stale).
+
+---
+
 ## /meet/ — in-person networking card (added 2026-09-16)
 
 Top-level `/meet/` is the "hand this to someone at an event" page:
