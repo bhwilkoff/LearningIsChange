@@ -543,11 +543,17 @@ resolves them on its own.)*
   `/links/` and the shared `admin/lib/database.js` (`isLive`,
   `fetchAllPosts`) now skip removed posts. All 11 tools are on the JSON
   pipeline; P5 is complete.
-  **Next**: `/simplify` pass over `scripts/` + `templates/` (shared
-  head partial for the four page templates, duplicated skip lists in
-  `generate-sitemap.js`/`check-permalinks.js`, `render-shell.js` file
-  list); then a decision batch for Ben on the open queue items (A-6,
-  B-5, C-1, C-3, C-8, C-10, C-11, D-3). promote
+  **Next**: see tick 25.
+- **2026-09-16 · tick 25 (simplify scripts/templates)** —
+  `templates/partials/head.html` (icons, fonts, stylesheets) replaces
+  the block duplicated in the four page templates via `{{head_common}}`;
+  `NON_PUBLIC_DIRS` in `shell.js` replaces the two copies in
+  `generate-sitemap.js`/`check-permalinks.js`; `signalTerms()` replaces
+  the hand-written noise filters in the post renderer. Posts render
+  byte-identical; archives/pages gained the `apple-touch-icon` line
+  (4,997 files) — the only diff.
+  **Next**: decision batch for Ben on the open queue items (A-6, B-5,
+  C-1, C-3, C-8, C-10, C-11, D-3); then act on the answers. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

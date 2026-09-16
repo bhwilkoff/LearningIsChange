@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   REPO_ROOT, SITE, SITE_NAME, AUTHOR, TAGLINE, NOISE_TERMS, escapeHtml, escapeAttr, describe, dates, terms,
-  firstImage, plainText, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, slugify,
+  firstImage, plainText, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, slugify, headCommon,
 } from './lib/shell.js';
 
 const args = process.argv.slice(2);
@@ -34,7 +34,7 @@ const T_HOME = fs.readFileSync(path.join(REPO_ROOT, 'templates', 'home.html'), '
 const ALL = loadAllPosts();                 // chronological
 const NEWEST = [...ALL].reverse();          // newest first
 const TAX = loadTaxonomies();
-const SHELL = { nav: nav({ active: 'blog' }), rail: rail(ALL, TAX), footer: footer() };
+const SHELL = { nav: nav({ active: 'blog' }), rail: rail(ALL, TAX), footer: footer(), head_common: headCommon() };
 const NAV_PLAIN = nav({ active: '' });
 const PROTECTED = new Set(JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'database', 'permalinks.json'), 'utf8')).urls);
 

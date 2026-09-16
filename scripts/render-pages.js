@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   REPO_ROOT, SITE, SITE_NAME, AUTHOR, DEFAULT_IMAGE, escapeHtml, escapeAttr, describe, dates, plainText,
-  firstImage, loadAllPosts, loadTaxonomies, nav, rail, footer, fill,
+  firstImage, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, headCommon,
 } from './lib/shell.js';
 
 const APPLY = process.argv.includes('--apply');
@@ -25,7 +25,7 @@ const PAGES = (Array.isArray(raw) ? raw : raw.pages || Object.values(raw)).filte
 const TOOL_PATHS = new Set(['/archive-sync/', '/database/', '/makedatabase/', '/new/', '/rss-creator/', '/update/', '/edit/', '/remove/', '/admin/', '/search/', '/links/', '/menus/', '/podcast-rss/']);
 
 const ALL = loadAllPosts();
-const SHELL = { nav: nav({ active: '' }), rail: rail(ALL, loadTaxonomies()), footer: footer() };
+const SHELL = { nav: nav({ active: '' }), rail: rail(ALL, loadTaxonomies()), footer: footer(), head_common: headCommon() };
 const urlOf = (p) => (p.url || '/' + p.path.replace(/index\.html$/, '')).replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/');
 
 function allPostsIndex() {

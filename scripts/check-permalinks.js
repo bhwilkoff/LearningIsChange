@@ -17,6 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { NON_PUBLIC_DIRS } from './lib/shell.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(HERE, '..');
@@ -28,13 +29,7 @@ const args = process.argv.slice(2);
 const SNAPSHOT = args.includes('--snapshot');
 const ALLOW_REMOVALS = args.includes('--allow-removals');
 
-// Same exclusions as generate-sitemap.js: tooling, data, WordPress runtime.
-const SKIP_DIRS = new Set([
-  '.git', 'node_modules', 'docs', 'templates', 'scripts', 'database',
-  'admin', 'new', 'edit', 'update', 'remove', 'archive-sync',
-  'rss-creator', 'podcast-rss', 'menus', 'links', 'database-generator',
-  'wp-admin', 'wp-includes', 'wp-content', '__qs',
-]);
+const SKIP_DIRS = NON_PUBLIC_DIRS;
 
 function* walk(dir, rel = '') {
   let entries;

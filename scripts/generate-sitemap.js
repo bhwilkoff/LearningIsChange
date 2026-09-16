@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { NON_PUBLIC_DIRS } from './lib/shell.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(HERE, '..');
@@ -21,15 +22,7 @@ const SITE = 'https://learningischange.com';
 const OUT = path.join(REPO_ROOT, 'sitemap.xml');
 const APPLY = process.argv.includes('--apply');
 
-// Not public content: admin tools, WordPress runtime, data, templates,
-// and the auth stubs WordPress left behind.
-const SKIP_DIRS = new Set([
-  '.git', 'node_modules', 'docs', 'templates', 'scripts', 'database',
-  'admin', 'new', 'edit', 'update', 'remove', 'archive-sync',
-  'rss-creator', 'podcast-rss', 'menus', 'links', 'database-generator',
-  'wp-admin', 'wp-includes', 'wp-content', '__qs',
-  'login', 'logout', 'register', 'lostpassword', 'resetpass',
-]);
+const SKIP_DIRS = NON_PUBLIC_DIRS;
 const EXTRA_FILES = ['support.html'];
 
 function* walk(dir, rel = '') {

@@ -18,9 +18,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  REPO_ROOT, SITE, DEFAULT_IMAGE, cleanUrl, escapeHtml, escapeAttr, describe, dates, terms,
+  REPO_ROOT, SITE, DEFAULT_IMAGE, cleanUrl, escapeHtml, escapeAttr, describe, dates, signalTerms,
   wordCount, readingMinutes, firstImage, loadAllPosts, loadTombstones, loadTaxonomies, neighbors, related,
-  nav, rail, footer, fill, jsonLdPost, markdownTwin,
+  nav, rail, footer, fill, jsonLdPost, markdownTwin, headCommon,
 } from './lib/shell.js';
 
 const args = process.argv.slice(2);
@@ -49,8 +49,8 @@ function renderPost(post, index) {
   const url = post.url;
   const absUrl = SITE + url;
   const d = dates(post);
-  const cats = terms(post, 'categories').filter((c) => c.slug !== 'uncategorized' && c.slug !== 'ben-wilkoff' && c.slug !== 'blog-2');
-  const tags = terms(post, 'tags').filter((t) => t.slug !== 'ben-wilkoff');
+  const cats = signalTerms(post, 'categories');
+  const tags = signalTerms(post, 'tags');
   const description = describe(post);
   const { prev, next } = neighbors(ALL, index);
   const rel = related(ALL, index, 4);
@@ -73,7 +73,7 @@ function renderPost(post, index) {
     prev_link: prev ? `<a href="${escapeAttr(prev.url)}" class="prev" rel="prev"><small>← Previous</small><strong>${escapeHtml(prev.title || 'Untitled')}</strong></a>` : '<span></span>',
     next_link: next ? `<a href="${escapeAttr(next.url)}" class="next" rel="next"><small>Next →</small><strong>${escapeHtml(next.title || 'Untitled')}</strong></a>` : '<span></span>',
     related: rel.length ? `<section class="related"><h2>Related</h2><ul class="post-list">${rel.map(listItem).join('')}</ul></section>` : '',
-    nav: NAV, rail: RAIL, footer: FOOTER,
+    nav: NAV, rail: RAIL, footer: FOOTER, head_common: headCommon(),
   };
   // content last: a body that happens to contain "{{...}}" must never be expanded
   const html = fill(TEMPLATE, values).split('{{content}}').join(post.content || '');
