@@ -8,9 +8,10 @@ import * as vault from '/admin/lib/vault.js';
 import * as oauth from '/admin/lib/oauth.js';
 import * as render from './views/render.js';
 import * as settings from './views/settings.js';
+import * as posts from './views/posts.js';
 
 const VIEWS = {
-  posts: { title: 'Posts', soon: 'A2' }, pages: { title: 'Pages', soon: 'A2' }, terms: { title: 'Terms', soon: 'A2' },
+  posts, pages: { title: 'Pages', soon: 'A2' }, terms: { title: 'Terms', soon: 'A2' },
   media: { title: 'Media', soon: 'A2' }, render, settings,
 };
 const ORDER = ['posts', 'pages', 'terms', 'media', 'render', 'settings'];

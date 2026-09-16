@@ -665,10 +665,25 @@ appended here as ticks complete.
   → plaintext, "Sign in with GitHub" in Settings (shows "not configured"
   until the App exists). Creating the App hit GitHub's sudo-mode 2FA
   prompt, which only Ben can approve.
-- **Next (blocked on Ben)**: approve the "Confirm access" prompt in the
-  open Chrome tab, then: create the App per the README, install it on
+- **2026-09-16 · A1.6 progress** — GitHub App **created**
+  (`learning-is-change-admin`, Client ID `Iv23liDVNY6QG2siOarv`;
+  callbacks for the site and localhost, webhook off, Contents +
+  Actions read/write, Metadata read, expiring tokens, this account
+  only). Cloudflare dashboard needs Ben's sign-in — blocked there.
+- **2026-09-16 · A2.1 done** — `admin/app/store.js` (manifest,
+  taxonomies, pages, parallel shard loading with ETag cache,
+  `posts()`/`post(url)`, `savePost`/`savePage` via Git Data commits
+  with canonical terms) and the **Posts** view (search over title/URL/
+  body, year/category/status filters, 50-per-page, edit links to
+  `#/posts/edit/<url>`). Verified: 3,651 posts, filters correct.
+- **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
-  secrets, fill `CONFIG.auth`, test sign-in end to end. Previous item — create the GitHub App
+  secrets, fill `CONFIG.auth`, test sign-in end to end. In parallel, A2.2: the
+  post editor (`#/posts/edit/<url>`: title, date, terms via
+  `admin/lib/pickers.js`, body via `admin/lib/editor.js`, excerpt),
+  **exact preview** (fetch `templates/post.html` + partials, render with
+  `scripts/lib/core.js` in an iframe), save via `store.savePost` +
+  dispatch render(url). Previous item — create the GitHub App
   (callback `https://learningischange.com/admin/app/`, permissions
   Contents + Actions on this repo, user authorization, expiring
   tokens), deploy the Worker (`workers/github-auth/`, code in repo;
