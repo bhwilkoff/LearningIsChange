@@ -658,7 +658,17 @@ appended here as ticks complete.
   token". Round-trip tested in the browser. Decision 016 recorded:
   GitHub App sign-in via a Cloudflare Worker is next (A1.6), created
   through Chrome per Ben's authorization.
-- **Next**: A1.6 — GitHub App sign-in: create the GitHub App
+- **2026-09-16 · A1.6 code done, creation pending Ben's 2FA** —
+  `workers/github-auth/worker.js` (+ README), `admin/lib/oauth.js`
+  (redirect flow with state check, sessionStorage session, silent
+  refresh), `CONFIG.auth` slots, token resolution order sign-in → vault
+  → plaintext, "Sign in with GitHub" in Settings (shows "not configured"
+  until the App exists). Creating the App hit GitHub's sudo-mode 2FA
+  prompt, which only Ben can approve.
+- **Next (blocked on Ben)**: approve the "Confirm access" prompt in the
+  open Chrome tab, then: create the App per the README, install it on
+  the repo, deploy the Worker in the Cloudflare dashboard with the
+  secrets, fill `CONFIG.auth`, test sign-in end to end. Previous item — create the GitHub App
   (callback `https://learningischange.com/admin/app/`, permissions
   Contents + Actions on this repo, user authorization, expiring
   tokens), deploy the Worker (`workers/github-auth/`, code in repo;

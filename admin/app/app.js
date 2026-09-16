@@ -5,6 +5,7 @@ import { getSettings, saveSettings } from '/admin/lib/auth.js';
 import { GitHubAPI } from '/admin/lib/github.js';
 import { CONFIG } from '/admin/lib/config.js';
 import * as vault from '/admin/lib/vault.js';
+import * as oauth from '/admin/lib/oauth.js';
 import * as render from './views/render.js';
 import * as settings from './views/settings.js';
 
@@ -18,8 +19,9 @@ export const ctx = {
   CONFIG,
   settings: () => getSettings(),
   save: (s) => saveSettings(s),
-  vault,
-  token() { return vault.unlockedToken() || getSettings().githubToken || ''; },
+  vault, oauth,
+  // token resolution: GitHub sign-in (short-lived) → unlocked vault → legacy plaintext
+  token() { const o = oauth.session(); return (o && Date.now() < o.expires_at ? o.access_token : '') || vault.unlockedToken() || getSettings().githubToken || ''; },
   api() {
     const s = getSettings(); const token = this.token();
     if (!token) return null;
@@ -61,6 +63,9 @@ function route() {
 function legacyLink(name) {
   const m = { posts: '<a href="/new/">New post</a> · <a href="/edit/">Edit</a> · <a href="/remove/">Remove</a> · <a href="/update/">Mass update</a>', pages: '<a href="/edit/">Edit</a>', terms: '<a href="/admin/db-maintenance/">DB maintenance</a>', media: '<a href="/admin/dedup/">Dedup</a> · <a href="/links/">Links</a>' };
   return m[name] || '';
+}
+if (location.search.includes('code=')) {
+  oauth.completeSignIn().then(() => { location.hash = '#/settings'; route(); ctx.status('Signed in with GitHub'); }).catch((e) => alert(e.message));
 }
 document.getElementById('app-lock').onclick = async () => { if (vault.isUnlocked()) vault.lock(); else await ctx.ensureUnlocked(); ctx.refreshLock(); route(); };
 ctx.refreshLock();

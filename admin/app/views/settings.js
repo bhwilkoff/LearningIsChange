@@ -1,4 +1,10 @@
 export const title = 'Settings';
+function oauthHtml(ctx) {
+  const o = ctx.oauth;
+  if (!o.configured()) return `<div class="msg warn">Sign in with GitHub is not configured yet (Decision 016: GitHub App + Worker). Use a token below.</div>`;
+  if (o.signedIn()) { const s = o.session(); return `<div class="msg">✓ Signed in with GitHub — token expires ${new Date(s.expires_at).toLocaleTimeString()}${s.refresh_token ? ', refreshes automatically' : ''}. <button class="btn" id="s-signout" style="margin-left:8px;padding:4px 10px">Sign out</button></div>`; }
+  return `<div class="row" style="margin-bottom:12px"><button class="btn primary" id="s-signin">Sign in with GitHub</button><small style="color:var(--text-secondary)">Short-lived token, this repo only. No token to paste.</small></div>`;
+}
 function vaultHtml(ctx) {
   if (!ctx.vault.hasVault()) return '';
   return `<div class="msg">🔐 A token is stored <b>encrypted</b> in this browser (${ctx.vault.isUnlocked() ? 'unlocked for this tab' : 'locked'}). Saving a new token + passphrase replaces it.</div>`;
@@ -11,6 +17,7 @@ export function render(root, ctx) {
     <div class="grid">
       <section class="card">
         <h2>GitHub</h2>
+        <div id="s-oauth">${oauthHtml(ctx)}</div>
         <div id="s-vault">${vaultHtml(ctx)}</div>
         <label class="field">Token
           <input type="password" id="s-token" value="${ctx.esc(s.githubToken)}" autocomplete="off" placeholder="github_pat_…">
@@ -56,6 +63,8 @@ export function render(root, ctx) {
     }
     ctx.save(s2); msg(s2.githubToken && !s2.rememberToken ? 'Saved for this session (not remembered).' : 'Saved.');
   };
+  root.querySelector('#s-signin')?.addEventListener('click', () => ctx.oauth.signIn());
+  root.querySelector('#s-signout')?.addEventListener('click', () => { ctx.oauth.signOut(); root.querySelector('#s-oauth').innerHTML = oauthHtml(ctx); ctx.status(''); });
   root.querySelector('#s-forget').onclick = () => { if (!confirm('Forget the stored token (vault and plaintext)?')) return; ctx.vault.forget(); const s2 = read(); s2.githubToken = ''; ctx.save(s2); root.querySelector('#s-token').value = ''; root.querySelector('#s-vault').innerHTML = vaultHtml(ctx); ctx.refreshLock(); msg('Token forgotten.'); };
   root.querySelector('#s-test').onclick = async () => {
     const s2 = read(); ctx.save(s2);

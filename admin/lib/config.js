@@ -18,6 +18,11 @@ export const CONFIG = {
     // without the Jetpack plugin being active.
     photon: ['https://i0.wp.com', 'https://i1.wp.com', 'https://i2.wp.com'],
   },
+  auth: {
+    // GitHub App sign-in (Decision 016). Filled in once the App and Worker exist.
+    clientId: '',
+    worker: '',   // e.g. https://lic-github-auth.<account>.workers.dev
+  },
   paths: {
     uploads: 'wp-content/uploads',
     database: 'database',
