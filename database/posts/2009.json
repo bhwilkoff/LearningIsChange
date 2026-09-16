@@ -640,7 +640,59 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "351",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-01-09T22:47:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Well put, Ben!  Can I send you a copy of my book?  I would love your feedback.  Though it assumes that a school is pretty much structurally what it is today, it extends the learning and how to learn outward in important ways for our work.  Have you read Malcom GLadwell’s article in the New Yorker about what makes a good teacher?  He has some REALLY interesting points.  His thoughts on student/teacher interaction are particularly key…and not far from what you are saying here…then he goes on to reinvent the teacher training process.  Great food for thought!</p>\n<p><a href=\"http://www.newyorker.com/reporting/2008/12/15/081215fa_fact_gladwell?currentPage=all\" rel=\"nofollow ugc\">http://www.newyorker.com/reporting/2008/12/15/081215fa_fact_gladwell?currentPage=all</a></p>"
+        },
+        {
+          "id": "352",
+          "author": "Patrick",
+          "author_url": "http://chalkdust101.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/96d3e97d6e0a5ed44c0ac9989810d7149abdac58d33b0037362ee44b194bf0d4?s=70&d=mm&r=g",
+          "date": "2009-01-10T01:09:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben,</p>\n<p>Very apropos to my day today.  What we connect to in the end is less and less about the technology, or for that matter the textbook.  I had the opportunity today to present to a group of teachers and share ideas, problems, solutions, and laughs.  Yes, we were showing them tools that would accomplish some of the tasks they had in mind, but we were also building relationships for future support and learning.</p>\n<p>I can’t help but wonder, though, would I still want just my local connections?</p>"
+        },
+        {
+          "id": "353",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-01-10T03:01:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@leslie I would love to read your book and give you feedback. Thanks so much for your encouragement. I am going to look further into the articles you mentioned. Let’s have another meeting soon.</p>"
+        },
+        {
+          "id": "354",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-01-10T03:09:10+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@patrick I don’t think that we will ever have to give up our larger community, no matter how many tools we lose because people can’t find a way to monetize Web 2.0. The whole point of networked learning is that the connections can come from anywhere. We are looking for value, not location.</p>\n<p>I do think that the following question is a good idea to ask, though: Where does our network live?</p>"
+        },
+        {
+          "id": "355",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-01-10T21:14:51+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Let’s do!  though January is NUTS for me…how’s your february?</p>"
+        }
+      ]
     },
     {
       "id": 1034,
@@ -715,7 +767,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "356",
+          "author": "Chris Lehmann",
+          "author_url": "http://www.practicaltheory.org/",
+          "avatar": "https://secure.gravatar.com/avatar/e4c14d02b21d934805c321ec2c1bf1b6b7ff8a744967df7b871a100dc34ec995?s=70&d=mm&r=g",
+          "date": "2009-01-11T15:19:50+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Well… I know this school in Philly that will be hiring for Fall ’09. 😉</p>"
+        }
+      ]
     },
     {
       "id": 1036,
@@ -1059,7 +1123,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "358",
+          "author": "Rick Tanski",
+          "author_url": "http://ricktanski.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/29374cc73077f43d1e6d3e0fd5b3047334119c3c195aa1bb048b2f756b29ea46?s=70&d=mm&r=g",
+          "date": "2009-01-16T23:24:04+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>What the commercial betrays behind a slick-sounding apology is that it’s a marketing attempt to generate revenue. They aren’t competing for the talent and edification of students; they’re competing for the students themselves. They couldn’t make those sorts of commercials without their student cash cows. Unfortunately, neither can we in public education. Our educational systems (especially in Colorado), however well-intentioned, rise and fall on the fickleness of tax revenues and varying budgets. Ultimately that’s where every mission statement of every district has an invisible * -as long as we have the $ to do it. Despite some pretty heated rhetoric of late about the importance of reestablishing the preeminence of education, it’s one off the first on the chopping block when times get tough. We need to look no further than the $222 million in proposed education budget cuts submitted to help the $600 million shortfall. Education in Colorado counts for $3.1 billion of the $19.2 billion state budget –about 16%. However, education gets to shoulder 37% of the deficit? Really?! It’s exactly times like this where clichés often prove themselves. Here, actions speak louder than words. I’m gradually becoming more convinced that the only people who really care about education are the educators themselves and then, not all of them. It certainly feels like we’re fooling ourselves, breathlessly hoping for a new day when collectively we’ll all unite for better education –for our kids, right? Right?!</p>\n<p>This has certainly digressed into a rather pessimistic rant and education hasn’t done itself any favors over the years, but I think we’ve lost our focus –and allowed our public to become lost as well. I’m reminded of a passage from Dr. Bill Cook’s book: “The purpose of education  in a free society must be to liberate the full powers of the individual toward the common good…The common good is not served by the loss of any person…No democracy has any business accepting, much less supporting, any endeavor that does not hold the good of the individual  and the good of the society to be the same…To put it another way, education must not be the means by which individuals pursue their own goals to the detriment of others…And it is not a contest to be won…it is on this point that democracy and capitalism collide” (p 129-130, Unencorporating Education).</p>"
+        },
+        {
+          "id": "359",
+          "author": "Rick Tanski",
+          "author_url": "http://ricktanski.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/e79db8f26732adbb5431e7439eab54f60af533ed1bce93060f97114715d7d9d2?s=70&d=mm&r=g",
+          "date": "2009-01-17T09:02:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Darn you, Wilkoff! You got me all fired up yesterday with this post and made me break my New Year’s resolution to give up blogging ;-D. I went and made a post that takes into account the updates from the governor’s budget cuts from today and end up accuse him of violating the “sacred trust” he claims he has with us: <a href=\"http://tinyurl.com/99fa9k\" rel=\"nofollow ugc\">http://tinyurl.com/99fa9k</a>.</p>"
+        }
+      ]
     },
     {
       "id": 1044,
@@ -1209,7 +1295,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "360",
+          "author": "Graham Wegner",
+          "author_url": "http://gwegner.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/d3946e2cceefaea83816310f2348eb67a162cfce6bc8d11777cc8b869f6b06ea?s=70&d=mm&r=g",
+          "date": "2009-01-18T10:51:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben, there is definitely no problem with trying to get your child into a school that you believe will benefit their education. My post was just trying to talk about the murky thinking of many parents and how curriculum, teaching methodologies and assessment are not even considerations for these sometime expensive and disruptive decisions. And many parents who make these moves based on “I hear it’s a good school” will also jump at simplistic “league table” calculations based on periodic bubble test results – rather than actually visit the school, look in the actual classrooms and ask probing questions about school programs, teaching methods and future directions. I totally agree about working with your child’s school as well. I’ve been a member of our school’s <a href=\"http://www.decs.sa.gov.au/governance/pages/Local/Role/?reFlag=1\" rel=\"nofollow\">Governing Council</a> since our eldest started five years ago and believe that I have had a positive influence in a number of areas including a renewed focus on effective educational technology.</p>"
+        }
+      ]
     },
     {
       "id": 1047,
@@ -1359,7 +1457,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "361",
+          "author": "Dan Meyer",
+          "author_url": "http://blog.mrmeyer.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f232b7e94441fc7f2954589da6d27cd3435e45ab6cc5d9c0ac7f1296be90cea9?s=70&d=mm&r=g",
+          "date": "2009-01-22T17:33:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hi Ben, I gave this a shot with my students last year. Here are links to the <a href=\"http://blog.mrmeyer.com/?p=556\" rel=\"nofollow\">project assignment</a> and the <a href=\"http://blog.mrmeyer.com/?p=848\" rel=\"nofollow\">post-mortem</a>. Things did not go exactly as planned.</p>"
+        }
+      ]
     },
     {
       "id": 1052,
@@ -1700,7 +1810,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "363",
+          "author": "Sheri Edwards",
+          "author_url": "http://askwhatelse.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/9811221ef0d6afd5dfa573f660b3c5eacb29df064ac88a87f993ff53a680e240?s=70&d=mm&r=g",
+          "date": "2009-01-24T21:36:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>A Reflection<br>\nBlogged at: <a href=\"http://askwhatelse.wordpress.com/2009/01/24/what-do-you-want-to-be-when-you-grow-up/\" rel=\"nofollow ugc\">http://askwhatelse.wordpress.com/2009/01/24/what-do-you-want-to-be-when-you-grow-up/</a></p>\n<p>Idea Six embodies the heart of education. Whether at home or in school, we strive in our human capacity to know ourselves, our talents, our skills. We want to improve at that which we show skill. We want to learn how the world works, and find avenues through which our travel adds to our strengths as we search for a way to work throughout our lives in careers that hopefully reflect our abilities.</p>\n<p>I know; we have tests to pass and standards to teach. Why? So students know skills to be successful in today’s ever-changing world so our country stays strong and viable. Standards in content provide the background to move forward in developing our ideas and questions. Standards in process provide heuristic strategies to create our stance and solutions. They guide us in our search for how the world works.</p>\n<p>But does everyone need to know everything, and pass the same test to prove it? If I buy a new electric car, I expect whichever one I drive home will be the same quality and standard that my neighbor’s car has. However, my neighbor will have different places to go, different ways to drive, and different purposes for his car. The thing is standardized; the people are not.</p>\n<p>Isn’t that what we have forgotten in education? the people teaching and the people learning. The people use the standards to reach personal goals, and they grow with each goal in different ways. Remember the adage, “Different strokes for different folks.” When we standardize the people part, we dilute and detract from the possible proficiencies of each person; we funnel the future into today’s tenets instead of feeding the future with the informed heuristic possibilities of lifelong learners, whose individual and collective competencies could solve unimaginable problems.</p>\n<p>The word “education” derives from the Latin “educere — lead out.” Education should lead students to find themselves, to strengthen what they do well, to discover hidden talents, and to learn from others who use their talents well so that students, too, become productive, creative citizens. Students don’t need to know everything, and they will learn what they need to know — when it’s needed to learn about themselves or to learn how things work as they create and interact in learning quests of which they have chosen the focus and in which the standards provide background, guidance, and focus.</p>\n<p>At home, students choose where, what, and why to learn; the interactive Internet draws them to that which captures their interests and strengths. Unless education mirrors that interactive choice, leading students to known and hidden talents, educational institutions will find resistance from students; it won’t serve the needs to learn and use their own strengths.</p>\n<p>Connecting students with people who are doing what is possible — or could be possible — leads students to knowing their own talents; the Internet provides a river of connections in simple texts, expert queries (”Ask a _____”), interactive projects, collaborative quests, and real-time or archived media interactions. How many classrooms today allow this interactive, student-focused curricula that leads students to “knowing what they want to do with their lives?”</p>\n<p>How would educators do that? The standards provide the harbor, a reference point in content and process; the educators and students decide the direction of their journey into the river, planning the places and prospects that contain the current and forge the flow of learning, creating their own ports of explorations and expertise to which others connect. These ports are personal docks displaying each student’s possibilities and proficiencies — a lifelong legacy of learning. Moor to the dock to discover the scope of the scholarship and the compass of the course; a test isn’t required. I think classrooms would be more joyful, inclusive, and active places if we help and connect people in their process of developing their possibilities; classrooms would be places where students WANT to go — to augment and evince their odyssey. Wouldn’t that be something?</p>\n<p>+++++++++++++++++++++++++++++++++++++++++++++++<br>\nA Possible Outline</p>\n<p>The Start:</p>\n<p>A Discipline</p>\n<p>The Standards in Content and Process</p>\n<p>Standard-Summarizing Scenarios</p>\n<p>The Quest:</p>\n<p>Your interest?</p>\n<p>Your reason?</p>\n<p>Your question?</p>\n<p>Your goal?</p>\n<p>Your knowledge?</p>\n<p>Your resources?</p>\n<p>Your plan?</p>\n<p>Your journey.</p>\n<p>Your reflection/revision/retracking.</p>\n<p>Your presentation [of the journey; of the learning; of standard (content and process) references; of breakthrough (discovery or obstacle) in thoughts, knowledge, standards, solutions; of collaboration; of peer review; of continuing questions and quests.]</p>\n<p>The End:</p>\n<p>There is none; it’s a lifelong process.</p>"
+        }
+      ]
     },
     {
       "id": 1061,
@@ -1779,7 +1901,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "365",
+          "author": "Marie Scearce",
+          "author_url": "http://mscearce.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/a228d32666c6272fed63a742f7b9b25c72681295298d5142e7ea1fdeca0abd50?s=70&d=mm&r=g",
+          "date": "2009-01-24T19:17:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks!  This was a great workshop.  Although I became snowed under about half-way through.  I feel like I’ve glimpsed the road ahead.</p>"
+        }
+      ]
     },
     {
       "id": 1062,
@@ -1844,7 +1978,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "367",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.soulycatholichs.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-01-25T19:00:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@Ben<br>\nI was able to attend your session.  It was great.  With the democratization you speak of regarding ideas i think it is important to be critical that not all ideas are as valuable as others.  If I want an opinion about how to fix my car the opinion of a mechanic is more valuable than that of florist.   In education every teacher has an opinion.  I don’t think they are all of equal weight.  I care much more about what great / good teachers think than the sage on the stage tech scared worksheet kings.  I agree everyone should be heard but some should be heard and quickly ignored.  I don’t mean to be harsh but if someone hasn’t done the research and thinking to bring merit to their idea they should be ignored.</p>"
+        }
+      ]
     },
     {
       "id": 1065,
@@ -2034,7 +2180,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "368",
+          "author": "Mr. Chase",
+          "author_url": "http://autodizactic.com/",
+          "avatar": "https://secure.gravatar.com/avatar/d99e4fee4b5c3f5db58593d27ecbf4b07e266f8e1ee31d1753ca2de4e3960b2f?s=70&d=mm&r=g",
+          "date": "2009-01-29T03:58:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>My initial response to your first question is to think of all the drafts and files I’ve lost over the years. For the things that were on deadline, I went back and re-created them. The act of re-creating pushed me to think about and re-connect thoughts.<br>\nBecause that learning was only a shadow in my mind, I was forced to examine what I wanted to do with the shreds of ideas that lingered. I worry that some of my students capture words or pictures or audio or video and think that because that initial learning has been saved, there’s on need to delve more deeply into the content.<br>\nA friend of mine tells the story of working for weeks on a paper for a college English class. I mean, she slaved over this thing. When she got to the class, the prof. told all the students to stand up with their papers in-hand and tear them up. “That,” the prof. told the class, “was your sh*tty rough draft.”<br>\nMy friend tells me it’s changed how she’s looked at all initial efforts since then.<br>\nIf we can save everything, do we run the risk of never seeing anything as a “sh*tty rough draft?”</p>"
+        },
+        {
+          "id": "369",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-01-29T04:32:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I believe in the crappy first draft. I enjoy them, even.</p>\n<p>I agree that students may stop short when they know that everything is being captured, but I think if the expectations change, if all learning is captured, there is no reason to not push further.</p>\n<p>If students can get comments and feedback on every draft… If they are able to show their thinking, won’t it get better?</p>\n<p>My question to you is: If your friend was able to publish that first draft and get feedback from each of his classmates on that paper, do you think it would be better than simply going back into his dorm room and working on it some more in isolation.</p>\n<p>It isn’t that I want to simply archive everything. I want to create a conversation around every archive as well.</p>"
+        },
+        {
+          "id": "370",
+          "author": "Mr. Chase",
+          "author_url": "http://autodizactic.com/",
+          "avatar": "https://secure.gravatar.com/avatar/d99e4fee4b5c3f5db58593d27ecbf4b07e266f8e1ee31d1753ca2de4e3960b2f?s=70&d=mm&r=g",
+          "date": "2009-01-29T04:55:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I don’t know. At some point, I need to provide my own feedback rather than looking to others for what they think and suggest. I keep a journal which I use to refine my thinking on all sorts of thoughts. It would certainly be a different work were I to have someone else look at it and give me feedback, but I don’t want that feedback. I take joy and see great value in providing my own feedback. At times, only one voice is necessary.</p>\n<p>Sometimes, too, writing/creation gets to a place where everything should be dumped in order to let the original idea have room to grow. Rarely are we bold enough with feedback to encourage such pruning.</p>\n<p>As to the idea of creating conversations around every archive, I worry about the pressure that creates. Some ideas are born to die. I worry, sometimes, about how much we like to talk ideas to death rather than letting them slip peacefully away. I see immense value in archiving many ideas. I will be at the front of the parade for peer editing, defense of thinking, carousel feedback and the like – so long as we’re throwing parades for Independence Day-sized ideas and not every Arbor Day and Groundhog Day that rolls around.</p>"
+        }
+      ]
     },
     {
       "id": 1071,
@@ -2101,7 +2279,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "371",
+          "author": "matt montagne",
+          "author_url": "http://middleschoolblog.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/71868d879b8a12a70c6e79a45403a02e23794cfeb497ca573046a19b488c652f?s=70&d=mm&r=g",
+          "date": "2009-01-30T04:50:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben…what is the VLE that you are using?? Is it hosted by your school/district, or is it hosted on an external provider?  That is the one thing I like about moodle…granted it may not be the most elegant looking platform, but it is speedy even on a six year old server that was supposed to be put out to pasture (<a href=\"http://middleschoolblog.blogspot.com/2009/01/moodle-mahara-eportolio-mahoodleout.html\" rel=\"nofollow ugc\">http://middleschoolblog.blogspot.com/2009/01/moodle-mahara-eportolio-mahoodleout.html</a> ).</p>"
+        },
+        {
+          "id": "372",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-01-30T04:57:35+00:00",
+          "depth": 2,
+          "parent": "371",
+          "html": "<p>Thanks so much for the comment. I don’t think I am at liberty to say what VLE we are using at the moment. Perhaps next week. I know that owning your own space is better than the alternative, but I have to run whatever we choose. We went with this particular one because of its promise, but it just hasn’t panned out. I am now kicking myself for being either shortsighted or too trusting. Thanks for the link to your hard work. Please tell me that there is still hope.</p>"
+        }
+      ]
     },
     {
       "id": 1072,
@@ -2397,7 +2597,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "374",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-02-03T21:26:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben!<br>\nI too believe in the transformative POWER of learning that can occur through carefully chosen literature and conversation.  That’s what my dissertation was all about!  Isn’t it amazing how kids can come out of themselves and get real when they have a character with complex events to jump off of?  In my dissertation the kids talked about alcoholism and racism and fear.  Responsibility and rage and empathy.  POWERFUL.  Things that were in their lives but in an average classroom wouldn’t have been ALLOWED or acknowledged in school.</p>\n<p>Thanks for sharing this book, this boy, this learning tool and experience.</p>"
+        }
+      ]
     },
     {
       "id": 1079,
@@ -2454,7 +2666,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "373",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-02-03T21:18:47+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Yes! I am grappling with how learning is SO individual…and how to deal with that in professional development settings, but also in an average classroom of today.  But what you are saying is connected to that.  See it’s making connections that matter- connecting people to these ideas, connecting ideas to ideas, connecting people to people who share similar ideas and people to people who are very different too.</p>\n<p>Oftentimes we see our own learning as our own personal journey….maybe nobody cares, it’s ours, we take responsibility for it, we enjoy it, engage in it daily and often keep it there in a personal space.  But when we share it and extend it outward we can see the connections.  We can see the similarities in thought.  We feel connected and expand.  So will the people in those spheres that you connect with.  Like me.  This is probably old news to a dedicated blogger like you.  Because that’s what blogging is all about, right?  anyway- I think what you are saying is important.  there is lots to learn from all kinds of people if only we connect and expand our personal learning outward.</p>"
+        }
+      ]
     },
     {
       "id": 1081,
@@ -2717,7 +2941,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "375",
+          "author": "Michael Wacker",
+          "author_url": "http://mwacker.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/da377bbcfb26da135c6a500c6a9b5371d9c197b81983ee29f7eb4b2725593922?s=70&d=mm&r=g",
+          "date": "2009-02-07T16:29:21+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>True, true… but when the tool triggers ideas that’s a winner too though. i.e voicethread triggering spec ed. reading responses, conference tools extending walls outside a classroom (palbee, dimdim, twiddla), RSS feeds, blogs, motivating and inspiring teachers, TED talks, Youtube, Schooltube, etc inspiring kids to publish. Wikis, envoking global collaboration, PLN’s lifting spirits and sharing ideas.<br>\nThere are so many tools, we can’t forget that sometimes this is the carrot that sparks motivation..e.specially in a K-6 environment. 🙂</p>"
+        },
+        {
+          "id": "376",
+          "author": "Dave",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/fecd2e8a36254d407010c87fdbd6bb9a1a271fafccd84d996a54521072aa2e23?s=70&d=mm&r=g",
+          "date": "2009-02-09T17:50:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great post. I feel like our tech people are often stretched thin enough that they have to choose between teaching the ideas and teaching the tools, and teaching the tools is what gets everyone through to tomorrow. :/  A good deal of the excitement about teaching students “21st century skills” is probably because a lot of us are so tired of working with people who don’t ever learn the underlying ideas.</p>"
+        }
+      ]
     },
     {
       "id": 1088,
@@ -2777,7 +3023,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "378",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-02-08T17:27:57+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>That’s a tall order for a word…but what I’ve been thinking lately is framework… I want them to see the big picture and transform learning.  What about Framework?  Maybe it does both.  A framework is the big idea that surrounds the practice, but can include the practice too. A framework is like a web of connection in someways.  but maybe that’s too academic coming from “theoretical frame”  maybe we’d have to create a new word…hmmmm  I’m going to think about that some more.</p>"
+        }
+      ]
     },
     {
       "id": 1090,
@@ -2856,7 +3114,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "377",
+          "author": "Karen Szymusiak",
+          "author_url": "http://www.talkworthy.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/6c09beeeae3cae8a6661237a2c25669a8283fcac9721da7ce5e6719fa9ddfe23?s=70&d=mm&r=g",
+          "date": "2009-02-08T14:12:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great post.  I agree that students will have to know the tools and what they can do.  But the real transformation will come when the tools become platforms for thinking, sharing and inventing new ideas.</p>"
+        }
+      ]
     },
     {
       "id": 1092,
@@ -2994,7 +3264,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "379",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.soulycatholichs.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-02-11T12:22:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@ Ben<br>\nLooks like a pretty thorough presentation that follows all the rules of a good power point.  Do you mind if I borrow it for work with my staff.  I’ll give kudos to the creator of course.</p>"
+        }
+      ]
     },
     {
       "id": 1095,
@@ -3202,7 +3484,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "380",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-02-15T22:05:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Nice BEN!  Thanks this is SUPER helpful to me.  I’m going there RIGHT NOW!<br>\nNever again will I forget to check DPS email before I leave the house for a school visit only to get there and the teacher out sick!<br>\n🙂</p>"
+        }
+      ]
     },
     {
       "id": 1101,
@@ -3409,7 +3703,119 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "381",
+          "author": "Cassyt",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/5c9810c1b49f6690c110bf543152d21379b4c7bd8437aafc3ecd2d3769580d20?s=70&d=mm&r=g",
+          "date": "2009-02-17T15:20:39+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thank you for this post. I thought it was just me.</p>\n<p>FYI- One problem not solved to easily by technology: did you mean “elitism” or is “eletism” a word like “Edublarbification”?</p>"
+        },
+        {
+          "id": "382",
+          "author": "JenWagner",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/f6cd94d5c8170be2b5163e5381afea14ca2e81e71eba0b496f54f9c8737d3b7d?s=70&d=mm&r=g",
+          "date": "2009-02-17T17:36:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I found your post amusing and very accurate in what you shared.</p>\n<p>When asked recently what someone should bring to a popular tech conference, I suggested a “pin” to pop all the big egos that might be walking in.</p>\n<p>Not sure when the term “Expert” started happening within our network.  But if anyone is anything like me, I am learning as I go, lucky enough to have made some good guesses, narrowly missing people finding out I am paddling as fast as I can, and never ever would consider myself as being “There”……</p>\n<p>I guess my question back would be — “Where is there anyway?”</p>\n<p>Jen</p>"
+        },
+        {
+          "id": "383",
+          "author": "Jenny",
+          "author_url": "http://emdffi.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f39ac54a6e990061d6f58ac0412065fe22a7c8c5d45042cb4f43e3a78acf3023?s=70&d=mm&r=g",
+          "date": "2009-02-17T20:47:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This post made me laugh out loud and hang my head in shame. Causing me to do both in one fell sweep is fairly impressive.</p>\n<p>I wouldn’t have missed Educon for the world and I think it was a wonderful conference and I learned a lot. That said, I have to agree with you. I don’t think this sense of elitism is unique to this crowd, but it is something worth keeping in mind as we continue discussions.</p>"
+        },
+        {
+          "id": "384",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-02-17T21:30:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@Jenny, @Jen, @Cassyt Thanks so much for your comments. I know that other people recognize this too, but I don’t see it talked about that much. I tried to look in my Reader for similar blog posts, but it seems as though many of the people that I read have not identified this as a significant problem.</p>\n<p>I just don’t want to get too wrapped up in creating change to see the side effects of ego that come along with it.</p>\n<p>I am fine with being an expert learner, and that’s about it.</p>\n<p>When people look to us as experts, perhaps that is when we start thinking of ourselves as such. I would write another post about the false humility in the edublogosphere as well (“I’m too old to know all of this stuff.”), but I am not so interested in that as I am in making sure that we are still getting at what is really important: making sure that students learn in authentic ways that prepare them for the future.</p>\n<p>Perhaps we need a disclaimer at the beginning of all of our blog posts that states all of the flaws in our logic that we know exists. Again, thanks for the comments.</p>"
+        },
+        {
+          "id": "385",
+          "author": "Cassyt",
+          "author_url": "http://smartt.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/5c9810c1b49f6690c110bf543152d21379b4c7bd8437aafc3ecd2d3769580d20?s=70&d=mm&r=g",
+          "date": "2009-02-17T23:54:30+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I don’t think you need a disclaimer. Finding the flaws ourselves and asking questions is a much better method of learning. One should rarely take another person’s logic at face value.</p>"
+        },
+        {
+          "id": "386",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.soulycatholichs.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-02-18T01:37:59+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I don’t know if the edublogger crowd has all the answers but we are certainly better at sharing our opinions.  An interesting post with a dose of humility.  Although there may be a community out there of teachers truly sharing exceptional worksheets, scantron tests, truly challenging word searches and tips with how to keep the kids quiet and in strait rows.    They probably just don’t blog about it.  All the best.</p>"
+        },
+        {
+          "id": "387",
+          "author": "Michael Wacker",
+          "author_url": "http://mwacker.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/da377bbcfb26da135c6a500c6a9b5371d9c197b81983ee29f7eb4b2725593922?s=70&d=mm&r=g",
+          "date": "2009-02-18T05:53:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great post. I think that for me at least, it’s a lot less about elitism as it is frustration overflown. It hasn’t taken me long into my teaching career to have quite a few teachers tell me that we do it “this way” or “that way” because that’s the way we have been doing it for twenty years. I’m no elitist in fact I’m barely an “edublogger” but I know that it’s broken and that it needs to be fixed. And like you’ve been pointing out for  a couple years, change is tough, and some egos will get bruised including our own.</p>\n<p>For the most part I want to think that most teachers are doing  a great job with limited resources and unlimited expectations. When I see teachers sharing, blogging, and teaching each other through the web I get excited. When I see a slideshow like “the networked teacher, 2007” that changes my outlook on my career path and vision I get pumped up and want to tell the world that we can do it better and faster and with new ideas and a new vision. When I come across 101 tools and resources from some teacher in a district down the street from me, my first reaction is WOW!!!I want some of that!<br>\nWe use words that are ridiculous sounding, yes, and terms that are outdated and lame almost before we spew them out  (web 2.0…really?) We kill terms and speak them to death, like 21st century learner 10 years after the century changed over. But, I’m beginning to see lights and connections around me that are inspiring me in my school, my articulation area, and my district.<br>\nI must say though that your post made me think…again and I appreciate that.<br>\nI don’t know if I have all the answers, some of the answers, or none of them, but I know that I will try to pour 110% of my knowledge, skills, talents and resources into my class tomorrow and that feels pretty good.</p>"
+        },
+        {
+          "id": "388",
+          "author": "Michael Wacker",
+          "author_url": "http://mwacker.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/da377bbcfb26da135c6a500c6a9b5371d9c197b81983ee29f7eb4b2725593922?s=70&d=mm&r=g",
+          "date": "2009-02-18T15:00:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I have to add something; after talking with my wife (also a teacher), always the voice of reason for me…thank goodness, I think that it’s important to clarify. I do agree that our use of terms and fancy talk, make it cliquey (is that even a word?) and non inclusive. Maybe the next step for teachers engaging in this discussion would be to find a way to get our philosophies, beliefs,and ideas out to more teachers without overwhelming them?<br>\nI don’t know, just a thought.</p>"
+        },
+        {
+          "id": "389",
+          "author": "Karen Jackson",
+          "author_url": "http://techreflection.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/dc92fcb20cf6323c9fb9de2b8e60936ceb411f4f0a8efad5f8b42e89ae2a297a?s=70&d=mm&r=g",
+          "date": "2009-02-18T17:28:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>So many thought-provoking questions. Let’s say we get our philosophies, pedagogies, and ideas articulated, posted and commented: wouldn’t we explode? My philosophy has been to try to be good at one thing at a time. (Honestly, never works, but I try.) Educators seem to rush so much to get things accomplished, I wonder how we can do our best work.</p>\n<p>Will Richardson blogged a while back about how our networks can all get to be the same. For example, if your twitter friends become my twitter friends, then we all subscribe to the RSS feeds of the latest trendsetters and gurus, aren’t we all passing around the same information? Then that feeds the idea of “we” who subscribe and “they” who don’t. Well, this is my take on his thoughts. His post is here <a href=\"http://tinyurl.com/a55xtn\" rel=\"nofollow ugc\">http://tinyurl.com/a55xtn</a></p>"
+        },
+        {
+          "id": "390",
+          "author": "Gordon",
+          "author_url": "http://stone.ms.brevardschools.org/",
+          "avatar": "https://secure.gravatar.com/avatar/3071c223057de10f19f5d786e9fa0fb2ee94a44472c1dfe26a12d214e117a83f?s=70&d=mm&r=g",
+          "date": "2009-02-18T19:58:13+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I appreciate your honesty on this…<br>\none thing that feeds this <i>elitisona</i> (mashup with persona)<br>\nis a tendency I catch myself in all the time:<br>\nexaggerating small successes into large ones.</p>\n<p>Taking exceptional performances in our example pool and extending them to sound as though it is the rule rather than the exception.</p>\n<p>Mea Culpa!</p>\n<p>@shupester on twitter</p>"
+        },
+        {
+          "id": "391",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-02-19T03:32:33+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I gotta say, I am really surprised at the level of response about this topic. Clearly, there is something about the community that needs a level of introspection. As we craft our answers to the question of modern education, we cannot be the mouthpiece of arrogance.</p>\n<p>I guess the only thing I can do is to speak for myself. I would like to set my own goal to ensure that my voice does not add to the ego overload: I will always write as if my wife were about to make a joke about the new edu-term or theory that I have just coined or taking part in. If I can’t have a self-deprecating sense of humor, I’m not sure I deserve to blog.</p>"
+        }
+      ]
     },
     {
       "id": 1106,
@@ -3614,7 +4020,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "392",
+          "author": "Chris Lehmann",
+          "author_url": "http://www.practicaltheory.org/",
+          "avatar": "https://secure.gravatar.com/avatar/e4c14d02b21d934805c321ec2c1bf1b6b7ff8a744967df7b871a100dc34ec995?s=70&d=mm&r=g",
+          "date": "2009-02-20T04:13:32+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Spot on, as far as I’m concerned.</p>"
+        },
+        {
+          "id": "393",
+          "author": "Wesley Fryer",
+          "author_url": "http://www.speedofcreativity.org/",
+          "avatar": "https://secure.gravatar.com/avatar/e7697f6ed9007312a7655c971c5f44097bed1e9e50e3468f9ab86954a4ab7c5b?s=70&d=mm&r=g",
+          "date": "2009-02-20T06:53:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Makes perfect sense. Personalized learning, differentiation, and customization are the hallmarks of the learning revolution. Standardization was for the industrial age, not the 21st century. You’re on the right track. Sorry to hear others you’re working with/meeting with may not be.</p>"
+        },
+        {
+          "id": "394",
+          "author": "Liz Walhof",
+          "author_url": "http://schools.dcsdk12.org/education/staff/staff.php?sectionid=12987",
+          "avatar": "https://secure.gravatar.com/avatar/0221612db6795376447275d1adc6816e07e850aceb290edb83992fc06bcb2182?s=70&d=mm&r=g",
+          "date": "2009-02-20T22:40:19+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Your comment made me think of a frightening thing I saw in my school today.  I’m not sure that it’s 100% related but I think it might be (somehow).</p>\n<p>Let me give you the background before I share my fear…I have been working with two of my math teachers as they gave their students the challenge of teaching their peers one of several topics.  They were given the world in terms of options – anything they wanted to make or to use to get their point across (well, anything within reason) was permissible.  We had kids creating movies, music, taking pictures of work they’d done on mini whiteboards, getting used to using the interactive whiteboard, etc.</p>\n<p>Here’s what scared me though…After making all these great materials to – theoretically – share their knowledge effectively with their peers, what did they do?  They got up in front of the class, turned to face the board and lectured to it!</p>\n<p>How frightening is THAT?  It makes me realize that no matter how magnificent the tools, no matter how ‘scalable’ the technology, our kids will share in the way they see US sharing.  If day-in-and-day-out we stand up there and lecture at them, that’s what they’ll do when called to share in return.  Even if they hate it when they’re sitting through it, they’ll do it too – because they copy what they’ve seen US do…</p>\n<p>I don’t think teachers need to be experts on every type of technology that exists but we DO need to craft our image carefully, vary our practice intelligently, and mentor continually or we’re doing a HUGE disservice to our kids.</p>\n<p>Okay, don’t know if that really applies to your comment about scalability…I guess I’m just trying to say that if we don’t make our teaching practices rich, varied, and innovative all the tech in the world (scalable or otherwise) won’t mean that much.</p>"
+        }
+      ]
     },
     {
       "id": 1112,
@@ -4175,7 +4613,599 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "395",
+          "author": "Glenn",
+          "author_url": "http://mrmoses.org/",
+          "avatar": "https://secure.gravatar.com/avatar/9975647b24cc83270a66898ee199371331a67c2934b47f4ef07b4aba82e6f3b7?s=70&d=mm&r=g",
+          "date": "2009-02-27T00:53:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben, if you don’t already know, I wanted to state for the record that you are one of my favorite people.  Hit me up some time.  I really want to have a conversation about this.</p>"
+        },
+        {
+          "id": "396",
+          "author": "Jim Lerman",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/2eef0ef1b5a4effb4218c23926bbb3b4b12def312cb5237791d78d513a873fbc?s=70&d=mm&r=g",
+          "date": "2009-02-27T04:28:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This is absolutely amazing…if it works, it renders MoodleRooms unnecessary, just load Moodle and off you go. Of course one needs to be able to handle all this, but there are those out there who can! Kudos, Ben, for doing a fabulous public service. I sure hope others will rise to the challenge of uncovering any bugs in this process so that it becomes totally smooth for all!</p>"
+        },
+        {
+          "id": "397",
+          "author": "cgaub",
+          "author_url": "http://blogs.everettsd.org/cgau",
+          "avatar": "https://secure.gravatar.com/avatar/37c7d3d08dbb817bfb0328fa5f135f29e8c58d895b7260233bd604f7de1a7a26?s=70&d=mm&r=g",
+          "date": "2009-02-28T17:46:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I just sent this article off to my district IT guy. we already use Moodle district wide and now they have been working on a google docs/apps system for the district… I hope they can put them together! thanks for posting this, although it makes no sense to me, I hope it will make sense for my IT guy.<br>\nthanks</p>"
+        },
+        {
+          "id": "398",
+          "author": "Michael Penney",
+          "author_url": "http://development.moodlerooms.com/",
+          "avatar": "https://secure.gravatar.com/avatar/a2051515c07f3ceeecc810e1f016e12ee11b2a4829e9f83a4943bb0adc52f34e?s=70&d=mm&r=g",
+          "date": "2009-03-01T18:55:51+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Just as a note to Jim, the integration doesn’t let you run Moodle &lt;em&gt;on&lt;/em&gt; GoogleApps*, it lets you integrate Moodle with GoogleApps – with Moodle as the source of user accounts in GoogleApps.</p>\n<p>Hopefully it doesn’t render Moodlerooms unnecessary or we won’t be able to keep developing and releasing things like this;-).**</p>\n<p>*Running Moodle on the Google Platform would be a great deal of work, as Google’s BigTable database doesn’t support joins, and Moodle uses a great deal of them currently.</p>\n<p>** As Moodlerooms is an official Moodle partner, we also do contribute a substantial amount of our revenue back to support the continued development of the Moodle core code.</p>"
+        },
+        {
+          "id": "399",
+          "author": "Kevin Brooks",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/9d35304a4a5e8b5f3220397676e90d21e691a1b024556a04c051d6321607ab9b?s=70&d=mm&r=g",
+          "date": "2009-03-21T16:39:13+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben,</p>\n<p>I, too, would like to talk with you sometime about this integration and how you have used it.  I have used Google Docs quite a bit so it would be amazing if I could integrate it into Moodle. Thanks<br>\nKevin Brooks<br>\nLittleton High School</p>"
+        },
+        {
+          "id": "400",
+          "author": "Dforge",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/ccfaa5639f326f63a989fa350a9d25769df8f3644a19c470445697f7764bb193?s=70&d=mm&r=g",
+          "date": "2009-04-09T05:22:44+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>It all works well, thanks, except the unread mail always says (0).. Am I doing something wrong?</p>"
+        },
+        {
+          "id": "402",
+          "author": "Doug Belshaw",
+          "author_url": "http://dougbelshaw.com/blog",
+          "avatar": "https://secure.gravatar.com/avatar/321b923075994df1028b45de038e10f1eb02cdfba6c14ff10d52b2ff29270b99?s=70&d=mm&r=g",
+          "date": "2009-05-30T18:46:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben, can’t thank you enough for this great guide. Only bit I had to change was the bit r.e. key generation but that was explained on the Google page you linked to!</p>\n<p>I’ve managed to get a Moodle installation talking to my existing Google Apps service as a test (<a href=\"http://twitpic.com/69vjj\" rel=\"nofollow ugc\">http://twitpic.com/69vjj</a>) so now I can hopefully roll it out to c.3,000 students at the Academy at which I’m Director of E-Learning. 🙂</p>"
+        },
+        {
+          "id": "403",
+          "author": "Jim Grogan",
+          "author_url": "http://www.newcreek.net/moodle",
+          "avatar": "https://secure.gravatar.com/avatar/6cd4c47cb3efc01d2f2a244d591ef5bcc3bc3786981e3869259af5635f26d519?s=70&d=mm&r=g",
+          "date": "2009-06-05T16:07:59+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hey man thanks a lot for this. I followed your instructions and got the integration working perfectly.</p>"
+        },
+        {
+          "id": "404",
+          "author": "Chris Walsh",
+          "author_url": "http://www.infinitethinking.org/",
+          "avatar": "https://secure.gravatar.com/avatar/6340dc1e51ccf757f4ffb3c8af277411d329c9ec3d764164c16d79d48f60b24c?s=70&d=mm&r=g",
+          "date": "2009-06-25T23:40:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben –</p>\n<p>This is phenomenal.  Fantastic work.  I’m playing with this for one of my clints, and everything worked seamlessly. If only my Moodle-Mahara integration was going as smoothly!</p>\n<p>Kudos for developing it and sharing it with all of us.  If you’re going to be @ NECC, drop me a line, and we can connect.</p>\n<p>Chris : )</p>\n<p>P.S. As Edutopia’s Totally Wired Teacher for 2007, you might be interested in the Digital Generation Project which I recently helped them launch: <a href=\"http://www.edutopia.org/digital-generation\" rel=\"nofollow ugc\">http://www.edutopia.org/digital-generation</a></p>"
+        },
+        {
+          "id": "406",
+          "author": "Sharon Betts",
+          "author_url": "http://sharonsshare.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f29f7113747004a676ab73e5a1e2694adb6ea1174415d008bef96fa3bf1d01e8?s=70&d=mm&r=g",
+          "date": "2009-08-08T16:50:17+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thank you for the clear directions – I just finished implementing a Wikispaces / Moodle SSO integration and am now working on getting this as the next step.  Your easy to understand steps are so valuable.<br>\nIf only blogger was included with educational google apps.</p>"
+        },
+        {
+          "id": "407",
+          "author": "John Easo",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/c406d999410da4f97dbef7546343f78b3a982b273da79c5ae71acc90bdbcae0d?s=70&d=mm&r=g",
+          "date": "2009-08-15T06:48:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>There is another very useful tool that does better for student monitoring, content management and also very good synchronous collaboration with other students in real time.  Take a look at <a href=\"/2009/02/25/the-killer-app-google-apps-and-moodle-integration/www.funnelbrain.com\" rel=\"nofollow\">flash cards  </a>on this site and also the concept of student ‘funnel’ and concurrent changes to flashcards!  I have used this and found it to be very useful with my students.</p>"
+        },
+        {
+          "id": "408",
+          "author": "Roque Castillo",
+          "author_url": "http://born2learn.moodlehub.com/",
+          "avatar": "https://secure.gravatar.com/avatar/221e5a3b4f245f756f2f5482dd07cfcb144a0ffe4d8ed284c0fd7f32b69e4e7e?s=70&d=mm&r=g",
+          "date": "2009-09-02T06:14:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hello Ben,</p>\n<p>I was trying to access this site ( <a href=\"http://code.google.com/apis/apps/articles/sso-keygen.html\" rel=\"nofollow ugc\">http://code.google.com/apis/apps/articles/sso-keygen.html</a>) but it results in error. I searched a lot to find some clues on how to obtain the Private and Public Keys for Moodle and Google Apps. Finally I stopped by this site: <a href=\"http://moodle.eustaceisd.net/mod/wiki/view.php?id=1101&amp;page=Create+RSA+Key+and+SSL+Certificate+for+Moodle+and+Google\" rel=\"nofollow ugc\">http://moodle.eustaceisd.net/mod/wiki/view.php?id=1101&amp;page=Create+RSA+Key+and+SSL+Certificate+for+Moodle+and+Google</a><br>\nWould you so kind to update the information, so other people reading your awesome instruction won’t have any problems ?<br>\nThank you</p>\n<p>Roque</p>"
+        },
+        {
+          "id": "409",
+          "author": "Roque Castillo",
+          "author_url": "http://born2learn.moodlehub.com/",
+          "avatar": "https://secure.gravatar.com/avatar/221e5a3b4f245f756f2f5482dd07cfcb144a0ffe4d8ed284c0fd7f32b69e4e7e?s=70&d=mm&r=g",
+          "date": "2009-09-02T06:18:21+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Sorry, the site is : <a href=\"http://moodle.eustaceisd.net/mod/wiki/view.php?id=1101&amp;page=Create+RSA+Key+and+SSL+Certificate+for+Moodle+and+Google\" rel=\"nofollow ugc\">http://moodle.eustaceisd.net/mod/wiki/view.php?id=1101&amp;page=Create+RSA+Key+and+SSL+Certificate+for+Moodle+and+Google</a>.</p>\n<p>Roque</p>"
+        },
+        {
+          "id": "411",
+          "author": "Dave Sweigert",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/ed4ecc2d896dc84afac312a1b732e501daeffd84204285c57cf6e0aa7df7fb4b?s=70&d=mm&r=g",
+          "date": "2009-10-01T15:26:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Your directions were great.  This is exactly what we needed to get the password piece of our LDAP integration working with Google Apps.  Two things I’d like to point out or ask though.<br>\nFirst – Now that I have made the changes, when my users log off our Moodle server they go to a new URL (<a href=\"http://moodle.wssd.k12.pa.us/login/logout.php?sesskey=fNFykG7nS4\" rel=\"nofollow ugc\">http://moodle.wssd.k12.pa.us/login/logout.php?sesskey=fNFykG7nS4</a>) and it comes up as an error (Internet Explorer cannot display the webpage) unless you refresh the page then you are out logged out of the Moodle site.  Has anyone else seen this?  Am I doing something wrong?<br>\nSecond – I have some users who have usernames that are split with a space (like john doe) and the sync-cmd in Google Apps does not like them and now that I have done SSO, neither does Moodle.  I can change these few users to a different username but is this normal behavior too?<br>\nThanks again for documenting this.  It really helped.<br>\n-Dave</p>"
+        },
+        {
+          "id": "412",
+          "author": "Dave Sweigert",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/ed4ecc2d896dc84afac312a1b732e501daeffd84204285c57cf6e0aa7df7fb4b?s=70&d=mm&r=g",
+          "date": "2009-10-13T14:58:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>The above situation was being caused by our web content filter prohibiting access to mail.google.com.  Once we got that straightened out, we were OK.  And yes our users cannot have spaces in their names, so we are in the process of fixing these too.  Thanks for your help.</p>"
+        },
+        {
+          "id": "414",
+          "author": "Chris",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/24fa0606db990f4dd380feca439a998e778359c8caca01549dee4bc0346095dd?s=70&d=mm&r=g",
+          "date": "2009-10-20T12:20:28+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Wow this great. Thanks.<br>\nIs it possible for me to use this plug for two separate Google Ed Apps. We hold and host two different domains for Google Ed App. One is for our teachers and one for our students. This allows another layer of control for our tech department and staff. Both groups use the Moodle platform to log in. So I was hoping to be able to have two separate blocks. One for students, one for teachers.</p>"
+        },
+        {
+          "id": "415",
+          "author": "Wheelie",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/d23235db32dd2a6d7460afcc55466518e1bab5a681bc1fa9852eda862c3c65e4?s=70&d=mm&r=g",
+          "date": "2009-10-20T20:01:57+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>If anybody else is having an issue with the unread mail count always reading (0), I found that in the Gmail Settings in my site Modules-Blocks-Gmail that the OAuth Consumer Secret had a space at the end of it i.e. jhjhhuhuh788 . (obviously the . is to represent where my key ended, it should have ended after the last 8). When removed and changes saved, hey presto unread emails showed up. Hope this helps anyone.</p>\n<p>Wheelie</p>"
+        },
+        {
+          "id": "416",
+          "author": "Estevan Veenstra",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a28044be69276a13ad9d3fbb57d848cec7afa4e869eb6b185718518a7166fe08?s=70&d=mm&r=g",
+          "date": "2009-10-22T10:16:26+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I would so like to have access to terminal, but to be honest I don’t know what it is?</p>\n<p>Or could somebody help get to the commandline so that I can generate the public and private keys for integration between moodle and google..</p>\n<p>Thanks in advance,,</p>\n<p>Estevan</p>"
+        },
+        {
+          "id": "417",
+          "author": "Bill Willis",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/2385fe09a957bb229b58596addb844279b33f37f3a651d3f40ff90b3492fce26?s=70&d=mm&r=g",
+          "date": "2009-10-25T12:39:50+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I’d love to implement this, but I have one question:</p>\n<p>I already have 1200 users on my Google domain. If a user is on the Google Domain, but not in the Moodle user database, will they be eliminated from Google?</p>\n<p>Bill</p>"
+        },
+        {
+          "id": "418",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-10-26T19:08:44+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@Bill All you would need to do is download all of the users from your gApps domain as a CSV and then upload them to your moodle. This would make sure that no accounts get “erased”. You can also not turn on that option, meaning that Moodle will be used for authentication, but it will not sync the databases. Let me know if you have any questions about that.</p>"
+        },
+        {
+          "id": "419",
+          "author": "Bill Willis",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/2385fe09a957bb229b58596addb844279b33f37f3a651d3f40ff90b3492fce26?s=70&d=mm&r=g",
+          "date": "2009-10-27T18:08:28+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks Ben. It is working great. Still in our testing phase, but the ga-moodle is a great marriage.</p>"
+        },
+        {
+          "id": "421",
+          "author": "Serpil Kilic",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/31df97b28ed20bc32aab0e2ad487ad6d22edbae119ebbba1ba6b55ce4dded87a?s=70&d=mm&r=g",
+          "date": "2009-11-09T19:36:10+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben thank you for your great explanation. I found it out after strugling with Gooogle and Moodle documentations.<br>\nOne important question. Like Bill I have gApps running with all my users there and just installing Moodle. I have my google accounts in .csv and use Upload users option in Moodle to add all of them. I need to enter passwords for the csv. What do I do for that?<br>\nWhat happens to the students gmail passwords. I did a trial on a few it only works with the new passwords I enter from csv. I have turned on the Google authentication. But still gmail passwords do not work when loggin in. I do not want to tell all the kids that they have a new password. Even if I do I cannot configure in bulk to make them change their passwords when they first enter.<br>\nAny advice?</p>"
+        },
+        {
+          "id": "422",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-11-09T21:56:38+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@Serpil, Your user’s Google Passwords are no longer in use, but if you were to ever remove the SSO (like we did when our moodle was down for repairs) their passwords in Google Apps would again become active. I don’t think that there is any way to get the passwords from your Google Apps Administration panel, so I would recommend setting all of the passwords in the CSV that you upload to moode to a single thing and then forcing them to reset their passwords to whatever they were using for their gApps password. This is a pretty dumb step, but I don’t really see any way around it.</p>\n<p>There is a way to have they force to change passwords upon entering within the CSV. I believe that you can add that as one of the fields, but I would have the check what it is in the Moodle docs. I’ll let you know if I find it.</p>\n<p>Let me know what other questions you have, and thanks for commenting.</p>"
+        },
+        {
+          "id": "423",
+          "author": "Serpil Kilic",
+          "author_url": "http://www.aci.dreamhosters.com/",
+          "avatar": "https://secure.gravatar.com/avatar/31df97b28ed20bc32aab0e2ad487ad6d22edbae119ebbba1ba6b55ce4dded87a?s=70&d=mm&r=g",
+          "date": "2009-11-10T14:41:01+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben, I have worked my way through and have my test site ready. 🙂 Thanks to you!!<br>\nIn csv for the pasword you should give changeme and when you are uploading you should pick “Select for bulk operations:New User”.<br>\nI do not know what this option is for but it worked only with this.<br>\nOne more question:<br>\nMy moodle and Google Apps sites used to work very fast before this operation. Now Moodle site is very slow. It might me that I have uploaded 600 users, or I am hosting it on dreamhost servers, oe don’t know what else. I started to think that this was not a good idea.<br>\nAny thoughts??</p>"
+        },
+        {
+          "id": "424",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-11-10T20:24:13+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@Serpil</p>\n<p>Moodle slows down for a few different reasons (this is not an exhaustive list by any means). One, the server that it is on is not set up to handle the amount of traffic. Two, the database that it is using is not set up to handle the number of entries. I would say that both may be in play in your case. If you are having everyone authenticate through moodle, more people are going to be using it. If you had to upload all of those users, the database is getting larger as a result.</p>\n<p>If I had to guess, it would probably be amount of traffic, but you should be able to see just how many people are logging on when and see if there was a difference after you did the SSO. Let me know if there is any other ways I can help. Talk to you soon.</p>"
+        },
+        {
+          "id": "425",
+          "author": "Martin Kurz",
+          "author_url": "http://www.adolf-reichwein-schule.net/",
+          "avatar": "https://secure.gravatar.com/avatar/5b4e03dad5776416fddc69823a9cbfc80c7e69c0a94c496de2e02393f9fd0f34?s=70&d=mm&r=g",
+          "date": "2009-12-05T14:51:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks for your howto. It is still the best. At the moment, December 2009, there will be a more new software package from November 16th 2009. It can be downloaded directly from MoodleRooms.</p>\n<p>Another thing: Google Apps Education has since 2009 no “Partner Start Page” available.  So there is a small mistake in the Google-Block. I have just deleted the line in the code, so everything is now ok.</p>"
+        },
+        {
+          "id": "426",
+          "author": "Johan",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/312d2b6f21e4bd5136ae50dc580c365fbbef131a73b47b793aae3c547cb4dfcf?s=70&d=mm&r=g",
+          "date": "2009-12-11T14:51:28+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I followed this guide but the connection from moodle to gmail doesnt work. If i turn on full debugging i get this.</p>\n<p>[message:protected] =&gt; Could not find private key file [C:MoodleInstaller19servermoodle/auth/gsaml/C:MoodleInstaller19server/moodledata/samlkeys/rsaprivkey.pem] which is needed to sign the authentication response</p>\n<p>As you can see i use windows for this installation, the strange thing is that the sync to google works, i have pushed users from moodle to google, but the gmail function is dead.</p>\n<p>I can’t sort it out, i have copied the certs to both locations mentioned above.</p>\n<p>Anyone have any thoughts of this?</p>"
+        },
+        {
+          "id": "427",
+          "author": "alexvarsakopoulos",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/20ab2094bbed0245c27c26d3988263c4b2ce6dce8621425ca40d5fb270ddb97a?s=70&d=mm&r=g",
+          "date": "2010-02-20T09:29:06+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>my google apps is hosted at hostmonster and they have a script Moodle 1.9.7.   Would I install the script at <a href=\"http://www.epikinonia.org/\" rel=\"nofollow\">http://www.epikinonia.org</a> or <a href=\"http://epikinonia.org/\" rel=\"nofollow\">http://epikinonia.org</a>. What's the difference?</p>\n<p>Another question is 'create a new database? I would assume yes</p>\n<p>Do I still have to install the Moodle-Google intergrations plug in someplace or at epikinonia.org? How do I go about installing it there?</p>\n<p>thank you!!</p>"
+        },
+        {
+          "id": "430",
+          "author": "bhwilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-02-22T10:45:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>The www is redundant. You shouldn't ever need it.</p>\n<p>If you have Moodle running on your server, all information is in that<br>database.</p>\n<p>You will have to install the Moodle-Google integrations plugin in the moodle<br>folder. If you have FTP access, you should be able to do it just fine. Just<br>follow the instructions on the read me file in the Moodle-Google zip file<br>for installing in the Moodle directory. Let me know if you have any other<br>questions.</p>"
+        },
+        {
+          "id": "431",
+          "author": "alexvarsakopoulos",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/20ab2094bbed0245c27c26d3988263c4b2ce6dce8621425ca40d5fb270ddb97a?s=70&d=mm&r=g",
+          "date": "2010-02-22T11:40:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>hi,</p>\n<p>thank you for responding. I have the standard version of google apps and and it seems it doesn't have some of the features that the moodle-google integration instructions-settings call for in the advanced tools of google apps..</p>\n<p>I did all the things that you have suggested in your email such as ftp-ing the moodle-google integration files in the moodle directory of the host(ed) server. <br>I wonder if I can upgrade to the educational g-apps.</p>\n<p>thank you again!</p>\n<p>Alex</p>\n<p>________________________________</p>"
+        },
+        {
+          "id": "432",
+          "author": "bhwilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-02-22T11:51:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Absolutely, you should upgrade to the Educational version of Google Apps.<br>Here is the link to do so:<br><a href=\"http://www.google.com/support/a/bin/request.py?contact_type=nonprofit\" rel=\"nofollow\"></a><a href=\"http://www.google.com/support/a/bin/request.py\" rel=\"nofollow ugc\">http://www.google.com/support/a/bin/request.py</a>?…</p>"
+        },
+        {
+          "id": "433",
+          "author": "alexvarsakopoulos",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/20ab2094bbed0245c27c26d3988263c4b2ce6dce8621425ca40d5fb270ddb97a?s=70&d=mm&r=g",
+          "date": "2010-02-22T13:46:04+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>thank you. You've been most helpful.</p>"
+        },
+        {
+          "id": "435",
+          "author": "Pat",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/781aedbf4c28c9a36fc4137b688a2de831d2fa90ed6b8587107d83d51cbc9417?s=70&d=mm&r=g",
+          "date": "2010-03-15T06:34:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>À tester?</p>"
+        },
+        {
+          "id": "436",
+          "author": "Jason",
+          "author_url": "http://onlinephduk.com/",
+          "avatar": "https://secure.gravatar.com/avatar/e121290b517db0b39bb89e945a6b5ae022ea2410255fb1cf7bd8c3b356769766?s=70&d=mm&r=g",
+          "date": "2010-04-04T02:13:57+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks we've always wanted to try out Moodle, now that Google Apps  can be integrated we might switch from wordpress to moodle.</p>"
+        },
+        {
+          "id": "437",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-04-05T06:57:47+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I do think that WordPress and Moodle do drastically different things. What<br>are you using WordPress for now that you aren't satisfied with?</p>"
+        },
+        {
+          "id": "441",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-04-05T13:57:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I do think that WordPress and Moodle do drastically different things. Whatrnare you using WordPress for now that you aren’t satisfied with?</p>"
+        },
+        {
+          "id": "442",
+          "author": "Pelletierb",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/71a67b97842df812feb9d6b55539792b2e178481913f86d772e3c52181782d59?s=70&d=mm&r=g",
+          "date": "2010-10-15T23:51:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben I am having the same problem were my new users are not getting created but when they are added in google they sync fine. I was wondering if you ever got yours fixed. You mentioned something about the latest version but I can not find anything newer than May. If I go to sync status I get Google Apps error: Unable to Connect to ssl://www.google.com:443. Error #0: php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution my last sync was Sept 10 </p>"
+        },
+        {
+          "id": "443",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-10-18T15:37:00+00:00",
+          "depth": 2,
+          "parent": "442",
+          "html": "<p>I haven’t been able to come up with the time to really take a close look.rnThe one from May should be good enough to perform syncs with the new versionrnof the API. I will be looking more into this soon, but let me know if yournwere able to figure it out because uploading the users twice is kind of arnpain.</p>"
+        },
+        {
+          "id": "444",
+          "author": "Pelletierb",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/71a67b97842df812feb9d6b55539792b2e178481913f86d772e3c52181782d59?s=70&d=mm&r=g",
+          "date": "2010-10-19T14:10:00+00:00",
+          "depth": 3,
+          "parent": "443",
+          "html": "<p>I fixed the Unable to Connect to ssl://www.google.com:443. Error #0: php_network_getaddresses: getaddrinfo error that was an issue with my server. But my users still do not sync anymore when I go to google user sync I get “Authentication with Google Apps was successful.”  but when I add a new user I get “Invalid Email”. I am still working on it thanks for the update. rn</p>"
+        },
+        {
+          "id": "445",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-10-19T14:40:00+00:00",
+          "depth": 4,
+          "parent": "444",
+          "html": "<p>Yep. The invalid email will happen until either the SAML handshake is fixedrnwithin settings (which I haven’t had time to figure out) or you upload thernuser into Google Apps (which is what I have been doing in the meantime).rnPlease let me know if you do figure it out. Talk to you soon.rnrnMy profiles: [image: WordPress]  [image:rnLinkedIn]  [image:rnTwitter] [image:rnFlickr]  [image:rnDelicious] [image:rnSlideShare]  [image:rnFacebook] [image:rnGoogle] rnLatest Blog Post: Question 291 of 365: What is the newrnEugenics?</p>"
+        },
+        {
+          "id": "446",
+          "author": "Sasha Yin",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/cf01130e03ac53e172c3ca6b758949073fa6a76acbfda9ff0623ed71df8e0c46?s=70&d=mm&r=g",
+          "date": "2010-11-07T03:46:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks for your guide. I am a foreign language teacher. My school has not set up any course management system yet, I have been using a wikispaces account for my classes. Lately, I have been thinking about installing a wordpress as extension of my class wikis, and even switching from wikispaces to Moodle, but don’t know exactly how to go about it. I wonder if you could comment on the difference between wikispaces, wordpress, and moodle for individual users. Thanks!</p>"
+        },
+        {
+          "id": "447",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-11-09T17:59:00+00:00",
+          "depth": 2,
+          "parent": "446",
+          "html": "<p>Wikispaces is great for collaborating on one long range project. I generally<br>\nset up a new wiki for each unit of study so that the wiki maintains focus.<br>\nYou can try and do a year long wiki, but it does get unweildy a bit. I love<br>\nwordpress for writing from a particular perspective or for things that do<br>\nnot build upon one another. I have written about 1000 blog posts with<br>\nwordpress and I think that it has brought a level of reflection to my<br>\npractice that nothing else has. As for Moodle, it is a straight up Learning<br>\nManagement System. This is for course creation, assessment, and<br>\nconversation. If you have a wiki, you may not need Moodle to manage your<br>\ncontent. If you have a Gradebook, you may not need Moodle to manage your<br>\nassessments. If you have a portal for your kids to go to and access their<br>\nclasswork, then you may not need Moodle for the hallways of your your school<br>\nor the conversations in your classroom. Moodle is an<br>\nincredibly versatile tool, but it isn’t the right tool for everything. I<br>\nhope that helps some.</p>"
+        },
+        {
+          "id": "448",
+          "author": "Alan_escribe06",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/c571a409ce00cbbcf98c398a88cbcc846825aabd0ec225b7efba57d743e027bd?s=70&d=mm&r=g",
+          "date": "2010-11-12T01:35:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hola soy de Peru, esta excelente el tutorial, funciona a la perfeccion, eres un genio man.. Thanks!</p>"
+        },
+        {
+          "id": "449",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-11-12T04:45:00+00:00",
+          "depth": 2,
+          "parent": "448",
+          "html": "<p>De nada.</p>"
+        },
+        {
+          "id": "450",
+          "author": "Khalil Amar",
+          "author_url": "http://www.google.com/profiles/khalilamar",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2011-01-11T10:28:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Please go to <a href=\"http://code.google.com/p/moodle-google/downloads/list\" rel=\"nofollow ugc\">http://code.google.com/p/moodle-google/downloads/list</a> to get the most updated zip file / version of the “Moodle-Google” project.  Thanks</p>"
+        },
+        {
+          "id": "451",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2011-01-11T14:43:00+00:00",
+          "depth": 2,
+          "parent": "450",
+          "html": "<p>Thanks for the link. This post is due for an update as soon as I get a<br>\nchance.</p>"
+        },
+        {
+          "id": "452",
+          "author": "Jason",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/92767db58ea2cbc52a4e18ed6c60a604ffbc6fb2e73f3f34392cd15a2b5bdb93?s=70&d=mm&r=g",
+          "date": "2011-01-12T20:35:00+00:00",
+          "depth": 3,
+          "parent": "451",
+          "html": "<p>Hey Ben,</p>\n<p>Will this work with Moodle 2.0?</p>"
+        },
+        {
+          "id": "453",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2011-01-12T20:43:00+00:00",
+          "depth": 4,
+          "parent": "452",
+          "html": "<p>I am not sure. I am interested in trying it out on 2.0, but none of my<br>\nMoodles are ready to go there yet. Perhaps later this year I will try it<br>\nout. Let me know if you try it out and find out one way or another.</p>"
+        },
+        {
+          "id": "454",
+          "author": "Ed",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/1548b7b3c411ebb1ffc17125d09806a36f691b2f5029988191ee2b536e352117?s=70&d=mm&r=g",
+          "date": "2011-01-13T13:51:00+00:00",
+          "depth": 5,
+          "parent": "453",
+          "html": "<p>Great post, thank you!. I am also curious about having this running with moodle 2.0. </p>"
+        },
+        {
+          "id": "455",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2011-01-13T17:55:00+00:00",
+          "depth": 5,
+          "parent": "453",
+          "html": "<p>Will you try it out for us and let us know? Pretty please…</p>"
+        },
+        {
+          "id": "460",
+          "author": "Sivapgv",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/17ee6225f0fdd7e85f7edd61c385452a1a36c4a38aec79c4ed653c61dd3f717d?s=70&d=mm&r=g",
+          "date": "2011-03-03T07:25:00+00:00",
+          "depth": 2,
+          "parent": "450",
+          "html": "<p>thank you so much..</p>"
+        },
+        {
+          "id": "456",
+          "author": "Syamil Mj",
+          "author_url": "http://www.facebook.com/people/Syamil-Mj/748605376",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2011-01-18T04:14:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This is gem. Thank you</p>"
+        },
+        {
+          "id": "457",
+          "author": "Bonnie Thurber",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/b64e96b59ed694bdd132f8b6b5c7bc823ccfa73fa2b5657b4a2f740bc581fca4?s=70&d=mm&r=g",
+          "date": "2011-01-18T18:56:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I have been using this for three years now. I want to know which Moodle Group created it.<br>\nThanks!<br>\n<a href=\"mailto:b-thurber@northwestern.edu\">b-thurber@northwestern.edu</a></p>"
+        },
+        {
+          "id": "458",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2011-01-18T19:33:00+00:00",
+          "depth": 2,
+          "parent": "457",
+          "html": "<p>I believe it was originally moodlerooms, but it is now an open project on google code.</p>\n<p>Ben Wilkoff<br>\n<a href=\"/\" rel=\"ugc\"></a></p>\n<p>Collaborate now: <a href=\"http://bit.ly/WilkoffDoc\" rel=\"nofollow ugc\">http://bit.ly/WilkoffDoc</a></p>"
+        },
+        {
+          "id": "459",
+          "author": "Bonnie Thurber",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/b64e96b59ed694bdd132f8b6b5c7bc823ccfa73fa2b5657b4a2f740bc581fca4?s=70&d=mm&r=g",
+          "date": "2011-01-18T20:38:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hello Peter, I have sync set up and I add new users to Moodle and then sync with Google every day. I have a cron job set up that does sync every </p>"
+        },
+        {
+          "id": "461",
+          "author": "David Sweigert",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/bd776e978c1a3f0f4906bb2fbe0925039cb6604498e6afe3e16d7ee678092369?s=70&d=mm&r=g",
+          "date": "2011-09-23T19:33:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Starting this school year (2011-12) my users have been randomly (but more frequent than I would like) getting the attached error.&nbsp; It states “Password Not Valid” and this is when attempting to log into Moodle.&nbsp; We are doing LDAP authentication to our PDC and then using the Moodle-Google plugin for SSO.&nbsp; We are using the first version of the plug in.<br>\nDoes anyone think that my issue is my Moodle server (Moodle 1.9.9+ (Build: 20100707)) or should I consider upgrading my plug in or is is Google (did they upgrade something on their end).<br>\nAny thoughts appreciated.</p>"
+        },
+        {
+          "id": "462",
+          "author": "Collinsl",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/e547bdd7ea698d06a00ed5712a3641be31a20d7446a4d5baed6e0f7de410209f?s=70&d=mm&r=g",
+          "date": "2011-09-26T19:59:00+00:00",
+          "depth": 2,
+          "parent": "461",
+          "html": "<p>David,<br>\nI am having&nbsp;similar&nbsp;issues and they began about 5 days ago! I can’t tell if it is Google or Moodle</p>"
+        },
+        {
+          "id": "463",
+          "author": "David Sweigert",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/bd776e978c1a3f0f4906bb2fbe0925039cb6604498e6afe3e16d7ee678092369?s=70&d=mm&r=g",
+          "date": "2011-10-03T18:53:00+00:00",
+          "depth": 3,
+          "parent": "462",
+          "html": "<p>I posted on the Moodle.org forum today. &nbsp;Maybe someone will have an idea. &nbsp;I will let you know if I find anything out.</p>"
+        },
+        {
+          "id": "464",
+          "author": "Alexa",
+          "author_url": "http://learningtreeconsulting.com/",
+          "avatar": "https://secure.gravatar.com/avatar/27c631af36e26080415ee0ba1ce43f09f0ea36b03924e325a66b5f70fcf320c7?s=70&d=mm&r=g",
+          "date": "2015-04-03T13:27:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This will integrate Google Apps services with <a href=\"http://learningtreeconsulting.com/\" rel=\"nofollow\">Moodle</a>. The Moodle administrators can manage google Apps accounts within Moodle and all the Moodle users will be able to access gApps services within Moodle.</p>"
+        }
+      ]
     },
     {
       "id": 1122,
@@ -4314,7 +5344,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "465",
+          "author": "Michelle Lynn",
+          "author_url": "http://www.thelynnsweb.com/portfolio/",
+          "avatar": "https://secure.gravatar.com/avatar/04ca8b916d60092809cbac47d2b43662c65d6c6c0d7a7ac9ec14d036d8f60b34?s=70&d=mm&r=g",
+          "date": "2009-02-27T15:20:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I think a wiki would be a perfect tool for an adult learning environment. In a constructivist learning environment, a wiki would allow you to physically see knowledge acquisition. Projects would be posted, team member participation can be viewed and the wiki would grow with the class. Sounds exciting! However, I do feel some adults need some of the structure provided by an LMS. For example, some adults need to see a syllabus, grades, defined roles of instructor and student, due dates etc. But perhaps these could be built into the wiki?</p>\n<p>Good Luck with your choice!</p>\n<p>~michelle<br>\ntwitter: melynntwit<br>\ndelicious: melynn</p>"
+        },
+        {
+          "id": "466",
+          "author": "Leigh Blackall",
+          "author_url": "http://flexible-learning-course.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/3ecbd324bd295c3b33b470853f55d70b460110332f3639a85d5a217e4975039a?s=70&d=mm&r=g",
+          "date": "2009-04-01T01:20:26+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>You may have noticed in the Flexible Learning course, that a significant % of the assessment in that course is formative, and because of that – if I understand the purpose of your question correctly, attendance is inherently evident. The facilitators record individual progress on a spread sheet, and periodically give feedback to participants by leaving comments on their blogs. The course also holds regular web conferences, as well as makes telephone calls to participants to gauge levels of motivation, engagement and needs. At the bottom of the wiki, you will see attribution to other courses that use the no-LMS model.</p>"
+        }
+      ]
     },
     {
       "id": 1126,
@@ -4399,7 +5451,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "467",
+          "author": "Lucy Gray",
+          "author_url": "http://elemenous.typepad.com/",
+          "avatar": "https://secure.gravatar.com/avatar/8e3fee0ceb9d1363a2ddacf3cc57b5d3199f59ae5c13ac6f19dd6384a0abb379?s=70&d=mm&r=g",
+          "date": "2009-03-01T11:46:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hi Ben –</p>\n<p>Have you checked out the teacher community within the Google for Educators site? Here’s the link: <a href=\"http://groups.google.com/group/googleforeducators_googleappseducationedition/topics\" rel=\"nofollow ugc\">http://groups.google.com/group/googleforeducators_googleappseducationedition/topics</a>. There is a section devoted to Google Apps for Education edition: <a href=\"http://groups.google.com/group/googleforeducators_googleappseducationedition/topics\" rel=\"nofollow ugc\">http://groups.google.com/group/googleforeducators_googleappseducationedition/topics</a>.</p>\n<p>Hope this helps,</p>\n<p>Lucy Gray</p>"
+        }
+      ]
     },
     {
       "id": 1127,
@@ -4600,7 +5664,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "468",
+          "author": "Nicole Green",
+          "author_url": "http://www.thehappyhappyapple.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/24c17efc6fb6197ae4f0683277e6c26b61457d47d238f7ee95dc16703807dc0a?s=70&d=mm&r=g",
+          "date": "2009-03-05T05:20:27+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Really great link!  Just posted it to my blog. Thank you for sharing such a great resource!</p>"
+        }
+      ]
     },
     {
       "id": 1133,
@@ -4728,7 +5804,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "470",
+          "author": "Jenny",
+          "author_url": "http://emdffi.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f39ac54a6e990061d6f58ac0412065fe22a7c8c5d45042cb4f43e3a78acf3023?s=70&d=mm&r=g",
+          "date": "2009-03-07T14:25:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Congratulations! That is really exciting. I hope the move goes well.</p>"
+        },
+        {
+          "id": "471",
+          "author": "Karl Fisch",
+          "author_url": "http://thefischbowl.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/23e117b91c63f2b13790cddc3bfc04c20e4a46961650b337aafd6e74acd227a7?s=70&d=mm&r=g",
+          "date": "2009-03-07T14:52:21+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Congrats! Is this the one in the AHS attendance area?</p>"
+        },
+        {
+          "id": "472",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-03-07T21:15:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Congrats Ben!  big and exciting move!  where is it?</p>"
+        }
+      ]
     },
     {
       "id": 1136,
@@ -4792,7 +5900,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "469",
+          "author": "Michael Wacker",
+          "author_url": "http://mwacker.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/da377bbcfb26da135c6a500c6a9b5371d9c197b81983ee29f7eb4b2725593922?s=70&d=mm&r=g",
+          "date": "2009-03-06T14:13:13+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben your staff and co workers are lucky to have such a forwards thinking hands on person heading their professional development and direction. Please keep us updated on how it’s going I know that there are many of us out here wishing we could jump in and dedicate to the use of these tools and resources.<br>\nJust brainstorming here but here’s my initial thoughts:</p>\n<p>*Age restrictions on Google for stud nets? Is it still 13? I know that teachers can serve as “advocates or facilitators” will that be an issue?<br>\n* Open Calendars will they be public or just viewable by your apps or hacking?<br>\n*Still in Beta? Many of the apps are still in Beta meaning some days are better than others; will the inconsistency be an issue?<br>\n*Tech learning curve? Will getting everyone on board be a slower process than anticipated?</p>\n<p>Like I’ve said many times, you are brilliant and I look to much of what you do as leading the charge and I admire your vision so much! Thanks for challenging our thinking and model/system.</p>"
+        }
+      ]
     },
     {
       "id": 1138,
@@ -5060,7 +6180,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "473",
+          "author": "Ejwalhof",
+          "author_url": "http://Web.mac.com/ejwalhof",
+          "avatar": "https://secure.gravatar.com/avatar/f75571c173fc8ff4122abd210d36247450d3b6fbaed44266ab14e9dea5c4137f?s=70&d=mm&r=g",
+          "date": "2009-03-11T19:07:36+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>So – describe to a lay person what this recasted version lois like.  What are the ‘signature phrases’ that should stay and what does the new character look like?  What are the essential qualities of the new education in real life examples – not in broad terms.</p>"
+        }
+      ]
     },
     {
       "id": 1144,
@@ -5120,7 +6252,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "474",
+          "author": "Ruth Howard",
+          "author_url": "http://www.ruthhoward.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/092417a2520cfdfab00542e7a663a546ead0adf959f1b51d7cd9c9b00c9d43e0?s=70&d=mm&r=g",
+          "date": "2009-03-12T12:19:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Teachers and students can ask the thought leader in their field/topic of interest directly. Or if not ask then at least gift that person the student’s opinion/contribution. This in itself is remarkable and so the capacity to engage meaningful questions to stir interest from a thought leader’s camp is an intrinsic self motivating skill.</p>\n<p>Students can produce a prototype and have it made as a one off without the costs/obstructions in former industry practices. Then students can market the product directly at low cost to a global market. Students can work directly on real world design problems in groups or individually alongside international designers/scientists/students.</p>"
+        },
+        {
+          "id": "475",
+          "author": "Sohne Van Selus",
+          "author_url": "http://www.edcsd.org/",
+          "avatar": "https://secure.gravatar.com/avatar/2169fe783a4467557195dd0ce9a41fa572183ba3af09ae7621b8c5ab604db7c7?s=70&d=mm&r=g",
+          "date": "2009-03-12T14:11:57+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Of course it is an extension of what has come before… isn’t that, after all, evolution.  Gallery walks are a wonderful method of sharing information, learning from others, etc – valuable indeed.</p>\n<p>What has changed I believe is that learners can collaborate from any where, any time.  Butcher paper models require that learners are face to face.  Furthermore, the number of actual participates can feasibly be much larger and far-reaching with a google collaboration.</p>\n<p>Furthermore, individuals decide when they want to participate thereby having their entire focus on the task at hand.</p>\n<p>Just a few thoughts… for now.</p>"
+        }
+      ]
     },
     {
       "id": 1147,
@@ -5323,7 +6477,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "476",
+          "author": "Rich",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/23566ea6b24289a65da3afdd057671c3fe851c8e1d1640a9cf8544866efe88ad?s=70&d=mm&r=g",
+          "date": "2009-03-18T02:14:59+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>A few more details on Moodle 3D Sloodle to Opensim is here – <a href=\"http://roots.greenbush.us/?p=724\" rel=\"nofollow ugc\">http://roots.greenbush.us/?p=724</a></p>"
+        }
+      ]
     },
     {
       "id": 1153,
@@ -5389,7 +6555,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "477",
+          "author": "Chris Lehmann",
+          "author_url": "http://www.practicaltheory.org/",
+          "avatar": "https://secure.gravatar.com/avatar/e4c14d02b21d934805c321ec2c1bf1b6b7ff8a744967df7b871a100dc34ec995?s=70&d=mm&r=g",
+          "date": "2009-03-20T02:25:30+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Very sweet… We’re working on single-sign-on still. I can’t wait until the summer when our sys admin has the time to really dig into code and get us closer to the killer app.</p>"
+        }
+      ]
     },
     {
       "id": 1154,
@@ -5577,7 +6755,59 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "478",
+          "author": "Rudy",
+          "author_url": "http://www.screentoaster.com/",
+          "avatar": "https://secure.gravatar.com/avatar/b17eb4d8e93900f3326c2b765ba4d7604ceac919c159bd506f1590402d8bbee1?s=70&d=mm&r=g",
+          "date": "2009-03-19T09:08:33+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>ScreenToaster is about to add even more features : <a href=\"http://blog.screentoaster.com/\" rel=\"nofollow ugc\">http://blog.screentoaster.com/</a></p>\n<p>Coming (really) soon:<br>\nAPI (Beta tested)<br>\nNew video player with tons of new gadgets<br>\nDownload your screencast in .mov file format (with audio)<br>\nFaster uploads to YouTube (with audio)</p>\n<p>Already added in February – March:<br>\nNew categories and subcategories<br>\nFour levels of privacy<br>\n“In the press” and “Partners” sections<br>\nUpload your screencast to Youtube<br>\nDirect upload to Google Video for featured videos<br>\nDownload in .avi and .swf file formats<br>\nRecord from external VNC servers<br>\nAccelerated or slow-motion playback / Pauses during recording<br>\nSpread on Twitter, Facebook, MySpace, FriendFeed, Digg<br>\nBookmark it on Delicious, Stumble Upon, Yahoo Buzz and Google Bookmark<br>\nSend your video by mail<br>\nSuggested videos on the video pages<br>\nBranded profiles<br>\nFilters of search: by “most commented”, by “language”…<br>\nCustom RSS feeds<br>\nFollow ScreenToaster developments in real-time on Twitter (@screentoaster)</p>"
+        },
+        {
+          "id": "479",
+          "author": "ted",
+          "author_url": "http://forbasicliving.com/",
+          "avatar": "https://secure.gravatar.com/avatar/89ba38358ed750ed672ad7af9cbbf93c94f2bd7874792dedc31c2f6994a034e1?s=70&d=mm&r=g",
+          "date": "2009-04-28T22:01:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I’m new to this stuff; and I am not a web developer;  I’ve  been looking for an answer all day.  Thank You.  This is most helpfull.<br>\nTroy</p>"
+        },
+        {
+          "id": "480",
+          "author": "Guess men's watches",
+          "author_url": "http://www.watches-user.com/",
+          "avatar": "https://secure.gravatar.com/avatar/33b0d0500ff0860b9bded98bd4aa78001aab2a4c60f24b933d5b202387ff64b1?s=70&d=mm&r=g",
+          "date": "2010-07-05T18:27:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>oh,my god ! I found this article a long time.  Thant's good article.  I like reading this article !  I will always come here reading. thanks a lot.</p>"
+        },
+        {
+          "id": "1252",
+          "author": "Guess men's watches",
+          "author_url": "http://www.watches-user.com/",
+          "avatar": "https://secure.gravatar.com/avatar/33b0d0500ff0860b9bded98bd4aa78001aab2a4c60f24b933d5b202387ff64b1?s=70&d=mm&r=g",
+          "date": "2010-07-05T18:27:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>oh,my god ! I found this article a long time.  Thant's good article.  I like reading this article !  I will always come here reading. thanks a lot.</p>"
+        },
+        {
+          "id": "1303",
+          "author": "Guess men's watches",
+          "author_url": "http://www.watches-user.com/",
+          "avatar": "https://secure.gravatar.com/avatar/33b0d0500ff0860b9bded98bd4aa78001aab2a4c60f24b933d5b202387ff64b1?s=70&d=mm&r=g",
+          "date": "2010-07-05T18:27:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>oh,my god ! I found this article a long time.  Thant's good article.  I like reading this article !  I will always come here reading. thanks a lot.</p>"
+        }
+      ]
     },
     {
       "id": 1159,
@@ -5654,7 +6884,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "481",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.soulycatholichs.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-03-21T12:29:06+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@ Ben<br>\nThanks for sharing this is absolutely great and exactly what we are looking for.</p>"
+        },
+        {
+          "id": "482",
+          "author": "Kevin Micalizzi, Dimdim Web Conferencing",
+          "author_url": "http://www.dimdim.com/",
+          "avatar": "https://secure.gravatar.com/avatar/261cb9249be2186e136ac090301386d95e6477257f8d5ed19c10135777558f62?s=70&d=mm&r=g",
+          "date": "2009-03-22T13:14:39+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben-</p>\n<p>Thanks for sharing this.  We’re working to make web conferencing easy, open, and affordable.  In addition to Moodle, we integrate with a number of other systems:<br>\n<a href=\"http://www.dimdim.com/products/dimdim_integrations.html\" rel=\"nofollow ugc\">http://www.dimdim.com/products/dimdim_integrations.html</a></p>\n<p>Thanks!</p>\n<p>-k<br>\nKevin Micalizzi, Community Manager<br>\nDimdim Web Conferencing<br>\n  e: <a href=\"mailto:kevin@dimdim.com\">kevin@dimdim.com</a><br>\n  twitter: @dimdim<br>\n  facebook: dimdim.com/facebook</p>"
+        },
+        {
+          "id": "483",
+          "author": "Andrew Donnelly",
+          "author_url": "http://www.mikogo-blog.com/",
+          "avatar": "https://secure.gravatar.com/avatar/a0f497c7d1a67538917f2076807692cd772ac00a304f1f5b2c55942e951b2c4b?s=70&d=mm&r=g",
+          "date": "2009-03-31T12:30:22+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hi Ben,</p>\n<p>You may be interested in checking out Mikogo for free online meetings and Web presentations. It’s a free app and very easy &amp; secure to use. Many great features and we just released the version for Mac computers. You can share any screen content live over the Web with your participants.<br>\nAlso Mikogo includes a remote keyboard/mouse control feature, so you can use the app not only for meetings but also remote support.<br>\nDrop by the website to check it out <a href=\"http://www.mikogo.com/\" rel=\"nofollow ugc\">http://www.mikogo.com</a> and feel free to contact me if you would like more details.</p>\n<p>All the best,</p>\n<p>Andrew Donnelly<br>\nThe Mikogo Team</p>"
+        },
+        {
+          "id": "484",
+          "author": "webdesignanddevelopmentcompany",
+          "author_url": "http://www.freshinsite.com/",
+          "avatar": "https://secure.gravatar.com/avatar/151716ae4c3e55a69e425282f4d851754adbc7a159a4a0ff05b2d65e8d094c1e?s=70&d=mm&r=g",
+          "date": "2010-05-04T14:56:47+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I am becoming more and more convinced that this is the right direction for the many connected and authentic learning experiences I expect to have in the future.</p>"
+        },
+        {
+          "id": "485",
+          "author": "far infrared saunas",
+          "author_url": "http://www.saunaaa.com/",
+          "avatar": "https://secure.gravatar.com/avatar/524d50b646ce83cf578f2fa05725d692c322f0582f7d0379f72c6da47d51a350?s=70&d=mm&r=g",
+          "date": "2010-05-26T08:53:35+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Open source is always the way to go for organizations like schools.  Usually offer as much as the commercial products, but without the huge costs associated with them.</p>"
+        },
+        {
+          "id": "486",
+          "author": "far infrared saunas",
+          "author_url": "http://www.saunaaa.com/",
+          "avatar": "https://secure.gravatar.com/avatar/524d50b646ce83cf578f2fa05725d692c322f0582f7d0379f72c6da47d51a350?s=70&d=mm&r=g",
+          "date": "2010-05-26T15:53:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Open source is always the way to go for organizations like schools.  Usually offer as much as the commercial products, but without the huge costs associated with them.</p>"
+        }
+      ]
     },
     {
       "id": 1161,
@@ -5718,7 +7010,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "487",
+          "author": "Jenny",
+          "author_url": "http://emdffi.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f39ac54a6e990061d6f58ac0412065fe22a7c8c5d45042cb4f43e3a78acf3023?s=70&d=mm&r=g",
+          "date": "2009-03-23T21:30:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Congratulations! Good luck with all the unpacking.</p>\n<p>I completely agree with the thought about being tired after teaching. Fifth grade wasn’t as physically exhausting as I’m finding first grade to be, but both were mentally quite wearing (in the best possible way).</p>"
+        }
+      ]
     },
     {
       "id": 1163,
@@ -5778,7 +7082,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "488",
+          "author": "Michael Wacker",
+          "author_url": "http://mwacker.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/da377bbcfb26da135c6a500c6a9b5371d9c197b81983ee29f7eb4b2725593922?s=70&d=mm&r=g",
+          "date": "2009-03-25T03:28:55+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Right on! Cool Cat mentioned something similar to this today or yesterday and I can’t agree more. Yes it’s exhausting, and yes it feels like you’re pulled in hundreds of directions, but if you can seize every moment and BE HERE NOW then you are relevant, productive, and changing traditional roles and structures.<br>\nThe teachers working with you are lucky to have such a forward thinking guide and peer to bounce ideas off of.<br>\nI answer numerous emails daily about seemingly pointless tasks related to voicethreads, wikis, etc, but if I can ignite a passion for forward thinking in a teacher then I’m igniting that passion in other teachers in their building and countless students this year and possibly next!<br>\nI love to think that way…am I that impactful (not a word, I know) probably not, but it helps me make time and BE HERE NOW!</p>"
+        },
+        {
+          "id": "489",
+          "author": "Chris Lehmann",
+          "author_url": "http://www.practicaltheory.org/",
+          "avatar": "https://secure.gravatar.com/avatar/e4c14d02b21d934805c321ec2c1bf1b6b7ff8a744967df7b871a100dc34ec995?s=70&d=mm&r=g",
+          "date": "2009-03-26T05:55:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>A similar idea to this one is what I once called “Hardest Working Teacher in the Building Syndrome.” I’ve seen it in schools – and have been guilty of it – too often, so I wrote about it.</p>\n<p><a href=\"http://practicaltheory.org/serendipity/index.php?/archives/361-Hardest-Working-Teacher-Syndrome.html\" rel=\"nofollow ugc\">http://practicaltheory.org/serendipity/index.php?/archives/361-Hardest-Working-Teacher-Syndrome.html</a></p>"
+        }
+      ]
     },
     {
       "id": 1165,
@@ -5839,7 +7165,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "490",
+          "author": "Chris Lehmann",
+          "author_url": "http://www.practicaltheory.org/",
+          "avatar": "https://secure.gravatar.com/avatar/e4c14d02b21d934805c321ec2c1bf1b6b7ff8a744967df7b871a100dc34ec995?s=70&d=mm&r=g",
+          "date": "2009-03-29T12:05:08+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I agree that it should definitely apply to more than teachers — and these days, I very much guard myself against that syndrome as principal. When I wrote it, I was a teacher and I was feeling my old school going there, so that’s what I wrote about. 🙂</p>"
+        }
+      ]
     },
     {
       "id": 1166,
@@ -5960,7 +7298,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "493",
+          "author": "Leigh",
+          "author_url": "http://murrell.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/97946b2ed428d669634bd873c7ccc007316cd0b86daa96be82bab072b9135cba?s=70&d=mm&r=g",
+          "date": "2009-04-01T03:24:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben, Thank you so much for your kind words. Heidi and I had a lot of fun working on the videos and the site. I think you ask a good question about making terms concrete. We chose our name because it was a mouthful, caught your attention and was made up of what we wanted to say.  One of my frustrations is just what you mentioned “We tend to be able to project a vision to the outside world and not be able to back it up with the<br>\nspecific ways of getting there, the ways that we got there in our own situations.” I think seeing how others got  to their final product is part of making things concrete. When I know someone’s process I can look at it and more easily see how I can adapt it to my classroom or my students.</p>"
+        },
+        {
+          "id": "495",
+          "author": "Tyson",
+          "author_url": "http://twitter.com/tspraul",
+          "avatar": "https://secure.gravatar.com/avatar/0b5c939a851494fbba89fbfab61201c7be104322b14a8b4729b85b413d1582e8?s=70&d=mm&r=g",
+          "date": "2009-04-05T17:02:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This is great!  It’s often hard to find examples of how someone has “put it all together”.   Will Richardson also recently posted a great concrete example of a school in Australia using <a href=\"http://weblogg-ed.com/2009/one-schools-journey-to-online-social-learning/\" rel=\"nofollow\">online social learning</a>.  I plan on looking at both of these resources more in depth to put something together that will work for my class next year.</p>"
+        }
+      ]
     },
     {
       "id": 1171,
@@ -6084,7 +7444,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "496",
+          "author": "Jenny",
+          "author_url": "http://emdffi.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f39ac54a6e990061d6f58ac0412065fe22a7c8c5d45042cb4f43e3a78acf3023?s=70&d=mm&r=g",
+          "date": "2009-04-03T13:51:02+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>“At the end of the day, I am piloting a larger and more<br>\nunwieldy version of me.While it is flattering that others would want to help beta test me, I<br>\nam not totally sure how smart it is.”</p>\n<p>I have no good answers for your post. I just wanted to say that those two sentences may be my favorite from any post ever. With the added bonus that they are astute and thought-provoking.</p>"
+        },
+        {
+          "id": "497",
+          "author": "Jamie",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/d284e24043a50952fbfa3e187584bd4dbc96237a88c08a6080fb6a26b242db1e?s=70&d=mm&r=g",
+          "date": "2009-04-03T15:05:12+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I would ask why are they less willing and who are the “they”? You often refer to asking the right questions and so I would encourage you to ask Who and Why before How.</p>"
+        }
+      ]
     },
     {
       "id": 1174,
@@ -6205,7 +7587,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "498",
+          "author": "Melissa Smith",
+          "author_url": "http://diarytechsupporter.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/71a1d426c75a1fe3a0cbe63db7f1acb4750200e52ecb04d1a8eb0b7c3b79f20c?s=70&d=mm&r=g",
+          "date": "2009-04-05T18:23:02+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I just gave a workshop on 3 different PLNs – Nings, Twitter, and Reading Blogs.  How each one is geared to a different learning style. For the presentation I put together a wiki page.  It contains my presentation and the how-to’s or where to go’s for the different PLNs.  <a href=\"http://presentingmsmith.pbwiki.com/Differentiate-Start-Here\" rel=\"nofollow ugc\">http://presentingmsmith.pbwiki.com/Differentiate-Start-Here</a></p>\n<p>Use, share, change, rearrange, or completely ignore.  😉</p>"
+        }
+      ]
     },
     {
       "id": 1178,
@@ -6668,7 +8062,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "500",
+          "author": "Tyson",
+          "author_url": "http://twitter.com/tspraul",
+          "avatar": "https://secure.gravatar.com/avatar/0b5c939a851494fbba89fbfab61201c7be104322b14a8b4729b85b413d1582e8?s=70&d=mm&r=g",
+          "date": "2009-04-12T03:33:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I have never administered (or been a user of) a moodle installation, so I really have no idea about what to do or not do.  But why are multiple moodle installations necessary?  I glean that you intend to serve different communities, but what keeps you from serving each community adequately with just one installation?  What makes them so different?  I’m considering using moodle next school year as well, so I’m also just curious.</p>"
+        }
+      ]
     },
     {
       "id": 1193,
@@ -6727,7 +8133,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "501",
+          "author": "Andrea Matott",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a2979b5bdd79e87df1c1f3e44f84ab818ba760ca10fb21f005a19bb765e2ce36?s=70&d=mm&r=g",
+          "date": "2009-04-19T23:25:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Okay, now I will respond to your sentence starters.<br>\n1.  We started looking at Google docs during our third session and now have a more expanded idea of the many uses of it.  This will be an ongoing challenge for me to set up and get comfortable using.<br>\n2.  Regarding school/classroom culture changes, I see many more teachers getting excited about 21st Century Learning and being willing to change our methods in order to keep up with technology and ultimately, to be better at preparing our students for the future.<br>\n3.  Changes I am seeing in students have to do with them being more interested in the “bigger picture” of life – really thinking more about the world as a classroom, and understanding how to be global citizens.  I think this change is inevitable as all of us on planet earth understand more fully how connected we are and can be, and how for the good of humanity, we must move ourselves beyond our own little worlds to the whole.  It’s especially exciting to see this with middle schoolers who by nature are so egocentric.<br>\n4.  I hope to add value to my new teams next year as our configuration for teaming/collaborating will change quite a lot, especially for me.  I will be working with teachers who have all levels of tech. experience and expertise, and I am hopeful that my year of focus on digital educating will bring new, fresh ways of approaching all of our subjects.  I also know I will learn lots of great tools and ideas from my students as they seem to soak up technology like sponges.  I feel more confident in my ability to relate to my students with and through technology.</p>"
+        },
+        {
+          "id": "502",
+          "author": "Holly Spurlin",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/448f27df293352accab3aa6ebfec516b5c9ed876e9a38521e8d44c346c40ed13?s=70&d=mm&r=g",
+          "date": "2009-04-20T20:41:39+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Meeting 3:<br>\n1.  Through this study group I hope to achieve a better understanding of how to engage my students in 21st Centruy learning. Most important for me, is an awareness of all the options available currently and new possible ways to use technology for 21st century learning; especially, networking.<br>\n2.  What has happened differently in my classroom as a result?  I have tried new lessons with the focus on technology.<br>\n3.  The resources I have used that have been most helpful:  my mentor has been extremely supportive, even visiting to observe first attempts; the online tutorial for Cover it Live made setting up my blog understandable; even fairly easy lessons like Comic Life and Photo essays of our field trip were rewarding for me.<br>\n4.  The impact of increased technology in my class is significant; especially, learner engagement and learner confidence in their ability to think critical about technology and develop a sense of ‘I can figure this out’.  The students spent more time engaged in authentic learning and less time off task (no time off task in most cases.)<br>\n5.  Hands on learning is always the most helpful for me because I am new to technology; however, I enjoyed getting ideas from project sharing.<br>\n6.  My advice for a new study group:  for the educator, assess the different levels of technology skills and tailor the lesson to meet the audiences’ needs; for the student, don’t panic if you don’t understand every thing, just focus on one thing at a time and try to integrate it into your lessons.<br>\nMeeting #4 (Sentence completion)<br>\n1.  We started with meetings and learning lots of ways that technology can increase student learning and critical thinking<br>\n2.Regarding school/classroom changes I see the biggest change in me – I’m not afraid to implement a lesson because I understand that even though things might not go as planned, it’s worth the risk and I can often trouble shoot and figure things out.<br>\n3.  Changes I see in students includes a more positive attitude in and about the subject I’m teaching.  When I heard one student ask another during passing periods, “What did you get to do in Social Studies?”, I realized it as been worth the effort.<br>\n4.  I hope to add value to the teachers I work with by encouraging them to try new things in the classroom and sharing the things I have discovered with them.</p>"
+        }
+      ]
     },
     {
       "id": 1195,
@@ -6863,7 +8291,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "503",
+          "author": "Nicole Green",
+          "author_url": "http://www.thehappyhappyapple.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/24c17efc6fb6197ae4f0683277e6c26b61457d47d238f7ee95dc16703807dc0a?s=70&d=mm&r=g",
+          "date": "2009-04-20T05:20:11+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I really enjoyed your posts and the great site links.  How exactly do you use a Twitter backchannel with TextMarks and TextTheMob?  What age group do you use it with?</p>"
+        },
+        {
+          "id": "504",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog/",
+          "avatar": "https://secure.gravatar.com/avatar/4c8bab03b5d140bf8a8544570fd69089b3bec87052d4a22e79425a1a91386217?s=70&d=mm&r=g",
+          "date": "2009-04-20T13:49:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks for the compliment.</p>\n<p>I don’t actually use the twitter backchannel with Textmark and TexttheMob. Textmarks and Textthemob are backchannels unto themselves.I use those two services when the people in the audience are not already Twitter users and I don’t have the time in the session to set them all up on twitter.</p>\n<p>I monitor Twitter hashtags with <a href=\"http://www.tweetgrid.com/\" rel=\"nofollow ugc\">http://www.tweetgrid.com</a> (I put it up in the corner of the projection screen) and Textmarks/Textthemob gives you an easily updatable webpage to check for the backchannel.</p>\n<p>Generally, I use a backchannel for two reasions:</p>\n<p>1. A collaborative note taking space<br>\n2. A place to ask and answer questions</p>\n<p>Let me know if I should do a large post on backchanneling and I will.</p>"
+        }
+      ]
     },
     {
       "id": 1197,
@@ -6992,7 +8442,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "505",
+          "author": "Penny Ryder",
+          "author_url": "http://teachingchallenges.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/01429118c75858c4d19481637b0986ef05154ddbe66c690930cbce9a15f73810?s=70&d=mm&r=g",
+          "date": "2009-04-22T22:32:50+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hi Ben. I discovered your blog through the edubloggers directory and I’m loving it. I thing of schools and change in terms of snowballs! A school that won’t change is like a snowball sitting still. It’s not growing and eventually it will melt because of outside circumstances. On the other hand, a school that is open to change is a snowball on the move.  It will become more attractive to people who want to contribute to change – it will draw motivated teachers, willing parent helpers, community members, grant money etc. People want to be part of something that has vision and drive. Before you know it, you have a massive snowball with everyone on board. (you just want to hope the snowball is going in the right direction!) without change, schools are sitting in slush waiting to melt.</p>"
+        }
+      ]
     },
     {
       "id": 1201,
@@ -7052,7 +8514,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "506",
+          "author": "Judy Harris",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/aa1e60b13cc83ad4f3ebd0853ff914bb11cb1273c2f37c8de499d88bd871bc60?s=70&d=mm&r=g",
+          "date": "2009-04-19T03:52:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I use Twitter to learn from individuals and enjoy the personal dialogue that causes me to think.  I am not on Twitter to buy something or hear organizational information.  With that said, I know that there are social media marketing folks who rely on Twitter for just that and I applaud them for their work.  I’m sure there are people out there who enjoy the forum for that purpose. For me, keep it personal, professional and thought provoking!</p>"
+        }
+      ]
     },
     {
       "id": 1202,
@@ -7346,7 +8820,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "507",
+          "author": "Penny Ryder",
+          "author_url": "http://teachingchallenges.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/01429118c75858c4d19481637b0986ef05154ddbe66c690930cbce9a15f73810?s=70&d=mm&r=g",
+          "date": "2009-04-25T22:45:55+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hi Ben,<br>\nI’ve been trying Google Docs for a family holiday. We have a calendar that we can all add comments to so we know what everyone else is planning.<br>\nI don’t really like the look of Google Docs and I usually have trouble with formatting when I shift something across from Word.<br>\nI am testing Adobe Buzzwords with a collaborative teacher project. I like that it stores a history of document changes where I don’t think Google Docs does. I also like how with one extra click you can use adobe connect now to meet up with others in a ‘meeting room’ with Web Cam, microphone, screen share and chat capabilities.<br>\nThese are great collaborative tools, but it would be great to explore different ways of doing this so students could collaborate in this way without the need for email accounts and registration.<br>\nThanks for sharing your thoughts.</p>"
+        },
+        {
+          "id": "508",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2009-04-26T03:25:44+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks for your thoughtful comment. Google docs does in fact do revision histories quite well.</p>\n<p>Adobe’s products are really well polished, their platform isn’t nearly as open (sharing features not as universal, and publishing things as web pages doesn’t allow you to share feeds about progress.)</p>\n<p>I don’t think that google docs has a monopoly on collaboration by any means, but to my thinking it is has the lowest ceiling for the uninitiated.<br>\nI can’t dispute that there is no meeting place built into google docs, but adobe connect is not free for massive collaborations. It is like adobe is a “try before you buy” product, whereas google is s try and try and try, and then buy when you need something more (google apps document management, etc). Anyway, thanks for the comment.</p>"
+        }
+      ]
     },
     {
       "id": 1210,
@@ -7416,7 +8912,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "509",
+          "author": "Damien",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/65a8ea9bb4d7416341a18502b4523329a35061f4acf759cb7ca58291c640124e?s=70&d=mm&r=g",
+          "date": "2009-05-21T12:54:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>So what’s everyone’s favourite online alternative to jumpcut? I’ve only just found jumpcut, after reading positive reviews, and was greeted by the above statement on their homepage. It’s a shame really.</p>"
+        }
+      ]
     },
     {
       "id": 1212,
@@ -7473,7 +8981,59 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "510",
+          "author": "Ben Wildeboer",
+          "author_url": "http://sustainablydigital.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/41806c3fdfd9f1955ab3962f142c286019c4118ef2627a18385628f3959a306d?s=70&d=mm&r=g",
+          "date": "2009-04-28T03:34:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I hear ya. I don’t think this post will get you fired (even if the people you refer to see it). Or…perhaps let me rephrase: If they <em>do</em> fire you over this, it’s no place you really <em>want</em> to be around. You’re being highly critical, but your end game is improved teaching and learning. If they can’t take that they’re not interested in the students.</p>\n<p>I have very similar experiences in how my administration thinks of teachers. They complain about teachers being unprofessional, etc., yet offer teachers no opportunity to prove professionalism (or any incentive to do so). It’s poor leadership. Good administration motivates and inspires (or at least supports). Bad administration points out every reason WHY they can’t trust you and does nothing to help fix the problem.</p>\n<p>Thanks for this post. In a sick way it makes me feel better that I’m not alone in this, though in many ways I wish I was.</p>"
+        },
+        {
+          "id": "511",
+          "author": "Rick Tanski",
+          "author_url": "http://ricktanski.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/29374cc73077f43d1e6d3e0fd5b3047334119c3c195aa1bb048b2f756b29ea46?s=70&d=mm&r=g",
+          "date": "2009-04-28T03:58:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Amen! That’s why I teach in addition to serving as principal. I’ll hire you if you do get fired 😉</p>"
+        },
+        {
+          "id": "512",
+          "author": "Lisette Casey",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/d9fcd03c31d8a486306f2fc7b1019dcf17deaea075e01d98b7901251d6e1fb91?s=70&d=mm&r=g",
+          "date": "2009-04-28T04:11:12+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I couldn’t agree more.  Once you are out of classroom it’s easy to forget and teaching one class every so often is a humble reminder of the daily challenges teachers face in their classroom.</p>"
+        },
+        {
+          "id": "513",
+          "author": "Jenny",
+          "author_url": "http://emdffi.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f39ac54a6e990061d6f58ac0412065fe22a7c8c5d45042cb4f43e3a78acf3023?s=70&d=mm&r=g",
+          "date": "2009-04-28T10:23:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Amen!</p>"
+        },
+        {
+          "id": "514",
+          "author": "Christyn",
+          "author_url": "http://www.ak2co.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/87e7aabb422e015396e9d37d56f373782b01666c9186fe8b51bf6bf6296e8b1c?s=70&d=mm&r=g",
+          "date": "2009-04-30T17:15:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Sorry no amens here, but appreciate the conversations as always. I posted the emailed response on my blog and a new question the flips it…if admin are teaching or engaging in some way for the teacher/student perspective, what then can teachers do to have a better understanding of the administrative roles and pressures. It needs to work both ways for us to get past the blame game.</p>"
+        }
+      ]
     },
     {
       "id": 1214,
@@ -7540,7 +9100,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "516",
+          "author": "Dan Stucke",
+          "author_url": "http://www.mrstucke.com/",
+          "avatar": "https://secure.gravatar.com/avatar/7695f4903d45685185b3323536fc673ca529ce4af7d75666538e35a955ba9404?s=70&d=mm&r=g",
+          "date": "2009-04-30T09:17:44+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben,<br>\nA passionate and well reasoned argument.  I hope your district goes ahead with this and you can show them a wealth of new ways of working together.  Keep us updated on your progress.<br>\nDan</p>"
+        },
+        {
+          "id": "517",
+          "author": "Barbara Hendrick",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/11d6332395cfd003292e58f4a828b30de74e8f951d4d7f698d6b77cb08289273?s=70&d=mm&r=g",
+          "date": "2009-04-30T17:50:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben,<br>\nI have been thinking about this very thing since the last time we ran into each other in Starbucks.  It was the topic of our conversation then and continues to be the foremost thought on my mind.  So why do I keep going back to it?  Well, for the very reasons you’ve stated.  Maybe most importantly, that it’s not a stop-gap but a progressive and efficient way to address future needs.  I like the way you think.<br>\nBarbara</p>"
+        }
+      ]
     },
     {
       "id": 1215,
@@ -7608,7 +9190,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "518",
+          "author": "Michael Wacker",
+          "author_url": "http://www.mwacker.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/da377bbcfb26da135c6a500c6a9b5371d9c197b81983ee29f7eb4b2725593922?s=70&d=mm&r=g",
+          "date": "2009-05-02T04:33:06+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great find! This concept of social learning and reading is something that many of us teachers try to use to engage our learners in authentic discussions with real audiences via wikis, and blogs. I love the social aspect of learning and the students do too. Sharing in the experience with other readers brings an excitement but also a sense of responsibility to other readers and peers I think.</p>\n<p>So much of learning is what we bring into it via our schema or experiences, what a great way to expand our understanding. Listening to those that are different from us, whether it’s geographically, socio-economically, or both.</p>\n<p>Thanks Ben,<br>\nI can’t wait to try this out!</p>"
+        },
+        {
+          "id": "519",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.soulycatholichs.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-05-03T12:24:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@ Ben<br>\nGreat find with this.  I’m telling all my friends.</p>"
+        }
+      ]
     },
     {
       "id": 1217,
@@ -7668,7 +9272,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "520",
+          "author": "Dan Stucke",
+          "author_url": "http://www.mrstucke.com/",
+          "avatar": "https://secure.gravatar.com/avatar/7695f4903d45685185b3323536fc673ca529ce4af7d75666538e35a955ba9404?s=70&d=mm&r=g",
+          "date": "2009-05-03T11:44:48+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I am waiting to find out how much say over the IT budget I will have in my new job, I’m hoping it is considerable.  I am seriously considering a class set of iPod Touch’s.  Their versatility is fantastic as you say.  Not sure how easy managing charging and syncing apps for 30+ will be though?<br>\nDan</p>"
+        }
+      ]
     },
     {
       "id": 1220,
@@ -7924,7 +9540,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "521",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.soulycatholichs.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-05-10T23:40:48+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@ Ben<br>\nThanks for this post.  It helped spark a great discussion with a couple of friends yesterday over the balance between immediate human community and online digital communities.</p>"
+        }
+      ]
     },
     {
       "id": 1228,
@@ -8216,7 +9844,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "522",
+          "author": "Andrea Keller (Neon)",
+          "author_url": "http://www.irvingisd.net/~akeller",
+          "avatar": "https://secure.gravatar.com/avatar/2869b6a7cc16a685e43df0846ad69fd9315439c14dac26aee45ceede5bb194a2?s=70&d=mm&r=g",
+          "date": "2009-05-14T20:35:13+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This was an amazing event!  Thank you so much for sharing this podcast!<br>\n<a href=\"http://kellerbusybees.blogspot.com/\" rel=\"nofollow ugc\">http://kellerbusybees.blogspot.com/</a> is my blog of my podcast and vodcast.  I am the one that Kevin allowed me to come in and talk about using podcast and vodcast with children with autism.</p>\n<p>It was amazing and I can’t wait to be a part of the “movement”</p>"
+        }
+      ]
     },
     {
       "id": 1235,
@@ -8353,7 +9993,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "523",
+          "author": "Penny Ryder",
+          "author_url": "http://teachingchallenges.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/01429118c75858c4d19481637b0986ef05154ddbe66c690930cbce9a15f73810?s=70&d=mm&r=g",
+          "date": "2009-05-21T10:26:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I love this message. Thanks for sharing. I try not to write anything that I’ll regret at a later stage, but I never thought about people reading my thought from today in 10 years time! What a fascinating idea.</p>"
+        },
+        {
+          "id": "524",
+          "author": "Leslie Maniotes",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-05-21T18:06:11+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great post.  I spent hours looking through and thinking about the good the bad and the ugly.  Excellent examples – my favorite- be sure you’d want to say it to your kid, even if you don’t have any yet! 🙂<br>\nThanks for the thoughtful post.</p>"
+        }
+      ]
     },
     {
       "id": 1239,
@@ -8417,7 +10079,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "526",
+          "author": "Leslie Maniotes",
+          "author_url": "http://coloradolearns.wetpaint.com/",
+          "avatar": "https://secure.gravatar.com/avatar/a44fda649ffaa3d547d69118257732d4129187fccf98c6fcb7462216e66493dc?s=70&d=mm&r=g",
+          "date": "2009-05-22T04:03:51+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>My thoughts, top 3</p>\n<p>Winning is…1) kids asking the questions<br>\n2) no sites blocked but students learning how to be responsible for their own web use<br>\n3) e-portfolio as the majority of the digital footprint they leave us with…</p>"
+        }
+      ]
     },
     {
       "id": 1240,
@@ -8695,7 +10369,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "527",
+          "author": "Miguel Guhlin",
+          "author_url": "http://mguhlin.org/",
+          "avatar": "https://secure.gravatar.com/avatar/fd10b4f6262381d30649daaf7df210ef52251cfc4800e507db9319906413292e?s=70&d=mm&r=g",
+          "date": "2009-05-30T03:13:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks for sharing, Ben! Wow! An acknowledgement of your work is here:<br>\n<a href=\"http://www.mguhlin.org/2009/05/moodle-on-oracle-database.html\" rel=\"nofollow ugc\">http://www.mguhlin.org/2009/05/moodle-on-oracle-database.html</a></p>\n<p>With appreciation,<br>\nMiguel</p>"
+        }
+      ]
     },
     {
       "id": 1249,
@@ -8957,7 +10643,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "528",
+          "author": "Sohne Van Selus",
+          "author_url": "http://www.edcsd.org/",
+          "avatar": "https://secure.gravatar.com/avatar/2169fe783a4467557195dd0ce9a41fa572183ba3af09ae7621b8c5ab604db7c7?s=70&d=mm&r=g",
+          "date": "2009-08-03T21:42:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hmmm…. I am interested in what your vision of the future of education is… I would also be curious about the true conflict…  I believe one will never really find the “utopic” existence where every aspect of the job is aligned 100% to personal passions and ideals. However, that said, I believe we should always continue to aim for that existence…  I guess I am a realist and know that my utopia is likely not yours.  I also am well aware that we all (institutions included) deal with change and evolution in our own way – often causing some of the old to remain.  Furthermore, I believe too many people operate from a place of fear when change is necessary and inevitable, which results in “secrets” and private agendas…. your thoughts?</p>"
+        },
+        {
+          "id": "529",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/4c8bab03b5d140bf8a8544570fd69089b3bec87052d4a22e79425a1a91386217?s=70&d=mm&r=g",
+          "date": "2009-08-03T21:56:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I am aiming for it, and I think finding it quite often. It was just a week that I was struggling with some of the work that was being asked of me (not related to eDCSD). Most of it is resolved, but I haven’t been able to do a full response. I would love to blog more about it, but I have found such little time recently. I can assure you that I have not been able to manage many “secrets”, ever. I just have trouble when “proprietary” gets in the way of learning. Utopia, or not, I don’t really want to make that decision.</p>\n<p>Thanks for the comment, though.</p>"
+        }
+      ]
     },
     {
       "id": 1257,
@@ -9976,7 +11684,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "531",
+          "author": "Charlie A. Roy",
+          "author_url": "http://www.charlieroy.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/055251dc92ed1304dd270c67535013a53a946ff8f8cfb0354ebfe39828b80dd7?s=70&d=mm&r=g",
+          "date": "2009-07-05T17:01:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>@ Ben<br>\nYou deserve the vacation with all the writing you do.   Enjoy it.   I guarantee that little girl of yours will remember with great detail every family vacation you take!</p>\n<p>Be well!</p>"
+        },
+        {
+          "id": "532",
+          "author": "Bob Lee",
+          "author_url": "http://www.team1million.com/",
+          "avatar": "https://secure.gravatar.com/avatar/95eb025a8b1b15afab9067345cabcddc7ca1caa3b7040c2fd88f714d9c76880b?s=70&d=mm&r=g",
+          "date": "2009-07-19T00:16:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Ben – I’m so glad that you got to spend time w/your daughter and away from all the details of business AND YOU ARE SO RITE about your guarantee that that little girl (or boy) of yours will remember with great detail every family vacation you take.</p>\n<p> What a nice way to change the details to the things in life that have transformed our lives.</p>\n<p>Be well to you as well</p>\n<p>Bob Lee</p>"
+        }
+      ]
     },
     {
       "id": 1261,
@@ -10441,7 +12171,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "533",
+          "author": "Paul Bogush",
+          "author_url": "http://blogush.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/b1c10df717ff11821008447ff56ed1a9e66c8937438bdba099870af37e9e5100?s=70&d=mm&r=g",
+          "date": "2009-11-19T21:54:58+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p># 10 rocks.</p>"
+        },
+        {
+          "id": "534",
+          "author": "Paul Bogush",
+          "author_url": "http://blogush.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/b1c10df717ff11821008447ff56ed1a9e66c8937438bdba099870af37e9e5100?s=70&d=mm&r=g",
+          "date": "2009-11-19T22:07:13+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Alright…maybe a few more words.  As I read your list I went back and forth agreeing with you.</p>\n<p>Do you ever question if it is not how we do PD but the audience that we have hired and put into the “seats?”</p>\n<p>Do you think we could stop “doing PD” if we simply hired a different caliber of professionals?</p>\n<p>Do you worry that we have to “give(!!!) context, meaning and perspective” to teachers?</p>"
+        }
+      ]
     },
     {
       "id": 1276,
@@ -10544,7 +12296,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "535",
+          "author": "Paul Bogush",
+          "author_url": "http://blogush.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/b1c10df717ff11821008447ff56ed1a9e66c8937438bdba099870af37e9e5100?s=70&d=mm&r=g",
+          "date": "2009-11-20T17:26:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I like reading your post backwards:</p>\n<p>An Experience+Space+Networks=Change</p>"
+        }
+      ]
     },
     {
       "id": 1277,
@@ -10685,7 +12449,119 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "comments": [
+        {
+          "id": "536",
+          "author": "Paul Bogush",
+          "author_url": "http://blogush.edublogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/b1c10df717ff11821008447ff56ed1a9e66c8937438bdba099870af37e9e5100?s=70&d=mm&r=g",
+          "date": "2009-12-30T00:39:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>So hard to admit that you might be a…innovator.</p>"
+        },
+        {
+          "id": "540",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-01-01T20:27:22+00:00",
+          "depth": 2,
+          "parent": "536",
+          "html": "<p>I don’t think that it is immodest to state what you believe and realize that it is outside of the norm. I don’t believe that innovation is unique; I believe that it is a daily process for anyone who thinks critically about the world around them and does something about it. I think it is okay to be proud of that. Right?</p>"
+        },
+        {
+          "id": "537",
+          "author": "Eric Brunsell",
+          "author_url": "http://www.teachingscience20.com/",
+          "avatar": "https://secure.gravatar.com/avatar/65c7a9b6a53fb09ab1042e211b55ad6e42ebe110845de413f0e769dd8901d018?s=70&d=mm&r=g",
+          "date": "2009-12-31T03:53:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>“engaged in disrupting the current crop of educational theory”</p>\n<p>I always hedge a bit when I hear comments like this.  We may be talking about disrupting the “system,” but we should be doing this at the expense of current “educational theory.” Which theory are you talking about? Social Constructivism? Connectivism? Conceptual Change Theory?  We know a hell of a lot about how people learn.  We also know a lot about how to teach (or build learning experiences).  The challenge is applying what we know to the change the status quo.</p>\n<p>With that said, I like your idea — I’m just critiquing the need to disrupt the “theory” instead of focusing on innovative synthesis of what we know about progressive teaching and learning.</p>"
+        },
+        {
+          "id": "539",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-01-01T20:25:36+00:00",
+          "depth": 2,
+          "parent": "537",
+          "html": "<p>@Eric<br>\nAlright, so I don’t really want to disrupt Educational Theory, especially not Connectivism. What I really want is to disrupt theories about education that much of the public have. I want to make sure that we are doing our job to create an innovative system that spins its theory from the every day practice of connected and authentic learning. I want the innovations to be felt within households and within schools so that our “current crop” of theory stands up to the heavy pressure of those who want to see it fail, those who believe it doesn’t really exist or that it can’t work. While I may see the fruits of learning through a just-in-time network of engaged individuals, true innovation is the only way that others will ever see it as well.</p>\n<p>I hope that makes sense.</p>"
+        },
+        {
+          "id": "538",
+          "author": "Gerald Aungst",
+          "author_url": "http://www.quisitivity.org/",
+          "avatar": "https://secure.gravatar.com/avatar/44c2037847fe84d097b1710d519e4bfcdd87b69a32890d2e29b5f3a79b93fc79?s=70&d=mm&r=g",
+          "date": "2010-01-01T16:43:32+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I agree with Paul for a couple reasons. I think when we’re looking from the inside at things we do (especially things other people may call “innovative”), we see all of the pieces and influences that led to the innovation, so it doesn’t seem to us very new or noteworthy. It also takes a bit of arrogance I think for someone to point to themselves and say, “Look at how I’m changing the field.”</p>\n<p>We work in a field that promotes differentiation, but rewards uniformity of results. Being an innovator isn’t encouraged in the field, so even when we are doing innovative things, educators aren’t inclined to brag about it.</p>\n<p>I also think that some important innovations seem small to the people doing them. They are undramatic, and so are not worth mentioning.</p>\n<p>I hope that you are able to find people willing to brag a little about the little things that are making a big difference in their schools.</p>"
+        },
+        {
+          "id": "541",
+          "author": "Ben Wilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-01-01T23:13:50+00:00",
+          "depth": 2,
+          "parent": "538",
+          "html": "<p>@Gerald</p>\n<p>Innovation cannot come from nothing. I think that all true innovation is built upon what has come before. It is about making different connections or asking a better question. I don’t think it is arrogance that it requires to call yourself an innovator, but rather a level of respect for yourself that you are creating something. While it may not be new, it is still the act of creation.</p>\n<p>I will definitely agree that important innovations are overlooked for a while, but I think that anyone who has something to say, should say it and be okay with standing behind it. Perhaps if I framed the question as “what are you trying to say in education” it would be easier, but I want to know what is working or is creating a unique experience for kids and not just what people are talking about. Innovation can be a failure too, but any educator who wants to be ordinary, clearly doesn’t respect the awesome power that we have to change the way that we learn.</p>"
+        },
+        {
+          "id": "542",
+          "author": "Eric Brunsell",
+          "author_url": "http://www.teachingscience20.com/",
+          "avatar": "https://secure.gravatar.com/avatar/65c7a9b6a53fb09ab1042e211b55ad6e42ebe110845de413f0e769dd8901d018?s=70&d=mm&r=g",
+          "date": "2010-01-02T17:27:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thanks for the clarification Ben-<br>\nI am a science educator, so when I hear the word “theory” I interpret it to have a very specific meaning.  I agree that public perception, including the perceptions of many policymakers, views the holy grail of education as having kids master the “basics” — even though the basics are know where near enough.  They often view progressive education and the research supporting it as being “soft.”</p>\n<p>One of the biggest challenges we face is that our “one size fits all” paradigm is very difficult to overcome.  We talk a lot about differentiation and individualization, but that is very difficult to accomplish within the normal classroom structure.  I hope your video challenge (and presentation) includes some discussion of how teachers create structures that allow for true individualization.</p>"
+        },
+        {
+          "id": "543",
+          "author": "monika hardy",
+          "author_url": "http://twitter.com/monk51295",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2010-01-27T07:04:08+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>i love what you are doing.. i am so in.<br>when do you need this by?<br>i have our plan – an innovation lab for the district – in blog post form and in a more detailed google doc form… unfortunately, i have no time… until late tonight.. to possibly record me talking about it..<br>is a post an ok way to share this?</p>"
+        },
+        {
+          "id": "544",
+          "author": "bhwilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-01-27T07:27:27+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I am putting together my session tonight and tomorrow. If you have any<br>ability to record a video summary of what you are doing, go ahead…<br>otherwise, just send me some links and I will put them with the other<br>videos.</p>\n<p>I'm so glad that you like what I'm doing. I think it is going to be a great<br>conversation. Talk to you soon.</p>"
+        },
+        {
+          "id": "545",
+          "author": "monika hardy",
+          "author_url": "http://twitter.com/monk51295",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2010-01-27T08:17:44+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>a plan for a district innovation lab – in funk:  <a href=\"http://monkblogs.blogspot.com/2010/01/my-dream-job-description.html\" rel=\"nofollow\"></a><a href=\"http://monkblogs.blogspot.com/2010/01/my-dream-\" rel=\"nofollow ugc\">http://monkblogs.blogspot.com/2010/01/my-dream-</a>…<br>and in black and white: <a href=\"http://docs.google.com/Doc?docid=0AX3J8HwmX59wZGQ0OXp2cjhfNTBnNXZxbWhjdA&amp;hl=en\" rel=\"nofollow\"></a><a href=\"http://docs.google.com/Doc?docid=0AX3J8HwmX59wZ\" rel=\"nofollow ugc\">http://docs.google.com/Doc?docid=0AX3J8HwmX59wZ</a>…</p>"
+        },
+        {
+          "id": "546",
+          "author": "bhwilkoff",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2010-01-27T08:19:40+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Don't feel like you are off the hook, though… A video summary would still<br>be awesome.</p>"
+        }
+      ]
     },
     {
       "id": 1281,

@@ -370,6 +370,13 @@ approved the same day: C-4 mojibake re-decode (33 posts, content
 bytes change only where double-encoded), C-5 normalize stringified
 taxonomy lists, C-6 restore taxonomy display names from the old menu.
 
+**Queue decisions (Ben, 2026-09-16, tick 26)**: A-6 empty WordPress
+shells → redirect to `/`; B-5 "Watch" and "Recommendations" sections on
+the blog homepage; C-3 post images re-pointed from the Jetpack CDN to
+self-hosted `/wp-content/uploads/` at render (supersedes Decision 009
+for rendered pages; JSON content untouched); C-1 comments recovered
+from git rather than declared lost.
+
 **Admin tools (Ben, 2026-09-16)**: `/menus/` and `/rss-creator/` retired
 (redirect to `/admin/regenerate/`); `/update/` ported to operate on
 JSON content and dispatch a render; the look and feel of every admin

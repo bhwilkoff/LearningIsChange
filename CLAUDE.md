@@ -57,6 +57,9 @@ tombstone) and gates every render commit.
 - **Feeds**: `feed/index.xml` (newest 50) and `feed/full.xml` (all
   posts, ~11 MB) are rendered by `scripts/render-feeds.js`; the podcast
   feed has its own tool. Never patch feeds in place.
+- **Comments** live on each post's JSON entry as `comments[]` (recovered
+  from git; rendered read-only). Never regenerate from a template that
+  lacks the `{{comments}}` slot.
 - **Removed posts are tombstones** (`removed: true` in the shard): the
   permalink renders as a redirect to the year archive; listings, feeds
   and search skip it. Nothing under a public URL is ever deleted.

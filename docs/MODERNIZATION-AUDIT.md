@@ -67,13 +67,16 @@ either no-ops or phones home to WordPress.com.
 
 ### Comments
 
-The archive holds **no comment threads**. `comment_count` is 0 in
-`pages.json`, `feed/full.xml` has no `<wp:comment>` elements, and
-only 2 of 5,657 year-dir pages contain comment markup. Comments were
-lost upstream of this repo (or never exported). *Consequence*: the
-CLAUDE.md rule about preserving comment threads has nothing to
-protect; the Wayback Machine is the only possible recovery path
-(→ queue item C-1).
+**Corrected 2026-09-16 (tick 26).** The tick-1 finding was wrong: the
+WordPress export hard-coded 7,132 comments into 1,079 posts, and they
+were stripped by the *first M4 post regeneration* (`9b39a965`, before
+this audit) because the JSON backfill captured only the article body.
+Ben pointed this out. Recovered from git (`582b036dd3`, the last commit
+with them) by `scripts/recover-comments.js` into each post's JSON as
+`comments[]` (id, author, author_url, avatar, date, depth, parent,
+html — verbatim) and rendered read-only under the post. 1,043 posts
+(the rest were deduplicated later). **Lesson**: check git history
+before declaring content lost.
 
 ### Regeneration pipeline — what already exists
 
@@ -234,11 +237,11 @@ items get done in a later tick and moved to *Done*.
 - ✅ A-5 test pages — keep as-is (Ben).
 
 ### B. Navigation & identity
-- B-5 Old-menu items without a home yet: "Video Posts" (category
+- ✅ (Ben: homepage sections) B-5 Old-menu items without a home yet: "Video Posts" (category
   `videos` + children), "Recommendations" (`recs` + children). The
   categories exist and render; should the homepage get a "Watch" /
   "Recommendations" section, or is the Topics rail enough?
-- A-6 Empty WordPress shells now rendered noindex on the new shell:
+- ✅ (Ben: redirect all to `/`) A-6 Empty WordPress shells now rendered noindex on the new shell:
   `/events/*` (5 pages, an events-plugin placeholder), `/jing-install-tutorial/`,
   `/nvu-install/`, `/nvu-linking-tutorial/` (video-embed pages whose
   embeds did not survive export), `/test-for-google-talk/`. Redirect to
@@ -293,12 +296,11 @@ items get done in a later tick and moved to *Done*.
   (`C4c15`, `Im Learning`, `Askbenw`, `Lifewidelearning16`); the old
   menu had the real names (`#C4C15`, `What I'm Learning`, `#AskBenW`).
   Restore display names from the menu fragment where they exist?
-- C-1 Comments are gone from the whole archive. Attempt Wayback
-  Machine recovery for high-traffic posts? (Effort: high; value:
-  historical.)
+- ✅ **C-1 resolved tick 26** — comments were in git, not lost;
+  recovered and rendered (see Diagnostics → Comments).
 - C-2 `og:url` is `/` on every post — will be fixed in P0, listed
   here for the record.
-- C-3 Posts embedding `i0.wp.com` (Jetpack CDN) image URLs — Decision
+- ✅ (Ben: re-point at render) C-3 Posts embedding `i0.wp.com` (Jetpack CDN) image URLs — Decision
   009 relies on this CDN; confirm still acceptable or re-point to
   `/wp-content/uploads/`.
 
@@ -552,8 +554,19 @@ resolves them on its own.)*
   the hand-written noise filters in the post renderer. Posts render
   byte-identical; archives/pages gained the `apple-touch-icon` line
   (4,997 files) — the only diff.
-  **Next**: decision batch for Ben on the open queue items (A-6, B-5,
-  C-1, C-3, C-8, C-10, C-11, D-3); then act on the answers. promote
+  **Next**: see tick 26.
+- **2026-09-16 · tick 26 (decisions + comment recovery)** — Ben
+  answered A-6 (redirect all to `/`), B-5 (homepage sections), C-3
+  (re-point images at render), and corrected C-1: comments were
+  hard-coded in the HTML. Verified in git: 1,079 posts had threads at
+  the initial commit; stripped by the first M4 regen. Recovered 7,132
+  comments on 1,043 posts into the JSON (`scripts/recover-comments.js`),
+  rendered under posts (`{{comments}}`, threaded, read-only, JSON-LD
+  `commentCount`), all posts regenerated, permalink check OK.
+  **Next**: act on A-6 (page-rules redirects), C-3 (render-time
+  `i0.wp.com` → `/wp-content/uploads/` rewrite in HTML/feeds; supersede
+  Decision 009), B-5 (Watch + Recommendations homepage sections); then
+  the remaining decisions (C-8, C-10, C-11, D-3). promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

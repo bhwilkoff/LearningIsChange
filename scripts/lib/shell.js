@@ -211,6 +211,7 @@ export function jsonLdPost(post, absUrl, d, description) {
     isPartOf: { '@type': 'Blog', '@id': `${SITE}/#blog`, name: SITE_NAME },
     inLanguage: 'en-US',
     wordCount: wordCount(post.content),
+    ...(Array.isArray(post.comments) && post.comments.length ? { commentCount: post.comments.length } : {}),
   };
   const img = firstImage(post.content); if (img) data.image = img;
   const kw = [...terms(post, 'categories'), ...terms(post, 'tags')].map((t) => t.name).filter((n) => !NOISE_TERMS.has(slugify(n)));

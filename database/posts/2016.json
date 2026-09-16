@@ -1193,7 +1193,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "comments": [
+        {
+          "id": "1300",
+          "author": "Zac",
+          "author_url": "http://autodizactic.com/",
+          "avatar": "https://secure.gravatar.com/avatar/d99e4fee4b5c3f5db58593d27ecbf4b07e266f8e1ee31d1753ca2de4e3960b2f?s=70&d=mm&r=g",
+          "date": "2016-01-18T15:51:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I see it, and I get it. In a bunch of versions of me responding to this question, I think I end up writing a similar post.<br>\nAs I was reading, I found myself thinking, “Yeah, and we still need to make up our minds sometimes.” Racism, sexism, homophobia – all things I’m pretty sure you and I have made up our minds about.<br>\nThat’s the key, right? What’s the most base level decision I can make. From there, I get to think about the gray areas. That’s where the perplexing joy of humanity comes in. “Well, I am against sexism, and I support my friends. Margaret is my friend and she just made a sexist remark, now I get to navigate this space and understand fully the depth of my commitment.”</p>"
+        }
+      ]
     },
     {
       "id": 5347,
@@ -2650,7 +2662,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "comments": [
+        {
+          "id": "1301",
+          "author": "Tim Stahmer",
+          "author_url": "http://www.assortedstuff.com/",
+          "avatar": "https://secure.gravatar.com/avatar/f1892c9e43898a8a5eb2e36cd0eb16be93e2b8b389587b6fecbd49304ec6d996?s=70&d=mm&r=g",
+          "date": "2016-02-09T01:40:27+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>“People have (or should have) agency. Ergo, Personalized Learning.”</p>\n<p>That certainly should be true. Students should be a fundamental part of planning their own learning. We as teachers should do everything we can to help students understand their strengths and needs, and then help them use that knowledge to make the best choices for themselves.</p>\n<p>However, that’s not how the term “personalized” is commonly used. More often than not, “personalized” is something done TO students. Someone else (or some opaque piece of software) determines what and how students will learn, with the only input from them being their responses to test questions.</p>"
+        }
+      ]
     },
     {
       "id": 5382,
@@ -5415,7 +5439,49 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "comments": [
+        {
+          "id": "2024",
+          "author": "John Eick",
+          "author_url": "https://plus.google.com/101795094345140608170",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-04-12T04:15:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben, this is so slick! Nice work!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3884",
+          "author": "John Eick",
+          "author_url": "https://plus.google.com/101795094345140608170",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-04-12T04:15:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben, this is so slick! Nice work!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5684",
+          "author": "John Eick",
+          "author_url": "https://plus.google.com/101795094345140608170",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-04-12T04:15:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben, this is so slick! Nice work!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6625",
+          "author": "John Eick",
+          "author_url": "https://plus.google.com/101795094345140608170",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-04-12T04:15:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben, this is so slick! Nice work!</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 5456,
@@ -8405,7 +8471,169 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "comments": [
+        {
+          "id": "2019",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:47:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I use a Padlet and ask teachers to add ideas, questions, and resources to it.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3879",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:47:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I use a Padlet and ask teachers to add ideas, questions, and resources to it.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5679",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:47:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I use a Padlet and ask teachers to add ideas, questions, and resources to it.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6620",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:47:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I use a Padlet and ask teachers to add ideas, questions, and resources to it.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "2020",
+          "author": "Kerrie Schultz",
+          "author_url": "https://plus.google.com/106999127028558607954",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Providing a common experience of learning</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3880",
+          "author": "Kerrie Schultz",
+          "author_url": "https://plus.google.com/106999127028558607954",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Providing a common experience of learning</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5680",
+          "author": "Kerrie Schultz",
+          "author_url": "https://plus.google.com/106999127028558607954",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Providing a common experience of learning</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6621",
+          "author": "Kerrie Schultz",
+          "author_url": "https://plus.google.com/106999127028558607954",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Providing a common experience of learning</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "2021",
+          "author": "Lacy Jolly",
+          "author_url": "https://plus.google.com/102611227892277961475",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have them work together!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3881",
+          "author": "Lacy Jolly",
+          "author_url": "https://plus.google.com/102611227892277961475",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have them work together!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5681",
+          "author": "Lacy Jolly",
+          "author_url": "https://plus.google.com/102611227892277961475",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have them work together!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6622",
+          "author": "Lacy Jolly",
+          "author_url": "https://plus.google.com/102611227892277961475",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:48:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have them work together!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "2022",
+          "author": "Stella Cypher",
+          "author_url": "https://plus.google.com/103929044295592875008",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:49:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Start out with an authentic experience to get them thinking.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3882",
+          "author": "Stella Cypher",
+          "author_url": "https://plus.google.com/103929044295592875008",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:49:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Start out with an authentic experience to get them thinking.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5682",
+          "author": "Stella Cypher",
+          "author_url": "https://plus.google.com/103929044295592875008",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:49:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Start out with an authentic experience to get them thinking.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6623",
+          "author": "Stella Cypher",
+          "author_url": "https://plus.google.com/103929044295592875008",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-06T19:49:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Start out with an authentic experience to get them thinking.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 5548,
@@ -9092,7 +9320,49 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "comments": [
+        {
+          "id": "2018",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-21T00:50:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks for sharing resources Ben Wilkoff. It was great facilitating with you. </p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3878",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-21T00:50:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks for sharing resources Ben Wilkoff. It was great facilitating with you. </p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5678",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-21T00:50:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks for sharing resources Ben Wilkoff. It was great facilitating with you. </p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6619",
+          "author": "Jacki Sloan",
+          "author_url": "https://plus.google.com/103541423006224689604",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2016-09-21T00:50:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks for sharing resources Ben Wilkoff. It was great facilitating with you. </p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 5562,

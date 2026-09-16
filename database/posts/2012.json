@@ -120,7 +120,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3212",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-03T17:13:20+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Glenn Moses Michael Wacker You ever see this?</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2269,
@@ -187,7 +199,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5072",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-03T17:13:20+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Glenn Moses Michael Wacker You ever see this?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7813",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-03T17:13:20+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Glenn Moses Michael Wacker You ever see this?</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2271,
@@ -307,7 +341,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3210",
+          "author": "Miguel Guhlin",
+          "author_url": "https://plus.google.com/100241764846967396684",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-14T13:51:21+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Google forms? Moodle lessons?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3211",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-14T21:39:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I ended up using linked Google Presentation. Worked like a charm.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2274,
@@ -370,7 +426,49 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5070",
+          "author": "Miguel Guhlin",
+          "author_url": "https://plus.google.com/100241764846967396684",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-14T13:51:21+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Google forms? Moodle lessons?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7811",
+          "author": "Miguel Guhlin",
+          "author_url": "https://plus.google.com/100241764846967396684",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-14T13:51:21+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Google forms? Moodle lessons?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5071",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-14T21:39:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I ended up using linked Google Presentation. Worked like a charm.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7812",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-14T21:39:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I ended up using linked Google Presentation. Worked like a charm.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2276,
@@ -560,7 +658,129 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3206",
+          "author": "AmyCorinne Gettys",
+          "author_url": "https://plus.google.com/104399952017842368837",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T20:23:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>have you joined quora? its amazing for answers from experts</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5066",
+          "author": "AmyCorinne Gettys",
+          "author_url": "https://plus.google.com/104399952017842368837",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T20:23:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>have you joined quora? its amazing for answers from experts</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7807",
+          "author": "AmyCorinne Gettys",
+          "author_url": "https://plus.google.com/104399952017842368837",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T20:23:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>have you joined quora? its amazing for answers from experts</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3207",
+          "author": "Brian C. Smith",
+          "author_url": "https://plus.google.com/116459384524155102986",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T22:06:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’m curious… to what end?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5067",
+          "author": "Brian C. Smith",
+          "author_url": "https://plus.google.com/116459384524155102986",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T22:06:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’m curious… to what end?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7808",
+          "author": "Brian C. Smith",
+          "author_url": "https://plus.google.com/116459384524155102986",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T22:06:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’m curious… to what end?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3208",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T23:03:59+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>AmyCorinne Gettys I like Quora, but I haven’t found that it produces much better answers than asking on Twitter or Google+ because I haven’t put the time in cultivating my network there. I should probably invest some time there soon to that end.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5068",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T23:03:59+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>AmyCorinne Gettys I like Quora, but I haven’t found that it produces much better answers than asking on Twitter or Google+ because I haven’t put the time in cultivating my network there. I should probably invest some time there soon to that end.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7809",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T23:03:59+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>AmyCorinne Gettys I like Quora, but I haven’t found that it produces much better answers than asking on Twitter or Google+ because I haven’t put the time in cultivating my network there. I should probably invest some time there soon to that end.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3209",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T23:05:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Brian C. Smith I was looking for a way of doing whiteboard like presentations with stick figures, but because my stick figures are worse than most, I wanted a program that I could record “drawing” an image and then do voiceover to complete the screencast. I ended up just making stick figures, although I’m hopeful that it exists somewhere.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5069",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T23:05:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Brian C. Smith I was looking for a way of doing whiteboard like presentations with stick figures, but because my stick figures are worse than most, I wanted a program that I could record “drawing” an image and then do voiceover to complete the screencast. I ended up just making stick figures, although I’m hopeful that it exists somewhere.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7810",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-16T23:05:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Brian C. Smith I was looking for a way of doing whiteboard like presentations with stick figures, but because my stick figures are worse than most, I wanted a program that I could record “drawing” an image and then do voiceover to complete the screencast. I ended up just making stick figures, although I’m hopeful that it exists somewhere.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2282,
@@ -625,7 +845,49 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3204",
+          "author": "Daniel Rezac",
+          "author_url": "https://plus.google.com/115004099341430142455",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-17T17:39:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Remember when restaurants used to charge you for free refills? It was like stealing to go up there and re-up my Diet Coke.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5064",
+          "author": "Daniel Rezac",
+          "author_url": "https://plus.google.com/115004099341430142455",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-17T17:39:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Remember when restaurants used to charge you for free refills? It was like stealing to go up there and re-up my Diet Coke.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3205",
+          "author": "Blake G.",
+          "author_url": "https://plus.google.com/101408375254957037893",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-17T18:55:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Cheaper products/labor + inflated prices = “free” services</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5065",
+          "author": "Blake G.",
+          "author_url": "https://plus.google.com/101408375254957037893",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-17T18:55:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Cheaper products/labor + inflated prices = “free” services</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2283,
@@ -806,7 +1068,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3203",
+          "author": "Patrick S. Ryan",
+          "author_url": "https://plus.google.com/101796592759188137838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-19T17:35:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have you thought about creating a form that you can send out by email and have people fill out (which then turns into a Doc)?  <a href=\"http://support.google.com/docs/bin/answer.py?hl=en&amp;answer=87809\" rel=\"nofollow\">http://support.google.com/docs/bin/answer.py?hl=en&amp;answer=87809</a></p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2287,
@@ -869,7 +1143,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5063",
+          "author": "Patrick S. Ryan",
+          "author_url": "https://plus.google.com/101796592759188137838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-19T17:35:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have you thought about creating a form that you can send out by email and have people fill out (which then turns into a Doc)?  <a href=\"http://support.google.com/docs/bin/answer.py?hl=en&amp;answer=87809\" rel=\"nofollow\">http://support.google.com/docs/bin/answer.py?hl=en&amp;answer=87809</a></p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7804",
+          "author": "Patrick S. Ryan",
+          "author_url": "https://plus.google.com/101796592759188137838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-19T17:35:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Have you thought about creating a form that you can send out by email and have people fill out (which then turns into a Doc)?  <a href=\"http://support.google.com/docs/bin/answer.py?hl=en&amp;answer=87809\" rel=\"nofollow\">http://support.google.com/docs/bin/answer.py?hl=en&amp;answer=87809</a></p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2289,
@@ -932,7 +1228,99 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3200",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-23T17:25:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I think we could talk about issues of style, length, posting frequency, etc., but what it really comes down to is the same things that are likely to make a blog great are things that make people great: personality, passion, empathy, etc.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5060",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-23T17:25:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I think we could talk about issues of style, length, posting frequency, etc., but what it really comes down to is the same things that are likely to make a blog great are things that make people great: personality, passion, empathy, etc.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7801",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-23T17:25:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I think we could talk about issues of style, length, posting frequency, etc., but what it really comes down to is the same things that are likely to make a blog great are things that make people great: personality, passion, empathy, etc.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3201",
+          "author": "Russ Goerend",
+          "author_url": "https://plus.google.com/102014442157314815999",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-23T18:16:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Content and interaction are what make me come back.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5061",
+          "author": "Russ Goerend",
+          "author_url": "https://plus.google.com/102014442157314815999",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-23T18:16:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Content and interaction are what make me come back.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7802",
+          "author": "Russ Goerend",
+          "author_url": "https://plus.google.com/102014442157314815999",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-23T18:16:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Content and interaction are what make me come back.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3202",
+          "author": "Scott Friedman",
+          "author_url": "https://plus.google.com/114914547677403705698",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T07:10:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>A great blog post causes me to reflect on my practice and at times causes me to reflect or challenge on my daily work or my beliefs.  I feel it is important to expose oneself to differing viewpoints and blogs are a great vehicle for that.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5062",
+          "author": "Scott Friedman",
+          "author_url": "https://plus.google.com/114914547677403705698",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T07:10:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>A great blog post causes me to reflect on my practice and at times causes me to reflect or challenge on my daily work or my beliefs.  I feel it is important to expose oneself to differing viewpoints and blogs are a great vehicle for that.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7803",
+          "author": "Scott Friedman",
+          "author_url": "https://plus.google.com/114914547677403705698",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T07:10:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>A great blog post causes me to reflect on my practice and at times causes me to reflect or challenge on my daily work or my beliefs.  I feel it is important to expose oneself to differing viewpoints and blogs are a great vehicle for that.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2291,
@@ -989,7 +1377,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3198",
+          "author": "Scott Friedman",
+          "author_url": "https://plus.google.com/114914547677403705698",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T06:58:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>That would be cool.  Be sure to share if someone lets you know how to do that.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3199",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T21:29:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Looks like the only way to really do it well is to jailbreak still. I would like to make that happen, but I think that it is an issue of getting the ipad to think they are connected to an Apple TV</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2292,
@@ -1052,7 +1462,49 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5058",
+          "author": "Scott Friedman",
+          "author_url": "https://plus.google.com/114914547677403705698",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T06:58:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>That would be cool.  Be sure to share if someone lets you know how to do that.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7799",
+          "author": "Scott Friedman",
+          "author_url": "https://plus.google.com/114914547677403705698",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T06:58:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>That would be cool.  Be sure to share if someone lets you know how to do that.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5059",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T21:29:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Looks like the only way to really do it well is to jailbreak still. I would like to make that happen, but I think that it is an issue of getting the ipad to think they are connected to an Apple TV</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7800",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-26T21:29:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Looks like the only way to really do it well is to jailbreak still. I would like to make that happen, but I think that it is an issue of getting the ipad to think they are connected to an Apple TV</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2295,
@@ -1303,7 +1755,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1228",
+          "author": "Michael Wacker",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/6d97cb1bf0ed6fecfad78265f6a44abf2e4a257954d1db1dd0e92bde0a96cc52?s=70&d=mm&r=g",
+          "date": "2012-02-10T02:44:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Worked like a charm! Great Hack Wilkoff!</p>"
+        },
+        {
+          "id": "1229",
+          "author": "Scott Woodall",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/4fbfb4225405ca73b2e006def547b5b81c248132e98c760975c16e96a328305a?s=70&d=mm&r=g",
+          "date": "2012-04-22T16:49:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I’ve written a service that allows you to upload files to Google Docs via email. It’s available at <a href=\"http://sendtogdocs.com/\" rel=\"nofollow ugc\">http://sendtogdocs.com</a> and sounds like it will save few steps that are mentioned above.</p>"
+        },
+        {
+          "id": "1230",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2012-04-23T15:16:00+00:00",
+          "depth": 2,
+          "parent": "1229",
+          "html": "<p>Thanks! I’m so glad you made this 100 times easier to do.</p>"
+        }
+      ]
     },
     {
       "id": 2300,
@@ -1366,7 +1850,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3197",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-31T22:46:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben – Just wanted to say thanks for sharing this.  Biggest smile today by a long shot.  Good, good stuff.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5057",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-31T22:46:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben – Just wanted to say thanks for sharing this.  Biggest smile today by a long shot.  Good, good stuff.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7798",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-01-31T22:46:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ben – Just wanted to say thanks for sharing this.  Biggest smile today by a long shot.  Good, good stuff.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2301,
@@ -1990,7 +2506,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3196",
+          "author": "Nancy White",
+          "author_url": "https://plus.google.com/100763575302915990543",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-07T20:26:01+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>lol!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5056",
+          "author": "Nancy White",
+          "author_url": "https://plus.google.com/100763575302915990543",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-07T20:26:01+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>lol!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7797",
+          "author": "Nancy White",
+          "author_url": "https://plus.google.com/100763575302915990543",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-07T20:26:01+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>lol!</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2314,
@@ -2179,7 +2727,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3195",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-08T16:17:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Oh, and if you want to see how they are all mapped out: <a href=\"http://www.dubberly.com/wp-content/uploads/2009/01/ddo_article_evolvingmap.pdf\" rel=\"nofollow\">http://www.dubberly.com/wp-content/uploads/2009/01/ddo_article_evolvingmap.pdf</a></p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5055",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-08T16:17:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Oh, and if you want to see how they are all mapped out: <a href=\"http://www.dubberly.com/wp-content/uploads/2009/01/ddo_article_evolvingmap.pdf\" rel=\"nofollow\">http://www.dubberly.com/wp-content/uploads/2009/01/ddo_article_evolvingmap.pdf</a></p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7796",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-08T16:17:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Oh, and if you want to see how they are all mapped out: <a href=\"http://www.dubberly.com/wp-content/uploads/2009/01/ddo_article_evolvingmap.pdf\" rel=\"nofollow\">http://www.dubberly.com/wp-content/uploads/2009/01/ddo_article_evolvingmap.pdf</a></p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2318,
@@ -2439,7 +3019,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1200",
+          "author": "dissertation proposal",
+          "author_url": "http://thesistown.com/writing/basics/dissertation-proposals",
+          "avatar": "https://secure.gravatar.com/avatar/636e97d10a4d70f88efefe3815d0769ec5ecc3e4152b592b06d7525249b8ed49?s=70&d=mm&r=g",
+          "date": "2012-02-16T19:01:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>&nbsp;</p>\n<p>I have never read one of such articles before!</p>"
+        },
+        {
+          "id": "1201",
+          "author": "essay writer",
+          "author_url": "http://www.facebook.com/essaywriter.org",
+          "avatar": "https://secure.gravatar.com/avatar/e8541fe45271cf5d0a2a504ea2db9e70b8743fa74c5e5e11b6e1226212f9e0da?s=70&d=mm&r=g",
+          "date": "2012-07-09T08:59:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>thanks a lot for the post!</p>"
+        }
+      ]
     },
     {
       "id": 2325,
@@ -3067,7 +3669,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3193",
+          "author": "P Bradley Robb",
+          "author_url": "https://plus.google.com/105242605420454124239",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-16T17:17:51+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>As long as you’re content with mirroring content at 720p…</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5053",
+          "author": "P Bradley Robb",
+          "author_url": "https://plus.google.com/105242605420454124239",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-16T17:17:51+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>As long as you’re content with mirroring content at 720p…</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7794",
+          "author": "P Bradley Robb",
+          "author_url": "https://plus.google.com/105242605420454124239",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-16T17:17:51+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>As long as you’re content with mirroring content at 720p…</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3194",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-16T18:07:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>And I am. Considering that my “HDTV” doesn’t go any higher. I also anticipate that the Next-Gen Apple TV will be capable of doing Full HD.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5054",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-16T18:07:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>And I am. Considering that my “HDTV” doesn’t go any higher. I also anticipate that the Next-Gen Apple TV will be capable of doing Full HD.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7795",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-16T18:07:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>And I am. Considering that my “HDTV” doesn’t go any higher. I also anticipate that the Next-Gen Apple TV will be capable of doing Full HD.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2337,
@@ -3130,7 +3794,129 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3189",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T04:22:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ve got a functioning work around if you want it but, yeah, sharing out of G+ should be easier all the way around.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5049",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T04:22:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ve got a functioning work around if you want it but, yeah, sharing out of G+ should be easier all the way around.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7790",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T04:22:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ve got a functioning work around if you want it but, yeah, sharing out of G+ should be easier all the way around.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3190",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:15:20+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Yeah. I’ve got a way to make it happen, but not for pages. Do you have that one figured out?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5050",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:15:20+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Yeah. I’ve got a way to make it happen, but not for pages. Do you have that one figured out?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7791",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:15:20+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Yeah. I’ve got a way to make it happen, but not for pages. Do you have that one figured out?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3191",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:18:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I don’t think so. Though I haven’t tried. I’ll send you what I got in a minute.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5051",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:18:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I don’t think so. Though I haven’t tried. I’ll send you what I got in a minute.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7792",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:18:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I don’t think so. Though I haven’t tried. I’ll send you what I got in a minute.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3192",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:20:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Here’s my source: <a href=\"http://www.mguhlin.org/2012/02/funneling-g-to-twitter-and-on-rmeyners.html\" rel=\"nofollow\">http://www.mguhlin.org/2012/02/funneling-g-to-twitter-and-on-rmeyners.html</a></p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5052",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:20:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Here’s my source: <a href=\"http://www.mguhlin.org/2012/02/funneling-g-to-twitter-and-on-rmeyners.html\" rel=\"nofollow\">http://www.mguhlin.org/2012/02/funneling-g-to-twitter-and-on-rmeyners.html</a></p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7793",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T05:20:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Here’s my source: <a href=\"http://www.mguhlin.org/2012/02/funneling-g-to-twitter-and-on-rmeyners.html\" rel=\"nofollow\">http://www.mguhlin.org/2012/02/funneling-g-to-twitter-and-on-rmeyners.html</a></p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2339,
@@ -3193,7 +3979,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3187",
+          "author": "Lisa Hickey",
+          "author_url": "https://plus.google.com/115936631317109488656",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T04:39:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I have SO been there. Thanks for this!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5047",
+          "author": "Lisa Hickey",
+          "author_url": "https://plus.google.com/115936631317109488656",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T04:39:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I have SO been there. Thanks for this!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7788",
+          "author": "Lisa Hickey",
+          "author_url": "https://plus.google.com/115936631317109488656",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-17T04:39:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I have SO been there. Thanks for this!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3188",
+          "author": "Fontina Turner",
+          "author_url": "https://plus.google.com/106016978217667324757",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-20T21:45:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Weee! I love it!! All true. Except I’m the one drinking the Jack.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5048",
+          "author": "Fontina Turner",
+          "author_url": "https://plus.google.com/106016978217667324757",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-20T21:45:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Weee! I love it!! All true. Except I’m the one drinking the Jack.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7789",
+          "author": "Fontina Turner",
+          "author_url": "https://plus.google.com/106016978217667324757",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-20T21:45:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Weee! I love it!! All true. Except I’m the one drinking the Jack.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2340,
@@ -3501,7 +4349,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1231",
+          "author": "Raymond Johnson",
+          "author_url": "http://mathed.net/",
+          "avatar": "https://secure.gravatar.com/avatar/9fa1d66f7d9cba9bb127565f898962abe2e2a5a7ba3150dc8654973a46c2df7f?s=70&d=mm&r=g",
+          "date": "2012-02-22T23:48:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I couldn’t help but think, “This open house idea sounds like the creation of a special place — like a classroom.”</p>\n<p>But I know you’re seeking something like a classroom not bounded so much by time, space, and common agenda. We’re in the process at CU-Boulder of designing a new collaborative space centered around our learning science program. We want many of the things you described, and we too are grappling with how to make it work. One idea I heard this morning I liked: Encourage people who use the space to “check in” their use by logging their presence and activity on a whiteboard. That way, people who use the space later get a bigger picture of the work people are doing, and they can go find those people and join in. It’s silly to wait until somebody publishes a paper to find out what they’ve been thinking about.</p>\n<p>I’ve tried hosting my office hours in a Google+ Hangout, and I think that’s a start. I’d like to see a trend of #officehours and #openhouse make their way into our streams. The limitation there, I think, is that what we post is too focused on the self — we post as an “I,” not usually as a “we.” I don’t think it’s selfish or intentional, I think structuring “we” online is just more complex than structuring “I,” and making the step from individual learning to collaborative learning takes effort.</p>\n<p>Then again, a bunch of people just don’t want to show anybody how the sausage is made.</p>"
+        },
+        {
+          "id": "1232",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2012-02-23T15:51:00+00:00",
+          "depth": 2,
+          "parent": "1231",
+          "html": "<p>I am in love with the idea of hosting a weekly (or at least regular) #officehours or #openhouse in a Google+ hangout. I think I will be starting it up this coming week. Do you have yours set up at a regular interval? It would be amazing to start thinking about these in the same way that people think about Twitter Chats. Putting together a calendar of learning #openhouses would be a great way for anyone who is looking to dig deeper or ask questions of people who are learning about something in particular to have an entry point. Thank you so much for continuing to flesh out this idea.</p>"
+        },
+        {
+          "id": "1233",
+          "author": "Kyle A",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/f1e31a6078eeebae76f07e81c6680645b32c0ad4349388fc59786918b4e8a623?s=70&d=mm&r=g",
+          "date": "2012-02-23T18:04:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I have been thinking about this too..I love the idea and love Raymond’s method of making it happen. My thought was similar, it was topical ‘sit-and-go’s’. Yes, like online poker. The concept of having a small group of people gather at a table to discuss a topic for short amount of time. Topics are posted and when 5 people join, off you go. Norms, outcomes and sharing methods could all be established ahead of time. It would also be cool if people could take private notes on the other users in that&nbsp;environment. &nbsp; Also, it isn’t dependent on a set schedule. They just happen when you get enough people interested in talking about that topic.&nbsp;</p>"
+        },
+        {
+          "id": "1234",
+          "author": "Ben Wilkoff",
+          "author_url": "/blog",
+          "avatar": "https://secure.gravatar.com/avatar/0fd696e841c04ee9328d0fe05e15cf1bf82148735d92e72b5684eef4235c9faa?s=70&d=mm&r=g",
+          "date": "2012-02-23T21:15:00+00:00",
+          "depth": 2,
+          "parent": "1233",
+          "html": "<p>The online poker idea is a particularly great wrinkle. I think that adds a lot of interesting possibility for getting into a Google+ hangout. Nice work.</p>"
+        },
+        {
+          "id": "1235",
+          "author": "Info",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/41f16eafea9961d75faf130b03b7781dc7211276747f560b0b3b604531cabcfc?s=70&d=mm&r=g",
+          "date": "2012-04-30T18:11:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Love the idea</p>"
+        },
+        {
+          "id": "1236",
+          "author": "Andrea",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/41f16eafea9961d75faf130b03b7781dc7211276747f560b0b3b604531cabcfc?s=70&d=mm&r=g",
+          "date": "2012-04-30T18:23:00+00:00",
+          "depth": 2,
+          "parent": "1235",
+          "html": "<p>Woops, posted too soon. &nbsp;</p>\n<p>I thought about hosting a “salon” for homeschoolers to share original work and inquiries. &nbsp;But I really like the idea of a “learning open house” for adults (and kids). &nbsp;Salons were, in a sense, precursors&nbsp;to TED talks, also a platform for sharing learning. &nbsp;</p>"
+        }
+      ]
     },
     {
       "id": 2346,
@@ -3688,7 +4598,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3186",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-22T23:06:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>One of the things that I’ve been thinking a bit about lately is how the adults that go and visit “model” schools could give something back while they’re there.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>So, what if the second half of the first day at an conference like EduCon was some sort of Education Jam where the people there offer to teach a 30 minute class on anything that they think other people would like to learn.  It could be within or outside of their area of “expertise” and could be valuable and a lot of fun.  </p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Similar but different?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5046",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-22T23:06:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>One of the things that I’ve been thinking a bit about lately is how the adults that go and visit “model” schools could give something back while they’re there.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>So, what if the second half of the first day at an conference like EduCon was some sort of Education Jam where the people there offer to teach a 30 minute class on anything that they think other people would like to learn.  It could be within or outside of their area of “expertise” and could be valuable and a lot of fun.  </p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Similar but different?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7787",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-22T23:06:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>One of the things that I’ve been thinking a bit about lately is how the adults that go and visit “model” schools could give something back while they’re there.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>So, what if the second half of the first day at an conference like EduCon was some sort of Education Jam where the people there offer to teach a 30 minute class on anything that they think other people would like to learn.  It could be within or outside of their area of “expertise” and could be valuable and a lot of fun.  </p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Similar but different?</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2351,
@@ -3751,7 +4693,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3184",
+          "author": "Lori Lenz",
+          "author_url": "https://plus.google.com/115211787257319267694",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-27T16:29:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5044",
+          "author": "Lori Lenz",
+          "author_url": "https://plus.google.com/115211787257319267694",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-27T16:29:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7785",
+          "author": "Lori Lenz",
+          "author_url": "https://plus.google.com/115211787257319267694",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-27T16:29:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3185",
+          "author": "Jack Loken",
+          "author_url": "https://plus.google.com/114961060008873262809",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-27T20:34:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>oh WOW</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5045",
+          "author": "Jack Loken",
+          "author_url": "https://plus.google.com/114961060008873262809",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-27T20:34:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>oh WOW</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7786",
+          "author": "Jack Loken",
+          "author_url": "https://plus.google.com/114961060008873262809",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-02-27T20:34:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>oh WOW</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2352,
@@ -3812,7 +4816,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1237",
+          "author": "thesis help",
+          "author_url": "http://thesistown.com/",
+          "avatar": "https://secure.gravatar.com/avatar/8a1cd1eed48119df923b02fa09d54ca70d6e1f7fef1d38765117ccc449768932?s=70&d=mm&r=g",
+          "date": "2012-03-30T06:45:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>nice! thnks for info</p>"
+        }
+      ]
     },
     {
       "id": 2355,
@@ -4125,7 +5141,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1238",
+          "author": "essay help",
+          "author_url": "http://justessay.com/",
+          "avatar": "https://secure.gravatar.com/avatar/1be3f2af93fe31416a1c63e5eb60eaa94972adc0be98d9d2fa6292f20517e73a?s=70&d=mm&r=g",
+          "date": "2012-03-15T18:12:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>&nbsp;OMG…</p>"
+        }
+      ]
     },
     {
       "id": 2364,
@@ -4314,7 +5342,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3183",
+          "author": "Fontina Turner",
+          "author_url": "https://plus.google.com/106016978217667324757",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-03-28T16:12:34+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>These are fabulous!! Such a great concept, I’m loving them.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5043",
+          "author": "Fontina Turner",
+          "author_url": "https://plus.google.com/106016978217667324757",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-03-28T16:12:34+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>These are fabulous!! Such a great concept, I’m loving them.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7784",
+          "author": "Fontina Turner",
+          "author_url": "https://plus.google.com/106016978217667324757",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-03-28T16:12:34+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>These are fabulous!! Such a great concept, I’m loving them.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2369,
@@ -4495,7 +5555,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3182",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-03-29T19:39:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome.  Needed something this afternoon and I think this was it.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2373,
@@ -4562,7 +5634,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5042",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-03-29T19:39:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome.  Needed something this afternoon and I think this was it.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7783",
+          "author": "Glenn Moses",
+          "author_url": "https://plus.google.com/115865267746976977369",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-03-29T19:39:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome.  Needed something this afternoon and I think this was it.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2375,
@@ -4747,7 +5841,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3181",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-04-18T17:41:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Last night I started to think about getting in on that project. I’ve always been a watch-wearer, and it does look like that watch does some nice things. Are you planning on getting one?</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2380,
@@ -4814,7 +5920,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5041",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-04-18T17:41:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Last night I started to think about getting in on that project. I’ve always been a watch-wearer, and it does look like that watch does some nice things. Are you planning on getting one?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7782",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-04-18T17:41:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Last night I started to think about getting in on that project. I’ve always been a watch-wearer, and it does look like that watch does some nice things. Are you planning on getting one?</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2381,
@@ -5523,7 +6651,129 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1941",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-14T21:39:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ll +1 that.  I’m in the last 2 weeks of my M.Ed., but when June rolls around I’ll be much free-r!  Would that be alright?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3801",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-14T21:39:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ll +1 that.  I’m in the last 2 weeks of my M.Ed., but when June rolls around I’ll be much free-r!  Would that be alright?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5601",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-14T21:39:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ll +1 that.  I’m in the last 2 weeks of my M.Ed., but when June rolls around I’ll be much free-r!  Would that be alright?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6542",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-14T21:39:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’ll +1 that.  I’m in the last 2 weeks of my M.Ed., but when June rolls around I’ll be much free-r!  Would that be alright?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "1942",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T03:26:08+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Absolutely. I’m game whenever you are! Talk to you soon, and good luck with the last 2 weeks.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3802",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T03:26:08+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Absolutely. I’m game whenever you are! Talk to you soon, and good luck with the last 2 weeks.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5602",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T03:26:08+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Absolutely. I’m game whenever you are! Talk to you soon, and good luck with the last 2 weeks.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6543",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T03:26:08+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Absolutely. I’m game whenever you are! Talk to you soon, and good luck with the last 2 weeks.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "1943",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T04:50:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Sounds wonderful — thank you!  I’m excited to finish things up!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3803",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T04:50:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Sounds wonderful — thank you!  I’m excited to finish things up!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5603",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T04:50:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Sounds wonderful — thank you!  I’m excited to finish things up!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6544",
+          "author": "Sarah Carr",
+          "author_url": "https://plus.google.com/107486861300955462674",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-05-15T04:50:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Sounds wonderful — thank you!  I’m excited to finish things up!</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2398,
@@ -6101,7 +7351,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3180",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-07T23:54:22+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I had not seen this. Some great nostalgia in there.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5040",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-07T23:54:22+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I had not seen this. Some great nostalgia in there.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7781",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-07T23:54:22+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I had not seen this. Some great nostalgia in there.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2415,
@@ -6164,7 +7446,129 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "1938",
+          "author": "Daniel Treadwell",
+          "author_url": "https://plus.google.com/103697821787469756035",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T13:51:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hey Benjamin Wilkoff, you will have to hack things up a bit, it is quite a mess in there. &nbsp;Line 648 (\t\t‘post_type’ =&gt; ‘post’,) is where I specify the type to import as. &nbsp;I’m not all that familiar with WordPress and its data storage though so changing that to the type you wish may not work but it would be worth a go.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Thanks for your support.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3798",
+          "author": "Daniel Treadwell",
+          "author_url": "https://plus.google.com/103697821787469756035",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T13:51:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hey Benjamin Wilkoff, you will have to hack things up a bit, it is quite a mess in there. &nbsp;Line 648 (\t\t‘post_type’ =&gt; ‘post’,) is where I specify the type to import as. &nbsp;I’m not all that familiar with WordPress and its data storage though so changing that to the type you wish may not work but it would be worth a go.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Thanks for your support.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5598",
+          "author": "Daniel Treadwell",
+          "author_url": "https://plus.google.com/103697821787469756035",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T13:51:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hey Benjamin Wilkoff, you will have to hack things up a bit, it is quite a mess in there. &nbsp;Line 648 (\t\t‘post_type’ =&gt; ‘post’,) is where I specify the type to import as. &nbsp;I’m not all that familiar with WordPress and its data storage though so changing that to the type you wish may not work but it would be worth a go.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Thanks for your support.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6539",
+          "author": "Daniel Treadwell",
+          "author_url": "https://plus.google.com/103697821787469756035",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T13:51:29+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hey Benjamin Wilkoff, you will have to hack things up a bit, it is quite a mess in there. &nbsp;Line 648 (\t\t‘post_type’ =&gt; ‘post’,) is where I specify the type to import as. &nbsp;I’m not all that familiar with WordPress and its data storage though so changing that to the type you wish may not work but it would be worth a go.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Thanks for your support.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "1939",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T16:58:10+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome. That should at least give me something to go on.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3799",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T16:58:10+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome. That should at least give me something to go on.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5599",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T16:58:10+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome. That should at least give me something to go on.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6540",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T16:58:10+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Awesome. That should at least give me something to go on.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "1940",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T17:08:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow. That was actually all I had to change. I just changed the post type to the one I am using and it worked. Everything imported correctly and all of the previous posts that I had converted are now updating as well. Thanks so much for pointing me in the right direction. You can now claim this as a feature!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3800",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T17:08:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow. That was actually all I had to change. I just changed the post type to the one I am using and it worked. Everything imported correctly and all of the previous posts that I had converted are now updating as well. Thanks so much for pointing me in the right direction. You can now claim this as a feature!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5600",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T17:08:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow. That was actually all I had to change. I just changed the post type to the one I am using and it worked. Everything imported correctly and all of the previous posts that I had converted are now updating as well. Thanks so much for pointing me in the right direction. You can now claim this as a feature!</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "6541",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-06T17:08:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Wow. That was actually all I had to change. I just changed the post type to the one I am using and it worked. Everything imported correctly and all of the previous posts that I had converted are now updating as well. Thanks so much for pointing me in the right direction. You can now claim this as a feature!</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2417,
@@ -6731,7 +8135,189 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3171",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:34:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Yep. The man can make a Prezi</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5031",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:34:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Yep. The man can make a Prezi</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7772",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:34:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Yep. The man can make a Prezi</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3172",
+          "author": "George Station",
+          "author_url": "https://plus.google.com/103316555196135859733",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:34:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I don’t even want to click. I just love the screen cap.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5032",
+          "author": "George Station",
+          "author_url": "https://plus.google.com/103316555196135859733",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:34:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I don’t even want to click. I just love the screen cap.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7773",
+          "author": "George Station",
+          "author_url": "https://plus.google.com/103316555196135859733",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:34:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I don’t even want to click. I just love the screen cap.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3173",
+          "author": "Sharanda Payseur",
+          "author_url": "https://plus.google.com/112542300932436217079",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T14:04:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>should be possessive “kid’s ass” in the box.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5033",
+          "author": "Sharanda Payseur",
+          "author_url": "https://plus.google.com/112542300932436217079",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T14:04:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>should be possessive “kid’s ass” in the box.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7774",
+          "author": "Sharanda Payseur",
+          "author_url": "https://plus.google.com/112542300932436217079",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T14:04:49+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>should be possessive “kid’s ass” in the box.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3174",
+          "author": "Donna Murdoch",
+          "author_url": "https://plus.google.com/112384233249429038897",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T16:47:32+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I like the Prezi, really great. &nbsp;As a doctoral candidate in adult education (andragogy) and a practitioner, this isn’t wrong, but perhaps overly simplified. &nbsp;Just my opinion.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5034",
+          "author": "Donna Murdoch",
+          "author_url": "https://plus.google.com/112384233249429038897",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T16:47:32+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I like the Prezi, really great. &nbsp;As a doctoral candidate in adult education (andragogy) and a practitioner, this isn’t wrong, but perhaps overly simplified. &nbsp;Just my opinion.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7775",
+          "author": "Donna Murdoch",
+          "author_url": "https://plus.google.com/112384233249429038897",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T16:47:32+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I like the Prezi, really great. &nbsp;As a doctoral candidate in adult education (andragogy) and a practitioner, this isn’t wrong, but perhaps overly simplified. &nbsp;Just my opinion.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3175",
+          "author": "Donna Murdoch",
+          "author_url": "https://plus.google.com/112384233249429038897",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T16:57:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Is Mark Ecko on here?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5035",
+          "author": "Donna Murdoch",
+          "author_url": "https://plus.google.com/112384233249429038897",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T16:57:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Is Mark Ecko on here?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7776",
+          "author": "Donna Murdoch",
+          "author_url": "https://plus.google.com/112384233249429038897",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T16:57:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Is Mark Ecko on here?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3176",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-24T21:09:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Definitely oversimplified, but for a #140 conference, you kind of have to be. Not sure if this is the right&nbsp;Marc Ecko. Either way, his <a href=\"http://stopdissing.me/\" rel=\"nofollow\">http://stopdissing.me</a> project is really great.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5036",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-24T21:09:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Definitely oversimplified, but for a #140 conference, you kind of have to be. Not sure if this is the right&nbsp;Marc Ecko. Either way, his <a href=\"http://stopdissing.me/\" rel=\"nofollow\">http://stopdissing.me</a> project is really great.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7777",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-24T21:09:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Definitely oversimplified, but for a #140 conference, you kind of have to be. Not sure if this is the right&nbsp;Marc Ecko. Either way, his <a href=\"http://stopdissing.me/\" rel=\"nofollow\">http://stopdissing.me</a> project is really great.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2430,
@@ -6794,7 +8380,99 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3177",
+          "author": "P Bradley Robb",
+          "author_url": "https://plus.google.com/105242605420454124239",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T18:26:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ugh, I can’t believe I watched the whole thing. Shocked disgust overrode liberal rage.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5037",
+          "author": "P Bradley Robb",
+          "author_url": "https://plus.google.com/105242605420454124239",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T18:26:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ugh, I can’t believe I watched the whole thing. Shocked disgust overrode liberal rage.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7778",
+          "author": "P Bradley Robb",
+          "author_url": "https://plus.google.com/105242605420454124239",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T18:26:42+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Ugh, I can’t believe I watched the whole thing. Shocked disgust overrode liberal rage.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3178",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:21:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’m glad it stopped with defending the KKK. I wasn’t going to be able to take much more of that anyway.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5038",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:21:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’m glad it stopped with defending the KKK. I wasn’t going to be able to take much more of that anyway.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7779",
+          "author": "Raymond Johnson",
+          "author_url": "https://plus.google.com/116264189418994838408",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-22T19:21:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I’m glad it stopped with defending the KKK. I wasn’t going to be able to take much more of that anyway.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3179",
+          "author": "Sharanda Payseur",
+          "author_url": "https://plus.google.com/112542300932436217079",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T14:06:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is quite honestly disturbing and disgusting.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5039",
+          "author": "Sharanda Payseur",
+          "author_url": "https://plus.google.com/112542300932436217079",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T14:06:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is quite honestly disturbing and disgusting.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7780",
+          "author": "Sharanda Payseur",
+          "author_url": "https://plus.google.com/112542300932436217079",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-23T14:06:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is quite honestly disturbing and disgusting.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2434,
@@ -6857,7 +8535,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3169",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-26T15:18:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Well, that’ll do. Makes me more excited to watch “what’s next.”</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5029",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-26T15:18:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Well, that’ll do. Makes me more excited to watch “what’s next.”</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7770",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-26T15:18:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Well, that’ll do. Makes me more excited to watch “what’s next.”</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3170",
+          "author": "Aaron Slutsky",
+          "author_url": "https://plus.google.com/114877561631783939890",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-26T17:19:27+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>you know it</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5030",
+          "author": "Aaron Slutsky",
+          "author_url": "https://plus.google.com/114877561631783939890",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-26T17:19:27+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>you know it</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7771",
+          "author": "Aaron Slutsky",
+          "author_url": "https://plus.google.com/114877561631783939890",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-06-26T17:19:27+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>you know it</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2436,
@@ -6983,7 +8723,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3168",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-05T19:56:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I am right now.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5028",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-05T19:56:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I am right now.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7769",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-05T19:56:09+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>I am right now.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2440,
@@ -8014,7 +9786,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3166",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-17T17:04:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>ah geez</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5026",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-17T17:04:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>ah geez</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7767",
+          "author": "Zac Chase",
+          "author_url": "https://plus.google.com/107606408879317717551",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-17T17:04:18+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>ah geez</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3167",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-17T17:07:48+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>The frame rate isn’t fast enough to actually play the games, though. But, to know that this is coming. I’m psyched.&nbsp;</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5027",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-17T17:07:48+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>The frame rate isn’t fast enough to actually play the games, though. But, to know that this is coming. I’m psyched.&nbsp;</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7768",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-17T17:07:48+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>The frame rate isn’t fast enough to actually play the games, though. But, to know that this is coming. I’m psyched.&nbsp;</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2466,
@@ -8519,7 +10353,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3165",
+          "author": "R.J. Blain",
+          "author_url": "https://plus.google.com/115724768230571629148",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-31T15:46:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Click the person you’ve focused on again. The green outline should go away and it’ll return to auto switching.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5025",
+          "author": "R.J. Blain",
+          "author_url": "https://plus.google.com/115724768230571629148",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-31T15:46:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Click the person you’ve focused on again. The green outline should go away and it’ll return to auto switching.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7766",
+          "author": "R.J. Blain",
+          "author_url": "https://plus.google.com/115724768230571629148",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-08-31T15:46:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Click the person you’ve focused on again. The green outline should go away and it’ll return to auto switching.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2479,
@@ -9123,7 +10989,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3163",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-09-07T16:35:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is great. I would have loved to have used this rather than Wolfram Alpha (where I was interrupted by ads) when I went over Taylor series in Calc II last semester.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5023",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-09-07T16:35:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is great. I would have loved to have used this rather than Wolfram Alpha (where I was interrupted by ads) when I went over Taylor series in Calc II last semester.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7764",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-09-07T16:35:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is great. I would have loved to have used this rather than Wolfram Alpha (where I was interrupted by ads) when I went over Taylor series in Calc II last semester.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2493,
@@ -9186,7 +11084,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3164",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-09-07T14:06:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is one of the greatest things that could ever happen.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5024",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-09-07T14:06:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is one of the greatest things that could ever happen.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7765",
+          "author": "Timothy DeVries",
+          "author_url": "https://plus.google.com/115031053151008694026",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-09-07T14:06:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>This is one of the greatest things that could ever happen.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2494,
@@ -9763,7 +11693,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3162",
+          "author": "Jack Loken",
+          "author_url": "https://plus.google.com/114961060008873262809",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-04T18:20:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>CTW should explore an exclusive channel with an online provider like hulu, Netflix or such</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5022",
+          "author": "Jack Loken",
+          "author_url": "https://plus.google.com/114961060008873262809",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-04T18:20:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>CTW should explore an exclusive channel with an online provider like hulu, Netflix or such</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7763",
+          "author": "Jack Loken",
+          "author_url": "https://plus.google.com/114961060008873262809",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-04T18:20:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>CTW should explore an exclusive channel with an online provider like hulu, Netflix or such</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2508,
@@ -9949,7 +11911,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3159",
+          "author": "Viki Fairweather",
+          "author_url": "https://plus.google.com/110772506415664657340",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-28T12:28:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Erm have no idea, I know a man who may…. Henry Hoover-Robinson do you know? 🙂</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3160",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-29T16:23:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks so for your help. It doesn’t look like Google+ event pages are realyl ready for primetime just yet. They will get there ,though.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3161",
+          "author": "Viki Fairweather",
+          "author_url": "https://plus.google.com/110772506415664657340",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-29T16:51:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Aw thanks for trying Henry Hoover-Robinson :)) </p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Rusty Bin do you have any idea?:)</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2511,
@@ -10012,7 +12006,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5019",
+          "author": "Viki Fairweather",
+          "author_url": "https://plus.google.com/110772506415664657340",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-28T12:28:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Erm have no idea, I know a man who may…. Henry Hoover-Robinson do you know? 🙂</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7760",
+          "author": "Viki Fairweather",
+          "author_url": "https://plus.google.com/110772506415664657340",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-28T12:28:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Erm have no idea, I know a man who may…. Henry Hoover-Robinson do you know? 🙂</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5020",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-29T16:23:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks so for your help. It doesn’t look like Google+ event pages are realyl ready for primetime just yet. They will get there ,though.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7761",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-29T16:23:37+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks so for your help. It doesn’t look like Google+ event pages are realyl ready for primetime just yet. They will get there ,though.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5021",
+          "author": "Viki Fairweather",
+          "author_url": "https://plus.google.com/110772506415664657340",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-29T16:51:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Aw thanks for trying Henry Hoover-Robinson :)) </p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Rusty Bin do you have any idea?:)</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7762",
+          "author": "Viki Fairweather",
+          "author_url": "https://plus.google.com/110772506415664657340",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-10-29T16:51:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Aw thanks for trying Henry Hoover-Robinson :)) </p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Rusty Bin do you have any idea?:)</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2512,
@@ -10348,7 +12404,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3158",
+          "author": "Jeremy Cabral",
+          "author_url": "https://plus.google.com/106936208277012864426",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-11-05T23:50:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hi Benjamin. This may help <a href=\"http://socialmediatoday.com/thomas-samph/803221/how-embed-twitter-widget\" rel=\"nofollow\">http://socialmediatoday.com/thomas-samph/803221/how-embed-twitter-widget</a></p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2521,
@@ -10411,7 +12479,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "5018",
+          "author": "Jeremy Cabral",
+          "author_url": "https://plus.google.com/106936208277012864426",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-11-05T23:50:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hi Benjamin. This may help <a href=\"http://socialmediatoday.com/thomas-samph/803221/how-embed-twitter-widget\" rel=\"nofollow\">http://socialmediatoday.com/thomas-samph/803221/how-embed-twitter-widget</a></p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7759",
+          "author": "Jeremy Cabral",
+          "author_url": "https://plus.google.com/106936208277012864426",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-11-05T23:50:07+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Hi Benjamin. This may help <a href=\"http://socialmediatoday.com/thomas-samph/803221/how-embed-twitter-widget\" rel=\"nofollow\">http://socialmediatoday.com/thomas-samph/803221/how-embed-twitter-widget</a></p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2524,
@@ -10785,7 +12875,69 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2012.json"
+      "_shard": "2012.json",
+      "comments": [
+        {
+          "id": "3156",
+          "author": "Bill Fitzgerald",
+          "author_url": "https://plus.google.com/101747679728222907532",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-12-07T18:33:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>It looks interesting – why not just create a shared Google Drive directory that people could contribute too? What does OpenDrive get you (aside from the DropBox, Skydrive, and Box integration) that Drive doesn’t?</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Two reasons I ask: first, I would love to see something like Google Drive be an option for people looking to share their first resource out. It seems like Drive, on its own, is both familiar and simple enough to excel in that role. Is there functionality missing from Google Drive that OpenDrive delivers?</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Second, I’m concerned about the privacy implications of OpenDrive, as it is yet another app that collects contact info/document info that Google has already put in place.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>What are your thoughts here?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5016",
+          "author": "Bill Fitzgerald",
+          "author_url": "https://plus.google.com/101747679728222907532",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-12-07T18:33:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>It looks interesting – why not just create a shared Google Drive directory that people could contribute too? What does OpenDrive get you (aside from the DropBox, Skydrive, and Box integration) that Drive doesn’t?</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Two reasons I ask: first, I would love to see something like Google Drive be an option for people looking to share their first resource out. It seems like Drive, on its own, is both familiar and simple enough to excel in that role. Is there functionality missing from Google Drive that OpenDrive delivers?</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Second, I’m concerned about the privacy implications of OpenDrive, as it is yet another app that collects contact info/document info that Google has already put in place.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>What are your thoughts here?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7757",
+          "author": "Bill Fitzgerald",
+          "author_url": "https://plus.google.com/101747679728222907532",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-12-07T18:33:24+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>It looks interesting – why not just create a shared Google Drive directory that people could contribute too? What does OpenDrive get you (aside from the DropBox, Skydrive, and Box integration) that Drive doesn’t?</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Two reasons I ask: first, I would love to see something like Google Drive be an option for people looking to share their first resource out. It seems like Drive, on its own, is both familiar and simple enough to excel in that role. Is there functionality missing from Google Drive that OpenDrive delivers?</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>Second, I’m concerned about the privacy implications of OpenDrive, as it is yet another app that collects contact info/document info that Google has already put in place.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>What are your thoughts here?</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "3157",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-12-07T21:20:36+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Google Drive should be able to do this, but the problem isn’t one of capability. Google Docs and Drive are, by default, private. OpenDrive allows you to make them public and searchable. Also, Dropbox and Box are much more popular services with most consumers than Google Drive. This means that the sharing can go beyond our typical set of curators.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>I am hoping that Google eventually revitalizes the Google Doc template database and allows us to make documents public and searchable easily. They haven’t done anything with it for years, and it is ripe for a 2.0 for sure.&nbsp;</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>As for privacy concerns, I think they are valid. But, at this point, I am interested more in sharing than in silos. I am both giving and getting something valuable, and I can revoke access at any time. I much prefer to login using my Google Account to a service than having to sign up again and having my password further compromised. I hope that makes sense.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "5017",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-12-07T21:20:36+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Google Drive should be able to do this, but the problem isn’t one of capability. Google Docs and Drive are, by default, private. OpenDrive allows you to make them public and searchable. Also, Dropbox and Box are much more popular services with most consumers than Google Drive. This means that the sharing can go beyond our typical set of curators.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>I am hoping that Google eventually revitalizes the Google Doc template database and allows us to make documents public and searchable easily. They haven’t done anything with it for years, and it is ripe for a 2.0 for sure.&nbsp;</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>As for privacy concerns, I think they are valid. But, at this point, I am interested more in sharing than in silos. I am both giving and getting something valuable, and I can revoke access at any time. I much prefer to login using my Google Account to a service than having to sign up again and having my password further compromised. I hope that makes sense.</p>\n<p><!-- /wp:paragraph --></p>"
+        },
+        {
+          "id": "7758",
+          "author": "Ben Wilkoff",
+          "author_url": "https://plus.google.com/102111820124999073838",
+          "avatar": "https://secure.gravatar.com/avatar/?s=70&d=mm&r=g",
+          "date": "2012-12-07T21:20:36+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>          <!-- wp:paragraph --></p>\n<p>Google Drive should be able to do this, but the problem isn’t one of capability. Google Docs and Drive are, by default, private. OpenDrive allows you to make them public and searchable. Also, Dropbox and Box are much more popular services with most consumers than Google Drive. This means that the sharing can go beyond our typical set of curators.</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>I am hoping that Google eventually revitalizes the Google Doc template database and allows us to make documents public and searchable easily. They haven’t done anything with it for years, and it is ripe for a 2.0 for sure.&nbsp;</p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p><!-- /wp:paragraph --></p>\n<p><!-- wp:paragraph --></p>\n<p>As for privacy concerns, I think they are valid. But, at this point, I am interested more in sharing than in silos. I am both giving and getting something valuable, and I can revoke access at any time. I much prefer to login using my Google Account to a service than having to sign up again and having my password further compromised. I hope that makes sense.</p>\n<p><!-- /wp:paragraph --></p>"
+        }
+      ]
     },
     {
       "id": 2533,

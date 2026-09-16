@@ -389,7 +389,29 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "3",
+          "author": "nani",
+          "author_url": "http://upthedownstaircase.typepad.com/",
+          "avatar": "https://secure.gravatar.com/avatar/67fc8dfb1e671a5e5f82aad6949b3cb7197e9fd575a5252d314ce6fd9616f774?s=70&d=mm&r=g",
+          "date": "2006-07-30T11:15:39+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This is exactly the divisiveness that I see in my department, though some of the more experienced teachers tend to be more open to communication and reflection than the younger teachers, believe it or not.</p>"
+        },
+        {
+          "id": "4",
+          "author": "Tina",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/db7d236be435fbe070e0072349112e8ebb356a05355e72b9e862a6862bcae0dc?s=70&d=mm&r=g",
+          "date": "2006-08-11T19:43:02+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>You inspire me and make me say a big, resonating, fierce, “AMEN!” to this reflective piece.<br>\nThis is going to be an amazing year because I feel like “we” can now have our voices heard. I am so excited to work with you and learn from you.  Thank you, thank you, thank you.  Wow.</p>"
+        }
+      ]
     },
     {
       "id": 143,
@@ -942,7 +964,79 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "5",
+          "author": "Darren",
+          "author_url": "http://rightontheleftcoast.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/caac07865278ef1fbc94058d31cb8a9b974b38e74192a4dd4ad3dcb75604b60e?s=70&d=mm&r=g",
+          "date": "2006-08-16T10:56:39+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>How do I disagree with thee?  Let me count the ways.</p>\n<p>Ah, never mind.  I’m just going to ignore #7.  I don’t think I’d change your mind.</p>"
+        },
+        {
+          "id": "6",
+          "author": "elementaryhistoryteacher",
+          "author_url": "http://historyiselementary.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/77a3716cd4ba5ff6f03dc847644731f42876d2541c5c113a5767cd6a2d5bc81e?s=70&d=mm&r=g",
+          "date": "2006-08-16T21:02:02+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Very interesting and thought provoking.  You have served as my muse.  As I read through your list I earmarked several items that I wouldn’t mind elaborating on.  I was also convicted by several things on your list as well.  Thanks!</p>"
+        },
+        {
+          "id": "7",
+          "author": "aquiram",
+          "author_url": "http://aquiram.wordpress.com/",
+          "avatar": "https://secure.gravatar.com/avatar/b18c8a02f5f42616ebf8c78f992513c0256fee3c7069dd87dbe3aeff3704729f?s=70&d=mm&r=g",
+          "date": "2006-08-16T21:48:25+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I enjoyed reading through your list. I have several things to mull over as my new years continues. May I share the list with my admin? I think they would love it!</p>"
+        },
+        {
+          "id": "8",
+          "author": "Jennie",
+          "author_url": "http://unabridgedopinions.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/58139c8218cac3d29114ed51a32e5bd388bb69f51d7e19d82ad13fdfb270f224?s=70&d=mm&r=g",
+          "date": "2006-08-16T22:56:35+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>What an interesting list.  As the school year (and with it, the school drama) starts to really gain momentum, it’s nice to read something so reflective and inspiring of reflection.  Well done.</p>"
+        },
+        {
+          "id": "9",
+          "author": "Darren",
+          "author_url": "http://rightontheleftcoast.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/caac07865278ef1fbc94058d31cb8a9b974b38e74192a4dd4ad3dcb75604b60e?s=70&d=mm&r=g",
+          "date": "2006-08-17T22:22:46+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Since I was asked–in a most professional and courteous email, I might add–to explain my differences with the list above, I’ll do so here.  However, as today was my first day back at work as well as my first day back at getting up at 5:40, I’ll only address the first four.  Then I’m off to bed!</p>\n<p>1.  Teachers should be the change they want to see in their schools.  What the heck does that mean?<br>\n2.  Teachers should constantly reinvent the wheel to make it ride smoother and faster over any type of terrain imaginable.  Why?  There’s another sensible saying:  if it works, don’t fix it.  This doesn’t mean that teachers shouldn’t practice a critical pedagogy to determine if their instruction is meeting the needs of the students, but change for its own sake seems a tremendous waste of time to me.<br>\n3.  Teachers should never teach the same things the same way twice.  See #2.<br>\n4.  Teachers should see tradition for what it is: the hope that things will stay the same forever.  This is the most insidious.  Tradition isn’t the hope that things will stay the same, it’s a link between the past and future.  It gives us a foundation, a rock, something upon which to build.  Graduation exercises are a tradition we have–should we get rid of them out of some belief that they’re stale or out of date?  That’s not progressive, that’s destructive.</p>\n<p>We’ll see how I feel about addressing so many of the others over the course of the weekend.  Good night!</p>"
+        },
+        {
+          "id": "10",
+          "author": "Tina",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/db7d236be435fbe070e0072349112e8ebb356a05355e72b9e862a6862bcae0dc?s=70&d=mm&r=g",
+          "date": "2006-08-18T15:42:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Number 7 struck me as well… not because I disagree with it, but because it made me take a harder look at myself and how I look at some of my colleagues.  I sometimes “give up” too quickly.  I don’t ever give up on students and I should apply the same thinking to my colleagues as well.  Good call. (Although it’s damn hard at times!)<br>\n I want to ponder this more and get back to you…</p>\n<p>What will be Number 51?  I’d make it have something to do with balance… teachers do tend to have addictive personalities and can spend their days in “teacher-mode” without remembering to exercise, laugh, play, and drink a beer.  : )   (Can you tell it’s Friday and I’m tired of grading essays????)<br>\n(Sounds “petty”, I know, but this is one of my biggest pieces of advice to new teachers… we’re no good to anyone if we’re not good to ourselves first–I know we all know this but why do we forget it so easily???)</p>\n<p>I’m going to re-read these this weekend and get back to you…. Thank you for making me think.  Especially on a Friday.</p>"
+        },
+        {
+          "id": "11",
+          "author": "Jeff",
+          "author_url": "http://www.thebernoullieffect.com/",
+          "avatar": "https://secure.gravatar.com/avatar/a3b4f80b54a36f836c7689951da47c5125be5f765c923e9dcfe52fa447b42d3f?s=70&d=mm&r=g",
+          "date": "2006-08-19T01:41:35+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Let it suffice to say for now that any random five of these items gives ample reason why my wife, my son and I commute over two hours each day to his modest private school.  His school is a cornucopia of diversity; each class in his three years there has been filled with students from across the globe.  At the end of first grade he was reading at a fourth grade level and he was by no means the best reader in his class. They are busy mastering subject matter while their public (and many private) school counterparts are being subjected to “an environment that encourages life-long learning”.</p>\n<p>Our nearest public school is 600 yards away from our house.</p>\n<p>Public education has been in the stranglehold of the “progressives” for what…about 100 years now?</p>\n<p>And this is what you have to show for yourselves?</p>"
+        }
+      ]
     },
     {
       "id": 158,
@@ -1275,7 +1369,59 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "13",
+          "author": "Darren",
+          "author_url": "http://rightontheleftcoast.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/caac07865278ef1fbc94058d31cb8a9b974b38e74192a4dd4ad3dcb75604b60e?s=70&d=mm&r=g",
+          "date": "2006-08-19T11:17:16+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>For starters, creating “lifelong learners” is a trite phrase without meaning.  You can’t tell me how to get there, and you can’t tell me when you’ve got there.  As I learned in both the army and in industry, goals need to be quantifiable and measurable or else they are useless.  Apply that standard to your theses and see how they measure up.</p>\n<p>Now, on to your comments about my comments 🙂  I recognized the Ghandi quote, I just don’t like it.  If it needs explanation to a college graduate, it’s not clear enough.  You’ve clarified it above, and *now* it makes sense.</p>\n<p>For thesis number 2, notice that I *did* state that teachers should question their teaching to determine if they’re reaching students–that’s what critical pedagogy is.  I apologize if that wasn’t clear.  I substituted another saying for your #2:  if it works, don’t fix it.  Here’s another:  practice makes perfect.  After you’ve taught the same lesson a couple times it’s conceivable that you’ve worked out the kinks.  I consider that fine-tuning, not reinventing the wheel.  I took reinventing the wheel to mean coming up with entirely new lesson plans each time you teach the same lesson, whereas this fine tuning is just putting the critical pedagogy into practice!</p>\n<p>#3:  Critical pedagogy.  Adjust fire, don’t throw out the whole plan.  Maybe you and I just interpret the phrase “reinvent the wheel” differently.</p>\n<p>#4:  I don’t think you clarified how you define and value traditions, I think you changed it.  I don’t think anyone could read this:  “Teachers should see tradition for what it is: the hope that things will stay the same forever” and think you’re referring more to social promotion than to graduation.  Perhaps, though, you and I just have very different ways of interpreting text.</p>\n<p>I appreciate the opportunity to discuss these with you rationally, however.</p>"
+        },
+        {
+          "id": "14",
+          "author": "Jeff",
+          "author_url": "http://www.thebernoullieffect.com/",
+          "avatar": "https://secure.gravatar.com/avatar/a3b4f80b54a36f836c7689951da47c5125be5f765c923e9dcfe52fa447b42d3f?s=70&d=mm&r=g",
+          "date": "2006-08-19T17:17:40+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I have some thoughts in response to your responses…but unfortunately my wife’s computer crashed this morning and getting it fixed trumps everything, including dinner.</p>"
+        },
+        {
+          "id": "15",
+          "author": "Darren",
+          "author_url": "http://rightontheleftcoast.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/caac07865278ef1fbc94058d31cb8a9b974b38e74192a4dd4ad3dcb75604b60e?s=70&d=mm&r=g",
+          "date": "2006-08-19T23:46:36+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Computer problems bring *everything* into focus, don’t they?!  Sometimes my modem craps out and I completely freak out.</p>"
+        },
+        {
+          "id": "16",
+          "author": "marilyn",
+          "author_url": "http://myspace-sayingitall.blogspot.co,/",
+          "avatar": "https://secure.gravatar.com/avatar/59a9018565be355557f88adc7500bfb6f9a2418324e95294d9208f2f3b65ce6b?s=70&d=mm&r=g",
+          "date": "2006-09-07T07:39:28+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Some very interesting thoughts…. however i just feel that with soo many “shoulds” there is a lot of pressure on teachers to do what they need to do. its like been under a microscope and thats no fun</p>"
+        },
+        {
+          "id": "17",
+          "author": "marilyn",
+          "author_url": "http://myspace-sayingitall.blogspot.co,/",
+          "avatar": "https://secure.gravatar.com/avatar/59a9018565be355557f88adc7500bfb6f9a2418324e95294d9208f2f3b65ce6b?s=70&d=mm&r=g",
+          "date": "2006-09-07T07:42:23+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>A lot of very interesting thoughts, however with the amount of “shoulds” there is bound to be a lot of pressure on teachers. its like living under a microscope!!!!</p>"
+        }
+      ]
     },
     {
       "id": 168,
@@ -1929,7 +2075,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "20",
+          "author": "Me",
+          "author_url": "http://en.wikipedia.org/wiki/Linguistics",
+          "avatar": "https://secure.gravatar.com/avatar/6a480069b1cb7987247a560a88029618bbc158fe9a4b96bd1f5d2dde60036952?s=70&d=mm&r=g",
+          "date": "2006-08-28T23:08:22+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>“Linguistics is only a study of natural langauges (not like esperanto)”<br>\n“If Language is a mirror to the mind, unnatural language (created langauges) are like fun house mirrors.”</p>\n<p>That’s bull.</p>"
+        }
+      ]
     },
     {
       "id": 183,
@@ -2004,7 +2162,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "22",
+          "author": "Nani",
+          "author_url": "http://upthedownstaircase.typepad.com/",
+          "avatar": "https://secure.gravatar.com/avatar/67fc8dfb1e671a5e5f82aad6949b3cb7197e9fd575a5252d314ce6fd9616f774?s=70&d=mm&r=g",
+          "date": "2006-09-03T20:20:05+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I’m really big on asking my students to metatext their writing, or process it. I think it really helps them to think about their writing process but it all depends on the questions you ask them. Leaving the process writing open probably won’t help them much but specific process questions will. I usally ask them  how they arrived at their topic, what they like, what they don’t like, what they found helpful in crafting the piece.</p>"
+        },
+        {
+          "id": "23",
+          "author": "Psycodude",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/e5b7005f87ae4e1c91aa6ca717a212bf6881950ae88845a50643ee719d67b084?s=70&d=mm&r=g",
+          "date": "2006-09-15T17:11:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Dear Mr. Wilkoff and Core 2,</p>"
+        },
+        {
+          "id": "24",
+          "author": "Psycodude",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/e5b7005f87ae4e1c91aa6ca717a212bf6881950ae88845a50643ee719d67b084?s=70&d=mm&r=g",
+          "date": "2006-09-15T17:32:56+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Dear Mr. Wilkoff and Core 2,</p>\n<p>I’m sorry for all the trouble I caused you last year on blogger and nation states, and I’m sorry for what I’ve done this year.  It is not a good thing to get enjoyment out of annoying people, and saying mean things to them. I didn’t realize what a bad thing I was doing until Mr. Wilkoff talked about it today.  I really should get a life, instead of going home and getting on the computer to annoy and 5pam people. Psycodude will not bug you anymore.  I will stick to my real account, and only post positive, nice comments.  I don’t think any of you will forgive me, and that’s ok, but I really am sorry.  Well, goodbye…forever.</p>\n<p>         Sincerely,<br>\n         Psycodude (sorry, but I don’t want people to know who I am, and you wouldn’t either!)</p>"
+        }
+      ]
     },
     {
       "id": 184,
@@ -2407,7 +2597,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "27",
+          "author": "Lawrence",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/f923e91efa751a41ffc418d16a3cb31e8ed38f8436e0947fd38635a592e95584?s=70&d=mm&r=g",
+          "date": "2007-03-30T12:14:45+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Good site, nice design! Please visit my homepage:<br>\n<a></a></p>"
+        },
+        {
+          "id": "28",
+          "author": "Lawrence",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/27aa9cc61fc5dfd01665d40891b15ea1ddcf04125e87857f785cf9584bb2ab14?s=70&d=mm&r=g",
+          "date": "2007-03-30T12:15:17+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I’m glad I found your site! It’s nice! Would you please also visit my homepage?<br>\n<a></a></p>"
+        },
+        {
+          "id": "29",
+          "author": "Edwin",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/6b81338dec407f6b9a39c5c3f3360d147c16c7dabef69467ecc4935abb998ca9?s=70&d=mm&r=g",
+          "date": "2007-03-30T23:27:28+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Your site looks great! Visit my sites, please:<br>\n<a></a></p>"
+        }
+      ]
     },
     {
       "id": 195,
@@ -3507,7 +3729,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "30",
+          "author": "flameshade",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/49f5956bf8b12717ede36a3647f11a5faa0467e457bc5e08161de980d2cad719?s=70&d=mm&r=g",
+          "date": "2006-10-19T17:14:00+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Sorry mister Wilcoff the server for my blog is down so I am just doing this as a test. I am also wondering about the baby. What is going on I would like to know?</p>\n<p>Please respond on my site or somebody else’s so they can tell the class!</p>\n<p>Your student and friend.</p>"
+        }
+      ]
     },
     {
       "id": 222,
@@ -3982,7 +4216,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "33",
+          "author": "Totalskills",
+          "author_url": "http://Totalskills.learnerblogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/835988ada535f5b43e01def9f4c591d858b86af7b6b12c34de12dd695d1ff506?s=70&d=mm&r=g",
+          "date": "2006-09-26T10:32:15+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Its about staying hidden from bad</p>\n<p>Its about staying inside you box</p>\n<p>Staying in your comfort zone</p>\n<p>STAYING</p>\n<p>Then you take a step out of the box</p>\n<p>there is a secure step</p>\n<p>and anouther secure step</p>\n<p>and anouther secure step</p>\n<p>your happy about that but then you fall into black</p>\n<p>deep into black</p>\n<p>then you are back to same spot</p>\n<p>Your box</p>\n<p>then it takes longer for you to take a step</p>\n<p>its about falling down and trying again</p>\n<p>Its about life</p>\n<p>Thats life falling and standing</p>\n<p>LIFE</p>"
+        },
+        {
+          "id": "34",
+          "author": "thingydingy",
+          "author_url": "http://thingydingy.learnerblogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/70612bd587bb9c955de62ebe1973a0ca9c62c66a3ab0963e711b3cc516c6313b?s=70&d=mm&r=g",
+          "date": "2006-09-26T11:12:48+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>It’s senseless, but yet it’s not, it’s meaningful, but you don’t know how. I know how you feel. I understand what it is but I don’t. I think I could build on it but still I don’t know what it is. Good job</p>"
+        },
+        {
+          "id": "36",
+          "author": "Audio62",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/21cf35e307fd602c0a695a7fc2178b6bf690140cadb9444b8d64b823f212d42b?s=70&d=mm&r=g",
+          "date": "2006-10-04T17:43:52+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>My e-mail was being stupid, but I managed to get onto the grazer navagator, so this will have to substitute as an e-mail.</p>\n<p>You insulted me when you said I wasn’t listening to your cd’s. Lest you forgot you gave me about 12. I already have all the artists on my iPod.<br>\nSo far I’ve gotten through all of Ben Kweller and the first two songs of all the other ten or so bands and artists. Ben Kweller was very good, I’ve already got favorite songs, but I haven’t gotten around to memorizing the words yet. Launch Ramp,How it should be, falling, wasted and ready,and i’d say some other ones but i need to move on.<br>\nSince i only got through ben kweller, i can’t give you much feedback on the others, but but i’m working on it. i’m listening to them as we spe– never mind, as i type.</p>\n<p>I get most of my music from my brother and he told me that Josh Rouse has 6 other albums. since he records in Spain not all of his albums are huge here, so me and my brother have to go and track the others down. The ones we have are the newest ones. It goes Dress up like Nebraska, Chester, Home, Under Cold Blue Stars, 1972, Nashville, and finally Subtitulo. My brother has Nashville, 1972, and Subtitulo, so i’m working on getting you a copy of the other albums.</p>\n<p>My brother is really into cinematography, he makes alot of mini-movies(one time he made a snowboarder style documentary of the game Dance Dance Revolution with his friends and it’s extreamly funny, but i find sometimes that it is more funny if you know the people, i’ll show if i get the chance), and he’s going to make a musical out of The Format’s Dog Problems CD’s. If you listen to the lyrics, i can make perfect sence. The basic story that he made was a stuggling lead singer of a band just got dumped, so he goes to a bar and he meets a girl. They end up liking each other(the bears are really good)but she has to leave in three days. She leaves and it becomes a dramatic love story. My brother gives a better rendition of the story, but I thought you should know about it. I’ll show it to you when it is done.</p>\n<p>Right now i’ve listen to Bears,halfway through belle and sebastain, halfway through Denison Witmer, and Ben Kweller. You listen to alot when you do homework and type and e-mail/comment.</p>\n<p>Congratulations on you new child, thanks for the cd’s, and i give but at least<br>\n a 4.6432281.</p>"
+        }
+      ]
     },
     {
       "id": 233,
@@ -5044,7 +5310,39 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "40",
+          "author": "moose",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/68d91627d03594384450b8f66b3a1bf4277562cea3909bd07634f8d7c4174f12?s=70&d=mm&r=g",
+          "date": "2006-10-16T17:58:31+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Waiting is no fun. You might as well try the “baby out, baby out” thing…anything is worth a shot, eh? Anyways, my mom said I was 2 weeks late, you could always go to the hospital and induce the labor can’t you? that is what my parents almost had to do. I dunno, just trying to think cause I hate waiting just as much as you do. Yeah, good post, I really liked it.</p>"
+        },
+        {
+          "id": "41",
+          "author": "smartcannon",
+          "author_url": "http://smartcannon.com/learnerblogs.com",
+          "avatar": "https://secure.gravatar.com/avatar/3b03e80d32e9df78c679b03dc6d6e3c78aa1184ec3807c96e9fbdf87c0da2dde?s=70&d=mm&r=g",
+          "date": "2006-10-18T19:18:03+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great post!  I can feel how you are really ready for the baby to come and you’ll be a great dad!  I felt like you really wrote it…it came from your heart.  Now, I can’t say how you feel because 1) I’m not a boy and 2) I’m only 12 and can’t have children.  I hope the baby’ll come soon!</p>"
+        },
+        {
+          "id": "42",
+          "author": "smartcannon",
+          "author_url": "http://smartcannon.learnerblogs.com/",
+          "avatar": "https://secure.gravatar.com/avatar/98581750df91e166b40f00777543aa0b7f8154e91f7803fab63ff9766c0e01e8?s=70&d=mm&r=g",
+          "date": "2006-10-18T19:21:43+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Great post!  I can really tell that you wrote it and that it came from your heart.  I want the baby to come for you.  Good luck!  I can’t really relate to your post because 1)  I”m not a boy and 2)  I’m only 12 years old and therefore have no personal experience with this matter!  Come on baby!</p>"
+        }
+      ]
     },
     {
       "id": 261,
@@ -5179,7 +5477,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "46",
+          "author": "HelloWorld",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/1f4a1d0f673ff024f59c2cf61b57e0ec2fcacbdbf092d489ce5cf30f971fa65b?s=70&d=mm&r=g",
+          "date": "2007-04-28T07:43:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Peace people</p>\n<p>We love you</p>"
+        }
+      ]
     },
     {
       "id": 264,
@@ -5317,7 +5627,49 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "48",
+          "author": "Nani",
+          "author_url": "http://upthedownstaircase.typepad.com/",
+          "avatar": "https://secure.gravatar.com/avatar/67fc8dfb1e671a5e5f82aad6949b3cb7197e9fd575a5252d314ce6fd9616f774?s=70&d=mm&r=g",
+          "date": "2006-10-20T03:57:14+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Mazel Tov!</p>"
+        },
+        {
+          "id": "49",
+          "author": "Tigerqueen24",
+          "author_url": "http://tigerqueen24.learnerblogs.org/",
+          "avatar": "https://secure.gravatar.com/avatar/53cd96b9b74ae6325570f218fac9b9f483c536b71e96d9e3e09648059a608887?s=70&d=mm&r=g",
+          "date": "2006-10-20T16:42:41+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>She is adorable. Congrats and good luck!</p>"
+        },
+        {
+          "id": "50",
+          "author": "iwthswtl",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/b51b3f103a37cc983ba45ca4d992a0e33ee80166e015b37a80c0aba42459da18?s=70&d=mm&r=g",
+          "date": "2006-10-21T11:41:53+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Hey CONGRATS!!! She is a cute baby. How is your wife doing?<br>\nI also liked this writing peice.</p>\n<p>GOOD LUCK!!!</p>"
+        },
+        {
+          "id": "51",
+          "author": "thingydingy",
+          "author_url": "http://thingydingy.learnerblog.org/",
+          "avatar": "https://secure.gravatar.com/avatar/70612bd587bb9c955de62ebe1973a0ca9c62c66a3ab0963e711b3cc516c6313b?s=70&d=mm&r=g",
+          "date": "2006-10-22T15:00:44+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>This is actually thingydingy’s mom.  Just wanted to say congratulations!  Your daughter is so beautiful!  Don’t be in a hurry to see her at 13.  It comes way too fast.  Enjoy every sweet, sleepless, precious, fussy, cuddly, loving moment.  It is the best!!</p>"
+        }
+      ]
     },
     {
       "id": 268,
@@ -5722,7 +6074,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "53",
+          "author": "iwthswtl",
+          "author_url": "",
+          "avatar": "https://secure.gravatar.com/avatar/b51b3f103a37cc983ba45ca4d992a0e33ee80166e015b37a80c0aba42459da18?s=70&d=mm&r=g",
+          "date": "2006-11-14T20:03:54+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>I disagree. You made some very strong arguements though. Grades don’t always diminsh one’s self-esteem. If you get a recognition for working hard it isn’t a reward but it lets you show others what you have accomplished. Getting rid of grades would be the same thing as getting rid of any sort of reward awarded to people who had workied hard for it. With any ‘reward’ comes the ‘cheating, plagiarism, and outright intimidation’. This will also introduce students to what will come in more severe cases when the reach the adult stage. Grades are like an adult’s ranking in a job. Illiminating grades would be equvilent to getting rid of the career ladders.</p>\n<p>I agree with you with the point that teachers may be bias when they make the grades but I don’t think an ‘A’ quality work could be faded out by a bad day from the student. And most of the time the kids who are goofing off in class and being disruptive won’t be creating ‘A’ quality work.</p>\n<p>For the student who find the answers online, they will not benefit from this at all. If that student is not a 100% student and on the test lo-and-behold it is an ‘A’ than the teacher will get suspicious of this and investigate further to prevent this. And if they find the answers online then they must memorize them so with that they must know the material in order to recollect it on a test. If they choose to write it down then they will caught so in turn no cheating even takes place.</p>\n<p>Authentic feedback is also important, as you stated, but most teachers cannot complete this. But if teachers were to only ‘grade’ certain major assignments for academic qualities and for homework check to see if they attempted to complete it, than this would allow this ‘authentic feedback’ on the fewer major academically graded assignments. If then after that the student has questions than they will ask to do well in their major assesment on the topic. Also self assesments will help the teacher ‘see what the student sees’.</p>\n<p>And if the student doesn’t understand something, without any sorts of gradeing, than waht will push them to learn? What other insentive would push a kid to want to do good on a test? What would represent a below grade level quality, what would show the advanced person? Without grading Discovery wouldn’t exist because there would not be advanced students. You could try to bribe them with candy and sorts but than money becomes an issue. But a simple letter representing their work quality will push them to work harder to get that sort of recognition from their peers. And the ‘labeling’ of the kids by their grades is like lableing adults with a ‘Ph.D.’. It isn’t fair to have the ‘F’ student and the ‘A’ student be on the ‘same level’, same goes for a highschool drop out and a college graduate. Different abilities call for different ‘labels’ if you will.</p>\n<p>So a simple grade pushes kids to try to accomplish more and when they acheive an ‘A’ they are recognized for their hard work. That grade also shows improvement for the year. That grade will show an employer how much effort a person has to offer. Would you want to take the chance of having an ‘F’ student do your knee surgery? Without grades it could be possible their would be no backround for any employers to go off of. Grades are important and a necessity of how modern society works and functions. Without them students would have less to modivate them and would not alow for students to be proud of their accomplishments. These letters are not ‘trivial’ they represent the abilities of students and their capabilities.</p>"
+        }
+      ]
     },
     {
       "id": 279,
@@ -5990,7 +6354,19 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2006.json"
+      "_shard": "2006.json",
+      "comments": [
+        {
+          "id": "55",
+          "author": "Unison",
+          "author_url": "http://buyphentermineonlinefreeshipping.blogspot.com/",
+          "avatar": "https://secure.gravatar.com/avatar/9d7aca246dbdf265230a71c033d2e8bdc76c71a7aea586d8769d1b3e1cd5c76b?s=70&d=mm&r=g",
+          "date": "2007-03-22T00:19:33+00:00",
+          "depth": 1,
+          "parent": null,
+          "html": "<p>Thank you for your web site!!! I will recommend you to all my friends.Added to favorites!!<br>\nThis is my site:<br>\n<a href=\"http://buyphentermineonlinefreeshipping.blogspot.com/\" rel=\"nofollow ugc\">http://buyphentermineonlinefreeshipping.blogspot.com</a></p>"
+        }
+      ]
     },
     {
       "id": 286,
