@@ -245,15 +245,15 @@ items get done in a later tick and moved to *Done*.
   posts and relative on 12 (the ones written by `/new/`). Normalize
   to relative in a maintenance pass? (Renderers must tolerate both
   until then; `generate-sitemap.js` already does.)
-- C-4 **Mojibake in 33 posts** (`â€™` for `’`, etc.) — present in the JSON
+- ✅ (approved 2026-09-16, repair) C-4 **Mojibake in 33 posts** (`â€™` for `’`, etc.) — present in the JSON
   `content` and in the HTML since the original export (double-encoded
   UTF-8). Mechanically reversible (`latin-1` → `utf-8` re-decode of the
   affected runs). It is a content edit, so: approve the repair?
-- C-5 Newer shards (2025–2026, written by `/new/`) store `categories`
+- ✅ (approved, normalize) C-5 Newer shards (2025–2026, written by `/new/`) store `categories`
   and `tags` as *stringified Python lists* (`"['Typewriter']"`) instead
   of arrays of `{name, slug, url}`. Renderers tolerate it for now;
   normalize in a maintenance pass?
-- C-6 `taxonomies.json` display names were slugified on export
+- ✅ (approved, restore) C-6 `taxonomies.json` display names were slugified on export
   (`C4c15`, `Im Learning`, `Askbenw`, `Lifewidelearning16`); the old
   menu had the real names (`#C4C15`, `What I'm Learning`, `#AskBenW`).
   Restore display names from the menu fragment where they exist?
@@ -313,7 +313,9 @@ resolves them on its own.)*
   "on this day"). Verified desktop + 390px. Found and queued C-4
   (mojibake, 33 posts), C-5 (stringified taxonomy lists in new shards),
   C-6 (slugified taxonomy display names).
-  **Next**: on Ben's approval of the mockups → P1: promote
+  Ben approved the mockups as-is, plus C-4/C-5/C-6 repairs.
+  **Next**: data repairs first (C-5 normalize lists, C-6 display names,
+  C-4 mojibake — each verified by diff, permalink check, commit), then P1: promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

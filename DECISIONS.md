@@ -362,6 +362,12 @@ scripts and the GitHub Actions refuse to commit if any URL is lost.
 "Retired" pages are never deleted — they become redirect pages
 (`<meta http-equiv="refresh">` + canonical) so the URL keeps resolving.
 
+**Mockups approved as-is (Ben, 2026-09-16)**: `docs/mockups/post.html`,
+`home.html`, `site.css` are the reference for P1/P2. Data repairs
+approved the same day: C-4 mojibake re-decode (33 posts, content
+bytes change only where double-encoded), C-5 normalize stringified
+taxonomy lists, C-6 restore taxonomy display names from the old menu.
+
 **Content-queue routing decisions (Ben, 2026-09-16)**:
 - Retire → redirect: `/sample-page/`, `/contact-page/` (→ `/meet/`),
   `/login/ /register/ /lostpassword/ /resetpass/ /logout/` (→ `/`).
