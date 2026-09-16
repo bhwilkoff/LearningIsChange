@@ -170,7 +170,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 
 | Surface | Status | Notes / plan |
 |---|:-:|---|
-| Post pages (3,651) | 🟨 | New `templates/post.html` on portfolio system; fragments composed at render; JSON-LD `BlogPosting`; related posts; Markdown twin |
+| Post pages (3,651) | 🟩 | **P1 done 2026-09-16.** `templates/post.html` on the refreshed system; nav/rail/footer partials composed at render; JSON-LD; related + prev/next; reading time; Markdown twin at `index.md` |
 | Homepage + `/page/N/` (389) | 🟨 | JSON-rendered; "on this day"; latest; portfolio cross-link; consider capping pagination at ~40 pages + sitemap covering the rest |
 | Year / month / day archives (2,006) | 🟨 | JSON-rendered; `/YYYY/` becomes year-in-review; keep month/day URLs |
 | Category / tag / author (1,359) | 🟨 | JSON-rendered `CollectionPage`; series treatment for project categories |
@@ -179,7 +179,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
 | Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟨 | Render from JSON; keep GUIDs; drop the patch-in-place workflows |
 | Search (`/search/`) | 🟨 | Keep engine; reskin on the portfolio system |
-| Masthead / sidebar / colophon / footer fragments | 🟨 | Replaced by new shell partials; the fragment mechanism stays |
+| Masthead / sidebar / colophon / footer fragments | 🟨 | Posts now use `templates/partials/{nav,rail,footer}.html`; the old fragments still serve archives/pages until P2/P3 |
 | `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | ⛔ | 52 MB of runtime nobody executes once templates change; delete after conversion (needs DECISIONS entry) |
 | `wp-content/uploads/` (1.3 GB) | ⬜ | Stays (media); size workstream is separate (SCRATCHPAD M2) |
 | WordPress stub routes (`/login/`, `/register/`, `/lostpassword/`, `/resetpass/`, `/logout/`, `/wp-json/…` links) | ⛔ | Should 404 or redirect; audit next tick |
@@ -361,7 +361,22 @@ resolves them on its own.)*
   line per field); all posts regenerated (2,615 changed), stats/search
   rebuilt, permalink check OK, 0 rendered posts still contain a
   double-encoded run.
-  **Next**: P1 — promote
+  **Next**: see tick 9.
+- **2026-09-16 · tick 9 (P1 shipped)** — `scripts/lib/shell.js` (shared
+  helpers, no deps), `templates/post.html` on the approved design,
+  `templates/partials/{nav,rail,footer}.html`, `/css/site.css` promoted
+  from the mockup, `regenerate-posts.js` rewritten (same CLI; adds
+  Markdown twins, related/prev/next, reading time; renders all 3,651
+  posts in 2.1 s). Fluida template kept at `templates/legacy/`. Full
+  regeneration: 3,651 posts + 3,651 `index.md`, permalink check OK,
+  post pages total 45 MB (were ~500 MB), representative post 17 KB
+  (was 92 KB) with one `<script>` (JSON-LD). Mixed state until P2: the
+  homepage/archives are still Fluida.
+  **Next**: P2 — `scripts/render-archives.js`: homepage + `/page/N/`,
+  year/month/day, category/tag/author (incl. the 1,153 missing term
+  pages, C-9), `CollectionPage` JSON-LD, `Person`/`WebSite` on the
+  homepage, "on this day", series grid. Then the retire→redirect pages
+  (A-1/A-2/A-3, D-1/D-2). promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

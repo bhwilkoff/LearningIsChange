@@ -1,0 +1,26 @@
+---
+title: "Question 36 of 365: How does distribution change the message?"
+date: 2010-02-06
+url: https://learningischange.com/2010/02/06/question-36-of-365-how-does-distribution-change-the-message/
+author: Ben Wilkoff
+categories: ["365 Questions That Google Can’t Answer", "Uncategorized"]
+tags: ["questions", "boxee", "content", "distribution", "ipad", "kindle", "Learning", "method", "mode", "realization", "Reflection", "smart phone"]
+---
+
+# Question 36 of 365: How does distribution change the message?
+
+There are new devices popping up all over that are shifting the ways in which we get our content. [Blu-Ray](http://en.wikipedia.org/wiki/Blu-ray_Disc) players no longer just play the discs that the film studios produce; they connect to the internet, play music and let us rent movies from [Netflix](http://www.netflix.com/). The [Boxee](http://www.boxee.tv/) box creates hundreds of channels that were previously only available on your computer and serves them up on your TV, all nearly for free. [For all of its hype](http://bavatuesdays.com/iprop/), the iPad will circumvent the process of buying books, reading newspapers and watching videos. In effect, these devices and their like-minded brethren push the rigid forms of distribution into being pliable, even usable in this century. They offer content wherever we are. They are the reincarnation of the evening post, the movie reels filled with news, or the light bulb tickers across old buildings. The new distribution channels are making our content personal and letting us connect to it in ways that we never have before. We can be social without even leaving our couch. We can see the world (so long as it doesn’t require flash) from the palms of our hand.
+
+While this kind of thinking is almost Utopian in scope, my question is whether we are not just shifting the ways that we consume, but rather if we are shifting what we consume as well. Is watching a movie on an iPad the same as watching it on a TV? Does streaming music onto your Boxee box change the song itself? Is the news, when read through a smart phone, the same news?
+
+I would like to make the case that the very content we consume is changed by the distribution channels that it takes. In a conversation I had with @raventech last night, we discussed whether or not a hashtag on twitter could be the nexus of a movement. Could a single technology be the organizing force which pushes all conversations to be about changing the ways that schools and learning organizations operate? The distribution channel of 140 characters forces us to be on topic. It forces us to hyperlink and pivot fast between topics. There is no room for drawn out back-room deals to be made. [Twitter](http://twitter.com/) is searchable and open. A hashtag can be archived and sorted for any information of value. This means that the message is fundamentally changed by the stream of tweets that it inhabits.
+
+It is the same with more mainstream content. A song really does change when you can see the lyrics on screen. A movie really is different when you can speak directly with the director in a live chat (as some BD-live content has done). A book really is different when annotations can be searched and done collaboratively. These are not small shifts.
+
+As many people in the media industries have bemoaned over the last few years, the old distribution methods are dying. If video didn’t kill the radio star, certainly [Last.fm](http://last.fm/) will (or at least the disc jockey). When distribution is actually distributed, no one person or company can actually own it. While the world may think Apple is making lucrative distribution deals with [Marvel comics](http://feedproxy.google.com/~r/derekeb/~3/4BhDsWAqebc/ipad-secret-weapon-marvel-comics.html), textbook companies, and major publishing firms; they are really changing what a book is. They are changing the message of all books to be: read me… but also collaborate with me.
+
+They, and nearly all new distribution forms, are causing us to question the very nature of the formats that we have held dear for so long. While the experts and the artists will always be the ones that we look to for their work, the ways in which we consume content are dictating to us to become more involved in the process of creation. We are not only creating well-informed (and advertising-saturated) customers. We are also creating customers that expect to have a voice, that expect to be social, and that expect to co-create.
+
+This is what will save the dying industries. Not micropayments, [not ad-support](http://500hats.typepad.com/500blogs/2010/02/subscriptions-are-the-new-black.html) or blending video into newspaper layouts. The thing that will save newspaper, music, and film are engaging the audience in the means of distribution itself. When we feel like we own the content as a part of ourselves, we will buy as much as we can. And when the distribution channels truly become two-way, that is when their value will be irrevocable. We will just simply need the content because the content is us.
+
+[![Reblog this post [with Zemanta]](https://i0.wp.com/img.zemanta.com/reblog_e.png?w=1225)](http://reblog.zemanta.com/zemified/831dd5a5-49f8-4dd5-b9c6-68b469c438ce/)

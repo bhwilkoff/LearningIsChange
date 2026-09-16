@@ -1,0 +1,14 @@
+---
+title: "My take on #SaveBigBird"
+date: 2012-10-04
+url: https://learningischange.com/2012/10/04/my-take-on-savebigbird/
+author: Ben Wilkoff
+categories: ["Ben Wilkoff"]
+tags: ["Ben Wilkoff", "SaveBigBird"]
+---
+
+# My take on #SaveBigBird
+
+![](https://i0.wp.com/learningischange.com/wp-content/uploads/2012/10/110216_big_bird_ap_605.png?w=1225)
+
+My take on #SaveBigBird

@@ -1,0 +1,100 @@
+---
+title: "The Best Video Essays of All Time (IMO)"
+date: 2022-02-27
+url: https://learningischange.com/2022/02/27/the-best-video-essays-of-all-time-imo/
+author: Ben Wilkoff
+categories: ["Blog", "Inspiration", "Learning"]
+tags: ["Commentary", "Critique", "Modern Internet", "Pandemic", "video", "Video Essays", "youtube"]
+---
+
+# The Best Video Essays of All Time (IMO)
+
+![](https://i0.wp.com/learningischange.com/wp-content/uploads/2022/03/marija-zaric-X1LEno0QBQY-unsplash.jpg?resize=1024%2C576&ssl=1)
+
+The video essay is not a brand new art form and it wasn’t created from scratch by YouTube’s algorithmic interest in long-form video that increases “watch time.”[People have been constructing commentaries on popular culture and on “important works of art”](https://blackbird.vcu.edu/v9n1/gallery/ve-bresland_j/ve-origin_page.shtml) since there was culture popular enough to be commented upon by others. And yet, the video essay as it exists today has grown into a community of thinkers and writers who have transformed the consumption of media into an urgent and participatory act.
+
+As[one Wellesley College film studies course puts it](https://www.wellesley.edu/lts/bli/projects/viano), the Video Essay is the result of the following process:
+
+- The student watches an audio-visual artifact, a film; [Or book, piece of news media, poem, painting, etc.]
+
+- She then reads [more] about it, discusses it with her peers and the professor in class [or people online]; and this ‘translates’ the experience of film watching into a verbal register; [i.e., speaking her own opinions to others about the work]
+
+- In the wake of her readings and discussions, the student then writes a script of sorts where she envisions arguing AUDIOVISUALLY the points she would argue in a conventional paper. This in turn forces her to to foresee how to couch verbal arguments within an audio-visual format; [It is the audio and visual elements that do a great deal of the persuasion and therefore, it isn’t just coming up with the argument, but rather coming up with the plan for how the argument will be laid out visually to achieve the greatest impact.]
+
+- The student then selects the images she needs to substantiate her argument and transfers them into an editing application [These visual elements can be direct references of the work itself or entirely new visuals and audio elements that help to prove her point or further make meaning for her audience.]
+
+- A dialogical process of a peculiar kind then must take place, namely the process of going back and forth between the written script with its logically formulated ideas and its ideal translation into another ‘idiom,’ that of audio-visuality. Words and ideas must somehow be transmuted into images and sounds, inter-titles and voice-overs, musical soundtracks and split-screens for comparison purposes. It is an INTERMEDIAL exercise that forces the student’s mind to shuttle back and forth between two forms of communication, two forms of thinking, thus proving that the moving image is a form-that-thinks.[Such a process is the modern act of responding to digital media, and is therefore the primary tool we have for understanding our world.]
+
+I believe that this process of observing, reacting with others, building a cohesive thought, gathering media to prove that thought, and then creating a trans-media representation of that thought is the work not just of Video Essayists. Rather, it is the work of meme artists, of journalists, of TikTok personalities, and of every person on social media that is attempting to understand the barrage of information that is too voluminous to understand without some kind of means to process it.
+
+Video essays are just the purest form of this way of understanding, and I love them for that. I love watching the finished product of this process. It is simultaneously poignant and persuasive. It causes me to see the original artwork or moment in time that is being commented upon as having context. It encourages me to see the world more complexly and be okay with the muddy nature of modern society. The Video Essay is, for lack of a better term, truly modern art. Sure, it might be post-post-modern too, but given that it is the process we are all doing as a natural part of our day as consumers of content and “havers of opinions,” I want to celebrate the Video Essay as the Art Form of Now.
+
+#### And these are my favorite representations of Now:
+
+**[Spaceship You](https://youtube.com/watch?v=snAhsXyO3Ck&feature=share)** – [CGP Grey](https://www.youtube.com/channel/UC2C_jShtL725hvbm1arSV9w) created this Video Essay in direct response to the initial lockdown orders and the feeling of anchorlessness that many felt in their wake. The media that Spaceship You was commenting on was ‘the whole of society’ needing to reorganize itself around a new problem, the ongoing and ever worsening pandemic. It was a critique of ”survival skills” that were for a different era. We didn’t need to know how to stock up on food or prepare for the oncoming apocalypse. Rather, we needed a way to deal with the onslaught of bad news of 2020 and the isolation that social distancing ensured. In that way, Spaceship You is a time capsule of a Video Essay. It was critiquing a moment in time, but the lessons of what we learned in the early pandemic I believe will far outlast our memory of staying home, ordering in, and generally trying to wait out the worst of the unknown.
+
+**[If There Are No Pics, Did It Happen?](https://www.youtube.com/watch?v=OQxEGLOFyto&feature=share)** – Until[Idea Channel](https://www.youtube.com/channel/UC3LqW4ijMoENQ2Wv17ZrFJA) stopped posting new videos in 2017, it was reliably one of the best places to find new Video Essays which critiqued the exact kinds of things I was most interested in: the ways in which the internet has influenced our society. Whether that was [critiquing post-modern masterpieces like Community](https://youtube.com/watch?v=YanhEVEgkYI&feature=share) or simply questioning one of the internet’s strongest beliefs (pics or it didn’t happen), Mike Rugnetta built a strong approach toward questioning the media landscape. In this particular piece, he helps us all to question our need to validate our own experiences with pictures and our further need to share them with others to prove that we are worthy of love and attention.
+
+**[In Search of a Flat Earth](https://youtube.com/watch?v=JTfhYyTuT44&feature=share)**– In my favorite example of a Video Essay that claims to be about one thing (flat earthers), while really being about something entirely different (Qanon ideology), Dan Olson expertly builds the case that the Qanon community is, in their own incomprehensible way, trying to make sense of the complexity of modern life. I won’t spoil the ending for you, but I can unequivocally state that the final line in the video is the most satisfying conclusion to any video essay. There isn’t any other work that earns [“the prestige”](https://www.goodreads.com/quotes/91029-every-great-magic-trick-consists-of-three-parts-or-acts) more than this does. Please watch.
+
+[The Cruel Optimism of Steven Pinker](https://youtube.com/watch?v=zwXV71hF7cs&feature=share)– There is nothing quite like a Video Essay for helping to re-contextualize an author or a work in a brand new way. For me, there is no better representation of this than the way I have come to understand Steven Pinker after watching this work of scathing critique.
+
+[Auld Lang Syne: The Anthropocene Reviewed](https://youtube.com/watch?v=nGzeMNxqpYU&feature=share)– Seeing as how this podcast-turned-book ([The Anthropocene Reviewed](https://www.indiebound.org/book/9780525555216)) was literally written as a series of essays, it is hard to frame this as a true “Video Essay.” However, I believe that the way this essay comments on a piece of media, the classic song Auld Lang Syne, demonstrates just how adaptable this model of modern critique can be. We can comment on the despair of the world while still bringing hope to the table. Definitely worth a watch/listen.
+
+**[Why is Gen Z Humor So Weird?](https://youtube.com/watch?v=oVlspd9hxFA&feature=share)** – While I do not believe the humor is strictly generational, this video essay makes the case that the always-on nature of the ways Gen Z grew up have made for a distinct brand of humor that is both post-ironic and self-referential. By watching this, I became for more adept at understanding my children’s preferred method of simply repeating lines from the most ridiculous TikTok video they can find.
+
+**[Sony MiniDisc: The (Not) Forgotten Audio Format That (Never) Failed](https://www.youtube.com/watch?v=CCK89V4NpJY&list=LLI9L3u8Hf_zeotF9-Ec349w&index=82)** – As you can tell by the title, this video essay is attempting to reframe a technology in our collective consciousness. Rather than commenting on a particular piece of media, this style of video is rather digging into the media format itself. I find these deep dives into our past (whether you personally experienced MiniDisc or not) and seeing what it might mean for modern life to be entirely satisfying. Your mileage may vary depending on your ability to get past some of the nerdier bits.
+
+**[Wes Anderson: Breaking Formality | Deconstructing Funny](https://www.youtube.com/watch?v=5G_sn4OINJg&list=LLI9L3u8Hf_zeotF9-Ec349w&index=213)** – I feel like Wes Anderson is a filmmaker built for the Video Essay. His particular style of ”everything just right” is exactly what a video essayist is trying to construct in their argument. In this video, though, we go deeper and try to understand the ways in which Anderson uses juxtaposition of order and chaos to create humor. It is an attempt to appreciate the media through a different lens, and it is effective in its precision for doing so.
+
+[Human Test Regarding Your Creativity](https://www.youtube.com/watch?v=FJXcREFKNQg&list=LLI9L3u8Hf_zeotF9-Ec349w&index=237)– No list of Video Essays would be complete without at least one entry for [Ze Frank](https://en.wikipedia.org/wiki/Ze_Frank). As the ”grandfather of online video,” his work played a pivotal role in forging what Video Essays could become. In this instance, he critiques the very notion of creativity and what it means to be human. Ze Frank places seemingly nonsensical images next to incredibly earnest questions. It is partially existential yearning and partially a description of everyday life. Minus the small ad for coffee in the middle, it is a perfect Video Essay filled with nothing but questions that seemingly make more of a statement than stating the conclusion outright would.
+
+**[What This Photo Doesn’t Show](https://youtube.com/watch?v=3AVNhTi9pzM&feature=share)** – While not technically another John Green video, it does feature his wonderful and resonant voice for social critique. This video takes a photographic work of art and explodes it so that we can see the true context in which it was created. This historical approach is not always present in Video Essays, but I appreciate the level of depth that it requires.
+
+**[The Absolute Pleasure of the Rocky Horror Picture Show](https://youtube.com/watch?v=xSgK6d8DZEc&feature=share)** – Queer theory and critique is a rich vein of media criticism that is only aided by modern Video Essay conventions. Matt Baume’s understanding of [Camp](https://en.wikipedia.org/wiki/Camp_(style)) and his ability to create narrative significance around touchstone media for the queer community is on full display here. If you have never really understood “Rocky Horror” or its importance to ‘weirdos, goths, and other alternative types’ of kids, this is for you.
+
+**[The Yellow Wallpaper: Crash Course Literature 407](https://youtube.com/watch?v=rtepIKeNHPU&feature=share)** – I could probably include all of [the Crash Course](https://thecrashcourse.com/) as examples of ‘Peak Video Essay,’ but I am particularly drawn to Crash Course Literature because of my own affinity for literary criticism. The Yellow Wallpaper had a strong impact on me when I first read it, as I was looking for feminist works to help understand my world and the patriarchal structures that are ever-present. This Crash Course episode dives into some of the historical context for why this short story (of a bed-ridden woman who questions her sanity as she is forced to stay in a single room) was so important. Also, it is another way that I can sneak John Green into this list.
+
+**[Tragedy In Comedy: Unraveling The Genius of Bo Burnham](https://youtube.com/watch?v=YRfIoqkkIsM&feature=share)**– Before Burnham’s pandemic masterpiece, [Inside](https://en.wikipedia.org/wiki/Bo_Burnham:_Inside), was released in May of 2021, Bo Burnham’s genius was not yet well established. This Video Essay changed that for me. It let me understand where Burnham was headed, and just how impressive his type of introspection and “reflective practice” can be. Even though the video looks a little dated with inclusions of Louis CK as “establishing shots” for a type of comedian who pushes boundaries, the essay quickly moves on to what make Burnham such a unique voice. Ultimately it is a critique of modern culture, which any good Video Essay should be.
+
+**[I Can’t Stop Watching Contagion](https://www.youtube.com/watch?v=ZsSzrVhdVuw&list=LLI9L3u8Hf_zeotF9-Ec349w&index=218)**– In the early parts of the pandemic, I felt absolutely trapped by the existential dread of knowing the world I knew was collapsing in on itself. I felt like all I could do was refresh twitter and watch movies. This is a very real representation of this time period, and is the best way I have found of understanding just what it was like in those initial moments. They feel so far away now in March of 2022, but in March of 2020, we knew nothing. We had no idea how bad things were going to get, and the only thing we could do is to watch Contagion and try to understand our mortality. Whenever I need a reminder of just how scared we all were, I watch this. And yes, I need to be reminded of it, because the “raw nerve” that the pandemic exposed is still very much there.
+
+**[The Social Network: Sorkin, Structure, and Collaboration](https://www.youtube.com/watch?v=8IAGH6k17nw)** – This video essay is one of my favorite examples of the genre because of the direction of the first scene of the movie. It lays out the ways in which Sorkin’s writing, Eisenberg’s acting, and the college culture of the early 2000s became a perfect match for one another, making meaning out of an incredibly mundane conversation. In long works of video essay, you can forget single lines pretty easily. But, by studying the text in such great depth, as if it were poem, there is far more that can be understood about just why this white college-dropout would change the world.
+
+**[Find the Hidden Opportunities](https://youtube.com/watch?v=8hVqsdtmj-0&feature=share)** – John Spencer is one of the only educators I know who understands video essays and their power. He has made visual storytelling into a teaching tool and one that resonates far beyond the confines of his own classrooms. His style of using hand drawn visuals mixed in with video excerpts shows that we are not limited to filming our critiques. We can comment on the world around us (or our given vocation) with whatever tools best suit us.
+
+**[Casey Neistat: What You Don’t See](https://youtube.com/watch?v=JbiJqTBCQuw&feature=share)** – One of the best Video Essayists of all time is Casey Neistat. Although he would probably argue that his videos, when he was still making them regularly, were Vlogs. He even talks about them as Daily Vlogs much of the time. And yet, when you look at the vast majority of what he has made since March 2015, they are little movies. They are explainers of this life and of the world around him. They are critiques of his city and of the police. They are deep dives into the world of technology and the impact of wealth upon all parts of the art-making process. And the below video essay goes into all of that, but better, because it wasn’t made by Casey Neistat. Rather, it is done by one of my other favorite Video Essayists, [The Nerdwriter](https://bit.ly/3Km7gAZ). By having the distance that this Video Essay about a Video Essayist creates, you can actually appreciate the craft of both far more easily.
+
+##### Additional Master Works of Video Essay:
+
+- [What Makes This Song Stink Ep 3 – Weezer Beverly Hills: A Retrospective](https://youtube.com/watch?v=2WeEyncm_jQ&feature=share)
+- [Why I wish I didn’t get 9s in GCSE – A Spoken Word](https://youtube.com/watch?v=KuP7zebUB9Y&feature=share)
+- [How did the Enigma Machine Work?](https://youtube.com/watch?v=ybkkiGtJmkM&feature=share)
+- [Rendering game worlds in text](https://www.youtube.com/watch?v=CDDYeJznOhY)
+- [The First Video Game](https://www.youtube.com/watch?v=uHQ4WCU1WQc&list=LLI9L3u8Hf_zeotF9-Ec349w&index=64)
+- [I built myself a proud parent machine](https://www.youtube.com/watch?v=M1B3gATS0GE&list=LLI9L3u8Hf_zeotF9-Ec349w&index=209)
+- [Why Do Crimes Expire?](https://youtube.com/watch?v=pmz-ss3zrqI&feature=share)
+- [Why I’m Not a Boy](https://youtube.com/watch?v=6EDzapkuN34&feature=share)
+- [How Southern Socialites Rewrote Civil War History](https://youtube.com/watch?v=dOkFXPblLpU&feature=share)
+- [What I’ve Learned about Community Design](https://www.youtube.com/watch?v=DJOIpxV42yo&list=LLI9L3u8Hf_zeotF9-Ec349w&index=216)
+- [The Case for Ai Weiwei](https://www.youtube.com/watch?v=YMtsodcAsVU&list=LLI9L3u8Hf_zeotF9-Ec349w&index=326)
+- [The Alt-Right Playbook: Always a Bigger Fish](https://www.youtube.com/watch?v=agzNANfNlTs&list=LLI9L3u8Hf_zeotF9-Ec349w&index=335)
+- [The Politics of the McElroy Brothers](https://www.youtube.com/watch?v=9nNYQc98Ftw&list=LLI9L3u8Hf_zeotF9-Ec349w&index=341)
+- [Why Do People Like Being Parents?](https://www.youtube.com/watch?v=pL_VK7An48k&list=LLI9L3u8Hf_zeotF9-Ec349w&index=380)
+- [The Iron Giant (1999) – Movies with Mikey](https://www.youtube.com/watch?v=RdlmaCOp9cU&list=LLI9L3u8Hf_zeotF9-Ec349w&index=447)
+- [It’s Not Easy Being Blue](https://www.youtube.com/watch?v=vPOBsk-rjgU&list=LLI9L3u8Hf_zeotF9-Ec349w&index=451)
+- [Draw My Life](https://youtube.com/watch?v=V6Y-ahQFQDA&feature=share)
+- [Hustle Culture is worse than you think…](https://youtube.com/watch?v=MC4RAKJvop4&feature=share)
+- [Adam McKay – What Is Smart Dumb Comedy](https://youtube.com/watch?v=2hFddhvb2-Q&feature=share)
+- [Adaptation.](https://youtu.be/bsEkGGc5_OU)
+- [Over the Hedge: Peak Trash](https://youtu.be/vDjZAamU7PQ)
+- [The Failure of Victorious](https://youtu.be/yA-rsBH1NP4)
+- [The Story of Tetris](https://youtu.be/_fQtxKmgJC8)
+
+Now that you have read a few hundred words on my favorite Video Essays and perhaps even watched a few of them, it is time to explore your own reactions to the media that saturates our world. Now, I’m not recommending that you hone your own video creation skills for years before releasing your own masterpiece of video essay. Rather, I am advocating that you make memes or share gifs or write blog posts or do something else that is, in fact, the same act of creation that video essayists do. I am saying that you are already a video essayist. You are already critiquing the movies you have seen or the books that you have read. You are a pioneer of the modern internet, and you are making meaning however you can.
+
+But, I want you to keep going, and to feel like you are a part of this broader movement toward all of us making things *as* *we* *consume*. We are not merely consumers of media, we are makers of it, too. And the sooner we recognize that, the better stories we will be able to tell and the more sophisticated our understanding of the world will become.
+
+So, as I said in 2014: [We should tell the stories of us.](https://youtu.be/XNWgtrftPlo) In any way that we know how. And all of us, now, know video essays and we have the tools to create them, in our pockets.
+
+[FYI, if you want to watch all 40 of these amazing video essays as a single playlist, [here it is.](https://bit.ly/3IQIBUU)]

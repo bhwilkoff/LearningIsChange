@@ -1,0 +1,36 @@
+---
+title: "Question 82 of 365: Who should we have in our buildings?"
+date: 2010-03-23
+url: https://learningischange.com/2010/03/23/question-82-of-365-who-should-we-have-in-our-buildings/
+author: Ben Wilkoff
+categories: ["365 Questions That Google Can’t Answer", "Uncategorized"]
+tags: ["questions", "answers", "aviary", "bitami", "etsy", "foodzie", "footnote", "Learning", "lic podcast", "sla", "space"]
+---
+
+# Question 82 of 365: Who should we have in our buildings?
+
+I enjoy talking about space a whole lot. It doesn’t matter whether it is online or physical, the concept intrigues me to no end. I could debate what should be a part of a space the create the best environment for collaboration for hours and not be tired of thinking through just how to ensure the people that exist in that space will be able to do the things that they need. And yet, I struggle with the people part of spaces.
+
+I feel as though I have a good handle on how to structure the spaces in order to adapt to people, but the people in the space are what make it useful and interesting. They are the ones who will transform my initial vision into something that works. Otherwise, it is just an empty room or another distraction on the web.
+
+The part that I have found problematic is who I should ask to come into my spaces and inhabit them. I have found a good way of asking everyone and then allowing those people who are interested to self-select into the space. However, this yeilds some pretty mixed results. Usually, I get the same people wanting to come in or some variation on those people so that what I inevitably have from the self-selected group are people with enough time to inhabit the space or enough relationship to me to feel compelled to join. As it turns out, this means that my spaces end up looking eerily similar to the way in which I first set them up. My rooms look the same as do my web apps and online classes.
+
+This is not what I want for my future spaces. I want people who are diverse, even radically different from me. I want people who are not unconnected to me (at least as first) to participate and become partners within the space. I want people that I have worked hard to earn their trust and their respect, not the people that are grandfathered in because I have known them. Most of all, I want people who are willing to work to change my idea of what the space should be. I want them to challenge the very nature of what makes the space important.
+
+So, going along with this idea, I would like to throw out a concrete example of what I believe is possible.
+
+I will ignore for the moment, the physical part of a physical space and instead concentrate on the people part. Here are the people I would develop partnerships with in order to create the most engaging and revolutionary space I can think of. While these people are from organizations that currently exist, it is my belief that this is a type of person rather than a single organization that has created these people:
+
+- The people at [Etsy](http://www.etsy.com/). I would like to have people who are working on real objects all around me. I would like to be bombarded with people who care about hand-crafting things and buying from creators and not manufacturers. They are incredible at creating community and buy-in from everyone in the buying experience. They run workshops regularly on thinking through objects and brands and ideas. These people are awesome.
+- The people at [Foodzie](http://foodzie.com/). While this is a lot like Etsy in their business model, I believe it is a different kind of person that is interested in real food. I want the people in my space to love all kinds of food and to be constantly bringing new things in to try out and get me excited about one of the most rudimentary parts of my existence.
+- The people at [Quirky](http://www.quirky.com/). These people crowdsource the process of creation, and they do it extremely well. I want people around me who are thinking through all stages of the creative process. I want people who are committed to follow through. Once a project has the steam to progress, it gets done. That is awesome.
+- The people at [Ficly](http://ficly.com/) and [Storybird](http://storybird.com/). I want people who are really trying to get others to tell stories to be around all of the time. I want them to always be pushing me to tell my story. Storybird uses beautiful artwork to inspire users and I want to be that inspired every day.
+- The people at [Taking It Global](http://www.tigweb.org/). These folks are dedicated to creating change everywhere that they see an injustice. They are a resource for non-profits. I want to be around people all day that are resources for creating change. I want to see the benefits of those change agents everywhere I go in my physical space. I want to see planning and work products toward that change and I want to feel as though I am a part of a network that respect the truth that they are pursuing.
+- The People at [SLA](http://www.scienceleadership.org/drupaled/) and [Outward Bound](http://www.outwardbound.org/). I want to be surrounded by learning all day. I want access to kids who aren’t jaded by inauthentic education and who are looking to experience new things everyday. I am looking for people who see the value of a team and in working together toward a common goal. I want these people to engage in all of the other spaces too, in fact, I want the version of school that they create to permeate to the other people that exist in the space.
+- The people at [Aviary](http://aviary.com/). These people are so dedicated to making media editing available for everyone that they have created some of the most interesting ongoing projects with a dedication to user experience and distributing the process of creation. I want people who want to play with the math, science and programming of creation as well. They let me see how any problem can be solved, even if you have to turn previous models on their head (closed creativity like photoshop).
+- The people at [Bitnami](http://bitnami.org/). I want people who are trying to simplify incredibly complex things for everyone else to be always available. Bitnami allows us to install complex web applications anywhere, giving us access to things the only techies would have been able to do previously. That is the kind of access I would like to pursue in my spaces.
+- The people at [Footnote](http://www.footnote.com/). History is amazing for its ability to creating context for everything we do. I want people within the space who are working toward uncovering all relevant context. I want them to use research and primary documents to help inform my decisions, my direction and my passion.
+
+So, those are the people I want in my building. I think if I can create partnerships with all of those kinds of people and they buy into the premise of working together to create the space for all those involved, I feel like that would be nothing short of a radical working, thinking and (best of all) learning. It will be a creative force to reckon with and a model to be emulated the world over. Now, we I just have to start working on those relationships.
+
+[![Reblog this post [with Zemanta]](https://i0.wp.com/img.zemanta.com/reblog_e.png?w=1225)](http://reblog.zemanta.com/zemified/ac50fa31-2d08-4ac2-a5e7-9329b26ba21e/)

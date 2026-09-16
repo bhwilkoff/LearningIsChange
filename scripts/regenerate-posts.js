@@ -1,294 +1,139 @@
 #!/usr/bin/env node
-// Render posts from templates/post.html + each post's JSON entry in
-// database/posts/YYYY.json. This is the M4 regenerator: the JSON is
-// the source of truth for post content, the HTML file is derived.
+// Render every post from templates/post.html + database/posts/YYYY.json
+// (Decision 013/014). JSON is the source of truth; the HTML file and its
+// Markdown twin (index.md) are derived artifacts.
 //
 // Usage:
-//   node scripts/regenerate-posts.js                          # dry run (shows which would be written)
+//   node scripts/regenerate-posts.js                          # dry run (counts)
 //   node scripts/regenerate-posts.js --apply                  # write to disk
 //   node scripts/regenerate-posts.js --year=2026 --apply
-//   node scripts/regenerate-posts.js --url=/2026/03/26/foo/ --diff   # single post + diff
-//   node scripts/regenerate-posts.js --year=2026 --diff       # show line diffs
+//   node scripts/regenerate-posts.js --url=/2026/03/26/foo/ --diff   # single post + line diff
+//   node scripts/regenerate-posts.js --apply --no-md          # skip Markdown twins
 //
-// Skips posts whose `content` field is missing — run
-// backfill-posts-content.js first if needed.
+// Shell partials (templates/partials/{nav,rail,footer}.html) are composed
+// at render time. The rail (recent, topics, years) and the prev/next +
+// related lists need every post, so all shards are loaded up front.
+// Skips posts without a `content` field (run backfill-posts-content.js).
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const HERE = path.dirname(fileURLToPath(import.meta.url));
-const REPO_ROOT = path.resolve(HERE, '..');
-const TEMPLATE_PATH = path.join(REPO_ROOT, 'templates', 'post.html');
-const POSTS_DIR = path.join(REPO_ROOT, 'database', 'posts');
+import {
+  REPO_ROOT, SITE, DEFAULT_IMAGE, cleanUrl, escapeHtml, escapeAttr, describe, dates, terms,
+  wordCount, readingMinutes, firstImage, loadAllPosts, loadTaxonomies, neighbors, related,
+  nav, rail, footer, fill, jsonLdPost, markdownTwin,
+} from './lib/shell.js';
 
 const args = process.argv.slice(2);
 const APPLY = args.includes('--apply');
 const DIFF = args.includes('--diff');
-const URL_ARG = args.find(a => a.startsWith('--url='));
-const YEAR_ARG = args.find(a => a.startsWith('--year='));
-const ONLY_URL = URL_ARG ? URL_ARG.slice('--url='.length) : null;
-const ONLY_YEAR = YEAR_ARG ? YEAR_ARG.slice('--year='.length) : null;
+const NO_MD = args.includes('--no-md');
+const ONLY_YEAR = (args.find((a) => a.startsWith('--year=')) || '').slice(7) || null;
+const ONLY_URL = (args.find((a) => a.startsWith('--url=')) || '').slice(6) || null;
 
-if (!fs.existsSync(TEMPLATE_PATH)) {
-  console.error(`Template not found: ${TEMPLATE_PATH}`);
-  console.error('Run scripts/capture-post-template.js first.');
-  process.exit(1);
-}
-// Compose the shared theme zones from templates/fragments/ at render
-// time so posts never drift from what regenerate-fragments.js applies
-// to the rest of the site (the template's own copies are placeholders).
-function composeFragments(html) {
-  const dir = path.join(REPO_ROOT, 'templates', 'fragments');
-  for (const zone of ['MASTHEAD', 'SIDEBAR', 'COLOPHON', 'FOOTER']) {
-    const fragPath = path.join(dir, `${zone.toLowerCase()}.html`);
-    if (!fs.existsSync(fragPath)) continue;
-    const open = `<!-- LIC:${zone}:START -->`, close = `<!-- LIC:${zone}:END -->`;
-    const i = html.indexOf(open), j = html.indexOf(close, i);
-    if (i === -1 || j === -1) continue;
-    const frag = fs.readFileSync(fragPath, 'utf8').replace(/\n$/, '');
-    html = html.slice(0, i + open.length) + '\n' + frag + '\n' + html.slice(j);
-  }
-  return html;
-}
-const TEMPLATE = composeFragments(fs.readFileSync(TEMPLATE_PATH, 'utf8'));
+const TEMPLATE = fs.readFileSync(path.join(REPO_ROOT, 'templates', 'post.html'), 'utf8');
+const ALL = loadAllPosts();
+const TAX = loadTaxonomies();
+const NAV = nav({ active: '' });
+const RAIL = rail(ALL, TAX);
+const FOOTER = footer();
 
-// Plain-text description for og:description / meta description /
-// JSON-LD: the excerpt if there is one, else the first ~160 chars of
-// the body text. Derived at render time; the content itself is untouched.
-function describe(post) {
-  const src = post.excerpt || post.content || '';
-  const text = String(src).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&').replace(/&#0?39;|&#8217;/g, "'").replace(/&quot;|&#8220;|&#8221;/g, '"')
-    .replace(/\s+/g, ' ').trim();
-  if (!text) return 'My name is Ben Wilkoff, and I Teach. And Learn. A Lot.';
-  if (text.length <= 160) return text;
-  return text.slice(0, 157).replace(/\s+\S*$/, '') + '…';
+function termLinks(list, cls) {
+  return list.map((t) => `<a class="${cls}" href="${escapeAttr(t.url)}">${escapeHtml(t.name)}</a>`).join('');
+}
+function listItem(p) {
+  const d = dates(p);
+  return `<li><time datetime="${d.dateOnly}">${d.dateOnly}</time><div><a class="t" href="${escapeAttr(p.url)}">${escapeHtml(p.title || 'Untitled')}</a><span class="d">${escapeHtml(describe(p, 150))}</span></div></li>`;
 }
 
-function jsonLd(post, absUrl, dateIso, description) {
-  const img = /<img[^>]+src=["']([^"']+)["']/i.exec(post.content || '');
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    mainEntityOfPage: { '@type': 'WebPage', '@id': absUrl },
-    headline: post.title || 'Untitled',
-    datePublished: dateIso,
-    dateModified: post.date_modified || dateIso,
-    author: { '@type': 'Person', name: 'Ben Wilkoff', url: 'https://learningischange.com/portfolio/about/' },
-    publisher: { '@type': 'Person', name: 'Ben Wilkoff', url: 'https://learningischange.com/' },
-    isPartOf: { '@type': 'Blog', '@id': 'https://learningischange.com/#blog', name: 'Learning is Change' },
-    inLanguage: 'en-US',
-  };
-  if (description) data.description = description;
-  if (img) data.image = img[1].startsWith('/') ? `https://learningischange.com${img[1]}` : img[1];
-  const kw = [...(Array.isArray(post.categories) ? post.categories : []), ...(Array.isArray(post.tags) ? post.tags : [])]
-    .map(t => (typeof t === 'string' ? t : t?.name || t?.slug)).filter(Boolean);
-  if (kw.length) data.keywords = kw.join(', ');
-  // </script> inside a value would break out of the tag
-  return JSON.stringify(data).replace(/<\//g, '<\\/');
-}
-
-const TAXONOMIES = (() => {
-  const p = path.join(REPO_ROOT, 'database', 'taxonomies.json');
-  try { return JSON.parse(fs.readFileSync(p, 'utf8')); }
-  catch { return { categories: { items: {} }, tags: { items: {} } }; }
-})();
-
-function taxonomyEntry(kind, slug) {
-  return TAXONOMIES?.[kind]?.items?.[slug] || null;
-}
-
-const MONTHS = [
-  'January','February','March','April','May','June',
-  'July','August','September','October','November','December',
-];
-
-function cleanUrl(url) {
-  return String(url || '').replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/');
-}
-
-function urlParts(url) {
-  const clean = cleanUrl(url).replace(/^\//, '').replace(/\/$/, '');
-  return clean.split('/');
-}
-
-function formatDate(isoDate) {
-  const [y, m, d] = String(isoDate).split('-');
-  return `${MONTHS[parseInt(m, 10) - 1]} ${parseInt(d, 10)}, ${y}`;
-}
-
-function escapeHtml(s) {
-  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-}
-
-function escapeAttr(s) {
-  return String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-}
-
-function buildBreadcrumbCrumbs(post) {
-  const parts = [];
-  const cats = Array.isArray(post.categories) ? post.categories : [];
-  if (cats.length) {
-    const firstSlug = typeof cats[0] === 'string' ? cats[0] : cats[0]?.slug;
-    if (firstSlug) {
-      const info = taxonomyEntry('categories', firstSlug);
-      const name = info?.name || firstSlug;
-      const catUrl = info?.url || `/category/${firstSlug}/`;
-      parts.push(`<i class="icon-angle-right"></i> <a href="${escapeAttr(catUrl)}">${escapeHtml(name)}</a>`);
-    }
-  }
-  parts.push(`<i class="icon-angle-right"></i> <span class="current">${escapeHtml(post.title || 'Untitled')}</span>`);
-  return parts.join('');
-}
-
-function buildFooterTagsBlock(post) {
-  const tags = Array.isArray(post.tags) ? post.tags : [];
-  const links = tags.map(t => {
-    const slug = typeof t === 'string' ? t : t?.slug;
-    if (!slug) return null;
-    const info = taxonomyEntry('tags', slug);
-    const name = info?.name || slug;
-    const tagUrl = info?.url || `/tag/${slug}/`;
-    return `<a href="${escapeAttr(tagUrl)}" rel="tag">${escapeHtml(name)}</a>`;
-  }).filter(Boolean);
-  if (!links.length) return '';
-  return `<span class="footer-tags" itemprop="keywords">
-                    <i class="icon-tag icon-metas" title="Tagged"></i>&nbsp;${links.join(', ')}
-                </span>`;
-}
-
-function renderPost(post) {
-  if (!post || !post.url) return null;
-  const url = cleanUrl(post.url);
-  const parts = urlParts(post.url);
-  const [year, , , slug] = parts;
-  const rawDate = post.date_published || `${parts[0]}-${parts[1]}-${parts[2]}`;
-  // date_published comes in two shapes across the database:
-  //   newer shards: "2026-03-26"             (date only)
-  //   older shards: "2014-01-01T12:00:00Z"   (already ISO datetime)
-  // Normalize: dateOnly for display formatting, ISO for the <time datetime=...>.
-  const dateOnly = rawDate.slice(0, 10);
-  const dateFormatted = formatDate(dateOnly);
-  const dateIso = /T\d/.test(rawDate) ? rawDate.replace(/Z$/, '+00:00') : `${dateOnly}T12:00:00+00:00`;
-
-  const cats = (Array.isArray(post.categories) ? post.categories : [])
-    .map(c => `category-${typeof c === 'string' ? c : c?.slug}`).filter(Boolean).join(' ');
-  const tags = (Array.isArray(post.tags) ? post.tags : [])
-    .map(t => `tag-${typeof t === 'string' ? t : t?.slug}`).filter(Boolean).join(' ');
-  const classes = [cats, tags].filter(Boolean).join(' ');
-  const postId = slug || 'new';
+function renderPost(post, index) {
+  const url = post.url;
+  const absUrl = SITE + url;
+  const d = dates(post);
+  const cats = terms(post, 'categories').filter((c) => c.slug !== 'uncategorized' && c.slug !== 'ben-wilkoff' && c.slug !== 'blog-2');
+  const tags = terms(post, 'tags').filter((t) => t.slug !== 'ben-wilkoff');
+  const description = describe(post);
+  const { prev, next } = neighbors(ALL, index);
+  const rel = related(ALL, index, 4);
+  const slug = url.replace(/\/$/, '').split('/').pop() || 'post';
 
   const values = {
-    '{{title}}': escapeHtml(post.title || 'Untitled'),
-    '{{content}}': post.content || post.excerpt || '',
-    '{{excerpt}}': escapeHtml(post.excerpt || ''),
-    '{{url}}': url,
-    '{{abs_url}}': `https://learningischange.com${url}`,
-    '{{description}}': escapeHtml(describe(post)),
-    '{{json_ld}}': jsonLd(post, `https://learningischange.com${url}`, dateIso, describe(post)),
-    '{{date_iso}}': dateIso,
-    '{{date_formatted}}': dateFormatted,
-    '{{date_utc}}': dateIso,
-    '{{post_id}}': postId,
-    '{{body_classes}}': classes,
-    '{{article_classes}}': classes,
-    '{{breadcrumb_crumbs}}': buildBreadcrumbCrumbs(post),
-    '{{footer_tags_block}}': buildFooterTagsBlock(post),
+    title: escapeHtml(post.title || 'Untitled'),
+    description: escapeAttr(description),
+    abs_url: absUrl,
+    og_image: escapeAttr(firstImage(post.content) || DEFAULT_IMAGE),
+    date_iso: d.iso,
+    date_formatted: d.formatted,
+    json_ld: jsonLdPost(post, absUrl, d, description),
+    body_classes: [...cats.map((c) => `category-${c.slug}`), ...tags.map((t) => `tag-${t.slug}`)].join(' '),
+    post_id: slug,
+    categories: termLinks(cats, 'card-tag'),
+    word_count: String(wordCount(post.content)),
+    reading_time: String(readingMinutes(post.content)),
+    tags: termLinks(tags, 'tag'),
+    prev_link: prev ? `<a href="${escapeAttr(prev.url)}" class="prev" rel="prev"><small>← Previous</small><strong>${escapeHtml(prev.title || 'Untitled')}</strong></a>` : '<span></span>',
+    next_link: next ? `<a href="${escapeAttr(next.url)}" class="next" rel="next"><small>Next →</small><strong>${escapeHtml(next.title || 'Untitled')}</strong></a>` : '<span></span>',
+    related: rel.length ? `<section class="related"><h2>Related</h2><ul class="post-list">${rel.map(listItem).join('')}</ul></section>` : '',
+    nav: NAV, rail: RAIL, footer: FOOTER,
   };
-
-  let html = TEMPLATE;
-  for (const [key, val] of Object.entries(values)) {
-    // Replace every occurrence — use split/join (safe for any string content, not regex)
-    html = html.split(key).join(val);
-  }
-  return html;
+  // content last: a body that happens to contain "{{...}}" must never be expanded
+  const html = fill(TEMPLATE, values).split('{{content}}').join(post.content || '');
+  return { html, md: NO_MD ? null : markdownTwin(post, absUrl) };
 }
 
-function postHtmlPath(post) {
-  const url = cleanUrl(post.url);
-  return path.join(REPO_ROOT, url.replace(/^\//, '') + 'index.html');
+function outPaths(url) {
+  const dir = path.join(REPO_ROOT, url.replace(/^\//, ''));
+  return { html: path.join(dir, 'index.html'), md: path.join(dir, 'index.md') };
 }
 
-function lineDiff(a, b, label) {
-  const al = a.split('\n');
-  const bl = b.split('\n');
-  const max = Math.max(al.length, bl.length);
-  const out = [];
-  let same = 0;
-  for (let i = 0; i < max; i++) {
+function lineDiff(a, b) {
+  const al = a.split('\n'), bl = b.split('\n');
+  const out = []; let same = 0;
+  for (let i = 0; i < Math.max(al.length, bl.length); i++) {
     if (al[i] === bl[i]) { same++; continue; }
     out.push(`@ line ${i + 1}`);
     if (al[i] !== undefined) out.push(`  - ${al[i].length > 140 ? al[i].slice(0, 140) + '…' : al[i]}`);
     if (bl[i] !== undefined) out.push(`  + ${bl[i].length > 140 ? bl[i].slice(0, 140) + '…' : bl[i]}`);
-    if (out.length > 40) { out.push('  (diff truncated)'); return out.join('\n'); }
+    if (out.length > 40) { out.push('  (diff truncated)'); break; }
   }
-  if (out.length === 0) return `  ${label}: identical (${same} lines)`;
-  return `  ${label}: ${same} lines same, ${max - same} lines differ\n` + out.join('\n');
-}
-
-function processShard(year) {
-  const shardPath = path.join(POSTS_DIR, `${year}.json`);
-  if (!fs.existsSync(shardPath)) return null;
-  const shard = JSON.parse(fs.readFileSync(shardPath, 'utf8'));
-  const posts = Array.isArray(shard.posts) ? shard.posts : [];
-
-  let rendered = 0, skippedNoContent = 0, written = 0, errored = 0, unchanged = 0;
-  for (const post of posts) {
-    if (!post.content) { skippedNoContent++; continue; }
-    if (ONLY_URL && cleanUrl(post.url) !== cleanUrl(ONLY_URL)) continue;
-
-    try {
-      const html = renderPost(post);
-      if (!html) { errored++; continue; }
-      rendered++;
-
-      const outPath = postHtmlPath(post);
-      const prior = fs.existsSync(outPath) ? fs.readFileSync(outPath, 'utf8') : null;
-
-      if (prior === html) { unchanged++; continue; }
-
-      if (DIFF && prior !== null) {
-        console.log(`\n== ${post.url} ==`);
-        console.log(lineDiff(prior, html, post.url));
-      }
-
-      if (APPLY) {
-        fs.mkdirSync(path.dirname(outPath), { recursive: true });
-        fs.writeFileSync(outPath, html);
-        written++;
-      }
-    } catch (err) {
-      console.error(`  ERROR: ${post.url}: ${err.message}`);
-      errored++;
-    }
-  }
-
-  return { year, total: posts.length, rendered, skippedNoContent, written, unchanged, errored };
+  return out.length ? out.join('\n') : `  identical (${same} lines)`;
 }
 
 function main() {
-  const years = ONLY_YEAR
-    ? [ONLY_YEAR]
-    : fs.readdirSync(POSTS_DIR).filter(f => /^\d{4}\.json$/.test(f)).map(f => f.replace('.json', '')).sort();
-
-  console.log(`${APPLY ? 'APPLY' : 'DRY RUN'}${DIFF ? ' [DIFF]' : ''} — regenerate posts from template + JSON`);
+  const years = ONLY_YEAR ? [ONLY_YEAR] : [...new Set(ALL.map((p) => dates(p).year).filter(Boolean))].sort();
+  console.log(`${APPLY ? 'APPLY' : 'DRY RUN'}${DIFF ? ' [DIFF]' : ''} — regenerate posts from template + JSON (${ALL.length} posts loaded)`);
   console.log(`${'year'.padEnd(6)} ${'total'.padStart(6)} ${'rendered'.padStart(9)} ${'noContent'.padStart(10)} ${'written'.padStart(8)} ${'unchanged'.padStart(10)} ${'err'.padStart(5)}`);
   console.log('─'.repeat(60));
-
-  let t = { total: 0, rendered: 0, skippedNoContent: 0, written: 0, unchanged: 0, errored: 0 };
+  const t = { total: 0, rendered: 0, noContent: 0, written: 0, unchanged: 0, err: 0 };
   for (const year of years) {
-    const s = processShard(year);
-    if (!s) continue;
-    console.log(
-      `${year.padEnd(6)} ${String(s.total).padStart(6)} ${String(s.rendered).padStart(9)} ${String(s.skippedNoContent).padStart(10)} ${String(s.written).padStart(8)} ${String(s.unchanged).padStart(10)} ${String(s.errored).padStart(5)}`,
-    );
-    t.total += s.total; t.rendered += s.rendered; t.skippedNoContent += s.skippedNoContent;
-    t.written += s.written; t.unchanged += s.unchanged; t.errored += s.errored;
+    const s = { total: 0, rendered: 0, noContent: 0, written: 0, unchanged: 0, err: 0 };
+    ALL.forEach((post, index) => {
+      if (dates(post).year !== year) return;
+      s.total++;
+      if (!post.content) { s.noContent++; return; }
+      if (ONLY_URL && post.url !== cleanUrl(ONLY_URL)) return;
+      try {
+        const { html, md } = renderPost(post, index);
+        s.rendered++;
+        const out = outPaths(post.url);
+        const prior = fs.existsSync(out.html) ? fs.readFileSync(out.html, 'utf8') : null;
+        const priorMd = md !== null && fs.existsSync(out.md) ? fs.readFileSync(out.md, 'utf8') : null;
+        if (prior === html && (md === null || priorMd === md)) { s.unchanged++; return; }
+        if (DIFF && prior !== null) { console.log(`\n== ${post.url} ==`); console.log(lineDiff(prior, html)); }
+        if (APPLY) {
+          fs.mkdirSync(path.dirname(out.html), { recursive: true });
+          if (prior !== html) fs.writeFileSync(out.html, html);
+          if (md !== null && priorMd !== md) fs.writeFileSync(out.md, md);
+          s.written++;
+        }
+      } catch (err) { console.error(`  ERROR: ${post.url}: ${err.message}`); s.err++; }
+    });
+    console.log(`${year.padEnd(6)} ${String(s.total).padStart(6)} ${String(s.rendered).padStart(9)} ${String(s.noContent).padStart(10)} ${String(s.written).padStart(8)} ${String(s.unchanged).padStart(10)} ${String(s.err).padStart(5)}`);
+    for (const k of Object.keys(t)) t[k] += s[k];
   }
   console.log('─'.repeat(60));
-  console.log(`TOTAL  ${String(t.total).padStart(6)} ${String(t.rendered).padStart(9)} ${String(t.skippedNoContent).padStart(10)} ${String(t.written).padStart(8)} ${String(t.unchanged).padStart(10)} ${String(t.errored).padStart(5)}`);
+  console.log(`TOTAL  ${String(t.total).padStart(6)} ${String(t.rendered).padStart(9)} ${String(t.noContent).padStart(10)} ${String(t.written).padStart(8)} ${String(t.unchanged).padStart(10)} ${String(t.err).padStart(5)}`);
   if (!APPLY) console.log('\nRun again with --apply to write files.');
+  if (t.err) process.exitCode = 1;
 }
 
 main();
