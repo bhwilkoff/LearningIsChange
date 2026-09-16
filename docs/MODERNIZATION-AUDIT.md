@@ -189,7 +189,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 
 ---
 
-## 4. Proposed direction (needs Ben — see DECISIONS.md, Decision 014)
+## 4. Direction — APPROVED 2026-09-16 (DECISIONS.md, Decision 014)
 
 **One shell, rendered from JSON, in the portfolio design system.**
 Phases, each independently shippable and each ending in a
@@ -204,7 +204,7 @@ regenerate + one commit:
 | P4 | Retire `wp-includes/`, plugin/theme CSS+JS, stub routes; Markdown twins; `llms.txt` | −52 MB |
 | P5 | Admin tools re-pointed at JSON + regenerate workflows | admin/* |
 
-Decision items for Ben (each is a yes/no; defaults in bold):
+Decision items — **answered 2026-09-16** (see Decision 014 for the record):
 
 - **D-1** Design: **portfolio system as-is** vs a refreshed variant.
 - **D-2** Sidebar: **right rail on desktop, in-flow blocks on mobile**
@@ -225,27 +225,18 @@ Nothing here is changed by the loop. Ben approves items; approved
 items get done in a later tick and moved to *Done*.
 
 ### A. Stale / placeholder pages (WordPress leftovers)
-- A-1 `/sample-page/` — WordPress default page. Retire or redirect?
-- A-2 `/contact-page/` — body is a literal `[contact-form-7 …]`
-  shortcode. Replace with a link to `/meet/` + `/support.html`?
-- A-3 `/login/`, `/register/`, `/lostpassword/`, `/resetpass/`,
-  `/logout/` — auth stubs with no backend. 404 (remove) or redirect
-  to `/`?
+- ✅ A-1 `/sample-page/` — retire → redirect to `/`.
+- ✅ A-2 `/contact-page/` — retire → redirect to `/meet/`.
+- ✅ A-3 `/login/`, `/register/`, `/lostpassword/`, `/resetpass/`,
+  `/logout/` — retire → redirect to `/`.
 - A-4 `/services/contact/` (nav "Contact") — verify it isn't also a
   shortcode shell.
-- A-5 `/g-community-test/`, `/hr10tech-test/`, `/test-for-google-talk/`
-  — test pages. Keep as archive, `noindex`, or remove?
+- ✅ A-5 test pages — keep as-is (Ben).
 
 ### B. Navigation & identity
-- B-1 Main menu still says "Services" / "Contact" with WordPress-era
-  submenus; portfolio nav is Career / Apps / Projects / Writing /
-  Video / About. Unify into one nav for both?
-- B-2 Site tagline `My name is Ben Wilkoff, and I Teach. And Learn. A
-  Lot.` — keep verbatim (it's a good line) or align to portfolio
-  hero copy?
-- B-3 Header image (`cropped-14747.jpg`, ON/OFF coffee) — keep as
-  the blog's visual signature, or drop for the portfolio's typographic
-  header?
+- ✅ B-1 One unified nav; blog-only items move to the blog landing page.
+- ✅ B-2 Tagline kept verbatim.
+- ✅ B-3 Header image dropped (typographic header).
 - B-4 Footer social links: blog has Facebook + Twitter; portfolio has
   GitHub / LinkedIn / Bluesky. Twitter → archive link?
 
@@ -264,10 +255,8 @@ items get done in a later tick and moved to *Done*.
   `/wp-content/uploads/`.
 
 ### D. Content that may deserve an update (not rewrites — Ben decides)
-- D-1 `/about/` and `/bio/` predate the app work; portfolio About
-  is current. Redirect blog About → portfolio About, or keep both?
-- D-2 `/services/` and `/pd/` describe consulting/PD offerings —
-  still offered?
+- ✅ D-1 `/about/`, `/bio/` → redirect to `/portfolio/about/`.
+- ✅ D-2 `/services/`, `/pd/` → retired (out of nav + sitemap, `noindex`, files kept).
 - D-3 `/important-posts/` — a curated list; candidate for becoming
   the "start here" page in the new homepage.
 
@@ -283,6 +272,11 @@ resolves them on its own.)*
   Research (AI/Google indexing, SSG options, archive patterns).
   Wrote this document, Decision 014 (proposed), `robots.txt`,
   `scripts/generate-sitemap.js` → `sitemap.xml`. Seeded review queue.
-  **Next**: P0 `og:url` fix in the existing template; stub-route audit;
-  draft the new post template as a static mock at
-  `docs/mockups/post.html` for Ben to look at before anything regenerates.
+  Ben answered Decision 014 + all sub-decisions and the first queue
+  batch the same day (recorded in Decision 014). Loop cadence set to
+  5 minutes.
+  **Next**: (1) `scripts/check-permalinks.js` — the permalink guarantee
+  is a precondition for every later phase; (2) P0 `og:url` fix in the
+  existing post template + regenerate posts; (3) static mockups
+  `docs/mockups/post.html` and `docs/mockups/home.html` on the
+  refreshed portfolio system (D-1) with right rail (D-2) for Ben.

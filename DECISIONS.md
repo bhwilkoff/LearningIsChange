@@ -306,7 +306,9 @@ feasible.
   re-theme without an HTML-level transformation.
 
 ## Decision 014 — Retire the Fluida theme: render the whole site from JSON in the portfolio design system
-*Date: 2026-09-16 · Status: **PROPOSED — awaiting Ben** (nothing regenerates until approved)*
+*Date: 2026-09-16 · Status: **APPROVED by Ben 2026-09-16**, with the
+condition that every permalink is preserved (verified automatically
+before each phase's regeneration — see "Permalink guarantee" below).*
 
 **Decision (proposed)**: The blog stops being a WordPress export
 wearing zone markers and becomes a fully generated site. Every public
@@ -339,10 +341,40 @@ P0 SEO plumbing → P1 post template → P2 archive/homepage renderer →
 P3 pages + feeds → P4 delete WordPress runtime, Markdown twins →
 P5 admin tools re-pointed at JSON.
 
-**Open sub-decisions (Ben)**: D-1 design variant, D-2 sidebar vs no
-sidebar, D-3 keep all 389 `/page/N/` URLs, D-4 Markdown twins, D-5
-allow training bots, D-6 delete `wp-includes/` + plugin/theme dirs
-(−52 MB; size-impact entry required by CLAUDE.md).
+**Sub-decisions (Ben, 2026-09-16)**:
+- D-1 Design: **portfolio system, refreshed** — same fonts/components;
+  a light refresh (spacing, color tokens, dark mode) adopted by blog
+  and portfolio together.
+- D-2 Sidebar: **right rail on desktop; in-flow blocks on mobile**
+  (between post and footer, never hidden).
+- D-3 Pagination: **keep all 389 `/page/N/` URLs**, regenerated.
+- D-4 **Markdown twins** for every post, advertised via
+  `<link rel="alternate" type="text/markdown">`.
+- D-5 Crawlers: **allow all**, including training bots.
+- D-6 **Delete `wp-includes/`, `wp-content/plugins/`,
+  `wp-content/themes/`** after P1–P3 (−52 MB; this line is the
+  size-impact record). Uploads untouched.
+
+**Permalink guarantee**: `scripts/check-permalinks.js` snapshots every
+URL in `sitemap.xml` plus every feed GUID before a regeneration and
+asserts each still resolves to a file afterwards; the regenerate
+scripts and the GitHub Actions refuse to commit if any URL is lost.
+"Retired" pages are never deleted — they become redirect pages
+(`<meta http-equiv="refresh">` + canonical) so the URL keeps resolving.
+
+**Content-queue routing decisions (Ben, 2026-09-16)**:
+- Retire → redirect: `/sample-page/`, `/contact-page/` (→ `/meet/`),
+  `/login/ /register/ /lostpassword/ /resetpass/ /logout/` (→ `/`).
+  Test pages (`/g-community-test/`, `/hr10tech-test/`,
+  `/test-for-google-talk/`) stay as-is.
+- Navigation: **one unified nav** across blog and portfolio; blog-only
+  items (Important Posts, Video Posts, Blogging Projects,
+  Recommendations) move to the blog landing page.
+- Identity: **keep the tagline** ("My name is Ben Wilkoff, and I Teach.
+  And Learn. A Lot."); **drop the ON/OFF header image**.
+- `/about/`, `/bio/` → redirect to `/portfolio/about/`. `/services/`,
+  `/pd/` → retired: removed from nav and sitemap, `noindex`, files
+  kept unchanged.
 
 **Alternatives considered**:
 - *Adopt Eleventy/Astro*: rejected — adds a dependency and a second
