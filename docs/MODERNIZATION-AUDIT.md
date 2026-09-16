@@ -510,12 +510,17 @@ resolves them on its own.)*
   `search/`). Engine untouched except: skips tombstoned posts, accepts
   `?q=`. Verified live query in the browser (28 results, highlights,
   no console errors).
-  **Next**: audit the remaining tools against the JSON pipeline —
-  `/menus/` (edited Fluida menus; fold into Render Site's partial editor
-  or retire with a redirect), `/update/` (Mass Updater: its find/replace
-  over HTML now needs to target JSON content), `/rss-creator/`
-  (superseded by `render-feeds.js` — retire or keep as a preview tool);
-  then the `/new/` simplify pass. promote
+  **Next**: see tick 21.
+- **2026-09-16 · tick 21 (tool audit)** — Ben decided: retire `/menus/`
+  and `/rss-creator/` (superseded by Render Site and `render-feeds.js`);
+  port `/update/` to JSON. Both retired tools are now redirects to
+  `/admin/regenerate/`, removed from the dashboard, admin bar and
+  `CLAUDE.md`. 11 tools remain.
+  **Next**: port `/update/` (Mass Updater) — scan scope over
+  `database/posts/*.json` + `pages.json`, rules applied to the `content`
+  (and optionally `title`/`excerpt`) fields, preview against the rendered
+  page, dry run, commit JSON, dispatch `render-site.yml`; then the `/new/`
+  simplify pass. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

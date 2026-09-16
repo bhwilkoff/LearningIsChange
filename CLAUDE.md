@@ -97,9 +97,7 @@ painful to iterate on in a single chat context.
 | `/edit/` | Page Editor | 2,506 | WYSIWYG (native contenteditable) edit any page/post |
 | `/update/` | Mass Updater | 4,201 | Bulk find/replace across the repo |
 | `/remove/` | Post Remover | 1,653 | Tombstone a post in its shard + dispatch render |
-| `/rss-creator/` | RSS Creator | 1,104 | Regenerate `feed/index.xml` and friends |
 | `/podcast-rss/` | Podcast RSS | 1,264 | Apple Podcasts/Spotify compatible feed |
-| `/menus/` | Menu Editor | 1,096 | Legacy (edited Fluida menus) — to be folded into Render Site |
 | `/links/` | Link Checker | 1,741 | Site-wide broken link scan (IndexedDB cache) |
 | `/search/` | Search Console | 1,102 | Search tester (also user-facing search UI) |
 

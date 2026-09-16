@@ -4,8 +4,8 @@
 (function () {
   var tools = [
     ['/admin/', 'Dashboard'], ['/new/', 'New post'], ['/edit/', 'Edit'], ['/remove/', 'Remove'],
-    ['/admin/regenerate/', 'Render'], ['/update/', 'Mass update'], ['/rss-creator/', 'RSS'],
-    ['/podcast-rss/', 'Podcast'], ['/menus/', 'Menus'], ['/links/', 'Links'], ['/search/', 'Search'],
+    ['/admin/regenerate/', 'Render'], ['/update/', 'Mass update'],
+    ['/podcast-rss/', 'Podcast'], ['/links/', 'Links'], ['/search/', 'Search'],
     ['/admin/dedup/', 'Dedup'], ['/admin/db-maintenance/', 'DB'],
   ];
   var here = location.pathname.replace(/index\.html$/, '');

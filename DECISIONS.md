@@ -370,6 +370,11 @@ approved the same day: C-4 mojibake re-decode (33 posts, content
 bytes change only where double-encoded), C-5 normalize stringified
 taxonomy lists, C-6 restore taxonomy display names from the old menu.
 
+**Admin tools (Ben, 2026-09-16)**: `/menus/` and `/rss-creator/` retired
+(redirect to `/admin/regenerate/`); `/update/` ported to operate on
+JSON content and dispatch a render; the look and feel of every admin
+tool follows the site design system (`admin/admin.css`).
+
 **Content-queue routing decisions (Ben, 2026-09-16)**:
 - Retire → redirect: `/sample-page/`, `/contact-page/` (→ `/meet/`),
   `/login/ /register/ /lostpassword/ /resetpass/ /logout/` (→ `/`).
