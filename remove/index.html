@@ -499,15 +499,8 @@
             </p>
 
             <div class="options-grid">
-                <label class="checkbox-label"><input type="checkbox" id="removePostFile" checked> 🗑️ Delete post file</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateHomepage" checked> 🏠 Remove from homepage</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateMonthArchive" checked> 📅 Remove from month archive</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateYearArchive" checked> 📆 Remove from year archive</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateCategoryArchive" checked> 🏷️ Remove from category archive</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateTagArchives" checked> 🔖 Remove from tag archives</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateAuthorArchive" checked> 👤 Remove from author archive</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> 📡 Remove from RSS feed</label>
-                <label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> 🗄️ Update database &amp; search index</label>
+                <label class="checkbox-label"><input type="checkbox" id="renderAfterRemove" checked> 🔁 Render after removing (dispatches <code>render-site.yml</code>)</label>
+                <p style="font-size:0.82rem;color:var(--text-muted);margin:8px 0 0">Removal is a <strong>tombstone</strong> in <code>database/posts/YYYY.json</code> (<code>removed: true</code>), never a deleted URL: the workflow turns the permalink into a redirect to its year archive and drops the post from listings, feeds and search. Reversible by clearing the flag.</p>
             </div>
 
             <div class="settings-section" style="margin-top:20px;">
@@ -1071,246 +1064,32 @@ async function startRemoval() {
         log(`Starting removal of: ${p.title}`, 'info');
         log(`Post path: ${p.postPath}`, 'info');
 
-        // ── 1. Delete post file ──────────────────────────────────
-        updateProgress(5, 'Queuing post file for deletion…');
-        if (document.getElementById('removePostFile').checked) {
-            generatedDeletions.push(`${p.postPath}/index.html`);
-            log(`✓ Queued deletion: ${p.postPath}/index.html`, 'success');
-        }
+        // Decision 014: never delete a permalink. Mark the entry as a
+        // tombstone; render-site.yml writes the redirect page and rebuilds
+        // listings, feeds, taxonomies and search from the JSON.
+        updateProgress(20, 'Marking post as removed in its shard…');
+        const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/posts/${p.year}.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error(`Could not fetch database/posts/${p.year}.json (HTTP ${res.status})`);
+        const shard = await res.json();
+        const norm = (u) => String(u || '').replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/');
+        const idx = (shard.posts || []).findIndex(post => norm(post.url) === norm(p.postUrl));
+        if (idx < 0) throw new Error(`Post not found in database/posts/${p.year}.json`);
+        if (shard.posts[idx].removed) log('⚠ This post is already marked as removed.', 'warn');
+        shard.posts[idx].removed = true;
+        shard.posts[idx].removed_at = new Date().toISOString();
+        generatedUpdates[`database/posts/${p.year}.json`] = JSON.stringify(shard, null, 2) + '\n';
+        log(`✓ Tombstoned in database/posts/${p.year}.json (entry kept; permalink will redirect to /${p.year}/)`, 'success');
 
-        // ── 2. Homepage ──────────────────────────────────────────
-        updateProgress(12, 'Updating homepage…');
-        if (document.getElementById('updateHomepage').checked) {
-            const html = await LiCAdmin.fetchFileFromGithub('index.html');
-            if (html) {
-                const updated = removeArticleFromHtml(html, p.postUrl);
-                if (updated !== html) {
-                    generatedUpdates['index.html'] = updated;
-                    log('✓ Removed post from homepage', 'success');
-                } else {
-                    log('⚠ Post not found in homepage (may already be removed)', 'warn');
-                }
-            } else {
-                log('⚠ Could not fetch homepage', 'warn');
-            }
-        }
-
-        // ── 3. Month archive ─────────────────────────────────────
-        updateProgress(22, 'Updating month archive…');
-        if (document.getElementById('updateMonthArchive').checked) {
-            const path = `${p.year}/${p.month}/index.html`;
-            const html = await LiCAdmin.fetchFileFromGithub(path);
-            if (html) {
-                const updated = removeArticleFromHtml(html, p.postUrl);
-                if (updated !== html) {
-                    generatedUpdates[path] = updated;
-                    log(`✓ Removed from month archive: ${path}`, 'success');
-                } else {
-                    log(`⚠ Post not found in month archive: ${path}`, 'warn');
-                }
-            } else {
-                log(`⚠ Could not fetch month archive: ${path}`, 'warn');
-            }
-        }
-
-        // ── 4. Year archive ──────────────────────────────────────
-        updateProgress(32, 'Updating year archive…');
-        if (document.getElementById('updateYearArchive').checked) {
-            const path = `${p.year}/index.html`;
-            const html = await LiCAdmin.fetchFileFromGithub(path);
-            if (html) {
-                const updated = removeArticleFromHtml(html, p.postUrl);
-                if (updated !== html) {
-                    generatedUpdates[path] = updated;
-                    log(`✓ Removed from year archive: ${path}`, 'success');
-                } else {
-                    log(`⚠ Post not found in year archive: ${path}`, 'warn');
-                }
-            } else {
-                log(`⚠ Could not fetch year archive: ${path}`, 'warn');
-            }
-        }
-
-        // ── 5. Category archive(s) ───────────────────────────────
-        updateProgress(42, 'Updating category archives…');
-        if (document.getElementById('updateCategoryArchive').checked && p.categories.length) {
-            for (const cat of p.categories) {
-                const path = `category/${cat}/index.html`;
-                const html = await LiCAdmin.fetchFileFromGithub(path);
-                if (html) {
-                    const updated = removeArticleFromHtml(html, p.postUrl);
-                    if (updated !== html) {
-                        generatedUpdates[path] = updated;
-                        log(`✓ Removed from category archive: ${path}`, 'success');
-                    } else {
-                        log(`⚠ Post not found in category archive: ${path}`, 'warn');
-                    }
-                } else {
-                    log(`⚠ Could not fetch category archive: ${path}`, 'warn');
-                }
-            }
-        }
-
-        // ── 6. Tag archive(s) ────────────────────────────────────
-        updateProgress(52, 'Updating tag archives…');
-        if (document.getElementById('updateTagArchives').checked && p.tags.length) {
-            for (const tag of p.tags) {
-                const path = `tag/${tag}/index.html`;
-                const html = await LiCAdmin.fetchFileFromGithub(path);
-                if (html) {
-                    const updated = removeArticleFromHtml(html, p.postUrl);
-                    if (updated !== html) {
-                        generatedUpdates[path] = updated;
-                        log(`✓ Removed from tag archive: ${path}`, 'success');
-                    } else {
-                        log(`⚠ Post not found in tag archive: ${path}`, 'warn');
-                    }
-                } else {
-                    log(`⚠ Could not fetch tag archive: ${path}`, 'warn');
-                }
-            }
-        }
-
-        // ── 7. Author archive ────────────────────────────────────
-        updateProgress(60, 'Updating author archive…');
-        if (document.getElementById('updateAuthorArchive').checked) {
-            const path = 'author/bhwilkoff/index.html';
-            const html = await LiCAdmin.fetchFileFromGithub(path);
-            if (html) {
-                const updated = removeArticleFromHtml(html, p.postUrl);
-                if (updated !== html) {
-                    generatedUpdates[path] = updated;
-                    log(`✓ Removed from author archive`, 'success');
-                } else {
-                    log(`⚠ Post not found in author archive`, 'warn');
-                }
-            } else {
-                log(`⚠ Could not fetch author archive`, 'warn');
-            }
-        }
-
-        // ── 8. RSS feed ──────────────────────────────────────────
-        updateProgress(68, 'Updating RSS feed…');
-        if (document.getElementById('updateRssFeed').checked) {
-            const rss = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/feed/index.xml`).then(r => r.ok ? r.text() : null).catch(() => null);
-            if (rss) {
-                const updated = removeItemFromRss(rss, p.postUrl);
-                if (updated !== rss) {
-                    generatedUpdates['feed/index.xml'] = updated;
-                    log('✓ Removed item from RSS feed', 'success');
-                } else {
-                    log('⚠ Post not found in RSS feed', 'warn');
-                }
-            } else {
-                log('⚠ Could not fetch RSS feed', 'warn');
-            }
-        }
-
-        // ── 9. Database ──────────────────────────────────────────
-        updateProgress(78, 'Updating database…');
-        if (document.getElementById('updateDatabase').checked) {
-            // Posts shard
-            try {
-                const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/posts/${p.year}.json`);
-                if (res.ok) {
-                    const shard = await res.json();
-                    const before = shard.posts.length;
-                    shard.posts = shard.posts.filter(post => {
-                        const postUrl = (post.url || '').replace(/\/$/, '');
-                        const target = p.postUrl.replace(/\/$/, '');
-                        return postUrl !== target;
-                    });
-                    shard.post_count = shard.posts.length;
-                    generatedUpdates[`database/posts/${p.year}.json`] = JSON.stringify(shard, null, 2);
-                    log(`✓ Removed from database shard (${before} → ${shard.posts.length} posts)`, 'success');
-                } else {
-                    log(`⚠ Could not fetch database shard for ${p.year}`, 'warn');
-                }
-            } catch (e) {
-                log(`⚠ Database shard error: ${e.message}`, 'error');
-            }
-
-            // Taxonomies — decrement counts
-            try {
-                const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/taxonomies.json`);
-                if (res.ok) {
-                    const taxonomies = await res.json();
-                    for (const cat of p.categories) {
-                        if (taxonomies.categories?.items?.[cat]) {
-                            taxonomies.categories.items[cat].count = Math.max(0, (taxonomies.categories.items[cat].count || 1) - 1);
-                        }
-                    }
-                    for (const tag of p.tags) {
-                        if (taxonomies.tags?.items?.[tag]) {
-                            taxonomies.tags.items[tag].count = Math.max(0, (taxonomies.tags.items[tag].count || 1) - 1);
-                        }
-                    }
-                    generatedUpdates['database/taxonomies.json'] = JSON.stringify(taxonomies, null, 2);
-                    log('✓ Updated taxonomy counts', 'success');
-                }
-            } catch (e) {
-                log(`⚠ Taxonomies error: ${e.message}`, 'error');
-            }
-
-            // Manifest — decrement total_posts and year shard count
-            try {
-                const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/manifest.json`);
-                if (res.ok) {
-                    const manifest = await res.json();
-                    manifest.stats = manifest.stats || {};
-                    manifest.stats.total_posts = Math.max(0, (manifest.stats.total_posts || 1) - 1);
-                    manifest.generated = new Date().toISOString();
-                    if (manifest.shards?.posts?.[p.year]) {
-                        manifest.shards.posts[p.year].count = Math.max(0, (manifest.shards.posts[p.year].count || 1) - 1);
-                    }
-                    generatedUpdates['database/manifest.json'] = JSON.stringify(manifest, null, 2);
-                    log('✓ Updated manifest', 'success');
-                }
-            } catch (e) {
-                log(`⚠ Manifest error: ${e.message}`, 'error');
-            }
-
-            // Search index
-            try {
-                const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/search.json`);
-                if (res.ok) {
-                    const search = await res.json();
-                    const before = search.posts?.length || 0;
-                    search.posts = (search.posts || []).filter(post => {
-                        const postUrl = (post.url || '').replace(/\/$/, '');
-                        const target = p.postUrl.replace(/\/$/, '');
-                        return postUrl !== target;
-                    });
-                    generatedUpdates['database/search.json'] = JSON.stringify(search, null, 2);
-                    log(`✓ Removed from search index (${before} → ${search.posts.length} entries)`, 'success');
-                }
-            } catch (e) {
-                log(`⚠ Search index error: ${e.message}`, 'error');
-            }
-
-            // Changelog
-            try {
-                const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/changelog.json`);
-                let changelog = { entries: [] };
-                if (res.ok) {
-                    try { changelog = await res.json(); } catch (e2) {}
-                }
-                if (!Array.isArray(changelog.entries)) changelog.entries = [];
-                changelog.entries.unshift({
-                    timestamp: new Date().toISOString(),
-                    action: 'post_removed',
-                    title: p.title,
-                    url: p.postUrl,
-                    categories: p.categories,
-                    tags: p.tags
-                });
-                if (changelog.entries.length > 100) changelog.entries = changelog.entries.slice(0, 100);
-                generatedUpdates['database/changelog.json'] = JSON.stringify(changelog, null, 2);
-                log('✓ Added removal entry to changelog', 'success');
-            } catch (e) {
-                log(`⚠ Changelog error: ${e.message}`, 'error');
-            }
-        }
+        updateProgress(60, 'Adding changelog entry…');
+        try {
+            const clRes = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/changelog.json?t=${Date.now()}`);
+            const changelog = clRes.ok ? await clRes.json() : { entries: [] };
+            changelog.entries = changelog.entries || [];
+            changelog.entries.unshift({ timestamp: new Date().toISOString(), action: 'post_removed', title: p.title, url: p.postUrl, categories: p.categories, tags: p.tags, tool: 'post-remover' });
+            if (changelog.entries.length > 100) changelog.entries = changelog.entries.slice(0, 100);
+            generatedUpdates['database/changelog.json'] = JSON.stringify(changelog, null, 2);
+            log('✓ Added removal entry to changelog', 'success');
+        } catch (e) { log(`⚠ Changelog error: ${e.message}`, 'warn'); }
 
         // ── Summary ──────────────────────────────────────────────
         updateProgress(100, 'Preview complete!');
@@ -1356,16 +1135,20 @@ async function commitToGitHub() {
         const branch = document.getElementById('repoBranch').value;
         const commitUrl = `https://github.com/${repoOwner}/${repoName}/commit/${result.commitSha}`;
 
-        // Dispatch the RSS removal workflow to handle full.xml (too large for the API)
+        // Render everything derived from the JSON (Decision 014)
         let rssNote = '';
-        try {
-            log('\nDispatching RSS removal workflow for full.xml…', 'info');
-            await dispatchRssWorkflow(selectedPost.postUrl);
-            log('✓ RSS workflow dispatched — full.xml will update in ~1 minute', 'success');
-            rssNote = '<span style="font-size:0.85rem; margin-top:6px; display:block; color:#155724;">RSS workflow dispatched — full.xml will be updated shortly by GitHub Actions.</span>';
-        } catch (e) {
-            log(`⚠ RSS workflow dispatch failed: ${e.message}`, 'warn');
-            rssNote = `<span style="font-size:0.85rem; margin-top:6px; display:block; color:#856404;">⚠ RSS workflow could not be dispatched (${e.message}). You can trigger it manually from the Actions tab.</span>`;
+        if (document.getElementById('renderAfterRemove').checked) {
+            try {
+                log('\nDispatching render-site.yml (scope=all)…', 'info');
+                await dispatchRenderWorkflow();
+                log('✓ Render dispatched — redirect page, listings, feeds and search update when the run finishes', 'success');
+                rssNote = '<span style="font-size:0.85rem; margin-top:6px; display:block; color:#155724;">render-site.yml dispatched — the permalink becomes a redirect and the post leaves listings, feeds and search once the run and the Pages build finish.</span>';
+            } catch (e) {
+                log(`⚠ Render dispatch failed: ${e.message}`, 'warn');
+                rssNote = `<span style="font-size:0.85rem; margin-top:6px; display:block; color:#856404;">⚠ render-site.yml could not be dispatched (${e.message}). Run it from /admin/regenerate/.</span>`;
+            }
+        } else {
+            rssNote = '<span style="font-size:0.85rem; margin-top:6px; display:block; color:#856404;">Render skipped — run render-site.yml from /admin/regenerate/ to apply.</span>';
         }
 
         document.getElementById('commitResult').innerHTML = `
@@ -1390,6 +1173,21 @@ async function commitToGitHub() {
 // Triggers the remove-from-rss.yml GitHub Actions workflow to
 // remove the post from feed/full.xml (too large for the API).
 // ============================================================
+async function dispatchRenderWorkflow() {
+    const settings = LiCAdmin.getSettings();
+    const repoOwner = document.getElementById('repoOwner')?.value || settings.repoOwner;
+    const repoName  = document.getElementById('repoName')?.value  || settings.repoName;
+    const branch    = document.getElementById('repoBranch')?.value || settings.branch;
+    const token     = document.getElementById('githubToken')?.value.trim() || settings.githubToken;
+    if (!token) throw new Error('No GitHub token');
+    const response = await fetch(
+        `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/render-site.yml/dispatches`,
+        { method: 'POST', headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
+          body: JSON.stringify({ ref: branch, inputs: { scope: 'all', year: '', url: '', dry_run: 'false' } }) }
+    );
+    if (!response.ok) { const err = await response.json().catch(() => ({})); throw new Error(err.message || `HTTP ${response.status}`); }
+}
+
 async function dispatchRssWorkflow(postUrl) {
     const settings = LiCAdmin.getSettings();
     const repoOwner = document.getElementById('repoOwner')?.value || settings.repoOwner;

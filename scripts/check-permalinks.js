@@ -96,11 +96,22 @@ const missingGuids = [];
 // feed/index.xml is a rolling window (newest N), so its GUIDs are not retained —
 // instead every GUID it carries must be a real, retained item of full.xml.
 const ROLLING = new Set(['feed/index.xml']);
+// Posts removed via /remove/ are tombstones in their shard: the URL must still
+// resolve (redirect page), but their feed GUID is allowed to disappear.
+const tombstoned = new Set();
+{
+  const dir = path.join(REPO_ROOT, 'database', 'posts');
+  for (const f of fs.readdirSync(dir).filter((n) => /^\d{4}\.json$/.test(n))) {
+    for (const p of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).posts || []) {
+      if (p.removed && p.url) tombstoned.add(SITE + String(p.url).replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/'));
+    }
+  }
+}
 const fullSet = new Set(now['feed/full.xml'] || []);
 for (const [f, guids] of Object.entries(list.guids || {})) {
   if (ROLLING.has(f)) continue;
   const have = new Set(now[f] || []);
-  for (const g of guids) if (!have.has(g)) missingGuids.push(`${f}: ${g}`);
+  for (const g of guids) if (!have.has(g) && !tombstoned.has(g)) missingGuids.push(`${f}: ${g}`);
 }
 for (const f of ROLLING) for (const g of now[f] || []) if (!fullSet.has(g)) missingGuids.push(`${f}: ${g} (not in full.xml)`);
 

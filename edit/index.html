@@ -720,12 +720,9 @@
             <!-- Update Options -->
             <div class="widget hidden" id="updateOptions">
                 <h3>Update Options</h3>
-                <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:15px;">Select which files to update when saving:</p>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:15px;">Saving writes the title, body and excerpt to the JSON source of truth (<code>database/posts/YYYY.json</code> or <code>database/pages.json</code>). The page, archives, feeds and search are then re-rendered by the workflow.</p>
                 <ul>
-                    <li><label class="checkbox-label"><input type="checkbox" id="updateMonthArchive" checked> Update month archive</label></li>
-                    <li><label class="checkbox-label"><input type="checkbox" id="updateYearArchive" checked> Update year archive</label></li>
-                    <li><label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feeds</label></li>
-                    <li><label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database</label></li>
+                    <li><label class="checkbox-label"><input type="checkbox" id="renderAfterSave" checked> Render after saving (dispatches <code>render-site.yml</code>)</label></li>
                     <li><label class="checkbox-label"><input type="checkbox" id="updateChangelog" checked> Update changelog</label></li>
                 </ul>
             </div>
@@ -1221,8 +1218,20 @@
                     fullUrl: pathToFullUrl(path)
                 };
                 
-                // Parse and display
+                // Parse and display (title/date/excerpt from the HTML; the body
+                // comes from the JSON source of truth when it exists — Decision 014)
                 parseAndDisplayPage(html);
+                const entry = await loadJsonEntry();
+                if (entry) {
+                    currentPage.json = entry;
+                    if (entry.record.title) { document.getElementById('pageTitle').value = entry.record.title; currentPage.title = entry.record.title; }
+                    document.getElementById('editor-content').innerHTML = entry.record.content || '';
+                    document.getElementById('source-editor').value = entry.record.content || '';
+                    if (entry.record.excerpt) document.getElementById('pageExcerpt').value = entry.record.excerpt;
+                    log(`✓ Body loaded from ${entry.path}`, 'success');
+                } else {
+                    log('⚠ No JSON entry found for this URL — saving will only be possible for posts/pages in the database', 'warning');
+                }
                 
                 // Show UI elements
                 document.getElementById('pageInfo').classList.remove('hidden');
@@ -1263,7 +1272,7 @@
             }
             
             // Extract main content
-            const contentEl = doc.querySelector('.entry-content, .post-content, article .content');
+            const contentEl = doc.querySelector('.prose, .entry-content, .post-content, article .content');
             let content = '';
             if (contentEl) {
                 content = contentEl.innerHTML;
@@ -2005,17 +2014,16 @@
                     day: currentPage.day
                 };
                 
-                // 1. Main page file
-                log('Preparing page update...', 'info');
-                files.push({ path: currentPage.path, content: newHtml });
+                // Decision 014: write the source of truth only; render-site.yml
+                // derives the page, archives, feeds and search.
+                log('Preparing JSON update...', 'info');
                 updateProgress(5, 'Preparing files...');
                 
-                // 2. Upload images
+                // 1. Upload images
                 if (uploadedImages.length > 0) {
                     log(`Uploading ${uploadedImages.length} image(s)...`, 'info');
                     const year = currentPage.year || new Date().getFullYear().toString();
                     const month = currentPage.month || String(new Date().getMonth() + 1).padStart(2, '0');
-                    
                     for (const img of uploadedImages) {
                         const imgPath = `wp-content/uploads/${year}/${month}/${img.name}`;
                         files.push({ path: imgPath, content: img.data, isBase64: true });
@@ -2024,61 +2032,17 @@
                 }
                 updateProgress(15, 'Processing images...');
                 
-                // 3. Update month archive if checked
-                if (document.getElementById('updateMonthArchive').checked && currentPage.year && currentPage.month) {
-                    log('Updating month archive...', 'info');
-                    await updateMonthArchive(files, postData);
-                }
-                updateProgress(30, 'Updating archives...');
+                // 2. JSON entry (post shard or pages.json)
+                const wrote = await writeJsonEntry(files, newTitle, newContent, newExcerpt);
+                if (!wrote) throw new Error('This URL has no entry in database/posts/*.json or database/pages.json — nothing to save.');
+                updateProgress(60, 'Updating database...');
                 
-                // 4. Update year archive if checked
-                if (document.getElementById('updateYearArchive').checked && currentPage.year) {
-                    log('Updating year archive...', 'info');
-                    await updateYearArchive(files, postData);
-                }
-                updateProgress(45, 'Updating archives...');
-                
-                // 5. Update RSS feeds if checked
-                let triggerRssWorkflow = false;
-                let rssWorkflowParams = null;
-                
-                if (document.getElementById('updateRssFeed').checked && postData.date) {
-                    log('Updating RSS feeds...', 'info');
-                    
-                    // Check post age for the regular feed (which only has recent posts)
-                    const postDate = new Date(postData.date);
-                    const daysSincePost = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24);
-                    const isRecentPost = daysSincePost <= 90;
-                    
-                    // For recent posts, update index.xml via API (it's small)
-                    if (isRecentPost) {
-                        await updateRssFeed(files, postData, 'feed/index.xml', false);
-                    } else {
-                        log(`  Skipping feed/index.xml (post is ${Math.round(daysSincePost)} days old)`, 'info');
-                    }
-                    
-                    // full.xml is too large for API - trigger GitHub Action to update it
-                    log(`  Will trigger GitHub Action to update feed/full.xml`, 'info');
-                    triggerRssWorkflow = true;
-                    rssWorkflowParams = {
-                        post_url: postData.postUrl,
-                        post_year: currentPage.year
-                    };
-                }
-                updateProgress(60, 'Updating RSS feeds...');
-                
-                // 6. Update database if checked
-                if (document.getElementById('updateDatabase').checked && currentPage.year) {
-                    log('Updating database...', 'info');
-                    await updateDatabase(files, newTitle, newHtml);
-                }
-                updateProgress(75, 'Updating database...');
-                
-                // 7. Update changelog if checked
+                // 3. Changelog
                 if (document.getElementById('updateChangelog').checked) {
                     log('Updating changelog...', 'info');
                     await updateChangelog(files, newTitle);
                 }
+                const triggerRssWorkflow = false; const rssWorkflowParams = null;
                 updateProgress(90, 'Finalizing...');
                 
                 // 8. Commit all files
@@ -2109,22 +2073,26 @@
                 log(`✓ Success! Commit: ${result.commitSha.substring(0, 7)}`, 'success');
                 log(`✓ Updated ${files.length} file(s)`, 'success');
                 
-                // Trigger RSS workflow if needed
-                if (triggerRssWorkflow && rssWorkflowParams) {
-                    log('Triggering GitHub Action to update RSS feeds...', 'info');
+                // Render the derived files (Decision 014)
+                if (document.getElementById('renderAfterSave').checked) {
+                    const isPost = !!currentPage.year;
+                    const inputs = isPost
+                        ? { scope: 'all', year: '', url: currentPage.url, dry_run: 'false' }
+                        : { scope: 'pages', year: '', url: '', dry_run: 'false' };
+                    log(`Dispatching render-site.yml (${isPost ? 'url=' + currentPage.url : 'scope=pages'})...`, 'info');
                     try {
-                        await LiCAdmin.triggerWorkflow('update-rss.yml', rssWorkflowParams);
-                        log('✓ RSS update workflow triggered', 'success');
+                        await LiCAdmin.triggerWorkflow('render-site.yml', inputs);
+                        log('✓ Render dispatched — the page updates once the run and the Pages build finish.', 'success');
                     } catch (workflowError) {
-                        log(`⚠️ Could not trigger RSS workflow: ${workflowError.message}`, 'warning');
-                        log('  You may need to run the workflow manually or check permissions', 'warning');
+                        log(`⚠️ Could not dispatch render-site.yml: ${workflowError.message}. Run it from /admin/regenerate/.`, 'warning');
                     }
+                } else {
+                    log('Render skipped — run render-site.yml from /admin/regenerate/ to publish the change.', 'warning');
                 }
                 
                 updateProgress(100, 'Complete!');
                 
                 // Update state
-                currentPage.originalHtml = newHtml;
                 uploadedImages = [];
                 updateImagePreviews();
                 
@@ -2140,6 +2108,51 @@
             }
         }
         
+        // ---- JSON source of truth (Decision 014) ----
+        function jsonLocation() {
+            // posts live in database/posts/YYYY.json; everything else in database/pages.json
+            return currentPage.year ? `database/posts/${currentPage.year}.json` : 'database/pages.json';
+        }
+        function sameUrl(a, b) {
+            const n = (u) => String(u || '').replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/');
+            return n(a) === n(b);
+        }
+        function findRecord(db) {
+            const list = Array.isArray(db) ? db : (db.posts || db.pages || []);
+            const idx = list.findIndex(r => r && sameUrl(r.url || (r.path ? '/' + r.path.replace(/index\.html$/, '') : ''), currentPage.url));
+            return { list, idx };
+        }
+        async function loadJsonEntry() {
+            try {
+                const path = jsonLocation();
+                const text = await LiCAdmin.fetchFileFromGithub(path);
+                if (!text) return null;
+                const db = JSON.parse(text);
+                const { list, idx } = findRecord(db);
+                if (idx < 0) return null;
+                return { path, db, record: list[idx] };
+            } catch (e) { console.warn('loadJsonEntry failed:', e); return null; }
+        }
+        async function writeJsonEntry(files, newTitle, newContent, newExcerpt) {
+            const path = jsonLocation();
+            const text = await LiCAdmin.fetchFileFromGithub(path);
+            if (!text) return false;
+            const db = JSON.parse(text);
+            const { list, idx } = findRecord(db);
+            if (idx < 0) return false;
+            const rec = list[idx];
+            const now = new Date().toISOString();
+            rec.title = newTitle || rec.title;
+            rec.content = newContent;
+            if (newExcerpt) rec.excerpt = newExcerpt;
+            rec.date_modified = now;
+            rec.history = rec.history || [];
+            rec.history.push({ date: now, action: 'edited', tool: 'page-editor', changes: ['content-update'] });
+            files.push({ path, content: JSON.stringify(db, null, 2) + '\n' });
+            log(`✓ Updated ${path}`, 'success');
+            return true;
+        }
+
         async function updateDatabase(files, newTitle, newHtml) {
             const year = currentPage.year;
             const dbPath = `database/posts/${year}.json`;

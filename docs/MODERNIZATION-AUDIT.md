@@ -462,11 +462,24 @@ resolves them on its own.)*
   `node --check`. The now-unused generators (~1,400 lines:
   `generatePostHtml`, archive/RSS/taxonomy/manifest/search updaters)
   stay in the file until a simplify pass after the first real publish.
-  **Next**: P5.3 — `/edit/` (write the edited body to the JSON shard or
-  `pages.json`, dispatch render with `url`) and `/remove/` (remove from
-  the shard, dispatch render; the redirect page keeps the permalink);
-  then retire `update-rss.yml`, `remove-from-rss.yml`,
-  `regenerate-posts.yml`; then reskin `/search/`. promote
+  **Next**: see tick 17.
+- **2026-09-16 · tick 17 (P5.3)** — `/edit/` loads the body from the
+  JSON source of truth (post shard or `pages.json`; HTML scrape only as
+  fallback), saves title/body/excerpt back to it, and dispatches
+  `render-site.yml` (`url` for posts, `scope=pages` for pages).
+  `/remove/` no longer deletes anything: it sets a **tombstone**
+  (`removed: true, removed_at`) on the shard entry and dispatches render;
+  `regenerate-posts.js` turns a tombstoned permalink into a redirect to
+  its year archive, listings/feeds/search skip it, and
+  `check-permalinks.js` exempts only tombstoned GUIDs. Reversible by
+  clearing the flag. Both tools pass `node --check`.
+  Ben (2026-09-16): **the admin tools' look and feel must be updated
+  too** — added as P5.5 below, started the same day.
+  **Next**: P5.4 retire `update-rss.yml`, `remove-from-rss.yml`,
+  `regenerate-posts.yml`; P5.5 admin tools on the shared design system
+  (`admin/admin.css` mapping the tools' existing CSS variables onto the
+  site tokens + fonts + dark mode, then per-tool polish); P5.6 reskin
+  `/search/`. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

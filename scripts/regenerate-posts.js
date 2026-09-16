@@ -19,7 +19,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   REPO_ROOT, SITE, DEFAULT_IMAGE, cleanUrl, escapeHtml, escapeAttr, describe, dates, terms,
-  wordCount, readingMinutes, firstImage, loadAllPosts, loadTaxonomies, neighbors, related,
+  wordCount, readingMinutes, firstImage, loadAllPosts, loadTombstones, loadTaxonomies, neighbors, related,
   nav, rail, footer, fill, jsonLdPost, markdownTwin,
 } from './lib/shell.js';
 
@@ -130,6 +130,20 @@ function main() {
     console.log(`${year.padEnd(6)} ${String(s.total).padStart(6)} ${String(s.rendered).padStart(9)} ${String(s.noContent).padStart(10)} ${String(s.written).padStart(8)} ${String(s.unchanged).padStart(10)} ${String(s.err).padStart(5)}`);
     for (const k of Object.keys(t)) t[k] += s[k];
   }
+  // Tombstones: the permalink keeps resolving as a redirect to the year archive
+  const T_REDIRECT = fs.readFileSync(path.join(REPO_ROOT, 'templates', 'redirect.html'), 'utf8');
+  let tomb = 0;
+  for (const p of loadTombstones()) {
+    if (ONLY_YEAR && dates(p).year !== ONLY_YEAR) continue;
+    if (ONLY_URL && p.url !== cleanUrl(ONLY_URL)) continue;
+    const target = dates(p).year ? `/${dates(p).year}/` : '/';
+    const html = fill(T_REDIRECT, { title: escapeHtml(p.title || 'Removed'), target, target_abs: SITE + target, target_json: JSON.stringify(target), target_text: escapeHtml(target) });
+    const out = outPaths(p.url);
+    const prior = fs.existsSync(out.html) ? fs.readFileSync(out.html, 'utf8') : null;
+    if (prior !== html) { tomb++; if (APPLY) { fs.mkdirSync(path.dirname(out.html), { recursive: true }); fs.writeFileSync(out.html, html); } }
+    if (APPLY && fs.existsSync(out.md)) fs.unlinkSync(out.md);
+  }
+  if (tomb) console.log(`tombstones: ${tomb} redirect page(s) ${APPLY ? 'written' : 'would be written'}`);
   console.log('─'.repeat(60));
   console.log(`TOTAL  ${String(t.total).padStart(6)} ${String(t.rendered).padStart(9)} ${String(t.noContent).padStart(10)} ${String(t.written).padStart(8)} ${String(t.unchanged).padStart(10)} ${String(t.err).padStart(5)}`);
   if (!APPLY) console.log('\nRun again with --apply to write files.');

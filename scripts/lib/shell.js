@@ -83,16 +83,28 @@ export function terms(post, key) {
 export const slugify = (s) => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 // ---------- data ----------
+// Live posts only. A post removed with /remove/ stays in its shard as a
+// tombstone ({ removed: true, removed_at }) so its permalink can keep
+// resolving (redirect page) — see loadTombstones().
 export function loadAllPosts() {
   const dir = path.join(REPO_ROOT, 'database', 'posts');
   const all = [];
   for (const f of fs.readdirSync(dir).filter((n) => /^\d{4}\.json$/.test(n)).sort()) {
     const shard = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    for (const p of shard.posts || []) all.push({ ...p, url: cleanUrl(p.url), _shard: f });
+    for (const p of shard.posts || []) if (!p.removed) all.push({ ...p, url: cleanUrl(p.url), _shard: f });
   }
   // chronological, stable on url
   all.sort((a, b) => (a.date_published || '').localeCompare(b.date_published || '') || a.url.localeCompare(b.url));
   return all;
+}
+export function loadTombstones() {
+  const dir = path.join(REPO_ROOT, 'database', 'posts');
+  const out = [];
+  for (const f of fs.readdirSync(dir).filter((n) => /^\d{4}\.json$/.test(n)).sort()) {
+    const shard = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    for (const p of shard.posts || []) if (p.removed) out.push({ ...p, url: cleanUrl(p.url), _shard: f });
+  }
+  return out;
 }
 export function loadTaxonomies() {
   const p = path.join(REPO_ROOT, 'database', 'taxonomies.json');
