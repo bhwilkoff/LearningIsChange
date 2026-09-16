@@ -19,6 +19,25 @@ function stripOrigin(url) {
     .replace(/^\/?/, '/');
 }
 
+// Normalize a term given as a string (name or slug) or an object into
+// the { name, slug, url } shape every exported post uses.
+export function taxonomyTerm(term, kind) {
+  if (!term) return null;
+  const base = kind === 'category' ? '/category/' : '/tag/';
+  if (typeof term === 'object') {
+    const slug = String(term.slug || slugifyTerm(term.name || '')).trim();
+    if (!slug) return null;
+    return { name: term.name || slug, slug, url: term.url || `${base}${slug}/` };
+  }
+  const name = String(term).trim();
+  const slug = slugifyTerm(name);
+  return slug ? { name, slug, url: `${base}${slug}/` } : null;
+}
+function slugifyTerm(s) {
+  return String(s || '').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
 // -------- Posts shard (posts/YYYY.json) --------
 
 // Insert or update a post in the per-year shard. Dedup by URL.
@@ -35,8 +54,9 @@ export function upsertPost(shard, post) {
     url,
     date_published: post.date_published || post.date || '',
     excerpt: post.excerpt || '',
-    categories: toArray(post.categories).map(c => c && c.slug ? c.slug : String(c || '')).filter(Boolean),
-    tags: toArray(post.tags).map(t => t && t.slug ? t.slug : String(t || '')).filter(Boolean),
+    // Canonical shape (matches the 3,639 exported posts): [{ name, slug, url }]
+    categories: toArray(post.categories).map(c => taxonomyTerm(c, 'category')).filter(Boolean),
+    tags: toArray(post.tags).map(t => taxonomyTerm(t, 'tag')).filter(Boolean),
     content_preview: post.content_preview ?? post.excerpt ?? '',
   };
   const next = idx >= 0

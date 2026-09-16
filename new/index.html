@@ -3269,13 +3269,21 @@ ${siteComponents.head}
                 
                 // Create new post entry
                 const tags = Array.isArray(newPost.tags) ? newPost.tags : [];
+                const termEntry = (t, kind) => {
+                    if (!t) return null;
+                    const base = kind === 'category' ? '/category/' : '/tag/';
+                    const name = typeof t === 'object' ? (t.name || t.slug || '') : String(t);
+                    const slug = (typeof t === 'object' && t.slug ? t.slug : name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                    return slug ? { name: name || slug, slug, url: (typeof t === 'object' && t.url) || `${base}${slug}/` } : null;
+                };
                 const newPostEntry = {
                     title: newPost.title || 'Untitled',
                     url: (newPost.postUrl || '').replace('https://learningischange.com', ''),
                     date_published: newPost.date,
                     excerpt: newPost.excerpt || '',
-                    categories: newPost.category ? [newPost.category.slug] : [],
-                    tags: tags.map(t => t && t.slug ? t.slug : String(t)),
+                    // Canonical shape: [{ name, slug, url }] (see admin/lib/mutate.js taxonomyTerm)
+                    categories: newPost.category ? [termEntry(newPost.category, 'category')] : [],
+                    tags: tags.map(t => termEntry(t, 'tag')).filter(Boolean),
                     content_preview: newPost.excerpt || '',
                     // M4: JSON is the source of truth for post body.
                     // regenerate-posts.js rebuilds HTML from this field.

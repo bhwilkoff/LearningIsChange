@@ -249,10 +249,17 @@ items get done in a later tick and moved to *Done*.
   `content` and in the HTML since the original export (double-encoded
   UTF-8). Mechanically reversible (`latin-1` → `utf-8` re-decode of the
   affected runs). It is a content edit, so: approve the repair?
-- ✅ (approved, normalize) C-5 Newer shards (2025–2026, written by `/new/`) store `categories`
-  and `tags` as *stringified Python lists* (`"['Typewriter']"`) instead
-  of arrays of `{name, slug, url}`. Renderers tolerate it for now;
-  normalize in a maintenance pass?
+- ✅ **Done tick 5** C-5 — 12 posts (2026 shard, written by `/new/`)
+  stored `categories`/`tags` as plain string arrays (not stringified
+  lists — earlier note over-read a `str()` dump). Normalized to
+  `{name, slug, url}`; `admin/lib/mutate.js` (`taxonomyTerm`) and
+  `/new/` now write that shape.
+- C-8 `/category/Typewriter/` — capitalized slug created by `/new/`
+  (all other terms are lowercase). The URL is live and protected; when
+  the archive renderer lands, emit `/category/typewriter/` as canonical
+  and keep `/category/Typewriter/` as a redirect. Same for 5 tags
+  (`VSS2007`, `Sustainability`, `Reframability`, `Startup`,
+  `Learning%20Twitter%20Scalability`).
 - ✅ (approved, restore) C-6 `taxonomies.json` display names were slugified on export
   (`C4c15`, `Im Learning`, `Askbenw`, `Lifewidelearning16`); the old
   menu had the real names (`#C4C15`, `What I'm Learning`, `#AskBenW`).
@@ -314,8 +321,16 @@ resolves them on its own.)*
   (mojibake, 33 posts), C-5 (stringified taxonomy lists in new shards),
   C-6 (slugified taxonomy display names).
   Ben approved the mockups as-is, plus C-4/C-5/C-6 repairs.
-  **Next**: data repairs first (C-5 normalize lists, C-6 display names,
-  C-4 mojibake — each verified by diff, permalink check, commit), then P1: promote
+  **Next**: see tick 5.
+- **2026-09-16 · tick 5 (C-5)** — Normalized the 12 string-array
+  taxonomy fields in `posts/2026.json`; fixed the two writers
+  (`admin/lib/mutate.js` `upsertPost` → new `taxonomyTerm()`, and the
+  inline entry builder in `/new/`). Regenerated 2026 posts (11 changed:
+  they now carry `category-*`/`tag-*` classes and footer tag links),
+  `recompute-database-stats.js --apply`, permalink check OK. Queued C-8
+  (capitalized slugs).
+  **Next**: C-6 restore taxonomy display names from the old menu
+  fragment, then C-4 mojibake repair, then P1: promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
