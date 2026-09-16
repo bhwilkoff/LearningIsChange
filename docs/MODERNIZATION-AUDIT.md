@@ -494,11 +494,20 @@ resolves them on its own.)*
   `docs/SUBDOMAIN_ROLLOUT.md`, `admin/lib/feeds.js`. **Refreshed
   `CLAUDE.md`** for the JSON-rendered architecture (rendering, design
   system, feeds, tombstones, page rules, "edit JSON then render").
-  **Next**: P5.5b per-tool polish (hard-coded colors in alerts/tabs/
-  tool-card headers, Lora/Source Sans leftovers, the four tools without
-  the shared variables); P5.6 reskin `/search/` on the site shell;
-  then `/menus/` (fold into Render Site or retire), `/update/`,
-  `/rss-creator/` audit against the JSON pipeline. promote
+  **Next**: see tick 19.
+- **2026-09-16 · tick 19 (P5.5b)** — `admin/admin.css` extended for the
+  second markup family (`/podcast-rss/`, `/links/`, `/search/`:
+  Fluida-imitating `#access` nav, `#header-image-main img`, `#content`,
+  `.page-title`, `.notice-box`, `.tabs`, stats panels, tables) plus the
+  hard-coded light-blue panels in `/links/` and `/rss-creator/`. Verified
+  by contact sheet in dark mode: no coffee headers left, panels and
+  alerts on tokens in all 13 tools.
+  **Next**: P5.6 rebuild `/search/` as a real site page on the blog
+  shell (it is user-facing: nav/rail/footer partials, `site.css`,
+  search box in the hero; keep the search.json/FTS engine); then
+  `/menus/` (fold into Render Site or retire), `/update/`,
+  `/rss-creator/` audit against the JSON pipeline; then the `/new/`
+  simplify pass (strip dead generators). promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
