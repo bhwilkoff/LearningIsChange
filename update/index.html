@@ -1149,9 +1149,9 @@
                     <div class="form-group">
                         <label for="scanScope">Scan Scope</label>
                         <select id="scanScope">
-                            <option value="database">Database Posts Only</option>
-                            <option value="all-html">All HTML Files</option>
-                            <option value="year">Specific Year</option>
+                            <option value="database">All posts (database/posts/*.json)</option>
+                            <option value="year">Posts from one year</option>
+                            <option value="pages">Static pages (database/pages.json)</option>
                         </select>
                     </div>
                     <div class="form-group" id="yearSelectGroup" style="display: none;">
@@ -1217,11 +1217,9 @@
                         <div class="form-group">
                             <label for="fetchSource">Fetch Source</label>
                             <select id="fetchSource">
-                                <option value="github-raw">GitHub Raw (recommended, no rate limits)</option>
-                                <option value="site">Live Site (learningischange.com)</option>
-                                <option value="github">GitHub API (rate limited)</option>
+                                <option value="json">JSON source of truth (database/)</option>
                             </select>
-                            <div class="help-text">GitHub Raw is fastest and has no rate limits</div>
+                            <div class="help-text">Rules run against each record's <code>content</code>; changed shards are committed and the site is re-rendered.</div>
                         </div>
                         <div class="form-group">
                             <label for="processDelay">Delay Between Files (ms)</label>
@@ -1863,6 +1861,8 @@
             allPosts: [],
             // Scan state
             filesToProcess: [],
+            shardCache: {},
+            shardEdits: {},
             processedFiles: [],
             // Execution state
             isProcessing: false,
@@ -2877,6 +2877,13 @@
         // ============================================
         // HTML Manipulation Functions
         // ============================================
+        // JSON records hold body fragments; DOM rules expect a document.
+        function wrapFragment(fragment) { return '<!DOCTYPE html>\n<html><head></head><body>' + (fragment || '') + '</body></html>'; }
+        function unwrapFragment(html) {
+            const m = /<body[^>]*>([\s\S]*)<\/body>/i.exec(html);
+            return m ? m[1] : html;
+        }
+        
         function removeByMarkers(html, startMarker, endMarker) {
             let count = 0;
             let result = html;
@@ -3028,56 +3035,33 @@
             try {
                 let filesToScan = [];
                 
-                if (scope === 'database' || scope === 'year') {
-                    // Use database to get file paths
-                    let posts = [];
-                    
-                    if (scope === 'year') {
-                        const year = document.getElementById('yearSelect').value;
-                        // Fetch posts for specific year
-                        try {
-                            const baseUrl = LiCAdmin.CONFIG.SITE_URL + '/database';
-                            const postsRes = await fetch(`${baseUrl}/posts/${year}.json`);
-                            if (postsRes.ok) {
-                                const yearData = await postsRes.json();
-                                posts = yearData.posts || [];
-                            }
-                        } catch (e) {
-                            console.error('Error fetching year posts:', e);
-                        }
-                    } else {
-                        posts = state.allPosts;
-                    }
-                    
-                    filesToScan = posts.map(p => {
-                        let path = p.url || '';
-                        // Remove leading slash if present
-                        if (path.startsWith('/')) path = path.slice(1);
-                        // Remove trailing slash if present
-                        if (path.endsWith('/')) path = path.slice(0, -1);
-                        
-                        return {
-                            path: path + '/index.html',
-                            url: p.url
-                        };
-                    }).filter(f => f.path && f.path !== '/index.html' && f.path !== 'index.html');
-                    
-                    console.log('Files to scan from database:', filesToScan.length);
-                    
+                // Decision 014: the unit of work is a JSON record, not an HTML file.
+                // Each entry: { path (display), url, shard, content }.
+                const recordsFromShard = (shardPath, list) => (list || [])
+                    .filter(r => r && !r.removed && typeof r.content === 'string')
+                    .map(r => ({ path: (r.url || '').replace(/^https?:\/\/[^/]+/, ''), url: (r.url || '').replace(/^https?:\/\/[^/]+/, ''), shard: shardPath, content: r.content }));
+                state.shardCache = {};
+                if (scope === 'pages') {
+                    showStatus('scanStatus', 'Loading database/pages.json…', 'info');
+                    const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/pages.json?t=${Date.now()}`);
+                    const data = await res.json();
+                    const list = Array.isArray(data) ? data : (data.pages || []);
+                    state.shardCache['database/pages.json'] = data;
+                    filesToScan = recordsFromShard('database/pages.json', list.map(r => ({ ...r, url: r.url || ('/' + String(r.path || '').replace(/index\.html$/, '')) })));
                 } else {
-                    // Scan all HTML files from GitHub
-                    showStatus('scanStatus', 'Scanning repository for HTML files...', 'info');
-                    const settings = LiCAdmin.getSettings();
-                    
-                    // Get repository tree
-                    const refData = await LiCAdmin.githubAPI(`/repos/${settings.repoOwner}/${settings.repoName}/git/ref/heads/${settings.branch}`);
-                    const treeData = await LiCAdmin.githubAPI(`/repos/${settings.repoOwner}/${settings.repoName}/git/trees/${refData.object.sha}?recursive=1`);
-                    
-                    filesToScan = treeData.tree
-                        .filter(item => item.type === 'blob' && item.path.endsWith('.html'))
-                        .filter(item => !item.path.startsWith('admin/') && !item.path.includes('/admin/'))
-                        .map(item => ({ path: item.path, url: '/' + item.path.replace('/index.html', '/') }));
+                    const years = scope === 'year'
+                        ? [document.getElementById('yearSelect').value]
+                        : [...new Set(state.allPosts.map(p => String(p.date_published || '').slice(0, 4)).filter(Boolean))].sort();
+                    for (const year of years) {
+                        showStatus('scanStatus', `Loading database/posts/${year}.json…`, 'info');
+                        const res = await fetch(`${LiCAdmin.CONFIG.SITE_URL}/database/posts/${year}.json?t=${Date.now()}`);
+                        if (!res.ok) continue;
+                        const data = await res.json();
+                        state.shardCache[`database/posts/${year}.json`] = data;
+                        filesToScan.push(...recordsFromShard(`database/posts/${year}.json`, data.posts));
+                    }
                 }
+                console.log('Records to scan:', filesToScan.length);
                 
                 state.filesToProcess = filesToScan;
                 
@@ -3093,7 +3077,7 @@
                 // Now analyze files to estimate affected
                 await analyzeFiles(filesToScan);
                 
-                showStatus('scanStatus', `✅ Found ${filesToScan.length} files to process`, 'success');
+                showStatus('scanStatus', `✅ Found ${filesToScan.length} records to process`, 'success');
                 document.getElementById('startProcessBtn').disabled = false;
                 document.getElementById('processPending').textContent = filesToScan.length;
                 
@@ -3125,16 +3109,7 @@
                 
                 const results = await Promise.all(batch.map(async (file) => {
                     try {
-                        // Use raw.githubusercontent.com - no rate limits!
-                        const settings = LiCAdmin.getSettings();
-                        const rawUrl = `https://raw.githubusercontent.com/${settings.repoOwner}/${settings.repoName}/${settings.branch}/${file.path}`;
-                        
-                        const response = await fetch(rawUrl);
-                        if (!response.ok) {
-                            return { file, affected: false, instances: 0 };
-                        }
-                        
-                        const html = await response.text();
+                        const html = wrapFragment(file.content);
                         const result = analyzeFile(html, file.path);
                         
                         const instances = result.removals + result.additions + result.updates + result.rawtext;
@@ -3419,71 +3394,8 @@
                 }
                 
                 try {
-                    let html;
-                    
-                    if (fetchSource === 'github-raw') {
-                        // Fetch from raw.githubusercontent.com (no rate limits!)
-                        const settings = LiCAdmin.getSettings();
-                        const rawUrl = `https://raw.githubusercontent.com/${settings.repoOwner}/${settings.repoName}/${settings.branch}/${file.path}`;
-                        const response = await fetch(rawUrl);
-                        
-                        if (!response.ok) {
-                            skipped++;
-                            execLog(`Skipped ${file.path}: HTTP ${response.status}`, 'warning');
-                            continue;
-                        }
-                        
-                        html = await response.text();
-                    } else if (fetchSource === 'github') {
-                        // Fetch from GitHub Contents API
-                        const settings = LiCAdmin.getSettings();
-                        const contentsUrl = `https://api.github.com/repos/${settings.repoOwner}/${settings.repoName}/contents/${file.path}?ref=${settings.branch}`;
-                        const response = await fetch(contentsUrl, {
-                            headers: {
-                                'Authorization': `Bearer ${settings.githubToken}`,
-                                'Accept': 'application/vnd.github.v3+json'
-                            }
-                        });
-                        
-                        if (!response.ok) {
-                            // Check for rate limiting
-                            if (response.status === 403) {
-                                const remaining = response.headers.get('X-RateLimit-Remaining');
-                                if (remaining === '0') {
-                                    const resetTime = response.headers.get('X-RateLimit-Reset');
-                                    const resetDate = new Date(resetTime * 1000);
-                                    execLog(`GitHub rate limit reached. Resets at ${resetDate.toLocaleTimeString()}. Pausing...`, 'error');
-                                    shouldStopProcessing = true;
-                                    break;
-                                }
-                            }
-                            skipped++;
-                            execLog(`Skipped ${file.path}: GitHub API ${response.status}`, 'warning');
-                            continue;
-                        }
-                        
-                        const data = await response.json();
-                        // Decode base64 content (handle UTF-8)
-                        try {
-                            html = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
-                        } catch (e) {
-                            // Fallback for binary/non-UTF8
-                            html = atob(data.content.replace(/\n/g, ''));
-                        }
-                    } else {
-                        // Fetch from live site
-                        const url = `${LiCAdmin.CONFIG.SITE_URL}/${file.path}`;
-                        const response = await fetch(url);
-                        
-                        if (!response.ok) {
-                            skipped++;
-                            execLog(`Skipped ${file.path}: HTTP ${response.status}`, 'warning');
-                            continue;
-                        }
-                        
-                        html = await response.text();
-                    }
-                    
+                    let html = file.content;
+                    let usedDom = false;
                     let changed = false;
                     let fileInstances = 0;
                     
@@ -3499,7 +3411,9 @@
                         }
                     }
                     
-                    // Apply DOM-based rules
+                    // Apply DOM-based rules on the fragment wrapped in a document
+                    const domRules = state.rules.removals.length + state.rules.additions.length + state.rules.updates.length;
+                    if (domRules) { html = wrapFragment(html); usedDom = true; }
                     for (const rule of state.rules.removals) {
                         if (rule.mode === 'range') {
                             const result = removeByMarkers(html, rule.startMarker, rule.endMarker);
@@ -3536,12 +3450,10 @@
                         }
                     }
                     
+                    if (usedDom) html = unwrapFragment(html);
                     if (changed) {
-                        // Add to pending files
-                        await addToStore('pendingFiles', {
-                            path: file.path,
-                            content: html
-                        });
+                        // Fold the changed record into its shard (materialized after the loop)
+                        (state.shardEdits[file.shard] ||= {})[file.url] = html;
                         processed++;
                         totalInstancesChanged += fileInstances;
                         execLog(`✓ Processed: ${file.path} (${fileInstances} instances)`, 'success');
@@ -3570,7 +3482,20 @@
             isProcessing = false;
             
             if (!shouldStopProcessing) {
-                execLog(`Processing complete. ${processed} files changed (${totalInstancesChanged} instances), ${skipped} skipped.`, 'success');
+                // Materialize changed shards as the files to commit
+                for (const [shardPath, edits] of Object.entries(state.shardEdits)) {
+                    const data = state.shardCache[shardPath];
+                    const list = Array.isArray(data) ? data : (data.posts || data.pages || []);
+                    let n = 0;
+                    for (const rec of list) {
+                        const u = (rec.url || (rec.path ? '/' + String(rec.path).replace(/index\.html$/, '') : '')).replace(/^https?:\/\/[^/]+/, '');
+                        if (u in edits) { rec.content = edits[u]; rec.date_modified = new Date().toISOString(); n++; }
+                    }
+                    await addToStore('pendingFiles', { path: shardPath, content: JSON.stringify(data, null, 2) + '\n' });
+                    execLog(`✓ ${shardPath}: ${n} record(s) updated`, 'success');
+                }
+                state.shardEdits = {};
+                execLog(`Processing complete. ${processed} records changed (${totalInstancesChanged} instances), ${skipped} skipped.`, 'success');
                 document.getElementById('pauseProcessBtn').style.display = 'none';
                 document.getElementById('startProcessBtn').style.display = 'inline-flex';
                 document.getElementById('startProcessBtn').textContent = '✅ Processing Complete';
@@ -4006,8 +3931,18 @@
                 } else if (totalCommitted > 0) {
                     document.getElementById('resultsHeader').className = 'execute-results-header success';
                     document.querySelector('.results-icon').textContent = '✅';
-                    document.getElementById('resultsMessage').textContent = `All changes committed successfully! ${totalCommitted} files in ${batchesCompleted} batch(es).`;
+                    document.getElementById('resultsMessage').textContent = `All changes committed successfully! ${totalCommitted} shard(s) in ${batchesCompleted} batch(es). Rendering the site…`;
                     await clearAllStores();
+                    // Decision 014: derived pages/feeds come from the render pipeline
+                    try {
+                        await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/render-site.yml/dispatches`, {
+                            method: 'POST', headers,
+                            body: JSON.stringify({ ref: branch, inputs: { scope: 'all', year: '', url: '', dry_run: 'false' } })
+                        });
+                        execLog('✓ render-site.yml dispatched — pages, archives, feeds and search update when the run finishes', 'success');
+                    } catch (e) {
+                        execLog(`⚠ Could not dispatch render-site.yml: ${e.message}. Run it from /admin/regenerate/.`, 'warning');
+                    }
                 }
                 
                 document.getElementById('resultFilesChanged').textContent = totalCommitted;

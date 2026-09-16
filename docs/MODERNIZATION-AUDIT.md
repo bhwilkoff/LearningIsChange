@@ -516,11 +516,22 @@ resolves them on its own.)*
   port `/update/` to JSON. Both retired tools are now redirects to
   `/admin/regenerate/`, removed from the dashboard, admin bar and
   `CLAUDE.md`. 11 tools remain.
-  **Next**: port `/update/` (Mass Updater) — scan scope over
-  `database/posts/*.json` + `pages.json`, rules applied to the `content`
-  (and optionally `title`/`excerpt`) fields, preview against the rendered
-  page, dry run, commit JSON, dispatch `render-site.yml`; then the `/new/`
-  simplify pass. promote
+  **Next**: see tick 22.
+- **2026-09-16 · tick 22 (P5.7)** — `/update/` ported to JSON: scope is
+  all posts / one year / static pages; records are `{url, shard,
+  content}` from the shards (tombstones excluded); raw-text rules run
+  on the content string, DOM rules on the fragment wrapped in a
+  document and unwrapped after; changed records fold back into their
+  shard, and the existing IndexedDB → blob → tree commit machinery
+  commits the shard files; `render-site.yml` is dispatched on success.
+  Smoke-tested in the browser: 2026 scan → 15/17 records → one pending
+  `database/posts/2026.json` (valid, 15 records stamped). Rules UI,
+  preview and resume are untouched.
+  **Next**: `/new/` simplify pass (strip the ~1,400 lines of dead
+  HTML/archive/RSS generators); then `/podcast-rss/` and `/links/`
+  audit (podcast: still scans HTML for PowerPress embeds → should read
+  JSON content; links: scans the rendered site, fine); then a
+  `/simplify` pass over `scripts/` and `templates/`. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
