@@ -1,0 +1,23 @@
+{
+  "_doc": "Routing rules for static pages (Decision 014, approved 2026-09-16). redirects: url -> target (page kept as a redirect so the permalink resolves). noindex: served on the new shell but out of the sitemap. Edit here, then run scripts/render-pages.js --apply and scripts/generate-sitemap.js --apply.",
+  "redirects": {
+    "/sample-page/": "/",
+    "/contact-page/": "/meet/",
+    "/login/": "/",
+    "/logout/": "/",
+    "/register/": "/",
+    "/lostpassword/": "/",
+    "/resetpass/": "/",
+    "/about/": "/portfolio/about/",
+    "/bio/": "/portfolio/about/",
+    "/blog/": "/",
+    "/home/": "/"
+  },
+  "noindex": [
+    "/services/", "/services/consulting/", "/services/speaking/", "/services/contact/",
+    "/pd/", "/pd/for-business/", "/pd/for-schools/", "/pd/for-teachers/",
+    "/events/", "/events/categories/", "/events/locations/", "/events/my-bookings/", "/events/tags/",
+    "/jing-install-tutorial/", "/nvu-install/", "/nvu-linking-tutorial/", "/test-for-google-talk/",
+    "/g-community-test/", "/hr10tech-test/"
+  ]
+}

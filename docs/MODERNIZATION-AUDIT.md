@@ -174,15 +174,15 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | Homepage + `/page/N/` (389) | 🟩 | **P2 done 2026-09-16.** `templates/home.html`; latest, on-this-day (server-rendered + client refresh from `database/on-this-day.json`), start-here, series; all 389 `/page/N/` kept (367–390 are clamped aliases) |
 | Year / month / day archives (2,006) | 🟩 | **P2 done.** Year-in-review pages (topics + by month), month and day listings; 2,024 pages |
 | Category / tag / author (1,359) | 🟩 | **P2 done.** 568 category + 1,596 tag + 391 author pages (C-9: every term now has a page); parent categories include descendants; `CollectionPage` JSON-LD; 121 protected-URL aliases (noindex, canonical → real page) |
-| Static pages (65) | 🟨 | Rendered from `pages.json` through a `page.html` template; several are WordPress-era placeholders (→ queue) |
+| Static pages (65) | 🟩 | **P3 done 2026-09-16.** `scripts/render-pages.js` + `templates/page.html`/`redirect.html`, rules in `database/page-rules.json`: 55 pages (23 noindex), 11 redirects; `/all-posts/` is a real full index by year |
 | Portfolio (`/portfolio/*`) | 🟩 | Reference design; minor: shared nav should come from one fragment |
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
 | Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟨 | Render from JSON; keep GUIDs; drop the patch-in-place workflows |
 | Search (`/search/`) | 🟨 | Keep engine; reskin on the portfolio system |
-| Masthead / sidebar / colophon / footer fragments | 🟨 | Posts now use `templates/partials/{nav,rail,footer}.html`; the old fragments still serve archives/pages until P2/P3 |
+| Masthead / sidebar / colophon / footer fragments | ⛔ | No page uses the Fluida zones any more (0 files carry `LIC:MASTHEAD`). Delete `templates/fragments/`, `regenerate-fragments.js`/`.yml`, `add-zone-markers.js`, `capture-fragments.js` in P4 |
 | `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | ⛔ | 52 MB of runtime nobody executes once templates change; delete after conversion (needs DECISIONS entry) |
 | `wp-content/uploads/` (1.3 GB) | ⬜ | Stays (media); size workstream is separate (SCRATCHPAD M2) |
-| WordPress stub routes (`/login/`, `/register/`, `/lostpassword/`, `/resetpass/`, `/logout/`, `/wp-json/…` links) | ⛔ | Should 404 or redirect; audit next tick |
+| WordPress stub routes (`/login/`, `/register/`, `/lostpassword/`, `/resetpass/`, `/logout/`) | 🟩 | Redirect pages → `/` (P3) |
 | Admin tools (10) | ⬜ | Each becomes "edit JSON → regenerate"; audit per-tool once renderers exist |
 | `robots.txt`, `sitemap.xml` | 🟩 | Added 2026-09-16 (`scripts/generate-sitemap.js`) |
 | `llms.txt` | ⬜ | Optional; write after the new homepage exists |
@@ -234,6 +234,15 @@ items get done in a later tick and moved to *Done*.
 - ✅ A-5 test pages — keep as-is (Ben).
 
 ### B. Navigation & identity
+- B-5 Old-menu items without a home yet: "Video Posts" (category
+  `videos` + children), "Recommendations" (`recs` + children). The
+  categories exist and render; should the homepage get a "Watch" /
+  "Recommendations" section, or is the Topics rail enough?
+- A-6 Empty WordPress shells now rendered noindex on the new shell:
+  `/events/*` (5 pages, an events-plugin placeholder), `/jing-install-tutorial/`,
+  `/nvu-install/`, `/nvu-linking-tutorial/` (video-embed pages whose
+  embeds did not survive export), `/test-for-google-talk/`. Redirect to
+  `/` like the other stubs, or keep as empty archive pages?
 - ✅ B-1 One unified nav; blog-only items move to the blog landing page.
 - ✅ B-2 Tagline kept verbatim.
 - ✅ B-3 Header image dropped (typographic header).
@@ -387,11 +396,18 @@ resolves them on its own.)*
   strips a title echoed at the start of the body. Permalink list grew
   to 8,696 (+1,214 new term/day pages); sitemap 8,691 URLs. Only the
   66 static pages remain on Fluida.
-  **Next**: P3 — `templates/page.html` + `scripts/render-pages.js`
-  from `pages.json`, with the approved retire→redirect set
-  (`/sample-page/`, `/contact-page/`→`/meet/`, auth stubs→`/`,
-  `/about/`+`/bio/`→`/portfolio/about/`, `/services/`+`/pd/` noindex);
-  then feeds from JSON. promote
+  **Next**: see tick 11.
+- **2026-09-16 · tick 11 (P3 shipped)** — 66 static pages rendered from
+  `pages.json`: 11 redirects per the approved set (+ `/blog/`, `/home/`
+  — WordPress's page-for-posts — → `/`), `/services/*` + `/pd/*` noindex,
+  `/all-posts/` a real 3,651-link index by year, empty shells noindex
+  (queued A-6). Sitemap honors `page-rules.json` (8,666 URLs). Applied
+  the C-4 encoding repair to `pages.json` as well (16 pages, 25 fields —
+  same defect, same approval, noted here explicitly). **No page on the
+  site uses the Fluida theme any more.**
+  **Next**: feeds from JSON (`scripts/render-feeds.js`: `feed/index.xml`
+  excerpts, `feed/full.xml` full, keep every GUID; retire
+  `update-rss.yml`/`remove-from-rss.yml`), then P4 deletions. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

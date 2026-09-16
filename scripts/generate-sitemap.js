@@ -60,7 +60,11 @@ for (const f of fs.readdirSync(postsDir).filter((n) => n.endsWith('.json'))) {
   }
 }
 
-const urls = [...walk(REPO_ROOT)];
+// static-page routing rules: redirects and noindex pages stay out of the sitemap
+const rulesPath = path.join(REPO_ROOT, 'database', 'page-rules.json');
+const rules = fs.existsSync(rulesPath) ? JSON.parse(fs.readFileSync(rulesPath, 'utf8')) : { redirects: {}, noindex: [] };
+const excluded = new Set([...Object.keys(rules.redirects || {}), ...(rules.noindex || [])]);
+const urls = [...walk(REPO_ROOT)].filter((u) => !excluded.has(u));
 for (const f of EXTRA_FILES) if (fs.existsSync(path.join(REPO_ROOT, f))) urls.push(`/${f}`);
 urls.sort();
 
