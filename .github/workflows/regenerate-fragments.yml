@@ -52,6 +52,10 @@ jobs:
             node scripts/regenerate-fragments.js --apply $ZONES_ARG
           fi
 
+      - name: Permalink guarantee (Decision 014)
+        if: inputs.dry_run == 'false'
+        run: node scripts/check-permalinks.js
+
       - name: Commit and push
         if: inputs.dry_run == 'false'
         run: |

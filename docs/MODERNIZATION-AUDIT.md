@@ -275,8 +275,12 @@ resolves them on its own.)*
   Ben answered Decision 014 + all sub-decisions and the first queue
   batch the same day (recorded in Decision 014). Loop cadence set to
   5 minutes.
-  **Next**: (1) `scripts/check-permalinks.js` — the permalink guarantee
-  is a precondition for every later phase; (2) P0 `og:url` fix in the
-  existing post template + regenerate posts; (3) static mockups
-  `docs/mockups/post.html` and `docs/mockups/home.html` on the
-  refreshed portfolio system (D-1) with right rail (D-2) for Ben.
+  **Next**: see tick 2.
+- **2026-09-16 · tick 2** — Permalink guarantee shipped:
+  `scripts/check-permalinks.js` (+ `database/permalinks.json`, 7,482
+  URLs + 3,864 feed GUIDs; the list only grows). Negative test passes
+  (hiding one post → exit 1). Wired as a gate before the commit step in
+  `regenerate-posts.yml` and `regenerate-fragments.yml`.
+  **Next**: P0 `og:url` fix in `templates/post.html` (+ JSON-LD
+  `BlogPosting` while in there) → regenerate posts → check → commit;
+  then static mockups `docs/mockups/post.html` / `home.html`.
