@@ -20,6 +20,11 @@ on:
         required: false
         type: string
         default: ''
+      url:
+        description: 'Single post URL to render (e.g. /2026/03/26/foo/). Implies scope=posts.'
+        required: false
+        type: string
+        default: ''
       dry_run:
         description: 'Dry run (report only; do not write or commit)'
         required: true
@@ -42,8 +47,9 @@ jobs:
           set -euo pipefail
           APPLY=""; [ "${{ inputs.dry_run }}" = "false" ] && APPLY="--apply"
           YEAR=""; [ -n "${{ inputs.year }}" ] && YEAR="--year=${{ inputs.year }}"
-          S="${{ inputs.scope }}"
-          if [ "$S" = all ] || [ "$S" = posts ];    then node scripts/regenerate-posts.js $APPLY $YEAR; fi
+          URL="";  [ -n "${{ inputs.url }}" ] && URL="--url=${{ inputs.url }}"
+          S="${{ inputs.scope }}"; [ -n "$URL" ] && S=posts
+          if [ "$S" = all ] || [ "$S" = posts ];    then node scripts/regenerate-posts.js $APPLY $YEAR $URL; fi
           if [ "$S" = all ] || [ "$S" = archives ]; then node scripts/render-archives.js $APPLY; fi
           if [ "$S" = all ] || [ "$S" = pages ];    then node scripts/render-pages.js $APPLY; fi
           if [ "$S" = all ] || [ "$S" = feeds ];    then node scripts/render-feeds.js $APPLY; fi

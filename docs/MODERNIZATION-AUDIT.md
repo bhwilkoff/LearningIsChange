@@ -432,12 +432,20 @@ resolves them on its own.)*
   plugin images via the Jetpack CDN → C-11). Removed the dead Fluida font
   link from `/search/` and `/menus/`. Added `llms.txt`. Permalink check OK.
   **The repository no longer contains any WordPress code.**
-  **Next**: P5 — admin tools re-pointed at JSON + `render-site.yml`.
-  Order: (1) `admin/regenerate/` → dispatch `render-site.yml` (replace
-  the fragments panel); (2) `/new/` writes JSON only (no HTML/RSS
-  patching) then dispatches render; (3) `/edit/`, `/remove/` likewise;
-  (4) retire `update-rss.yml`, `remove-from-rss.yml`, `regenerate-posts.yml`;
-  (5) reskin `/search/` on the new shell. promote
+  **Next**: see tick 14.
+- **2026-09-16 · tick 14 (P5.1)** — `admin/regenerate/` ported (shell
+  kept, internals swapped): edits `templates/partials/{nav,rail,footer}.html`
+  instead of the deleted Fluida fragments; "Apply to site" and the
+  Render panel dispatch `render-site.yml` (scope all/posts/archives/
+  pages/feeds, year, single URL — `url` input added to the workflow).
+  Fluida-only Menu tab hidden. Dashboard card retitled "Render Site".
+  Loads with no console errors.
+  **Next**: P5.2 — `/new/` writes JSON only (upsert post shard via
+  `admin/lib/mutate.js`, taxonomies via `recompute` in the workflow)
+  and dispatches `render-site.yml` (scope=posts, url) instead of writing
+  Fluida HTML + patching RSS; then `/edit/`, `/remove/`; then retire
+  `update-rss.yml`, `remove-from-rss.yml`, `regenerate-posts.yml`; then
+  reskin `/search/`. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

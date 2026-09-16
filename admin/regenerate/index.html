@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regenerate Fragments · LiC Admin</title>
+  <title>Render Site · LiC Admin</title>
   <link rel="icon" href="https://i0.wp.com/learningischange.com/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg?fit=32%2C32&ssl=1" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Lora:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -173,7 +173,7 @@
   <main>
     <aside>
       <div class="card">
-        <h2>Fragments</h2>
+        <h2>Shell partials</h2>
         <div class="zone-list" id="zone-list"></div>
       </div>
 
@@ -191,28 +191,37 @@
       <div class="card">
         <h2>How it works</h2>
         <ol style="margin-left:18px;font-size:0.9rem;color:var(--text-secondary);line-height:1.5">
-          <li>Pick a fragment on the left.</li>
-          <li>Edit in Visual, Source, or see Preview.</li>
-          <li><strong>Save</strong> commits the fragment to the repo.</li>
-          <li><strong>Apply to site</strong> dispatches the workflow that propagates the fragment to every HTML page.</li>
+          <li>Pick a partial on the left (nav, rail, footer).</li>
+          <li>Edit in Source (Visual works for text; keep any <code>{{placeholders}}</code>).</li>
+          <li><strong>Save</strong> commits the partial to <code>templates/partials/</code>.</li>
+          <li><strong>Apply to site</strong> dispatches <code>render-site.yml</code>, which re-renders every page from JSON + templates, runs the permalink guarantee, and commits.</li>
         </ol>
       </div>
 
       <div class="card">
-        <h2>Regenerate Posts</h2>
+        <h2>Render</h2>
         <p style="font-size:0.85rem;color:var(--text-muted);margin:0 0 10px">
-          Rebuild post HTMLs from <code>templates/post.html</code> +
-          <code>database/posts/YYYY.json</code>. Use this after editing
-          the post template or a post's JSON content.
+          Re-render from <code>database/</code> + <code>templates/</code>:
+          posts (and their Markdown twins), archives, pages, feeds, sitemap.
+          Use after editing JSON or a template.
         </p>
         <label style="font-size:0.85rem">Scope
-          <input id="rp-scope" type="text" value="2026" placeholder='"2026" or "all"' style="width:100%;margin-top:4px">
+          <select id="rp-scope" style="width:100%;margin-top:4px">
+            <option value="all">all — posts, archives, pages, feeds</option>
+            <option value="posts">posts only</option>
+            <option value="archives">archives only</option>
+            <option value="pages">pages only</option>
+            <option value="feeds">feeds only</option>
+          </select>
+        </label>
+        <label style="font-size:0.85rem;margin-top:8px;display:block">Year <small style="color:var(--text-muted)">(posts only; empty = all)</small>
+          <input id="rp-year" type="text" placeholder="2026" style="width:100%;margin-top:4px">
         </label>
         <label style="font-size:0.85rem;margin-top:8px;display:block">Single URL <small style="color:var(--text-muted)">(overrides scope)</small>
           <input id="rp-url" type="text" placeholder="/2026/03/26/foo/" style="width:100%;margin-top:4px">
         </label>
         <label class="inline" style="margin-top:8px"><input id="rp-dry" type="checkbox" checked> Dry run</label>
-        <button class="btn primary small" id="rp-dispatch" style="margin-top:8px;width:100%">Dispatch regenerate-posts</button>
+        <button class="btn primary small" id="rp-dispatch" style="margin-top:8px;width:100%">Dispatch render-site</button>
       </div>
     </aside>
 
@@ -309,12 +318,13 @@
     import { getSettings, saveSettings, getGitHubCreds } from '/admin/lib/auth.js';
     import { GitHubAPI } from '/admin/lib/github.js';
 
-    const ZONES = ['MASTHEAD', 'SIDEBAR', 'COLOPHON', 'FOOTER'];
+    // Shell partials composed into every page by scripts/lib/shell.js
+    // (Decision 014). Edit here, save, then "Apply to site" re-renders.
+    const ZONES = ['NAV', 'RAIL', 'FOOTER'];
     const ZONE_META = {
-      MASTHEAD: { title: 'Masthead', desc: 'Top of every page: site title, header image, primary & mobile navigation.' },
-      SIDEBAR:  { title: 'Sidebar',  desc: 'Right-column widgets on posts and archives.' },
-      COLOPHON: { title: 'Colophon', desc: 'Pre-footer widget zone (often empty).' },
-      FOOTER:   { title: 'Footer',   desc: 'Site-wide footer text, back-to-top, credits.' },
+      NAV:    { title: 'Navigation', desc: 'Unified top nav (blog + portfolio). {{nav_blog_active}} is filled at render.' },
+      RAIL:   { title: 'Right rail', desc: 'About / meet cards and the lists. {{recent}}, {{topics}}, {{years}} are filled at render — keep them.' },
+      FOOTER: { title: 'Footer',     desc: 'Site-wide footer links and credit.' },
     };
 
     const state = {
@@ -331,7 +341,7 @@
       // the SHA for each file is fetched later at save time.
       const [fragmentResults, siteHead] = await Promise.all([
         Promise.all(ZONES.map(async (zone) => {
-          const url = `${CONFIG.site.base}/templates/fragments/${zone.toLowerCase()}.html?t=${Date.now()}`;
+          const url = `${CONFIG.site.base}/templates/partials/${zone.toLowerCase()}.html?t=${Date.now()}`;
           try {
             const r = await fetch(url);
             if (!r.ok) return { zone, original: null };
@@ -394,16 +404,10 @@
       document.getElementById('log-card').style.display = '';
       document.getElementById('editor-zone-label').textContent = ZONE_META[zone].title;
       document.getElementById('editor-zone-sub').textContent = ZONE_META[zone].desc;
-      // Menu tab is only useful for MASTHEAD (the only fragment with menu structures)
-      const menuTab = document.getElementById('tab-menu');
-      if (zone === 'MASTHEAD') {
-        menuTab.style.display = '';
-        // Default to the Menu tab for MASTHEAD for a better first-run experience
-        if (state.activeTab !== 'menu' && state.activeTab !== 'source') state.activeTab = 'menu';
-      } else {
-        menuTab.style.display = 'none';
-        if (state.activeTab === 'menu') state.activeTab = 'visual';
-      }
+      // The Menu tab was built for the WordPress multi-level masthead; the new
+      // nav is a flat list — edit it in Source. (Menu code kept for a future port.)
+      document.getElementById('tab-menu').style.display = 'none';
+      if (state.activeTab === 'menu') state.activeTab = 'source';
       updateTabUi();
       renderZoneList();
       renderActiveTab();
@@ -905,7 +909,7 @@ ${head}
       const creds = getGitHubCreds();
       if (!creds.token) { setAlert('Set a GitHub PAT in Settings.', 'warning'); return; }
 
-      const path = `templates/fragments/${state.zone.toLowerCase()}.html`;
+      const path = `templates/partials/${state.zone.toLowerCase()}.html`;
       setAlert(`Committing <code>${path}</code>…`, 'info');
       log(`Saving ${state.zone} → ${path}`, 'info');
       try {
@@ -959,21 +963,22 @@ ${head}
       }
 
       const dryRun = document.getElementById('dry-run').checked;
-      const zones = state.zone; // apply only the current zone by default
       if (!dryRun) {
-        const ok = confirm(`Apply ${zones} across every HTML page with markers?\nA single commit will modify thousands of files.`);
+        const ok = confirm(`Re-render the whole site with the saved partials?\nA single commit will modify thousands of files (permalink guarantee runs first).`);
         if (!ok) return;
       }
 
-      setAlert(`Dispatching regenerate-fragments.yml (zones=${zones}, dry_run=${dryRun})…`, 'info');
-      log(`Dispatch: zones=${zones}, dry_run=${dryRun}`, 'info');
+      setAlert(`Dispatching render-site.yml (scope=all, dry_run=${dryRun})…`, 'info');
+      log(`Dispatch: render-site all, dry_run=${dryRun}`, 'info');
       try {
         const gh = new GitHubAPI(creds);
-        await gh.dispatchWorkflow('regenerate-fragments.yml', {
+        await gh.dispatchWorkflow('render-site.yml', {
+          scope: 'all',
+          year: '',
+          url: '',
           dry_run: dryRun ? 'true' : 'false',
-          zones,
         });
-        const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/regenerate-fragments.yml`;
+        const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/render-site.yml`;
         setAlert(`✓ Dispatched. <a href="${actionsUrl}" target="_blank" rel="noopener">Open Actions run →</a> (Pages rebuild takes ~10 min after the workflow completes.)`, 'success');
         log(`✓ Dispatched`, 'success');
       } catch (err) {
@@ -987,31 +992,28 @@ ${head}
       const creds = getGitHubCreds();
       if (!creds.token) { setAlert('Set a GitHub PAT in Settings.', 'warning'); return; }
 
-      const scope = (document.getElementById('rp-scope').value || '').trim();
+      const scope = document.getElementById('rp-scope').value || 'all';
+      const year = (document.getElementById('rp-year').value || '').trim();
       const url = (document.getElementById('rp-url').value || '').trim();
       const dryRun = document.getElementById('rp-dry').checked;
 
-      if (!url && !scope) {
-        setAlert('Pick a scope (year or "all") or enter a single URL.', 'warning');
-        return;
-      }
-
-      const label = url ? `url=${url}` : `scope=${scope}`;
+      const label = url ? `url=${url}` : `scope=${scope}${year ? ` year=${year}` : ''}`;
       if (!dryRun) {
-        const ok = confirm(`Apply regenerate-posts for ${label}?\nThis rewrites HTML files and commits them.`);
+        const ok = confirm(`Render ${label}?\nThis rewrites derived files and commits them (permalink guarantee runs first).`);
         if (!ok) return;
       }
 
-      setAlert(`Dispatching regenerate-posts.yml (${label}, dry_run=${dryRun})…`, 'info');
-      log(`Dispatch: regenerate-posts ${label}, dry_run=${dryRun}`, 'info');
+      setAlert(`Dispatching render-site.yml (${label}, dry_run=${dryRun})…`, 'info');
+      log(`Dispatch: render-site ${label}, dry_run=${dryRun}`, 'info');
       try {
         const gh = new GitHubAPI(creds);
-        await gh.dispatchWorkflow('regenerate-posts.yml', {
-          scope: scope || '2026',
+        await gh.dispatchWorkflow('render-site.yml', {
+          scope: url ? 'posts' : scope,
+          year,
           url,
           dry_run: dryRun ? 'true' : 'false',
         });
-        const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/regenerate-posts.yml`;
+        const actionsUrl = `https://github.com/${creds.owner}/${creds.name}/actions/workflows/render-site.yml`;
         setAlert(`✓ Dispatched. <a href="${actionsUrl}" target="_blank" rel="noopener">Open Actions run →</a>`, 'success');
         log(`✓ Dispatched`, 'success');
       } catch (err) {
