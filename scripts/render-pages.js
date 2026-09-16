@@ -10,8 +10,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  REPO_ROOT, SITE, SITE_NAME, AUTHOR, DEFAULT_IMAGE, escapeHtml, escapeAttr, describe, dates, plainText,
-  firstImage, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, headCommon, selfHostImages,
+  REPO_ROOT, SITE, escapeHtml, escapeAttr, describe, dates, plainText,
+  loadAllPosts, loadTaxonomies, nav, rail, footer, fill, headCommon, renderStaticPage,
 } from './lib/shell.js';
 
 const APPLY = process.argv.includes('--apply');
@@ -49,18 +49,9 @@ for (const p of PAGES) {
   const content = isIndex ? allPostsIndex() : (p.content || '');
   const mod = p.date_modified && p.date_modified !== 'None' ? String(p.date_modified).slice(0, 10) : '';
   const description = isIndex ? `Every one of the ${ALL.length.toLocaleString('en-US')} posts on Learning is Change, by year.` : describe({ title: p.title, excerpt: p.excerpt, content });
-  const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': isIndex ? 'CollectionPage' : 'WebPage', name: p.title, url: abs, description, ...(mod ? { dateModified: mod } : {}), isPartOf: { '@type': 'WebSite', '@id': `${SITE}/#website`, name: SITE_NAME }, author: { '@type': 'Person', name: AUTHOR.name, url: AUTHOR.url } }).replace(/<\//g, '<\\/');
   const noidx = NOINDEX.has(url) || (!isIndex && plainText(content).length < 40);
   if (noidx) noindex++;
-  const html = fill(T_PAGE, {
-    title: escapeHtml(p.title || 'Untitled'), description: escapeAttr(description), abs_url: abs,
-    og_image: escapeAttr(firstImage(content) || DEFAULT_IMAGE),
-    robots: noidx ? '<meta name="robots" content="noindex, follow">' : '',
-    json_ld: ld, body_classes: `page-${(p.slug || url).replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '')}`,
-    kicker: isIndex ? '<span class="card-tag">Archive</span>' : '<span class="card-tag">Page</span>',
-    meta: mod ? `<div class="post-meta"><span>Updated <time datetime="${mod}">${dates({ date_published: mod }).formatted}</time></span></div>` : '',
-    ...SHELL,
-  }).split('{{content}}').join(selfHostImages(content));
+  const html = renderStaticPage(T_PAGE, p, { url, content, description, noindex: noidx, isIndex, shell: SHELL });
   out.set(url, html); pages++;
 }
 

@@ -252,3 +252,19 @@ export function renderPostPage(template, post, { prev = null, next = null, relat
   return fill(template, values).split('{{content}}').join(selfHostImages(post.content));
 }
 
+// ---------- static page (used by scripts/render-pages.js AND the admin preview) ----------
+export function renderStaticPage(template, page, { url, content, description, noindex = false, isIndex = false, shell = {} }) {
+  const abs = SITE + url;
+  const mod = page.date_modified && page.date_modified !== 'None' ? String(page.date_modified).slice(0, 10) : '';
+  const desc = description ?? describe({ title: page.title, excerpt: page.excerpt, content });
+  const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': isIndex ? 'CollectionPage' : 'WebPage', name: page.title, url: abs, description: desc, ...(mod ? { dateModified: mod } : {}), isPartOf: { '@type': 'WebSite', '@id': `${SITE}/#website`, name: SITE_NAME }, author: { '@type': 'Person', name: AUTHOR.name, url: AUTHOR.url } }).replace(/<\//g, '<\\/');
+  return fill(template, {
+    title: escapeHtml(page.title || 'Untitled'), description: escapeAttr(desc), abs_url: abs,
+    og_image: escapeAttr(firstImage(content) || DEFAULT_IMAGE),
+    robots: noindex ? '<meta name="robots" content="noindex, follow">' : '',
+    json_ld: ld, body_classes: `page-${(page.slug || url).replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '')}`,
+    kicker: isIndex ? '<span class="card-tag">Archive</span>' : '<span class="card-tag">Page</span>',
+    meta: mod ? `<div class="post-meta"><span>Updated <time datetime="${mod}">${dates({ date_published: mod }).formatted}</time></span></div>` : '',
+    ...shell,
+  }).split('{{content}}').join(selfHostImages(content));
+}

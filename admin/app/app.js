@@ -10,9 +10,11 @@ import * as render from './views/render.js';
 import * as settings from './views/settings.js';
 import * as posts from './views/posts.js';
 import * as edit from './views/edit.js';
+import * as pages from './views/pages.js';
+import * as terms from './views/terms.js';
 
 const VIEWS = {
-  posts, pages: { title: 'Pages', soon: 'A2' }, terms: { title: 'Terms', soon: 'A2' },
+  posts, pages, terms,
   media: { title: 'Media', soon: 'A2' }, render, settings,
 };
 const ORDER = ['posts', 'pages', 'terms', 'media', 'render', 'settings'];
@@ -52,8 +54,8 @@ function route() {
   const path = location.hash.replace(/^#\/?/, '');
   const name = path.split('/')[0] || 'render';
   // #/posts/edit/<url> → editor
-  const sub = path.startsWith('posts/edit/') ? path.slice('posts/edit'.length) : null;
-  const view = sub !== null ? edit : (VIEWS[name] || VIEWS.render);
+  const sub = path.startsWith('posts/edit/') ? path.slice('posts/edit'.length) : path.startsWith('pages/edit/') ? path.slice('pages/edit'.length) : null;
+  const view = path.startsWith('posts/edit/') ? edit : (VIEWS[name] || VIEWS.render);
   document.querySelectorAll('#app-nav a').forEach((a) => a.classList.toggle('active', a.dataset.view === name));
   if (current?.destroy) current.destroy();
   const root = document.getElementById('view');

@@ -237,6 +237,8 @@ items get done in a later tick and moved to *Done*.
 - ✅ A-5 test pages — keep as-is (Ben).
 
 ### B. Navigation & identity
+- A-7 `/__qs/6b00bc294368/` ("MailPoet Page", a newsletter-plugin
+  artifact) is still in `pages.json` and renders. Retire → redirect to `/`?
 - ✅ (Ben: homepage sections) B-5 Old-menu items without a home yet: "Video Posts" (category
   `videos` + children), "Recommendations" (`recs` + children). The
   categories exist and render; should the homepage get a "Watch" /
@@ -686,6 +688,14 @@ appended here as ticks complete.
   commit) + optional `render-site.yml` dispatch for that URL. Verified
   live preview updates (title, JSON-LD, self-hosted image) with no
   console errors. Save not exercised (needs a token).
+- **2026-09-16 · A2.3 done** — **Pages** view (list with routing
+  status from `page-rules.json`; editor with exact preview via
+  `renderStaticPage()`, moved into `core.js` from `render-pages.js`,
+  byte-identical) and **Terms** view (categories/tags with counts and
+  parent flags; rename display name → taxonomies + every post's term
+  entries in one commit + render). No console errors. Queue: A-7 a
+  MailPoet plugin page at `/__qs/6b00bc294368/` sits in `pages.json` —
+  retire → redirect?
 - **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
   secrets, fill `CONFIG.auth`, test sign-in end to end. In parallel, A2.2: the
