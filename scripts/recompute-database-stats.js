@@ -80,6 +80,16 @@ function rebuildTaxonomies(existing, catCounts, tagCounts) {
   const exCats = (existing.categories?.items) || {};
   const exTags = (existing.tags?.items) || {};
 
+  // Hierarchical parents (e.g. /category/videos/) have no posts of their own;
+  // keep them and count their subtree (children by URL prefix).
+  for (const [slug, item] of Object.entries(exCats)) {
+    if (item && item.hierarchical && !(slug in catCounts)) {
+      catCounts[slug] = Object.entries(exCats)
+        .filter(([s2, o]) => s2 !== slug && o && o.url && item.url && o.url.startsWith(item.url))
+        .reduce((n, [s2]) => n + (catCounts[s2] || 0), 0);
+    }
+  }
+
   const newCats = {};
   for (const [slug, count] of Object.entries(catCounts)) {
     const ex = exCats[slug] || {};

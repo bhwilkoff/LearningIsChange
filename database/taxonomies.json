@@ -1,6 +1,6 @@
 {
   "categories": {
-    "count": 38,
+    "count": 47,
     "items": {
       "uncategorized": {
         "name": "Uncategorized",
@@ -229,6 +229,69 @@
         "slug": "movies",
         "url": "/category/movies/",
         "count": 1
+      },
+      "blogging-projects": {
+        "name": "Blogging Projects",
+        "slug": "blogging-projects",
+        "url": "/category/blogging-projects/",
+        "count": 521,
+        "hierarchical": true
+      },
+      "recs": {
+        "name": "Recommendations",
+        "slug": "recs",
+        "url": "/category/recs/",
+        "count": 215,
+        "hierarchical": true
+      },
+      "blog-recs": {
+        "name": "Blog Recommendations",
+        "slug": "blog-recs",
+        "url": "/category/recs/blog-recs/",
+        "count": 0,
+        "hierarchical": true
+      },
+      "reading-recs": {
+        "name": "Reading Recommendations",
+        "slug": "reading-recs",
+        "url": "/category/recs/reading-recs/",
+        "count": 0,
+        "hierarchical": true
+      },
+      "tutorials": {
+        "name": "Tutorials",
+        "slug": "tutorials",
+        "url": "/category/tutorials/",
+        "count": 0,
+        "hierarchical": true
+      },
+      "how-to": {
+        "name": "How-To",
+        "slug": "how-to",
+        "url": "/category/tutorials/how-to/",
+        "count": 0,
+        "hierarchical": true
+      },
+      "videos": {
+        "name": "Video Posts",
+        "slug": "videos",
+        "url": "/category/videos/",
+        "count": 74,
+        "hierarchical": true
+      },
+      "pd-events": {
+        "name": "PD Events",
+        "slug": "pd-events",
+        "url": "/category/videos/pd-events/",
+        "count": 0,
+        "hierarchical": true
+      },
+      "reflective-practice-video": {
+        "name": "Reflective Practice Video",
+        "slug": "reflective-practice-video",
+        "url": "/category/videos/reflective-practice-video/",
+        "count": 0,
+        "hierarchical": true
       }
     }
   },

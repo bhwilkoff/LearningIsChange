@@ -574,9 +574,21 @@ resolves them on its own.)*
   with no local file (URL-encoded `+` names from a 2015 import) and all
   third-party images proxied via the CDN (Zemanta, Skitch, S3, Flickr)
   stay on the CDN. 267 posts changed. Permalink check OK.
-  **Next**: B-5 (Watch + Recommendations homepage sections from the
-  `videos/*` and `recs/*` categories); then decisions C-8, C-10, C-11,
-  D-3. promote
+  **Next**: see tick 28.
+- **2026-09-16 · tick 28 (B-5 + missing parent categories)** — Found
+  that 9 category URLs (`/category/videos/`, `/category/recs/`,
+  `/category/blogging-projects/`, `/category/tutorials/` and five
+  children) had no `taxonomies.json` entry, so they were serving as
+  homepage aliases. Added them (`hierarchical: true`, names from the
+  old menu), taught `recompute-database-stats.js` to keep parents and
+  count their subtree (Video Posts 74, Recommendations 215, Blogging
+  Projects 521); the archive renderer already includes descendants, so
+  they are real pages now (+73 category pages). Homepage gained
+  **Watch** (latest video posts) and **Recommendations** (latest + the
+  sub-category chips). Permalink list re-snapshotted; sitemap rebuilt.
+  **Next**: decisions C-8, C-10, C-11, D-3 for Ben; then a final
+  review pass (accessibility/perf check of the rendered pages, README
+  for `scripts/`, SCRATCHPAD milestone table). promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

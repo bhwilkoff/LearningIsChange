@@ -99,6 +99,12 @@ function renderHome() {
     ['Lesson Plans', 'lesson-plans', 'Two decades of classroom plans.'],
   ].map(([name, slug, blurb]) => { const c = TAX.categories[slug]; return c ? `<a class="series" href="${escapeAttr(c.url)}"><strong>${escapeHtml(c.name || name)}</strong><span>${escapeHtml(blurb)}</span><span class="n">${plural(c.count || 0, 'post')}</span></a>` : ''; }).join('');
   const start = ['/2007/06/07/the-ripe-environment/', '/2005/04/20/the-reason-for-the-blog/'].map((u) => ALL.find((p) => p.url === u)).filter(Boolean);
+  // B-5: sections for the category subtrees the old menu featured
+  const subtree = (prefix) => { const slugs = Object.values(TAX.categories).filter((c) => c && c.url && c.url.startsWith(prefix)).map((c) => c.slug); return NEWEST.filter((p) => terms(p, 'categories').some((t) => slugs.includes(t.slug))); };
+  const watch = subtree('/category/videos/').slice(0, 5);
+  const recs = subtree('/category/recs/').slice(0, 5);
+  const recsLinks = Object.values(TAX.categories).filter((c) => c && c.url && c.url.startsWith('/category/recs/') && c.url !== '/category/recs/' && (c.count || 0) > 0)
+    .sort((a, b) => (b.count || 0) - (a.count || 0)).map((c) => `<a class="tag" href="${escapeAttr(c.url)}">${escapeHtml(c.name)} · ${c.count}</a>`).join('');
   const ld = JSON.stringify([
     { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE}/#website`, url: `${SITE}/`, name: SITE_NAME, description: TAGLINE, author: { '@id': `${SITE}/#person` }, potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/search/?q={search_term_string}` }, 'query-input': 'required name=search_term_string' } },
     { '@context': 'https://schema.org', '@type': 'Person', '@id': `${SITE}/#person`, name: AUTHOR.name, url: AUTHOR.url, image: `${SITE}/meet/ben.jpg`, jobTitle: 'Educator, Builder, Writer', sameAs: ['https://www.linkedin.com/in/bhwilkoff/', 'https://github.com/bhwilkoff', 'https://bsky.app/profile/laserdiscleftist.bsky.social'] },
@@ -109,7 +115,8 @@ function renderHome() {
     latest: NEWEST.slice(0, PER_PAGE).map(item).join(''),
     otd_date: now.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }),
     otd: otd.length ? otd.map((p) => `<a href="${escapeAttr(p.url)}"><b>${dates(p).year}</b><span>${escapeHtml(p.title || 'Untitled')}</span></a>`).join('') : '<p class="text-muted">Nothing published on this date — yet.</p>',
-    start_here: start.map(item).join(''), series, json_ld: ld, ...SHELL,
+    start_here: start.map(item).join(''), series, json_ld: ld,
+    watch: watch.map(item).join(''), recs: recs.map(item).join(''), recs_links: recsLinks, ...SHELL,
   }));
   // /page/N/ (page 1 is the homepage)
   const last = Math.ceil(ALL.length / PER_PAGE);
