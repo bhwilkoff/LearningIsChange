@@ -1,8 +1,8 @@
 # Learning is Change — Project Identity & Standing Instructions
 
-Static content platform (formerly WordPress multisite) preserved as flat
-HTML on GitHub Pages. The goal is a fully free, self-hostable archive and
-publishing workflow with no WordPress dependencies.
+Static content platform (formerly WordPress multisite), now rendered
+entirely from JSON on GitHub Pages. Fully free, self-hostable, and — since
+2026-09-16 (Decision 014) — free of WordPress code.
 
 **Governing docs:** work status lives in `SCRATCHPAD.md`, architecture
 decisions live in `DECISIONS.md`. This file is standing context.
@@ -19,8 +19,10 @@ structural changes.
 
 **Preserve, don't break.** Every URL currently served must keep working.
 The archive is the product. Changes that would invalidate existing
-permalinks, RSS item GUIDs, or the Fluida visual structure require an
-explicit entry in `DECISIONS.md`.
+permalinks or RSS item GUIDs require an explicit entry in `DECISIONS.md`.
+`scripts/check-permalinks.js` enforces this (every URL that ever shipped
+must still resolve; `full.xml` GUIDs are retained unless the post is a
+tombstone) and gates every render commit.
 
 ---
 
@@ -28,9 +30,18 @@ explicit entry in `DECISIONS.md`.
 
 - **Stack**: Vanilla HTML/CSS/JS, no build step. GitHub Pages serves
   from `main` at apex `learningischange.com` (see `CNAME`).
-- **Theme**: Fluida (WordPress origin) — layout is content-right,
-  sidebar-left. Regenerate archive pages by fetching an existing page as
-  a template and substituting content, not by hand-constructing HTML.
+- **Rendering**: **JSON in `database/` is the source of truth; every
+  HTML page is derived.** `scripts/lib/shell.js` + `templates/`
+  (`post.html`, `archive.html`, `home.html`, `page.html`,
+  `redirect.html`, `partials/{nav,rail,footer}.html`) and the renderers
+  `regenerate-posts.js`, `render-archives.js`, `render-pages.js`,
+  `render-feeds.js`, `render-shell.js` (portfolio/support/meet shell),
+  `generate-sitemap.js`. `.github/workflows/render-site.yml` runs them
+  all with the permalink gate. The whole site renders in ~5 s.
+- **Design system**: `portfolio/css/style.css` + `/css/site.css`
+  (tokens, dark/light mode, blog layout). Blog, portfolio, `/meet/`,
+  `/support.html` and the admin tools (`admin/admin.css`) share it.
+  **Keep the portfolio consistent with the blog** (standing instruction).
 - **Admin surface**: `admin/index.html` is a dashboard that links to a
   set of single-file HTML apps, each at its own top-level path. They
   all talk to the GitHub REST API via Bearer tokens and dispatch
@@ -40,17 +51,17 @@ explicit entry in `DECISIONS.md`.
   `search.json`, `manifest.json`, `changelog.json`) plus `search.db`
   (SQLite/FTS for client-side search).
 - **Shared admin code**: `admin/lib/*.js` (ES modules) — config,
-  auth, base64, github client, slug, database read, mutate (null-safe),
-  feeds (RSS), archives (page HTML surgery), editor (contenteditable
-  wrapper), pickers (tag/category UI). See `admin/lib/README.md`.
-- **Regeneration scripts**: `scripts/add-zone-markers.js`,
-  `scripts/capture-fragments.js`, `scripts/regenerate-fragments.js`.
-  Master theme fragments live in `templates/fragments/{masthead,
-  sidebar,colophon,footer}.html`.
-- **Feeds**: `feed/index.xml` (excerpts, small) and `feed/full.xml`
-  (full archive, ~42 MB). `full.xml` is too large for the GitHub REST
-  API blob endpoint — edits go through `.github/workflows/update-rss.yml`
-  and `remove-from-rss.yml`.
+  auth, base64, github client, slug, database read, mutate (null-safe;
+  `taxonomyTerm()` gives the canonical `{name, slug, url}` shape),
+  feeds, editor, pickers. See `admin/lib/README.md`.
+- **Feeds**: `feed/index.xml` (newest 50) and `feed/full.xml` (all
+  posts, ~11 MB) are rendered by `scripts/render-feeds.js`; the podcast
+  feed has its own tool. Never patch feeds in place.
+- **Removed posts are tombstones** (`removed: true` in the shard): the
+  permalink renders as a redirect to the year archive; listings, feeds
+  and search skip it. Nothing under a public URL is ever deleted.
+- **Static-page routing**: `database/page-rules.json` (redirects,
+  noindex) — read by `render-pages.js` and `generate-sitemap.js`.
 
 ### Key rules
 
@@ -62,9 +73,9 @@ explicit entry in `DECISIONS.md`.
   the payload and pick the right path.
 - **Use Bearer tokens** (`Authorization: Bearer <PAT>`), not the
   deprecated `token <PAT>` format.
-- **Template-based regeneration.** For archive/category/tag/year pages,
-  fetch the existing page and string-replace the content block. Never
-  reconstruct the Fluida DOM from scratch.
+- **Edit JSON, then render.** Admin tools write `database/` and
+  dispatch `render-site.yml`; they never write HTML, archives or feeds
+  directly. Theme changes are template/partial edits + a render.
 - **Null-safe JSON.** Every database-mutation path must guard against
   missing fields — old posts have inconsistent shapes.
 - **Idempotent writes.** Admin tool operations should be safe to re-run.
@@ -85,21 +96,20 @@ painful to iterate on in a single chat context.
 | `/new/` | Post Generator | 3,570 | Create post, update DB, dispatch RSS |
 | `/edit/` | Page Editor | 2,506 | WYSIWYG (native contenteditable) edit any page/post |
 | `/update/` | Mass Updater | 4,201 | Bulk find/replace across the repo |
-| `/remove/` | Post Remover | 1,653 | Delete post + clean homepage/archives/feeds/DB |
+| `/remove/` | Post Remover | 1,653 | Tombstone a post in its shard + dispatch render |
 | `/rss-creator/` | RSS Creator | 1,104 | Regenerate `feed/index.xml` and friends |
 | `/podcast-rss/` | Podcast RSS | 1,264 | Apple Podcasts/Spotify compatible feed |
-| `/menus/` | Menu Editor | 1,096 | Edit nav/sidebar/footer fragments |
+| `/menus/` | Menu Editor | 1,096 | Legacy (edited Fluida menus) — to be folded into Render Site |
 | `/links/` | Link Checker | 1,741 | Site-wide broken link scan (IndexedDB cache) |
 | `/search/` | Search Console | 1,102 | Search tester (also user-facing search UI) |
 
-*`/database-generator/` is listed on the dashboard but not committed
-yet — it's one of the known gaps.*
+*Status 2026-09-16: `/admin/regenerate/` (now "Render Site"), `/new/`,
+`/edit/`, `/remove/` are on the JSON + render pipeline; the others are
+next (see `docs/MODERNIZATION-AUDIT.md`). All 13 tools load
+`admin/admin.css` + `admin/admin-bar.js`.*
 
-Every tool touches some combination of: the GitHub REST API
-(authenticated with a PAT held in `localStorage`), the per-year
-`database/posts/YYYY.json`, the Fluida-rendered archive pages, and the
-feed XML files. Pulling that shared plumbing into `admin/lib/` is the
-core M1 cleanup.
+Every tool talks to the GitHub REST API (PAT in `localStorage`) and
+writes JSON under `database/`; rendering is the workflow's job.
 
 ### Subdomains
 
@@ -128,7 +138,7 @@ enlarging feeds, adding history) require an entry in `DECISIONS.md`.
 
 ## Working Style
 
-- **Reach for existing tools first.** Fluida theme, GitHub Actions,
+- **Reach for existing tools first.** The JSON renderers, GitHub Actions,
   GitHub REST API, native `contenteditable`, SQLite FTS — we already
   depend on them. Don't add a new dependency to solve a problem an
   existing one handles.

@@ -76,7 +76,7 @@ for p in admin/lib admin/dedup admin/regenerate admin/db-maintenance scripts; do
 done
 cp -R /tmp/lic-source/.github/workflows/dedup-execute.yml            .github/workflows/
 cp -R /tmp/lic-source/.github/workflows/regenerate-fragments.yml     .github/workflows/
-cp -R /tmp/lic-source/.github/workflows/regenerate-posts.yml         .github/workflows/
+cp -R /tmp/lic-source/.github/workflows/render-site.yml         .github/workflows/
 cp -R /tmp/lic-source/.github/workflows/database-maintenance.yml     .github/workflows/
 ```
 

@@ -15,7 +15,7 @@ exceed the ~35 MB single-blob limit.
 | `/edit/` | Page Editor — WYSIWYG (native contenteditable) edit for any page/post; writes back to `database/posts/YYYY.json` |
 | `/update/` | Mass Updater — one-off visual find/replace across the repo. **Prefer the more structured tools below for most changes.** |
 | `/remove/` | Post Remover — delete a post + clean homepage/archives/feeds/DB |
-| `/admin/regenerate/` | Fragments + post regeneration (dispatches `regenerate-fragments.yml` and `regenerate-posts.yml`) |
+| `/admin/regenerate/` | Render Site: edit shell partials (nav/rail/footer) and dispatch `render-site.yml` (posts, archives, pages, feeds, sitemap) |
 | `/admin/dedup/` | Media-dedup review tool — reads scan manifest, emits a decisions JSON, dispatches `dedup-execute.yml` |
 | `/admin/db-maintenance/` | Recompute counts in manifest, taxonomies, search index from the canonical posts/pages JSON |
 | `/rss-creator/` | Regenerate `feed/index.xml` and friends |
@@ -47,7 +47,7 @@ All workflows dispatched from admin tools live in
   bounded content with the shared `templates/fragments/*.html`.
   Use this after editing `masthead`, `sidebar`, `colophon`, or `footer`.
 
-- **`regenerate-posts.yml`** — wraps `scripts/regenerate-posts.js`.
+- **`render-site.yml`** — the whole pipeline: `regenerate-posts.js` → `render-archives.js` → `render-pages.js` → `render-feeds.js` → `render-shell.js` → `recompute-database-stats.js` → `check-permalinks.js --snapshot` → `generate-sitemap.js`, then the permalink guarantee, then commit. Dispatched by `/new/`, `/edit/`, `/remove/`, `/admin/regenerate/`.
   Re-renders post HTML files from `templates/post.html` + the per-year
   `database/posts/YYYY.json` (the JSON `content` field is the source
   of truth; HTML is derived). Use this after editing the post template
@@ -55,8 +55,7 @@ All workflows dispatched from admin tools live in
   Inputs: `scope` (year like `2026` or `all`), `url` (optional single
   post URL, overrides scope), `dry_run`.
 
-- **`update-rss.yml` / `remove-from-rss.yml`** — maintain the large
-  `feed/full.xml` (too big to commit via the REST API blob endpoint).
+- *(retired 2026-09-16: `update-rss.yml`, `remove-from-rss.yml`, `regenerate-posts.yml`, `regenerate-fragments.yml` — feeds and pages are rendered from JSON by `render-site.yml`.)*
 
 - **`database-maintenance.yml`** — wraps `scripts/recompute-database-stats.js`.
   Rebuilds `database/manifest.json`, `database/taxonomies.json`, and

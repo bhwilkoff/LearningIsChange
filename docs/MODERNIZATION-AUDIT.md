@@ -486,10 +486,19 @@ resolves them on its own.)*
   all 13 tools (document `<head>` only — several tools embed HTML
   templates with their own `</head>`). Remove tool copy updated for
   tombstone semantics. Verified: dashboard, /new/, /remove/.
-  **Next**: P5.4 retire `update-rss.yml`, `remove-from-rss.yml`,
-  `regenerate-posts.yml`; P5.5b per-tool polish (hard-coded colors in
-  alerts/tabs/tool-card headers, Lora/Source Sans leftovers, the four
-  tools without the shared variables); P5.6 reskin `/search/`. promote
+  **Next**: see tick 18.
+- **2026-09-16 · tick 18 (P5.4)** — Retired `update-rss.yml`,
+  `remove-from-rss.yml`, `regenerate-posts.yml` (only `render-site.yml`,
+  `database-maintenance.yml`, `dedup-execute.yml` remain); removed the
+  dead RSS dispatcher from `/remove/`; updated `admin/README.md`,
+  `docs/SUBDOMAIN_ROLLOUT.md`, `admin/lib/feeds.js`. **Refreshed
+  `CLAUDE.md`** for the JSON-rendered architecture (rendering, design
+  system, feeds, tombstones, page rules, "edit JSON then render").
+  **Next**: P5.5b per-tool polish (hard-coded colors in alerts/tabs/
+  tool-card headers, Lora/Source Sans leftovers, the four tools without
+  the shared variables); P5.6 reskin `/search/` on the site shell;
+  then `/menus/` (fold into Render Site or retire), `/update/`,
+  `/rss-creator/` audit against the JSON pipeline. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

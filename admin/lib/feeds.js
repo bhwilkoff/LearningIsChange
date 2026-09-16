@@ -5,7 +5,8 @@
 //   - full form:    used in feed/full.xml (archival; content:encoded has full HTML body)
 //
 // Surgery on existing XML is string-based, matching the
-// `update-rss.yml` workflow and the legacy Post Generator behavior.
+// legacy patch-in-place workflows (retired 2026-09-16; feeds now come from
+// scripts/render-feeds.js). Kept for the RSS Creator tool.
 // Keeps whitespace/indent that WordPress' RSS emitter used so diffs
 // stay minimal.
 
