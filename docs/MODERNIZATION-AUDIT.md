@@ -651,7 +651,21 @@ appended here as ticks complete.
   `getRunJobs`, `getRateLimit`, Bluesky settings fields — rather than a
   new client. Posts/Pages/Terms/Media are placeholders linking to the
   legacy tools until A2. Admin bar links to the app. No console errors.
-- **Next**: A2.1 — `admin/app/store.js` (shards, pages, taxonomies
+- **2026-09-16 · A1.5 (security, Ben's request)** — `admin/lib/vault.js`
+  encrypted token vault (AES-GCM, PBKDF2 310k), wired into the app
+  (token resolution: unlocked vault → legacy plaintext), Lock/Unlock in
+  the app bar, Settings stores token+passphrase encrypted, "Forget
+  token". Round-trip tested in the browser. Decision 016 recorded:
+  GitHub App sign-in via a Cloudflare Worker is next (A1.6), created
+  through Chrome per Ben's authorization.
+- **Next**: A1.6 — GitHub App sign-in: create the GitHub App
+  (callback `https://learningischange.com/admin/app/`, permissions
+  Contents + Actions on this repo, user authorization, expiring
+  tokens), deploy the Worker (`workers/github-auth/`, code in repo;
+  secret set in Cloudflare only), add `admin/lib/oauth.js` (PKCE-style
+  state, popup or redirect, token + refresh in sessionStorage, silent
+  refresh), "Sign in with GitHub" button in Settings; PAT vault kept as
+  fallback. Then A2.1 — `admin/app/store.js` (shards, pages, taxonomies
   with ETag/If-None-Match caching, `isLive`, per-record get/update,
   shard commit via Git Data) and the **Posts** view: list/search/filter
   (year, category, status), open a post → editor (title, date, terms,

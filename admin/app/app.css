@@ -41,3 +41,5 @@
 .mono { font-family: var(--font-mono); font-size: 0.82rem; }
 .runs li.empty { display: block; }
 .field small.inline { display: inline; margin-left: 4px; }
+.app-lock { font: inherit; font-size: 0.82rem; padding: 5px 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary); cursor: pointer; }
+.app-lock:hover { border-color: var(--color-accent); }

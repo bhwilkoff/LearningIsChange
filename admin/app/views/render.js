@@ -4,7 +4,8 @@ let timer = null;
 export const title = 'Render';
 export function destroy() { clearInterval(timer); timer = null; }
 
-export function render(root, ctx) {
+export async function render(root, ctx) {
+  await ctx.ensureUnlocked();
   root.innerHTML = `
     <h1>Render</h1>
     <p class="lead">Everything under a public URL is derived from <code>database/</code>. This runs the whole pipeline in GitHub Actions: validate → posts → archives → pages → feeds → stats → permalink guarantee → commit.</p>

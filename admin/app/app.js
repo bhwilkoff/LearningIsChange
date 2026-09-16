@@ -4,6 +4,7 @@
 import { getSettings, saveSettings } from '/admin/lib/auth.js';
 import { GitHubAPI } from '/admin/lib/github.js';
 import { CONFIG } from '/admin/lib/config.js';
+import * as vault from '/admin/lib/vault.js';
 import * as render from './views/render.js';
 import * as settings from './views/settings.js';
 
@@ -17,10 +18,25 @@ export const ctx = {
   CONFIG,
   settings: () => getSettings(),
   save: (s) => saveSettings(s),
+  vault,
+  token() { return vault.unlockedToken() || getSettings().githubToken || ''; },
   api() {
-    const s = getSettings();
-    if (!s.githubToken) return null;
-    return new GitHubAPI({ token: s.githubToken, owner: s.repoOwner, name: s.repoName, branch: s.branch });
+    const s = getSettings(); const token = this.token();
+    if (!token) return null;
+    return new GitHubAPI({ token, owner: s.repoOwner, name: s.repoName, branch: s.branch });
+  },
+  // Ask for the passphrase if a vault exists and is locked. Resolves true when a token is available.
+  async ensureUnlocked() {
+    if (this.token()) return true;
+    if (!vault.hasVault()) return false;
+    const pass = prompt('Unlock LiC Admin — passphrase for your encrypted GitHub token:');
+    if (!pass) return false;
+    try { await vault.unlock(pass); this.refreshLock(); return true; } catch (e) { alert(e.message); return false; }
+  },
+  refreshLock() {
+    const el = document.getElementById('app-lock');
+    if (!vault.hasVault()) { el.hidden = true; return; }
+    el.hidden = false; el.textContent = vault.isUnlocked() ? '🔓 Lock' : '🔒 Unlock';
   },
   status(text) { document.getElementById('app-status').textContent = text || ''; },
   el(html) { const t = document.createElement('template'); t.innerHTML = html.trim(); return t.content.firstElementChild; },
@@ -46,6 +62,8 @@ function legacyLink(name) {
   const m = { posts: '<a href="/new/">New post</a> · <a href="/edit/">Edit</a> · <a href="/remove/">Remove</a> · <a href="/update/">Mass update</a>', pages: '<a href="/edit/">Edit</a>', terms: '<a href="/admin/db-maintenance/">DB maintenance</a>', media: '<a href="/admin/dedup/">Dedup</a> · <a href="/links/">Links</a>' };
   return m[name] || '';
 }
+document.getElementById('app-lock').onclick = async () => { if (vault.isUnlocked()) vault.lock(); else await ctx.ensureUnlocked(); ctx.refreshLock(); route(); };
+ctx.refreshLock();
 document.getElementById('app-nav').innerHTML = ORDER.map((k) => `<a href="#/${k}" data-view="${k}">${VIEWS[k].title}</a>`).join('');
 window.addEventListener('hashchange', route);
 route();

@@ -461,3 +461,30 @@ the same way and never sent anywhere but the AT Protocol PDS.
   WordPress comments stay as the "archived" section.
 - **A5** Retire `/new/ /edit/ /remove/ /update/ /links/ /podcast-rss/
   /admin/regenerate/ /admin/dedup/ /admin/db-maintenance/`; docs.
+
+## Decision 016 — Admin authentication: encrypted token vault now, GitHub App sign-in next
+*Date: 2026-09-16 · Status: **APPROVED by Ben***
+
+**Decision**: (1) **Now** — LiC Admin stores the GitHub token only as
+AES-GCM ciphertext (`admin/lib/vault.js`: PBKDF2-SHA256 × 310k from a
+passphrase), decrypted into the tab's `sessionStorage` on unlock;
+closing the tab locks it; a Lock/Unlock control sits in the app bar;
+"Forget token" wipes vault and plaintext. Fine-grained PATs (this repo,
+Contents + Actions, with expiry) are the recommended token. The legacy
+tools keep the plaintext path until they retire in A5.
+(2) **Next** — "Sign in with GitHub" via a **GitHub App** (permissions:
+this repository only, Contents read/write, Actions read/write; user
+authorization flow; 8-hour tokens with refresh) whose code→token
+exchange runs in a **Cloudflare Worker** (~40 lines; free tier). The
+Worker holds the App's client secret; the browser never sees it. This
+is the first external service in the architecture: free, replaceable
+in an afternoon, and the PAT vault remains as a fallback so the site
+never depends on it to publish.
+
+**Why not**: OAuth/device flows cannot complete from a static page
+(GitHub's token endpoints lack CORS), so *some* hosted exchange is
+unavoidable for real sign-in; a Worker is the smallest possible one.
+
+**Operational**: Ben authorized the GitHub App and Worker to be created
+through the browser session; the client secret is moved clipboard →
+Worker secret and is never written into chat, docs, or the repo.
