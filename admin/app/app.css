@@ -43,3 +43,17 @@
 .field small.inline { display: inline; margin-left: 4px; }
 .app-lock { font: inherit; font-size: 0.82rem; padding: 5px 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary); cursor: pointer; }
 .app-lock:hover { border-color: var(--color-accent); }
+/* editor */
+.edit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 1000px) { .edit-grid { grid-template-columns: 1fr; } }
+.editor-surface { min-height: 380px; max-height: 60vh; overflow: auto; padding: 14px 16px; border: 1px solid var(--border-color); border-radius: 10px; background: var(--bg-primary); font-family: var(--font-body); font-size: 0.98rem; line-height: 1.6; margin-top: 4px; }
+.editor-surface:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.editor-surface img { max-width: 100%; height: auto; }
+.editor-source { width: 100%; min-height: 380px; margin-top: 4px; padding: 12px; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.5; }
+.tabs-mini { display: flex; gap: 4px; margin: 4px 0 6px; }
+.tab-mini { font: inherit; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-secondary); cursor: pointer; }
+.tab-mini.active { color: var(--color-accent-dark); border-color: var(--color-accent); }
+.field textarea { display: block; width: 100%; margin-top: 4px; padding: 9px 11px; font: inherit; font-size: 0.92rem; font-weight: 400; }
+.preview-col { position: sticky; top: 64px; }
+.preview-head { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 6px; }
+.preview-frame { width: 100%; height: calc(100vh - 140px); min-height: 500px; border: 1px solid var(--border-color); border-radius: 10px; background: #fff; }

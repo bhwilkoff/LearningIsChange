@@ -676,6 +676,16 @@ appended here as ticks complete.
   with canonical terms) and the **Posts** view (search over title/URL/
   body, year/category/status filters, 50-per-page, edit links to
   `#/posts/edit/<url>`). Verified: 3,651 posts, filters correct.
+- **2026-09-16 · A2.2 done** — post editor at `#/posts/edit/<url>`:
+  title, date, status, category/tag pickers (shared `admin/lib/pickers.js`),
+  body (shared `RichEditor`, Visual/HTML tabs), excerpt; **exact
+  preview** in a sandboxed iframe rendered by `renderPostPage()` — the
+  post-page assembly moved from `regenerate-posts.js` into
+  `scripts/lib/core.js` so Node and the browser run the same function
+  (renders verified byte-identical); Save = `store.savePost` (Git Data
+  commit) + optional `render-site.yml` dispatch for that URL. Verified
+  live preview updates (title, JSON-LD, self-hosted image) with no
+  console errors. Save not exercised (needs a token).
 - **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
   secrets, fill `CONFIG.auth`, test sign-in end to end. In parallel, A2.2: the

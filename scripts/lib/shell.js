@@ -70,8 +70,7 @@ export const NON_PUBLIC_DIRS = new Set([
   'rss-creator', 'podcast-rss', 'menus', 'links', 'database-generator',
   'wp-admin', 'wp-includes', 'wp-content', '__qs',
 ]);
-// Terms worth showing (drops the ones every post carries)
-export const signalTerms = (post, key) => terms(post, key).filter((t) => !NOISE_TERMS.has(t.slug));
+
 // The rail is the same on every page of a run: build it once.
 export function rail(all, taxonomies) {
   const recent = all.slice(-5).reverse().map((p) => `<li><a href="${escapeAttr(p.url)}">${escapeHtml(p.title || 'Untitled')}</a><time>${escapeHtml(dates(p).dateOnly)}</time></li>`).join('');

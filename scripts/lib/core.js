@@ -91,6 +91,8 @@ export function terms(post, key) {
     return { name: s, slug: slugify(s), url: `${base}${slugify(s)}/` };
   }).filter((t) => t && t.slug);
 }
+// Terms worth showing (drops the ones every post carries)
+export const signalTerms = (post, key) => terms(post, key).filter((t) => !NOISE_TERMS.has(t.slug));
 export const slugify = (s) => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 // ---------- related / neighbors ----------
@@ -190,3 +192,63 @@ export function markdownTwin(post, absUrl) {
   const yaml = (arr) => arr.length ? `[${arr.map((x) => JSON.stringify(x)).join(', ')}]` : '[]';
   return `---\ntitle: ${JSON.stringify(post.title || 'Untitled')}\ndate: ${d.dateOnly}\nurl: ${absUrl}\nauthor: ${AUTHOR.name}\ncategories: ${yaml(cats)}\ntags: ${yaml(tags)}\n---\n\n# ${post.title || 'Untitled'}\n\n${toMarkdown(post.content)}`;
 }
+
+// ---------- post page (used by scripts/regenerate-posts.js AND the admin preview) ----------
+function termLinks(list, cls) {
+  return list.map((t) => `<a class="${cls}" href="${escapeAttr(t.url)}">${escapeHtml(t.name)}</a>`).join('');
+}
+function listItem(p) {
+  const d = dates(p);
+  return `<li><time datetime="${d.dateOnly}">${d.dateOnly}</time><div><a class="t" href="${escapeAttr(p.url)}">${escapeHtml(p.title || 'Untitled')}</a><span class="d">${escapeHtml(describe(p, 150))}</span></div></li>`;
+}
+
+// Recovered WordPress comment threads (scripts/recover-comments.js), read-only.
+function renderComments(post) {
+  const list = Array.isArray(post.comments) ? post.comments : [];
+  if (!list.length) return '';
+  const byParent = new Map();
+  for (const c of list) (byParent.get(c.parent || null) || byParent.set(c.parent || null, []).get(c.parent || null)).push(c);
+  const fmt = (iso) => { const d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); };
+  const item = (c) => {
+    const who = c.author_url ? `<a href="${escapeAttr(c.author_url)}" rel="ugc nofollow">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
+    const kids = byParent.get(c.id) || [];
+    return `<li class="comment" id="comment-${escapeAttr(c.id)}"><div class="comment-head">${c.avatar ? `<img class="comment-avatar" src="${escapeAttr(c.avatar)}" alt="" width="40" height="40" loading="lazy">` : ''}<span class="comment-author">${who}</span>${c.date ? `<a class="comment-date" href="#comment-${escapeAttr(c.id)}"><time datetime="${escapeAttr(c.date)}">${fmt(c.date)}</time></a>` : ''}</div><div class="comment-body">${selfHostImages(c.html)}</div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
+  };
+  const roots = byParent.get(null) || [];
+  return `<section class="comments" id="comments"><h2>${list.length} ${list.length === 1 ? 'comment' : 'comments'} <small>archived from the original blog; comments are closed</small></h2><ol class="comment-list">${roots.map(item).join('')}</ol></section>`;
+}
+
+export function renderPostPage(template, post, { prev = null, next = null, related = [], shell = {} } = {}) {
+  const url = post.url;
+  const absUrl = SITE + url;
+  const d = dates(post);
+  const cats = signalTerms(post, 'categories');
+  const tags = signalTerms(post, 'tags');
+  const description = describe(post);
+  const rel = related;
+  const slug = url.replace(/\/$/, '').split('/').pop() || 'post';
+
+  const values = {
+    title: escapeHtml(post.title || 'Untitled'),
+    description: escapeAttr(description),
+    abs_url: absUrl,
+    og_image: escapeAttr(firstImage(post.content) || DEFAULT_IMAGE),
+    date_iso: d.iso,
+    date_formatted: d.formatted,
+    json_ld: jsonLdPost(post, absUrl, d, description),
+    body_classes: [...cats.map((c) => `category-${c.slug}`), ...tags.map((t) => `tag-${t.slug}`)].join(' '),
+    post_id: slug,
+    categories: termLinks(cats, 'card-tag'),
+    word_count: String(wordCount(post.content)),
+    reading_time: String(readingMinutes(post.content)),
+    tags: termLinks(tags, 'tag'),
+    prev_link: prev ? `<a href="${escapeAttr(prev.url)}" class="prev" rel="prev"><small>← Previous</small><strong>${escapeHtml(prev.title || 'Untitled')}</strong></a>` : '<span></span>',
+    next_link: next ? `<a href="${escapeAttr(next.url)}" class="next" rel="next"><small>Next →</small><strong>${escapeHtml(next.title || 'Untitled')}</strong></a>` : '<span></span>',
+    related: rel.length ? `<section class="related"><h2>Related</h2><ul class="post-list">${rel.map(listItem).join('')}</ul></section>` : '',
+    comments: renderComments(post),
+    ...shell,
+  };
+  // content last: a body that happens to contain "{{...}}" must never be expanded
+  return fill(template, values).split('{{content}}').join(selfHostImages(post.content));
+}
+

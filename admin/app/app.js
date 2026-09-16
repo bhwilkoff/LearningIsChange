@@ -9,6 +9,7 @@ import * as oauth from '/admin/lib/oauth.js';
 import * as render from './views/render.js';
 import * as settings from './views/settings.js';
 import * as posts from './views/posts.js';
+import * as edit from './views/edit.js';
 
 const VIEWS = {
   posts, pages: { title: 'Pages', soon: 'A2' }, terms: { title: 'Terms', soon: 'A2' },
@@ -48,8 +49,11 @@ export const ctx = {
 
 let current = null;
 function route() {
-  const name = (location.hash.replace(/^#\/?/, '').split('/')[0]) || 'render';
-  const view = VIEWS[name] || VIEWS.render;
+  const path = location.hash.replace(/^#\/?/, '');
+  const name = path.split('/')[0] || 'render';
+  // #/posts/edit/<url> → editor
+  const sub = path.startsWith('posts/edit/') ? path.slice('posts/edit'.length) : null;
+  const view = sub !== null ? edit : (VIEWS[name] || VIEWS.render);
   document.querySelectorAll('#app-nav a').forEach((a) => a.classList.toggle('active', a.dataset.view === name));
   if (current?.destroy) current.destroy();
   const root = document.getElementById('view');
@@ -59,7 +63,7 @@ function route() {
     root.appendChild(ctx.el(`<div><h1>${view.title}</h1><p class="lead">Coming in phase ${view.soon} (Decision 015). Until then use the existing tool: ${legacyLink(name)}.</p></div>`));
     current = null; return;
   }
-  current = view; view.render(root, ctx);
+  current = view; view.render(root, ctx, sub);
 }
 function legacyLink(name) {
   const m = { posts: '<a href="/new/">New post</a> · <a href="/edit/">Edit</a> · <a href="/remove/">Remove</a> · <a href="/update/">Mass update</a>', pages: '<a href="/edit/">Edit</a>', terms: '<a href="/admin/db-maintenance/">DB maintenance</a>', media: '<a href="/admin/dedup/">Dedup</a> · <a href="/links/">Links</a>' };
