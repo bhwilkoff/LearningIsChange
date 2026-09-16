@@ -245,7 +245,7 @@ items get done in a later tick and moved to *Done*.
   posts and relative on 12 (the ones written by `/new/`). Normalize
   to relative in a maintenance pass? (Renderers must tolerate both
   until then; `generate-sitemap.js` already does.)
-- ⚠️ C-4 **Mojibake — corrected scope: 2,587 posts (71%), not 33.**
+- ✅ **Done tick 8 (Ben approved full scope)** C-4 **Mojibake — corrected scope: 2,615 posts (72%), not 33.**
   The first count matched the cp1252 form (`â€™`); the data holds the
   latin-1 form (`â\x80\x99`), which browsers render identically. Same
   double-encoded-UTF-8 defect, present since the export, heaviest in
@@ -355,8 +355,13 @@ resolves them on its own.)*
 - **2026-09-16 · tick 7 (C-4, paused)** — Dry-run only. Real scope is
   2,587 posts (see C-4). Verified the repair touches nothing but
   double-encoded runs. Waiting on Ben before applying.
-  **Next**: if approved, apply C-4 (rewrite shards, regenerate 2,587
-  posts, permalink check, commit); then P1: promote
+  **Next**: see tick 8.
+- **2026-09-16 · tick 8 (C-4 applied)** — Ben approved the full scope.
+  `ftfy` encoding-only repair on 4,591 fields in 2,615 posts (one JSON
+  line per field); all posts regenerated (2,615 changed), stats/search
+  rebuilt, permalink check OK, 0 rendered posts still contain a
+  double-encoded run.
+  **Next**: P1 — promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
