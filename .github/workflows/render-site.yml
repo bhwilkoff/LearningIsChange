@@ -1,0 +1,74 @@
+name: Render Site
+
+# One pipeline for the whole site (Decision 014): JSON in database/ is the
+# source of truth; every HTML page, Markdown twin, feed and the sitemap are
+# derived. Runs the permalink guarantee before committing.
+#
+# Triggered from the admin tools after they write JSON, or manually.
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'What to render'
+        required: true
+        type: choice
+        options: ['all', 'posts', 'archives', 'pages', 'feeds']
+        default: 'all'
+      year:
+        description: 'Limit posts to one year (e.g. 2026). Empty = all years.'
+        required: false
+        type: string
+        default: ''
+      dry_run:
+        description: 'Dry run (report only; do not write or commit)'
+        required: true
+        type: choice
+        options: ['true', 'false']
+        default: 'true'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Render
+        run: |
+          set -euo pipefail
+          APPLY=""; [ "${{ inputs.dry_run }}" = "false" ] && APPLY="--apply"
+          YEAR=""; [ -n "${{ inputs.year }}" ] && YEAR="--year=${{ inputs.year }}"
+          S="${{ inputs.scope }}"
+          if [ "$S" = all ] || [ "$S" = posts ];    then node scripts/regenerate-posts.js $APPLY $YEAR; fi
+          if [ "$S" = all ] || [ "$S" = archives ]; then node scripts/render-archives.js $APPLY; fi
+          if [ "$S" = all ] || [ "$S" = pages ];    then node scripts/render-pages.js $APPLY; fi
+          if [ "$S" = all ] || [ "$S" = feeds ];    then node scripts/render-feeds.js $APPLY; fi
+          if [ -n "$APPLY" ]; then
+            node scripts/recompute-database-stats.js --apply
+            node scripts/check-permalinks.js --snapshot
+            node scripts/generate-sitemap.js --apply
+          fi
+
+      - name: Permalink guarantee (Decision 014)
+        if: inputs.dry_run == 'false'
+        run: node scripts/check-permalinks.js
+
+      - name: Commit and push
+        if: inputs.dry_run == 'false'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "No changes to commit"; exit 0; fi
+          changed=$(git diff --cached --stat | tail -1)
+          git commit -m "render site (${{ inputs.scope }}${{ inputs.year && format(' {0}', inputs.year) || '' }}) — $changed"
+          for attempt in 1 2 3 4 5; do
+            if git push 2>&1; then exit 0; fi
+            echo "Push rejected (attempt $attempt) — rebasing..."
+            git fetch origin && git rebase origin/main && sleep 5
+          done
+          echo "Push failed after 5 attempts" >&2; exit 1

@@ -177,7 +177,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | Static pages (65) | 🟩 | **P3 done 2026-09-16.** `scripts/render-pages.js` + `templates/page.html`/`redirect.html`, rules in `database/page-rules.json`: 55 pages (23 noindex), 11 redirects; `/all-posts/` is a real full index by year |
 | Portfolio (`/portfolio/*`) | 🟩 | Reference design; minor: shared nav should come from one fragment |
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
-| Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟨 | Render from JSON; keep GUIDs; drop the patch-in-place workflows |
+| Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟩 | **Done 2026-09-16.** `scripts/render-feeds.js` from JSON; every original GUID retained; podcast feed untouched. `update-rss.yml`/`remove-from-rss.yml` retire in P5 when the tools dispatch `render-site.yml` |
 | Search (`/search/`) | 🟨 | Keep engine; reskin on the portfolio system |
 | Masthead / sidebar / colophon / footer fragments | ⛔ | No page uses the Fluida zones any more (0 files carry `LIC:MASTHEAD`). Delete `templates/fragments/`, `regenerate-fragments.js`/`.yml`, `add-zone-markers.js`, `capture-fragments.js` in P4 |
 | `wp-includes/`, `wp-content/plugins/`, `wp-content/themes/` | ⛔ | 52 MB of runtime nobody executes once templates change; delete after conversion (needs DECISIONS entry) |
@@ -405,9 +405,23 @@ resolves them on its own.)*
   the C-4 encoding repair to `pages.json` as well (16 pages, 25 fields —
   same defect, same approval, noted here explicitly). **No page on the
   site uses the Fluida theme any more.**
-  **Next**: feeds from JSON (`scripts/render-feeds.js`: `feed/index.xml`
-  excerpts, `feed/full.xml` full, keep every GUID; retire
-  `update-rss.yml`/`remove-from-rss.yml`), then P4 deletions. promote
+  **Next**: see tick 12.
+- **2026-09-16 · tick 12 (feeds)** — `scripts/render-feeds.js` renders
+  `feed/index.xml` (newest 50) and `feed/full.xml` (all 3,651; 10.9 MB,
+  was 39 MB) from JSON with the original channel metadata and
+  permalink GUIDs; feed-only transform makes `src`/`href` absolute for
+  readers. Found the patch-in-place drift: 14 posts had never reached
+  `full.xml`, and `index.xml` carried a GUID for a deduplicated post.
+  Checker semantics: `index.xml` is a rolling window (its GUIDs must
+  exist in `full.xml`); `full.xml` + podcast keep full retention (3,878
+  GUIDs). Podcast feed untouched. Added `.github/workflows/render-site.yml`
+  — the single pipeline (posts → archives → pages → feeds → stats →
+  permalinks → sitemap → check → commit) the admin tools will dispatch.
+  **Next**: P4 — delete `wp-includes/`, `wp-content/plugins/`,
+  `wp-content/themes/` (D-6), the Fluida fragment machinery
+  (`templates/fragments/`, `templates/legacy/`, `regenerate-fragments.*`,
+  `add-zone-markers.js`, `capture-*.js`), and `docs/mockups/`; confirm no
+  page references any deleted asset; `llms.txt`. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

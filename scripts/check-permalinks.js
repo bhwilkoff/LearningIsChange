@@ -93,10 +93,16 @@ if (!list.urls.length) { console.error('No database/permalinks.json — run with
 const missingUrls = list.urls.filter((u) => !fs.existsSync(urlToFile(u)));
 const now = feedGuids();
 const missingGuids = [];
+// feed/index.xml is a rolling window (newest N), so its GUIDs are not retained —
+// instead every GUID it carries must be a real, retained item of full.xml.
+const ROLLING = new Set(['feed/index.xml']);
+const fullSet = new Set(now['feed/full.xml'] || []);
 for (const [f, guids] of Object.entries(list.guids || {})) {
+  if (ROLLING.has(f)) continue;
   const have = new Set(now[f] || []);
   for (const g of guids) if (!have.has(g)) missingGuids.push(`${f}: ${g}`);
 }
+for (const f of ROLLING) for (const g of now[f] || []) if (!fullSet.has(g)) missingGuids.push(`${f}: ${g} (not in full.xml)`);
 
 const ok = missingUrls.length === 0 && missingGuids.length === 0;
 console.log(`${ok ? 'OK' : 'FAIL'} — ${list.urls.length} protected URLs, ${Object.values(list.guids || {}).reduce((n, l) => n + l.length, 0)} feed GUIDs checked`);
