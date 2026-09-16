@@ -111,6 +111,15 @@ export class GitHubAPI {
     );
   }
 
+  // Actions: runs of one workflow (newest first) and the jobs/steps of a run
+  listWorkflowRuns(workflowFile, perPage = 8) {
+    return this.request(`/repos/${this.owner}/${this.name}/actions/workflows/${workflowFile}/runs?per_page=${perPage}&branch=${this.branch}`);
+  }
+  getRunJobs(runId) {
+    return this.request(`/repos/${this.owner}/${this.name}/actions/runs/${runId}/jobs`);
+  }
+  getRateLimit() { return this.request('/rate_limit'); }
+
   // Create a blob from a string (UTF-8) or a Uint8Array. Returns { sha, url }.
   async createBlob(content) {
     let b64;

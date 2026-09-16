@@ -640,12 +640,24 @@ appended here as ticks complete.
   validates with 0 errors / 0 warnings. `scripts/lib/core.js` (192
   lines, no Node imports — runs in the browser) split out of
   `shell.js` (Node adapter, re-exports core); renders byte-identical.
-- **Next**: A1 — `admin/app/` core: `github.js` (REST + Git Data
-  commits + Actions dispatch/poll), `store.js` (shards, pages, terms,
-  ETag cache, `isLive`), `settings.js` (fine-grained token, Bluesky app
-  password), `jobs.js`, `router.js`, and the app shell
-  (`admin/app/index.html` on `admin/admin.css`) with a working
-  **Render** view (dispatch + live job status) as the first view. promote
+- **2026-09-16 · A1 done** — `admin/app/` shell: hash router + view
+  registry (`app.js`), `app.css` on the admin tokens, **Render** view
+  (dispatch `render-site.yml` with scope/year/url/dry-run; recent runs
+  with status, duration, links; live step progress for a running job,
+  polled via the Actions API) and **Settings** view (fine-grained token
+  guidance, repo/branch/committer, remember-toggle, Bluesky handle +
+  app password for A4, "Test connection" showing access level + rate
+  limit). Built on `admin/lib/` — added `listWorkflowRuns`,
+  `getRunJobs`, `getRateLimit`, Bluesky settings fields — rather than a
+  new client. Posts/Pages/Terms/Media are placeholders linking to the
+  legacy tools until A2. Admin bar links to the app. No console errors.
+- **Next**: A2.1 — `admin/app/store.js` (shards, pages, taxonomies
+  with ETag/If-None-Match caching, `isLive`, per-record get/update,
+  shard commit via Git Data) and the **Posts** view: list/search/filter
+  (year, category, status), open a post → editor (title, date, terms,
+  body via `admin/lib/editor.js`, excerpt) with **exact preview**
+  (`scripts/lib/core.js` + `templates/post.html` fetched at runtime),
+  save → shard commit → dispatch render(url). Then Pages, Terms, Media. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

@@ -32,6 +32,8 @@ const DEFAULTS = Object.freeze({
   committerName: '',
   committerEmail: '',
   rememberToken: false,
+  blueskyHandle: '',
+  blueskyAppPassword: '',
 });
 
 export function getSettings() {
@@ -53,7 +55,7 @@ export function getSettings() {
 export function saveSettings(settings) {
   const toSave = settings.rememberToken
     ? settings
-    : { ...settings, githubToken: '' };
+    : { ...settings, githubToken: '', blueskyAppPassword: '' };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
 }
 

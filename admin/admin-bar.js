@@ -3,7 +3,7 @@
 // Injects a compact switcher across the tools (styled by /admin/admin.css).
 (function () {
   var tools = [
-    ['/admin/', 'Dashboard'], ['/new/', 'New post'], ['/edit/', 'Edit'], ['/remove/', 'Remove'],
+    ['/admin/', 'Dashboard'], ['/admin/app/', 'LiC Admin ✦'], ['/new/', 'New post'], ['/edit/', 'Edit'], ['/remove/', 'Remove'],
     ['/admin/regenerate/', 'Render'], ['/update/', 'Mass update'],
     ['/podcast-rss/', 'Podcast'], ['/links/', 'Links'], ['/search/', 'Search'],
     ['/admin/dedup/', 'Dedup'], ['/admin/db-maintenance/', 'DB'],
