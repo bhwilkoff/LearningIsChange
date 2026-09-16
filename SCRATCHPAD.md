@@ -11,6 +11,10 @@
 - **Lighthouse (desktop, local render, 2026-09-16)**: homepage, post,
   category page, portfolio page — Perf 99–100 / A11y 100 / Best 100 /
   SEO 100.
+- **Program 2 (Decision 015, 2026-09-16)**: one admin application on
+  the JSON model — schema, shared core, views, drafts/scheduling, WebP
+  uploads, Bluesky cross-post + replies as comments. Phases A0–A5;
+  progress in `docs/MODERNIZATION-AUDIT.md` §7.
 - **Optional follow-ups** (none required): dark/light manual toggle;
   `llms.txt` refresh when the homepage changes; per-tool polish in the
   admin UIs; the 10 uploads referenced with `+` in their names (C-3)

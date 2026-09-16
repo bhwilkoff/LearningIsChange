@@ -621,8 +621,25 @@ resolves them on its own.)*
   title-only posts (empty body in the original export) now render
   instead of being skipped. `feed/full.xml` 10.8 → 8.8 MB. Zero
   `widgets.wp.com` references remain anywhere rendered.
-  **Next**: none scheduled — the loop stays idle unless Ben adds
-  requests; each tick re-checks the live site. promote
+  **Next**: see Program 2.
+
+---
+
+## 7. Program 2 — LiC Admin (Decision 015, approved 2026-09-16)
+
+One admin application on the JSON model; phases A0–A5 in
+`DECISIONS.md`. Same tick discipline as Program 1. Status lines are
+appended here as ticks complete.
+
+- **Next**: A0 — `database/schema.json` (post, page, term, comment
+  shapes as they exist today, plus `status` and `bluesky` fields for
+  A3/A4), `scripts/validate-database.js` (zero-dependency validator;
+  reports per-shard; gate in `render-site.yml` before rendering), and
+  the `shell.js` split into `scripts/lib/core.js` (browser-safe:
+  `fill`, `terms`, `dates`, `describe`, `plainText`, `toMarkdown`,
+  `jsonLdPost`, `selfHostImages` taking an `exists` callback) +
+  `scripts/lib/shell.js` (Node: fs/partials/loaders). Renders must stay
+  byte-identical. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

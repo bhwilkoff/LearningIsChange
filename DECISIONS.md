@@ -409,3 +409,55 @@ tool follows the site design system (`admin/admin.css`).
 once per phase). Fluida's visual identity (header image, blue
 accent) is replaced; the header image and tagline are queued for
 Ben's call (queue B-2, B-3) rather than silently dropped.
+
+## Decision 015 — LiC Admin: one application on the JSON content model
+*Date: 2026-09-16 · Status: **APPROVED by Ben** (scope chosen the same day)*
+
+**Decision**: The eleven single-file admin tools are replaced by one
+ES-module application at `/admin/` — views for **Posts, Pages, Terms,
+Media, Render, Settings** — built on a shared core (one GitHub client,
+one settings store, one content store, one workflow monitor) and a
+**written content schema** (`database/schema.json`) validated inside
+`render-site.yml`. No framework, no build step, no runtime
+dependencies (unchanged from Decisions 001/014). Each old tool stays
+live until its view replaces it, then becomes a redirect.
+
+**In scope for v1** (Ben): exact in-browser preview using the site's
+own renderer; drafts (`status: draft`) and scheduled publishing
+(future `date_published` + a daily scheduled render); a client-side
+WebP image pipeline on upload; Bluesky cross-posting over AT Protocol
+with replies rendered under posts as the comment system.
+
+**Why**: the render pipeline and JSON model already behave like a CMS
+backend; the tools are the bottleneck — ~15k lines, mostly duplicated
+plumbing, each with its own settings and job handling. A schema makes
+the JSON a database rather than a pile of files; a single app makes
+every future feature land once.
+
+**Not doing**: headless CMS services, frameworks, database services,
+Markdown as the stored format (HTML stays canonical; Markdown twins
+are derived), any comment backend of our own.
+
+**Security**: fine-grained GitHub token (this repo, contents + actions,
+expiring) held in `localStorage` as today; Bluesky app password stored
+the same way and never sent anywhere but the AT Protocol PDS.
+
+**Phases** (each shippable; the loop works through them):
+- **A0** Content schema + `scripts/validate-database.js` (gate in
+  `render-site.yml`); `scripts/lib/shell.js` split into a browser-safe
+  core (`templates` + `fill` + helpers) and a Node adapter.
+- **A1** `admin/app/` core: `github.js` (REST + Git Data + Actions),
+  `store.js` (shards, pages, terms, ETag cache), `settings.js`,
+  `jobs.js` (dispatch + poll `render-site.yml`), `router.js`, shell UI
+  on `admin/admin.css`.
+- **A2** Views: Posts (list/search/new/edit/retire + exact preview),
+  Pages, Terms, Media (WebP pipeline), Render, Settings. Old tools
+  redirect as each lands.
+- **A3** Drafts + scheduled publishing (renderer skips drafts and
+  future dates; `render-site.yml` gains a daily `schedule:` trigger).
+- **A4** Bluesky: cross-post on publish (AT Protocol `createRecord`),
+  store the post URI on the entry, render replies under the article at
+  render time (public `getPostThread`, no auth); the recovered
+  WordPress comments stay as the "archived" section.
+- **A5** Retire `/new/ /edit/ /remove/ /update/ /links/ /podcast-rss/
+  /admin/regenerate/ /admin/dedup/ /admin/db-maintenance/`; docs.
