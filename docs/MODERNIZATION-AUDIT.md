@@ -527,11 +527,19 @@ resolves them on its own.)*
   Smoke-tested in the browser: 2026 scan → 15/17 records → one pending
   `database/posts/2026.json` (valid, 15 records stamped). Rules UI,
   preview and resume are untouched.
-  **Next**: `/new/` simplify pass (strip the ~1,400 lines of dead
-  HTML/archive/RSS generators); then `/podcast-rss/` and `/links/`
-  audit (podcast: still scans HTML for PowerPress embeds → should read
-  JSON content; links: scans the rendered site, fine); then a
-  `/simplify` pass over `scripts/` and `templates/`. promote
+  **Next**: see tick 23.
+- **2026-09-16 · tick 23 (`/new/` simplify)** — AST-based dead-code
+  pass (`scripts/dev-deadcode.mjs`, acorn in a scratch dir, dev-only):
+  removed 23 unreferenced functions (archive/RSS/taxonomy/manifest/
+  search generators, Fluida article builders) plus `generatePostHtml`,
+  `renderPostFromTemplate`, `siteComponents`, `pendingRssWorkflow`.
+  3,570 → 2,245 lines. Tool loads with no console errors; all live
+  entry points present.
+  **Next**: `/podcast-rss/` audit (scans HTML for PowerPress embeds →
+  read JSON content instead) and `/links/` check; then a `/simplify`
+  pass over `scripts/` + `templates/`; then revisit the open queue
+  items with Ben (A-6, B-5, C-1, C-3, C-8, C-9 closed by P2, C-10,
+  C-11, D-3). promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,

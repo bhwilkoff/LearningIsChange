@@ -93,7 +93,7 @@ painful to iterate on in a single chat context.
 | Path | Tool | Size | Role |
 |---|---|---|---|
 | `/admin/` | Dashboard | 414 | Launcher / tool index |
-| `/new/` | Post Generator | 3,570 | Create post, update DB, dispatch RSS |
+| `/new/` | Post Generator | 2,245 | Create post, update DB, dispatch RSS |
 | `/edit/` | Page Editor | 2,506 | WYSIWYG (native contenteditable) edit any page/post |
 | `/update/` | Mass Updater | 4,201 | Bulk find/replace across the repo |
 | `/remove/` | Post Remover | 1,653 | Tombstone a post in its shard + dispatch render |
