@@ -715,14 +715,8 @@
                         <span class="settings-toggle open" id="outputToggle">▼</span>
                     </div>
                     <div class="settings-body open" id="outputBody">
-                        <label class="checkbox-label"><input type="checkbox" id="updateMonthArchive" checked> Create/update monthly archive</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateYearArchive" checked> Create/update yearly archive</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateHomepage" checked> Update homepage</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateCategoryArchive" checked> Update category archive</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateTagArchives" checked> Update tag archives</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateAuthorArchive" checked> Update author archive</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateRssFeed" checked> Update RSS feeds (index.xml & full.xml)</label>
-                        <label class="checkbox-label"><input type="checkbox" id="updateDatabase" checked> Update database (posts, taxonomies, manifest, search, changelog)</label>
+                        <label class="checkbox-label"><input type="checkbox" id="renderAfterPublish" checked> Render the site after publishing (dispatches <code>render-site.yml</code>: post page + Markdown twin, archives, feeds, search, sitemap)</label>
+                        <p style="font-size:0.85rem;color:var(--text-muted);margin:8px 0 0">The post is written to <code>database/posts/YYYY.json</code> (the source of truth) plus any uploaded images and the changelog. Everything else is derived by the workflow, which also runs the permalink guarantee before committing.</p>
                     </div>
                 </div>
             </div>
@@ -2184,162 +2178,37 @@
             updateProgress(5, 'Fetching site structure from GitHub...');
             
             try {
-                // First, fetch the homepage to extract site components
-                const homepageHtml = await LiCAdmin.fetchFileFromGithub('index.html');
-                if (homepageHtml) {
-                    siteComponents.homepageHtml = homepageHtml;
-                    extractSiteComponents(homepageHtml);
-                    log('✓ Loaded site structure from homepage', 'success');
-                } else {
-                    log('⚠ Could not fetch homepage - will create minimal archive pages', 'info');
-                }
-                
-                updateProgress(10, 'Generating post HTML...');
+                updateProgress(10, 'Preparing post data...');
 
                 const content = getEditorContent();
                 const plainText = getEditorText();
                 const excerpt = plainText.substring(0, 200).trim() + (plainText.length > 200 ? '...' : '');
 
-                // M4: prefer template-based rendering. The template
-                // (templates/post.html) is the single source of truth for post
-                // page markup; all data is substituted from the form. If the
-                // template can't be fetched, fall back to the inline
-                // generatePostHtml() that's embedded in this tool.
-                let postHtml = await renderPostFromTemplate({ title, date, slug, content, excerpt, category: selectedCategory, tags: selectedTags, year, month, day });
-                if (postHtml) {
-                    log(`✓ Generated post from templates/post.html`, 'success');
-                } else {
-                    postHtml = generatePostHtml({ title, date, slug, content, excerpt, category: selectedCategory, tags: selectedTags, year, month, day });
-                    log(`⚠ Template fetch failed, used inline generator`, 'warning');
-                }
-                generatedFiles[`${postPath}/index.html`] = postHtml;
-                log(`✓ Post HTML: ${postPath}/index.html`, 'success');
-                
+                // Decision 014: the tool writes the source of truth only.
+                // templates/ + scripts/ render the post page, archives, feeds
+                // and search from JSON in the render-site.yml workflow.
                 updateProgress(20, 'Processing images...');
                 for (const img of uploadedImages) {
                     const imgPath = `wp-content/uploads/${year}/${month}/${img.name}`;
                     generatedFiles[imgPath] = { content: img.data, isBase64: true };
                     log(`✓ Prepared image: ${imgPath}`, 'success');
                 }
-                
-                // Create the new post data object for archive insertion
-                const newPostData = { 
-                    title, date, slug, excerpt, content,
-                    url: postUrl, 
-                    category: selectedCategory, 
-                    tags: selectedTags 
-                };
-                
-                updateProgress(30, 'Updating month archive...');
-                
-                if (document.getElementById('updateMonthArchive').checked) {
-                    const monthArchive = await generateMonthArchive(year, month, newPostData);
-                    generatedFiles[`${year}/${month}/index.html`] = monthArchive;
-                    log(`✓ Updated month archive: ${year}/${month}/`, 'success');
+
+                updateProgress(60, 'Updating database shard...');
+                const dbUpdate = await generateDatabaseUpdate({ title, date, slug, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags, year });
+                if (!dbUpdate) throw new Error(`Could not build database/posts/${year}.json`);
+                generatedFiles[`database/posts/${year}.json`] = dbUpdate;
+                log(`✓ Post written to database/posts/${year}.json`, 'success');
+
+                const changelogUpdate = await generateChangelogUpdate({ title, postUrl, category: selectedCategory, tags: selectedTags });
+                if (changelogUpdate) {
+                    generatedFiles['database/changelog.json'] = changelogUpdate;
+                    log(`✓ Updated changelog: database/changelog.json`, 'success');
                 }
-                
-                updateProgress(40, 'Updating year archive...');
-                
-                if (document.getElementById('updateYearArchive').checked) {
-                    const yearArchive = await generateYearArchive(year, newPostData);
-                    generatedFiles[`${year}/index.html`] = yearArchive;
-                    log(`✓ Updated year archive: ${year}/`, 'success');
-                }
-                
-                updateProgress(45, 'Updating homepage...');
-                
-                if (document.getElementById('updateHomepage').checked) {
-                    const homepageUpdate = await generateHomepageUpdate(newPostData);
-                    if (homepageUpdate) {
-                        generatedFiles['index.html'] = homepageUpdate;
-                        log(`✓ Updated homepage: index.html`, 'success');
-                    }
-                }
-                
-                updateProgress(50, 'Updating category/tag archives...');
-                
-                if (document.getElementById('updateCategoryArchive').checked && selectedCategory) {
-                    const catPath = selectedCategory.fullPath || selectedCategory.slug;
-                    const catArchive = await generateCategoryArchive(selectedCategory, newPostData);
-                    generatedFiles[`category/${catPath}/index.html`] = catArchive;
-                    log(`✓ Updated category archive: category/${catPath}/`, 'success');
-                }
-                
-                if (document.getElementById('updateTagArchives').checked && selectedTags.length > 0) {
-                    for (const tag of selectedTags) {
-                        const tagArchive = await generateTagArchive(tag, newPostData);
-                        generatedFiles[`tag/${tag.slug}/index.html`] = tagArchive;
-                        log(`✓ Updated tag archive: tag/${tag.slug}/`, 'success');
-                    }
-                }
-                
-                updateProgress(55, 'Updating author archive...');
-                
-                if (document.getElementById('updateAuthorArchive').checked) {
-                    const authorArchive = await generateAuthorArchive(newPostData);
-                    generatedFiles['author/bhwilkoff/index.html'] = authorArchive;
-                    log(`✓ Updated author archive: author/bhwilkoff/`, 'success');
-                }
-                
-                updateProgress(65, 'Updating RSS feeds...');
-                
-                if (document.getElementById('updateRssFeed').checked) {
-                    // Update summary feed (feed/index.xml) - small enough for API
-                    const rssUpdate = await generateRssFeedUpdate({ title, date, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags });
-                    if (rssUpdate) {
-                        generatedFiles['feed/index.xml'] = rssUpdate;
-                        log(`✓ Updated RSS feed: feed/index.xml`, 'success');
-                    }
-                    
-                    // full.xml is too large (40MB+) for GitHub API - trigger workflow instead
-                    log(`  Will trigger GitHub Action to update feed/full.xml`, 'info');
-                    pendingRssWorkflow = {
-                        post_url: postUrl,
-                        post_year: year
-                    };
-                } else {
-                    pendingRssWorkflow = null;
-                }
-                
-                updateProgress(80, 'Updating database...');
-                
-                if (document.getElementById('updateDatabase').checked) {
-                    // Update posts shard
-                    const dbUpdate = await generateDatabaseUpdate({ title, date, slug, content, excerpt, postUrl, category: selectedCategory, tags: selectedTags, year });
-                    if (dbUpdate) {
-                        generatedFiles[`database/posts/${year}.json`] = dbUpdate;
-                        log(`✓ Updated database shard: database/posts/${year}.json`, 'success');
-                    }
-                    
-                    // Update taxonomies
-                    const taxonomiesUpdate = await generateTaxonomiesUpdate({ category: selectedCategory, tags: selectedTags });
-                    if (taxonomiesUpdate) {
-                        generatedFiles['database/taxonomies.json'] = taxonomiesUpdate;
-                        log(`✓ Updated taxonomies: database/taxonomies.json`, 'success');
-                    }
-                    
-                    // Update manifest
-                    const manifestUpdate = await generateManifestUpdate({ year, category: selectedCategory, tags: selectedTags });
-                    if (manifestUpdate) {
-                        generatedFiles['database/manifest.json'] = manifestUpdate;
-                        log(`✓ Updated manifest: database/manifest.json`, 'success');
-                    }
-                    
-                    // Update search index
-                    const searchUpdate = await generateSearchUpdate({ title, date, slug, excerpt, postUrl, category: selectedCategory, tags: selectedTags, year });
-                    if (searchUpdate) {
-                        generatedFiles['database/search.json'] = searchUpdate;
-                        log(`✓ Updated search index: database/search.json`, 'success');
-                    }
-                    
-                    // Update changelog
-                    const changelogUpdate = await generateChangelogUpdate({ title, postUrl, category: selectedCategory, tags: selectedTags });
-                    if (changelogUpdate) {
-                        generatedFiles['database/changelog.json'] = changelogUpdate;
-                        log(`✓ Updated changelog: database/changelog.json`, 'success');
-                    }
-                }
-                
+
+                pendingRssWorkflow = null;
+                log(`  Post page, archives, feeds, taxonomies and search will be rendered by render-site.yml after publish.`, 'info');
+
                 updateProgress(100, 'Generation complete!');
                 log(`🎉 Generated ${Object.keys(generatedFiles).length} files. Ready to publish or download!`, 'success');
                 document.getElementById('downloadBtn').classList.remove('hidden');
@@ -3586,15 +3455,17 @@ ${siteComponents.head}
                 
                 const result = await LiCAdmin.commitMultipleFiles(files, `New post: ${document.getElementById('postTitle').value}`);
                 
-                // Trigger RSS workflow if needed
-                if (pendingRssWorkflow) {
-                    log('Triggering GitHub Action to update RSS feeds...', 'info');
+                // Render everything derived from the JSON (Decision 014)
+                if (document.getElementById('renderAfterPublish').checked) {
+                    log('Dispatching render-site.yml (scope=all)...', 'info');
                     try {
-                        await LiCAdmin.triggerWorkflow('update-rss.yml', pendingRssWorkflow);
-                        log('✓ RSS update workflow triggered', 'success');
+                        await LiCAdmin.triggerWorkflow('render-site.yml', { scope: 'all', year: '', url: '', dry_run: 'false' });
+                        log('✓ Render workflow dispatched — the post page appears once the run and the Pages build finish (a few minutes).', 'success');
                     } catch (workflowError) {
-                        log(`⚠️ Could not trigger RSS workflow: ${workflowError.message}`, 'warning');
+                        log(`⚠️ Could not dispatch render-site.yml: ${workflowError.message}. Run it from /admin/regenerate/.`, 'warning');
                     }
+                } else {
+                    log('Render skipped — run render-site.yml from /admin/regenerate/ to publish the page.', 'warning');
                 }
                 
                 updateProgress(100, 'Published successfully!');

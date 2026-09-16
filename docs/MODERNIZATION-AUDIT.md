@@ -450,12 +450,23 @@ resolves them on its own.)*
   `/meet/` keeps its minimal bar but gets `site.css`. "Portfolio" added to
   the unified nav. `render-shell.js` runs in `render-site.yml`. Whole
   site re-rendered; permalink check OK.
-  **Next**: P5.2 — `/new/` writes JSON only (upsert post shard via
-  `admin/lib/mutate.js`, taxonomies via `recompute` in the workflow)
-  and dispatches `render-site.yml` (scope=posts, url) instead of writing
-  Fluida HTML + patching RSS; then `/edit/`, `/remove/`; then retire
-  `update-rss.yml`, `remove-from-rss.yml`, `regenerate-posts.yml`; then
-  reskin `/search/`. promote
+  **Next**: see tick 16.
+- **2026-09-16 · tick 16 (P5.2)** — `/new/` ported: the generate step
+  now produces only the source of truth (post entry in
+  `database/posts/YYYY.json` with canonical terms, uploaded images,
+  changelog); the eight "output options" collapsed into one "render the
+  site after publishing" toggle; publish commits the JSON and dispatches
+  `render-site.yml` (scope=all) instead of writing Fluida HTML, patching
+  seven archive pages and `feed/index.xml`, and triggering
+  `update-rss.yml`. Loads with no console errors; inline scripts pass
+  `node --check`. The now-unused generators (~1,400 lines:
+  `generatePostHtml`, archive/RSS/taxonomy/manifest/search updaters)
+  stay in the file until a simplify pass after the first real publish.
+  **Next**: P5.3 — `/edit/` (write the edited body to the JSON shard or
+  `pages.json`, dispatch render with `url`) and `/remove/` (remove from
+  the shard, dispatch render; the redirect page keeps the permalink);
+  then retire `update-rss.yml`, `remove-from-rss.yml`,
+  `regenerate-posts.yml`; then reskin `/search/`. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
