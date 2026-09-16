@@ -40,7 +40,10 @@ export function readingMinutes(html) { return Math.max(1, Math.round(wordCount(h
 
 // Excerpt if present, else the first ~160 chars of the body — derived at render, content untouched.
 export function describe(post, max = 160) {
-  const text = plainText(post.excerpt || post.content || '');
+  let text = plainText(post.excerpt || post.content || '');
+  // many bodies open by repeating the title (tweet-style posts); don't echo it
+  const title = plainText(post.title || '');
+  if (title && text.toLowerCase().startsWith(title.toLowerCase())) text = text.slice(title.length).replace(/^[\s:.,;–—-]+/, '');
   if (!text) return TAGLINE;
   if (text.length <= max) return text;
   return text.slice(0, max - 3).replace(/\s+\S*$/, '') + '…';

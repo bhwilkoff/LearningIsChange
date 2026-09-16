@@ -171,9 +171,9 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | Surface | Status | Notes / plan |
 |---|:-:|---|
 | Post pages (3,651) | 🟩 | **P1 done 2026-09-16.** `templates/post.html` on the refreshed system; nav/rail/footer partials composed at render; JSON-LD; related + prev/next; reading time; Markdown twin at `index.md` |
-| Homepage + `/page/N/` (389) | 🟨 | JSON-rendered; "on this day"; latest; portfolio cross-link; consider capping pagination at ~40 pages + sitemap covering the rest |
-| Year / month / day archives (2,006) | 🟨 | JSON-rendered; `/YYYY/` becomes year-in-review; keep month/day URLs |
-| Category / tag / author (1,359) | 🟨 | JSON-rendered `CollectionPage`; series treatment for project categories |
+| Homepage + `/page/N/` (389) | 🟩 | **P2 done 2026-09-16.** `templates/home.html`; latest, on-this-day (server-rendered + client refresh from `database/on-this-day.json`), start-here, series; all 389 `/page/N/` kept (367–390 are clamped aliases) |
+| Year / month / day archives (2,006) | 🟩 | **P2 done.** Year-in-review pages (topics + by month), month and day listings; 2,024 pages |
+| Category / tag / author (1,359) | 🟩 | **P2 done.** 568 category + 1,596 tag + 391 author pages (C-9: every term now has a page); parent categories include descendants; `CollectionPage` JSON-LD; 121 protected-URL aliases (noindex, canonical → real page) |
 | Static pages (65) | 🟨 | Rendered from `pages.json` through a `page.html` template; several are WordPress-era placeholders (→ queue) |
 | Portfolio (`/portfolio/*`) | 🟩 | Reference design; minor: shared nav should come from one fragment |
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
@@ -266,6 +266,9 @@ items get done in a later tick and moved to *Done*.
   only 432 of 1,365 tag pages and skipped 3 categories), so most tag
   links in post footers are 404s today. P2's renderer generates every
   term page from JSON; no permalink is lost (they never existed).
+- C-10 Twelve "tags" in `taxonomies.json` are 2007 Technorati links
+  (`http://technorati.com/tag/VSS2007` …). The renderer skips them;
+  remove from the taxonomy and from the ~12 posts that carry them?
 - C-8 `/category/Typewriter/` — capitalized slug created by `/new/`
   (all other terms are lowercase). The URL is live and protected; when
   the archive renderer lands, emit `/category/typewriter/` as canonical
@@ -372,11 +375,23 @@ resolves them on its own.)*
   post pages total 45 MB (were ~500 MB), representative post 17 KB
   (was 92 KB) with one `<script>` (JSON-LD). Mixed state until P2: the
   homepage/archives are still Fluida.
-  **Next**: P2 — `scripts/render-archives.js`: homepage + `/page/N/`,
-  year/month/day, category/tag/author (incl. the 1,153 missing term
-  pages, C-9), `CollectionPage` JSON-LD, `Person`/`WebSite` on the
-  homepage, "on this day", series grid. Then the retire→redirect pages
-  (A-1/A-2/A-3, D-1/D-2). promote
+  **Next**: see tick 10.
+- **2026-09-16 · tick 10 (P2 shipped)** — `scripts/render-archives.js`
+  + `templates/{home,archive}.html`: 4,970 listing pages in 2 s
+  (home, 389 `/page/N/`, 2,024 date, 568 category, 1,596 tag, 391
+  author, `/type/video/`), `WebSite`/`Person`/`Blog` JSON-LD on the
+  homepage, `CollectionPage` elsewhere, `database/on-this-day.json`.
+  Protected-URL coverage rule: 121 URLs the data no longer fills
+  (`/page/367–390/`, `/author/user/*`, capitalized slugs) render as
+  noindex aliases with canonical → the real page. `describe()` now
+  strips a title echoed at the start of the body. Permalink list grew
+  to 8,696 (+1,214 new term/day pages); sitemap 8,691 URLs. Only the
+  66 static pages remain on Fluida.
+  **Next**: P3 — `templates/page.html` + `scripts/render-pages.js`
+  from `pages.json`, with the approved retire→redirect set
+  (`/sample-page/`, `/contact-page/`→`/meet/`, auth stubs→`/`,
+  `/about/`+`/bio/`→`/portfolio/about/`, `/services/`+`/pd/` noindex);
+  then feeds from JSON. promote
   `site.css` to `/css/site.css`, write the real `templates/post.html`
   on the new shell (fragments become nav/rail/footer partials), extend
   `regenerate-posts.js` (related posts, prev/next, reading time,
