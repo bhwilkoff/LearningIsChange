@@ -10,7 +10,7 @@ export async function render(root, ctx) {
       <input id="p-q" type="search" placeholder="Search…" value="${ctx.esc(state.q)}" style="flex:2;min-width:200px;padding:9px 11px">
       <select id="p-year" style="padding:9px"><option value="">All years</option></select>
       <select id="p-cat" style="padding:9px;max-width:260px"><option value="">All categories</option></select>
-      <select id="p-status" style="padding:9px"><option value="live">Published</option><option value="draft">Drafts</option><option value="removed">Removed</option><option value="all">All</option></select>
+      <select id="p-status" style="padding:9px"><option value="live">Published</option><option value="draft">Drafts</option><option value="scheduled">Scheduled</option><option value="removed">Removed</option><option value="all">All</option></select>
       <a class="btn primary" href="/new/" style="text-decoration:none">New post</a>
     </div></div>
     <div id="p-list" class="card"><div class="empty">Loading posts…</div></div>`;
@@ -23,11 +23,14 @@ export async function render(root, ctx) {
   root.querySelector('#p-status').value = state.status;
 
   const text = (s) => String(s || '').replace(/<[^>]+>/g, ' ').toLowerCase();
+  const today = new Date().toISOString().slice(0, 10);
   function draw() {
     const q = state.q.trim().toLowerCase();
     const rows = all.filter((p) => {
-      if (state.status === 'live' && (p.removed || p.status === 'draft')) return false;
+      const future = String(p.date_published).slice(0, 10) > today;
+      if (state.status === 'live' && (p.removed || p.status === 'draft' || future)) return false;
       if (state.status === 'draft' && p.status !== 'draft') return false;
+      if (state.status === 'scheduled' && !(future && !p.removed && p.status !== 'draft')) return false;
       if (state.status === 'removed' && !p.removed) return false;
       if (state.year && !String(p.date_published).startsWith(state.year)) return false;
       if (state.cat && !(p.categories || []).some((t) => (t.slug || t) === state.cat)) return false;
@@ -39,7 +42,7 @@ export async function render(root, ctx) {
     root.querySelector('#p-list').innerHTML = `
       <div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="mono">${rows.length.toLocaleString()} post${rows.length === 1 ? '' : 's'}</span>
         <span class="row"><button class="btn" id="p-prev" ${state.page <= 1 ? 'disabled' : ''}>←</button><span class="mono">${state.page} / ${pages}</span><button class="btn" id="p-next" ${state.page >= pages ? 'disabled' : ''}>→</button></span></div>
-      <ul class="runs">${slice.map((p) => `<li><span class="dot ${p.removed ? 'failure' : p.status === 'draft' ? 'queued' : 'success'}" title="${p.removed ? 'removed' : p.status || 'publish'}"></span>
+      <ul class="runs">${slice.map((p) => `<li><span class="dot ${p.removed ? 'failure' : p.status === 'draft' || String(p.date_published).slice(0, 10) > today ? 'queued' : 'success'}" title="${p.removed ? 'removed' : p.status === 'draft' ? 'draft' : String(p.date_published).slice(0, 10) > today ? 'scheduled' : 'published'}"></span>
         <div><a href="#/posts/edit${p.url}">${ctx.esc(p.title || 'Untitled')}</a><div class="meta">${String(p.date_published).slice(0, 10)} · ${(p.categories || []).map((t) => ctx.esc(t.name || t)).join(', ') || '—'}${p.comments?.length ? ` · ${p.comments.length} comments` : ''}</div></div>
         <a class="meta" href="${p.url}" target="_blank" rel="noopener">view ↗</a></li>`).join('') || '<li class="empty">No posts match.</li>'}</ul>`;
     root.querySelector('#p-prev').onclick = () => { state.page--; draw(); };

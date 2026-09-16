@@ -94,10 +94,13 @@ function main() {
     console.log(`${year.padEnd(6)} ${String(s.total).padStart(6)} ${String(s.rendered).padStart(9)} ${String(s.noContent).padStart(10)} ${String(s.written).padStart(8)} ${String(s.unchanged).padStart(10)} ${String(s.err).padStart(5)}`);
     for (const k of Object.keys(t)) t[k] += s[k];
   }
-  // Tombstones: the permalink keeps resolving as a redirect to the year archive
+  // Hidden posts (removed / draft / scheduled): a URL that ever shipped keeps
+  // resolving as a redirect to the year archive; an unpublished URL gets no file.
   const T_REDIRECT = fs.readFileSync(path.join(REPO_ROOT, 'templates', 'redirect.html'), 'utf8');
-  let tomb = 0;
+  const protectedUrls = new Set((JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'database', 'permalinks.json'), 'utf8')).urls) || []);
+  let tomb = 0, unpublished = 0;
   for (const p of loadTombstones()) {
+    if (!protectedUrls.has(p.url)) { unpublished++; continue; }
     if (ONLY_YEAR && dates(p).year !== ONLY_YEAR) continue;
     if (ONLY_URL && p.url !== cleanUrl(ONLY_URL)) continue;
     const target = dates(p).year ? `/${dates(p).year}/` : '/';
@@ -107,7 +110,8 @@ function main() {
     if (prior !== html) { tomb++; if (APPLY) { fs.mkdirSync(path.dirname(out.html), { recursive: true }); fs.writeFileSync(out.html, html); } }
     if (APPLY && fs.existsSync(out.md)) fs.unlinkSync(out.md);
   }
-  if (tomb) console.log(`tombstones: ${tomb} redirect page(s) ${APPLY ? 'written' : 'would be written'}`);
+  if (tomb) console.log(`hidden (removed/draft/scheduled): ${tomb} redirect page(s) ${APPLY ? 'written' : 'would be written'}`);
+  if (unpublished) console.log(`unpublished (draft/scheduled, never shipped): ${unpublished} — no file`);
   console.log('─'.repeat(60));
   console.log(`TOTAL  ${String(t.total).padStart(6)} ${String(t.rendered).padStart(9)} ${String(t.noContent).padStart(10)} ${String(t.written).padStart(8)} ${String(t.unchanged).padStart(10)} ${String(t.err).padStart(5)}`);
   if (!APPLY) console.log('\nRun again with --apply to write files.');

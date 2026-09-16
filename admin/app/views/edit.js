@@ -41,6 +41,7 @@ export async function render(root, ctx, params) {
           <label class="field" style="width:200px">Published<input id="e-date" type="date" value="${ctx.esc(String(post.date_published).slice(0, 10))}"></label>
           <label class="field" style="width:160px">Status<select id="e-status"><option value="publish" ${post.status !== 'draft' ? 'selected' : ''}>Published</option><option value="draft" ${post.status === 'draft' ? 'selected' : ''}>Draft</option></select></label>
         </div>
+        <p class="meta" id="e-when" style="margin:-6px 0 12px;font-size:0.8rem;color:var(--text-secondary)"></p>
         <div class="field">Category<div id="e-cat"></div></div>
         <div class="field">Tags<div id="e-tags"></div></div>
         <div class="field">Body
@@ -89,6 +90,9 @@ export async function render(root, ctx, params) {
     } catch (e) { stat.textContent = 'preview failed: ' + e.message; }
   }
   root.querySelector('#e-preview').onclick = preview;
+  const when = () => { const d = root.querySelector('#e-date').value, st = root.querySelector('#e-status').value, today = new Date().toISOString().slice(0, 10);
+    root.querySelector('#e-when').textContent = st === 'draft' ? 'Draft — not rendered; if the URL was ever public it redirects to the year archive.' : d > today ? `Scheduled — goes live on ${d} (the daily render at 06:17 UTC publishes it).` : 'Published.'; };
+  when(); root.querySelector('#e-status').onchange = () => { when(); schedulePreview(); }; root.querySelector('#e-date').addEventListener('change', when);
   root.querySelector('#e-title').oninput = schedulePreview;
   root.querySelector('#e-date').onchange = schedulePreview;
 

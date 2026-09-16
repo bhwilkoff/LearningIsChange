@@ -7,6 +7,8 @@ name: Render Site
 # Triggered from the admin tools after they write JSON, or manually.
 
 on:
+  schedule:
+    - cron: '17 6 * * *'   # daily 06:17 UTC: publishes scheduled (future-dated) posts and refreshes "on this day"
   workflow_dispatch:
     inputs:
       scope:
@@ -48,10 +50,11 @@ jobs:
       - name: Render
         run: |
           set -euo pipefail
-          APPLY=""; [ "${{ inputs.dry_run }}" = "false" ] && APPLY="--apply"
+          # scheduled runs have no inputs: full apply
+          APPLY=""; { [ "${{ inputs.dry_run }}" = "false" ] || [ -z "${{ inputs.dry_run }}" ]; } && APPLY="--apply"
           YEAR=""; [ -n "${{ inputs.year }}" ] && YEAR="--year=${{ inputs.year }}"
           URL="";  [ -n "${{ inputs.url }}" ] && URL="--url=${{ inputs.url }}"
-          S="${{ inputs.scope }}"; [ -n "$URL" ] && S=posts
+          S="${{ inputs.scope }}"; [ -z "$S" ] && S=all; [ -n "$URL" ] && S=posts
           if [ "$S" = all ] || [ "$S" = posts ];    then node scripts/regenerate-posts.js $APPLY $YEAR $URL; fi
           if [ "$S" = all ] || [ "$S" = archives ]; then node scripts/render-archives.js $APPLY; fi
           if [ "$S" = all ] || [ "$S" = pages ];    then node scripts/render-pages.js $APPLY; fi
@@ -64,18 +67,18 @@ jobs:
           fi
 
       - name: Permalink guarantee (Decision 014)
-        if: inputs.dry_run == 'false'
+        if: inputs.dry_run != 'true'
         run: node scripts/check-permalinks.js
 
       - name: Commit and push
-        if: inputs.dry_run == 'false'
+        if: inputs.dry_run != 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add -A
           if git diff --cached --quiet; then echo "No changes to commit"; exit 0; fi
           changed=$(git diff --cached --stat | tail -1)
-          git commit -m "render site (${{ inputs.scope }}${{ inputs.year && format(' {0}', inputs.year) || '' }}) — $changed"
+          git commit -m "render site (${{ inputs.scope || 'scheduled' }}${{ inputs.year && format(' {0}', inputs.year) || '' }}) — $changed"
           for attempt in 1 2 3 4 5; do
             if git push 2>&1; then exit 0; fi
             echo "Push rejected (attempt $attempt) — rebasing..."

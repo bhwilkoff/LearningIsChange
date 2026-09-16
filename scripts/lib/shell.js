@@ -14,29 +14,35 @@ const PARTIALS = path.join(REPO_ROOT, 'templates', 'partials');
 setImageExists((rel) => fs.existsSync(path.join(REPO_ROOT, rel)));
 
 // ---------- data ----------
-// Live posts only. A post removed with /remove/ stays in its shard as a
-// tombstone ({ removed: true, removed_at }) so its permalink can keep
-// resolving (redirect page) — see loadTombstones().
+// Live posts only: not removed (tombstone), not a draft, not scheduled
+// for the future. Hidden posts whose URL once shipped keep resolving as a
+// redirect page — see loadHidden(). "Now" is UTC at render time; the daily
+// scheduled render publishes future-dated posts when their day arrives.
+export const isPublished = (p, now = new Date()) =>
+  !!p && !p.removed && p.status !== 'draft' && !(p.date_published && new Date(String(p.date_published).slice(0, 10) + 'T00:00:00Z') > now);
 export function loadAllPosts() {
   const dir = path.join(REPO_ROOT, 'database', 'posts');
   const all = [];
   for (const f of fs.readdirSync(dir).filter((n) => /^\d{4}\.json$/.test(n)).sort()) {
     const shard = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    for (const p of shard.posts || []) if (!p.removed) all.push({ ...p, url: cleanUrl(p.url), _shard: f });
+    for (const p of shard.posts || []) if (isPublished(p)) all.push({ ...p, url: cleanUrl(p.url), _shard: f });
   }
   // chronological, stable on url
   all.sort((a, b) => (a.date_published || '').localeCompare(b.date_published || '') || a.url.localeCompare(b.url));
   return all;
 }
-export function loadTombstones() {
+// Everything not published: tombstones, drafts, scheduled. Each gets a
+// `reason`; the renderer writes a redirect page only when the URL is protected.
+export function loadHidden() {
   const dir = path.join(REPO_ROOT, 'database', 'posts');
   const out = [];
   for (const f of fs.readdirSync(dir).filter((n) => /^\d{4}\.json$/.test(n)).sort()) {
     const shard = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    for (const p of shard.posts || []) if (p.removed) out.push({ ...p, url: cleanUrl(p.url), _shard: f });
+    for (const p of shard.posts || []) if (!isPublished(p)) out.push({ ...p, url: cleanUrl(p.url), _shard: f, reason: p.removed ? 'removed' : p.status === 'draft' ? 'draft' : 'scheduled' });
   }
   return out;
 }
+export const loadTombstones = loadHidden;
 export function loadTaxonomies() {
   const p = path.join(REPO_ROOT, 'database', 'taxonomies.json');
   const t = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : { categories: { items: {} }, tags: { items: {} } };

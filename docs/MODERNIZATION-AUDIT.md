@@ -704,6 +704,16 @@ appended here as ticks complete.
   Verified: 652 KB JPEG → 335 KB + 138 KB WebP in ~0.4 s, no console
   errors. All six views exist; only Bluesky (A4) and drafts/scheduling
   (A3) remain of the v1 scope, plus the auth hand-off.
+- **2026-09-16 · A3 done** — drafts + scheduled publishing.
+  `isPublished()` in `shell.js` (not removed, not `status: draft`, not
+  future-dated in UTC) drives every renderer; hidden posts whose URL is
+  protected render as redirect pages, never-shipped ones get no file;
+  `check-permalinks.js` exempts hidden GUIDs. `render-site.yml` gains a
+  daily `schedule` (06:17 UTC) that publishes due posts and refreshes
+  "on this day"; inputs default to a full apply on scheduled runs.
+  Posts view: Scheduled filter + status dots; editor shows a
+  Draft/Scheduled/Published line. Simulated draft + scheduled + never-
+  shipped posts: 2 redirects, 1 no-file, permalink check OK; reverted.
 - **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
   the repo, deploy the Worker in the Cloudflare dashboard with the
   secrets, fill `CONFIG.auth`, test sign-in end to end. In parallel, A2.2: the

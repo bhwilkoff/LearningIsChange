@@ -98,7 +98,8 @@ const tombstoned = new Set();
   const dir = path.join(REPO_ROOT, 'database', 'posts');
   for (const f of fs.readdirSync(dir).filter((n) => /^\d{4}\.json$/.test(n))) {
     for (const p of JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).posts || []) {
-      if (p.removed && p.url) tombstoned.add(SITE + String(p.url).replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/'));
+      const future = p.date_published && new Date(String(p.date_published).slice(0, 10) + 'T00:00:00Z') > new Date();
+      if ((p.removed || p.status === 'draft' || future) && p.url) tombstoned.add(SITE + String(p.url).replace(/^https?:\/\/[^/]+/, '').replace(/\/?$/, '/'));
     }
   }
 }
