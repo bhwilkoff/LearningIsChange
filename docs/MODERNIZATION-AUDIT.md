@@ -175,7 +175,7 @@ Legend: ⬜ untouched · 🟨 audited / plan written · 🟩 converted · ⛔ re
 | Year / month / day archives (2,006) | 🟩 | **P2 done.** Year-in-review pages (topics + by month), month and day listings; 2,024 pages |
 | Category / tag / author (1,359) | 🟩 | **P2 done.** 568 category + 1,596 tag + 391 author pages (C-9: every term now has a page); parent categories include descendants; `CollectionPage` JSON-LD; 121 protected-URL aliases (noindex, canonical → real page) |
 | Static pages (65) | 🟩 | **P3 done 2026-09-16.** `scripts/render-pages.js` + `templates/page.html`/`redirect.html`, rules in `database/page-rules.json`: 55 pages (23 noindex), 11 redirects; `/all-posts/` is a real full index by year |
-| Portfolio (`/portfolio/*`) | 🟩 | Reference design; minor: shared nav should come from one fragment |
+| Portfolio (`/portfolio/*`) | 🟩 | On the shared shell since tick 15: `site.css` (dark/light tokens) + nav/footer partials spliced by `scripts/render-shell.js` via `LIC:NAV`/`LIC:FOOTER` markers. **Standing item (Ben, 2026-09-16): keep the portfolio consistent with the blog as the loop continues** — any shell/design change lands on both |
 | `/support.html`, `/meet/` | 🟩 | Already on the portfolio system |
 | Feeds (`feed/index.xml`, `full.xml`, podcast) | 🟩 | **Done 2026-09-16.** `scripts/render-feeds.js` from JSON; every original GUID retained; podcast feed untouched. `update-rss.yml`/`remove-from-rss.yml` retire in P5 when the tools dispatch `render-site.yml` |
 | Search (`/search/`) | 🟨 | Keep engine; reskin on the portfolio system |
@@ -440,6 +440,16 @@ resolves them on its own.)*
   pages/feeds, year, single URL — `url` input added to the workflow).
   Fluida-only Menu tab hidden. Dashboard card retitled "Render Site".
   Loads with no console errors.
+  **Next**: see tick 15.
+- **2026-09-16 · tick 15 (Ben's requests)** — (1) Rail collapsed to one
+  card: "Did you just meet Ben? — Save my contact, try my apps, and see
+  how I build. Meet →". (2) Portfolio consistency: `/portfolio/*` and
+  `/support.html` now load `/css/site.css` (dark/light) and carry
+  `LIC:NAV`/`LIC:FOOTER` markers filled by the new `scripts/render-shell.js`
+  from the same partials as the blog (active item chosen by URL);
+  `/meet/` keeps its minimal bar but gets `site.css`. "Portfolio" added to
+  the unified nav. `render-shell.js` runs in `render-site.yml`. Whole
+  site re-rendered; permalink check OK.
   **Next**: P5.2 — `/new/` writes JSON only (upsert post shard via
   `admin/lib/mutate.js`, taxonomies via `recompute` in the workflow)
   and dispatches `render-site.yml` (scope=posts, url) instead of writing

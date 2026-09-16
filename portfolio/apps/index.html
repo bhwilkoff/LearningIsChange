@@ -8,31 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/portfolio/css/style.css">
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a href="/portfolio/" class="nav-brand">
-        <span class="brand-mark">BW</span>
-        Ben Wilkoff
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-      <ul class="nav-links">
-        <li><a href="/portfolio/">Home</a></li>
-        <li><a href="/portfolio/career/">Career</a></li>
-        <li><a href="/portfolio/apps/" class="active">Apps</a></li>
-        <li><a href="/portfolio/projects/">Projects</a></li>
-        <li><a href="/portfolio/writing/">Writing</a></li>
-        <li><a href="/portfolio/video/">Video</a></li>
-        <li><a href="/portfolio/about/">About</a></li>
-        <li><a href="/">Blog</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- LIC:NAV:START -->
+<nav class="site-nav"><div class="nav-inner">
+  <a href="/" class="nav-brand"><span class="brand-mark">BW</span> Ben Wilkoff <small>· Learning is Change</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  <ul class="nav-links">
+    <li><a href="/" data-nav="blog">Blog</a></li>
+    <li><a href="/portfolio/" data-nav="portfolio">Portfolio</a></li>
+    <li><a href="/portfolio/career/" data-nav="career">Career</a></li>
+    <li><a href="/portfolio/apps/" data-nav="apps" class="active">Apps</a></li>
+    <li><a href="/portfolio/projects/" data-nav="projects">Projects</a></li>
+    <li><a href="/portfolio/writing/" data-nav="writing">Writing</a></li>
+    <li><a href="/portfolio/video/" data-nav="video">Video</a></li>
+    <li><a href="/portfolio/about/" data-nav="about">About</a></li>
+    <li><a href="/meet/" data-nav="meet" class="nav-cta">Meet</a></li>
+  </ul>
+</div></nav>
+<!-- LIC:NAV:END -->
 
   <main class="page-container">
 
@@ -260,18 +257,21 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="/">Learning is Change Blog</a></li>
-        <li><a href="https://github.com/bhwilkoff">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/bhwilkoff/">LinkedIn</a></li>
-        <li><a href="https://bsky.app/profile/laserdiscleftist.bsky.social">Bluesky</a></li>
-        <li><a href="https://masculinitydetox.org">The Masculinity Detox</a></li>
-      </ul>
-      <p class="footer-note">Ben Wilkoff &middot; Educator, Builder, Writer</p>
-    </div>
-  </footer>
+  <!-- LIC:FOOTER:START -->
+<footer class="site-footer"><div class="footer-inner">
+  <ul class="footer-links">
+    <li><a href="/">Blog</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/feed/">RSS</a></li>
+    <li><a href="/feed/podcast/">Podcast</a></li>
+    <li><a href="https://github.com/bhwilkoff">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/bhwilkoff/">LinkedIn</a></li>
+    <li><a href="https://bsky.app/profile/laserdiscleftist.bsky.social">Bluesky</a></li>
+    <li><a href="/meet/">Meet me</a></li>
+  </ul>
+  <p class="footer-note">Ben Wilkoff · Educator, Builder, Writer · Writing here since 2005</p>
+</div></footer>
+<!-- LIC:FOOTER:END -->
 
 </body>
 </html>

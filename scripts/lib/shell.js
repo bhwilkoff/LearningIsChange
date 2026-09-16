@@ -148,8 +148,20 @@ export function fill(tpl, values) {
   for (const [k, v] of Object.entries(values)) out = out.split(`{{${k}}}`).join(v ?? '');
   return out;
 }
+// active: a data-nav key from templates/partials/nav.html (blog, portfolio, career, …)
 export function nav({ active = '' } = {}) {
-  return fill(partial('nav'), { nav_blog_active: active === 'blog' ? 'class="active"' : '' });
+  const html = partial('nav');
+  if (!active) return html;
+  return html.replace(new RegExp(`(<a href="[^"]*" data-nav="${active}"(?: class="([^"]*)")?)`), (m, _, cls) =>
+    cls ? m.replace(`class="${cls}"`, `class="${cls} active"`) : `${m} class="active"`);
+}
+// Which nav item a URL belongs to
+export function navKeyFor(url) {
+  if (url === '/meet/') return 'meet';
+  const m = /^\/portfolio\/(career|apps|projects|writing|video|about)\//.exec(url);
+  if (m) return m[1];
+  if (url === '/portfolio/') return 'portfolio';
+  return '';
 }
 export function footer() { return partial('footer'); }
 // The rail is the same on every page of a run: build it once.
