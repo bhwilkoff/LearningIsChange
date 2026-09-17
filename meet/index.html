@@ -28,8 +28,9 @@
     .meet-bar a.more { font-size: 0.85rem; font-weight: 500; color: var(--color-muted); }
     .meet-bar a.more:hover { color: var(--color-accent); }
 
+    *, *::before, *::after { box-sizing: border-box; }
     .meet { max-width: var(--max-width); margin: 0 auto; padding: var(--space-lg) var(--space-lg) var(--space-3xl); display: grid; gap: var(--space-md); grid-template-columns: 1fr; }
-    .tile { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 16px; padding: var(--space-lg); position: relative; }
+    .tile { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 16px; padding: var(--space-lg); position: relative; min-width: 0; max-width: 100%; }
     .tile h2 { font-size: 1.05rem; margin-bottom: var(--space-sm); display: flex; align-items: center; gap: 8px; }
     .tile h2 .card-tag { margin: 0; }
     .tile p { font-size: 0.95rem; color: var(--color-muted); }

@@ -1,15 +1,15 @@
 {
- "generated": "2026-09-17T18:05:40.307Z",
+ "generated": "2026-09-17T22:17:56.986Z",
  "root": "wp-content/uploads",
  "summary": {
   "files": 977,
-  "originals": 966,
+  "originals": 965,
   "bytes": 1500172056,
-  "used": 663,
+  "used": 662,
   "unused": 303,
   "missing": 115,
   "by_kind": {
-   "image": 779,
+   "image": 778,
    "audio": 171,
    "video": 7,
    "doc": 9,
@@ -15973,7 +15973,7 @@
     {
      "type": "post",
      "url": "/2025/12/14/a-new-way-to-blog/",
-     "title": "Learning is Change",
+     "title": "A New Way to Blog",
      "status": "published"
     }
    ],
@@ -15991,7 +15991,7 @@
     {
      "type": "post",
      "url": "/2026/01/12/a-karass-built-for-two/",
-     "title": "Learning is Change",
+     "title": "A Karass Built for Two",
      "status": "published"
     }
    ],
@@ -16009,7 +16009,7 @@
     {
      "type": "post",
      "url": "/2026/01/13/father-mother-sister-brother/",
-     "title": "Learning is Change",
+     "title": "Father Mother Sister Brother",
      "status": "published"
     }
    ],
@@ -16027,7 +16027,7 @@
     {
      "type": "post",
      "url": "/2026/01/14/distraction-isnt-best/",
-     "title": "Learning is Change",
+     "title": "Distraction isn't best.",
      "status": "published"
     }
    ],
@@ -16117,7 +16117,7 @@
     {
      "type": "post",
      "url": "/2026/01/05/your-favorite-band-at-42/",
-     "title": "Learning is Change",
+     "title": "Your Favorite Band at 42",
      "status": "published"
     }
    ],
@@ -16135,7 +16135,7 @@
     {
      "type": "post",
      "url": "/2026/01/08/seeing-the-real-numbers/",
-     "title": "Learning is Change",
+     "title": "Seeing the Real Numbers",
      "status": "published"
     }
    ],
@@ -16265,26 +16265,11 @@
      "status": "published"
     }
    ],
+   "variants": [
+    "wp-content/uploads/2026/09/img-6564-800w.webp"
+   ],
    "w": 1600,
    "h": 2133
-  },
-  {
-   "path": "wp-content/uploads/2026/09/img-6564-800w.webp",
-   "bytes": 139496,
-   "ext": "webp",
-   "kind": "image",
-   "year": "2026",
-   "month": "09",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2026/09/17/if-you-give-a-man-a-movement/",
-     "title": "If you give a man a movement",
-     "status": "published"
-    }
-   ],
-   "w": 800,
-   "h": 1067
   },
   {
    "path": "wp-content/uploads/woocommerce-placeholder.png",

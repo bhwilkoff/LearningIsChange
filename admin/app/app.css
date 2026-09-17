@@ -29,7 +29,9 @@
 .msg.warn { background: color-mix(in srgb, var(--color-warm) 18%, var(--bg-primary)); border-left-color: var(--color-warm); }
 .msg.err { background: color-mix(in srgb, var(--color-coral) 18%, var(--bg-primary)); border-left-color: var(--color-coral); }
 .runs { list-style: none; margin: 0; padding: 0; }
-.runs li { display: grid; grid-template-columns: 14px 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--border-color); font-size: 0.88rem; }
+.runs li { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--border-color); font-size: 0.88rem; }
+.runs li > div { min-width: 0; }
+.runs .meta { overflow-wrap: anywhere; }
 .runs li:first-child { border-top: none; }
 .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--text-muted); }
 .dot.success { background: var(--color-accent); } .dot.failure { background: var(--color-coral); } .dot.in_progress, .dot.queued { background: var(--color-warm); animation: pulse 1.2s infinite; }
@@ -138,3 +140,37 @@ body.signed-out .app-nav { visibility: hidden; }
 
 .app-update { display: flex; align-items: center; gap: 12px; justify-content: center; padding: 10px 20px; background: var(--color-accent-light); color: var(--color-accent-dark); font-size: 0.9rem; border-bottom: 1px solid var(--color-accent); }
 .app-update .btn { padding: 5px 12px; font-size: 0.85rem; }
+
+/* Phones and small tablets: header wraps to two rows with a scrollable nav; single column everywhere; fingers, not cursors */
+@media (max-width: 720px) {
+  .app-top { position: static; flex-wrap: wrap; height: auto; padding: 8px 12px 0; gap: 6px 10px; }
+  .app-brand { font-size: 0.95rem; }
+  .app-status { display: none; }
+  .app-lock, .app-link { font-size: 0.8rem; padding: 6px 10px; }
+  .app-nav { order: 10; flex-basis: 100%; gap: 4px; margin: 0 -12px; padding: 4px 12px 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .app-nav::-webkit-scrollbar { display: none; }
+  .app-nav a { padding: 8px 12px; font-size: 0.9rem; }
+  .app-update { flex-wrap: wrap; padding: 10px 12px; font-size: 0.85rem; }
+  .app-main { padding: 18px 14px 48px; }
+  .app-main h1 { font-size: 1.45rem; }
+  .card { padding: 14px; }
+  button.btn { min-height: 40px; }
+  a.btn { display: inline-flex; align-items: center; min-height: 40px; }
+  .field input, .field select, .field textarea, .lib-controls input, .lib-controls select, .rte-imgpop input { font-size: 16px; } /* iOS zooms in on anything smaller */
+  .field[style*="width"] { width: 100% !important; }
+  .row > .field { flex: 1 1 45%; min-width: 0; }
+  .edit-grid { gap: 14px; }
+  .preview-col { position: static; }
+  .preview-frame { height: 70vh; min-height: 360px; }
+  .editor-surface, .editor-source { min-height: 260px; max-height: none; overflow-wrap: anywhere; }
+  .rte-toolbar { position: sticky; top: 0; }
+  .rte-btn { min-width: 36px; height: 36px; font-size: 0.95rem; }
+  .rte-block { height: 36px; }
+  .gate { margin-top: 6vh; }
+  .lib-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .lib-stat { font-size: 0.95rem; padding: 7px 10px; }
+  .runs li { gap: 8px; }
+  .runs li > a, .runs li > .row { white-space: nowrap; }
+  .runs li > div a { overflow-wrap: anywhere; }
+  .tabs-mini { flex-wrap: wrap; }
+}

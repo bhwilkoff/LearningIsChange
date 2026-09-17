@@ -141,7 +141,8 @@
 .related h2 { font-size: 1.1rem; margin-bottom: var(--space-md); }
 
 /* --- Post lists (home, archives) --- */
-.post-list { list-style: none; display: grid; gap: 2px; }
+.post-list { list-style: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.post-list li > div { min-width: 0; overflow-wrap: anywhere; }
 .post-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: var(--space-md); padding: 14px 0; border-top: 1px solid var(--color-border); align-items: baseline; }
 .post-list li:first-child { border-top: none; }
 .post-list time { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-light); white-space: nowrap; }
@@ -212,3 +213,21 @@
 .transcript > summary small { font-weight: 400; color: var(--color-muted); font-size: 0.8rem; }
 .transcript-text { padding: 0 1rem 0.5rem; font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.7; }
 .transcript-text p { margin: 0 0 1em; }
+
+/* Phones: bigger targets, no cramped chips, nothing wider than the screen */
+@media (max-width: 600px) {
+  .tag, .post-list .k a, .rail .topics a { padding: 7px 12px; font-size: 0.82rem; line-height: 1.2; }
+  .rail .years a { padding: 8px 0; font-size: 0.82rem; }
+  .rail .recent li, .rail .recent a { padding-top: 6px; padding-bottom: 6px; }
+  .post-meta { flex-wrap: wrap; row-gap: 4px; }
+  .comment-list, .comment-children { padding-left: 0; }
+  .comment-children { margin-left: 12px; }
+  .transcript-text { font-size: 0.85rem; }
+  .prose iframe, .prose embed, .prose object, .prose video { max-width: 100%; }
+  .prose table { display: block; overflow-x: auto; }
+  .prose pre { overflow-x: auto; }
+  .prose img { height: auto; }
+  .home-hero h1 { font-size: 2rem; }
+  .home-stats { flex-wrap: wrap; row-gap: 6px; }
+  .pager { flex-wrap: wrap; gap: 8px; }
+}

@@ -68,9 +68,19 @@ function dims(rel, ext) {
 for (const f of files.values()) if (f.kind === 'image' && f.ext !== 'svg') { const d = dims(f.path, f.ext); if (d && d[0] && d[1]) { f.w = d[0]; f.h = d[1]; } }
 
 // ---- fold resize variants into their original --------------------------
+// WordPress style: name-300x200.jpg next to name.jpg. LiC Admin style: name-1600w.webp + name-800w.webp
+// with no bare original, so the widest one stands in for it.
 for (const f of [...files.values()]) {
   const m = /^(.*)-\d+x\d+(\.\w+)$/.exec(f.path);
   if (m && files.has(m[1] + m[2])) { files.get(m[1] + m[2]).variants.push(f.path); f.variant_of = m[1] + m[2]; }
+}
+const groups = new Map();
+for (const f of files.values()) { const m = /^(.*)-(\d+)w(\.\w+)$/.exec(f.path); if (m && !f.variant_of) (groups.get(m[1] + m[3]) || groups.set(m[1] + m[3], []).get(m[1] + m[3])).push([Number(m[2]), f]); }
+for (const [base, list] of groups) {
+  if (files.has(base) || list.length < 2) continue;
+  list.sort((a, b) => b[0] - a[0]);
+  const [, biggest] = list[0];
+  for (const [, f] of list.slice(1)) { biggest.variants.push(f.path); f.variant_of = biggest.path; }
 }
 
 // ---- referrers -----------------------------------------------------------
