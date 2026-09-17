@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-09-17T11:40:40.711Z",
+  "generated": "2026-09-17T16:55:33.420Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -8,16 +8,16 @@
     "description": "My name is Ben Wilkoff, and I Teach. And Learn. A Lot."
   },
   "stats": {
-    "total_posts": 3651,
+    "total_posts": 3652,
     "total_pages": 72,
     "total_categories": 47,
     "total_tags": 1355,
     "total_authors": 2,
     "date_range": {
       "earliest": "2005-04-20T12:00:00Z",
-      "latest": "2026-03-26T12:00:00Z"
+      "latest": "2026-09-17T12:00:00Z"
     },
-    "last_modified": "2026-09-17T11:40:40.711Z"
+    "last_modified": "2026-09-17T16:55:33.421Z"
   },
   "shards": {
     "posts": {
@@ -98,7 +98,7 @@
         "hash": null
       },
       "2026": {
-        "count": 17,
+        "count": 18,
         "hash": null
       }
     }

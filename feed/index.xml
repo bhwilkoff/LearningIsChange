@@ -12,11 +12,22 @@
     <atom:link href="https://learningischange.com/feed/" rel="self" type="application/rss+xml" />
     <link>https://learningischange.com</link>
     <description>Learning is Change - Thoughts on education, social justice, and making a difference.</description>
-    <lastBuildDate>Thu, 17 Sep 2026 15:34:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 16:55:32 +0000</lastBuildDate>
     <language>en-US</language>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <generator>Learning is Change (scripts/render-feeds.js)</generator>
+    <item>
+      <title>If you give a man a movement</title>
+      <link>https://learningischange.com/2026/09/17/if-you-give-a-man-a-movement/</link>
+      <pubDate>Thu, 17 Sep 2026 12:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[Ben]]></dc:creator>
+      <guid isPermaLink="true">https://learningischange.com/2026/09/17/if-you-give-a-man-a-movement/</guid>
+      <category><![CDATA[Reflection]]></category>
+      <category><![CDATA[Learning]]></category>
+      <description><![CDATA[I've been going to more startup, AI, and general networking events since restarting my interest in building apps (Archive Watch, Tidbits Trivia, and Bsky Dreams). I have still yet to figure out what...]]></description>
+      <content:encoded><![CDATA[<img src="https://learningischange.com/wp-content/uploads/2026/09/IMG_6564.jpeg" alt="IMG_6564.jpeg" class="" style="max-width: 100%; height: auto; display: block; margin: 1em 0px;"><br>I've been going to more startup, AI, and general networking events since restarting my interest in building apps (<a href="https://archivewatch.org">Archive Watch</a>, <a href="https://tidbitstrivia.com">Tidbits Trivia</a>, and <a href="https://bskydreams.com">Bsky Dreams</a>). I have still yet to figure out what I'm doing there. I find that the vast majority of folks who are there are either trying to sell their ideas (finding clients, partners, or potential investors). It is a strange dance that I observe again and again, watching as a mini-pitch happens and then the the "grand sizing-up" occurs. If the two people find that they are the right "size", then the conversation continues. If not, then the person is almost immediately ignored.<div><br></div><div>But, my "size" is very strange to most of the people that I talk to. I'm not trying to sell anything. I'm not looking for people who can introduce me to other people who can give me a terms sheet for purchasing a company or a piece of software. I must look very small indeed to the vast majority of those I find at these events that all seem to promise pizza and beer.&nbsp;</div><div><br></div><div>Which brings me back to "why" I keep finding myself at demo events or pitch nights. I find that I really do love listening to people getting excited about the things that they are building, even if the things have no chance of making it out into the world and meeting real consumers. I miss the energy of someone who believes that they have found the cure for some newly invented problem. Unfortunately, most of the problems that people are currently trying to solve are ones about how to make use of AI better.</div><div><br></div><div>I do not find these problems compelling.</div><div><br></div><div>The amount of skill and work that is going into burning through millions of tokens seems hollow and ill-suited to this moment in time. It seems as though so many of the people doing the pitching are looking to cash in on the bubble before it bursts, trying to convert every bit of programming prowess that frontier models can give us into cash, or at least cachet.&nbsp;</div><div><br></div><div>But, still I keep going. And I keep hoping to find other folks who are interested in building things for real needs without the constant urge to sell the whole thing to someone else. I keep wanting for others to show that there is energy for a movement of builders in the public domain, an open source ethos that still rings true inside of every new piece of software written or idea on offer. And perhaps, there is even an opportunity to codify the movement of builders who are okay with being small, who aren't lusting after scale to determine their own self-worth.&nbsp;</div><div><br></div><div>What would call such a movement? And where are their meetings held?</div>]]></content:encoded>
+    </item>
     <item>
       <title>60 Minutes in Space</title>
       <link>https://learningischange.com/2026/03/26/60-minutes-in-space/</link>
@@ -2246,55 +2257,6 @@ I want the fewest features possible. I want it just to take the letters that I t
 
 
 <p>So, Apple, please release this feature already!</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>23 Times from Behind the Arc</title>
-      <link>https://learningischange.com/2022/01/16/23-times-from-behind-the-arc/</link>
-      <pubDate>Sun, 16 Jan 2022 12:00:00 +0000</pubDate>
-      <dc:creator><![CDATA[Ben]]></dc:creator>
-      <guid isPermaLink="true">https://learningischange.com/2022/01/16/23-times-from-behind-the-arc/</guid>
-      <description><![CDATA[The three-point-shot has always been my favorite thing about basketball. While some folks go in for the dunk or the “sick moves” of those who dominate under the basket, I can’t get enough of tho...]]></description>
-      <content:encoded><![CDATA[<figure class="wp-block-image size-large"><img data-recalc-dims="1" fetchpriority="high" decoding="async" width="989" height="1024" data-attachment-id="18885" data-permalink="/2022/01/16/23-times-from-behind-the-arc/img_8504/" data-orig-file="/wp-content/uploads/2022/01/IMG_8504-scaled.jpg" data-orig-size="2473,2560" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 12 Pro&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1642280569&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6&quot;,&quot;iso&quot;:&quot;64&quot;,&quot;shutter_speed&quot;:&quot;0.0083333333333333&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_8504" data-image-description="" data-image-caption="" data-medium-file="/wp-content/uploads/2022/01/IMG_8504-scaled.jpg" data-large-file="/wp-content/uploads/2022/01/IMG_8504-scaled.jpg" src="https://learningischange.com/wp-content/uploads/2022/01/IMG_8504.jpg" alt="" class="wp-image-18885" srcset="/wp-content/uploads/2022/01/IMG_8504-scaled.jpg 989w, /wp-content/uploads/2022/01/IMG_8504-scaled.jpg 290w, /wp-content/uploads/2022/01/IMG_8504-scaled.jpg 768w, /wp-content/uploads/2022/01/IMG_8504-scaled.jpg 1484w, /wp-content/uploads/2022/01/IMG_8504-scaled.jpg 1979w, /wp-content/uploads/2022/01/IMG_8504-scaled.jpg 483w, /wp-content/uploads/2022/01/IMG_8504-scaled.jpg 2450w" sizes="(max-width: 989px) 100vw, 989px"></figure>
-
-
-
-<p>The three-point-shot has always been my favorite thing about basketball. While some folks go in for the dunk or the “sick moves” of those who dominate under the basket, I can’t get enough of those long shots that have a devastating effect on opponents because there is no way to combat a 3 pointer other than with scoring one of your own. No matter how good you are at driving down the court and dutifully putting 2 points on the scoreboard, you will still fall behind when your opponent pulls up from behind the three-point line and rattles off another 3 points.</p>
-
-
-
-<p>Last night, I watched the Denver Nuggets score 69 points off of their 3-point shooting alone. They went down the court 23 times and put on a clinic for how to get it done from Behind the Arc. This was a game against LeBron James and his Lakers. The Nuggets ended up winning the game 133-96.</p>
-
-
-
-<p>Why does this matter?</p>
-
-
-
-<p>In many ways it doesn’t. It was one game, and it didn’t decide anything important about the standings or the playoffs. Beyond that, it is just a basketball game. The world does not begin or end based upon the 23 times that a player got a ball through a hole from a far distance. </p>
-
-
-
-<p>But, there is one reason it matters to me.</p>
-
-
-
-<p>It was the only basketball game I have ever attended by myself. I hurried to the game after having gotten dinner for my family, after doing a few errands, and after attending my youngest son’s own basketball game. It was a solitary experience that I enjoyed immensely. As it turns out, walking around an enormous arena without having the responsibility for or worry about the needs of those I love is kinda nice. I just had to watch the game, to eat a slice of pizza and some kettle corn. At one point, I even did a lap, walking further than I needed to because I didn’t have to worry about getting back to the seats or taking someone to the bathroom. Even in the midst a pandemic surge of cases, I felt at ease inside my mask. </p>
-
-
-
-<p>This is not how I would want to attend all games, but for this moment, it was what I wanted (maybe needed). Every once in a while, I have to prove to myself that I am enough. That there is enough joy from a moment with myself (and with thousands of strangers) to cover me in a warm blanket of experience. It is not the same as sitting at home and watching Youtube. It is being in the world and knowing that you are a part of it. It is looking out at all that can be created when we all agree on a few things:</p>
-
-
-
-<ol class="wp-block-list"><li>To gain entry, we must commit to keeping one another safe. (Being fully vaccinated and proving it to one another.)</li><li>We will wait for our turn. (In line, or on the bench.)</li><li>We will play by the rules. (A foul is a foul is a foul.)</li><li>The three-point line is a cheat code that is available to us all.</li></ol>
-
-
-
-<p>I took my own “three pointer” last night. I did not do the expected thing, the layup of going on an outing with others. I did not drive down the lane, and dunk the ball with my children or a friend. Not because I don’t enjoy that, but because I needed this. I needed to stop just past the half-court line and throw up a low-percentage shot, and as it sailed through the air, everything slowed down. It slowed down long enough for me to look around and enjoy the moment. And then it went through the hoop, and it felt like I had won, like I had done something worthwhile. For myself.</p>
-
-
-
-<p>And then I saw the Nuggets pull the same incredible feat: 23 times.</p>]]></content:encoded>
     </item>
   </channel>
 </rss>
