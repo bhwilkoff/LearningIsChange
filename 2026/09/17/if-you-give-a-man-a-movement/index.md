@@ -9,7 +9,8 @@ tags: ["Reflection", "Learning"]
 
 # If you give a man a movement
 
-![IMG_6564.jpeg](/wp-content/uploads/2026/09/IMG_6564.jpeg)
+![](/wp-content/uploads/2026/09/img-6564-1600w.webp)
+
 I've been going to more startup, AI, and general networking events since restarting my interest in building apps ([Archive Watch](https://archivewatch.org), [Tidbits Trivia](https://tidbitstrivia.com), and [Bsky Dreams](https://bskydreams.com)). I have still yet to figure out what I'm doing there. I find that the vast majority of folks who are there are either trying to sell their ideas (finding clients, partners, or potential investors). It is a strange dance that I observe again and again, watching as a mini-pitch happens and then the the "grand sizing-up" occurs. If the two people find that they are the right "size", then the conversation continues. If not, then the person is almost immediately ignored.
 
 But, my "size" is very strange to most of the people that I talk to. I'm not trying to sell anything. I'm not looking for people who can introduce me to other people who can give me a terms sheet for purchasing a company or a piece of software. I must look very small indeed to the vast majority of those I find at these events that all seem to promise pizza and beer.

@@ -11,7 +11,7 @@ export async function render(root, ctx) {
       <select id="p-year" style="padding:9px"><option value="">All years</option></select>
       <select id="p-cat" style="padding:9px;max-width:260px"><option value="">All categories</option></select>
       <select id="p-status" style="padding:9px"><option value="live">Published</option><option value="draft">Drafts</option><option value="scheduled">Scheduled</option><option value="removed">Removed</option><option value="all">All</option></select>
-      <a class="btn primary" href="/new/" style="text-decoration:none">New post</a>
+      <a class="btn primary" href="#/posts/new" style="text-decoration:none">New post</a>
     </div></div>
     <div id="p-list" class="card"><div class="empty">Loading posts…</div></div>`;
   let all;

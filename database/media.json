@@ -1,15 +1,15 @@
 {
- "generated": "2026-09-17T16:55:33.693Z",
+ "generated": "2026-09-17T17:39:01.551Z",
  "root": "wp-content/uploads",
  "summary": {
-  "files": 976,
-  "originals": 965,
-  "bytes": 1504868776,
-  "used": 662,
+  "files": 977,
+  "originals": 966,
+  "bytes": 1500172056,
+  "used": 663,
   "unused": 303,
   "missing": 120,
   "by_kind": {
-   "image": 778,
+   "image": 779,
    "audio": 171,
    "video": 7,
    "doc": 9,
@@ -16087,9 +16087,9 @@
    "h": 2818
   },
   {
-   "path": "wp-content/uploads/2026/09/IMG_6564.jpeg",
-   "bytes": 5286368,
-   "ext": "jpeg",
+   "path": "wp-content/uploads/2026/09/img-6564-1600w.webp",
+   "bytes": 450152,
+   "ext": "webp",
    "kind": "image",
    "year": "2026",
    "month": "09",
@@ -16101,8 +16101,26 @@
      "status": "published"
     }
    ],
-   "w": 5712,
-   "h": 4284
+   "w": 1600,
+   "h": 2133
+  },
+  {
+   "path": "wp-content/uploads/2026/09/img-6564-800w.webp",
+   "bytes": 139496,
+   "ext": "webp",
+   "kind": "image",
+   "year": "2026",
+   "month": "09",
+   "used_by": [
+    {
+     "type": "post",
+     "url": "/2026/09/17/if-you-give-a-man-a-movement/",
+     "title": "If you give a man a movement",
+     "status": "published"
+    }
+   ],
+   "w": 800,
+   "h": 1067
   },
   {
    "path": "wp-content/uploads/woocommerce-placeholder.png",

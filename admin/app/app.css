@@ -100,3 +100,6 @@ body.signed-out .app-nav { visibility: hidden; }
 .lib-links a { margin-left: 6px; font-size: 0.78rem; }
 .lib-missing .lib-refs { border-top: none; padding-top: 2px; margin-top: 2px; }
 .runs .lib-refs li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 3px 0; border-top: none; font-size: 0.82rem; }
+
+/* an element with the hidden attribute is hidden, whatever the element rules say */
+[hidden] { display: none !important; }

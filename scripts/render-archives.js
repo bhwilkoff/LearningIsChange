@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   REPO_ROOT, SITE, SITE_NAME, AUTHOR, TAGLINE, NOISE_TERMS, escapeHtml, escapeAttr, describe, dates, terms,
-  firstImage, plainText, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, slugify, headCommon,
+  firstImage, thumbImage, plainText, loadAllPosts, loadTaxonomies, nav, rail, footer, fill, slugify, headCommon,
 } from './lib/shell.js';
 
 const args = process.argv.slice(2);
@@ -42,9 +42,19 @@ const pages = new Map(); // url -> html
 function emit(url, html) { pages.set(url, html); }
 
 // ---------- list rendering ----------
+// A listing shows the lead image when the post is image-only (Typewriter scans) or when the
+// image is a self-hosted photo of real size per database/media.json — never a smilie, a
+// tracking pixel or an external hotlink from a 2008 post.
+const MEDIA = (() => { try { const m = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'database', 'media.json'), 'utf8')); const byPath = new Map(); for (const f of m.files) { byPath.set(f.path, f); for (const v of f.variants || []) byPath.set(v, f); } return byPath; } catch { return new Map(); } })();
+function thumbWorthy(imgUrl, p) {
+  if (plainText(p.content).length < 40) return true;
+  const rel = imgUrl.replace(/^https?:\/\/[^/]+\//, '');
+  const f = MEDIA.get(decodeURIComponent(rel)) || MEDIA.get(rel) || MEDIA.get(rel.replace(/-\d+w(\.\w+)$/, '$1'));
+  return !!(f && f.w >= 400 && f.h >= 300);
+}
 function item(p) {
-  const d = dates(p); const ds = describe(p, 150); const img = firstImage(p.content);
-  const thumb = img && plainText(p.content).length < 40 ? `<img class="thumb" src="${escapeAttr(img)}" alt="" loading="lazy">` : '';
+  const d = dates(p); const ds = describe(p, 150); const img = thumbImage(p.content);
+  const thumb = img && thumbWorthy(img, p) ? `<img class="thumb" src="${escapeAttr(img)}" alt="" loading="lazy">` : '';
   const cats = terms(p, 'categories').filter((c) => !NOISE_TERMS.has(c.slug));
   const k = cats.length ? `<span class="k">${cats.map((c) => `<a href="${escapeAttr(c.url)}">${escapeHtml(c.name)}</a>`).join('')}</span>` : '';
   return `<li><time datetime="${d.dateOnly}">${d.dateOnly}</time><div>${thumb}<a class="t" href="${escapeAttr(p.url)}">${escapeHtml(p.title || 'Untitled')}</a>${ds && ds !== TAGLINE ? `<span class="d">${escapeHtml(ds)}</span>` : ''}${k}</div></li>`;

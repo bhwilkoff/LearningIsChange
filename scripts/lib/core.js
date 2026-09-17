@@ -64,6 +64,17 @@ export function firstImage(html) {
   if (!m) return '';
   return m[1].startsWith('/') ? SITE + m[1] : m[1];
 }
+// The lead image at its smallest srcset size (for listing thumbnails); '' when there is none.
+export function thumbImage(html) {
+  const tag = /<img[^>]*>/i.exec(selfHostImages(html));
+  if (!tag) return '';
+  const attr = (n) => (new RegExp(`\\s${n}=["']([^"']+)["']`, 'i').exec(tag[0]) || [])[1] || '';
+  let src = attr('src');
+  const set = attr('srcset').split(',').map((c) => c.trim().split(/\s+/)).filter((c) => c[0]).map((c) => [c[0], parseInt(c[1], 10) || Infinity]).sort((a, b) => a[1] - b[1]);
+  if (set.length) src = set[0][0];
+  if (!src) return '';
+  return src.startsWith('/') ? SITE + src : src;
+}
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 export function dates(post) {

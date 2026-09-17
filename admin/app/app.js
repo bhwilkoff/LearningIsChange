@@ -40,6 +40,7 @@ export const ctx = {
   signOut() { oauth.signOut(); vault.lock(); const s = getSettings(); if (s.githubToken) saveSettings({ ...s, githubToken: '' }); this.status(''); this.refreshLock(); route(); },
   // Ask for the passphrase if a vault exists and is locked. Resolves true when a token is available.
   async ensureUnlocked() {
+    if (await oauth.token()) return true; // refreshes an expired GitHub session silently
     if (this.token()) return true;
     if (!vault.hasVault()) return false;
     const pass = prompt('Unlock LiC Admin — passphrase for your encrypted GitHub token:');
@@ -66,17 +67,13 @@ async function route() {
   document.getElementById('app-signout').hidden = !ok;
   if (!ok && name !== 'settings') { if (current?.destroy) current.destroy(); current = null; renderGate(); return; }
   // #/posts/edit/<url> → editor
-  const sub = path.startsWith('posts/edit/') ? path.slice('posts/edit'.length) : path.startsWith('pages/edit/') ? path.slice('pages/edit'.length) : null;
-  const view = path.startsWith('posts/edit/') ? edit : (VIEWS[name] || VIEWS.render);
+  const sub = path.startsWith('posts/edit/') ? path.slice('posts/edit'.length) : path === 'posts/new' ? 'new' : path.startsWith('pages/edit/') ? path.slice('pages/edit'.length) : null;
+  const view = path.startsWith('posts/edit/') || path === 'posts/new' ? edit : (VIEWS[name] || VIEWS.render);
   document.querySelectorAll('#app-nav a').forEach((a) => a.classList.toggle('active', a.dataset.view === name));
   if (current?.destroy) current.destroy();
   const root = document.getElementById('view');
   root.innerHTML = '';
   document.title = `${view.title} · LiC Admin`;
-  if (view.soon) {
-    root.appendChild(ctx.el(`<div><h1>${view.title}</h1><p class="lead">Coming in phase ${view.soon} (Decision 015). Until then use the existing tool: ${legacyLink(name)}.</p></div>`));
-    current = null; return;
-  }
   current = view; view.render(root, ctx, sub);
 }
 function renderGate() {
@@ -96,12 +93,8 @@ function renderGate() {
     </div>
     <p class="text-muted">Prefer a fine-grained token? <a href="#/settings">Paste one in Settings</a>.</p>
   </section>`));
-  root.querySelector('#gate-github')?.addEventListener('click', () => oauth.signIn());
+  root.querySelector('#gate-github')?.addEventListener('click', () => { if (location.hash && location.hash !== '#/') sessionStorage.setItem('licAdminNext', location.pathname + location.hash); oauth.signIn(); });
   root.querySelector('#gate-unlock')?.addEventListener('click', async () => { if (await ctx.ensureUnlocked()) { ctx.refreshLock(); route(); } });
-}
-function legacyLink(name) {
-  const m = { posts: '<a href="/new/">New post</a> · <a href="/edit/">Edit</a> · <a href="/remove/">Remove</a> · <a href="/update/">Mass update</a>', pages: '<a href="/edit/">Edit</a>', terms: '<a href="/admin/db-maintenance/">DB maintenance</a>', media: '<a href="/admin/dedup/">Dedup</a> · <a href="/links/">Links</a>' };
-  return m[name] || '';
 }
 // ?next=/some/tool/ (from the legacy tools' gate) survives the GitHub round-trip in sessionStorage.
 const NEXT = new URLSearchParams(location.search).get('next');
