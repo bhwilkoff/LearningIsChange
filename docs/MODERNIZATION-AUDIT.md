@@ -745,10 +745,18 @@ appended here as ticks complete.
   works (state + `redirect_uri=http://127.0.0.1:8765/admin/app/`).
   GitHub disables **Authorize** while the tab is hidden, so the final
   click is Ben's.
-- **Next (blocked on Ben)**: click Authorize in the open GitHub tab (or
-  sign in from `https://learningischange.com/admin/app/#/settings` once
-  Pages deploys), then verify the exchange (token in sessionStorage,
-  Test connection OK, rate-limit shows the App). Then A5: retire the
-  legacy tools (`/new/ /edit/ /remove/ /update/ /links/ /podcast-rss/
-  /admin/regenerate/ /admin/dedup/ /admin/db-maintenance/`) as redirects
-  into LiC Admin once Ben has used each view once; update docs.
+- **2026-09-17 · A1.6 done — sign-in verified end to end.** From
+  `https://learningischange.com/admin/app/#/settings`: Sign in with
+  GitHub → consent screen (Ben clicked Authorize) → redirect with
+  `code`+`state` → Worker `/token` exchange → `ghu_` user-to-server
+  token (8 h) + refresh token (6 months) in sessionStorage, code scrubbed
+  from the URL. Settings shows "✓ Signed in with GitHub … refreshes
+  automatically"; Test connection: `bhwilkoff/LearningIsChange (write
+  access) · rate limit 5000/5000`. No PAT involved. **Decision 016 is
+  fully delivered**; the vault/PAT path remains as the fallback.
+- **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
+  /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
+  /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin
+  once Ben has used each view once; update `CLAUDE.md`, `admin/index.html`
+  and `scripts/README.md`. Content Review Queue (§5) items incl. A-7
+  still await Ben.

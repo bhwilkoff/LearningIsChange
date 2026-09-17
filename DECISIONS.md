@@ -463,7 +463,7 @@ the same way and never sent anywhere but the AT Protocol PDS.
   /admin/regenerate/ /admin/dedup/ /admin/db-maintenance/`; docs.
 
 ## Decision 016 — Admin authentication: encrypted token vault now, GitHub App sign-in next
-*Date: 2026-09-16 · Status: **APPROVED by Ben***
+*Date: 2026-09-16 · Status: **APPROVED by Ben · DELIVERED 2026-09-17** (App `learning-is-change-admin`, Worker `lic-github-auth.benwilkoff.workers.dev`; sign-in verified end to end)*
 
 **Decision**: (1) **Now** — LiC Admin stores the GitHub token only as
 AES-GCM ciphertext (`admin/lib/vault.js`: PBKDF2-SHA256 × 310k from a
