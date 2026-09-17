@@ -1,11 +1,11 @@
 # Duplicate uploads (byte-identical)
 
 Generated 2026-09-17 by hashing every file under `wp-content/uploads/`.
-Numbers in parentheses = how many posts/pages/feed items reference that
-copy (from `database/media.json`). Nothing here has been changed — Ben
-chose "report only" (Content Review Queue E-1). Consolidating would mean
-pointing every reference at one copy and deleting the rest (−68 MB);
-the deleted copies' direct URLs would then 404.
+Numbers in parentheses = how many posts/pages/feed items referenced that
+copy at the time (from `database/media.json`). **Consolidated 2026-09-17
+(Ben, queue E-1)**: in every group but the two E-2 pairs, references were
+rewritten to one copy and the others deleted (−68 MB). This file is the
+record of what was removed.
 
 **Same audio under two episodes (content question, E-2):**
 - `2016/07/DigitalStickyNotes.m4a` (Digital Sticky Notes, 2007) = `2016/07/Feedback.m4a` (Question 59 of 365, 2010)

@@ -15,22 +15,22 @@ Originally shared by Jay Vean-CCSD
 
 The deployment of over 18,000 Chromebooks to Cherry Creek Schools has begun. A TON of work that has us very excited.
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B1-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B1.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B2-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B2.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B3-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B3.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B4-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B4.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B5-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B5.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B6-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B6.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B7-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B7.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B8-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B8.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B9-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B9.jpeg)
 
-![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B10-1.jpeg)
+![](/wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B10.jpeg)

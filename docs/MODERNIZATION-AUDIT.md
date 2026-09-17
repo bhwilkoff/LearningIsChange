@@ -310,10 +310,13 @@ items get done in a later tick and moved to *Done*.
   the "start here" page in the new homepage.
 
 ### E. Media (from the media index, 2026-09-17)
-- E-1 **77 groups of byte-identical uploads** (79 extra copies, 68 MB) —
-  full list in `docs/MEDIA-DUPLICATES.md`. Ben: report only for now.
-  When ready: rewrite every reference to one canonical copy and delete
-  the rest (old direct URLs of the deleted copies would 404).
+- ✅ (Ben 2026-09-17: consolidate) E-1 **77 groups of byte-identical
+  uploads** — 75 groups consolidated (the two E-2 pairs left alone):
+  96 references in 4 shards rewritten to one canonical copy (podcast-
+  referenced copy wins, then most-referenced, then the name without a
+  `-N` suffix), 77 files removed (−68 MB), 22 posts + `full.xml`
+  re-rendered, podcast feed unchanged. Old direct URLs of the removed
+  copies now 404 (accepted). List kept in `docs/MEDIA-DUPLICATES.md`.
 - E-2 **Same recording attached to two different episodes** —
   `DigitalStickyNotes.m4a` (2007) = `Feedback.m4a` (Question 59, 2010);
   `MyStudentsAreKnownFor.m4a` (2007) = `Preceding_Reputations.m4a`
@@ -820,6 +823,16 @@ appended here as ticks complete.
   (+190 MB). Skipped 20 Flash `.swf` screencasts. Broken references
   142 → 120; the rest exist in no backup. Library summary now 1,052
   files / 700 used.
+- **2026-09-17 · Duplicate uploads consolidated (E-1)** — see queue
+  §E. Also fixed a determinism bug found on the way: comment and
+  Bluesky-reply dates were formatted in the machine's local timezone, so
+  the daily UTC render on Actions and a local Mountain-time render
+  disagreed on ~400 posts (a day off around midnight UTC). Both
+  `toLocaleDateString` calls in `core.js` now pin `timeZone: 'UTC'`;
+  local dry run against the committed HTML is back to zero drift.
+  Derivative image sizes checked per Ben's question: only 11 WordPress
+  resize variants survive in the repo (912 KB), all referenced directly
+  and 3 without an original — nothing to reclaim.
 - **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
   /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
   /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin

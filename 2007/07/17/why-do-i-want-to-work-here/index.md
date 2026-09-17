@@ -27,8 +27,8 @@ Podcast: [Play in new window](http://media.blubrry.com/learningischange/learning
 
 Subscribe: [RSS](/feed/podcast/)
 
-[https://learningischange.com/wp-content/uploads/2016/07/Why_do_I_want_to_work_here.m4a](https://learningischange.com/wp-content/uploads/2016/07/Why_do_I_want_to_work_here.m4a)
+[https://learningischange.com/wp-content/uploads/2016/07/WhydoIwanttoworkhere.m4a](https://learningischange.com/wp-content/uploads/2016/07/WhydoIwanttoworkhere.m4a)
 
-Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/07/Why_do_I_want_to_work_here.m4a) | [Download](https://learningischange.com/wp-content/uploads/2016/07/Why_do_I_want_to_work_here.m4a)
+Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/07/WhydoIwanttoworkhere.m4a) | [Download](https://learningischange.com/wp-content/uploads/2016/07/WhydoIwanttoworkhere.m4a)
 
 Subscribe: [RSS](/feed/podcast/)

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Hi Everyone!
 
-![](/wp-content/uploads/2015/11/IMG_31062B252812529.MOV-1.gif)
+![](/wp-content/uploads/2015/11/IMG_31062B252812529.MOV.gif)
 
 Originally shared by Jane Lineman
 

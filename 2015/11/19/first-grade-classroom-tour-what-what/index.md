@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # First grade classroom tour, what what!
 
-![](/wp-content/uploads/2015/11/Class2BTour2B.mov-1.gif)
+![](/wp-content/uploads/2015/11/Class2BTour2B.mov.gif)
 
 Originally shared by Brendan Doyle
 

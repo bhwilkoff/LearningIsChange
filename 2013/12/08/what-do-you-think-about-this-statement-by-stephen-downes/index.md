@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # What do you think about this statement by Stephen Downes?
 
-![](/wp-content/uploads/2013/12/LMS-1.png)
+![](/wp-content/uploads/2013/12/LMS.png)
 
 What do you think about this statement by Stephen Downes? Is it true, and if so what does that mean for us as teachers and leaders?
 

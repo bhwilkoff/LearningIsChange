@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students.
 
-![](/wp-content/uploads/2013/11/CSEdWeek-1.png)
+![](/wp-content/uploads/2013/11/CSEdWeek.png)
 
 An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students. Anyone up for some collaboration?:
 

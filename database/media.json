@@ -1,16 +1,16 @@
 {
- "generated": "2026-09-17T15:28:43.159Z",
+ "generated": "2026-09-17T15:33:59.349Z",
  "root": "wp-content/uploads",
  "summary": {
-  "files": 1052,
-  "originals": 1041,
-  "bytes": 1557963037,
-  "used": 700,
-  "unused": 341,
+  "files": 975,
+  "originals": 964,
+  "bytes": 1499582408,
+  "used": 661,
+  "unused": 303,
   "missing": 120,
   "by_kind": {
-   "image": 848,
-   "audio": 177,
+   "image": 777,
+   "audio": 171,
    "video": 7,
    "doc": 9,
    "other": 0
@@ -432,17 +432,6 @@
    "used_by": [],
    "w": 156,
    "h": 128
-  },
-  {
-   "path": "wp-content/uploads/2007/12/gnutella-1.png",
-   "bytes": 36537,
-   "ext": "png",
-   "kind": "image",
-   "year": "2007",
-   "month": "12",
-   "used_by": [],
-   "w": 494,
-   "h": 430
   },
   {
    "path": "wp-content/uploads/2007/12/gnutella.png",
@@ -1192,17 +1181,6 @@
    "h": 2593
   },
   {
-   "path": "wp-content/uploads/2011/01/20110102-0844481.jpg",
-   "bytes": 1039340,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2011",
-   "month": "01",
-   "used_by": [],
-   "w": 2593,
-   "h": 2593
-  },
-  {
    "path": "wp-content/uploads/2011/01/20110103-105829.jpg",
    "bytes": 24812,
    "ext": "jpg",
@@ -1814,17 +1792,6 @@
    "h": 1224
   },
   {
-   "path": "wp-content/uploads/2012/09/IMG_29081.jpg",
-   "bytes": 92780,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2012",
-   "month": "09",
-   "used_by": [],
-   "w": 1224,
-   "h": 1224
-  },
-  {
    "path": "wp-content/uploads/2012/09/LiC.jpg",
    "bytes": 131421,
    "ext": "jpg",
@@ -2005,17 +1972,6 @@
    "h": 576
   },
   {
-   "path": "wp-content/uploads/2012/11/20121123-091941.jpg",
-   "bytes": 205673,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2012",
-   "month": "11",
-   "used_by": [],
-   "w": 960,
-   "h": 640
-  },
-  {
    "path": "wp-content/uploads/2012/11/20121123-0919411.jpg",
    "bytes": 205673,
    "ext": "jpg",
@@ -2052,24 +2008,6 @@
    "h": 286
   },
   {
-   "path": "wp-content/uploads/2013/01/E75D5811-7BD6-4E86-8595-DD991A1FDBAF.mov-1.jpeg",
-   "bytes": 54419,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "01",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/01/06/so-far-i-have-done-all-of-my-recording-of-these-videos-with-imovie-on-my-iphone/",
-     "title": "So far, I have done all of my recording of these videos with iMovie on my iPhone.",
-     "status": "published"
-    }
-   ],
-   "w": 1024,
-   "h": 768
-  },
-  {
    "path": "wp-content/uploads/2013/01/E75D5811-7BD6-4E86-8595-DD991A1FDBAF.mov.jpeg",
    "bytes": 54419,
    "ext": "jpeg",
@@ -2081,6 +2019,12 @@
      "type": "post",
      "url": "/2013/01/06/so-far-i-have-done-all-of-my-recording-of-these-videos-with-imovie-on-my-iphone-all-of-them-have-taken-less-than/",
      "title": "So far, I have done all of my recording of these videos with iMovie on my iPhone. All of them have taken less than…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2013/01/06/so-far-i-have-done-all-of-my-recording-of-these-videos-with-imovie-on-my-iphone/",
+     "title": "So far, I have done all of my recording of these videos with iMovie on my iPhone.",
      "status": "published"
     }
    ],
@@ -2533,24 +2477,6 @@
    "h": 800
   },
   {
-   "path": "wp-content/uploads/2013/10/Parties2Band2BOnline2BCommunities.mp4-1.gif",
-   "bytes": 535365,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2013",
-   "month": "10",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/10/17/one-of-my-favorite-people-kirk-anderson-shares-why-he-thinks-online-communities-are-like-a-party/",
-     "title": "One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party.",
-     "status": "published"
-    }
-   ],
-   "w": 1280,
-   "h": 720
-  },
-  {
    "path": "wp-content/uploads/2013/10/Parties2Band2BOnline2BCommunities.mp4.gif",
    "bytes": 535365,
    "ext": "gif",
@@ -2562,6 +2488,12 @@
      "type": "post",
      "url": "/2013/10/17/one-of-my-favorite-people-kirk-anderson-shares-why-he-thinks-online-communities-are-like-a-party-do-you-agree/",
      "title": "One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party. Do you agree…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2013/10/17/one-of-my-favorite-people-kirk-anderson-shares-why-he-thinks-online-communities-are-like-a-party/",
+     "title": "One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party.",
      "status": "published"
     }
    ],
@@ -2616,24 +2548,6 @@
    "h": 800
   },
   {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B1-1.jpeg",
-   "bytes": 1112912,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
    "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B1.jpeg",
    "bytes": 1112912,
    "ext": "jpeg",
@@ -2645,6 +2559,12 @@
      "type": "post",
      "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like-click-through-to-see-the-comments-from-the/",
      "title": "This is what the Cherry Creek Rollout of Chromebooks looks like. Click through to see the comments from the…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     },
     {
@@ -2664,24 +2584,6 @@
    "h": 1530
   },
   {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B10-1.jpeg",
-   "bytes": 902723,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
    "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B10.jpeg",
    "bytes": 902723,
    "ext": "jpeg",
@@ -2694,19 +2596,7 @@
      "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like-click-through-to-see-the-comments-from-the/",
      "title": "This is what the Cherry Creek Rollout of Chromebooks looks like. Click through to see the comments from the…",
      "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B2-1.jpeg",
-   "bytes": 560152,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
@@ -2733,6 +2623,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -2741,24 +2637,6 @@
      "type": "post",
      "url": "/2013/12/13/we-will-have-a-lot-of-chromebooks-in-dps-by-the-end-of-the-year-but-this-is-what-18000-looks-like-in-cherry-creek/",
      "title": "We will have a lot of chromebooks in DPS by the end of the year, but this is what 18,000 looks like in Cherry Creek.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B3-1.jpeg",
-   "bytes": 932630,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     }
    ],
@@ -2781,6 +2659,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -2789,24 +2673,6 @@
      "type": "post",
      "url": "/2013/12/13/we-will-have-a-lot-of-chromebooks-in-dps-by-the-end-of-the-year-but-this-is-what-18000-looks-like-in-cherry-creek/",
      "title": "We will have a lot of chromebooks in DPS by the end of the year, but this is what 18,000 looks like in Cherry Creek.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B4-1.jpeg",
-   "bytes": 1120115,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     }
    ],
@@ -2829,6 +2695,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -2837,24 +2709,6 @@
      "type": "post",
      "url": "/2013/12/13/we-will-have-a-lot-of-chromebooks-in-dps-by-the-end-of-the-year-but-this-is-what-18000-looks-like-in-cherry-creek/",
      "title": "We will have a lot of chromebooks in DPS by the end of the year, but this is what 18,000 looks like in Cherry Creek.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B5-1.jpeg",
-   "bytes": 1241396,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     }
    ],
@@ -2877,6 +2731,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -2885,24 +2745,6 @@
      "type": "post",
      "url": "/2013/12/13/we-will-have-a-lot-of-chromebooks-in-dps-by-the-end-of-the-year-but-this-is-what-18000-looks-like-in-cherry-creek/",
      "title": "We will have a lot of chromebooks in DPS by the end of the year, but this is what 18,000 looks like in Cherry Creek.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B6-1.jpeg",
-   "bytes": 859025,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     }
    ],
@@ -2925,6 +2767,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -2933,24 +2781,6 @@
      "type": "post",
      "url": "/2013/12/13/we-will-have-a-lot-of-chromebooks-in-dps-by-the-end-of-the-year-but-this-is-what-18000-looks-like-in-cherry-creek/",
      "title": "We will have a lot of chromebooks in DPS by the end of the year, but this is what 18,000 looks like in Cherry Creek.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B7-1.jpeg",
-   "bytes": 1103435,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     }
    ],
@@ -2973,6 +2803,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -2981,24 +2817,6 @@
      "type": "post",
      "url": "/2013/12/13/we-will-have-a-lot-of-chromebooks-in-dps-by-the-end-of-the-year-but-this-is-what-18000-looks-like-in-cherry-creek/",
      "title": "We will have a lot of chromebooks in DPS by the end of the year, but this is what 18,000 looks like in Cherry Creek.",
-     "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B8-1.jpeg",
-   "bytes": 967414,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
-     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
      "status": "published"
     }
    ],
@@ -3018,19 +2836,7 @@
      "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like-click-through-to-see-the-comments-from-the/",
      "title": "This is what the Cherry Creek Rollout of Chromebooks looks like. Click through to see the comments from the…",
      "status": "published"
-    }
-   ],
-   "w": 2048,
-   "h": 1530
-  },
-  {
-   "path": "wp-content/uploads/2013/11/CCSD2BChromebook2BDeployment2B-2B9-1.jpeg",
-   "bytes": 993821,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
@@ -3057,6 +2863,12 @@
     },
     {
      "type": "post",
+     "url": "/2013/11/07/this-is-what-the-cherry-creek-rollout-of-chromebooks-looks-like/",
+     "title": "This is what the Cherry Creek Rollout of Chromebooks looks like.",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2013/12/13/i-thought-you-all-might-want-to-see-what-deploying-18000-chromebooks-looks-like/",
      "title": "I thought you all might want to see what deploying 18,000 chromebooks looks like.",
      "status": "published"
@@ -3072,24 +2884,6 @@
    "h": 1530
   },
   {
-   "path": "wp-content/uploads/2013/11/CSEdWeek-1.png",
-   "bytes": 25309,
-   "ext": "png",
-   "kind": "image",
-   "year": "2013",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/11/20/an-amazing-4th-grade-teacher-in-dps-jessica-raleigh-is-doing-this-with-her-students/",
-     "title": "An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students.",
-     "status": "published"
-    }
-   ],
-   "w": 280,
-   "h": 263
-  },
-  {
    "path": "wp-content/uploads/2013/11/CSEdWeek.png",
    "bytes": 25309,
    "ext": "png",
@@ -3101,6 +2895,12 @@
      "type": "post",
      "url": "/2013/11/20/an-amazing-4th-grade-teacher-in-dps-jessica-raleigh-is-doing-this-with-her-students-anyone-up-for-some/",
      "title": "An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students. Anyone up for some…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2013/11/20/an-amazing-4th-grade-teacher-in-dps-jessica-raleigh-is-doing-this-with-her-students/",
+     "title": "An amazing 4th grade teacher in DPS, Jessica Raleigh, is doing this with her students.",
      "status": "published"
     }
    ],
@@ -3402,24 +3202,6 @@
    "h": 684
   },
   {
-   "path": "wp-content/uploads/2013/12/LMS-1.png",
-   "bytes": 128427,
-   "ext": "png",
-   "kind": "image",
-   "year": "2013",
-   "month": "12",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/12/08/what-do-you-think-about-this-statement-by-stephen-downes/",
-     "title": "What do you think about this statement by Stephen Downes?",
-     "status": "published"
-    }
-   ],
-   "w": 404,
-   "h": 303
-  },
-  {
    "path": "wp-content/uploads/2013/12/LMS.png",
    "bytes": 128427,
    "ext": "png",
@@ -3431,6 +3213,12 @@
      "type": "post",
      "url": "/2013/12/08/what-do-you-think-about-this-statement-by-stephen-downes-is-it-true-and-if-so-what-does-that-mean-for-us-as/",
      "title": "What do you think about this statement by Stephen Downes? Is it true, and if so what does that mean for us as…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2013/12/08/what-do-you-think-about-this-statement-by-stephen-downes/",
+     "title": "What do you think about this statement by Stephen Downes?",
      "status": "published"
     }
    ],
@@ -3708,24 +3496,6 @@
    "h": 3264
   },
   {
-   "path": "wp-content/uploads/2014/01/IMG_2861-MOTION-1.gif",
-   "bytes": 2070653,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2014",
-   "month": "01",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/01/24/thank-you-so-much-for-coming-to-todays-session/",
-     "title": "Thank you so much for coming to today’s session.",
-     "status": "published"
-    }
-   ],
-   "w": 606,
-   "h": 808
-  },
-  {
    "path": "wp-content/uploads/2014/01/IMG_2861-MOTION.gif",
    "bytes": 2070653,
    "ext": "gif",
@@ -3737,6 +3507,12 @@
      "type": "post",
      "url": "/2014/01/24/thank-you-so-much-for-coming-to-todays-session-it-really-made-for-some-great-progress-and-i-am-so-excited-by-the/",
      "title": "Thank you so much for coming to today’s session. It really made for some great progress, and I am so excited by the…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/01/24/thank-you-so-much-for-coming-to-todays-session/",
+     "title": "Thank you so much for coming to today’s session.",
      "status": "published"
     }
    ],
@@ -3780,24 +3556,6 @@
    "h": 1224
   },
   {
-   "path": "wp-content/uploads/2014/01/IMG_2915-1.jpg",
-   "bytes": 209424,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "01",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/01/31/to-all-of-you-driving-into-work-today-dont-worry/",
-     "title": "To all of you driving into work today, don’t worry.",
-     "status": "published"
-    }
-   ],
-   "w": 2000,
-   "h": 2000
-  },
-  {
    "path": "wp-content/uploads/2014/01/IMG_2915.jpg",
    "bytes": 209424,
    "ext": "jpg",
@@ -3809,6 +3567,12 @@
      "type": "post",
      "url": "/2014/01/31/to-all-of-you-driving-into-work-today-dont-worry-we-have-nearly-600-cups-of-coffee-and-a-whole-a-lot-of-learning/",
      "title": "To all of you driving into work today, don’t worry. We have nearly 600 cups of coffee and a whole a lot of learning…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/01/31/to-all-of-you-driving-into-work-today-dont-worry/",
+     "title": "To all of you driving into work today, don’t worry.",
      "status": "published"
     }
    ],
@@ -3930,17 +3694,6 @@
    "h": 2048
   },
   {
-   "path": "wp-content/uploads/2014/01/wpid-Photo-Jan-26-2014-442-PM.jpg",
-   "bytes": 389344,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "01",
-   "used_by": [],
-   "w": 1536,
-   "h": 2048
-  },
-  {
    "path": "wp-content/uploads/2014/02/20140201_080016_436-1.jpg",
    "bytes": 482034,
    "ext": "jpg",
@@ -3977,24 +3730,6 @@
    "h": 1856
   },
   {
-   "path": "wp-content/uploads/2014/02/20140201_080158_201-1.jpg",
-   "bytes": 545804,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
-     "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend.",
-     "status": "published"
-    }
-   ],
-   "w": 2528,
-   "h": 1856
-  },
-  {
    "path": "wp-content/uploads/2014/02/20140201_080158_201.jpg",
    "bytes": 545804,
    "ext": "jpg",
@@ -4007,19 +3742,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 2528,
-   "h": 1856
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080440_654.mp4-1.gif",
-   "bytes": 410191,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4027,8 +3750,8 @@
      "status": "published"
     }
    ],
-   "w": 1062,
-   "h": 598
+   "w": 2528,
+   "h": 1856
   },
   {
    "path": "wp-content/uploads/2014/02/20140201_080440_654.mp4.gif",
@@ -4043,19 +3766,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 1062,
-   "h": 598
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080518_702.mp4-1.gif",
-   "bytes": 320121,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4063,8 +3774,8 @@
      "status": "published"
     }
    ],
-   "w": 1012,
-   "h": 568
+   "w": 1062,
+   "h": 598
   },
   {
    "path": "wp-content/uploads/2014/02/20140201_080518_702.mp4.gif",
@@ -4079,19 +3790,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 1012,
-   "h": 568
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080610_937.mp4-1.gif",
-   "bytes": 377311,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4115,19 +3814,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 1012,
-   "h": 568
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080700_097-1.jpg",
-   "bytes": 423779,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4135,8 +3822,8 @@
      "status": "published"
     }
    ],
-   "w": 2528,
-   "h": 1856
+   "w": 1012,
+   "h": 568
   },
   {
    "path": "wp-content/uploads/2014/02/20140201_080700_097.jpg",
@@ -4151,19 +3838,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 2528,
-   "h": 1856
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080916_829-1.jpg",
-   "bytes": 478214,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4186,6 +3861,12 @@
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
+     "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend.",
      "status": "published"
     }
    ],
@@ -4229,24 +3910,6 @@
    "h": 1856
   },
   {
-   "path": "wp-content/uploads/2014/02/20140201_080922_928-1.jpg",
-   "bytes": 591219,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
-     "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend.",
-     "status": "published"
-    }
-   ],
-   "w": 2528,
-   "h": 1856
-  },
-  {
    "path": "wp-content/uploads/2014/02/20140201_080922_928.jpg",
    "bytes": 591219,
    "ext": "jpg",
@@ -4259,19 +3922,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 2528,
-   "h": 1856
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080924_999-1.jpg",
-   "bytes": 473910,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4295,19 +3946,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 2528,
-   "h": 1856
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_080930_761-1.jpg",
-   "bytes": 450816,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4330,6 +3969,12 @@
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
+     "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend.",
      "status": "published"
     }
    ],
@@ -4409,24 +4054,6 @@
    "h": 1856
   },
   {
-   "path": "wp-content/uploads/2014/02/20140201_082005_083.mp4-1.gif",
-   "bytes": 498883,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
-     "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend.",
-     "status": "published"
-    }
-   ],
-   "w": 1114,
-   "h": 626
-  },
-  {
    "path": "wp-content/uploads/2014/02/20140201_082005_083.mp4.gif",
    "bytes": 498883,
    "ext": "gif",
@@ -4439,19 +4066,7 @@
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
      "status": "published"
-    }
-   ],
-   "w": 1114,
-   "h": 626
-  },
-  {
-   "path": "wp-content/uploads/2014/02/20140201_084918_977.mp4-1.gif",
-   "bytes": 550129,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
@@ -4459,8 +4074,8 @@
      "status": "published"
     }
    ],
-   "w": 1280,
-   "h": 720
+   "w": 1114,
+   "h": 626
   },
   {
    "path": "wp-content/uploads/2014/02/20140201_084918_977.mp4.gif",
@@ -4474,6 +4089,12 @@
      "type": "post",
      "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend-mostly-these-were-taken-by-kids/",
      "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend. Mostly, these were taken by kids…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/03/all-of-the-photos-and-videos-from-the-google-glass-at-edcampdenver-this-weekend/",
+     "title": "All of the photos and videos from The Google Glass at  #edcampdenver  this weekend.",
      "status": "published"
     }
    ],
@@ -4901,26 +4522,14 @@
     },
     {
      "type": "post",
-     "url": "/2014/02/06/ive-been-trying-to-figure-out-how-to-show-what-digital-learning-looks-like-in-the-classroom-for-a-very-long-time/",
-     "title": "I’ve been trying to figure out how to show what “digital learning” looks like in the classroom for a very long time,…",
-     "status": "published"
-    }
-   ],
-   "w": 1280,
-   "h": 1700
-  },
-  {
-   "path": "wp-content/uploads/2014/02/Twitter2B-FASquire-Student2B2540BirchwoodCobras2B...http-twitter.com-FASquire-statuses-431429841187926016-3.jpg",
-   "bytes": 266418,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "02",
-   "used_by": [
-    {
-     "type": "post",
      "url": "/2014/02/06/i-wanted-to-share-these-images-shared-on-digitallearningday-that-i-put-together-from-twitter/",
      "title": "I wanted to share these images shared on  #DigitalLearningDay  that I put together from Twitter.",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/06/ive-been-trying-to-figure-out-how-to-show-what-digital-learning-looks-like-in-the-classroom-for-a-very-long-time/",
+     "title": "I’ve been trying to figure out how to show what “digital learning” looks like in the classroom for a very long time,…",
      "status": "published"
     }
    ],
@@ -5633,24 +5242,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2014/05/1-1.jpg",
-   "bytes": 46602,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "05",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/05/02/im-so-excited-to-see-everyone-today-i-will-be-about-an-hour-late-but-no-matter/",
-     "title": "I’m so excited to see everyone today! I will be about an hour late, but no matter.",
-     "status": "published"
-    }
-   ],
-   "w": 480,
-   "h": 261
-  },
-  {
    "path": "wp-content/uploads/2014/05/1.jpg",
    "bytes": 46602,
    "ext": "jpg",
@@ -5662,6 +5253,12 @@
      "type": "post",
      "url": "/2014/05/02/im-so-excited-to-see-everyone-today-i-will-be-about-an-hour-late-but-no-matter-i-wanted-to-make-sure-everyone/",
      "title": "I’m so excited to see everyone today! I will be about an hour late, but no matter. I wanted to make sure everyone…",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/05/02/im-so-excited-to-see-everyone-today-i-will-be-about-an-hour-late-but-no-matter/",
+     "title": "I’m so excited to see everyone today! I will be about an hour late, but no matter.",
      "status": "published"
     }
    ],
@@ -6200,26 +5797,14 @@
     },
     {
      "type": "post",
-     "url": "/2014/08/21/you-see-this/",
-     "title": "You see this?",
-     "status": "published"
-    }
-   ],
-   "w": 800,
-   "h": 400
-  },
-  {
-   "path": "wp-content/uploads/2014/08/ClassroomStepsToVerify-32B252812529-3.png",
-   "bytes": 246586,
-   "ext": "png",
-   "kind": "image",
-   "year": "2014",
-   "month": "08",
-   "used_by": [
-    {
-     "type": "post",
      "url": "/2014/08/21/verifying-teachers-in-google-classroom/",
      "title": "Verifying Teachers in Google Classroom",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2014/08/21/you-see-this/",
+     "title": "You see this?",
      "status": "published"
     }
    ],
@@ -6442,17 +6027,6 @@
    "h": 331
   },
   {
-   "path": "wp-content/uploads/2014/10/2014-10-27_11-23-451.png",
-   "bytes": 72493,
-   "ext": "png",
-   "kind": "image",
-   "year": "2014",
-   "month": "10",
-   "used_by": [],
-   "w": 319,
-   "h": 331
-  },
-  {
    "path": "wp-content/uploads/2014/10/2014-10-27_11-23-452.png",
    "bytes": 72295,
    "ext": "png",
@@ -6544,17 +6118,6 @@
    "h": 1500
   },
   {
-   "path": "wp-content/uploads/2014/10/cropped-LiCCircle.png",
-   "bytes": 130561,
-   "ext": "png",
-   "kind": "image",
-   "year": "2014",
-   "month": "10",
-   "used_by": [],
-   "w": 616,
-   "h": 616
-  },
-  {
    "path": "wp-content/uploads/2014/10/cropped-MeAsACircle.png",
    "bytes": 101333,
    "ext": "png",
@@ -6586,17 +6149,6 @@
    "used_by": [],
    "w": 1280,
    "h": 1280
-  },
-  {
-   "path": "wp-content/uploads/2014/10/image2.jpg",
-   "bytes": 117267,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "10",
-   "used_by": [],
-   "w": 1224,
-   "h": 1224
   },
   {
    "path": "wp-content/uploads/2014/10/image3.jpg",
@@ -6652,17 +6204,6 @@
    "used_by": [],
    "w": 301,
    "h": 300
-  },
-  {
-   "path": "wp-content/uploads/2014/10/YouiDraw__Online_Vector_Graphic_Design__Drawing_Online_Logo_Maker_.jpg",
-   "bytes": 55181,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2014",
-   "month": "10",
-   "used_by": [],
-   "w": 738,
-   "h": 249
   },
   {
    "path": "wp-content/uploads/2014/10/YouiDraw__Online_Vector_Graphic_Design__Drawing_Online_Logo_Maker_1.jpg",
@@ -7591,7 +7132,7 @@
    "h": 500
   },
   {
-   "path": "wp-content/uploads/2015/11/Class2BTour2B.mov-1.gif",
+   "path": "wp-content/uploads/2015/11/Class2BTour2B.mov.gif",
    "bytes": 72058,
    "ext": "gif",
    "kind": "image",
@@ -7603,41 +7144,11 @@
      "url": "/2015/11/19/first-grade-classroom-tour-what-what/",
      "title": "First grade classroom tour, what what!",
      "status": "published"
-    }
-   ],
-   "w": 270,
-   "h": 480
-  },
-  {
-   "path": "wp-content/uploads/2015/11/Class2BTour2B.mov.gif",
-   "bytes": 72058,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2015",
-   "month": "11",
-   "used_by": [
+    },
     {
      "type": "post",
      "url": "/2015/11/19/originally-shared-by-brendan-doyle-3/",
      "title": "Originally shared by Brendan Doyle",
-     "status": "published"
-    }
-   ],
-   "w": 270,
-   "h": 480
-  },
-  {
-   "path": "wp-content/uploads/2015/11/IMG_31062B252812529.MOV-1.gif",
-   "bytes": 79366,
-   "ext": "gif",
-   "kind": "image",
-   "year": "2015",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2015/11/19/hi-everyone/",
-     "title": "Hi Everyone!",
      "status": "published"
     }
    ],
@@ -7654,6 +7165,12 @@
    "used_by": [
     {
      "type": "post",
+     "url": "/2015/11/19/hi-everyone/",
+     "title": "Hi Everyone!",
+     "status": "published"
+    },
+    {
+     "type": "post",
      "url": "/2015/11/19/originally-shared-by-jane-lineman/",
      "title": "Originally shared by Jane Lineman",
      "status": "published"
@@ -7661,24 +7178,6 @@
    ],
    "w": 270,
    "h": 480
-  },
-  {
-   "path": "wp-content/uploads/2015/11/IMG_5323-1.jpg",
-   "bytes": 564514,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2015",
-   "month": "11",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2015/11/19/panoramic-shot-of-my-classroom-notice-the-computers-all-face-the-walls-and-the-projector-is-hard-to-view-from/",
-     "title": "Panoramic shot of my classroom – notice the computers all face the walls and the projector is hard to view from…",
-     "status": "published"
-    }
-   ],
-   "w": 3756,
-   "h": 837
   },
   {
    "path": "wp-content/uploads/2015/11/IMG_5323.jpg",
@@ -7692,6 +7191,12 @@
      "type": "post",
      "url": "/2015/11/19/originally-shared-by-alexandra-overby/",
      "title": "Originally shared by Alexandra Overby",
+     "status": "published"
+    },
+    {
+     "type": "post",
+     "url": "/2015/11/19/panoramic-shot-of-my-classroom-notice-the-computers-all-face-the-walls-and-the-projector-is-hard-to-view-from/",
+     "title": "Panoramic shot of my classroom – notice the computers all face the walls and the projector is hard to view from…",
      "status": "published"
     }
    ],
@@ -7986,22 +7491,6 @@
      "type": "post",
      "url": "/2015/12/11/askbenw-how-can-we-create-byod-equity/",
      "title": "#AskBenW: How can we create BYOD equity?",
-     "status": "published"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_-1.mp3",
-   "bytes": 3161117,
-   "ext": "mp3",
-   "kind": "audio",
-   "year": "2016",
-   "month": "03",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2015/08/25/askbenw-how-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning/",
-     "title": "#AskBenW: How do we ensure school leaders have what they need for their own learning?",
      "status": "published"
     }
    ]
@@ -8412,22 +7901,6 @@
      "type": "post",
      "url": "/2016/01/20/askbenw-what-responsibility-do-you-have-to-finish-what-you-started/",
      "title": "#AskBenW: What responsibility do you have to finish what you started?",
-     "status": "published"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_-1.mp3",
-   "bytes": 3029030,
-   "ext": "mp3",
-   "kind": "audio",
-   "year": "2016",
-   "month": "03",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2015/09/14/askbenw-what-role-should-email-play-in-our-teaching-and-learning-lives/",
-     "title": "#AskBenW: What role should email play in our teaching and learning lives?",
      "status": "published"
     }
    ]
@@ -9927,17 +9400,6 @@
    "h": 360
   },
   {
-   "path": "wp-content/uploads/2016/06/c4c5f567-d800-40b5-b7b8-c5af13ded448-1.jpeg",
-   "bytes": 1399928,
-   "ext": "jpeg",
-   "kind": "image",
-   "year": "2016",
-   "month": "06",
-   "used_by": [],
-   "w": 3264,
-   "h": 2448
-  },
-  {
    "path": "wp-content/uploads/2016/06/c4c5f567-d800-40b5-b7b8-c5af13ded448.jpeg",
    "bytes": 1399928,
    "ext": "jpeg",
@@ -9949,30 +9411,8 @@
    "h": 2448
   },
   {
-   "path": "wp-content/uploads/2016/06/IMG_5942-1.jpg",
-   "bytes": 1415766,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "06",
-   "used_by": [],
-   "w": 3264,
-   "h": 2448
-  },
-  {
    "path": "wp-content/uploads/2016/06/IMG_5942.jpg",
    "bytes": 1415766,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "06",
-   "used_by": [],
-   "w": 3264,
-   "h": 2448
-  },
-  {
-   "path": "wp-content/uploads/2016/06/IMG_5944-1.jpg",
-   "bytes": 912587,
    "ext": "jpg",
    "kind": "image",
    "year": "2016",
@@ -10165,17 +9605,6 @@
    "h": 720
   },
   {
-   "path": "wp-content/uploads/2016/07/AskBenW_-How-can-we-create-BYOD-equity_-mp3-image.jpg",
-   "bytes": 88201,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
-  },
-  {
    "path": "wp-content/uploads/2016/07/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_-mp3-image.jpg",
    "bytes": 68944,
    "ext": "jpg",
@@ -10255,17 +9684,6 @@
   {
    "path": "wp-content/uploads/2016/07/AskBenW_-Should-teachers-post-videos-as-is-or-should-they-edit_produce_polish-them-first_-mp3-image.jpg",
    "bytes": 65741,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
-  },
-  {
-   "path": "wp-content/uploads/2016/07/AskBenW_-Shouldnt-we-be-further-along-in-our-progress_-mp3-image.jpg",
-   "bytes": 60974,
    "ext": "jpg",
    "kind": "image",
    "year": "2016",
@@ -11062,17 +10480,6 @@
    "h": 512
   },
   {
-   "path": "wp-content/uploads/2016/07/cropped-LiC-1.jpg",
-   "bytes": 61416,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 512,
-   "h": 512
-  },
-  {
    "path": "wp-content/uploads/2016/07/Digital_Ex-Pats.m4a",
    "bytes": 11456390,
    "ext": "m4a",
@@ -11360,173 +10767,8 @@
    "h": 360
   },
   {
-   "path": "wp-content/uploads/2016/07/hqdefault-13.jpg",
-   "bytes": 20508,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-14.jpg",
-   "bytes": 14378,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-15.jpg",
-   "bytes": 29878,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-16.jpg",
-   "bytes": 23738,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-17.jpg",
-   "bytes": 20630,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-18.jpg",
-   "bytes": 20820,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-19.jpg",
-   "bytes": 20317,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
    "path": "wp-content/uploads/2016/07/hqdefault-2.jpg",
    "bytes": 20630,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-20.jpg",
-   "bytes": 17791,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-21.jpg",
-   "bytes": 14459,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-22.jpg",
-   "bytes": 20037,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-23.jpg",
-   "bytes": 14871,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-24.jpg",
-   "bytes": 14076,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-25.jpg",
-   "bytes": 16698,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-26.jpg",
-   "bytes": 12232,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 480,
-   "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/hqdefault-27.jpg",
-   "bytes": 15441,
    "ext": "jpg",
    "kind": "image",
    "year": "2016",
@@ -11644,22 +10886,6 @@
    "used_by": [],
    "w": 480,
    "h": 360
-  },
-  {
-   "path": "wp-content/uploads/2016/07/I_vs._We2.m4a",
-   "bytes": 7223404,
-   "ext": "m4a",
-   "kind": "audio",
-   "year": "2016",
-   "month": "07",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2007/08/01/i-vs-we/",
-     "title": "I vs. We",
-     "status": "published"
-    }
-   ]
   },
   {
    "path": "wp-content/uploads/2016/07/Internet_as_Utopia.m4a",
@@ -11818,17 +11044,6 @@
      "status": "published"
     }
    ]
-  },
-  {
-   "path": "wp-content/uploads/2016/07/Launching-AskBenW-mp3-image.jpg",
-   "bytes": 59552,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
   },
   {
    "path": "wp-content/uploads/2016/07/Learning-Doesnt-Come-From-Experts-It-Comes-From-Engaged-Expertise-mp3-image.jpg",
@@ -12296,22 +11511,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/07/Social_Networks_of_Tragedies.m4a",
-   "bytes": 6628285,
-   "ext": "m4a",
-   "kind": "audio",
-   "year": "2016",
-   "month": "07",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2007/07/06/the-social-networks-of-tragedies/",
-     "title": "The Social Networks of Tragedies",
-     "status": "published"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2016/07/SocialNetworksofTragedies.m4a",
    "bytes": 6628285,
    "ext": "m4a",
@@ -12428,22 +11627,6 @@
      "type": "post",
      "url": "/2007/01/24/the-future-of-literacy/",
      "title": "The Future of Literacy",
-     "status": "published"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2016/07/The_Most_Change_for_The_Most_Kids.m4a",
-   "bytes": 6720623,
-   "ext": "m4a",
-   "kind": "audio",
-   "year": "2016",
-   "month": "07",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2007/06/27/the-most-change-for-the-most-kids/",
-     "title": "The Most Change For The Most Kids",
      "status": "published"
     }
    ]
@@ -12942,22 +12125,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/07/Why_do_I_want_to_work_here.m4a",
-   "bytes": 4543523,
-   "ext": "m4a",
-   "kind": "audio",
-   "year": "2016",
-   "month": "07",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2007/07/17/why-do-i-want-to-work-here/",
-     "title": "Why do I want to work here?",
-     "status": "published"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2016/07/WhydoIwanttoworkhere.m4a",
    "bytes": 4543523,
    "ext": "m4a",
@@ -13041,17 +12208,6 @@
      "status": "published"
     }
    ]
-  },
-  {
-   "path": "wp-content/uploads/2016/07/YPtb_JFT360-1.jpg",
-   "bytes": 65534,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "07",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
   },
   {
    "path": "wp-content/uploads/2016/07/YPtb_JFT360.jpg",
@@ -13540,28 +12696,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/08/Wi6JxjdKYn0-1.jpg",
-   "bytes": 59552,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "08",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
-  },
-  {
-   "path": "wp-content/uploads/2016/08/Wi6JxjdKYn0.jpg",
-   "bytes": 59552,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "08",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
-  },
-  {
    "path": "wp-content/uploads/2016/09/01-WHOISaps_-How-can-we-inspire-students-to-be-self-directed-learners_-mp3-image.jpg",
    "bytes": 13781,
    "ext": "jpg",
@@ -13893,34 +13027,12 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/10/wGrcQ9invho-1.jpg",
-   "bytes": 130693,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "10",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
-  },
-  {
    "path": "wp-content/uploads/2016/10/wGrcQ9invho.jpg",
    "bytes": 130693,
    "ext": "jpg",
    "kind": "image",
    "year": "2016",
    "month": "10",
-   "used_by": [],
-   "w": 1280,
-   "h": 720
-  },
-  {
-   "path": "wp-content/uploads/2016/12/egigguiI51E-1.jpg",
-   "bytes": 145152,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2016",
-   "month": "12",
    "used_by": [],
    "w": 1280,
    "h": 720
@@ -14948,17 +14060,6 @@
    ],
    "w": 8145,
    "h": 6109
-  },
-  {
-   "path": "wp-content/uploads/2019/06/15608735712235-1.png",
-   "bytes": 48559,
-   "ext": "png",
-   "kind": "image",
-   "year": "2019",
-   "month": "06",
-   "used_by": [],
-   "w": 256,
-   "h": 256
   },
   {
    "path": "wp-content/uploads/2019/06/15608735712235.png",
@@ -16485,17 +15586,6 @@
      "status": "published"
     }
    ],
-   "w": 1920,
-   "h": 2560
-  },
-  {
-   "path": "wp-content/uploads/2022/02/img_8799-scaled.jpg",
-   "bytes": 938990,
-   "ext": "jpg",
-   "kind": "image",
-   "year": "2022",
-   "month": "02",
-   "used_by": [],
    "w": 1920,
    "h": 2560
   },

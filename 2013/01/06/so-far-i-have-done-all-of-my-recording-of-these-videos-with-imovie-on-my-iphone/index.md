@@ -9,6 +9,6 @@ tags: ["Ben Wilkoff"]
 
 # So far, I have done all of my recording of these videos with iMovie on my iPhone.
 
-![](/wp-content/uploads/2013/01/E75D5811-7BD6-4E86-8595-DD991A1FDBAF.mov-1.jpeg)
+![](/wp-content/uploads/2013/01/E75D5811-7BD6-4E86-8595-DD991A1FDBAF.mov.jpeg)
 
 So far, I have done all of my recording of these videos with iMovie on my iPhone. All of them have taken less than 15 minutes to produce (once I had this intro clip put together).

@@ -208,7 +208,8 @@ function renderComments(post) {
   if (!list.length) return '';
   const byParent = new Map();
   for (const c of list) (byParent.get(c.parent || null) || byParent.set(c.parent || null, []).get(c.parent || null)).push(c);
-  const fmt = (iso) => { const d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); };
+  // UTC so the output is identical on a laptop and on the Actions runner (comment timestamps carry their own offset)
+  const fmt = (iso) => { const d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }); };
   const item = (c) => {
     const who = c.author_url ? `<a href="${escapeAttr(c.author_url)}" rel="ugc nofollow">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
     const kids = byParent.get(c.id) || [];
@@ -279,7 +280,7 @@ export function renderBlueskyThread(thread, postUrl) {
   const count = countReplies(thread);
   const item = (node) => {
     const p = node.post, a = p.author || {}, rec = p.record || {};
-    const when = rec.createdAt ? new Date(rec.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+    const when = rec.createdAt ? new Date(rec.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }) : '';
     const link = `https://bsky.app/profile/${escapeAttr(a.handle || '')}/post/${escapeAttr(String(p.uri || '').split('/').pop())}`;
     const kids = (node.replies || []).filter((r) => r && r.post);
     return `<li class="comment"><div class="comment-head">${a.avatar ? `<img class="comment-avatar" src="${escapeAttr(a.avatar)}" alt="" width="32" height="32" loading="lazy">` : ''}<span class="comment-author"><a href="https://bsky.app/profile/${escapeAttr(a.handle || '')}" rel="ugc nofollow">${escapeHtml(a.displayName || a.handle || 'someone')}</a> <small class="mono">@${escapeHtml(a.handle || '')}</small></span><a class="comment-date" href="${link}" rel="nofollow">${escapeHtml(when)}</a></div><div class="comment-body"><p>${escapeHtml(rec.text || '')}</p></div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;

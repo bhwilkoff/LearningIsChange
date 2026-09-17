@@ -36,8 +36,8 @@ Podcast: [Play in new window](http://media.blubrry.com/learningischange/learning
 
 Subscribe: [RSS](/feed/podcast/)
 
-[https://learningischange.com/wp-content/uploads/2016/07/Social_Networks_of_Tragedies.m4a](https://learningischange.com/wp-content/uploads/2016/07/Social_Networks_of_Tragedies.m4a)
+[https://learningischange.com/wp-content/uploads/2016/07/SocialNetworksofTragedies.m4a](https://learningischange.com/wp-content/uploads/2016/07/SocialNetworksofTragedies.m4a)
 
-Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/07/Social_Networks_of_Tragedies.m4a) | [Download](https://learningischange.com/wp-content/uploads/2016/07/Social_Networks_of_Tragedies.m4a)
+Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/07/SocialNetworksofTragedies.m4a) | [Download](https://learningischange.com/wp-content/uploads/2016/07/SocialNetworksofTragedies.m4a)
 
 Subscribe: [RSS](/feed/podcast/)

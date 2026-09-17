@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party.
 
-![](/wp-content/uploads/2013/10/Parties2Band2BOnline2BCommunities.mp4-1.gif)
+![](/wp-content/uploads/2013/10/Parties2Band2BOnline2BCommunities.mp4.gif)
 
 One of my favorite people, Kirk Anderson, shares why he thinks online communities are like a party. Do you agree with this metaphor? Is this one that you have used in your community building efforts?
 

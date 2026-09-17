@@ -17,8 +17,8 @@ Podcast: [Play in new window](http://media.blubrry.com/learningischange/learning
 
 Subscribe: [RSS](/feed/podcast/)
 
-[https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_-1.mp3](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_-1.mp3)
+[https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_.mp3](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_.mp3)
 
-Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_-1.mp3) | [Download](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_-1.mp3)
+Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_.mp3) | [Download](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_.mp3)
 
 Subscribe: [RSS](/feed/podcast/)

@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff", "InnEdCoMemes"]
 
 # I’m so excited to see everyone today! I will be about an hour late, but no matter.
 
-![](/wp-content/uploads/2014/05/1-1.jpg)
+![](/wp-content/uploads/2014/05/1.jpg)
 
 I’m so excited to see everyone today! I will be about an hour late, but no matter. I wanted to make sure everyone knows about making #InnEdCoMemes. I have had such fun with this contest this week!
 

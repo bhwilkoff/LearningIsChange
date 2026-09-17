@@ -17,8 +17,8 @@ Podcast: [Play in new window](http://media.blubrry.com/learningischange/learning
 
 Subscribe: [RSS](/feed/podcast/)
 
-[https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_-1.mp3](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_-1.mp3)
+[https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_.mp3](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_.mp3)
 
-Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_-1.mp3) | [Download](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_-1.mp3)
+Podcast: [Play in new window](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_.mp3) | [Download](https://learningischange.com/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_.mp3)
 
 Subscribe: [RSS](/feed/podcast/)

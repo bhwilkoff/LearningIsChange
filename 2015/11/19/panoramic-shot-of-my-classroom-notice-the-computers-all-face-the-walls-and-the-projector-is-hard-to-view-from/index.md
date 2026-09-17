@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Panoramic shot of my classroom – notice the computers all face the walls and the projector is hard to view from…
 
-![](/wp-content/uploads/2015/11/IMG_5323-1.jpg)
+![](/wp-content/uploads/2015/11/IMG_5323.jpg)
 
 Originally shared by Alexandra Overby
 

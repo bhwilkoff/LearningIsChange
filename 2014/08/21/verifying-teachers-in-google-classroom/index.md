@@ -9,7 +9,7 @@ tags: ["Ben Wilkoff"]
 
 # Verifying Teachers in Google Classroom
 
-![](/wp-content/uploads/2014/08/ClassroomStepsToVerify-32B252812529-3.png)
+![](/wp-content/uploads/2014/08/ClassroomStepsToVerify-32B252812529-1.png)
 
 Originally shared by ****
 
