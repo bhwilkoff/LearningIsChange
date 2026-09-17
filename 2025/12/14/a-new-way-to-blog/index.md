@@ -1,5 +1,5 @@
 ---
-title: "Learning is Change"
+title: "A New Way to Blog"
 date: 2025-12-14
 url: https://learningischange.com/2025/12/14/a-new-way-to-blog/
 author: Ben Wilkoff
@@ -7,7 +7,7 @@ categories: ["Blog"]
 tags: ["writing", "wordpress"]
 ---
 
-# Learning is Change
+# A New Way to Blog
 
 I have fully given up on running my own server. After 20 years of "owning" my own space online, I have finally moved everything over to running it on Github as static files. This is both far less complicated and far more interesting for this moment in time. I want to be able to manipulate all of my content via API. I want to be able to build things on top of it and pull it a whole bunch of different ways without needing Wordpress' permission to do so.
 

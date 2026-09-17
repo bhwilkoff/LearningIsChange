@@ -5,7 +5,7 @@ learningischange.com (3,652 posts; 867 essays of 250+ words; the 2026
 typewritten pages via their transcripts). This is the reference for any
 project that produces words in Ben's name: app copy, READMEs, docs,
 posts, arguments, emails. Read it before writing; check against §10
-after.
+after; §12–14 are the second pass over the whole corpus.
 
 Companion files, regenerated on every site render:
 `docs/voice/stats.md` (the measurements cited here) and
@@ -269,7 +269,10 @@ across twenty years.
 8. Zero em dashes? Zero jargon-as-badge? "Folks", not "users"?
 9. Does it end by returning to the opening and handing the idea to the
    reader — an invitation, a question, or a short flat sentence?
-10. Read it aloud. If it sounds like a company, start over. If it sounds
+10. Does it say what Ben *wants* before it says what the thing *does*?
+11. Is the title a statement or a noun phrase, not a question?
+12. Any word from the retired lexicon (§12) doing present-tense work?
+13. Read it aloud. If it sounds like a company, start over. If it sounds
     like a person who taught eighth grade and builds things at night,
     ship it.
 
@@ -302,6 +305,132 @@ across twenty years.
 > Purpose is in short supply. Belief not so much. When you match purpose
 > with belief, you often times get magic. And yet, when you confuse the
 > two, you often find tragedy.
+
+## 12. Second pass: what the whole corpus adds
+
+A sweep of all 3,652 posts after the close reading. These change how the
+guide should be applied.
+
+**"I want" is the argument.** The single most common way a Ben
+sentence begins is *I want* (440 times in the essays — three times as
+often as *I think* or *I believe*). Specifications read as wishes: "I
+want the uploaded work to be an iterative process, one idea leading to
+the next." / "I want to be able to look at what is going on behind the
+scenes… and know all of the reasons why." / "I want the ability to not
+believe as well." For product copy, READMEs and proposals: say what you
+want the thing to do, in the first person, before you describe the
+feature. Desire is the frame; the feature is the answer to it.
+
+**The conversational host.** 1,916 of the 7,131 archived comments are
+Ben's own replies — a quarter of all comments, median 27 words. The
+reply voice: agree or thank first, add one specific thought, end with a
+question back. "I know, right? It is really disturbing in a way that a
+change in a single gesture should not be." / "Nice! So glad it made
+sense to you. What would you want out of a Roundtable university? How
+would you want to contribute?" Use this for support replies, community
+posts, issue threads, and email.
+
+**He writes in sprints.** Daily streaks of 10–30 posts recur every few
+years: the *365 Questions* of 2010, January 2013 (235 posts) and
+January 2014 (217), #LifeWideLearning16 in January 2016, a post a day
+from January to March 2022, 50,000 words in November 2025. Long silences
+in between. Design projects for Ben as bounded, named, numbered runs
+("Question 61 of 365", "Personal Digital Graveyard #2") — a streak with
+an end date, not a trickle.
+
+**Titles moved from questions to statements.** 38% of titles were
+questions in 2005–2010; 7.5% now. Titles that are full sentences ending
+in a period peaked in 2011–2016 ("I need to write." "I'm not a good
+neighbor." "Fascism isn't cool… for long."). The current title is a
+short noun phrase or a flat declarative: *Persistence*, *Hope is Ours*,
+*Computer-Shaped Problems*, *Help in the grocery store*. Don't title new
+work with a question.
+
+**A retired lexicon.** Words that filled 2005–2010 and have all but
+disappeared since: *collaboration / collaborative*, *authentic*,
+*wiki*, *Moodle*, *remix*, *persuasion*, *Web 2.0*, *School 2.0*,
+*edublogosphere*, *feedback* (as a noun for the thing itself). Words
+that arrived in the last decade: *modern*, *authority*, *political*,
+*pandemic*, *death*, *user-hostile*, *gatekeeping*. Use the old words
+only when writing about that era; a 2026 README that says
+"collaborative" or "authentic learning" is in costume.
+
+**The instruction register exists, and it is good.** In 2006 Ben posted
+62 date-titled lesson posts written to his students: "Cores 1+2:
+Discuss-On: Discuss with at least two people your list of expectations.
+Try to agree on the two that you think are most essential. Be ready to
+share them out." Imperative verbs, chunked by audience, sequenced,
+purpose stated, and a closing line saying what to bring back. That is
+the template for documentation and onboarding: numbered actions, the
+*why* in a clause, and "be ready to…" at the end.
+
+**Categories are genres.** The archive's tags tell you the forms he
+works in: *questions* (365), *lesson-plans* (306), *using* ("What I'm
+Using", 146), *c4c15* and *askbenw* (Q&A series), *newsletter-archive*,
+*im-learning*. The late categories are moods — *inspiration*,
+*humanity*, *growth*, *thinking*, *metaphors*, *stories*, *family*,
+*politics*, *movies* — and the strongest late form is the
+**extended-metaphor essay**: one physical thing carried all the way
+through (persistence hunting, the popcorn ceiling, the three-pointer,
+washing dishes, taking down the decorations, the night). Pick the
+object first; the argument follows it.
+
+**Endings, measured.** 31% of essays end on a sentence of eight words
+or fewer; 23% end by addressing the reader; 8% end on a question. If
+the last line is long and about Ben, it is probably not the last line.
+
+**Profanity.** Effectively none for twenty years (under one word per
+10,000). It appears only in the 2026 typewritten pages, in grief and
+anger. Never in copy or documentation; in essays, only when the
+register is already the typewriter's.
+
+## 13. Positions that changed (don't write the old ones back in)
+
+- **Scale.** 2010: left the district for Edmodo to "create change on a
+  larger scale." 2022: "Scale is a seductive myth… I absolutely do not
+  believe in indiscriminate change." Current copy should never promise
+  scale as a virtue.
+- **Twitter.** 2022: "Community Rules" — a defense of the network he
+  had built there for fifteen years. 2026: "a CSAM-hellscape site where I
+  shared tens of thousands of ideas over a decade." He is on Bluesky
+  (@laserdiscleftist) and builds for it (Bsky Dreams).
+- **Blockchain.** 2016–2021: "cautiously optimistic" about credentials
+  and learner-owned data. 2022: "I am a Crypto and Blockchain Luddite."
+- **Tools.** 2007: "I am tired of talking about the tools." Yet the
+  *What I'm Using* series, Safari-extension lists and device posts never
+  stopped. The resolved position: tools are worth loving and naming;
+  tool-talk as a substitute for learning is not.
+- **"We."** 2009, on the edublogosphere: "I engage in elitism whenever I
+  use the word 'we', in fact." He still uses *we* for the reader and
+  himself together, but not for a club the reader is outside of.
+- **The news.** From a daily reader of everything (the 2022 newsletter
+  inventory) to "I am living in a post-news world" (2024).
+- **Mastery → Inquiry** (2022), **AI as a window that can hide the
+  hard work** (2026): "Sometimes the window isn't showing me the
+  future. It is just showing me another way to avoid the hard work of
+  living."
+
+## 14. People and places the writing names
+
+Cite these correctly. The 2007–2010 network: Zac Chase (co-author of
+#LifeWideLearning16), Karl Fisch, Bud Hunt, David Warlick, Chris
+Lehmann, Steve Hargadon, Wes Fryer, Will Richardson. Later: Sean
+Michael Morris and Jesse Stommel (*An Urgency of Teachers*), John and
+Hank Green, Dan Olson (Folding Ideas), Darren Kuropatwa. Places and
+posts: Cresthill Middle School and the Academy of Discovery (Douglas
+County, from 2004; eighth-grade Language Arts); Edmodo (2010–11, 13th
+employee, first Online Community Manager); Denver Public Schools; Aurora
+Public Schools; the University of Colorado (School of Dental Medicine,
+2019); Minerva University (2022); the University of Denver (arrived
+2001, from Ohio; Cleveland is home); Littleton and the Kensington Ridge
+HOA (2021 testimony for HB21-1310); "Totally Wired Teacher of 2007";
+ISTE poster-session co-chair (2015–16). Home: Kara; three sons, the
+oldest graduated high school in 2025. The 2026 pages are written alone,
+and after his father's death; write around both with care. Handles:
+bhwilkoff, The Laserdisc Leftist. Things he builds: Archive Watch,
+Tidbits Trivia, Bsky Dreams; this site. Things he collects: laserdiscs
+(1,000+), records, old Apple hardware; he writes on a Freewrite and a
+typewriter.
 
 ---
 

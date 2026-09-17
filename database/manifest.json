@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-09-17T21:04:58.215Z",
+  "generated": "2026-09-17T21:17:18.165Z",
   "generator": "LearningIsChange Database Generator v1.0",
   "site": {
     "name": "Learning is Change",
@@ -17,7 +17,7 @@
       "earliest": "2005-04-20T12:00:00Z",
       "latest": "2026-09-17T12:00:00Z"
     },
-    "last_modified": "2026-09-17T21:04:58.215Z"
+    "last_modified": "2026-09-17T21:17:18.165Z"
   },
   "shards": {
     "posts": {
