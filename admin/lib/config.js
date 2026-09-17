@@ -21,7 +21,7 @@ export const CONFIG = {
   auth: {
     // GitHub App sign-in (Decision 016). Filled in once the App and Worker exist.
     clientId: 'Iv23liDVNY6QG2siOarv',   // GitHub App "Learning is Change Admin" (public identifier)
-    worker: '',   // set once the Cloudflare Worker exists, e.g. https://lic-github-auth.<account>.workers.dev
+    worker: 'https://lic-github-auth.benwilkoff.workers.dev',
   },
   paths: {
     uploads: 'wp-content/uploads',

@@ -731,31 +731,24 @@ appended here as ticks complete.
 - **2026-09-16 · A1.6 progress** — GitHub App **installed** on
   `bhwilkoff/LearningIsChange` only (installation 162330000). Client ID
   recorded in `CONFIG.auth`; sign-in stays disabled until `worker` is set.
-- **Next (blocked on Ben)**: sign in to Cloudflare in the open tab, then: create the App per the README, install it on
-  the repo, deploy the Worker in the Cloudflare dashboard with the
-  secrets, fill `CONFIG.auth`, test sign-in end to end. Then A5: retire the legacy
-  tools (`/new/ /edit/ /remove/ /update/ /links/ /podcast-rss/
+- **2026-09-17 · A1.6 Worker deployed** — Ben signed in to Cloudflare;
+  Worker `lic-github-auth` created from the Hello-World template and its
+  source replaced with `workers/github-auth/worker.js` via the dashboard
+  editor (pasted from the clipboard, 0 lint errors). Variables:
+  `GITHUB_CLIENT_ID`, `ALLOWED_ORIGINS=https://learningischange.com,
+  http://127.0.0.1:8765` (plain), `GITHUB_CLIENT_SECRET` (encrypted
+  secret; generated on the App page, moved clipboard → Cloudflare,
+  clipboard cleared). Verified from the shell: `GET /` → 404 with CORS
+  headers; `POST /token {}` from the site origin → `{"error":"code
+  required"}`. `CONFIG.auth.worker` set; the Settings view now shows
+  "Sign in with GitHub" and the redirect to GitHub's consent screen
+  works (state + `redirect_uri=http://127.0.0.1:8765/admin/app/`).
+  GitHub disables **Authorize** while the tab is hidden, so the final
+  click is Ben's.
+- **Next (blocked on Ben)**: click Authorize in the open GitHub tab (or
+  sign in from `https://learningischange.com/admin/app/#/settings` once
+  Pages deploys), then verify the exchange (token in sessionStorage,
+  Test connection OK, rate-limit shows the App). Then A5: retire the
+  legacy tools (`/new/ /edit/ /remove/ /update/ /links/ /podcast-rss/
   /admin/regenerate/ /admin/dedup/ /admin/db-maintenance/`) as redirects
-  into LiC Admin once Ben has used each view once; update docs. (Done: A2.2 the
-  post editor (`#/posts/edit/<url>`: title, date, terms via
-  `admin/lib/pickers.js`, body via `admin/lib/editor.js`, excerpt),
-  **exact preview** (fetch `templates/post.html` + partials, render with
-  `scripts/lib/core.js` in an iframe), save via `store.savePost` +
-  dispatch render(url). Previous item — create the GitHub App
-  (callback `https://learningischange.com/admin/app/`, permissions
-  Contents + Actions on this repo, user authorization, expiring
-  tokens), deploy the Worker (`workers/github-auth/`, code in repo;
-  secret set in Cloudflare only), add `admin/lib/oauth.js` (PKCE-style
-  state, popup or redirect, token + refresh in sessionStorage, silent
-  refresh), "Sign in with GitHub" button in Settings; PAT vault kept as
-  fallback. Then A2.1 — `admin/app/store.js` (shards, pages, taxonomies
-  with ETag/If-None-Match caching, `isLive`, per-record get/update,
-  shard commit via Git Data) and the **Posts** view: list/search/filter
-  (year, category, status), open a post → editor (title, date, terms,
-  body via `admin/lib/editor.js`, excerpt) with **exact preview**
-  (`scripts/lib/core.js` + `templates/post.html` fetched at runtime),
-  save → shard commit → dispatch render(url). Then Pages, Terms, Media. promote
-  `site.css` to `/css/site.css`, write the real `templates/post.html`
-  on the new shell (fragments become nav/rail/footer partials), extend
-  `regenerate-posts.js` (related posts, prev/next, reading time,
-  Markdown twin), regenerate, permalink check, commit.
+  into LiC Admin once Ben has used each view once; update docs.
