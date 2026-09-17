@@ -761,6 +761,21 @@ appended here as ticks complete.
   C-9 (term pages rendered). Verified: validate OK, `render-pages` dry
   run 0 changes, `render-archives` unchanged relative to before, permalink
   gate OK (8,771 URLs, 3,878 GUIDs). **§5 has no open items.**
+- **2026-09-17 · Sign-in gate** — Ben: "I don't see the requirement to
+  login via GitHub on any of the admin pages." True: auth only applied
+  at write time. Now LiC Admin renders a sign-in gate (Sign in with
+  GitHub / Unlock with passphrase / paste a token in Settings) until a
+  credential exists (`ctx.authed()`: refreshed OAuth session, unlocked
+  vault, or saved token); nav is hidden while signed out; a **Sign out**
+  button drops the session, locks the vault and forgets a remembered
+  token. `admin/admin-bar.js` gates the dashboard and all nine legacy
+  tools the same way (replaces the page with a sign-in card that hands
+  off to `/admin/app/?next=<tool>`; the app stashes `next` across the
+  GitHub round-trip and returns). `/search/` is public and untouched.
+  Verified locally: `/new/` → gate → LiC Admin → GitHub (no consent
+  screen on re-auth) → Worker → back on `/new/`; Sign out → gate.
+  Client-side gate on a static host — GitHub rejecting writes without a
+  token remains the real enforcement; the JSON it reads is public anyway.
 - **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
   /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
   /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin

@@ -134,3 +134,13 @@ tr:nth-child(even) td { background: transparent !important; }
 /* hard-coded light-blue panels (links: .db-status/.bulk-bar; rss-creator: .site-info) */
 .db-status, .bulk-bar, .site-info, .info-panel, .highlight-box { background: var(--color-accent-light) !important; color: var(--text-primary) !important; border-color: var(--color-accent) !important; border-radius: 10px; }
 .db-status *, .bulk-bar * { color: inherit; }
+
+/* Sign-in gate rendered by admin-bar.js when no credential exists */
+html.lic-gated body { margin: 0; background: var(--bg-secondary); }
+.lic-gate { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.lic-gate-card { max-width: 520px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 32px; }
+.lic-gate-card .kicker { margin: 0 0 6px; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); }
+.lic-gate-card h1 { margin: 0 0 12px; font-size: 1.6rem; }
+.lic-gate-card p { margin: 0 0 16px; color: var(--text-primary); line-height: 1.5; }
+.lic-gate-card .btn { display: inline-block; text-decoration: none; margin-right: 8px; }
+.lic-gate-card .lic-gate-note { font-size: 0.85rem; color: var(--text-secondary); margin: 0; }

@@ -61,3 +61,13 @@
 .drop { border: 2px dashed var(--border-color); border-radius: 12px; padding: 34px 16px; text-align: center; color: var(--text-secondary); }
 .drop.over { border-color: var(--color-accent); background: var(--color-accent-light); }
 .linklike { color: var(--color-accent-dark); cursor: pointer; text-decoration: underline; }
+
+/* Sign-in gate (app.js renderGate): nav hidden until a credential exists */
+body.signed-out .app-nav { visibility: hidden; }
+.gate { max-width: 520px; margin: 12vh auto 0; text-align: left; }
+.gate .kicker { margin: 0 0 6px; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); }
+.gate .text-muted { color: var(--text-secondary); font-size: 0.9rem; }
+.gate h1 { margin: 0 0 12px; }
+.gate .lead { margin: 0 0 20px; }
+.gate .row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.gate .msg { margin-bottom: 16px; }

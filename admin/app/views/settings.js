@@ -64,7 +64,7 @@ export function render(root, ctx) {
     ctx.save(s2); msg(s2.githubToken && !s2.rememberToken ? 'Saved for this session (not remembered).' : 'Saved.');
   };
   root.querySelector('#s-signin')?.addEventListener('click', () => ctx.oauth.signIn());
-  root.querySelector('#s-signout')?.addEventListener('click', () => { ctx.oauth.signOut(); root.querySelector('#s-oauth').innerHTML = oauthHtml(ctx); ctx.status(''); });
+  root.querySelector('#s-signout')?.addEventListener('click', () => ctx.signOut());
   root.querySelector('#s-forget').onclick = () => { if (!confirm('Forget the stored token (vault and plaintext)?')) return; ctx.vault.forget(); const s2 = read(); s2.githubToken = ''; ctx.save(s2); root.querySelector('#s-token').value = ''; root.querySelector('#s-vault').innerHTML = vaultHtml(ctx); ctx.refreshLock(); msg('Token forgotten.'); };
   root.querySelector('#s-test').onclick = async () => {
     const s2 = read(); ctx.save(s2);
