@@ -309,6 +309,23 @@ items get done in a later tick and moved to *Done*.
 - ✅ **Done tick 29** D-3 `/important-posts/` — a curated list; candidate for becoming
   the "start here" page in the new homepage.
 
+### E. Media (from the media index, 2026-09-17)
+- E-1 **77 groups of byte-identical uploads** (79 extra copies, 68 MB) —
+  full list in `docs/MEDIA-DUPLICATES.md`. Ben: report only for now.
+  When ready: rewrite every reference to one canonical copy and delete
+  the rest (old direct URLs of the deleted copies would 404).
+- E-2 **Same recording attached to two different episodes** —
+  `DigitalStickyNotes.m4a` (2007) = `Feedback.m4a` (Question 59, 2010);
+  `MyStudentsAreKnownFor.m4a` (2007) = `Preceding_Reputations.m4a`
+  (2016). One of each pair is probably the wrong audio; Ben to check.
+- E-3 **341 unreferenced uploads** (254 of them a July 2016 batch:
+  `hqdefault-*.jpg` YouTube thumbnails, `cropped-*.jpg` header crops,
+  etc.). Prune to shrink the repo? Library → "unreferenced", sort by
+  largest.
+- E-4 **120 broken references** remain after the backup recovery (2007
+  `.doc` attachments, 2007–2016 images) — exist in no backup we have.
+  Options per post: remove the dead link, or leave.
+
 *(The loop appends to these lists as the audit continues; it never
 resolves them on its own.)*
 
