@@ -3,6 +3,33 @@
   "count": 17,
   "posts": [
     {
+      "title": "If you give a man a movement",
+      "url": "/2026/09/17/if-you-give-a-man-a-movement/",
+      "date_published": "2026-09-17",
+      "excerpt": "I've been going to more startup, AI, and general networking events since restarting my interest in building apps (Archive Watch, Tidbits Trivia, and Bsky Dreams). I have still yet to figure out what...",
+      "categories": [
+        {
+          "name": "Ben Wilkoff",
+          "slug": "ben-wilkoff",
+          "url": "/category/ben-wilkoff/"
+        }
+      ],
+      "tags": [
+        {
+          "name": "Reflection",
+          "slug": "reflection",
+          "url": "/tag/reflection/"
+        },
+        {
+          "name": "Learning",
+          "slug": "learning",
+          "url": "/tag/learning/"
+        }
+      ],
+      "content_preview": "I've been going to more startup, AI, and general networking events since restarting my interest in building apps (Archive Watch, Tidbits Trivia, and Bsky Dreams). I have still yet to figure out what...",
+      "content": "<img src=\"/wp-content/uploads/2026/09/IMG_6564.jpeg\" alt=\"IMG_6564.jpeg\" class=\"\" style=\"max-width: 100%; height: auto; display: block; margin: 1em 0px;\"><br>I've been going to more startup, AI, and general networking events since restarting my interest in building apps (<a href=\"https://archivewatch.org\">Archive Watch</a>, <a href=\"https://tidbitstrivia.com\">Tidbits Trivia</a>, and <a href=\"https://bskydreams.com\">Bsky Dreams</a>). I have still yet to figure out what I'm doing there. I find that the vast majority of folks who are there are either trying to sell their ideas (finding clients, partners, or potential investors). It is a strange dance that I observe again and again, watching as a mini-pitch happens and then the the \"grand sizing-up\" occurs. If the two people find that they are the right \"size\", then the conversation continues. If not, then the person is almost immediately ignored.<div><br></div><div>But, my \"size\" is very strange to most of the people that I talk to. I'm not trying to sell anything. I'm not looking for people who can introduce me to other people who can give me a terms sheet for purchasing a company or a piece of software. I must look very small indeed to the vast majority of those I find at these events that all seem to promise pizza and beer.&nbsp;</div><div><br></div><div>Which brings me back to \"why\" I keep finding myself at demo events or pitch nights. I find that I really do love listening to people getting excited about the things that they are building, even if the things have no chance of making it out into the world and meeting real consumers. I miss the energy of someone who believes that they have found the cure for some newly invented problem. Unfortunately, most of the problems that people are currently trying to solve are ones about how to make use of AI better.</div><div><br></div><div>I do not find these problems compelling.</div><div><br></div><div>The amount of skill and work that is going into burning through millions of tokens seems hollow and ill-suited to this moment in time. It seems as though so many of the people doing the pitching are looking to cash in on the bubble before it bursts, trying to convert every bit of programming prowess that frontier models can give us into cash, or at least cachet.&nbsp;</div><div><br></div><div>But, still I keep going. And I keep hoping to find other folks who are interested in building things for real needs without the constant urge to sell the whole thing to someone else. I keep wanting for others to show that there is energy for a movement of builders in the public domain, an open source ethos that still rings true inside of every new piece of software written or idea on offer. And perhaps, there is even an opportunity to codify the movement of builders who are okay with being small, who aren't lusting after scale to determine their own self-worth.&nbsp;</div><div><br></div><div>What would call such a movement? And where are their meetings held?</div>"
+    },
+    {
       "title": "60 Minutes in Space",
       "url": "/2026/03/26/60-minutes-in-space/",
       "date_published": "2026-03-26",
@@ -754,5 +781,5 @@
       "_shard": "2026.json"
     }
   ],
-  "post_count": 17
+  "post_count": 18
 }
