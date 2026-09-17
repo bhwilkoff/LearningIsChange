@@ -61,6 +61,11 @@ tombstone) and gates every render commit.
   posts, ~11 MB) and `feed/podcast/feed.xml` (posts carrying a
   `podcast` field + `database/podcast.json` channel settings) are all
   rendered by `scripts/render-feeds.js`. Never patch feeds in place.
+- **Transcripts**: an image-only post (the typewritten pages) carries an
+  OCR `transcript` (`scripts/ocr-transcripts.js`: Vision locally,
+  tesseract on the runner, automatic on render). It renders under the
+  image, feeds the description, JSON-LD `articleBody`, the Markdown twin
+  and search. Edit it in LiC Admin to mark it reviewed.
 - **Comments** live on each post's JSON entry as `comments[]` (recovered
   from git; rendered read-only). Never regenerate from a template that
   lacks the `{{comments}}` slot.

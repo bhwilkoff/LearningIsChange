@@ -14,7 +14,7 @@ import { uploadImages } from '../media.js';
 
 export const title = 'Edit post';
 // The fields a person edits — what autosave stores and compares.
-const pick = (r) => ({ title: r.title || '', slug: r.slug || '', date_published: String(r.date_published || '').slice(0, 10), status: r.status || 'publish', content: r.content || '', excerpt: r.excerpt || '', categories: r.categories || [], tags: r.tags || [], podcast: r.podcast || null });
+const pick = (r) => ({ title: r.title || '', slug: r.slug || '', date_published: String(r.date_published || '').slice(0, 10), status: r.status || 'publish', content: r.content || '', excerpt: r.excerpt || '', categories: r.categories || [], tags: r.tags || [], podcast: r.podcast || null, transcript: r.transcript || '' });
 // Renderer + templates come from the same origin as the admin (so a local checkout previews its own code)
 const SITE = /^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? location.origin : CONFIG.site.base;
 let core = null, tpl = null; // cached renderer + templates
@@ -73,6 +73,7 @@ export async function render(root, ctx, params) {
           <textarea id="e-source" class="editor-source" hidden spellcheck="false"></textarea>
         </div>
         <label class="field">Excerpt <small class="inline">(optional; used for descriptions and feeds)</small><textarea id="e-excerpt" rows="2">${ctx.esc(post.excerpt || '')}</textarea></label>
+        <label class="field">Transcript <small class="inline">(for a typewritten page: shown under the image, searchable, in the Markdown twin${post.transcript_source && post.transcript_source !== 'edited' ? ` — read by ${ctx.esc(post.transcript_source)} OCR${post.transcript_at ? ' ' + ctx.esc(String(post.transcript_at).slice(0, 10)) : ''}; editing it marks it reviewed` : post.transcript_source === 'edited' ? ' — reviewed' : '; left empty, the render OCRs an image-only post automatically'})</small><textarea id="e-transcript" rows="${post.transcript ? 8 : 2}" style="font-family:var(--font-mono);font-size:0.85rem">${ctx.esc(post.transcript || '')}</textarea></label>
         <div class="row"><button class="btn primary" id="e-save">${isNew ? 'Publish' : 'Save'} &amp; render</button><button class="btn" id="e-preview">Refresh preview</button><label class="check" style="margin:0"><input type="checkbox" id="e-render" checked> dispatch render after save</label><span class="mono" id="e-autosave" style="color:var(--text-secondary);font-size:0.75rem"></span>${isNew ? '' : `<span class="spacer"></span><button class="btn" id="e-remove" title="${post.removed ? 'Put the post back' : 'Tombstone: the URL redirects to the year archive; listings, feeds and search drop it; nothing is deleted'}">${post.removed ? 'Restore post' : 'Remove post…'}</button>`}</div>
         ${post.removed ? `<div class="msg warn">This post is removed (tombstoned ${ctx.esc(String(post.removed_at || '').slice(0, 10))}). Its URL redirects to the year archive.</div>` : ''}
         <div id="e-msg"></div>
@@ -114,6 +115,9 @@ export async function render(root, ctx, params) {
       status: root.querySelector('#e-status').value, content: body, excerpt: root.querySelector('#e-excerpt').value.trim(),
       categories: cat ? [cat] : [], tags: tagPicker.getTags() };
     if (isNew) { rec.slug = slugify(root.querySelector('#e-slug').value.trim() || rec.title) || ''; rec.url = rec.slug ? urlFor(rec.date_published, rec.slug) : ''; rec._year = String(rec.date_published).slice(0, 4); }
+    const tr = root.querySelector('#e-transcript').value.replace(/\r/g, '').trim();
+    if (tr) { rec.transcript = tr; if (tr !== (draft.transcript || '').trim()) { rec.transcript_source = 'edited'; rec.transcript_at = new Date().toISOString(); } }
+    else { rec.transcript = undefined; rec.transcript_source = undefined; rec.transcript_at = undefined; }
     const audio = root.querySelector('#e-pc-audio').value.trim();
     if (audio) {
       const prev = draft.podcast || {};
@@ -142,6 +146,7 @@ export async function render(root, ctx, params) {
     showUrl();
   }
   // Podcast: upload an audio file to wp-content/uploads/YYYY/MM/, read its duration, fill the fields
+  root.querySelector('#e-transcript').addEventListener('input', schedulePreview);
   ['#e-pc-audio', '#e-pc-duration', '#e-pc-episode', '#e-pc-type', '#e-pc-explicit', '#e-pc-summary'].forEach((sel) => root.querySelector(sel).addEventListener('input', schedulePreview));
   root.querySelector('#e-pc-clear')?.addEventListener('click', () => { root.querySelector('#e-pc-audio').value = ''; draft.podcast = undefined; root.querySelector('#e-pc-stat').textContent = 'not an episode (save to apply)'; schedulePreview(); });
   root.querySelector('#e-pc-file').onchange = async (e) => {

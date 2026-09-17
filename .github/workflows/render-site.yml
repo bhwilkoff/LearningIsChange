@@ -55,6 +55,11 @@ jobs:
           YEAR=""; [ -n "${{ inputs.year }}" ] && YEAR="--year=${{ inputs.year }}"
           URL="";  [ -n "${{ inputs.url }}" ] && URL="--url=${{ inputs.url }}"
           S="${{ inputs.scope }}"; [ -z "$S" ] && S=all; [ -n "$URL" ] && S=posts
+          if [ -n "$APPLY" ] && [ "$(node scripts/ocr-transcripts.js --count)" != "0" ]; then
+            # a new typewritten page: read it so it is searchable and described (Vision locally gives a cleaner read; edit in LiC Admin to review)
+            sudo apt-get install -y -qq tesseract-ocr imagemagick > /dev/null
+            node scripts/ocr-transcripts.js --engine=tesseract --apply
+          fi
           if [ -n "$APPLY" ]; then node scripts/index-media.js --apply; fi   # before archives: listing thumbnails read image sizes from it
           if [ "$S" = all ] || [ "$S" = posts ];    then node scripts/regenerate-posts.js $APPLY $YEAR $URL; fi
           if [ "$S" = all ] || [ "$S" = archives ]; then node scripts/render-archives.js $APPLY; fi

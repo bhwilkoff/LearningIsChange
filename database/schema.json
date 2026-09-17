@@ -27,6 +27,9 @@
         "date_modified": "datetime",
         "comments": "comment[]",
         "bluesky": "object — { uri, cid, url, posted_at } from the cross-post (A4)",
+        "transcript": "string — plain text with blank-line paragraphs; OCR of an image-only (typewritten) post, or a reviewed edit (scripts/ocr-transcripts.js)",
+        "transcript_source": "enum:vision,tesseract,edited",
+        "transcript_at": "datetime",
         "podcast": "object — { audio: path, type?, length?, duration?, episode?, season?, episode_type?: full|trailer|bonus, explicit?: boolean, summary? }; a post with one is an episode in feed/podcast/feed.xml (A6)",
         "content_preview": "string",
         "history": "array"

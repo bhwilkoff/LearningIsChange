@@ -18,6 +18,7 @@ derived by these scripts. No dependencies beyond Node ≥ 20.
 | `dev-deadcode.mjs` | an admin tool | (report / `--apply`) | Dev-only; needs acorn in a scratch dir |
 | `backfill-posts-content.js`, `dedup-date-archives.js`, `prune-archive-listings.js` | — | — | Historical (M3/M4 migration); safe to leave |
 | `index-media.js` | `wp-content/uploads/**`, posts, pages, `feed/podcast/feed.xml`, shell files | `database/media.json` | Every upload with size, image dimensions and *where it is used* (post/page/podcast/site); resize variants fold into the original; referenced-but-missing paths listed. Powers the Media library in LiC Admin. `--apply` |
+| `ocr-transcripts.js` | image-only posts, `wp-content/uploads/**` | `transcript` on the post record | OCR for typewritten pages: Apple Vision on macOS (`scripts/ocr/vision-ocr.swift`), tesseract on the Actions runner (automatic for any new image-only post); paragraphs from line geometry; `transcript_source: edited` is never overwritten. `--apply`, `--url=`, `--force`, `--engine=` |
 
 ## The whole pipeline
 

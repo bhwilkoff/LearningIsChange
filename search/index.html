@@ -451,7 +451,8 @@
                     
                     const searchFields = [
                         post.title || '',
-                        post.content_filtered || '',
+                        post.content_filtered || post.content_preview || '',
+                        post.transcript || '',
                         post.excerpt || '',
                         (post.categories || []).map(function(c) { return c.name; }).join(' '),
                         (post.tags || []).map(function(t) { return t.name; }).join(' ')
@@ -513,7 +514,7 @@
             countEl.innerHTML = 'Showing <strong>' + (startIndex + 1) + '&#8211;' + endIndex + '</strong> of <strong>' + filteredResults.length + '</strong> results';
             
             container.innerHTML = pageResults.map(function(post) {
-                let excerpt = LiCAdmin.decodeEntities(post.excerpt || (post.content_filtered || '').substring(0, 200));
+                let excerpt = LiCAdmin.decodeEntities(post.excerpt || (post.content_filtered || post.transcript || post.content_preview || '').substring(0, 200));
                 if (excerpt.length >= 200) excerpt += '...';
                 
                 if (query && query.indexOf('tag:') !== 0) {

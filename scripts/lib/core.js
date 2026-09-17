@@ -29,10 +29,18 @@ export function plainText(html) {
 }
 export function wordCount(html) { const t = plainText(html); return t ? t.split(' ').length : 0; }
 export function readingMinutes(html) { return Math.max(1, Math.round(wordCount(html) / 220)); }
+// The words of a post: its body, or — for a typewritten page that is only an image — its OCR transcript.
+export function bodyText(post) { const t = plainText(post.content || ''); return t.length < 40 && post.transcript ? String(post.transcript).replace(/\s+/g, ' ').trim() : t; }
+export function transcriptHtml(post) {
+  if (!post.transcript) return '';
+  const ocr = post.transcript_source && post.transcript_source !== 'edited';
+  const paras = String(post.transcript).split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean).map((x) => `<p>${escapeHtml(x)}</p>`).join('');
+  return `<details class="transcript"><summary>Transcript${ocr ? ' <small>machine-read from the typewritten page; typos are the page\u2019s or the reader\u2019s</small>' : ''}</summary><div class="transcript-text">${paras}</div></details>`;
+}
 
 // Excerpt if present, else the first ~160 chars of the body — derived at render, content untouched.
 export function describe(post, max = 160) {
-  let text = plainText(post.excerpt || post.content || '');
+  let text = post.excerpt ? plainText(post.excerpt) : bodyText(post);
   // many bodies open by repeating the title (tweet-style posts); don't echo it
   const title = plainText(post.title || '');
   if (title && text.toLowerCase().startsWith(title.toLowerCase())) text = text.slice(title.length).replace(/^[\s:.,;–—-]+/, '');
@@ -164,8 +172,9 @@ export function jsonLdPost(post, absUrl, d, description) {
     publisher: { '@type': 'Person', name: AUTHOR.name, url: `${SITE}/` },
     isPartOf: { '@type': 'Blog', '@id': `${SITE}/#blog`, name: SITE_NAME },
     inLanguage: 'en-US',
-    wordCount: wordCount(post.content),
+    wordCount: wordCount(bodyText(post)),
     ...(Array.isArray(post.comments) && post.comments.length ? { commentCount: post.comments.length } : {}),
+    ...(post.transcript && plainText(post.content || '').length < 40 ? { articleBody: String(post.transcript).replace(/\s+/g, ' ').trim() } : {}), // an image-only page becomes readable to crawlers
   };
   const img = firstImage(post.content); if (img) data.image = img;
   const kw = [...terms(post, 'categories'), ...terms(post, 'tags')].map((t) => t.name).filter((n) => !NOISE_TERMS.has(slugify(n)));
@@ -201,7 +210,7 @@ export function markdownTwin(post, absUrl) {
   const cats = terms(post, 'categories').map((t) => t.name);
   const tags = terms(post, 'tags').map((t) => t.name);
   const yaml = (arr) => arr.length ? `[${arr.map((x) => JSON.stringify(x)).join(', ')}]` : '[]';
-  return `---\ntitle: ${JSON.stringify(post.title || 'Untitled')}\ndate: ${d.dateOnly}\nurl: ${absUrl}\nauthor: ${AUTHOR.name}\ncategories: ${yaml(cats)}\ntags: ${yaml(tags)}\n---\n\n# ${post.title || 'Untitled'}\n\n${toMarkdown(post.content)}`;
+  return `---\ntitle: ${JSON.stringify(post.title || 'Untitled')}\ndate: ${d.dateOnly}\nurl: ${absUrl}\nauthor: ${AUTHOR.name}\ncategories: ${yaml(cats)}\ntags: ${yaml(tags)}\n---\n\n# ${post.title || 'Untitled'}\n\n${toMarkdown(post.content)}${post.transcript ? `\n\n## Transcript\n\n${String(post.transcript).trim()}\n` : ''}`;
 }
 
 // ---------- post page (used by scripts/regenerate-posts.js AND the admin preview) ----------
@@ -251,8 +260,8 @@ export function renderPostPage(template, post, { prev = null, next = null, relat
     body_classes: [...cats.map((c) => `category-${c.slug}`), ...tags.map((t) => `tag-${t.slug}`)].join(' '),
     post_id: slug,
     categories: termLinks(cats, 'card-tag'),
-    word_count: String(wordCount(post.content)),
-    reading_time: String(readingMinutes(post.content)),
+    word_count: String(wordCount(bodyText(post))),
+    reading_time: String(readingMinutes(bodyText(post))),
     tags: termLinks(tags, 'tag'),
     prev_link: prev ? `<a href="${escapeAttr(prev.url)}" class="prev" rel="prev"><small>← Previous</small><strong>${escapeHtml(prev.title || 'Untitled')}</strong></a>` : '<span></span>',
     next_link: next ? `<a href="${escapeAttr(next.url)}" class="next" rel="next"><small>Next →</small><strong>${escapeHtml(next.title || 'Untitled')}</strong></a>` : '<span></span>',
@@ -262,7 +271,7 @@ export function renderPostPage(template, post, { prev = null, next = null, relat
     ...shell,
   };
   // content last: a body that happens to contain "{{...}}" must never be expanded
-  return fill(template, values).split('{{content}}').join(selfHostImages(post.content));
+  return fill(template, values).split('{{content}}').join(selfHostImages(post.content) + transcriptHtml(post));
 }
 
 // ---------- static page (used by scripts/render-pages.js AND the admin preview) ----------
