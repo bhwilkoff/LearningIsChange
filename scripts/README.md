@@ -19,6 +19,7 @@ derived by these scripts. No dependencies beyond Node ≥ 20.
 | `backfill-posts-content.js`, `dedup-date-archives.js`, `prune-archive-listings.js` | — | — | Historical (M3/M4 migration); safe to leave |
 | `index-media.js` | `wp-content/uploads/**`, posts, pages, `feed/podcast/feed.xml`, shell files | `database/media.json` | Every upload with size, image dimensions and *where it is used* (post/page/podcast/site); resize variants fold into the original; referenced-but-missing paths listed. Powers the Media library in LiC Admin. `--apply` |
 | `ocr-transcripts.js` | image-only posts, `wp-content/uploads/**` | `transcript` on the post record | OCR for typewritten pages: Apple Vision on macOS (`scripts/ocr/vision-ocr.swift`), tesseract on the Actions runner (automatic for any new image-only post); paragraphs from line geometry; `transcript_source: edited` is never overwritten. `--apply`, `--url=`, `--force`, `--engine=` |
+| `build-voice-corpus.js` | posts (bodies + transcripts) | `docs/voice/typewriter-transcripts.md`, `docs/voice/stats.md` | Companion data for `BEN.md` (the writing voice guide): every typewritten page and the measured habits. `--apply` |
 
 ## The whole pipeline
 

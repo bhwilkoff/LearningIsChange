@@ -893,6 +893,26 @@ appended here as ticks complete.
   byte-identical (verified with figure/srcset/iframe). Both the post and
   page editors use it; the toolbar's image button runs the WebP
   upload pipeline (`uploadImages()` in `media.js`).
+- **2026-09-17 · BEN.md, the voice guide, and OCR for the typewritten
+  pages** (Ben: "create a 'Ben Wilkoff Voice' markdown file that can be
+  used by every future repository… the bible for my writing… OCR on my
+  typewritten pages… searchable from the website AND folded into this
+  markdown file", and "the OCR should also work in an ongoing way").
+  OCR: `scripts/ocr-transcripts.js` — Apple Vision via
+  `scripts/ocr/vision-ocr.swift` on macOS (clean reads, paragraphs from
+  line geometry), tesseract + ImageMagick on the Actions runner,
+  automatic on every render for any image-only post without a
+  transcript; `transcript` renders under the page in a `<details>`,
+  feeds `describe()`, word counts, JSON-LD `articleBody`, the Markdown
+  twin and the search page; editable (and thereby marked reviewed) in
+  the post editor; 15 pages transcribed with Vision (7,700 words).
+  Voice: 867 essays measured (`scripts/build-voice-corpus.js` →
+  `docs/voice/stats.md`) and 83 pieces read across every era; `BEN.md`
+  at the repo root (linked from `CLAUDE.md` and `llms.txt`) sets out
+  structure, sentence habits, repetition, vocabulary, tone by register,
+  recurring beliefs, eras, a ten-point voice check and models.
+  `docs/voice/typewriter-transcripts.md` rebuilds on every render, so
+  new pages fold into the corpus without a step.
 - **Next**: Content Review Queue §E (E-2 mismatched audio, E-3
   unreferenced uploads, E-4 broken references) as Ben decides; optional
   polish (dark/light manual toggle, `llms.txt` refresh).

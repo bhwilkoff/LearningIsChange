@@ -5,7 +5,9 @@ entirely from JSON on GitHub Pages. Fully free, self-hostable, and — since
 2026-09-16 (Decision 014) — free of WordPress code.
 
 **Governing docs:** work status lives in `SCRATCHPAD.md`, architecture
-decisions live in `DECISIONS.md`. This file is standing context.
+decisions live in `DECISIONS.md`, and **`BEN.md` is the writing voice** —
+read it before producing any copy, documentation or argument in Ben's
+name (here or in any other repo). This file is standing context.
 
 ---
 
