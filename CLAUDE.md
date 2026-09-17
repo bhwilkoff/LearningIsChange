@@ -42,10 +42,15 @@ tombstone) and gates every render commit.
   (tokens, dark/light mode, blog layout). Blog, portfolio, `/meet/`,
   `/support.html` and the admin tools (`admin/admin.css`) share it.
   **Keep the portfolio consistent with the blog** (standing instruction).
-- **Admin surface**: `admin/index.html` is a dashboard that links to a
-  set of single-file HTML apps, each at its own top-level path. They
-  all talk to the GitHub REST API via Bearer tokens and dispatch
-  workflows for large files (see "Admin tools" below).
+- **Admin surface**: **LiC Admin** at `/admin/app/` (ES-module app,
+  hash router; views Posts / Pages / Terms / Media / Render / Settings)
+  is the CMS. It signs in with the GitHub App (Decision 016; encrypted
+  token as fallback), edits JSON in `database/`, uploads images as WebP
+  1600/800 pairs, and dispatches `render-site.yml`. Every view is gated
+  behind a credential (`admin/admin-bar.js` gates the last legacy tool
+  too). The old single-file tools retired on 2026-09-17 (Decision 015,
+  A5) and now redirect into the app; `/podcast-rss/` is the one that
+  remains until the podcast feed renders from JSON.
 - **Data layer**: `database/` holds JSON indices (`pages.json`,
   `taxonomies.json`, `authors.json`, per-year `posts/YYYY.json`,
   `search.json`, `manifest.json`, `changelog.json`) plus `search.db`
@@ -87,30 +92,17 @@ tombstone) and gates every render commit.
 
 ### Admin tools (current)
 
-All tools live in this repo as single-file HTML apps, each at its own
-top-level path. Together they are ~20k lines of HTML+JS. They are the
-CMS — there is no WordPress fallback. The systematization problem is
-not that they live elsewhere; it's that each one is big enough to be
-painful to iterate on in a single chat context.
+| Path | Role |
+|---|---|
+| `/admin/app/` | **LiC Admin** — the CMS (`admin/app/{app,store,media}.js`, `views/*.js`) |
+| `/podcast-rss/` | Podcast feed builder (writes `feed/podcast/feed.xml`); legacy, kept until ported |
+| `/search/` | Public search UI on the blog shell |
 
-| Path | Tool | Size | Role |
-|---|---|---|---|
-| `/admin/` | Dashboard | 414 | Launcher / tool index |
-| `/new/` | Post Generator | 2,245 | Create post, update DB, dispatch RSS |
-| `/edit/` | Page Editor | 2,506 | WYSIWYG (native contenteditable) edit any page/post |
-| `/update/` | Mass Updater | 4,201 | Bulk find/replace across the repo |
-| `/remove/` | Post Remover | 1,653 | Tombstone a post in its shard + dispatch render |
-| `/podcast-rss/` | Podcast RSS | 1,264 | Apple Podcasts/Spotify compatible feed |
-| `/links/` | Link Checker | 1,741 | Site-wide broken link scan (IndexedDB cache) |
-| `/search/` | Search Console | 1,102 | Search tester (also user-facing search UI) |
-
-*Status 2026-09-16: `/admin/regenerate/` (now "Render Site"), `/new/`,
-`/edit/`, `/remove/` are on the JSON + render pipeline; the others are
-next (see `docs/MODERNIZATION-AUDIT.md`). All 13 tools load
-`admin/admin.css` + `admin/admin-bar.js`.*
-
-Every tool talks to the GitHub REST API (PAT in `localStorage`) and
-writes JSON under `database/`; rendering is the workflow's job.
+`/admin/`, `/new/`, `/edit/`, `/remove/`, `/update/`, `/links/`,
+`/admin/regenerate/`, `/admin/dedup/`, `/admin/db-maintenance/` are
+redirects into LiC Admin (their code is in git history before
+2026-09-17). Shared browser code lives in `admin/lib/` (config, auth,
+vault, oauth, github, slug, mutate, editor, pickers, bluesky).
 
 ### Subdomains
 

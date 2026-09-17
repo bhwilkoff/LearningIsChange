@@ -55,6 +55,7 @@ jobs:
           YEAR=""; [ -n "${{ inputs.year }}" ] && YEAR="--year=${{ inputs.year }}"
           URL="";  [ -n "${{ inputs.url }}" ] && URL="--url=${{ inputs.url }}"
           S="${{ inputs.scope }}"; [ -z "$S" ] && S=all; [ -n "$URL" ] && S=posts
+          if [ -n "$APPLY" ]; then node scripts/index-media.js --apply; fi   # before archives: listing thumbnails read image sizes from it
           if [ "$S" = all ] || [ "$S" = posts ];    then node scripts/regenerate-posts.js $APPLY $YEAR $URL; fi
           if [ "$S" = all ] || [ "$S" = archives ]; then node scripts/render-archives.js $APPLY; fi
           if [ "$S" = all ] || [ "$S" = pages ];    then node scripts/render-pages.js $APPLY; fi
@@ -62,7 +63,6 @@ jobs:
           if [ "$S" = all ] || [ "$S" = pages ];    then node scripts/render-shell.js $APPLY; fi
           if [ -n "$APPLY" ]; then
             node scripts/recompute-database-stats.js --apply
-            node scripts/index-media.js --apply
             node scripts/check-permalinks.js --snapshot
             node scripts/generate-sitemap.js --apply
           fi

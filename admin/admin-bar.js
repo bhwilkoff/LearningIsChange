@@ -36,10 +36,7 @@
     return;
   }
   var tools = [
-    ['/admin/', 'Dashboard'], ['/admin/app/', 'LiC Admin ✦'], ['/new/', 'New post'], ['/edit/', 'Edit'], ['/remove/', 'Remove'],
-    ['/admin/regenerate/', 'Render'], ['/update/', 'Mass update'],
-    ['/podcast-rss/', 'Podcast'], ['/links/', 'Links'], ['/search/', 'Search'],
-    ['/admin/dedup/', 'Dedup'], ['/admin/db-maintenance/', 'DB'],
+    ['/admin/app/', 'LiC Admin'], ['/podcast-rss/', 'Podcast feed'], ['/search/', 'Search'],
   ];
   var here = location.pathname.replace(/index\.html$/, '');
   var bar = document.createElement('div');

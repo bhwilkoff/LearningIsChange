@@ -833,8 +833,31 @@ appended here as ticks complete.
   Derivative image sizes checked per Ben's question: only 11 WordPress
   resize variants survive in the repo (912 KB), all referenced directly
   and 3 without an original — nothing to reclaim.
-- **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
-  /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
-  /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin
-  once Ben has used each view once; update `CLAUDE.md`, `admin/index.html`
-  and `scripts/README.md`.
+- **2026-09-17 · Ben's first post through the new stack, and A5** — Ben
+  published "If you give a man a movement" and hit three things: (1) the
+  homepage showed no image for it — listings only gave thumbnails to
+  image-only posts; now any post whose lead image is a self-hosted
+  ≥400×300 file per `media.json` gets one (217 older posts gain thumbs;
+  `thumbImage()` in core.js prefers the smallest srcset candidate;
+  `index-media.js` now runs before archives). (2) His GitHub sign-in
+  "didn't stick" — because LiC Admin's **New post** button still opened
+  the legacy `/new/`, which only knows its own token. The app now has its
+  own create flow (`#/posts/new`: slug from title, URL preview, duplicate
+  check, `savePost` unshift verified with a mocked commit), **Insert
+  image…** in the editor (WebP 1600/800 + srcset committed via the Media
+  pipeline), **Remove/Restore post** (tombstone) in the editor, silent
+  OAuth refresh before a save can fail, and the hash route survives the
+  sign-in round-trip. (3) No drafts/autosave — every edit is now
+  autosaved to localStorage per URL (600 ms debounce) and offered back
+  with a Discard button on return; Save clears it; Draft status already
+  existed. Also: the post's 5.3 MB JPEG re-encoded to the 1600/800 WebP
+  pair (439 + 136 KB) and the record repointed; the stale shard `count`
+  from `/new/` fixed. **A5 done**: `/admin/ /new/ /edit/ /remove/
+  /update/ /links/ /admin/regenerate/ /admin/dedup/
+  /admin/db-maintenance/` are redirects into LiC Admin; their workflows
+  (`dedup-execute.yml`, `database-maintenance.yml`) removed;
+  `/podcast-rss/` stays until the podcast feed renders from JSON.
+- **Next**: port the podcast feed to the renderer (episodes = posts with
+  an audio enclosure; keep GUIDs) and retire `/podcast-rss/`; then
+  Content Review Queue §E (E-2 mismatched audio, E-3 unreferenced
+  uploads, E-4 broken references) as Ben decides.

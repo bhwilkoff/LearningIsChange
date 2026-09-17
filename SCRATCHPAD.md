@@ -7,14 +7,17 @@
   remains. All admin tools write JSON and dispatch `render-site.yml`.
 - **Where things are**: architecture `CLAUDE.md`; audit + tick log
   `docs/MODERNIZATION-AUDIT.md`; generator `scripts/README.md`;
-  decisions `DECISIONS.md` (001–014).
+  decisions `DECISIONS.md` (001–017).
 - **Lighthouse (desktop, local render, 2026-09-16)**: homepage, post,
   category page, portfolio page — Perf 99–100 / A11y 100 / Best 100 /
   SEO 100.
-- **Program 2 (Decision 015, 2026-09-16)**: one admin application on
-  the JSON model — schema, shared core, views, drafts/scheduling, WebP
-  uploads, Bluesky cross-post + replies as comments. Phases A0–A5;
-  progress in `docs/MODERNIZATION-AUDIT.md` §7.
+- **Program 2 (Decision 015) delivered 2026-09-17**: **LiC Admin**
+  (`/admin/app/`) is the CMS — GitHub App sign-in (Decision 016, Worker
+  `lic-github-auth`), gated views, create/edit/remove posts with
+  autosave, exact preview, WebP image pipeline, media library
+  (`database/media.json`), drafts/scheduling, Bluesky. Legacy tools are
+  redirects; `/podcast-rss/` is the last one standing. Progress log in
+  `docs/MODERNIZATION-AUDIT.md` §7; open items in §5.E.
 - **Optional follow-ups** (none required): dark/light manual toggle;
   `llms.txt` refresh when the homepage changes; per-tool polish in the
   admin UIs; the 10 uploads referenced with `+` in their names (C-3)
