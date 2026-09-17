@@ -50,7 +50,7 @@
           <span class="pbadge live">Desktop</span>
           <span class="pbadge live">Web</span>
         </div>
-        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch takes the Internet Archive's ~30,000 public-domain feature films, classic TV, silent cinema, animation, newsreels, and vintage commercials and gives them a proper streaming app: curated, ad-free, free, no account, no tracking, on every screen you own. I wanted these films to be as easy to watch as anything on Netflix. So I built that.</p>
+        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch takes the Internet Archive's ~30,000 public-domain feature films, classic TV, silent cinema, animation, newsreels, and vintage commercials and gives them a proper streaming app: curated, ad-free, free, no account, no tracking, on every screen you own. I wanted these films to be as easy to watch as anything on Netflix. So, I built it.</p>
         <p style="max-width: 680px;">This year I learned to build for the living room: the focus engine and big type of a TV interface, a streaming layer that survives flaky sources without stalling, and a Roku channel in BrightScript that had to run on a 2011 player. That last one meant measuring memory and decode cost instead of guessing. Along the way it gained deterministic <strong>Live Channels</strong> (a TV-guide grid that plays the same on every device), <strong>Watch Together</strong> over SharePlay, offline downloads, live on-device captions, and a <strong>Creation Studio</strong> on the Mac whose supercut engine searches every subtitle line in the archive and cuts the moments you name.</p>
         <p style="max-width: 680px;">It is the clearest example of how I build. One SQLite catalog published over HTTP. Sync through each ecosystem's own cloud rather than a server of mine. A <a href="https://archivewatch.org/vetting/">published rights audit</a> with real numbers, where every title that fails is hidden and counted rather than quietly kept. And a content pipeline that heals itself and runs entirely on scheduled GitHub Actions, so there is no backend to pay for.</p>
         <div class="app-links">
@@ -76,7 +76,7 @@
           <span class="pbadge live">iMessage</span>
         </div>
         <p style="max-width: 680px;">The whole of Wikipedia, turned into fact-checked trivia, where every question teaches you something. Nearly 100,000 questions across dozens of question types, generated and fact-checked from Wikipedia and Wikidata; a deterministic Daily that is byte-identical across Swift, Kotlin, JavaScript, and C#; serverless online play between Apple and Android; no account required and no data collection.</p>
-        <p style="max-width: 680px;">Two things arrived in 2026 that most trivia apps never attempt. <strong>Tidbits Live</strong> turns a Mac or a Windows PC into a pub-trivia host: build a night (or import a Kahoot), drive a projected big screen, and let every team answer on their own phones through any Tidbits app or the web, with wager rounds, jokers, pictures, clips, live scoreboards, and a phone remote for the host. Hosting is free forever. And <strong>Tidbits in iMessage</strong> lets you send a round to a group chat and have everyone play in the thread.</p>
+        <p style="max-width: 680px;">In 2026 I added two things I have not seen other trivia apps do. <strong>Tidbits Live</strong> turns a Mac or a Windows PC into a pub-trivia host: build a night (or import a Kahoot), drive a projected big screen, and let every team answer on their own phones through any Tidbits app or the web, with wager rounds, jokers, pictures, clips, live scoreboards, and a phone remote for the host. Hosting is free forever. And <strong>Tidbits in iMessage</strong> lets you send a round to a group chat and have everyone play in the thread.</p>
         <p style="max-width: 680px;">The desktop version taught me the most this year. The Windows app is native C# and Avalonia, written from a Mac, rendered and tested headlessly in CI so I can see every change without handing it to anyone, then checked on a real Windows machine before it ships. It shows the discipline under all of these apps: the shared game logic is one algorithm mirrored in four languages, and a test proves the mirrors agree.</p>
         <div class="app-links">
           <a href="https://apps.apple.com/us/app/tidbits-trivia/id6782202277" class="app-link primary">App Store: iPhone, iPad, Apple&nbsp;TV &amp; Mac</a>
@@ -149,7 +149,7 @@
       <div class="section-header">
         <div class="accent-line"></div>
         <h2>Try One</h2>
-        <p class="lead">If you would rather use the work than read about it, here is where each app lives.</p>
+        <p class="lead">Here is where each app lives, if you would rather try one than read about it.</p>
       </div>
 
       <div class="store-table-wrap">
@@ -235,9 +235,9 @@
       <div class="feature-banner bg-gradient mt-xl">
         <div class="feature-banner-text">
           <h3>The principles behind the template</h3>
-          <p><strong>Feature parity, not design consistency.</strong> Every app does the same things on every platform, but does them the way each platform does them: a SwiftUI <code>.sheet</code>, a Compose bottom sheet, a native web <code>&lt;dialog&gt;</code>, a focus picker on the TV. A single-source-of-truth parity matrix, audited against the real code, keeps every platform honest.</p>
+          <p><strong>Feature parity over design consistency.</strong> Every app does the same things on every platform, but does them the way each platform does them: a SwiftUI <code>.sheet</code>, a Compose bottom sheet, a native web <code>&lt;dialog&gt;</code>, a focus picker on the TV. A parity matrix, checked against the real code, keeps every platform doing the same things.</p>
           <p><strong>Native everywhere, no third-party frameworks.</strong> Swift and SwiftUI on Apple, Kotlin and Compose on Android, BrightScript on Roku, C# and Avalonia on Windows, plain HTML and JavaScript on the web with an additive ten-foot layer for smart TVs.</p>
-          <p><strong>Measured, not assumed.</strong> A feature ships when I have seen it work on real hardware (an Apple TV, a Pixel, a 2011 Roku) through harnesses that drive the device and read the screen back with OCR. Every store's own validator is treated as the specification.</p>
+          <p><strong>Tested on real hardware.</strong> A feature ships when I have seen it work on an Apple TV, a Pixel, and a 2011 Roku, through harnesses that drive the device and read the screen back with OCR. I treat each store's own validator as the spec.</p>
           <p><strong>No servers, no paid tiers.</strong> Sync rides on each ecosystem's own cloud: CloudKit for Apple, your own Drive or AT Protocol repo elsewhere. Data ships as static files. Everything deploys through free GitHub Actions, including the store submissions themselves.</p>
         </div>
       </div>
@@ -248,8 +248,8 @@
       <div class="feature-banner">
         <div class="feature-banner-text">
           <span class="card-tag">The through line</span>
-          <h3>Twenty years of teaching, now in the shape of software</h3>
-          <p>Every app I build carries the same belief as the classroom, the blog, and the district work: technology should serve people and help them understand more, not less. Archive Watch keeps a century of film available and hands you the tools to make with it. Tidbits makes every answer a lesson and gives any bar or classroom a free trivia night. Bsky Dreams is for connection instead of scrolling. The tools are new. The reason for them is not.</p>
+          <h3>Twenty years of teaching, and now apps</h3>
+          <p>Every app I build carries the same belief as the classroom, the blog, and the district work: technology should serve people and help them understand more. Archive Watch keeps a century of film available and hands you the tools to make with it. Tidbits makes every answer a lesson and gives any bar or classroom a free trivia night. Bsky Dreams is for connection instead of scrolling. I am building different things than I was in 2007, but for the same reasons.</p>
           <a href="/portfolio/about/" class="btn btn-primary mt-md">More about me</a>
         </div>
       </div>
