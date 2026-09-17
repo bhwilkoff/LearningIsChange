@@ -2,7 +2,7 @@
 import { store } from '../store.js';
 export const title = 'Terms';
 export async function render(root, ctx) {
-  root.innerHTML = `<h1>Terms</h1><p class="lead">From <code>database/taxonomies.json</code>. Counts are recomputed from the posts at every render. Renaming changes the display name only — slugs and URLs stay (permalink guarantee).</p>
+  root.innerHTML = `<h1>Terms</h1><p class="lead">From <code>database/taxonomies.json</code>. Counts are recomputed from the posts at every render. Renaming changes the display name only. Slugs and URLs stay (permalink guarantee).</p>
     <div class="row" style="margin-bottom:12px"><input id="t-q" type="search" placeholder="Filter…" style="flex:1;padding:9px 11px"></div>
     <div class="grid"><section class="card"><h2>Categories</h2><ul class="runs" id="t-cats"></ul></section><section class="card"><h2>Tags</h2><ul class="runs" id="t-tags"></ul></section></div><div id="t-msg"></div>`;
   const tax = await store.taxonomies();

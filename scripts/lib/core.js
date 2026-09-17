@@ -35,7 +35,7 @@ export function transcriptHtml(post) {
   if (!post.transcript) return '';
   const ocr = post.transcript_source && post.transcript_source !== 'edited';
   const paras = String(post.transcript).split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean).map((x) => `<p>${escapeHtml(x)}</p>`).join('');
-  return `<details class="transcript"><summary>Transcript${ocr ? ' <small>machine-read from the typewritten page; typos are the page\u2019s or the reader\u2019s</small>' : ''}</summary><div class="transcript-text">${paras}</div></details>`;
+  return `<details class="transcript"><summary>Transcript${ocr ? ' <small>read by a machine from the typewritten page. The typos are mine or the machine\u2019s.</small>' : ''}</summary><div class="transcript-text">${paras}</div></details>`;
 }
 
 // Excerpt if present, else the first ~160 chars of the body — derived at render, content untouched.
@@ -236,7 +236,7 @@ function renderComments(post) {
     return `<li class="comment" id="comment-${escapeAttr(c.id)}"><div class="comment-head">${c.avatar ? `<img class="comment-avatar" src="${escapeAttr(c.avatar)}" alt="" width="40" height="40" loading="lazy">` : ''}<span class="comment-author">${who}</span>${c.date ? `<a class="comment-date" href="#comment-${escapeAttr(c.id)}"><time datetime="${escapeAttr(c.date)}">${fmt(c.date)}</time></a>` : ''}</div><div class="comment-body">${selfHostImages(c.html)}</div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
   };
   const roots = byParent.get(null) || [];
-  return `<section class="comments" id="comments"><h2>${list.length} ${list.length === 1 ? 'comment' : 'comments'} <small>archived from the original blog; comments are closed</small></h2><ol class="comment-list">${roots.map(item).join('')}</ol></section>`;
+  return `<section class="comments" id="comments"><h2>${list.length} ${list.length === 1 ? 'comment' : 'comments'} <small>from the original blog. Comments are closed now; the conversation moved to Bluesky.</small></h2><ol class="comment-list">${roots.map(item).join('')}</ol></section>`;
 }
 
 export function renderPostPage(template, post, { prev = null, next = null, related = [], shell = {} } = {}) {
@@ -306,6 +306,6 @@ export function renderBlueskyThread(thread, postUrl) {
     return `<li class="comment"><div class="comment-head">${a.avatar ? `<img class="comment-avatar" src="${escapeAttr(a.avatar)}" alt="" width="32" height="32" loading="lazy">` : ''}<span class="comment-author"><a href="https://bsky.app/profile/${escapeAttr(a.handle || '')}" rel="ugc nofollow">${escapeHtml(a.displayName || a.handle || 'someone')}</a> <small class="mono">@${escapeHtml(a.handle || '')}</small></span><a class="comment-date" href="${link}" rel="nofollow">${escapeHtml(when)}</a></div><div class="comment-body"><p>${escapeHtml(rec.text || '')}</p></div>${kids.length ? `<ol class="comment-children">${kids.map(item).join('')}</ol>` : ''}</li>`;
   };
   const rootLink = `https://bsky.app/profile/${escapeAttr(thread.post.author?.handle || '')}/post/${escapeAttr(String(thread.post.uri || '').split('/').pop())}`;
-  return `<section class="comments bluesky" id="conversation"><h2>${count ? `${count} ${count === 1 ? 'reply' : 'replies'} on Bluesky` : 'Join the conversation on Bluesky'} <small><a href="${rootLink}" rel="nofollow">Reply to this post on Bluesky</a> — replies appear here at the next daily render.</small></h2>${replies.length ? `<ol class="comment-list">${replies.map(item).join('')}</ol>` : ''}</section>`;
+  return `<section class="comments bluesky" id="conversation"><h2>${count ? `${count} ${count === 1 ? 'reply' : 'replies'} on Bluesky` : 'Join the conversation on Bluesky'} <small><a href="${rootLink}" rel="nofollow">Reply on Bluesky</a>. Replies show up here the next morning.</small></h2>${replies.length ? `<ol class="comment-list">${replies.map(item).join('')}</ol>` : ''}</section>`;
 }
 function countReplies(node) { return (node.replies || []).filter((r) => r && r.post).reduce((n, r) => n + 1 + countReplies(r), 0); }

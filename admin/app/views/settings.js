@@ -3,8 +3,8 @@ export const title = 'Settings';
 function oauthHtml(ctx) {
   const o = ctx.oauth;
   if (!o.configured()) return `<div class="msg warn">Sign in with GitHub is not configured yet (Decision 016: GitHub App + Worker). Use a token below.</div>`;
-  if (o.signedIn()) { const s = o.session(); return `<div class="msg">✓ Signed in with GitHub — token expires ${new Date(s.expires_at).toLocaleTimeString()}${s.refresh_token ? ', refreshes automatically' : ''}. <button class="btn" id="s-signout" style="margin-left:8px;padding:4px 10px">Sign out</button></div>`; }
-  return `<div class="row" style="margin-bottom:12px"><button class="btn primary" id="s-signin">Sign in with GitHub</button><small style="color:var(--text-secondary)">Short-lived token, this repo only. No token to paste.</small></div>`;
+  if (o.signedIn()) { const s = o.session(); return `<div class="msg">✓ Signed in with GitHub. Token expires ${new Date(s.expires_at).toLocaleTimeString()}${s.refresh_token ? ', refreshes automatically' : ''}. <button class="btn" id="s-signout" style="margin-left:8px;padding:4px 10px">Sign out</button></div>`; }
+  return `<div class="row" style="margin-bottom:12px"><button class="btn primary" id="s-signin">Sign in with GitHub</button><small style="color:var(--text-secondary)">A short-lived token for this repo only. Nothing to paste.</small></div>`;
 }
 function vaultHtml(ctx) {
   if (!ctx.vault.hasVault()) return '';
@@ -14,7 +14,7 @@ export function render(root, ctx) {
   const s = ctx.settings();
   root.innerHTML = `
     <h1>Settings</h1>
-    <p class="lead">Stored in this browser only (localStorage). Nothing is sent anywhere except GitHub's API and, for Bluesky, your PDS.</p>
+    <p class="lead">Stored in this browser only. Nothing here goes anywhere except to GitHub's API and, for Bluesky, your PDS.</p>
     <div class="grid">
       <section class="card">
         <h2>GitHub</h2>
@@ -47,7 +47,7 @@ export function render(root, ctx) {
         <label class="field">App password<input type="password" id="s-bskypw" value="${ctx.esc(s.blueskyAppPassword)}" autocomplete="off" placeholder="xxxx-xxxx-xxxx-xxxx"><small>Create one at Settings → App Passwords on Bluesky. Never your main password.</small></label>
       </section>
       <section class="card" id="s-podcast">
-        <h2>Podcast <small style="font-weight:400;color:var(--text-secondary)">(channel — <code>database/podcast.json</code>)</small></h2>
+        <h2>Podcast <small style="font-weight:400;color:var(--text-secondary)">(channel settings, in <code>database/podcast.json</code>)</small></h2>
         <div class="empty">Loading…</div>
       </section>
     </div>`;
@@ -88,7 +88,7 @@ async function podcastCard(el, ctx) {
   const doc = await store.podcast();
   const c = doc.channel || {};
   const f = (id, label, val, extra = '') => `<label class="field" ${extra}>${label}<input id="${id}" value="${ctx.esc(val ?? '')}"></label>`;
-  el.innerHTML = `<h2>Podcast <small style="font-weight:400;color:var(--text-secondary)">(channel — <code>database/podcast.json</code>)</small></h2>
+  el.innerHTML = `<h2>Podcast <small style="font-weight:400;color:var(--text-secondary)">(channel settings, in <code>database/podcast.json</code>)</small></h2>
     <p class="meta" style="margin:0 0 10px;font-size:0.8rem;color:var(--text-secondary)">Episodes are posts with an audio file (set in the post editor). <a href="/feed/podcast/" target="_blank" rel="noopener">feed/podcast/feed.xml</a> renders from this and them.</p>
     ${f('pc-title', 'Title', c.title)}
     <label class="field">Description<textarea id="pc-desc" rows="3">${ctx.esc(c.description || '')}</textarea></label>
@@ -109,7 +109,7 @@ async function podcastCard(el, ctx) {
       const r = await ctx.api().commitFiles([{ path: 'database/podcast.json', content: JSON.stringify({ ...doc, channel }, null, 2) + '\n' }], 'Podcast channel settings');
       store.invalidate();
       let note = `✓ Saved (${String(r.commitSha || r.sha || '').slice(0, 7)}).`;
-      try { await ctx.api().dispatchWorkflow('render-site.yml', { scope: 'feeds', year: '', url: '', dry_run: 'false' }); note += ' Feed render dispatched — <a href="#/render">watch it</a>.'; } catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; }
+      try { await ctx.api().dispatchWorkflow('render-site.yml', { scope: 'feeds', year: '', url: '', dry_run: 'false' }); note += ' Feed render dispatched. <a href="#/render">Watch it</a>.'; } catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; }
       msg(note);
     } catch (e) { msg(`✗ ${ctx.esc(e.message)}`, 'err'); }
     el.querySelector('#pc-save').disabled = false;

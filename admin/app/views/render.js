@@ -13,7 +13,7 @@ export async function render(root, ctx) {
       <section class="card">
         <h2>Dispatch</h2>
         <label class="field">Scope
-          <select id="r-scope"><option value="all">all — posts, archives, pages, feeds</option><option value="posts">posts only</option><option value="archives">archives only</option><option value="pages">pages only</option><option value="feeds">feeds only</option></select>
+          <select id="r-scope"><option value="all">all: posts, archives, pages, feeds</option><option value="posts">posts only</option><option value="archives">archives only</option><option value="pages">pages only</option><option value="feeds">feeds only</option></select>
         </label>
         <div class="row">
           <label class="field" style="width:140px">Year <small class="inline">(posts only)</small><input id="r-year" placeholder="2026"></label>

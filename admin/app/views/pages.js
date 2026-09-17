@@ -46,13 +46,13 @@ async function editPage(root, ctx, url) {
         <div class="row"><button class="btn primary" id="e-save">Save &amp; render</button><label class="check" style="margin:0"><input type="checkbox" id="e-render" checked> dispatch render after save</label></div>
         <div id="e-msg"></div>
       </section>
-      <section class="preview-col"><div class="preview-head"><span>Preview — rendered with the site's page template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
+      <section class="preview-col"><div class="preview-head"><span>Preview, rendered with the site's page template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
     </div>`;
   const editor = new RichEditor({ element: root.querySelector('#e-body'), onChange: () => schedule(), onImage: () => root.querySelector('#e-img').click() }); editor.setHTML(page.content || '');
   root.querySelector('#e-img').onchange = async (e) => {
     const files = [...e.target.files]; e.target.value = ''; if (!files.length) return;
     const msgEl = root.querySelector('#e-msg'); const say = (t, cls = '') => { msgEl.innerHTML = `<div class="msg ${cls}">${t}</div>`; };
-    if (!(await ctx.ensureUnlocked())) return say('Sign in or unlock a token in <a href="#/settings">Settings</a> first — the image needs a commit.', 'warn');
+    if (!(await ctx.ensureUnlocked())) return say('Sign in or unlock a token in <a href="#/settings">Settings</a> first. The image has to be committed.', 'warn');
     const now = new Date(); const y = String(now.getFullYear()), m = String(now.getMonth() + 1).padStart(2, '0');
     say(`Processing ${files.length} image(s)…`);
     try { const { commit, html } = await uploadImages(ctx.api(), files, y, m); for (const h of html) { if (src.hidden) editor.insertHTML(h); else src.value += '\n' + h + '\n'; } schedule(); say(commit ? `✓ ${html.length} image(s) committed (${String(commit.commitSha || commit.sha || '').slice(0, 7)}) and inserted.` : 'No image files selected.'); }
@@ -75,7 +75,7 @@ async function editPage(root, ctx, url) {
     if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first.', 'warn');
     const api = ctx.api(); const rec = current(); root.querySelector('#e-save').disabled = true; msg('Saving…');
     try { const r = await store.savePage(api, rec, `Edit page: ${rec.title}`); let note = `✓ Saved (${String(r.commitSha || r.sha || '').slice(0, 7)}).`;
-      if (root.querySelector('#e-render').checked) { try { await api.dispatchWorkflow('render-site.yml', { scope: 'pages', year: '', url: '', dry_run: 'false' }); note += ' Render dispatched — <a href="#/render">watch it</a>.'; } catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; } }
+      if (root.querySelector('#e-render').checked) { try { await api.dispatchWorkflow('render-site.yml', { scope: 'pages', year: '', url: '', dry_run: 'false' }); note += ' Render dispatched. <a href="#/render">Watch it</a>.'; } catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; } }
       msg(note); } catch (e) { msg(`✗ ${ctx.esc(e.message)}`, 'err'); }
     root.querySelector('#e-save').disabled = false;
   };

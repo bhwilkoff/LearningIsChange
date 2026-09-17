@@ -7,7 +7,7 @@ import { store } from '../store.js';
 export const title = 'Media';
 export async function render(root, ctx) {
   const now = new Date(); const y = String(now.getFullYear()), m = String(now.getMonth() + 1).padStart(2, '0');
-  root.innerHTML = `<h1>Media</h1><p class="lead">Images are resized and encoded to WebP in your browser, then committed to <code>wp-content/uploads/${y}/${m}/</code>. No CDN, no server.</p>
+  root.innerHTML = `<h1>Media</h1><p class="lead">Drop images here. They get resized and encoded to WebP in your browser, then committed to <code>wp-content/uploads/${y}/${m}/</code>. No CDN, no server.</p>
     <div class="grid">
       <section class="card"><h2>Upload</h2>
         <div id="m-drop" class="drop">Drop images here or <label class="linklike"><input id="m-file" type="file" accept="image/*" multiple hidden>choose files</label></div>
@@ -71,7 +71,7 @@ async function library(el, ctx) {
   const state = { q: '', kind: '', year: '', use: '', sort: 'newest', page: 1, open: new Set() };
   const hash = new URLSearchParams(location.hash.split('?')[1] || ''); if (hash.get('use')) state.use = hash.get('use');
   el.innerHTML = `<h2>Library <small class="mono" style="font-weight:400;color:var(--text-secondary)">indexed ${ctx.esc(String(data.generated).slice(0, 10))}</small></h2>
-    <p class="lead" style="margin-top:0">${S.files.toLocaleString()} files · ${fmtBytes(S.bytes)} in <code>${ctx.esc(data.root)}/</code>. Usage is where a file is referenced by a post, page, the podcast feed or the site shell — <em>unreferenced</em> means nothing on the site links to it (it may still be linked from elsewhere; nothing here deletes anything).</p>
+    <p class="lead" style="margin-top:0">${S.files.toLocaleString()} files · ${fmtBytes(S.bytes)} in <code>${ctx.esc(data.root)}/</code>. A file is <em>used</em> when a post, a page, the podcast, or the site shell points at it. <em>Unreferenced</em> means nothing on the site does; something elsewhere still might. Nothing here deletes anything.</p>
     <div class="lib-stats">
       <button class="lib-stat" data-use="">${S.originals.toLocaleString()}<span>originals</span></button>
       <button class="lib-stat" data-use="used">${S.used.toLocaleString()}<span>used</span></button>
@@ -110,7 +110,7 @@ async function library(el, ctx) {
     const all = items(); const pages = Math.max(1, Math.ceil(all.length / PER_PAGE)); state.page = Math.min(state.page, pages);
     const slice = all.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE);
     if (state.use === 'missing') {
-      $('#l-list').innerHTML = slice.length ? `<p class="empty">Paths the content links to that have no file in the repo (mostly 2007 attachments and 2014 audio that never left WordPress). Fix the post, re-upload the file, or leave it.</p><ul class="runs">${slice.map((m) => `<li class="lib-missing"><span class="dot failure"></span><div><div class="mono">${ctx.esc(m.path.replace(data.root + '/', ''))}</div><ul class="lib-refs">${m.used_by.map(refLink).join('')}</ul></div><span></span></li>`).join('')}</ul>` : '<div class="empty">No broken references match.</div>';
+      $('#l-list').innerHTML = slice.length ? `<p class="empty">Paths the content links to with no file behind them, mostly 2007 attachments and 2014 audio that never left WordPress. Fix the post, upload the file again, or let it be.</p><ul class="runs">${slice.map((m) => `<li class="lib-missing"><span class="dot failure"></span><div><div class="mono">${ctx.esc(m.path.replace(data.root + '/', ''))}</div><ul class="lib-refs">${m.used_by.map(refLink).join('')}</ul></div><span></span></li>`).join('')}</ul>` : '<div class="empty">No broken references match.</div>';
     } else {
       $('#l-list').innerHTML = slice.length ? `<div class="lib-grid">${slice.map((f) => {
         const name = f.path.split('/').pop(); const toUrl = (p) => base + '/' + p.split('/').map(encodeURIComponent).join('/'); const url = toUrl(f.path);

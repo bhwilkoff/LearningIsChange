@@ -43,7 +43,7 @@ export const ctx = {
     if (await oauth.token()) return true; // refreshes an expired GitHub session silently
     if (this.token()) return true;
     if (!vault.hasVault()) return false;
-    const pass = prompt('Unlock LiC Admin — passphrase for your encrypted GitHub token:');
+    const pass = prompt('Unlock LiC Admin. Passphrase for your encrypted GitHub token:');
     if (!pass) return false;
     try { await vault.unlock(pass); this.refreshLock(); return true; } catch (e) { alert(e.message); return false; }
   },
@@ -84,14 +84,14 @@ function renderGate() {
   const denied = new URLSearchParams(location.search).get('error');
   root.appendChild(ctx.el(`<section class="gate">
     <p class="kicker">LiC Admin</p>
-    <h1>Sign in to continue</h1>
-    <p class="lead">Everything here writes to <code>${ctx.esc(CONFIG.repo.owner)}/${ctx.esc(CONFIG.repo.name)}</code> as you, so a GitHub credential is required before any view opens.</p>
-    ${denied ? `<div class="msg warn">GitHub reported <code>${ctx.esc(denied)}</code> — the authorization was cancelled. Try again.</div>` : ''}
+    <h1>Sign in first</h1>
+    <p class="lead">Everything here writes to <code>${ctx.esc(CONFIG.repo.owner)}/${ctx.esc(CONFIG.repo.name)}</code> as you. Sign in, and the views open.</p>
+    ${denied ? `<div class="msg warn">GitHub came back with <code>${ctx.esc(denied)}</code>, so the sign-in was cancelled. Try again.</div>` : ''}
     <div class="row">
       ${oauth.configured() ? '<button class="btn primary" id="gate-github">Sign in with GitHub</button>' : ''}
       ${vault.hasVault() ? '<button class="btn" id="gate-unlock">Unlock with passphrase</button>' : ''}
     </div>
-    <p class="text-muted">Prefer a fine-grained token? <a href="#/settings">Paste one in Settings</a>.</p>
+    <p class="text-muted">Or paste a fine-grained token in <a href="#/settings">Settings</a>.</p>
   </section>`));
   root.querySelector('#gate-github')?.addEventListener('click', () => { if (location.hash && location.hash !== '#/') sessionStorage.setItem('licAdminNext', location.pathname + location.hash); oauth.signIn(); });
   root.querySelector('#gate-unlock')?.addEventListener('click', async () => { if (await ctx.ensureUnlocked()) { ctx.refreshLock(); route(); } });
@@ -134,7 +134,7 @@ async function checkForUpdate() {
     if (!r.ok) return;
     const [c] = await r.json(); const latest = new Date(c?.commit?.committer?.date || 0);
     if (!have.getTime() || latest - have < 60e3) return;
-    const el = document.createElement('div'); el.className = 'app-update'; el.innerHTML = `A newer LiC Admin was deployed ${latest.toLocaleString()} — this tab is running an older copy. <button class="btn primary" type="button">Reload</button>`;
+    const el = document.createElement('div'); el.className = 'app-update'; el.innerHTML = `A newer LiC Admin went live ${latest.toLocaleString()} and this tab is still running the old one. <button class="btn primary" type="button">Reload</button>`;
     el.querySelector('button').onclick = hardReload;
     document.body.insertBefore(el, document.getElementById('view'));
   } catch { /* offline or rate-limited: never block the app */ }

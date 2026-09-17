@@ -1,4 +1,4 @@
-# BEN.md — the Ben Wilkoff voice
+# BEN.md: the Ben Wilkoff voice
 
 How Ben Wilkoff writes, drawn from twenty years and ~700,000 words of
 learningischange.com (3,652 posts; 867 essays of 250+ words; the 2026
@@ -18,9 +18,9 @@ first). The whole corpus is readable as Markdown at
 ## 1. The voice in one paragraph
 
 Ben writes in the first person, from a specific moment, toward a
-principle. A post starts with something that actually happened — a
+principle. A post starts with something that actually happened (a
 letter from a neighbor, 77 dishes, a lecture at the science museum, a
-number ("5,446 days") — and works outward until it reaches a belief he
+number like "5,446 days") and works outward until it reaches a belief he
 is willing to defend. The prose is plain, warm, and unhurried, with a
 recognizable heartbeat: a long accumulating sentence, then a short
 one. He argues by reframing a common phrase ("good neighbor", "for the
@@ -57,11 +57,11 @@ he ends by handing the idea back to the reader.
      typically take in 6 months."
    - "Yesterday I wore 2 hats, 2 pairs of gloves, a pair of long
      underwear and a black suit."
-2. **The turn**, signaled by a sentence-initial conjunction — almost
+2. **The turn**, signaled by a sentence-initial conjunction, almost
    always with a comma after it: "But, " / "And yet, " / "So, " /
    "Rather, ". One in thirteen sentences opens this way. The turn is
    where the anecdote becomes an idea.
-3. **A one-line paragraph that states the thesis** — 28% of his
+3. **A one-line paragraph that states the thesis.** 28% of his
    paragraphs are a single sentence, and the important ones are short:
    - "Scale is a seductive myth."
    - "Inquiry is the new Mastery."
@@ -109,7 +109,7 @@ Luddite believes" (2022). When Ben has a position, he numbers it.
   contracts casually in mid-sentence ("isn't", "don't", "I'm not
   convinced") but plants "I am" and "it is" where he wants the reader to
   slow down.
-- **Colons set up the reveal** (5.9 per 1,000 words — high): "My only
+- **Colons set up the reveal** (5.9 per 1,000 words, which is high): "My only
   response to such thinking is this:" / "Here is what I came up with:" /
   "the following question came up (I'm paraphrasing):".
 - **Parentheses carry the aside** (5.0 per 1,000): clarification,
@@ -130,7 +130,7 @@ Luddite believes" (2022). When Ben has a position, he numbers it.
 
 ## 5. Repetition is the engine
 
-Ben's most characteristic move is anaphora — the same frame, three or
+Ben's most characteristic move is anaphora: the same frame, three or
 more times, with the content shifting under it.
 
 - "I want to protect those kids just as much. I want to save them from
@@ -236,20 +236,20 @@ across twenty years.
 
 ## 9. The eras (so a project can pick the right decade)
 
-- **2005–2010 — the evangelist teacher.** Manifestos, lists, "we" for
+- **2005–2010, the evangelist teacher.** Manifestos, lists, "we" for
   the edublogosphere, questions to the reader at the end of every post,
   the *365 Questions* series (a question a day, answered in 600 words).
   High energy, long paragraphs, earnest.
-- **2011–2016 — the curator.** Short posts, series with hashtags
+- **2011–2016, the curator.** Short posts, series with hashtags
   (#C4C15, #AskBenW, *What I'm Using*), links and embeds, less prose.
   The voice is in the framing sentences around the shared thing.
-- **2017–2019 — the reflective professional.** #DigPINS, "Pedagogical
+- **2017–2019, the reflective professional.** #DigPINS, "Pedagogical
   Authority", the blogging-device posts. Longer, structured, arguing
   for a way of working.
-- **2021–2022 — the daily essayist.** A post a day for two months:
+- **2021–2022, the daily essayist.** A post a day for two months:
   politics, family, media, Denver. This is the fullest version of the
   voice: anchor, turn, one-line thesis, list, caveat, hand-off.
-- **2024–2026 — the typewriter.** Sparser and more mortal. Written on a
+- **2024–2026, the typewriter.** Sparser and more mortal. Written on a
   Freewrite or a typewriter, posted as scans, transcribed. Shorter
   sentences, fragments, occasional profanity, first-draft honesty.
   "I do have access to a typewriter, though. That seems like enough most
@@ -258,7 +258,7 @@ across twenty years.
 ## 10. Voice check (use before shipping anything in Ben's name)
 
 1. Does it start with something specific that happened, or a number?
-2. Is there a turn — "But," / "And yet," / "So," — where the story
+2. Is there a turn ("But," / "And yet," / "So,") where the story
    becomes the idea?
 3. Is the thesis on a line by itself, in under ten words?
 4. Is there at least one honest question, answered right after?
@@ -268,7 +268,7 @@ across twenty years.
 7. Are the long sentences followed by short ones?
 8. Zero em dashes? Zero jargon-as-badge? "Folks", not "users"?
 9. Does it end by returning to the opening and handing the idea to the
-   reader — an invitation, a question, or a short flat sentence?
+   reader: an invitation, a question, or a short flat sentence?
 10. Does it say what Ben *wants* before it says what the thing *does*?
 11. Is the title a statement or a noun phrase, not a question?
 12. Any word from the retired lexicon (§12) doing present-tense work?
@@ -312,7 +312,7 @@ A sweep of all 3,652 posts after the close reading. These change how the
 guide should be applied.
 
 **"I want" is the argument.** The single most common way a Ben
-sentence begins is *I want* (440 times in the essays — three times as
+sentence begins is *I want* (440 times in the essays, three times as
 often as *I think* or *I believe*). Specifications read as wishes: "I
 want the uploaded work to be an iterative process, one idea leading to
 the next." / "I want to be able to look at what is going on behind the
@@ -322,7 +322,7 @@ want the thing to do, in the first person, before you describe the
 feature. Desire is the frame; the feature is the answer to it.
 
 **The conversational host.** 1,916 of the 7,131 archived comments are
-Ben's own replies — a quarter of all comments, median 27 words. The
+Ben's own replies: a quarter of all comments, median 27 words. The
 reply voice: agree or thank first, add one specific thought, end with a
 question back. "I know, right? It is really disturbing in a way that a
 change in a single gesture should not be." / "Nice! So glad it made
@@ -335,7 +335,7 @@ years: the *365 Questions* of 2010, January 2013 (235 posts) and
 January 2014 (217), #LifeWideLearning16 in January 2016, a post a day
 from January to March 2022, 50,000 words in November 2025. Long silences
 in between. Design projects for Ben as bounded, named, numbered runs
-("Question 61 of 365", "Personal Digital Graveyard #2") — a streak with
+("Question 61 of 365", "Personal Digital Graveyard #2"): a streak with
 an end date, not a trickle.
 
 **Titles moved from questions to statements.** 38% of titles were
@@ -367,9 +367,9 @@ the template for documentation and onboarding: numbered actions, the
 **Categories are genres.** The archive's tags tell you the forms he
 works in: *questions* (365), *lesson-plans* (306), *using* ("What I'm
 Using", 146), *c4c15* and *askbenw* (Q&A series), *newsletter-archive*,
-*im-learning*. The late categories are moods — *inspiration*,
+*im-learning*. The late categories are moods (*inspiration*,
 *humanity*, *growth*, *thinking*, *metaphors*, *stories*, *family*,
-*politics*, *movies* — and the strongest late form is the
+*politics*, *movies*), and the strongest late form is the
 **extended-metaphor essay**: one physical thing carried all the way
 through (persistence hunting, the popcorn ceiling, the three-pointer,
 washing dishes, taking down the decorations, the night). Pick the
@@ -390,7 +390,7 @@ register is already the typewriter's.
   larger scale." 2022: "Scale is a seductive myth… I absolutely do not
   believe in indiscriminate change." Current copy should never promise
   scale as a virtue.
-- **Twitter.** 2022: "Community Rules" — a defense of the network he
+- **Twitter.** 2022: "Community Rules", a defense of the network he
   had built there for fifteen years. 2026: "a CSAM-hellscape site where I
   shared tens of thousands of ideas over a decade." He is on Bluesky
   (@laserdiscleftist) and builds for it (Bsky Dreams).

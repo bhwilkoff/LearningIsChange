@@ -913,6 +913,29 @@ appended here as ticks complete.
   recurring beliefs, eras, a ten-point voice check and models.
   `docs/voice/typewriter-transcripts.md` rebuilds on every render, so
   new pages fold into the corpus without a step.
+- **2026-09-17 · Voice audit of every user-facing surface** (Ben: "all
+  of the words that have been generated in collaboration with Claude
+  [should] sound as much like me as possible and have as few 'AI tells'
+  as can be avoided"). Inventoried the copy on the portfolio (home,
+  About, Career, Apps, Projects, Writing, Video), `/meet/`,
+  `/support.html`, the blog shell (home hero, series blurbs, empty
+  states, comment/transcript/Bluesky labels, redirect page, feed
+  description, `llms.txt`), the retired-tool redirect stubs, and LiC
+  Admin (gate, editor, settings, media, messages). Rewrote against
+  `BEN.md`: first person throughout (the About page had "In his own
+  words" and the Writing page "Ben wrote"), every em dash gone (about
+  120 in prose), "I want" framings, exact numbers, no "empower /
+  navigate / impact at every scale / make complex ideas accessible /
+  the whole formula / genuinely / seamless". Facts corrected on the
+  way: the Safety vs. Panic blurb described a post that does not exist
+  (it is the 2007 wiki-shutdown story); "#C4C15" is Comments for
+  Community, not Connected Courses; the "Content, Stupid" quote is now
+  verbatim from the 2008 TIE post and linked; post counts said 2,000+
+  where the site shows 3,652 (now 3,600+); Archive Watch's catalogue
+  was 37,000 on one page and 30,000 on two (now 30,000 everywhere).
+  `BEN.md` itself lost its own em dashes. Kept untouched: Ben's own bio
+  sentences, the tagline, talk titles, and the "Did you just meet Ben?"
+  card he approved.
 - **Next**: Content Review Queue §E (E-2 mismatched audio, E-3
   unreferenced uploads, E-4 broken references) as Ben decides; optional
   polish (dark/light manual toggle, `llms.txt` refresh).

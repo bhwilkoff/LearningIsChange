@@ -101,12 +101,12 @@ function renderHome() {
   const now = new Date(); const key = `${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
   const otd = NEWEST.filter((p) => dates(p).dateOnly.slice(5) === key);
   const series = [
-    ['365 Questions That Google Can’t Answer', 'questions', 'A question a day for a year, answered in public.'],
-    ['#C4C15', 'c4c15', 'Connected Courses, 2015.'],
-    ['#LifeWideLearning16', 'lifewidelearning16', 'A year of learning outside the classroom.'],
-    ['#AskBenW', 'askbenw', 'Video answers to questions from educators.'],
-    ['Newsletter Archive', 'newsletter-archive', 'The Weekly Authentic, every issue.'],
-    ['Lesson Plans', 'lesson-plans', 'Two decades of classroom plans.'],
+    ['365 Questions That Google Can’t Answer', 'questions', 'One question a day for all of 2010, answered in public.'],
+    ['#C4C15', 'c4c15', 'Comments for Community: a year of commenting on other people’s blogs, 2015.'],
+    ['#LifeWideLearning16', 'lifewidelearning16', 'A post a day with Zac Chase, January 2016.'],
+    ['#AskBenW', 'askbenw', 'Video answers to questions from educators, usually on a walk.'],
+    ['Newsletter Archive', 'newsletter-archive', 'The Weekly Authentic, every issue I sent.'],
+    ['Lesson Plans', 'lesson-plans', 'The plans I taught from, starting in 2006. Take them.'],
   ].map(([name, slug, blurb]) => { const c = TAX.categories[slug]; return c ? `<a class="series" href="${escapeAttr(c.url)}"><strong>${escapeHtml(c.name || name)}</strong><span>${escapeHtml(blurb)}</span><span class="n">${plural(c.count || 0, 'post')}</span></a>` : ''; }).join('');
   // D-3: "Start here" is whatever /important-posts/ (pages.json) links to, in order
   const start = (() => {
@@ -135,7 +135,7 @@ function renderHome() {
     post_count: ALL.length.toLocaleString('en-US'), year_count: String(years.length), category_count: String(cats.length), tag_count: tags.length.toLocaleString('en-US'),
     latest: NEWEST.slice(0, PER_PAGE).map(item).join(''),
     otd_date: now.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }),
-    otd: otd.length ? otd.map((p) => `<a href="${escapeAttr(p.url)}"><b>${dates(p).year}</b><span>${escapeHtml(p.title || 'Untitled')}</span></a>`).join('') : '<p class="text-muted">Nothing published on this date — yet.</p>',
+    otd: otd.length ? otd.map((p) => `<a href="${escapeAttr(p.url)}"><b>${dates(p).year}</b><span>${escapeHtml(p.title || 'Untitled')}</span></a>`).join('') : '<p class="text-muted">Nothing on this date yet. There is still time.</p>',
     start_here: start.map(item).join(''), series, json_ld: ld,
     watch: watch.map(item).join(''), recs: recs.map(item).join(''), recs_links: recsLinks, ...SHELL,
   }));

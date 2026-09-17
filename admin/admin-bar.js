@@ -26,11 +26,11 @@
     document.documentElement.classList.add('lic-gated');
     document.body.innerHTML = '<main class="lic-gate"><section class="lic-gate-card">' +
       '<p class="kicker">Learning is Change · Admin</p>' +
-      '<h1>Sign in to continue</h1>' +
-      '<p>These tools write to the site as you, so a GitHub credential is required before any of them opens.</p>' +
+      '<h1>Sign in first</h1>' +
+      '<p>These tools write to the site as you. Sign in, and they open.</p>' +
       '<p><a class="btn primary" href="/admin/app/?next=' + next + '">Sign in with GitHub</a> ' +
       '<a class="btn" href="/admin/app/#/settings">Use a token</a></p>' +
-      '<p class="lic-gate-note">Signing in with GitHub unlocks LiC Admin. The legacy tools on this page still need a token saved in Settings until they retire (Decision 015, A5).</p>' +
+      '<p class="lic-gate-note">The old tools all redirect into LiC Admin now, so GitHub sign-in is the only thing you need.</p>' +
       '</section></main>';
     document.title = 'Sign in · LiC Admin';
     return;

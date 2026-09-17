@@ -17,7 +17,7 @@ import { REPO_ROOT, SITE, SITE_NAME, describe, dates, terms, loadAllPosts, unesc
 
 const APPLY = process.argv.includes('--apply');
 const INDEX_COUNT = 50;
-const DESCRIPTION = 'Learning is Change - Thoughts on education, social justice, and making a difference.';
+const DESCRIPTION = 'Ben Wilkoff, thinking out loud about education, technology, and change since 2005.';
 
 const cdata = (s) => `<![CDATA[${String(s ?? '').replace(/\]\]>/g, ']]]]><![CDATA[>')}]]>`;
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

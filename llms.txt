@@ -1,6 +1,6 @@
 # Learning is Change
 
-> Ben Wilkoff's blog since 2005: education, technology, and change — 3,600+ posts — plus a portfolio of native apps he designs and ships end to end.
+> Ben Wilkoff's blog since 2005: education, technology, and change, 3,600+ posts, plus the native apps he designs and ships himself.
 
 Every post has a Markdown twin at the same URL plus `index.md`
 (e.g. https://learningischange.com/2024/07/21/on-not-reading-the-news/index.md).
@@ -9,10 +9,10 @@ Structured data: BlogPosting on every post, CollectionPage on archives, Person/W
 ## Start here
 
 - [About Ben](https://learningischange.com/portfolio/about/): who writes this
-- [Important posts](https://learningischange.com/important-posts/): the posts that resonated most
+- [Important posts](https://learningischange.com/important-posts/): the ones Ben would hand you first
 - [The Ripe Environment](https://learningischange.com/2007/06/07/the-ripe-environment/): the framework at the heart of the blog
 - [All posts by year](https://learningischange.com/all-posts/): complete index, 2005–present
-- [BEN.md — how Ben writes](https://learningischange.com/BEN.md): the voice guide derived from the whole archive; [typewritten pages, transcribed](https://learningischange.com/docs/voice/typewriter-transcripts.md); [voice statistics](https://learningischange.com/docs/voice/stats.md)
+- [BEN.md, how Ben writes](https://learningischange.com/BEN.md): the voice guide derived from the whole archive; [typewritten pages, transcribed](https://learningischange.com/docs/voice/typewriter-transcripts.md); [voice statistics](https://learningischange.com/docs/voice/stats.md)
 
 ## Archive
 

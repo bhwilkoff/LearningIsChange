@@ -55,7 +55,7 @@ export async function render(root, ctx, params) {
   root.innerHTML = `
     <div class="row" style="justify-content:space-between;align-items:baseline"><h1 style="margin:0">${isNew ? 'New post' : 'Edit post'}</h1><span class="mono" id="e-url">${isNew ? '' : `<a href="${ctx.esc(url)}" target="_blank" rel="noopener">${ctx.esc(url)}</a>`}</span></div>
     <p class="lead">${isNew ? 'Saved into <code>database/posts/&lt;year&gt;.json</code>; the page, homepage, archives, feeds and search render from it.' : `Changes are saved to <code>database/posts/${ctx.esc(post._year)}.json</code>; the page, archives, feeds and search re-render from it.`}</p>
-    ${restorable ? `<div class="msg warn" id="e-restore">Restored unsaved changes from ${ctx.esc(new Date(saved.at).toLocaleString())}. <button class="btn" id="e-discard" style="margin-left:8px;padding:3px 10px">Discard them</button></div>` : ''}
+    ${restorable ? `<div class="msg warn" id="e-restore">Picked up where you left off (autosaved ${ctx.esc(new Date(saved.at).toLocaleString())}). <button class="btn" id="e-discard" style="margin-left:8px;padding:3px 10px">Throw that away</button></div>` : ''}
     <div class="edit-grid">
       <section>
         <label class="field">Title<input id="e-title" value="${ctx.esc(post.title || '')}"></label>
@@ -73,7 +73,7 @@ export async function render(root, ctx, params) {
           <textarea id="e-source" class="editor-source" hidden spellcheck="false"></textarea>
         </div>
         <label class="field">Excerpt <small class="inline">(optional; used for descriptions and feeds)</small><textarea id="e-excerpt" rows="2">${ctx.esc(post.excerpt || '')}</textarea></label>
-        <label class="field">Transcript <small class="inline">(for a typewritten page: shown under the image, searchable, in the Markdown twin${post.transcript_source && post.transcript_source !== 'edited' ? ` — read by ${ctx.esc(post.transcript_source)} OCR${post.transcript_at ? ' ' + ctx.esc(String(post.transcript_at).slice(0, 10)) : ''}; editing it marks it reviewed` : post.transcript_source === 'edited' ? ' — reviewed' : '; left empty, the render OCRs an image-only post automatically'})</small><textarea id="e-transcript" rows="${post.transcript ? 8 : 2}" style="font-family:var(--font-mono);font-size:0.85rem">${ctx.esc(post.transcript || '')}</textarea></label>
+        <label class="field">Transcript <small class="inline">(for a typewritten page. It shows under the image, it is searchable, and it goes in the Markdown twin.${post.transcript_source && post.transcript_source !== 'edited' ? ` This one was read by ${ctx.esc(post.transcript_source)} OCR${post.transcript_at ? ' on ' + ctx.esc(String(post.transcript_at).slice(0, 10)) : ''}; edit it and it counts as reviewed.` : post.transcript_source === 'edited' ? ' Reviewed.' : ' Leave it empty and the next render reads an image-only post for you.'})</small><textarea id="e-transcript" rows="${post.transcript ? 8 : 2}" style="font-family:var(--font-mono);font-size:0.85rem">${ctx.esc(post.transcript || '')}</textarea></label>
         <div class="row"><button class="btn primary" id="e-save">${isNew ? 'Publish' : 'Save'} &amp; render</button><button class="btn" id="e-preview">Refresh preview</button><label class="check" style="margin:0"><input type="checkbox" id="e-render" checked> dispatch render after save</label><span class="mono" id="e-autosave" style="color:var(--text-secondary);font-size:0.75rem"></span>${isNew ? '' : `<span class="spacer"></span><button class="btn" id="e-remove" title="${post.removed ? 'Put the post back' : 'Tombstone: the URL redirects to the year archive; listings, feeds and search drop it; nothing is deleted'}">${post.removed ? 'Restore post' : 'Remove post…'}</button>`}</div>
         ${post.removed ? `<div class="msg warn">This post is removed (tombstoned ${ctx.esc(String(post.removed_at || '').slice(0, 10))}). Its URL redirects to the year archive.</div>` : ''}
         <div id="e-msg"></div>
@@ -91,7 +91,7 @@ export async function render(root, ctx, params) {
         </div>
         ${isNew ? '' : `<div class="card" style="margin-top:14px"><h2>Bluesky</h2><div id="e-bsky">${post.bluesky?.url ? `<div class="msg">✓ Cross-posted: <a href="${ctx.esc(post.bluesky.url)}" target="_blank" rel="noopener">${ctx.esc(post.bluesky.url)}</a><br><small>Replies render under the post at each daily render (or on the next render of this URL).</small></div>` : `<label class="field">Text <small class="inline">(the link card is added automatically)</small><textarea id="e-bsky-text" rows="3">${ctx.esc((post.title || '') + '\n\n' + CONFIG.site.base + url)}</textarea></label><div class="row"><button class="btn" id="e-bsky-post">Post to Bluesky</button><small style="color:var(--text-secondary)">Uses the handle + app password from <a href="#/settings">Settings</a>. Saves the post URI on this record.</small></div>`}</div></div>`}
       </section>
-      <section class="preview-col"><div class="preview-head"><span>Preview — rendered with the site's own template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
+      <section class="preview-col"><div class="preview-head"><span>Preview, rendered with the site's own template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
     </div>`;
 
   const editor = new RichEditor({ element: root.querySelector('#e-body'), onChange: () => schedulePreview(), onImage: () => root.querySelector('#e-img').click() });
@@ -151,7 +151,7 @@ export async function render(root, ctx, params) {
   root.querySelector('#e-pc-clear')?.addEventListener('click', () => { root.querySelector('#e-pc-audio').value = ''; draft.podcast = undefined; root.querySelector('#e-pc-stat').textContent = 'not an episode (save to apply)'; schedulePreview(); });
   root.querySelector('#e-pc-file').onchange = async (e) => {
     const f = e.target.files[0]; e.target.value = ''; if (!f) return;
-    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first — the audio needs a commit.', 'warn');
+    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first. The audio file has to be committed.', 'warn');
     const [y, m] = String(current().date_published || today()).split('-');
     const ext = (f.name.split('.').pop() || 'mp3').toLowerCase();
     const name = f.name.replace(/\.[^.]+$/, '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'episode';
@@ -171,14 +171,14 @@ export async function render(root, ctx, params) {
   root.querySelector('#e-img').onchange = async (e) => {
     const files = [...e.target.files]; e.target.value = '';
     if (!files.length) return;
-    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first — the image needs a commit.', 'warn');
+    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first. The image has to be committed.', 'warn');
     const [y, m] = String(current().date_published || today()).split('-');
     msg(`Processing ${files.length} image(s)…`);
     try {
       const { commit, html } = await uploadImages(ctx.api(), files, y, m);
       for (const h of html) { if (src.hidden) editor.insertHTML(h); else src.value += '\n' + h + '\n'; }
       schedulePreview();
-      msg(commit ? `✓ ${html.length} image(s) committed (${String(commit.commitSha || commit.sha || '').slice(0, 7)}) and inserted. They show in the preview once Pages deploys (a couple of minutes).` : 'No image files selected.');
+      msg(commit ? `✓ ${html.length} image(s) committed (${String(commit.commitSha || commit.sha || '').slice(0, 7)}) and inserted. They show in the preview once Pages deploys, a couple of minutes from now.` : 'No image files selected.');
     } catch (err) { msg(`✗ ${ctx.esc(err.message)}`, 'err'); }
   };
   async function preview() {
@@ -193,7 +193,7 @@ export async function render(root, ctx, params) {
   }
   root.querySelector('#e-preview').onclick = preview;
   const when = () => { const d = root.querySelector('#e-date').value, st = root.querySelector('#e-status').value, today = new Date().toISOString().slice(0, 10);
-    root.querySelector('#e-when').textContent = st === 'draft' ? 'Draft — not rendered; if the URL was ever public it redirects to the year archive.' : d > today ? `Scheduled — goes live on ${d} (the daily render at 06:17 UTC publishes it).` : 'Published.'; };
+    root.querySelector('#e-when').textContent = st === 'draft' ? 'Draft. Not rendered; if the URL was ever public it redirects to the year archive.' : d > today ? `Scheduled. Goes live on ${d}; the daily render at 06:17 UTC publishes it.` : 'Published.'; };
   when(); root.querySelector('#e-status').onchange = () => { when(); schedulePreview(); }; root.querySelector('#e-date').addEventListener('change', when);
   root.querySelector('#e-title').oninput = schedulePreview;
   root.querySelector('#e-date').onchange = schedulePreview;
@@ -211,7 +211,7 @@ export async function render(root, ctx, params) {
       draft.bluesky = { uri: r.uri, cid: r.cid, url: r.url, posted_at: new Date().toISOString() };
       await store.savePost(ctx.api(), { ...current(), bluesky: draft.bluesky }, `Bluesky cross-post: ${rec.title}`);
       await ctx.api().dispatchWorkflow('render-site.yml', { scope: 'posts', year: '', url, dry_run: 'false' }).catch(() => {});
-      out.innerHTML = `<div class="msg">✓ Posted: <a href="${ctx.esc(r.url)}" target="_blank" rel="noopener">${ctx.esc(r.url)}</a> — URI saved and a render dispatched.</div>`;
+      out.innerHTML = `<div class="msg">✓ Posted: <a href="${ctx.esc(r.url)}" target="_blank" rel="noopener">${ctx.esc(r.url)}</a>. The URI is saved on the post and a render is on its way.</div>`;
     } catch (e) { out.insertAdjacentHTML('beforeend', `<div class="msg err">✗ ${ctx.esc(e.message)}</div>`); }
   });
   root.querySelector('#e-remove')?.addEventListener('click', async () => {
@@ -225,18 +225,18 @@ export async function render(root, ctx, params) {
       const r = await store.savePost(api, restoring ? { ...rec, removed: undefined, removed_at: undefined } : rec, `${restoring ? 'Restore' : 'Remove'} post: ${rec.title}`);
       clearDraft();
       let note = `✓ ${restoring ? 'Restored' : 'Removed'} (${String(r.commitSha || r.sha || '').slice(0, 7)}).`;
-      try { await api.dispatchWorkflow('render-site.yml', { scope: 'all', year: '', url: '', dry_run: 'false' }); note += ' Render dispatched — <a href="#/render">watch it</a>.'; } catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; }
+      try { await api.dispatchWorkflow('render-site.yml', { scope: 'all', year: '', url: '', dry_run: 'false' }); note += ' Render dispatched. <a href="#/render">Watch it</a>.'; } catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; }
       msg(note); setTimeout(() => location.reload(), 1200);
     } catch (e) { msg(`✗ ${ctx.esc(e.message)}`, 'err'); root.querySelector('#e-remove').disabled = false; }
   });
   root.querySelector('#e-save').onclick = async () => {
     autosave(); // whatever happens next, the work is on disk
-    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first — your draft is autosaved in this browser.', 'warn');
+    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first. Your draft is safe; it autosaves in this browser.', 'warn');
     const api = ctx.api(); const rec = current();
     if (!rec.title) return msg('Title is required.', 'warn');
     if (isNew) {
       if (!rec.url) return msg('A slug is required.', 'warn');
-      if (await store.post(rec.url)) return msg(`A post already exists at <code>${ctx.esc(rec.url)}</code> — change the slug or the date.`, 'warn');
+      if (await store.post(rec.url)) return msg(`There is already a post at <code>${ctx.esc(rec.url)}</code>. Change the slug or the date.`, 'warn');
     }
     root.querySelector('#e-save').disabled = true; msg('Saving…');
     try {
@@ -245,7 +245,7 @@ export async function render(root, ctx, params) {
       let note = `✓ ${isNew ? 'Published' : 'Saved'} (${String(r.commitSha || r.sha || '').slice(0, 7)}).`;
       if (root.querySelector('#e-render').checked) {
         // whole site: the post page plus homepage, archives, feeds, search and the media index all depend on it
-        try { await api.dispatchWorkflow('render-site.yml', { scope: 'all', year: '', url: '', dry_run: 'false' }); note += ' Render dispatched — <a href="#/render">watch it</a>.'; }
+        try { await api.dispatchWorkflow('render-site.yml', { scope: 'all', year: '', url: '', dry_run: 'false' }); note += ' Render dispatched. <a href="#/render">Watch it</a>.'; }
         catch (e) { note += ` Render dispatch failed: ${ctx.esc(e.message)}`; }
       }
       msg(note);
