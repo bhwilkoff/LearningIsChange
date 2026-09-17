@@ -110,6 +110,36 @@ if (location.search.includes('code=')) {
   setTimeout(() => history.replaceState(null, '', location.pathname + location.hash), 0);
 }
 document.getElementById('app-signout').onclick = () => ctx.signOut();
+
+// Stale-module guard. GitHub Pages serves with a 10-minute cache lifetime and
+// ES-module imports honour it, so for a few minutes after a deploy a tab can
+// run old views against new data. Compare the newest commit touching admin/
+// with the Last-Modified of the app.js this browser has cached; when a newer
+// deploy exists, offer a reload that refreshes every module first.
+const MODULES = ['/admin/app/index.html', '/admin/app/app.js', '/admin/app/app.css', '/admin/app/store.js', '/admin/app/media.js',
+  ...['render', 'settings', 'posts', 'edit', 'pages', 'terms', 'media'].map((v) => `/admin/app/views/${v}.js`),
+  ...['config', 'auth', 'vault', 'oauth', 'github', 'slug', 'mutate', 'database', 'editor', 'pickers', 'bluesky', 'base64', 'feeds'].map((l) => `/admin/lib/${l}.js`),
+  '/admin/admin.css', '/admin/admin-bar.js'];
+async function hardReload() {
+  await Promise.all(MODULES.map((m) => fetch(m, { cache: 'reload' }).catch(() => {})));
+  location.reload();
+}
+async function checkForUpdate() {
+  try {
+    const api = ctx.api(); if (!api) return;
+    const cached = await fetch('/admin/app/app.js', { cache: 'force-cache' });
+    const have = new Date(cached.headers.get('Last-Modified') || 0);
+    const s = getSettings();
+    const r = await fetch(`https://api.github.com/repos/${s.repoOwner}/${s.repoName}/commits?path=admin&per_page=1`, { headers: { Authorization: `Bearer ${ctx.token()}`, Accept: 'application/vnd.github+json' } });
+    if (!r.ok) return;
+    const [c] = await r.json(); const latest = new Date(c?.commit?.committer?.date || 0);
+    if (!have.getTime() || latest - have < 60e3) return;
+    const el = document.createElement('div'); el.className = 'app-update'; el.innerHTML = `A newer LiC Admin was deployed ${latest.toLocaleString()} — this tab is running an older copy. <button class="btn primary" type="button">Reload</button>`;
+    el.querySelector('button').onclick = hardReload;
+    document.body.insertBefore(el, document.getElementById('view'));
+  } catch { /* offline or rate-limited: never block the app */ }
+}
+ctx.authed().then((ok) => { if (ok) checkForUpdate(); });
 document.getElementById('app-lock').onclick = async () => { if (vault.isUnlocked()) vault.lock(); else await ctx.ensureUnlocked(); ctx.refreshLock(); route(); };
 ctx.refreshLock();
 document.getElementById('app-nav').innerHTML = ORDER.map((k) => `<a href="#/${k}" data-view="${k}">${VIEWS[k].title}</a>`).join('');

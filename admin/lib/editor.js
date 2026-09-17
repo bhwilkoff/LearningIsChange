@@ -61,6 +61,8 @@ export class RichEditor {
   getText() { return this.el.innerText; }
   setHTML(html) { this.el.innerHTML = html || ''; this._refresh(); }
   focus() { this.el.focus(); }
+  // Visual ↔ HTML: the view hides the surface; this hides the toolbar and image popover with it.
+  showChrome(on) { if (this.bar) this.bar.hidden = !on; if (!on) this._hideImg(); }
   execCommand(command, value) { this.el.focus(); document.execCommand(command, false, value); this._changed(); }
   insertHTML(html) { this.el.focus(); this._restoreSelection(); document.execCommand('insertHTML', false, html); this._changed(); }
   insertLink(url, text) { const u = String(url || '').trim(); if (!u) return; this.el.focus(); const sel = getSelection(); if (sel && sel.toString()) document.execCommand('createLink', false, u); else this.insertHTML(`<a href="${esc(u)}">${esc(text || u)}</a>`); this._changed(); }

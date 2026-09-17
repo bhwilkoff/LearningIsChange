@@ -100,7 +100,7 @@ export async function render(root, ctx, params) {
     root.querySelectorAll('.tab-mini').forEach((x) => x.classList.toggle('active', x === b));
     const visual = b.dataset.pane === 'visual';
     if (visual) { editor.setHTML(src.value); } else { src.value = editor.getHTML(); }
-    root.querySelector('#e-body').hidden = !visual; src.hidden = visual;
+    root.querySelector('#e-body').hidden = !visual; src.hidden = visual; editor.showChrome(visual);
   });
   src.oninput = () => schedulePreview();
   const cat0 = (post.categories || []).find((c) => c && c.slug && !['ben-wilkoff', 'uncategorized', 'blog-2'].includes(c.slug)) || (post.categories || [])[0] || null;

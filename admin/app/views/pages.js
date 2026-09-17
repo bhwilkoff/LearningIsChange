@@ -59,7 +59,7 @@ async function editPage(root, ctx, url) {
     catch (err) { say(`✗ ${ctx.esc(err.message)}`, 'err'); }
   };
   const src = root.querySelector('#e-source'); src.oninput = schedule;
-  root.querySelectorAll('.tab-mini').forEach((b) => b.onclick = () => { root.querySelectorAll('.tab-mini').forEach((x) => x.classList.toggle('active', x === b)); const v = b.dataset.pane === 'visual'; if (v) editor.setHTML(src.value); else src.value = editor.getHTML(); root.querySelector('#e-body').hidden = !v; src.hidden = v; });
+  root.querySelectorAll('.tab-mini').forEach((b) => b.onclick = () => { root.querySelectorAll('.tab-mini').forEach((x) => x.classList.toggle('active', x === b)); const v = b.dataset.pane === 'visual'; if (v) editor.setHTML(src.value); else src.value = editor.getHTML(); root.querySelector('#e-body').hidden = !v; src.hidden = v; editor.showChrome(v); });
   const current = () => ({ ...page, url, title: root.querySelector('#e-title').value.trim(), content: src.hidden ? editor.getHTML() : src.value, excerpt: root.querySelector('#e-excerpt').value.trim() });
   let t; function schedule() { clearTimeout(t); t = setTimeout(preview, 400); }
   async function preview() {
