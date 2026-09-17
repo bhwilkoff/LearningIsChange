@@ -10,7 +10,7 @@ import { TagPicker, CategoryPicker } from '/admin/lib/pickers.js';
 import { CONFIG } from '/admin/lib/config.js';
 import * as bsky from '/admin/lib/bluesky.js';
 import { slugify } from '/admin/lib/slug.js';
-import { processImage, uploadPath, snippet } from '../media.js';
+import { uploadImages } from '../media.js';
 
 export const title = 'Edit post';
 // The fields a person edits — what autosave stores and compares.
@@ -68,7 +68,7 @@ export async function render(root, ctx, params) {
         <div class="field">Category<div id="e-cat"></div></div>
         <div class="field">Tags<div id="e-tags"></div></div>
         <div class="field">Body
-          <div class="tabs-mini"><button class="tab-mini active" data-pane="visual">Visual</button><button class="tab-mini" data-pane="source">HTML</button><span class="spacer"></span><label class="btn" style="padding:4px 10px;font-size:0.78rem;cursor:pointer"><input id="e-img" type="file" accept="image/*" multiple hidden>Insert image…</label></div>
+          <div class="tabs-mini"><button class="tab-mini active" data-pane="visual">Visual</button><button class="tab-mini" data-pane="source">HTML</button><input id="e-img" type="file" accept="image/*" multiple hidden></div>
           <div id="e-body" class="editor-surface"></div>
           <textarea id="e-source" class="editor-source" hidden spellcheck="false"></textarea>
         </div>
@@ -93,7 +93,7 @@ export async function render(root, ctx, params) {
       <section class="preview-col"><div class="preview-head"><span>Preview — rendered with the site's own template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
     </div>`;
 
-  const editor = new RichEditor({ element: root.querySelector('#e-body'), onChange: () => schedulePreview() });
+  const editor = new RichEditor({ element: root.querySelector('#e-body'), onChange: () => schedulePreview(), onImage: () => root.querySelector('#e-img').click() });
   editor.setHTML(post.content || '');
   const src = root.querySelector('#e-source');
   root.querySelectorAll('.tab-mini').forEach((b) => b.onclick = () => {
@@ -164,23 +164,16 @@ export async function render(root, ctx, params) {
   };
   // Insert image: resize/encode in the browser, commit to wp-content/uploads/YYYY/MM/, insert the responsive snippet
   root.querySelector('#e-img').onchange = async (e) => {
-    const files = [...e.target.files].filter((f) => f.type.startsWith('image/')); e.target.value = '';
+    const files = [...e.target.files]; e.target.value = '';
     if (!files.length) return;
     if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first — the image needs a commit.', 'warn');
     const [y, m] = String(current().date_published || today()).split('-');
     msg(`Processing ${files.length} image(s)…`);
     try {
-      const outs = [];
-      for (const f of files) {
-        const r = await processImage(f, { keepOriginal: false });
-        const vs = r.variants.map((v) => ({ ...v, path: uploadPath(y, m, v.name) }));
-        outs.push({ files: vs.map((v) => ({ path: v.path, content: v.bytes })), html: snippet(r.base, vs, f.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ')) });
-      }
-      const all = outs.flatMap((o) => o.files);
-      const r = await ctx.api().commitFiles(all, `Upload ${all.length} image file(s) via LiC Admin editor`);
-      for (const o of outs) { if (src.hidden) editor.insertHTML(o.html); else src.value += '\n' + o.html + '\n'; }
+      const { commit, html } = await uploadImages(ctx.api(), files, y, m);
+      for (const h of html) { if (src.hidden) editor.insertHTML(h); else src.value += '\n' + h + '\n'; }
       schedulePreview();
-      msg(`✓ ${files.length} image(s) committed (${String(r.commitSha || r.sha || '').slice(0, 7)}) and inserted. They show in the preview once Pages deploys (a couple of minutes).`);
+      msg(commit ? `✓ ${html.length} image(s) committed (${String(commit.commitSha || commit.sha || '').slice(0, 7)}) and inserted. They show in the preview once Pages deploys (a couple of minutes).` : 'No image files selected.');
     } catch (err) { msg(`✗ ${ctx.esc(err.message)}`, 'err'); }
   };
   async function preview() {

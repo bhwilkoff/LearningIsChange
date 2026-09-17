@@ -53,3 +53,18 @@ export function snippet(base, variants, alt = '') {
   const srcset = half ? ` srcset="${'/' + half.path} ${half.width}w, ${src} ${full.width}w" sizes="(max-width: 800px) 100vw, 800px"` : '';
   return `<figure><img src="${src}"${srcset} width="${full.width}" height="${full.height}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy"></figure>`;
 }
+
+// Editor hook: process + commit image files for a given month, return the snippets to insert.
+// `api` is a GitHubAPI; the caller decides where the HTML goes.
+export async function uploadImages(api, files, year, month, { keepOriginal = false } = {}) {
+  const outs = [];
+  for (const f of files) {
+    if (!f.type.startsWith('image/')) continue;
+    const r = await processImage(f, { keepOriginal });
+    const vs = r.variants.map((v) => ({ ...v, path: uploadPath(year, month, v.name) }));
+    outs.push({ files: vs.map((v) => ({ path: v.path, content: v.bytes })), html: snippet(r.base, vs, f.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ')) });
+  }
+  if (!outs.length) return { commit: null, html: [] };
+  const commit = await api.commitFiles(outs.flatMap((o) => o.files), `Upload ${outs.length} image(s) via LiC Admin editor`);
+  return { commit, html: outs.map((o) => o.html) };
+}

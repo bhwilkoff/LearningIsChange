@@ -2,6 +2,7 @@
 import { store } from '../store.js';
 import { RichEditor } from '/admin/lib/editor.js';
 import { CONFIG } from '/admin/lib/config.js';
+import { uploadImages } from '../media.js';
 
 export const title = 'Pages';
 const SITE = /^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? location.origin : CONFIG.site.base;
@@ -40,14 +41,23 @@ async function editPage(root, ctx, url) {
       <section>
         <label class="field">Title<input id="e-title" value="${ctx.esc(page.title || '')}"></label>
         <div class="field">Body<div class="tabs-mini"><button class="tab-mini active" data-pane="visual">Visual</button><button class="tab-mini" data-pane="source">HTML</button></div>
-          <div id="e-body" class="editor-surface"></div><textarea id="e-source" class="editor-source" hidden spellcheck="false"></textarea></div>
+          <div id="e-body" class="editor-surface"></div><textarea id="e-source" class="editor-source" hidden spellcheck="false"></textarea><input id="e-img" type="file" accept="image/*" multiple hidden></div>
         <label class="field">Excerpt<textarea id="e-excerpt" rows="2">${ctx.esc(page.excerpt || '')}</textarea></label>
         <div class="row"><button class="btn primary" id="e-save">Save &amp; render</button><label class="check" style="margin:0"><input type="checkbox" id="e-render" checked> dispatch render after save</label></div>
         <div id="e-msg"></div>
       </section>
       <section class="preview-col"><div class="preview-head"><span>Preview — rendered with the site's page template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
     </div>`;
-  const editor = new RichEditor({ element: root.querySelector('#e-body'), onChange: () => schedule() }); editor.setHTML(page.content || '');
+  const editor = new RichEditor({ element: root.querySelector('#e-body'), onChange: () => schedule(), onImage: () => root.querySelector('#e-img').click() }); editor.setHTML(page.content || '');
+  root.querySelector('#e-img').onchange = async (e) => {
+    const files = [...e.target.files]; e.target.value = ''; if (!files.length) return;
+    const msgEl = root.querySelector('#e-msg'); const say = (t, cls = '') => { msgEl.innerHTML = `<div class="msg ${cls}">${t}</div>`; };
+    if (!(await ctx.ensureUnlocked())) return say('Sign in or unlock a token in <a href="#/settings">Settings</a> first — the image needs a commit.', 'warn');
+    const now = new Date(); const y = String(now.getFullYear()), m = String(now.getMonth() + 1).padStart(2, '0');
+    say(`Processing ${files.length} image(s)…`);
+    try { const { commit, html } = await uploadImages(ctx.api(), files, y, m); for (const h of html) { if (src.hidden) editor.insertHTML(h); else src.value += '\n' + h + '\n'; } schedule(); say(commit ? `✓ ${html.length} image(s) committed (${String(commit.commitSha || commit.sha || '').slice(0, 7)}) and inserted.` : 'No image files selected.'); }
+    catch (err) { say(`✗ ${ctx.esc(err.message)}`, 'err'); }
+  };
   const src = root.querySelector('#e-source'); src.oninput = schedule;
   root.querySelectorAll('.tab-mini').forEach((b) => b.onclick = () => { root.querySelectorAll('.tab-mini').forEach((x) => x.classList.toggle('active', x === b)); const v = b.dataset.pane === 'visual'; if (v) editor.setHTML(src.value); else src.value = editor.getHTML(); root.querySelector('#e-body').hidden = !v; src.hidden = v; });
   const current = () => ({ ...page, url, title: root.querySelector('#e-title').value.trim(), content: src.hidden ? editor.getHTML() : src.value, excerpt: root.querySelector('#e-excerpt').value.trim() });

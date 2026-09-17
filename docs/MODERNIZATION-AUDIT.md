@@ -874,6 +874,25 @@ appended here as ticks complete.
   `podcast.json`, dispatches a feeds render). `/podcast-rss/` retired
   as a redirect; the admin bar lists only LiC Admin + Search. **Every
   admin surface is now on the JSON → render pipeline.**
+- **2026-09-17 · A real visual editor** (Ben: the Visual tab had "no
+  buttons for styling, keyboard shortcuts, etc."). Researched the
+  no-build options: Quill/Trix/Editor.js normalize HTML on load and
+  would strip the archive's iframes, `<figure>`+srcset and galleries;
+  TipTap needs a bundler and a schema per legacy element; CKEditor 5 and
+  TinyMCE are 1–2 MB and now license-gated. Chosen: native
+  contenteditable (what the old `/new/` used) done properly in
+  `admin/lib/editor.js` — toolbar (block type, B/I/U/S, inline code,
+  link, image, lists, quote, rule, undo/redo, clear) with active
+  states; shortcuts (⌘B/I/U, ⌘K link, ⌘E code, ⌘⇧X strike, ⌘⇧7/8/9
+  lists/quote, ⌘⌥0–4 block type, Tab/⇧Tab in lists); Markdown-style
+  starts (`# `, `- `, `1. `, `> `); Enter at the end of a heading starts
+  a paragraph; paste strips Word/Docs/website junk to semantic HTML;
+  click an image → alt / float left·center·right / open / remove;
+  output normalized (`b→strong`, `i→em`, stray `div→p`, trailing empty
+  paragraphs dropped) while the archive's own markup round-trips
+  byte-identical (verified with figure/srcset/iframe). Both the post and
+  page editors use it; the toolbar's image button runs the WebP
+  upload pipeline (`uploadImages()` in `media.js`).
 - **Next**: Content Review Queue §E (E-2 mismatched audio, E-3
   unreferenced uploads, E-4 broken references) as Ben decides; optional
   polish (dark/light manual toggle, `llms.txt` refresh).
