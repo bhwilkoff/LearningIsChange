@@ -232,13 +232,12 @@ items get done in a later tick and moved to *Done*.
 - ✅ A-2 `/contact-page/` — retire → redirect to `/meet/`.
 - ✅ A-3 `/login/`, `/register/`, `/lostpassword/`, `/resetpass/`,
   `/logout/` — retire → redirect to `/`.
-- A-4 `/services/contact/` (nav "Contact") — verify it isn't also a
-  shortcode shell.
+- ✅ A-4 `/services/contact/` — retired with `/services/*` under D-2 (noindex, out of nav).
 - ✅ A-5 test pages — keep as-is (Ben).
 
 ### B. Navigation & identity
-- A-7 `/__qs/6b00bc294368/` ("MailPoet Page", a newsletter-plugin
-  artifact) is still in `pages.json` and renders. Retire → redirect to `/`?
+- ✅ (Ben 2026-09-17: redirect) A-7 `/__qs/6b00bc294368/` and `/__qs/d43bf345f897/`
+  ("MailPoet Page" shortcode shells) → redirect to `/` via `page-rules.json`.
 - ✅ (Ben: homepage sections) B-5 Old-menu items without a home yet: "Video Posts" (category
   `videos` + children), "Recommendations" (`recs` + children). The
   categories exist and render; should the homepage get a "Watch" /
@@ -251,14 +250,13 @@ items get done in a later tick and moved to *Done*.
 - ✅ B-1 One unified nav; blog-only items move to the blog landing page.
 - ✅ B-2 Tagline kept verbatim.
 - ✅ B-3 Header image dropped (typographic header).
-- B-4 Footer social links: blog has Facebook + Twitter; portfolio has
-  GitHub / LinkedIn / Bluesky. Twitter → archive link?
+- ✅ (Ben 2026-09-17: keep as-is) B-4 Unified footer shows GitHub / LinkedIn / Bluesky only.
 
 ### C. Archive fidelity
-- C-0 Data shape: `posts/YYYY.json` stores `url` as absolute on 3,639
-  posts and relative on 12 (the ones written by `/new/`). Normalize
-  to relative in a maintenance pass? (Renderers must tolerate both
-  until then; `generate-sitemap.js` already does.)
+- ✅ (Ben 2026-09-17: normalize) C-0 Data shape — post `url`s were already all
+  relative (validator enforces `path`); `pages.json` (72 pages) normalized
+  to relative this tick, zero rendered-output change. `guid` stays absolute
+  by design (RSS GUID guarantee).
 - ✅ **Done tick 8 (Ben approved full scope)** C-4 **Mojibake — corrected scope: 2,615 posts (72%), not 33.**
   The first count matched the cp1252 form (`â€™`); the data holds the
   latin-1 form (`â\x80\x99`), which browsers render identically. Same
@@ -276,7 +274,7 @@ items get done in a later tick and moved to *Done*.
   lists — earlier note over-read a `str()` dump). Normalized to
   `{name, slug, url}`; `admin/lib/mutate.js` (`taxonomyTerm`) and
   `/new/` now write that shape.
-- C-9 **1,153 of 1,403 terms have no archive page** (WordPress exported
+- ✅ **Done (P2 renderer)** C-9 **1,153 of 1,403 terms have no archive page** (WordPress exported
   only 432 of 1,365 tag pages and skipped 3 categories), so most tag
   links in post footers are 404s today. P2's renderer generates every
   term page from JSON; no permalink is lost (they never existed).
@@ -300,8 +298,7 @@ items get done in a later tick and moved to *Done*.
   Restore display names from the menu fragment where they exist?
 - ✅ **C-1 resolved tick 26** — comments were in git, not lost;
   recovered and rendered (see Diagnostics → Comments).
-- C-2 `og:url` is `/` on every post — will be fixed in P0, listed
-  here for the record.
+- ✅ **Done (P0)** C-2 `og:url` is now the absolute permalink on every post.
 - ✅ (Ben: re-point at render) C-3 Posts embedding `i0.wp.com` (Jetpack CDN) image URLs — Decision
   009 relies on this CDN; confirm still acceptable or re-point to
   `/wp-content/uploads/`.
@@ -754,9 +751,18 @@ appended here as ticks complete.
   automatically"; Test connection: `bhwilkoff/LearningIsChange (write
   access) · rate limit 5000/5000`. No PAT involved. **Decision 016 is
   fully delivered**; the vault/PAT path remains as the fallback.
+- **2026-09-17 · Content Review Queue cleared** — Ben answered the
+  three open items: A-7 MailPoet shells → redirect to `/`
+  (`page-rules.json`, 2 pages re-rendered as redirects, sitemap
+  regenerated); B-4 footer stays GitHub / LinkedIn / Bluesky; C-0
+  `pages.json` URLs normalized to site-relative (72 pages; every
+  consumer already stripped the origin and `mutate.js` writes relative).
+  Stale entries ticked: A-4 (retired under D-2), C-2 (og:url absolute),
+  C-9 (term pages rendered). Verified: validate OK, `render-pages` dry
+  run 0 changes, `render-archives` unchanged relative to before, permalink
+  gate OK (8,771 URLs, 3,878 GUIDs). **§5 has no open items.**
 - **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
   /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
   /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin
   once Ben has used each view once; update `CLAUDE.md`, `admin/index.html`
-  and `scripts/README.md`. Content Review Queue (§5) items incl. A-7
-  still await Ben.
+  and `scripts/README.md`.
