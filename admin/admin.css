@@ -144,3 +144,16 @@ html.lic-gated body { margin: 0; background: var(--bg-secondary); }
 .lic-gate-card p { margin: 0 0 16px; color: var(--text-primary); line-height: 1.5; }
 .lic-gate-card .btn { display: inline-block; text-decoration: none; margin-right: 8px; }
 .lic-gate-card .lic-gate-note { font-size: 0.85rem; color: var(--text-secondary); margin: 0; }
+
+/* Tag / category pickers (admin/lib/pickers.js) — token-based so they follow dark/light */
+.lic-tag-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.lic-tag-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 14px; font-size: 0.85rem; background: var(--color-accent-light); border: 1px solid var(--color-accent); color: var(--color-accent-dark); }
+.lic-tag-chip-x { background: none; border: none; color: inherit; cursor: pointer; font-size: 1rem; line-height: 1; padding: 0 0 0 2px; opacity: 0.75; }
+.lic-tag-chip-x:hover { opacity: 1; }
+.lic-tag-input, .lic-category-select { width: 100%; padding: 8px 10px; border: 1px solid var(--border-color); border-radius: 8px; font: inherit; font-size: 0.92rem; background: var(--bg-primary); color: var(--text-primary); }
+.lic-tag-input:focus, .lic-category-select:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.lic-tag-popular { margin-top: 8px; font-size: 0.82rem; color: var(--text-secondary); }
+.lic-tag-popular > div:first-child { margin-bottom: 4px; }
+.lic-tag-popular-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.lic-tag-suggest { font: inherit; font-size: 0.78rem; padding: 2px 8px; border-radius: 6px; cursor: pointer; background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary); }
+.lic-tag-suggest:hover { border-color: var(--color-accent); color: var(--color-accent-dark); }

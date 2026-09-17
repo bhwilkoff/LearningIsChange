@@ -49,16 +49,15 @@ export class TagPicker {
     this.container.innerHTML = '';
     const chips = document.createElement('div');
     chips.className = 'lic-tag-chips';
-    chips.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px';
     for (const tag of this.selected) {
       const chip = document.createElement('span');
       chip.className = 'lic-tag-chip';
-      chip.style.cssText = 'display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:#e8f4f8;border:1px solid #b8dce8;border-radius:14px;font-size:0.85rem';
       chip.textContent = tag.name;
       const x = document.createElement('button');
       x.type = 'button';
       x.textContent = '×';
-      x.style.cssText = 'background:none;border:none;color:#055;cursor:pointer;font-size:1rem;padding:0 0 0 2px';
+      x.className = 'lic-tag-chip-x';
+      x.setAttribute('aria-label', `Remove ${tag.name}`);
       x.addEventListener('click', () => this.removeTag(tag.slug));
       chip.appendChild(x);
       chips.appendChild(chip);
@@ -67,7 +66,6 @@ export class TagPicker {
     input.type = 'text';
     input.placeholder = 'Add tag and press Enter…';
     input.className = 'lic-tag-input';
-    input.style.cssText = 'width:100%;padding:6px 10px;border:1px solid #ddd;border-radius:4px;font-family:inherit';
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ',') {
         e.preventDefault();
@@ -89,15 +87,15 @@ export class TagPicker {
       .filter(s => !this.selected.some(sel => sel.slug === s.slug));
     if (popular.length) {
       const panel = document.createElement('div');
-      panel.style.cssText = 'margin-top:8px;font-size:0.82rem;color:#666';
-      panel.innerHTML = '<div style="margin-bottom:4px">Popular tags (click to add):</div>';
+      panel.className = 'lic-tag-popular';
+      panel.innerHTML = '<div>Popular tags (click to add):</div>';
       const list = document.createElement('div');
-      list.style.cssText = 'display:flex;flex-wrap:wrap;gap:4px';
+      list.className = 'lic-tag-popular-list';
       for (const p of popular) {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.textContent = `${p.name} (${p.count || 0})`;
-        btn.style.cssText = 'background:#f5f5f5;border:1px solid #ddd;border-radius:3px;padding:2px 8px;font-size:0.78rem;cursor:pointer';
+        btn.className = 'lic-tag-suggest';
         btn.addEventListener('click', () => this.addTag(p));
         list.appendChild(btn);
       }
@@ -151,7 +149,6 @@ export class CategoryPicker {
     this.container.innerHTML = '';
     const select = document.createElement('select');
     select.className = 'lic-category-select';
-    select.style.cssText = 'width:100%;padding:6px 10px;border:1px solid #ddd;border-radius:4px;font-family:inherit';
     const noneOpt = document.createElement('option');
     noneOpt.value = '';
     noneOpt.textContent = '— No category —';

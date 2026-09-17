@@ -776,6 +776,25 @@ appended here as ticks complete.
   screen on re-auth) → Worker → back on `/new/`; Sign out → gate.
   Client-side gate on a static host — GitHub rejecting writes without a
   token remains the real enforcement; the JSON it reads is public anyway.
+- **2026-09-17 · Media library** — Ben: "Is there any way that all of
+  the media being stored by the repository can be displayed on the media
+  page so that I can see what media is being used where on the site?"
+  `scripts/index-media.js` walks `wp-content/uploads/` (1,030 files,
+  1.3 GB; 1,020 originals once resize variants fold in), reads image
+  dimensions from file headers, and scans post/page bodies, the podcast
+  feed and the hand-written shell for references → `database/media.json`
+  (460 KB; runs in `render-site.yml` after stats). Result: 679 used,
+  341 unreferenced (254 of them a 2016 batch), 142 referenced-but-missing
+  (2007 `.doc` attachments, 2014 `.m4a` episodes that never left
+  WordPress — listed with their referring posts). Media view gains a
+  Library: stat chips (used / unreferenced / broken / by kind), search,
+  kind/year/usage filters, sort (newest, largest, most used), 48-per-page
+  grid with thumbnails (smallest variant when one exists), "Used in N"
+  expanding to post/page/podcast referrers with edit + view links, Copy
+  URL. Nothing deletes. Also: hash router now ignores `?query`
+  (`#/media?use=missing`), and the tag/category pickers
+  (`admin/lib/pickers.js`) lost their hard-coded light colours — chips,
+  input, and suggestions are token-based and follow dark/light (Ben).
 - **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
   /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
   /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin

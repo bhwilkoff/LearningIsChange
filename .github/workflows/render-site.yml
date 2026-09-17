@@ -62,6 +62,7 @@ jobs:
           if [ "$S" = all ] || [ "$S" = pages ];    then node scripts/render-shell.js $APPLY; fi
           if [ -n "$APPLY" ]; then
             node scripts/recompute-database-stats.js --apply
+            node scripts/index-media.js --apply
             node scripts/check-permalinks.js --snapshot
             node scripts/generate-sitemap.js --apply
           fi

@@ -58,7 +58,7 @@ export const ctx = {
 
 let current = null;
 async function route() {
-  const path = location.hash.replace(/^#\/?/, '');
+  const path = location.hash.replace(/^#\/?/, '').split('?')[0]; // views read their own ?query
   const name = path.split('/')[0] || 'render';
   // Signed-out: every view except Settings (where a token can be pasted) is the sign-in gate.
   const ok = await ctx.authed();

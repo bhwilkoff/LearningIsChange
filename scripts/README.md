@@ -17,6 +17,7 @@ derived by these scripts. No dependencies beyond Node ≥ 20.
 | `make-meet-qr.py` | `CONTACT` in the script | `meet/*.vcf`, `meet/qr-*.svg` | `pip install segno` |
 | `dev-deadcode.mjs` | an admin tool | (report / `--apply`) | Dev-only; needs acorn in a scratch dir |
 | `backfill-posts-content.js`, `dedup-date-archives.js`, `prune-archive-listings.js` | — | — | Historical (M3/M4 migration); safe to leave |
+| `index-media.js` | `wp-content/uploads/**`, posts, pages, `feed/podcast/feed.xml`, shell files | `database/media.json` | Every upload with size, image dimensions and *where it is used* (post/page/podcast/site); resize variants fold into the original; referenced-but-missing paths listed. Powers the Media library in LiC Admin. `--apply` |
 
 ## The whole pipeline
 
