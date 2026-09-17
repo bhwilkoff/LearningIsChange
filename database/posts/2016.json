@@ -723,7 +723,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-When-is-generalization-better-than-specialization_.mp3",
+        "type": "audio/mpeg",
+        "length": 3376550,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5334,
@@ -1400,7 +1407,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-responsibility-do-you-have-to-finish-what-you-started_.mp3",
+        "type": "audio/mpeg",
+        "length": 3864317,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5351,
@@ -2404,7 +2418,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-should-we-do-about-snow-days_.mp3",
+        "type": "audio/mpeg",
+        "length": 3158359,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5376,
@@ -2736,7 +2757,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-When_How-is-it-appropriate-to-share-student-videos-on-YouTube_.mp3",
+        "type": "audio/mpeg",
+        "length": 3900892,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5384,
@@ -3128,7 +3156,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW-Live_-The-most-powerful-PD-experiences-for-Ts_.mp3",
+        "type": "audio/mpeg",
+        "length": 3047402,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5396,
@@ -3596,7 +3631,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/Askbenw-live_-Harnessing-stories-of-innovative-classrooms.mp3",
+        "type": "audio/mpeg",
+        "length": 3960855,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5407,
@@ -3658,7 +3700,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW-Live_-Reflecting-when-it-hurts.mp3",
+        "type": "audio/mpeg",
+        "length": 3277472,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5409,
@@ -3720,7 +3769,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW-Live_-Listening-vs.-Facilitating.mp3",
+        "type": "audio/mpeg",
+        "length": 3660743,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5411,
@@ -6740,7 +6796,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-is-the-most-important-metaphor-in-education_.mp3",
+        "type": "audio/mpeg",
+        "length": 3754593,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5500,
@@ -7557,7 +7620,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-What-does-21st-Century-Learning-Look-Like_.mp3",
+        "type": "audio/mpeg",
+        "length": 5399674,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5527,
@@ -7619,7 +7689,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-How-should-we-design-learning-experiences-that-are-engaging-and-relevant_.mp3",
+        "type": "audio/mpeg",
+        "length": 5779212,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5528,
@@ -7682,7 +7759,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-What-does-Blended-and-Personalized-Learning-Mean-to-You_.mp3",
+        "type": "audio/mpeg",
+        "length": 5573559,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5529,
@@ -7848,7 +7932,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-Which-resources-do-you-need-in-order-to-learn_.mp3",
+        "type": "audio/mpeg",
+        "length": 7136090,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5533,
@@ -7912,7 +8003,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/1-WHOISaps_-What-are-our-biggest-barriers-to-equity_.mp3",
+        "type": "audio/mpeg",
+        "length": 4689978,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5535,
@@ -7974,7 +8072,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/2-WHOISaps_-How-do-we-create-a-culture-of-authentic-learning_.mp3",
+        "type": "audio/mpeg",
+        "length": 4669716,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5536,
@@ -8036,7 +8141,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/3-WHOISaps_-How-do-we-not-let-our-knowledge-of-schools-get-in-the-way-of-what-kids-need_.mp3",
+        "type": "audio/mpeg",
+        "length": 4710494,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5537,
@@ -8098,7 +8210,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/1-WHOISaps_-What-should-the-role-of-teachers-in-the-classroom-be_.mp3",
+        "type": "audio/mpeg",
+        "length": 6404459,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5539,
@@ -8160,7 +8279,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/1-WHOISaps_-What-is-the-how-of-creating-equity_.mp3",
+        "type": "audio/mpeg",
+        "length": 9013135,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5541,
@@ -8222,7 +8348,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-How-can-school-leaders-support-a-culture-of-learning-in-early-learning_.mp3",
+        "type": "audio/mpeg",
+        "length": 6432480,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5542,
@@ -8284,7 +8417,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-What-should-technologys-role-in-the-classroom-be_.mp3",
+        "type": "audio/mpeg",
+        "length": 3305080,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5544,
@@ -8346,7 +8486,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-Do-we-really-mean-All-Means-All_.mp3",
+        "type": "audio/mpeg",
+        "length": 2466845,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5545,
@@ -8408,7 +8555,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/WHOISaps_-How-can-we-create-interest-driven-learning-in-our-schools_.mp3",
+        "type": "audio/mpeg",
+        "length": 3090466,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5547,
@@ -8695,7 +8849,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/WHOISaps_-How-can-students-adapt-their-plans-for-learning-as-they-grow_.mp3",
+        "type": "audio/mpeg",
+        "length": 5021022,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5549,
@@ -8757,7 +8918,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/WHOISaps_-How-can-we-be-truly-equitable-in-our-schools_.mp3",
+        "type": "audio/mpeg",
+        "length": 2970707,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5550,
@@ -8819,7 +8987,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/WHOISaps_-How-do-we-see-each-other-as-whole-people_.mp3",
+        "type": "audio/mpeg",
+        "length": 6768908,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5551,
@@ -8881,7 +9056,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/WHOISaps_-What-do-our-kids-and-families-need_.mp3",
+        "type": "audio/mpeg",
+        "length": 5984810,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5552,
@@ -8943,7 +9125,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/WHOISaps_-Where-Should-Learners-Go-When-they-Need-to-Ask-a-Question_.mp3",
+        "type": "audio/mpeg",
+        "length": 1677137,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5553,
@@ -9068,7 +9257,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/01-WHOISaps_-How-can-we-inspire-students-to-be-self-directed-learners_.mp3",
+        "type": "audio/mpeg",
+        "length": 5638971,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5556,
@@ -9130,7 +9326,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/03-WHOISaps_-How-can-we-make-better-connections-with-our-students_.mp3",
+        "type": "audio/mpeg",
+        "length": 4693543,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5557,
@@ -9192,7 +9395,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/02-WHOISaps_-How-do-we-create-opportunities-to-celebrate-our-kids_.mp3",
+        "type": "audio/mpeg",
+        "length": 5406373,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5558,
@@ -9254,7 +9464,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/09/04-WHOISaps_-What-are-our-expectations-for-teachers_.mp3",
+        "type": "audio/mpeg",
+        "length": 4989235,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5559,
@@ -9424,7 +9641,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/10/01-WHOISaps_-When-will-teachers-have-enough-time_.mp3",
+        "type": "audio/mpeg",
+        "length": 3879969,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5563,
@@ -9663,7 +9887,14 @@
       "url": "/2016/07/23/preceding-reputations/",
       "schema_type": "Article",
       "publisher": "Learning is Change",
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Preceding_Reputations.m4a",
+        "type": "audio/mp4",
+        "length": 6496034,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1003916,
@@ -9698,7 +9929,14 @@
       "url": "/2016/07/23/ytmnd-breakup-letter-dramatic-reading/",
       "schema_type": "Article",
       "publisher": "Learning is Change",
-      "_shard": "2016.json"
+      "_shard": "2016.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/YTMND%20-%20Breakup%20Letter%2C%20Dramatic%20reading.mp3",
+        "type": "audio/mpeg",
+        "length": 2854269,
+        "explicit": false,
+        "episode_type": "full"
+      }
     }
   ],
   "post_count": 149

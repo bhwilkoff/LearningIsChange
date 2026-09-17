@@ -9856,7 +9856,14 @@
           "parent": null,
           "html": "<p>This was an amazing event!  Thank you so much for sharing this podcast!<br>\n<a href=\"http://kellerbusybees.blogspot.com/\" rel=\"nofollow ugc\">http://kellerbusybees.blogspot.com/</a> is my blog of my podcast and vodcast.  I am the one that Kevin allowed me to come in and talk about using podcast and vodcast with children with autism.</p>\n<p>It was amazing and I can’t wait to be a part of the “movement”</p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/KevinHoneycuttPodstockInterview.mp3",
+        "type": "audio/mpeg",
+        "length": 20783313,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1235,
@@ -10223,7 +10230,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/TheStrategyforCollaborativeLearning.mp3",
+        "type": "audio/mpeg",
+        "length": 9782597,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1244,
@@ -10307,7 +10321,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/EduconConversation.mp3",
+        "type": "audio/mpeg",
+        "length": 21982545,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1247,
@@ -11109,7 +11130,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/LiC-Podcast_-Design-with-Forever-in-Mind.mp3",
+        "type": "audio/mpeg",
+        "length": 16782148,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1258,
@@ -11624,7 +11652,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2009.json"
+      "_shard": "2009.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/LiC-Podcast_-The-On-Button.mp3",
+        "type": "audio/mpeg",
+        "length": 17835062,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1260,

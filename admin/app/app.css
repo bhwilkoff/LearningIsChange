@@ -103,3 +103,5 @@ body.signed-out .app-nav { visibility: hidden; }
 
 /* an element with the hidden attribute is hidden, whatever the element rules say */
 [hidden] { display: none !important; }
+
+.field input, .field select, .field textarea, .lib-controls input, .lib-controls select { box-sizing: border-box; }

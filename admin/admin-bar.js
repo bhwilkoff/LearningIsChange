@@ -36,7 +36,7 @@
     return;
   }
   var tools = [
-    ['/admin/app/', 'LiC Admin'], ['/podcast-rss/', 'Podcast feed'], ['/search/', 'Search'],
+    ['/admin/app/', 'LiC Admin'], ['/search/', 'Search'],
   ];
   var here = location.pathname.replace(/index\.html$/, '');
   var bar = document.createElement('div');

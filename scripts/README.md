@@ -8,7 +8,7 @@ derived by these scripts. No dependencies beyond Node ≥ 20.
 | `regenerate-posts.js` | `database/posts/*.json`, `templates/post.html`, `templates/partials/*` | `YYYY/MM/DD/slug/index.html` + `index.md` | Related posts, prev/next, reading time, comments, JSON-LD; tombstones → redirect pages. `--year=`, `--url=`, `--diff`, `--no-md` |
 | `render-archives.js` | posts, `taxonomies.json`, `permalinks.json` | `/`, `/page/N/`, date/category/tag/author pages, `database/on-this-day.json` | Every protected archive URL the data no longer fills becomes a noindex alias of the nearest real page |
 | `render-pages.js` | `pages.json`, `page-rules.json` | static pages, redirect pages, `/all-posts/` | Rules: `redirects`, `noindex` |
-| `render-feeds.js` | posts | `feed/index.xml`, `feed/full.xml` | Permalink GUIDs; the podcast feed is NOT touched |
+| `render-feeds.js` | posts, `database/podcast.json` | `feed/index.xml`, `feed/full.xml`, `feed/podcast/feed.xml` | Permalink GUIDs; podcast episodes = posts with a `podcast` field (GUID = post URL, enclosure length from disk) |
 | `render-shell.js` | `templates/partials/*` | nav/rail/footer inside `portfolio/*`, `support.html`, `meet/`, `search/` | Fills `LIC:NAV/RAIL/FOOTER` markers in hand-authored pages |
 | `recompute-database-stats.js` | posts | `manifest.json`, `taxonomies.json`, `search.json` | Keeps hierarchical parent categories |
 | `check-permalinks.js` | tree, feeds, `database/permalinks.json` | (check) / `--snapshot` grows the list | The guarantee: exit 1 if any URL ever shipped stops resolving or a `full.xml` GUID disappears (tombstones exempt) |

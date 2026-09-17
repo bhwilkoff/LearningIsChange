@@ -214,7 +214,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2019.json"
+      "_shard": "2019.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2019/05/Quantified-Ben-52.mp3",
+        "type": "audio/mpeg",
+        "length": 10614216,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5759,

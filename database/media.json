@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T17:39:01.551Z",
+ "generated": "2026-09-17T18:05:40.307Z",
  "root": "wp-content/uploads",
  "summary": {
   "files": 977,
@@ -7,7 +7,7 @@
   "bytes": 1500172056,
   "used": 663,
   "unused": 303,
-  "missing": 120,
+  "missing": 115,
   "by_kind": {
    "image": 779,
    "audio": 171,
@@ -3626,7 +3626,8 @@
     {
      "type": "podcast",
      "url": "/2014/01/30/what-is-the-moment-in-which-learning-changed-for-you/",
-     "title": "What Is The Moment In Which Learning Changed For You?"
+     "title": "What Is The Moment In Which Learning Changed For You?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -3665,7 +3666,8 @@
     {
      "type": "podcast",
      "url": "/2014/01/24/what-will-your-learning-legacy-be/",
-     "title": "What Will Your Learning Legacy Be?"
+     "title": "What Will Your Learning Legacy Be?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -4130,7 +4132,8 @@
     {
      "type": "podcast",
      "url": "/2014/02/06/how-can-we-crowdsource-our-digital-learning/",
-     "title": "How Can We Crowdsource Our Digital Learning?"
+     "title": "How Can We Crowdsource Our Digital Learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -4817,7 +4820,8 @@
     {
      "type": "podcast",
      "url": "/2014/02/25/what-types-of-fear-are-legitimate/",
-     "title": "What Types Of Fear Are Legitimate?"
+     "title": "What Types Of Fear Are Legitimate?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -4856,7 +4860,8 @@
     {
      "type": "podcast",
      "url": "/2014/02/18/what-will-arlo-know/",
-     "title": "What Will Arlo Know?"
+     "title": "What Will Arlo Know?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -4895,7 +4900,8 @@
     {
      "type": "podcast",
      "url": "/2014/03/04/are-we-making-upside-down-investments-in-education/",
-     "title": "Are We Making Upside Down Investments In Education?"
+     "title": "Are We Making Upside Down Investments In Education?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -4934,7 +4940,8 @@
     {
      "type": "podcast",
      "url": "/2014/03/27/how-clear-is-your-role/",
-     "title": "How Clear Is Your Role?"
+     "title": "How Clear Is Your Role?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5027,7 +5034,8 @@
     {
      "type": "podcast",
      "url": "/2014/03/14/what-if-we-turned-off-email/",
-     "title": "What If We Turned Off Email?"
+     "title": "What If We Turned Off Email?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5192,7 +5200,8 @@
     {
      "type": "podcast",
      "url": "/2014/04/07/what-does-your-educational-bat-signal-consist-of/",
-     "title": "What Does Your Educational Bat Signal Consist Of?"
+     "title": "What Does Your Educational Bat Signal Consist Of?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5231,7 +5240,8 @@
     {
      "type": "podcast",
      "url": "/2014/04/25/what-is-your-mandate-for-learning/",
-     "title": "What Is Your Mandate For Learning?"
+     "title": "What Is Your Mandate For Learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5330,7 +5340,8 @@
     {
      "type": "podcast",
      "url": "/2014/05/20/do-you-have-a-tenacious-verve/",
-     "title": "Do You Have A Tenacious Verve?"
+     "title": "Do You Have A Tenacious Verve?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5441,7 +5452,8 @@
     {
      "type": "podcast",
      "url": "/2014/06/04/how-are-you-defending-the-new-and-promoting-the-good/",
-     "title": "How Are You Defending The New And Promoting The Good?"
+     "title": "How Are You Defending The New And Promoting The Good?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5498,7 +5510,8 @@
     {
      "type": "podcast",
      "url": "/2014/06/27/is-your-position-public-facing/",
-     "title": "Is Your Position Public-Facing?"
+     "title": "Is Your Position Public-Facing?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5735,7 +5748,8 @@
     {
      "type": "podcast",
      "url": "/2014/07/25/any-learning-happening-in-the-21st-century-is-21st-century-learning/",
-     "title": "Any Learning Happening In The 21St-Century IS 21St-Century Learning."
+     "title": "Any Learning Happening In The 21St-Century IS 21St-Century Learning.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5840,7 +5854,8 @@
     {
      "type": "podcast",
      "url": "/2014/08/14/should-we-remove-the-struggle-from-professional-learning/",
-     "title": "Should We Remove The Struggle From Professional Learning?"
+     "title": "Should We Remove The Struggle From Professional Learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -5879,7 +5894,8 @@
     {
      "type": "podcast",
      "url": "/2014/08/25/when-robots-start-taking-careers-instead-of-jobs-what-does-career-ready-mean/",
-     "title": "When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?"
+     "title": "When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7411,7 +7427,8 @@
     {
      "type": "podcast",
      "url": "/2015/08/20/askbenw-digital-citizenship-where-do-you-start/",
-     "title": "#AskBenW: Digital Citizenship- Where do you start?"
+     "title": "#AskBenW: Digital Citizenship- Where do you start?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7432,7 +7449,8 @@
     {
      "type": "podcast",
      "url": "/2015/10/27/askbenw-how-and-for-what-purpose-should-we-be-educating-our-kids/",
-     "title": "#AskBenW: How and for what purpose should we be educating our kids?"
+     "title": "#AskBenW: How and for what purpose should we be educating our kids?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7453,7 +7471,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/29/askbenw-how-can-we-be-courageous-in-our-professional-learning/",
-     "title": "#AskBenW: How can we be courageous in our professional learning?"
+     "title": "#AskBenW: How can we be courageous in our professional learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7485,7 +7504,8 @@
     {
      "type": "podcast",
      "url": "/2015/12/11/askbenw-how-can-we-create-byod-equity/",
-     "title": "#AskBenW: How can we create BYOD equity?"
+     "title": "#AskBenW: How can we create BYOD equity?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7506,7 +7526,8 @@
     {
      "type": "podcast",
      "url": "/2015/08/25/askbenw-how-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning/",
-     "title": "#AskBenW: How do we ensure school leaders have what they need for their own learning?"
+     "title": "#AskBenW: How do we ensure school leaders have what they need for their own learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7527,7 +7548,8 @@
     {
      "type": "podcast",
      "url": "/2015/08/11/askbenw-how-do-we-know-when-learners-are-paying-attention-when-so-much-is-happening-digitally/",
-     "title": "#AskBenW: How do we know when learners are paying attention when so much is happening digitally?"
+     "title": "#AskBenW: How do we know when learners are paying attention when so much is happening digitally?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7548,7 +7570,8 @@
     {
      "type": "podcast",
      "url": "/2015/11/02/askbenw-how-do-we-measure-and-demonstrate-impact/",
-     "title": "#AskBenW: How do we measure and demonstrate impact?"
+     "title": "#AskBenW: How do we measure and demonstrate impact?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7569,7 +7592,8 @@
     {
      "type": "podcast",
      "url": "/2015/08/19/askbenw-how-do-you-get-started-with-blended-learning-as-a-traditional-classroom-teacher/",
-     "title": "#AskBenW: How do you get started with Blended Learning as a traditional classroom teacher?"
+     "title": "#AskBenW: How do you get started with Blended Learning as a traditional classroom teacher?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7590,7 +7614,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/askbenw-how-will-you-celebrate-connected-educator-month-this-year/",
-     "title": "#AskBenW: How will you celebrate connected educator month this year?"
+     "title": "#AskBenW: How will you celebrate connected educator month this year?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7611,7 +7636,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/askbenw-is-personalized-learning-a-fad-trend-or-repackaged-idea/",
-     "title": "#AskBenW: Is Personalized Learning a Fad, Trend, or repackaged idea?"
+     "title": "#AskBenW: Is Personalized Learning a Fad, Trend, or repackaged idea?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7632,7 +7658,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/askbenw-should-teachers-and-academics-move-more/",
-     "title": "#AskBenW: Should teachers and academics move more?"
+     "title": "#AskBenW: Should teachers and academics move more?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7653,7 +7680,8 @@
     {
      "type": "podcast",
      "url": "/2015/08/21/askbenw-should-teachers-post-videos-as-is-or-should-they-editproducepolish-them-first/",
-     "title": "#AskBenW: Should teachers post videos as-is or should they edit/produce/polish them first?"
+     "title": "#AskBenW: Should teachers post videos as-is or should they edit/produce/polish them first?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7685,7 +7713,8 @@
     {
      "type": "podcast",
      "url": "/2015/11/03/askbenw-shouldnt-we-be-further-along-in-our-progress/",
-     "title": "#AskBenW: Shouldnât we be further along in our progress?"
+     "title": "#AskBenW: Shouldn’t we be further along in our progress?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7706,7 +7735,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/11/askbenw-what-are-the-best-ways-to-curate-resources/",
-     "title": "#AskBenW: What are the best ways to curate resources?"
+     "title": "#AskBenW: What are the best ways to curate resources?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7727,7 +7757,8 @@
     {
      "type": "podcast",
      "url": "/2015/12/14/askbenw-what-are-the-teaching-and-learning-trends-of-2015/",
-     "title": "#AskBenW: What are the teaching and learning trends of 2015?"
+     "title": "#AskBenW: What are the teaching and learning trends of 2015?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7748,7 +7779,8 @@
     {
      "type": "podcast",
      "url": "/2015/11/26/askbenw-what-are-you-thankful-for/",
-     "title": "#AskBenW: What are you thankful for?"
+     "title": "#AskBenW: What are you thankful for?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7769,7 +7801,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/askbenw-what-do-you-do-when-the-tech-or-the-activity-doesnt-work/",
-     "title": "#AskBenW: What do you do when the tech (or the activity) doesnât work?"
+     "title": "#AskBenW: What do you do when the tech (or the activity) doesn’t work?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7790,7 +7823,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/askbenw-what-is-one-programappstrategy-that-you-would-recommend-for-all-teachers/",
-     "title": "#AskBenW: What is one program/app/strategy that you would recommend for all teachers?"
+     "title": "#AskBenW: What is one program/app/strategy that you would recommend for all teachers?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7811,7 +7845,8 @@
     {
      "type": "podcast",
      "url": "/2016/05/17/askbenw-when-does-the-metaphor-of-online-collaboration-break-down-2/",
-     "title": "#AskBenW: When does the metaphor of online collaboration break down?"
+     "title": "#AskBenW: When does the metaphor of online collaboration break down?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7832,7 +7867,8 @@
     {
      "type": "podcast",
      "url": "/2015/10/19/askbenw-what-is-the-worst-consequence-of-your-best-idea/",
-     "title": "#AskBenW: What is the worst consequence of your best idea?"
+     "title": "#AskBenW: What is the worst consequence of your best idea?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7853,7 +7889,8 @@
     {
      "type": "podcast",
      "url": "/2015/12/03/askbenw-what-is-your-responsibility-to-speak-up/",
-     "title": "#AskBenW: What is your responsibility to speak up?"
+     "title": "#AskBenW: What is your responsibility to speak up?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7874,7 +7911,8 @@
     {
      "type": "podcast",
      "url": "/2015/10/22/askbenw-what-myths-should-we-let-go-of-in-education/",
-     "title": "#AskBenW: What myths should we let go of in education?"
+     "title": "#AskBenW: What myths should we let go of in education?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7895,7 +7933,8 @@
     {
      "type": "podcast",
      "url": "/2016/01/20/askbenw-what-responsibility-do-you-have-to-finish-what-you-started/",
-     "title": "#AskBenW: What responsibility do you have to finish what you started?"
+     "title": "#AskBenW: What responsibility do you have to finish what you started?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7916,7 +7955,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/14/askbenw-what-role-should-email-play-in-our-teaching-and-learning-lives/",
-     "title": "#AskBenW: What role should email play in our teaching and learning lives?"
+     "title": "#AskBenW: What role should email play in our teaching and learning lives?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7937,7 +7977,8 @@
     {
      "type": "podcast",
      "url": "/2016/02/03/askbenw-what-should-we-do-about-snow-days/",
-     "title": "#AskBenW: What should we do about snow days?"
+     "title": "#AskBenW: What should we do about snow days?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7958,7 +7999,8 @@
     {
      "type": "podcast",
      "url": "/2016/02/08/askbenw-whenhow-is-it-appropriate-to-share-student-videos-on-youtube/",
-     "title": "#AskBenW: When/How is it appropriate to share student videos on YouTube?"
+     "title": "#AskBenW: When/How is it appropriate to share student videos on YouTube?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -7979,7 +8021,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/askbenw-when-do-you-find-time-to-learn-full-video/",
-     "title": "#AskBenW: When Do You Find Time To Learn? (Full Video)"
+     "title": "#AskBenW: When Do You Find Time To Learn? (Full Video)",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8000,7 +8043,8 @@
     {
      "type": "podcast",
      "url": "/2016/01/11/askbenw-when-is-generalization-better-than-specialization/",
-     "title": "#AskBenW: When is generalization better than specialization?"
+     "title": "#AskBenW: When is generalization better than specialization?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8021,7 +8065,8 @@
     {
      "type": "podcast",
      "url": "/2015/10/12/askbenw-when-is-it-okay-to-lecture-in-pd/",
-     "title": "#AskBenW: When is it okay to lecture in PD?"
+     "title": "#AskBenW: When is it okay to lecture in PD?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8042,7 +8087,8 @@
     {
      "type": "podcast",
      "url": "/2015/12/10/askbenw-when-should-we-duplicate-efforts/",
-     "title": "#AskBenW: When should we duplicate efforts?"
+     "title": "#AskBenW: When should we duplicate efforts?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8063,7 +8109,8 @@
     {
      "type": "podcast",
      "url": "/2015/10/16/askbenw-when-should-we-multi-task-and-when-should-we-single-task/",
-     "title": "#AskBenW: When should we multi-task and when should we single-task?"
+     "title": "#AskBenW: When should we multi-task and when should we single-task?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8084,7 +8131,8 @@
     {
      "type": "podcast",
      "url": "/2016/02/22/askbenw-live-harnessing-stories-of-innovative-classrooms/",
-     "title": "#Askbenw live: Harnessing stories of innovative classrooms"
+     "title": "#Askbenw live: Harnessing stories of innovative classrooms",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8105,7 +8153,8 @@
     {
      "type": "podcast",
      "url": "/2016/02/25/askbenw-live-listening-vs-facilitating/",
-     "title": "#AskBenW Live: Listening vs. Facilitating"
+     "title": "#AskBenW Live: Listening vs. Facilitating",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8126,7 +8175,8 @@
     {
      "type": "podcast",
      "url": "/2016/02/24/askbenw-live-reflecting-when-it-hurts/",
-     "title": "#AskBenW Live: Reflecting when it hurts"
+     "title": "#AskBenW Live: Reflecting when it hurts",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8147,7 +8197,8 @@
     {
      "type": "podcast",
      "url": "/2016/02/16/askbenw-live-the-most-powerful-pd-experiences-for-ts/",
-     "title": "#AskBenW Live: The most powerful PD experiences for Ts?"
+     "title": "#AskBenW Live: The most powerful PD experiences for Ts?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8202,7 +8253,8 @@
     {
      "type": "podcast",
      "url": "/2015/08/06/ask-ben-wilkoff-anything-launching-askbenw/",
-     "title": "Ask Ben Wilkoff Anything: Launching #AskBenW"
+     "title": "Ask Ben Wilkoff Anything: Launching #AskBenW",
+     "status": "published"
     },
     {
      "type": "post",
@@ -8234,7 +8286,8 @@
     {
      "type": "podcast",
      "url": "/2015/09/15/what-was-one-touchstone-moment-of-your-teaching-career-that-you-carry-with-you-askbenw/",
-     "title": "What was one touchstone moment of your teaching career that you carry with you? #AskBenW"
+     "title": "What was one touchstone moment of your teaching career that you carry with you? #AskBenW",
+     "status": "published"
     },
     {
      "type": "post",
@@ -9503,7 +9556,8 @@
     {
      "type": "podcast",
      "url": "/2007/03/20/a-new-image-for-new-students/",
-     "title": "A New Image for New Students"
+     "title": "A New Image for New Students",
+     "status": "published"
     },
     {
      "type": "post",
@@ -9524,7 +9578,8 @@
     {
      "type": "podcast",
      "url": "/2007/10/27/a-new-possibliity/",
-     "title": "A New Possibliity"
+     "title": "A New Possibliity",
+     "status": "published"
     },
     {
      "type": "post",
@@ -9561,7 +9616,8 @@
     {
      "type": "podcast",
      "url": "/2007/09/13/articulating-vision/",
-     "title": "Articulating Vision"
+     "title": "Articulating Vision",
+     "status": "published"
     },
     {
      "type": "post",
@@ -9945,7 +10001,8 @@
     {
      "type": "podcast",
      "url": "/2008/10/10/cagt2008/",
-     "title": "CAGT 2008: Technology and Community"
+     "title": "CAGT 2008: Technology and Community",
+     "status": "published"
     },
     {
      "type": "post",
@@ -9982,7 +10039,8 @@
     {
      "type": "podcast",
      "url": "/2007/09/13/beginning-the-year-systematically/",
-     "title": "Beginning the year, systematically."
+     "title": "Beginning the year, systematically.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10014,7 +10072,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/28/better-backchannels-whats-missing/",
-     "title": "Better Backchannels: Whatâs Missing?"
+     "title": "Better Backchannels: What’s Missing?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10035,7 +10094,8 @@
     {
      "type": "podcast",
      "url": "/2007/04/10/beyond-rubrics/",
-     "title": "Beyond Rubrics"
+     "title": "Beyond Rubrics",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10056,7 +10116,8 @@
     {
      "type": "podcast",
      "url": "/2015/06/28/bud-hunts-future-ready-schools-denver-summit-keynote-audio-only/",
-     "title": "Bud Huntâs Future Ready Schools Denver Summit Keynote (Audio Only)"
+     "title": "Bud Hunt’s Future Ready Schools Denver Summit Keynote (Audio Only)",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10088,7 +10149,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/16/change-comes-from-open-conversations-with-learners/",
-     "title": "Change Comes From Open Conversations With Learners"
+     "title": "Change Comes From Open Conversations With Learners",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10120,7 +10182,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/02/change-list-be-the-box-4/",
-     "title": "Change List: âBe The Boxâ"
+     "title": "Change List: “Be The Box”",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10152,7 +10215,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/02/change-list-closer-or-further-away-4/",
-     "title": "Change List: Closer Or Further Away"
+     "title": "Change List: Closer Or Further Away",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10184,7 +10248,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/03/change-list-it-is-never-okay-to-be-mean-to-learners-4/",
-     "title": "Change List: It Is Never Okay To Be Mean To Learners"
+     "title": "Change List: It Is Never Okay To Be Mean To Learners",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10216,7 +10281,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/07/change-list-our-learning-process-should-be-spoken-transparent-and-remixable-4/",
-     "title": "Change List: Our Learning Process Should Be Spoken, Transparent And Remixable"
+     "title": "Change List: Our Learning Process Should Be Spoken, Transparent And Remixable",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10248,7 +10314,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/07/change-list-teachers-should-not-be-anonymous-or-interchangeable/",
-     "title": "Change List: Teachers Should Not Be Anonymous Or Interchangeable"
+     "title": "Change List: Teachers Should Not Be Anonymous Or Interchangeable",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10280,7 +10347,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/05/change-list-the-cult-of-done-4/",
-     "title": "Change List: The Cult Of Done"
+     "title": "Change List: The Cult Of Done",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10312,7 +10380,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/04/change-list-where-are-the-reflective-practice-vloggers-4/",
-     "title": "Change List: Where Are The Reflective Practice Vloggers?"
+     "title": "Change List: Where Are The Reflective Practice Vloggers?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10349,7 +10418,8 @@
     {
      "type": "podcast",
      "url": "/2007/09/13/choices-choices/",
-     "title": "Choices, Choicesâ¦"
+     "title": "Choices, Choices…",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10381,7 +10451,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/22/connected-learning-how-it-should-work/",
-     "title": "Connected Learning: How It Should Work"
+     "title": "Connected Learning: How It Should Work",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10468,7 +10539,7 @@
     {
      "type": "podcast",
      "url": "/feed/podcast/",
-     "title": "Podcast feed (channel artwork)"
+     "title": "Podcast channel artwork"
     },
     {
      "type": "site",
@@ -10490,7 +10561,8 @@
     {
      "type": "podcast",
      "url": "/2007/05/15/digital-ex-patriots-and-the-formula-for-transparency/",
-     "title": "Digital Ex-Patriots and The Formula for Transparency"
+     "title": "Digital Ex-Patriots and The Formula for Transparency",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10511,7 +10583,8 @@
     {
      "type": "podcast",
      "url": "/2007/06/05/digital-sticky-notes/",
-     "title": "Digital Sticky Notes"
+     "title": "Digital Sticky Notes",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10532,7 +10605,8 @@
     {
      "type": "podcast",
      "url": "/2007/01/29/the-discovery-school-within-a-school/",
-     "title": "The Discovery School within a School"
+     "title": "The Discovery School within a School",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10553,7 +10627,8 @@
     {
      "type": "podcast",
      "url": "/2009/05/28/educon-conversation-better-late-than-never/",
-     "title": "Educon Conversation, better late than never."
+     "title": "Educon Conversation, better late than never.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10574,7 +10649,8 @@
     {
      "type": "podcast",
      "url": "/2007/04/19/creating-the-school-20-movement/",
-     "title": "Creating the School 2.0 Movement"
+     "title": "Creating the School 2.0 Movement",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10595,7 +10671,8 @@
     {
      "type": "podcast",
      "url": "/2010/02/28/question-59-of-365-when-is-judgement-better-than-feedback/",
-     "title": "Question 59 of 365: When is Judgement better than Feedback?"
+     "title": "Question 59 of 365: When is Judgement better than Feedback?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10627,7 +10704,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/24/from-network-to-neighborhood-a-new-definition-for-plns/",
-     "title": "From Network to Neighborhood: A New Definition for PLNs"
+     "title": "From Network to Neighborhood: A New Definition for PLNs",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10670,7 +10748,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/26/hand-made-learning-games-not-gamification/",
-     "title": "Hand-Made Learning: Games, not Gamification"
+     "title": "Hand-Made Learning: Games, not Gamification",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10691,7 +10770,8 @@
     {
      "type": "podcast",
      "url": "/2007/02/12/how-do-we-assess-school-20/",
-     "title": "How do we assess School 2.0?"
+     "title": "How do we assess School 2.0?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10712,7 +10792,8 @@
     {
      "type": "podcast",
      "url": "/2007/03/03/what-does-support-look-like-in-school-20/",
-     "title": "What does support look like in School 2.0?"
+     "title": "What does support look like in School 2.0?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10898,7 +10979,8 @@
     {
      "type": "podcast",
      "url": "/2007/02/18/the-internet-as-utopia/",
-     "title": "The Internet as Utopia"
+     "title": "The Internet as Utopia",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10919,7 +11001,8 @@
     {
      "type": "podcast",
      "url": "/2007/03/07/is-school-20-just-a-fad/",
-     "title": "Is School 2.0 just a fad?"
+     "title": "Is School 2.0 just a fad?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10951,7 +11034,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/27/it-isnt-etmoocs-fault-find-your-own-slice-of-learning/",
-     "title": "It isnât #etmoocâs Fault: Find Your Own Slice of Learning"
+     "title": "It isn’t #etmooc’s Fault: Find Your Own Slice of Learning",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10972,7 +11056,8 @@
     {
      "type": "podcast",
      "url": "/2008/03/07/podcast-its-all-happening/",
-     "title": "Podcast: Itâs All Happening"
+     "title": "Podcast: It’s All Happening",
+     "status": "published"
     },
     {
      "type": "post",
@@ -10993,7 +11078,8 @@
     {
      "type": "podcast",
      "url": "/2007/08/01/i-vs-we/",
-     "title": "I vs. We"
+     "title": "I vs. We",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11014,7 +11100,8 @@
     {
      "type": "podcast",
      "url": "/2008/12/14/cross-posting-driving-questions-with-kevin-honeycutt/",
-     "title": "Cross-Posting Driving Questions with Kevin Honeycutt"
+     "title": "Cross-Posting Driving Questions with Kevin Honeycutt",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11035,7 +11122,8 @@
     {
      "type": "podcast",
      "url": "/2009/05/14/podcast-on-podcstock-with-kevin-honeycutt/",
-     "title": "Podcast on Podcstock  with Kevin Honeycutt"
+     "title": "Podcast on Podcstock  with Kevin Honeycutt",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11067,7 +11155,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/10/learning-doesnt-come-from-experts-it-comes-from-engaged-expertise-4/",
-     "title": "Learning Doesnât Come From Experts, It Comes From Engaged Expertise"
+     "title": "Learning Doesn’t Come From Experts, It Comes From Engaged Expertise",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11099,7 +11188,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/09/learning-should-be-ironed-out-4/",
-     "title": "Learning Should Be Ironed Out"
+     "title": "Learning Should Be Ironed Out",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11120,7 +11210,8 @@
     {
      "type": "podcast",
      "url": "/2009/06/26/lic-podcast-design-with-forever-in-mind-archive/",
-     "title": "LiC Podcast: Design with Forever in Mind Archive"
+     "title": "LiC Podcast: Design with Forever in Mind Archive",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11141,7 +11232,8 @@
     {
      "type": "podcast",
      "url": "/2009/06/26/lic-podcast-the-on-button-at-tie-2009-archive/",
-     "title": "LiC Podcast: The On-Button at TIE 2009 Archive"
+     "title": "LiC Podcast: The On-Button at TIE 2009 Archive",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11162,7 +11254,8 @@
     {
      "type": "podcast",
      "url": "/2008/02/01/itches-and-scratches/",
-     "title": "Itches and Scratches"
+     "title": "Itches and Scratches",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11194,7 +11287,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/19/mutually-beneficial-friction-how-we-stop-skimming-the-surface-of-ideas/",
-     "title": "Mutually Beneficial Friction: How We Stop Skimming The Surface Of Ideas"
+     "title": "Mutually Beneficial Friction: How We Stop Skimming The Surface Of Ideas",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11226,7 +11320,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/18/my-etmooc-intro-creating-great-things-through-collaboration-2/",
-     "title": "My ETMOOC Intro: Creating Great Things Through Collaboration"
+     "title": "My ETMOOC Intro: Creating Great Things Through Collaboration",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11247,7 +11342,8 @@
     {
      "type": "podcast",
      "url": "/2007/05/29/my-students-are-known-for/",
-     "title": "My Students Are Known For…"
+     "title": "My Students Are Known For…",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11268,7 +11364,8 @@
     {
      "type": "podcast",
      "url": "/2007/02/02/the-new-graduation-requirements/",
-     "title": "The New Graduation Requirements"
+     "title": "The New Graduation Requirements",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11300,7 +11397,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/15/no-teacher-should-have-to-learn-alone/",
-     "title": "No Teacher Should Have To Learn Alone"
+     "title": "No Teacher Should Have To Learn Alone",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11321,7 +11419,8 @@
     {
      "type": "podcast",
      "url": "/2007/02/14/parents-as-school-20-stakeholders/",
-     "title": "Parents as School 2.0 Stakeholders"
+     "title": "Parents as School 2.0 Stakeholders",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11342,7 +11441,8 @@
     {
      "type": "podcast",
      "url": "/2016/07/23/preceding-reputations/",
-     "title": "Preceding Reputations"
+     "title": "Preceding Reputations",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11374,7 +11474,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/11/real-learning-and-ideal-learning-are-not-opposites-4/",
-     "title": "Real Learning And Ideal Learning Are Not Opposites"
+     "title": "Real Learning And Ideal Learning Are Not Opposites",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11395,7 +11496,8 @@
     {
      "type": "podcast",
      "url": "/2007/03/28/the-great-remix-debate/",
-     "title": "The Great Remix Debate"
+     "title": "The Great Remix Debate",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11416,7 +11518,8 @@
     {
      "type": "podcast",
      "url": "/2007/03/31/remixing-the-classroom/",
-     "title": "Remixing The Classroom"
+     "title": "Remixing The Classroom",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11437,7 +11540,8 @@
     {
      "type": "podcast",
      "url": "/2007/03/14/researching-school-20/",
-     "title": "Researching School 2.0"
+     "title": "Researching School 2.0",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11458,7 +11562,8 @@
     {
      "type": "podcast",
      "url": "/2007/06/29/the-ripe-environment/",
-     "title": "The Ripe Environment"
+     "title": "The Ripe Environment",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11479,7 +11584,8 @@
     {
      "type": "podcast",
      "url": "/2008/06/27/the-ripe-environment-for-authentic-learning-tie-2008/",
-     "title": "The Ripe Environment for Authentic Learning: TIE 2008"
+     "title": "The Ripe Environment for Authentic Learning: TIE 2008",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11500,7 +11606,8 @@
     {
      "type": "podcast",
      "url": "/2008/06/26/the-ripe-environment-change-cannot-be-institutionalized/",
-     "title": "The Ripe Environment: Change cannot be Institutionalized"
+     "title": "The Ripe Environment: Change cannot be Institutionalized",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11521,7 +11628,8 @@
     {
      "type": "podcast",
      "url": "/2007/07/06/the-social-networks-of-tragedies/",
-     "title": "The Social Networks of Tragedies"
+     "title": "The Social Networks of Tragedies",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11542,7 +11650,8 @@
     {
      "type": "podcast",
      "url": "/2007/01/31/teacher-proof-teaching/",
-     "title": "Teacher-Proof Teaching"
+     "title": "Teacher-Proof Teaching",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11563,7 +11672,8 @@
     {
      "type": "podcast",
      "url": "/2007/06/20/the-10-to-20-transformation/",
-     "title": "The 1.0 to 2.0 Transformation"
+     "title": "The 1.0 to 2.0 Transformation",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11600,7 +11710,8 @@
     {
      "type": "podcast",
      "url": "/2007/04/05/the-embedded-classroom/",
-     "title": "The Embedded Classroom"
+     "title": "The Embedded Classroom",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11621,7 +11732,8 @@
     {
      "type": "podcast",
      "url": "/2007/01/24/the-future-of-literacy/",
-     "title": "The Future of Literacy"
+     "title": "The Future of Literacy",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11642,7 +11754,8 @@
     {
      "type": "podcast",
      "url": "/2007/06/11/the-new-job-description/",
-     "title": "The New Job Description"
+     "title": "The New Job Description",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11663,7 +11776,8 @@
     {
      "type": "podcast",
      "url": "/2007/01/31/the-perfect-learning-environment/",
-     "title": "The Perfect Learning Environment"
+     "title": "The Perfect Learning Environment",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11695,7 +11809,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/21/the-three-learning-paths-the-beginning-of-an-etmooc-journey/",
-     "title": "The Three Learning Paths: The Beginning of an #etmooc Journey"
+     "title": "The Three Learning Paths: The Beginning of an #etmooc Journey",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11716,7 +11831,8 @@
     {
      "type": "podcast",
      "url": "/2007/09/24/the-act-of-creation/",
-     "title": "The Act of Creation"
+     "title": "The Act of Creation",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11737,7 +11853,8 @@
     {
      "type": "podcast",
      "url": "/2007/06/27/the-most-change-for-the-most-kids/",
-     "title": "The Most Change For The Most Kids"
+     "title": "The Most Change For The Most Kids",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11758,7 +11875,8 @@
     {
      "type": "podcast",
      "url": "/2009/05/27/strategy-for-collaborative-learning/",
-     "title": "Strategy for Collaborative Learning"
+     "title": "Strategy for Collaborative Learning",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11806,7 +11924,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/23/time-should-be-a-companion-not-a-bully/",
-     "title": "Time Should Be a Companion, Not a Bully"
+     "title": "Time Should Be a Companion, Not a Bully",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11859,7 +11978,8 @@
     {
      "type": "podcast",
      "url": "/2007/10/27/two-new-documents/",
-     "title": "Two New Documents"
+     "title": "Two New Documents",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11880,7 +12000,8 @@
     {
      "type": "podcast",
      "url": "/2007/04/24/visions-of-change/",
-     "title": "Visions of Change"
+     "title": "Visions of Change",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11912,7 +12033,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/17/we-are-called-to-be-open-spokes-in-a-fidgital-world/",
-     "title": "We Are Called To Be Open Spokes in a Fidgital World"
+     "title": "We Are Called To Be Open Spokes in a Fidgital World",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11944,7 +12066,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/11/we-need-digest-learning-instead-of-notification-learning-4/",
-     "title": "We Need Digest Learning Instead Of Notification Learning"
+     "title": "We Need Digest Learning Instead Of Notification Learning",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11965,7 +12088,8 @@
     {
      "type": "podcast",
      "url": "/2007/05/12/what-happens-next-year/",
-     "title": "What Happens Next Year?"
+     "title": "What Happens Next Year?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -11986,7 +12110,8 @@
     {
      "type": "podcast",
      "url": "/2007/02/22/what-myspace-can-teach-us-about-school-20/",
-     "title": "What Myspace can teach us about School 2.0"
+     "title": "What Myspace can teach us about School 2.0",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12018,7 +12143,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/18/what-is-your-dailycreate/",
-     "title": "What is your #DailyCreate?"
+     "title": "What is your #DailyCreate?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12061,7 +12187,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/25/who-is-in-your-anti-pln-or-avoiding-teamthink/",
-     "title": "Who is in your Anti-PLN? Or, Avoiding TeamThink."
+     "title": "Who is in your Anti-PLN? Or, Avoiding TeamThink.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12093,7 +12220,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/14/who-is-your-secondary-learning-audience-5/",
-     "title": "Who Is Your Secondary Learning Audience?"
+     "title": "Who Is Your Secondary Learning Audience?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12114,7 +12242,8 @@
     {
      "type": "podcast",
      "url": "/2007/01/24/why-all-teachers-should-be-using-web-20/",
-     "title": "Why All Teachers Should Be Using Web 2.0"
+     "title": "Why All Teachers Should Be Using Web 2.0",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12135,7 +12264,8 @@
     {
      "type": "podcast",
      "url": "/2007/07/17/why-do-i-want-to-work-here/",
-     "title": "Why do I want to work here?"
+     "title": "Why do I want to work here?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12167,7 +12297,8 @@
     {
      "type": "podcast",
      "url": "/2007/05/06/the-would-be-school-20-advocates/",
-     "title": "The Would-Be School 2.0 Advocates"
+     "title": "The Would-Be School 2.0 Advocates",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12199,7 +12330,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/12/yoda-was-wrong-there-is-try-in-learning-4/",
-     "title": "Yoda Was Wrong. There Is Try In Learning."
+     "title": "Yoda Was Wrong. There Is Try In Learning.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12231,7 +12363,8 @@
     {
      "type": "podcast",
      "url": "/2016/07/23/ytmnd-breakup-letter-dramatic-reading/",
-     "title": "YTMND — Breakup Letter, Dramatic reading"
+     "title": "YTMND — Breakup Letter, Dramatic reading",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12269,7 +12402,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/15/whoisaps-what-are-our-biggest-barriers-to-equity/",
-     "title": "#WHOISaps: What are our biggest barriers to equity?"
+     "title": "#WHOISaps: What are our biggest barriers to equity?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12301,7 +12435,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/22/whoisaps-what-is-the-how-of-creating-equity/",
-     "title": "#WHOISaps: What is âthe howâ of creating equity?"
+     "title": "#WHOISaps: What is “the how” of creating equity?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12333,7 +12468,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/18/whoisaps-what-should-the-role-of-teachers-in-the-classroom-be/",
-     "title": "#WHOISaps: What should the role of teachers in the classroom be?"
+     "title": "#WHOISaps: What should the role of teachers in the classroom be?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12365,7 +12501,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/18/whoisaps-how-do-we-create-a-culture-of-authentic-learning/",
-     "title": "#WHOISaps: How do we create a culture of authentic learning?"
+     "title": "#WHOISaps: How do we create a culture of authentic learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12397,7 +12534,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/18/whoisaps-how-do-we-not-let-our-knowledge-of-schools-get-in-the-way-of-what-kids-need/",
-     "title": "#WHOISaps: How do we not let our knowledge of schools get in the way of what kids need?"
+     "title": "#WHOISaps: How do we not let our knowledge of schools get in the way of what kids need?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12429,7 +12567,8 @@
     {
      "type": "podcast",
      "url": "/2013/01/19/etmooc-is-overwhelming-so-lets-make-some-meaning/",
-     "title": "#ETMOOC Is Overwhelming. So, Letâs Make Some Meaning."
+     "title": "#ETMOOC Is Overwhelming. So, Let’s Make Some Meaning.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12461,7 +12600,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/28/whoisaps-do-we-really-mean-all-means-all/",
-     "title": "#WHOISaps: Do we really mean All Means All?"
+     "title": "#WHOISaps: Do we really mean All Means All?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12493,7 +12633,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/25/whoisaps-how-can-school-leaders-support-a-culture-of-learning-in-early-learning/",
-     "title": "#WHOISaps: How can school leaders support a culture of learning in early learning?"
+     "title": "#WHOISaps: How can school leaders support a culture of learning in early learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12525,7 +12666,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/28/whoisaps-how-can-we-create-interest-driven-learning-in-our-schools/",
-     "title": "#WHOISaps: How can we create interest-driven learning in our schools?"
+     "title": "#WHOISaps: How can we create interest-driven learning in our schools?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12557,7 +12699,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/08/whoisaps-how-should-we-design-learning-experiences-that-are-engaging-and-relevant/",
-     "title": "#WHOISaps: How should we design learning experiences that are engaging and relevant?"
+     "title": "#WHOISaps: How should we design learning experiences that are engaging and relevant?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12589,7 +12732,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/07/whoisaps-what-does-21st-century-learning-look-like/",
-     "title": "#WHOISaps: What does 21st Century Learning Look Like?"
+     "title": "#WHOISaps: What does 21st Century Learning Look Like?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12621,7 +12765,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/08/whoisaps-what-does-blended-and-personalized-learning-mean-to-you/",
-     "title": "#WHOISaps: What does Blended and Personalized Learning Mean to You?"
+     "title": "#WHOISaps: What does Blended and Personalized Learning Mean to You?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12653,7 +12798,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/25/whoisaps-what-should-technologys-role-in-the-classroom-be/",
-     "title": "#WHOISaps: What should technologyâs role in the classroom be?"
+     "title": "#WHOISaps: What should technology’s role in the classroom be?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12685,7 +12831,8 @@
     {
      "type": "podcast",
      "url": "/2016/08/12/whoisaps-which-resources-do-you-need-in-order-to-learn/",
-     "title": "#WHOISaps: Which resources do you need in order to learn?"
+     "title": "#WHOISaps: Which resources do you need in order to learn?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12717,7 +12864,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/12/whoisaps-how-can-we-inspire-students-to-be-self-directed-learners/",
-     "title": "#WHOISaps: How can we inspire students to be self-directed learners?"
+     "title": "#WHOISaps: How can we inspire students to be self-directed learners?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12749,7 +12897,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/12/whoisaps-how-do-we-create-opportunities-to-celebrate-our-kids/",
-     "title": "#WHOISaps: How do we create opportunities to celebrate our kids?"
+     "title": "#WHOISaps: How do we create opportunities to celebrate our kids?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12781,7 +12930,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/12/whoisaps-how-can-we-make-better-connections-with-our-students/",
-     "title": "#WHOISaps: How can we make better connections with our students?"
+     "title": "#WHOISaps: How can we make better connections with our students?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12813,7 +12963,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/12/whoisaps-what-are-our-expectations-for-teachers/",
-     "title": "#WHOISaps: What are our expectations for teachers?"
+     "title": "#WHOISaps: What are our expectations for teachers?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12856,7 +13007,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/06/whoisaps-how-can-students-adapt-their-plans-for-learning-as-they-grow/",
-     "title": "#WHOISaps: How can students adapt their plans for learning as they grow?"
+     "title": "#WHOISaps: How can students adapt their plans for learning as they grow?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12888,7 +13040,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/06/whoisaps-how-can-we-be-truly-equitable-in-our-schools/",
-     "title": "#WHOISaps: How can we be truly equitable in our schools?"
+     "title": "#WHOISaps: How can we be truly equitable in our schools?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12920,7 +13073,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/06/whoisaps-how-do-we-see-each-other-as-whole-people/",
-     "title": "#WHOISaps: How do we see each other as whole people?"
+     "title": "#WHOISaps: How do we see each other as whole people?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12952,7 +13106,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/06/whoisaps-what-do-our-kids-and-families-need/",
-     "title": "#WHOISaps: What do our kids and families need?"
+     "title": "#WHOISaps: What do our kids and families need?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -12984,7 +13139,8 @@
     {
      "type": "podcast",
      "url": "/2016/09/06/whoisaps-where-should-learners-go-when-they-need-to-ask-a-question/",
-     "title": "#WHOISaps: Where Should Learners Go When they Need to Ask a Question?"
+     "title": "#WHOISaps: Where Should Learners Go When they Need to Ask a Question?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13016,7 +13172,8 @@
     {
      "type": "podcast",
      "url": "/2016/10/03/whoisaps-when-will-teachers-have-enough-time/",
-     "title": "#WHOISaps: When will teachers have enough time?"
+     "title": "#WHOISaps: When will teachers have enough time?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13103,7 +13260,8 @@
     {
      "type": "podcast",
      "url": "/2017/01/16/whoisaps-how-can-we-best-support-teachers-and-students/",
-     "title": "#whoisAPS: How can we best support teachers and students?"
+     "title": "#whoisAPS: How can we best support teachers and students?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13135,7 +13293,8 @@
     {
      "type": "podcast",
      "url": "/2017/01/16/whoisaps-how-can-we-engage-our-families-in-the-conversation-about-learning/",
-     "title": "#WhoisAPS: How can we engage our families in the conversation about learning?"
+     "title": "#WhoisAPS: How can we engage our families in the conversation about learning?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13167,7 +13326,8 @@
     {
      "type": "podcast",
      "url": "/2017/01/16/whoisaps-how-can-we-show-and-grow-our-passion-for-students/",
-     "title": "#WhoisAPS: How can we show and grow our passion for students?"
+     "title": "#WhoisAPS: How can we show and grow our passion for students?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13199,7 +13359,8 @@
     {
      "type": "podcast",
      "url": "/2017/01/16/whoisaps-how-do-you-build-a-system-that-addresses-every-students-needs/",
-     "title": "#WhoisAPS: How do you build a system that addresses every studentâs needs?"
+     "title": "#WhoisAPS: How do you build a system that addresses every student’s needs?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13231,7 +13392,8 @@
     {
      "type": "podcast",
      "url": "/2017/01/16/whoisaps-what-are-the-missing-pieces-from-our-district/",
-     "title": "#whoisAPS: What are the missing pieces from our district?"
+     "title": "#whoisAPS: What are the missing pieces from our district?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13263,7 +13425,8 @@
     {
      "type": "podcast",
      "url": "/2017/01/16/whoisaps-why-dont-our-students-have-more-access-to-books-and-reading/",
-     "title": "#whoisAPS: Why donât our students have more access to books and reading?"
+     "title": "#whoisAPS: Why don’t our students have more access to books and reading?",
+     "status": "published"
     },
     {
      "type": "post",
@@ -13961,7 +14124,8 @@
     {
      "type": "podcast",
      "url": "/2019/05/10/my-digital-identity-during-the-week-of-the-stemshooting/",
-     "title": "My Digital Identity during the week of the #StemShooting."
+     "title": "My Digital Identity during the week of the #StemShooting.",
+     "status": "published"
     },
     {
      "type": "post",
@@ -16821,11 +16985,6 @@
      "url": "/2015/10/27/askbenw-how-and-for-what-purpose-should-we-be-educating-our-kids/",
      "title": "#AskBenW: How and for what purpose should we be educating our kids?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/10/27/askbenw-how-and-for-what-purpose-should-we-be-educating-our-kids/",
-     "title": "#AskBenW: How and for what purpose should we be educating our kids?"
     }
    ]
   },
@@ -16841,16 +17000,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/03/AskBenW_-How-can-we-be-courageou...]]",
-   "used_by": [
-    {
-     "type": "podcast",
-     "url": "/2015/09/29/askbenw-how-can-we-be-courageous-in-our-professional-learning/",
-     "title": "#AskBenW: How can we be courageous in our professional learning?"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2016/03/AskBenW_-How-can-we-create-BYOD-equity_.mp3Podcast:",
    "used_by": [
     {
@@ -16858,11 +17007,6 @@
      "url": "/2015/12/11/askbenw-how-can-we-create-byod-equity/",
      "title": "#AskBenW: How can we create BYOD equity?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/12/11/askbenw-how-can-we-create-byod-equity/",
-     "title": "#AskBenW: How can we create BYOD equity?"
     }
    ]
   },
@@ -16874,11 +17018,6 @@
      "url": "/2015/11/02/askbenw-how-do-we-measure-and-demonstrate-impact/",
      "title": "#AskBenW: How do we measure and demonstrate impact?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/11/02/askbenw-how-do-we-measure-and-demonstrate-impact/",
-     "title": "#AskBenW: How do we measure and demonstrate impact?"
     }
    ]
   },
@@ -16890,11 +17029,6 @@
      "url": "/2015/09/15/askbenw-how-will-you-celebrate-connected-educator-month-this-year/",
      "title": "#AskBenW: How will you celebrate connected educator month this year?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/09/15/askbenw-how-will-you-celebrate-connected-educator-month-this-year/",
-     "title": "#AskBenW: How will you celebrate connected educator month this year?"
     }
    ]
   },
@@ -16910,16 +17044,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/03/AskBenW_-Is-Personalized-Learni...]]",
-   "used_by": [
-    {
-     "type": "podcast",
-     "url": "/2015/09/15/askbenw-is-personalized-learning-a-fad-trend-or-repackaged-idea/",
-     "title": "#AskBenW: Is Personalized Learning a Fad, Trend, or repackaged idea?"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2016/03/AskBenW_-Shouldnt-we-be-further-along-in-our-progress_.mp3Podcast:",
    "used_by": [
     {
@@ -16927,11 +17051,6 @@
      "url": "/2015/11/03/askbenw-shouldnt-we-be-further-along-in-our-progress/",
      "title": "#AskBenW: Shouldn’t we be further along in our progress?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/11/03/askbenw-shouldnt-we-be-further-along-in-our-progress/",
-     "title": "#AskBenW: Shouldnât we be further along in our progress?"
     }
    ]
   },
@@ -16943,11 +17062,6 @@
      "url": "/2015/12/14/askbenw-what-are-the-teaching-and-learning-trends-of-2015/",
      "title": "#AskBenW: What are the teaching and learning trends of 2015?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/12/14/askbenw-what-are-the-teaching-and-learning-trends-of-2015/",
-     "title": "#AskBenW: What are the teaching and learning trends of 2015?"
     }
    ]
   },
@@ -16959,11 +17073,6 @@
      "url": "/2015/11/26/askbenw-what-are-you-thankful-for/",
      "title": "#AskBenW: What are you thankful for?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/11/26/askbenw-what-are-you-thankful-for/",
-     "title": "#AskBenW: What are you thankful for?"
     }
    ]
   },
@@ -16975,11 +17084,6 @@
      "url": "/2015/09/15/askbenw-what-do-you-do-when-the-tech-or-the-activity-doesnt-work/",
      "title": "#AskBenW: What do you do when the tech (or the activity) doesn’t work?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/09/15/askbenw-what-do-you-do-when-the-tech-or-the-activity-doesnt-work/",
-     "title": "#AskBenW: What do you do when the tech (or the activity) doesnât work?"
     }
    ]
   },
@@ -16991,11 +17095,6 @@
      "url": "/2016/05/17/askbenw-when-does-the-metaphor-of-online-collaboration-break-down-2/",
      "title": "#AskBenW: When does the metaphor of online collaboration break down?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/05/17/askbenw-when-does-the-metaphor-of-online-collaboration-break-down-2/",
-     "title": "#AskBenW: When does the metaphor of online collaboration break down?"
     }
    ]
   },
@@ -17007,11 +17106,6 @@
      "url": "/2015/10/19/askbenw-what-is-the-worst-consequence-of-your-best-idea/",
      "title": "#AskBenW: What is the worst consequence of your best idea?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/10/19/askbenw-what-is-the-worst-consequence-of-your-best-idea/",
-     "title": "#AskBenW: What is the worst consequence of your best idea?"
     }
    ]
   },
@@ -17023,11 +17117,6 @@
      "url": "/2015/12/03/askbenw-what-is-your-responsibility-to-speak-up/",
      "title": "#AskBenW: What is your responsibility to speak up?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/12/03/askbenw-what-is-your-responsibility-to-speak-up/",
-     "title": "#AskBenW: What is your responsibility to speak up?"
     }
    ]
   },
@@ -17039,11 +17128,6 @@
      "url": "/2015/10/22/askbenw-what-myths-should-we-let-go-of-in-education/",
      "title": "#AskBenW: What myths should we let go of in education?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/10/22/askbenw-what-myths-should-we-let-go-of-in-education/",
-     "title": "#AskBenW: What myths should we let go of in education?"
     }
    ]
   },
@@ -17055,11 +17139,6 @@
      "url": "/2016/01/20/askbenw-what-responsibility-do-you-have-to-finish-what-you-started/",
      "title": "#AskBenW: What responsibility do you have to finish what you started?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/01/20/askbenw-what-responsibility-do-you-have-to-finish-what-you-started/",
-     "title": "#AskBenW: What responsibility do you have to finish what you started?"
     }
    ]
   },
@@ -17071,11 +17150,6 @@
      "url": "/2015/09/14/askbenw-what-role-should-email-play-in-our-teaching-and-learning-lives/",
      "title": "#AskBenW: What role should email play in our teaching and learning lives?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/09/14/askbenw-what-role-should-email-play-in-our-teaching-and-learning-lives/",
-     "title": "#AskBenW: What role should email play in our teaching and learning lives?"
     }
    ]
   },
@@ -17087,11 +17161,6 @@
      "url": "/2016/02/03/askbenw-what-should-we-do-about-snow-days/",
      "title": "#AskBenW: What should we do about snow days?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/02/03/askbenw-what-should-we-do-about-snow-days/",
-     "title": "#AskBenW: What should we do about snow days?"
     }
    ]
   },
@@ -17103,11 +17172,6 @@
      "url": "/2016/02/08/askbenw-whenhow-is-it-appropriate-to-share-student-videos-on-youtube/",
      "title": "#AskBenW: When/How is it appropriate to share student videos on YouTube?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/02/08/askbenw-whenhow-is-it-appropriate-to-share-student-videos-on-youtube/",
-     "title": "#AskBenW: When/How is it appropriate to share student videos on YouTube?"
     }
    ]
   },
@@ -17119,11 +17183,6 @@
      "url": "/2016/01/11/askbenw-when-is-generalization-better-than-specialization/",
      "title": "#AskBenW: When is generalization better than specialization?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/01/11/askbenw-when-is-generalization-better-than-specialization/",
-     "title": "#AskBenW: When is generalization better than specialization?"
     }
    ]
   },
@@ -17135,11 +17194,6 @@
      "url": "/2015/12/10/askbenw-when-should-we-duplicate-efforts/",
      "title": "#AskBenW: When should we duplicate efforts?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/12/10/askbenw-when-should-we-duplicate-efforts/",
-     "title": "#AskBenW: When should we duplicate efforts?"
     }
    ]
   },
@@ -17151,11 +17205,6 @@
      "url": "/2015/10/16/askbenw-when-should-we-multi-task-and-when-should-we-single-task/",
      "title": "#AskBenW: When should we multi-task and when should we single-task?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/10/16/askbenw-when-should-we-multi-task-and-when-should-we-single-task/",
-     "title": "#AskBenW: When should we multi-task and when should we single-task?"
     }
    ]
   },
@@ -17167,11 +17216,6 @@
      "url": "/2016/02/22/askbenw-live-harnessing-stories-of-innovative-classrooms/",
      "title": "#Askbenw live: Harnessing stories of innovative classrooms",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/02/22/askbenw-live-harnessing-stories-of-innovative-classrooms/",
-     "title": "#Askbenw live: Harnessing stories of innovative classrooms"
     }
    ]
   },
@@ -17183,11 +17227,6 @@
      "url": "/2016/02/25/askbenw-live-listening-vs-facilitating/",
      "title": "#AskBenW Live: Listening vs. Facilitating",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/02/25/askbenw-live-listening-vs-facilitating/",
-     "title": "#AskBenW Live: Listening vs. Facilitating"
     }
    ]
   },
@@ -17199,11 +17238,6 @@
      "url": "/2016/02/24/askbenw-live-reflecting-when-it-hurts/",
      "title": "#AskBenW Live: Reflecting when it hurts",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/02/24/askbenw-live-reflecting-when-it-hurts/",
-     "title": "#AskBenW Live: Reflecting when it hurts"
     }
    ]
   },
@@ -17215,11 +17249,6 @@
      "url": "/2016/02/16/askbenw-live-the-most-powerful-pd-experiences-for-ts/",
      "title": "#AskBenW Live: The most powerful PD experiences for Ts?",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2016/02/16/askbenw-live-the-most-powerful-pd-experiences-for-ts/",
-     "title": "#AskBenW Live: The most powerful PD experiences for Ts?"
     }
    ]
   },
@@ -17235,16 +17264,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2016/03/What-was-one-touchstone-moment-of-your-te...]]",
-   "used_by": [
-    {
-     "type": "podcast",
-     "url": "/2015/09/15/what-was-one-touchstone-moment-of-your-teaching-career-that-you-carry-with-you-askbenw/",
-     "title": "What was one touchstone moment of your teaching career that you carry with you? #AskBenW"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2016/07/BudHuntKeynote.mp3Podcast:",
    "used_by": [
     {
@@ -17252,11 +17271,6 @@
      "url": "/2015/06/28/bud-hunts-future-ready-schools-denver-summit-keynote-audio-only/",
      "title": "Bud Hunt’s Future Ready Schools Denver Summit Keynote (Audio Only)",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2015/06/28/bud-hunts-future-ready-schools-denver-summit-keynote-audio-only/",
-     "title": "Bud Huntâs Future Ready Schools Denver Summit Keynote (Audio Only)"
     }
    ]
   },
@@ -17268,21 +17282,6 @@
      "url": "/2007/05/15/digital-ex-patriots-and-the-formula-for-transparency/",
      "title": "Digital Ex-Patriots and The Formula for Transparency",
      "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2007/05/15/digital-ex-patriots-and-the-formula-for-transparency/",
-     "title": "Digital Ex-Patriots and The Formula for Transparency"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2016/07/Preceding_Reputations.m4aPodcast:",
-   "used_by": [
-    {
-     "type": "podcast",
-     "url": "/2016/07/23/preceding-reputations/",
-     "title": "Preceding Reputations"
     }
    ]
   },
@@ -17298,17 +17297,8 @@
     {
      "type": "podcast",
      "url": "/2007/07/25/totally-wired-acceptace-speech/",
-     "title": "Totally Wired Acceptace Speech"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2016/07/YTMND",
-   "used_by": [
-    {
-     "type": "podcast",
-     "url": "/2016/07/23/ytmnd-breakup-letter-dramatic-reading/",
-     "title": "YTMND — Breakup Letter, Dramatic reading"
+     "title": "Totally Wired Acceptace Speech",
+     "status": "published"
     }
    ]
   },

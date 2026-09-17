@@ -77,6 +77,10 @@ for (const f of fs.readdirSync(postsDir).filter((n) => /^\d{4}\.json$/.test(n)).
     if (p.removed) tombstones++;
     if (p.comments !== undefined) { if (!Array.isArray(p.comments)) err(`${where}: comments not an array`); else p.comments.forEach((c, j) => checkComment(c, `${where} comments[${j}]`)); }
     if (p.bluesky !== undefined && (!p.bluesky || typeof p.bluesky !== 'object')) err(`${where}: bluesky must be an object`);
+    if (p.podcast !== undefined) {
+      if (!p.podcast || typeof p.podcast !== 'object') err(`${where}: podcast must be an object`);
+      else if (!isPath(String(p.podcast.audio || '').replace(/[^/]*$/, '')) ) err(`${where}: podcast.audio "${p.podcast.audio}" is not a site-relative path`);
+    }
     if (typeof p.url === 'string') {
       const m = /^\/(\d{4})\/(\d{2})\/(\d{2})\/[^/]+\/$/.exec(p.url);
       if (!m) err(`${where}: url is not /YYYY/MM/DD/slug/`);

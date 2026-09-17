@@ -24,6 +24,7 @@ export const store = {
   async years() { const m = await this.manifest(); return Object.keys(m.shards?.posts || {}).sort().reverse(); },
   async shard(year, opts) { return getJson(`posts/${year}.json`, opts); },
   async media() { return getJson('media.json'); },
+  async podcast() { return getJson('podcast.json', { fresh: true }); },
   async pages() { const raw = await getJson('pages.json'); return Array.isArray(raw) ? raw : raw.pages || []; },
 
   // All posts, newest first, with { year, index } so a record can be written back.

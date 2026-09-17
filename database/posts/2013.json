@@ -65,7 +65,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-Be-The-Box.mp3",
+        "type": "audio/mpeg",
+        "length": 1786948,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2542,
@@ -129,7 +136,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-Closer-Or-Further-Away.mp3",
+        "type": "audio/mpeg",
+        "length": 1595115,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2544,
@@ -195,7 +209,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-It-Is-Never-Okay-To-Be-Mean-To-Learners.mp3",
+        "type": "audio/mpeg",
+        "length": 2064918,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2545,
@@ -1031,7 +1052,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-Where-Are-The-Reflective-Practice-Vloggers_.mp3",
+        "type": "audio/mpeg",
+        "length": 1675384,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2552,
@@ -2312,7 +2340,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-The-Cult-Of-Done.mp3",
+        "type": "audio/mpeg",
+        "length": 3148036,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2564,
@@ -3379,7 +3414,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-Our-Learning-Process-Should-Be-Spoken-Transparent-And-Remixable.mp3",
+        "type": "audio/mpeg",
+        "length": 3113811,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2579,
@@ -3442,7 +3484,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-List_-Teachers-Should-Not-Be-Anonymous-Or-Interchangeable.mp3",
+        "type": "audio/mpeg",
+        "length": 3787340,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2580,
@@ -7158,7 +7207,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Learning-Should-Be-Ironed-Out.mp3",
+        "type": "audio/mpeg",
+        "length": 2530292,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2640,
@@ -7631,7 +7687,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Learning-Doesnt-Come-From-Experts-It-Comes-From-Engaged-Expertise.mp3",
+        "type": "audio/mpeg",
+        "length": 1896913,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2648,
@@ -8179,7 +8242,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Real-Learning-And-Ideal-Learning-Are-Not-Opposites.mp3",
+        "type": "audio/mpeg",
+        "length": 2576707,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2656,
@@ -8253,7 +8323,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/We-Need-Digest-Learning-Instead-Of-Notification-Learning.mp3",
+        "type": "audio/mpeg",
+        "length": 3379404,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2657,
@@ -8622,7 +8699,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Yoda-Was-Wrong.-There-Is-Try-In-Learning..mp3",
+        "type": "audio/mpeg",
+        "length": 2346402,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2664,
@@ -9670,7 +9754,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Who-Is-Your-Secondary-Learning-Audience_.mp3",
+        "type": "audio/mpeg",
+        "length": 2914617,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2683,
@@ -9860,7 +9951,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/No-Teacher-Should-Have-To-Learn-Alone.mp3",
+        "type": "audio/mpeg",
+        "length": 2909180,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2687,
@@ -9925,7 +10023,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Change-Comes-From-Open-Conversations-With-Learners.mp3",
+        "type": "audio/mpeg",
+        "length": 2251326,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2688,
@@ -11417,7 +11522,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/We-Are-Called-To-Be-Open-Spokes-in-a-Fidgital-World.mp3",
+        "type": "audio/mpeg",
+        "length": 2898119,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2712,
@@ -11890,7 +12002,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/My-ETMOOC-Intro_-Creating-Great-Things-Through-Collaboration.mp3",
+        "type": "audio/mpeg",
+        "length": 1675103,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2720,
@@ -12558,7 +12677,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/What-is-your-DailyCreate_.mp3",
+        "type": "audio/mpeg",
+        "length": 2233120,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2726,
@@ -12787,7 +12913,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/08/ETMOOC-Is-Overwhelming.-So-Lets-Make-Some-Meaning..mp3",
+        "type": "audio/mpeg",
+        "length": 2725989,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2729,
@@ -13193,7 +13326,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Mutually-Beneficial-Friction_-How-We-Stop-Skimming-The-Surface-Of-Ideas.mp3",
+        "type": "audio/mpeg",
+        "length": 3712114,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2735,
@@ -13709,7 +13849,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/The-Three-Learning-Paths_-The-Beginning-of-an-etmooc-Journey.mp3",
+        "type": "audio/mpeg",
+        "length": 2710883,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2741,
@@ -13776,7 +13923,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Connected-Learning_-How-It-Should-Work.mp3",
+        "type": "audio/mpeg",
+        "length": 1858432,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2742,
@@ -15357,7 +15511,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Time-Should-Be-a-Companion-Not-a-Bully.mp3",
+        "type": "audio/mpeg",
+        "length": 2971040,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2757,
@@ -15669,7 +15830,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/From-Network-to-Neighborhood_-A-New-Definition-for-PLNs.mp3",
+        "type": "audio/mpeg",
+        "length": 3007837,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2759,
@@ -16507,7 +16675,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Who-is-in-your-Anti-PLN_-Or-Avoiding-TeamThink..mp3",
+        "type": "audio/mpeg",
+        "length": 2648385,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2770,
@@ -16574,7 +16749,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Hand-Made-Learning_-Games-not-Gamification.mp3",
+        "type": "audio/mpeg",
+        "length": 3172083,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2772,
@@ -17770,7 +17952,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/It-isnt-etmoocs-Fault_-Find-Your-Own-Slice-of-Learning.mp3",
+        "type": "audio/mpeg",
+        "length": 1865347,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2783,
@@ -18118,7 +18307,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2013.json"
+      "_shard": "2013.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Better-Backchannels_-Whats-Missing_.mp3",
+        "type": "audio/mpeg",
+        "length": 4244977,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 2788,

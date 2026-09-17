@@ -1,0 +1,17 @@
+{
+  "$comment": "Podcast channel settings (Decision 015, A6). Episodes are posts with a `podcast` field; scripts/render-feeds.js renders feed/podcast/feed.xml from both. Edited in LiC Admin → Settings → Podcast.",
+  "channel": {
+    "title": "Learning is Change Podcast",
+    "description": "Exploring the intersection of technology, education, and personal growth. Learning is Change chronicles the journey of continuous improvement and the insights gained along the way.",
+    "link": "https://learningischange.com",
+    "language": "en-us",
+    "copyright": "© 2026 Ben Wilkoff",
+    "author": "Ben Wilkoff",
+    "owner_name": "Ben Wilkoff",
+    "owner_email": "Ben@learningischange.com",
+    "image": "/wp-content/uploads/2016/07/cropped-cropped-LiC-1.jpg",
+    "category": "Education",
+    "explicit": false,
+    "type": "episodic"
+  }
+}

@@ -1161,7 +1161,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/The_Future_of_Literacy.m4a",
+        "type": "audio/mp4",
+        "length": 8796445,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 352,
@@ -1229,7 +1236,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Why_All_Teachers_Should_Use_Web_2.m4a",
+        "type": "audio/mp4",
+        "length": 8967693,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 353,
@@ -1492,7 +1506,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Discovery_School_Within_A_School.m4a",
+        "type": "audio/mp4",
+        "length": 10680082,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 360,
@@ -1751,7 +1772,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Teacher_Proof_Teaching.m4a",
+        "type": "audio/mp4",
+        "length": 4867503,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 366,
@@ -1819,7 +1847,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/The_Perfect_Learning_Environment.m4a",
+        "type": "audio/mp4",
+        "length": 5847257,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 367,
@@ -2021,7 +2056,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/New_Graduation_Requirements.m4a",
+        "type": "audio/mp4",
+        "length": 11152192,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 372,
@@ -2549,7 +2591,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/How_do_we_assess_School_20.m4a",
+        "type": "audio/mp4",
+        "length": 9624325,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 386,
@@ -2743,7 +2792,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Parents-School_2.0_Stakeholders.m4a",
+        "type": "audio/mp4",
+        "length": 10615916,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 391,
@@ -2877,7 +2933,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Internet_as_Utopia.m4a",
+        "type": "audio/mp4",
+        "length": 6202283,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 395,
@@ -3204,7 +3267,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/What_Myspace_can_teach_us_about_School_2.m4a",
+        "type": "audio/mp4",
+        "length": 11232683,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 403,
@@ -3648,7 +3718,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/How_do_we_support_School_2.0_.m4a",
+        "type": "audio/mp4",
+        "length": 9420547,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 414,
@@ -3794,7 +3871,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Is_School_2.0_a_Fad.m4a",
+        "type": "audio/mp4",
+        "length": 9781086,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 418,
@@ -4235,7 +4319,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Researching_School_2.0.m4a",
+        "type": "audio/mp4",
+        "length": 7667569,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 427,
@@ -4436,7 +4527,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/A_New_Way_of_Looking_at_Our_Students.m4a",
+        "type": "audio/mp4",
+        "length": 6802985,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 432,
@@ -4675,7 +4773,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Remix.m4a",
+        "type": "audio/mp4",
+        "length": 14461246,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 439,
@@ -4830,7 +4935,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Remixing_the_Classroom.m4a",
+        "type": "audio/mp4",
+        "length": 5185146,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 442,
@@ -5178,7 +5290,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/The_Embedded_Classroom.m4a",
+        "type": "audio/mp4",
+        "length": 9103879,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 451,
@@ -5478,7 +5597,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Beyond_Rubrics.m4a",
+        "type": "audio/mp4",
+        "length": 7060578,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 458,
@@ -6140,7 +6266,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Expanding_the_Conversation.m4a",
+        "type": "audio/mp4",
+        "length": 6921638,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 474,
@@ -6288,7 +6421,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Visions_of_Change.m4a",
+        "type": "audio/mp4",
+        "length": 9069854,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 478,
@@ -6872,7 +7012,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Would_Be_Advocates_for_School_2dot0.m4a",
+        "type": "audio/mp4",
+        "length": 9798633,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 493,
@@ -7769,7 +7916,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/What_Happens_Next_Year.m4a",
+        "type": "audio/mp4",
+        "length": 5569976,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 506,
@@ -8063,7 +8217,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Digital_Ex-Pats.m4a",
+        "type": "audio/mp4",
+        "length": 11456390,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 512,
@@ -8636,7 +8797,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/MyStudentsAreKnownFor.m4a",
+        "type": "audio/mp4",
+        "length": 6496034,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 529,
@@ -8708,7 +8876,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/DigitalStickyNotes.m4a",
+        "type": "audio/mp4",
+        "length": 6619934,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 531,
@@ -9027,7 +9202,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/The_New_Job_Description.m4a",
+        "type": "audio/mp4",
+        "length": 10926278,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 538,
@@ -9220,7 +9402,14 @@
           "notes": "Edited via Page Editor"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/The_1.0_to_2.0_Transition.m4a",
+        "type": "audio/mp4",
+        "length": 7385761,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 542,
@@ -9414,7 +9603,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/TheMostChangeForTheMostKids.m4a",
+        "type": "audio/mp4",
+        "length": 6720623,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 546,
@@ -9705,7 +9901,14 @@
           "parent": "194",
           "html": "<p>I am so glad that you found my blog. Unfortunately, I am in Colorado<br>\n(unfortunate only because we wouldn’t be able to go grab a bite and talk it<br>\nthrough). Love to talk at any point, though. My email is<br>\n<a href=\"mailto:ben@learningischange.com\">ben@learningischange.com</a>.</p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/RipeEnvironment10.mp3",
+        "type": "audio/mpeg",
+        "length": 6749780,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 548,
@@ -9773,7 +9976,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/SocialNetworksofTragedies.m4a",
+        "type": "audio/mp4",
+        "length": 6628285,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 550,
@@ -10365,7 +10575,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/WhydoIwanttoworkhere.m4a",
+        "type": "audio/mp4",
+        "length": 4543523,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 560,
@@ -10431,7 +10648,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/TotallyWiredAcceptaceSpeech.m4a",
+        "type": "audio/mp4",
+        "length": 0,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 562,
@@ -10660,7 +10884,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/IvsWe2.m4a",
+        "type": "audio/mp4",
+        "length": 7223404,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 566,
@@ -12406,7 +12637,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/ArticulatingVision.mp3",
+        "type": "audio/mpeg",
+        "length": 4671953,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 614,
@@ -12468,7 +12706,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/Beginningthe-yearsystematically.mp3",
+        "type": "audio/mpeg",
+        "length": 8437153,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 615,
@@ -12530,7 +12775,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/ChoicesChoices.mp3",
+        "type": "audio/mpeg",
+        "length": 8192006,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 617,
@@ -13260,7 +13512,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/TheActofCreation.mp3",
+        "type": "audio/mpeg",
+        "length": 5249155,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 633,
@@ -15048,7 +15307,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/ANewPossibility.mp3",
+        "type": "audio/mpeg",
+        "length": 4590031,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 675,
@@ -15113,7 +15379,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2007.json"
+      "_shard": "2007.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/TwoNewDocuments.mp3",
+        "type": "audio/mpeg",
+        "length": 6138988,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 676,

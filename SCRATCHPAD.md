@@ -15,8 +15,8 @@
   (`/admin/app/`) is the CMS — GitHub App sign-in (Decision 016, Worker
   `lic-github-auth`), gated views, create/edit/remove posts with
   autosave, exact preview, WebP image pipeline, media library
-  (`database/media.json`), drafts/scheduling, Bluesky. Legacy tools are
-  redirects; `/podcast-rss/` is the last one standing. Progress log in
+  (`database/media.json`), drafts/scheduling, Bluesky. Every legacy tool is
+  a redirect; the podcast feed renders from JSON (A6). Progress log in
   `docs/MODERNIZATION-AUDIT.md` §7; open items in §5.E.
 - **Optional follow-ups** (none required): dark/light manual toggle;
   `llms.txt` refresh when the homepage changes; per-tool polish in the

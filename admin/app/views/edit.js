@@ -14,7 +14,7 @@ import { processImage, uploadPath, snippet } from '../media.js';
 
 export const title = 'Edit post';
 // The fields a person edits — what autosave stores and compares.
-const pick = (r) => ({ title: r.title || '', slug: r.slug || '', date_published: String(r.date_published || '').slice(0, 10), status: r.status || 'publish', content: r.content || '', excerpt: r.excerpt || '', categories: r.categories || [], tags: r.tags || [] });
+const pick = (r) => ({ title: r.title || '', slug: r.slug || '', date_published: String(r.date_published || '').slice(0, 10), status: r.status || 'publish', content: r.content || '', excerpt: r.excerpt || '', categories: r.categories || [], tags: r.tags || [], podcast: r.podcast || null });
 // Renderer + templates come from the same origin as the admin (so a local checkout previews its own code)
 const SITE = /^(127\.0\.0\.1|localhost)$/.test(location.hostname) ? location.origin : CONFIG.site.base;
 let core = null, tpl = null; // cached renderer + templates
@@ -76,6 +76,18 @@ export async function render(root, ctx, params) {
         <div class="row"><button class="btn primary" id="e-save">${isNew ? 'Publish' : 'Save'} &amp; render</button><button class="btn" id="e-preview">Refresh preview</button><label class="check" style="margin:0"><input type="checkbox" id="e-render" checked> dispatch render after save</label><span class="mono" id="e-autosave" style="color:var(--text-secondary);font-size:0.75rem"></span>${isNew ? '' : `<span class="spacer"></span><button class="btn" id="e-remove" title="${post.removed ? 'Put the post back' : 'Tombstone: the URL redirects to the year archive; listings, feeds and search drop it; nothing is deleted'}">${post.removed ? 'Restore post' : 'Remove post…'}</button>`}</div>
         ${post.removed ? `<div class="msg warn">This post is removed (tombstoned ${ctx.esc(String(post.removed_at || '').slice(0, 10))}). Its URL redirects to the year archive.</div>` : ''}
         <div id="e-msg"></div>
+        <div class="card" style="margin-top:14px"><h2>Podcast</h2>
+          <p class="meta" style="margin:0 0 10px;font-size:0.8rem;color:var(--text-secondary)">A post with an audio file is an episode in <a href="/feed/podcast/" target="_blank" rel="noopener">the podcast feed</a>. Channel settings live in <a href="#/settings">Settings</a>.</p>
+          <div class="row"><label class="field" style="flex:1;margin:0">Audio file <small class="inline">(site path)</small><input id="e-pc-audio" value="${ctx.esc(post.podcast?.audio || '')}" placeholder="/wp-content/uploads/YYYY/MM/episode.mp3"></label><label class="btn" style="padding:8px 12px;cursor:pointer;align-self:flex-end"><input id="e-pc-file" type="file" accept="audio/*" hidden>Upload audio…</label></div>
+          <div class="row" style="margin-top:8px">
+            <label class="field" style="width:140px;margin:0">Duration <small class="inline">(H:MM:SS)</small><input id="e-pc-duration" value="${ctx.esc(post.podcast?.duration || '')}" placeholder="0:42:10"></label>
+            <label class="field" style="width:110px;margin:0">Episode №<input id="e-pc-episode" type="number" min="1" value="${ctx.esc(post.podcast?.episode || '')}"></label>
+            <label class="field" style="width:130px;margin:0">Type<select id="e-pc-type">${['full', 'trailer', 'bonus'].map((t) => `<option ${(post.podcast?.episode_type || 'full') === t ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
+            <label class="check" style="margin:0;align-self:flex-end"><input type="checkbox" id="e-pc-explicit" ${post.podcast?.explicit ? 'checked' : ''}> explicit</label>
+          </div>
+          <label class="field" style="margin-top:8px">Episode summary <small class="inline">(optional; defaults to the excerpt)</small><textarea id="e-pc-summary" rows="2">${ctx.esc(post.podcast?.summary || '')}</textarea></label>
+          <div class="row"><span class="mono" id="e-pc-stat" style="color:var(--text-secondary);font-size:0.75rem">${post.podcast?.length ? `${(post.podcast.length / 1048576).toFixed(1)} MB · ${ctx.esc(post.podcast.type || '')}` : 'not an episode'}</span><span class="spacer"></span>${post.podcast?.audio ? '<button class="btn" id="e-pc-clear" style="padding:4px 10px;font-size:0.78rem">Remove from podcast</button>' : ''}</div>
+        </div>
         ${isNew ? '' : `<div class="card" style="margin-top:14px"><h2>Bluesky</h2><div id="e-bsky">${post.bluesky?.url ? `<div class="msg">✓ Cross-posted: <a href="${ctx.esc(post.bluesky.url)}" target="_blank" rel="noopener">${ctx.esc(post.bluesky.url)}</a><br><small>Replies render under the post at each daily render (or on the next render of this URL).</small></div>` : `<label class="field">Text <small class="inline">(the link card is added automatically)</small><textarea id="e-bsky-text" rows="3">${ctx.esc((post.title || '') + '\n\n' + CONFIG.site.base + url)}</textarea></label><div class="row"><button class="btn" id="e-bsky-post">Post to Bluesky</button><small style="color:var(--text-secondary)">Uses the handle + app password from <a href="#/settings">Settings</a>. Saves the post URI on this record.</small></div>`}</div></div>`}
       </section>
       <section class="preview-col"><div class="preview-head"><span>Preview — rendered with the site's own template</span><span class="mono" id="e-pstat"></span></div><iframe id="e-frame" class="preview-frame" title="Preview" sandbox="allow-same-origin"></iframe></section>
@@ -102,6 +114,16 @@ export async function render(root, ctx, params) {
       status: root.querySelector('#e-status').value, content: body, excerpt: root.querySelector('#e-excerpt').value.trim(),
       categories: cat ? [cat] : [], tags: tagPicker.getTags() };
     if (isNew) { rec.slug = slugify(root.querySelector('#e-slug').value.trim() || rec.title) || ''; rec.url = rec.slug ? urlFor(rec.date_published, rec.slug) : ''; rec._year = String(rec.date_published).slice(0, 4); }
+    const audio = root.querySelector('#e-pc-audio').value.trim();
+    if (audio) {
+      const prev = draft.podcast || {};
+      rec.podcast = { ...prev, audio, episode_type: root.querySelector('#e-pc-type').value, explicit: root.querySelector('#e-pc-explicit').checked };
+      const dur = root.querySelector('#e-pc-duration').value.trim(), ep = root.querySelector('#e-pc-episode').value, sum = root.querySelector('#e-pc-summary').value.trim();
+      if (dur) rec.podcast.duration = dur; else delete rec.podcast.duration;
+      if (ep) rec.podcast.episode = Number(ep); else delete rec.podcast.episode;
+      if (sum) rec.podcast.summary = sum; else delete rec.podcast.summary;
+      if (audio !== prev.audio) { delete rec.podcast.length; delete rec.podcast.type; } // the renderer sizes the file from disk
+    } else { rec.podcast = undefined; }
     return rec;
   }
   let t = null, at = null;
@@ -119,6 +141,27 @@ export async function render(root, ctx, params) {
     root.querySelector('#e-date').addEventListener('change', showUrl);
     showUrl();
   }
+  // Podcast: upload an audio file to wp-content/uploads/YYYY/MM/, read its duration, fill the fields
+  ['#e-pc-audio', '#e-pc-duration', '#e-pc-episode', '#e-pc-type', '#e-pc-explicit', '#e-pc-summary'].forEach((sel) => root.querySelector(sel).addEventListener('input', schedulePreview));
+  root.querySelector('#e-pc-clear')?.addEventListener('click', () => { root.querySelector('#e-pc-audio').value = ''; draft.podcast = undefined; root.querySelector('#e-pc-stat').textContent = 'not an episode (save to apply)'; schedulePreview(); });
+  root.querySelector('#e-pc-file').onchange = async (e) => {
+    const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+    if (!(await ctx.ensureUnlocked())) return msg('Sign in or unlock a token in <a href="#/settings">Settings</a> first — the audio needs a commit.', 'warn');
+    const [y, m] = String(current().date_published || today()).split('-');
+    const ext = (f.name.split('.').pop() || 'mp3').toLowerCase();
+    const name = f.name.replace(/\.[^.]+$/, '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'episode';
+    const pathRel = `wp-content/uploads/${y}/${m}/${name}.${ext}`;
+    const stat = root.querySelector('#e-pc-stat'); stat.textContent = `uploading ${(f.size / 1048576).toFixed(1)} MB…`;
+    try {
+      const duration = await new Promise((res) => { const a = document.createElement('audio'); const u = URL.createObjectURL(f); a.preload = 'metadata'; a.onloadedmetadata = () => { URL.revokeObjectURL(u); const t = Math.round(a.duration || 0); res(t ? `${Math.floor(t / 3600)}:${String(Math.floor(t % 3600 / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}` : ''); }; a.onerror = () => res(''); a.src = u; });
+      const r = await ctx.api().commitFiles([{ path: pathRel, content: new Uint8Array(await f.arrayBuffer()) }], `Upload podcast audio: ${f.name}`);
+      root.querySelector('#e-pc-audio').value = '/' + pathRel;
+      if (duration && !root.querySelector('#e-pc-duration').value) root.querySelector('#e-pc-duration').value = duration;
+      draft.podcast = { ...(draft.podcast || {}), audio: '/' + pathRel, length: f.size, type: f.type || undefined };
+      stat.textContent = `${(f.size / 1048576).toFixed(1)} MB · ${f.type || ext} · committed ${String(r.commitSha || r.sha || '').slice(0, 7)}`;
+      schedulePreview();
+    } catch (err) { stat.textContent = ''; msg(`✗ ${ctx.esc(err.message)}`, 'err'); }
+  };
   // Insert image: resize/encode in the browser, commit to wp-content/uploads/YYYY/MM/, insert the responsive snippet
   root.querySelector('#e-img').onchange = async (e) => {
     const files = [...e.target.files].filter((f) => f.type.startsWith('image/')); e.target.value = '';

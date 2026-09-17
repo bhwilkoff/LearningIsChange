@@ -2187,7 +2187,14 @@
           "parent": null,
           "html": "<p>Many thanks for the link-love and reference… keep exploring and seeking the ‘right’ questions my friend!</p>\n<p>Peace</p>\n<p>DK</p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/LiC1ItchesandScratches.mp3",
+        "type": "audio/mpeg",
+        "length": 9947394,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 840,
@@ -3480,7 +3487,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2008.json"
+      "_shard": "2008.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/ItsAllHappening.mp3",
+        "type": "audio/mpeg",
+        "length": 5738945,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 877,
@@ -6948,7 +6962,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2008.json"
+      "_shard": "2008.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/RipeEnvironment9.mp3",
+        "type": "audio/mpeg",
+        "length": 5038655,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 968,
@@ -7479,7 +7500,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2008.json"
+      "_shard": "2008.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/RipeEnvironment10b.mp3",
+        "type": "audio/mpeg",
+        "length": 5983244,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 977,
@@ -7899,7 +7927,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2008.json"
+      "_shard": "2008.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/AuthenticLearningatCAGT.mp3",
+        "type": "audio/mpeg",
+        "length": 22351008,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 988,
@@ -9283,7 +9318,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2008.json"
+      "_shard": "2008.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/KevinHoneycuttDrivingQuestions121108.mp3",
+        "type": "audio/mpeg",
+        "length": 25648352,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 1013,

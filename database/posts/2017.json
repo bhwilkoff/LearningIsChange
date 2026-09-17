@@ -57,7 +57,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2017.json"
+      "_shard": "2017.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2017/01/whoisAPS_-How-can-we-best-support-teachers-and-students_.mp3",
+        "type": "audio/mpeg",
+        "length": 4970643,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5571,
@@ -114,7 +121,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2017.json"
+      "_shard": "2017.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2017/01/WhoisAPS_-How-can-we-engage-our-families-in-the-conversation-about-learning_.mp3",
+        "type": "audio/mpeg",
+        "length": 6513142,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5572,
@@ -171,7 +185,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2017.json"
+      "_shard": "2017.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2017/01/WhoisAPS_-How-can-we-show-and-grow-our-passion-for-students_.mp3",
+        "type": "audio/mpeg",
+        "length": 7665648,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5573,
@@ -228,7 +249,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2017.json"
+      "_shard": "2017.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2017/01/WhoisAPS_-How-do-you-build-a-system-that-addresses-every-students-needs_.mp3",
+        "type": "audio/mpeg",
+        "length": 4866170,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5574,
@@ -285,7 +313,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2017.json"
+      "_shard": "2017.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2017/01/whoisAPS_-What-are-the-missing-pieces-from-our-district_.mp3",
+        "type": "audio/mpeg",
+        "length": 4757484,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5575,
@@ -342,7 +377,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2017.json"
+      "_shard": "2017.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2017/01/whoisAPS_-Why-dont-our-students-have-more-access-to-books-and-reading_.mp3",
+        "type": "audio/mpeg",
+        "length": 6972683,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5576,

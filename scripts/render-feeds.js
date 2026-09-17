@@ -65,10 +65,90 @@ ${posts.map(item).join('\n')}
 `;
 }
 
+// ---- Podcast (database/podcast.json + posts with a `podcast` field) --------
+// Item GUID = the post URL (as the retired /podcast-rss/ tool wrote it), so
+// subscribers see no re-downloads. Enclosure length is refreshed from the
+// file on disk when it exists; the stored length is the fallback.
+const MIME = { mp3: 'audio/mpeg', m4a: 'audio/mp4', mp4: 'audio/mp4', aac: 'audio/aac', ogg: 'audio/ogg', wav: 'audio/wav', m4v: 'video/mp4' };
+function podcastItem(p) {
+  const pc = p.podcast; const d = dates(p);
+  const audio = String(pc.audio || '');
+  const abs = audio.startsWith('/') ? SITE + audio : audio;
+  let length = Number(pc.length) || 0;
+  try { if (audio.startsWith('/')) length = fs.statSync(path.join(REPO_ROOT, decodeURIComponent(audio.slice(1)))).size; } catch { /* file not in repo (see media library → broken references) */ }
+  const type = pc.type || MIME[audio.split('.').pop().toLowerCase()] || 'audio/mpeg';
+  const summary = pc.summary || describe(p, 200);
+  return `    <item>
+      <title>${esc(unescapeEntities(p.title || 'Untitled'))}</title>
+      <link>${SITE}${p.url}</link>
+      <guid isPermaLink="true">${SITE}${p.url}</guid>
+      <pubDate>${rfc822(d.iso)}</pubDate>
+      <description>${cdata(summary)}</description>
+      <enclosure url="${esc(abs)}" type="${esc(type)}" length="${length}"/>
+      <itunes:title>${esc(unescapeEntities(p.title || 'Untitled'))}</itunes:title>
+      <itunes:summary>${cdata(summary)}</itunes:summary>${pc.duration ? `\n      <itunes:duration>${esc(pc.duration)}</itunes:duration>` : ''}${pc.episode ? `\n      <itunes:episode>${Number(pc.episode)}</itunes:episode>` : ''}${pc.season ? `\n      <itunes:season>${Number(pc.season)}</itunes:season>` : ''}
+      <itunes:episodeType>${esc(pc.episode_type || 'full')}</itunes:episodeType>
+      <itunes:explicit>${pc.explicit ? 'true' : 'false'}</itunes:explicit>
+    </item>`;
+}
+function podcastFeed(episodes) {
+  const c = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'database', 'podcast.json'), 'utf8')).channel;
+  const img = c.image && c.image.startsWith('/') ? SITE + c.image : c.image;
+  const now = new Date().toUTCString().replace(/GMT$/, '+0000');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+>
+  <channel>
+    <title>${esc(c.title)}</title>
+    <link>${esc(c.link || SITE)}</link>
+    <description>${esc(c.description)}</description>
+    <language>${esc(c.language || 'en-us')}</language>
+    <copyright>${esc(c.copyright || '')}</copyright>
+    <lastBuildDate>${now}</lastBuildDate>
+    <pubDate>${episodes.length ? rfc822(dates(episodes[0]).iso) : now}</pubDate>
+    <generator>Learning is Change (scripts/render-feeds.js)</generator>
+
+    <atom:link href="${SITE}/feed/podcast/" rel="self" type="application/rss+xml"/>
+
+    <itunes:author>${esc(c.author)}</itunes:author>
+    <itunes:summary>${esc(c.description)}</itunes:summary>
+    <itunes:type>${esc(c.type || 'episodic')}</itunes:type>
+    <itunes:owner>
+      <itunes:name>${esc(c.owner_name || c.author)}</itunes:name>
+      <itunes:email>${esc(c.owner_email || '')}</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>${c.explicit ? 'true' : 'false'}</itunes:explicit>
+    <itunes:category text="${esc(c.category || 'Education')}"/>
+    <itunes:image href="${esc(img)}"/>
+
+    <image>
+      <url>${esc(img)}</url>
+      <title>${esc(c.title)}</title>
+      <link>${esc(c.link || SITE)}</link>
+    </image>
+
+    <googleplay:author>${esc(c.author)}</googleplay:author>
+    <googleplay:description>${esc(c.description)}</googleplay:description>
+    <googleplay:image href="${esc(img)}"/>
+    <googleplay:explicit>${c.explicit ? 'yes' : 'no'}</googleplay:explicit>
+    <googleplay:category text="${esc(c.category || 'Education')}"/>
+
+${episodes.map(podcastItem).join('\n\n')}
+  </channel>
+</rss>
+`;
+}
+
 const newest = loadAllPosts().reverse().filter((p) => p.content !== undefined);
+const episodes = newest.filter((p) => p.podcast && p.podcast.audio);
 const outputs = [
   ['feed/index.xml', feed(newest.slice(0, INDEX_COUNT), '/feed/')],
   ['feed/full.xml', feed(newest, '/feed/full.xml')],
+  ['feed/podcast/feed.xml', podcastFeed(episodes)],
 ];
 for (const [rel, xml] of outputs) {
   const f = path.join(REPO_ROOT, rel);

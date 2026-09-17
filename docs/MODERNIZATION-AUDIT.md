@@ -857,7 +857,23 @@ appended here as ticks complete.
   /admin/db-maintenance/` are redirects into LiC Admin; their workflows
   (`dedup-execute.yml`, `database-maintenance.yml`) removed;
   `/podcast-rss/` stays until the podcast feed renders from JSON.
-- **Next**: port the podcast feed to the renderer (episodes = posts with
-  an audio enclosure; keep GUIDs) and retire `/podcast-rss/`; then
-  Content Review Queue §E (E-2 mismatched audio, E-3 unreferenced
-  uploads, E-4 broken references) as Ben decides.
+- **2026-09-17 · A6 — podcast on the new architecture** (Ben: "make it
+  so that everything (including podcast-rss) uses the new
+  architecture"). The old feed was pure data: 165 items, each linked
+  1:1 to a post, GUID = post URL, all enclosures on-site. Migrated:
+  channel → `database/podcast.json`; each item → `podcast: { audio,
+  type, length, explicit, episode_type }` on its post. `render-feeds.js`
+  now renders `feed/podcast/feed.xml` (GUID set identical; enclosure
+  lengths corrected from the files on disk — the old tool had stored
+  wrong sizes for 163 of them; `<itunes:duration>`/episode/season when
+  present). Schema + validator know the field; `index-media.js` reads
+  `podcast.audio` instead of the rendered feed. LiC Admin: a **Podcast**
+  card in the post editor (audio path or **Upload audio…** → commit,
+  duration read from the file, episode №, type, explicit, summary,
+  Remove from podcast) and a **Podcast** channel card in Settings (saves
+  `podcast.json`, dispatches a feeds render). `/podcast-rss/` retired
+  as a redirect; the admin bar lists only LiC Admin + Search. **Every
+  admin surface is now on the JSON → render pipeline.**
+- **Next**: Content Review Queue §E (E-2 mismatched audio, E-3
+  unreferenced uploads, E-4 broken references) as Ben decides; optional
+  polish (dark/light manual toggle, `llms.txt` refresh).

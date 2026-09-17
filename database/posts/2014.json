@@ -14189,7 +14189,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.m4a",
+        "type": "audio/mp4",
+        "length": 10616671,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 3934,
@@ -17107,7 +17114,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.m4a",
+        "type": "audio/mp4",
+        "length": 12396826,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 3975,
@@ -21650,7 +21664,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.m4a",
+        "type": "audio/mp4",
+        "length": 13620696,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4037,
@@ -26150,7 +26171,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/02/What-Will-Arlo-Know.m4a",
+        "type": "audio/mp4",
+        "length": 9178244,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4107,
@@ -28952,7 +28980,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.m4a",
+        "type": "audio/mp4",
+        "length": 17613238,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4142,
@@ -29683,7 +29718,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.m4a",
+        "type": "audio/mp4",
+        "length": 11451488,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4156,
@@ -34179,7 +34221,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.m4a",
+        "type": "audio/mp4",
+        "length": 8633776,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4211,
@@ -38688,7 +38737,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/03/How-Clear-Is-Your-Role.m4a",
+        "type": "audio/mp4",
+        "length": 11046920,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4275,
@@ -44122,7 +44178,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.m4a",
+        "type": "audio/mp4",
+        "length": 15688064,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4340,
@@ -48815,7 +48878,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.m4a",
+        "type": "audio/mp4",
+        "length": 9456576,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4406,
@@ -53581,7 +53651,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.m4a",
+        "type": "audio/mp4",
+        "length": 8587520,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4482,
@@ -55271,7 +55348,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.m4a",
+        "type": "audio/mp4",
+        "length": 13097663,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4509,
@@ -59500,7 +59584,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.m4a",
+        "type": "audio/mp4",
+        "length": 8903380,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4583,
@@ -64458,7 +64549,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..m4a",
+        "type": "audio/mp4",
+        "length": 10693872,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4649,
@@ -66678,7 +66776,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.m4a",
+        "type": "audio/mp4",
+        "length": 5998926,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4680,
@@ -68040,7 +68145,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2014.json"
+      "_shard": "2014.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.m4a",
+        "type": "audio/mp4",
+        "length": 18972938,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 4700,

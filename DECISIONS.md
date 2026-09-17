@@ -411,7 +411,7 @@ accent) is replaced; the header image and tagline are queued for
 Ben's call (queue B-2, B-3) rather than silently dropped.
 
 ## Decision 015 — LiC Admin: one application on the JSON content model
-*Date: 2026-09-16 · Status: **APPROVED by Ben · DELIVERED 2026-09-17** (A0–A5; `/podcast-rss/` is the one legacy tool still standing, pending a JSON-rendered podcast feed)*
+*Date: 2026-09-16 · Status: **APPROVED by Ben · DELIVERED 2026-09-17** (A0–A6: the podcast feed renders from `database/podcast.json` + posts with a `podcast` field; every legacy tool is a redirect)*
 
 **Decision**: The eleven single-file admin tools are replaced by one
 ES-module application at `/admin/` — views for **Posts, Pages, Terms,

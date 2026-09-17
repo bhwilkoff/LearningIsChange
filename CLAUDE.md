@@ -47,10 +47,8 @@ tombstone) and gates every render commit.
   is the CMS. It signs in with the GitHub App (Decision 016; encrypted
   token as fallback), edits JSON in `database/`, uploads images as WebP
   1600/800 pairs, and dispatches `render-site.yml`. Every view is gated
-  behind a credential (`admin/admin-bar.js` gates the last legacy tool
-  too). The old single-file tools retired on 2026-09-17 (Decision 015,
-  A5) and now redirect into the app; `/podcast-rss/` is the one that
-  remains until the podcast feed renders from JSON.
+  behind a credential. The old single-file tools retired on 2026-09-17
+  (Decision 015, A5/A6) and now redirect into the app.
 - **Data layer**: `database/` holds JSON indices (`pages.json`,
   `taxonomies.json`, `authors.json`, per-year `posts/YYYY.json`,
   `search.json`, `manifest.json`, `changelog.json`) plus `search.db`
@@ -60,8 +58,9 @@ tombstone) and gates every render commit.
   `taxonomyTerm()` gives the canonical `{name, slug, url}` shape),
   feeds, editor, pickers. See `admin/lib/README.md`.
 - **Feeds**: `feed/index.xml` (newest 50) and `feed/full.xml` (all
-  posts, ~11 MB) are rendered by `scripts/render-feeds.js`; the podcast
-  feed has its own tool. Never patch feeds in place.
+  posts, ~11 MB) and `feed/podcast/feed.xml` (posts carrying a
+  `podcast` field + `database/podcast.json` channel settings) are all
+  rendered by `scripts/render-feeds.js`. Never patch feeds in place.
 - **Comments** live on each post's JSON entry as `comments[]` (recovered
   from git; rendered read-only). Never regenerate from a template that
   lacks the `{{comments}}` slot.
@@ -94,13 +93,12 @@ tombstone) and gates every render commit.
 
 | Path | Role |
 |---|---|
-| `/admin/app/` | **LiC Admin** — the CMS (`admin/app/{app,store,media}.js`, `views/*.js`) |
-| `/podcast-rss/` | Podcast feed builder (writes `feed/podcast/feed.xml`); legacy, kept until ported |
+| `/admin/app/` | **LiC Admin** — the CMS (`admin/app/{app,store,media}.js`, `views/*.js`); podcast episodes are set in the post editor, the channel in Settings |
 | `/search/` | Public search UI on the blog shell |
 
 `/admin/`, `/new/`, `/edit/`, `/remove/`, `/update/`, `/links/`,
-`/admin/regenerate/`, `/admin/dedup/`, `/admin/db-maintenance/` are
-redirects into LiC Admin (their code is in git history before
+`/podcast-rss/`, `/admin/regenerate/`, `/admin/dedup/`,
+`/admin/db-maintenance/` are redirects into LiC Admin (their code is in git history before
 2026-09-17). Shared browser code lives in `admin/lib/` (config, auth,
 vault, oauth, github, slug, mutate, editor, pickers, bluesky).
 

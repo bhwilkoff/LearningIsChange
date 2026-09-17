@@ -10327,7 +10327,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/07/BudHuntKeynote.mp3",
+        "type": "audio/mpeg",
+        "length": 11471404,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5113,
@@ -11074,7 +11081,14 @@
           "parent": "1294",
           "html": "<p>I kept the camera steady by using the YouTube Capture app which has a stabilizer.</p>\n<p>Don’t worry, I am going to watch where I am going. I had to promise my wife I wouldn’t make any more videos while driving, so this is the next logical step.</p>\n<p>So, what question would you like to ask first?</p>\n<p>My first one for you is: How can we trust teachers more?</p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/Launching-AskBenW.mp3",
+        "type": "audio/mpeg",
+        "length": 1488586,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5127,
@@ -11603,7 +11617,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-do-we-know-when-learners-are-paying-attention-when-so-much-is-happening-digitally_.mp3",
+        "type": "audio/mpeg",
+        "length": 2932504,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5138,
@@ -12510,7 +12531,14 @@
           "parent": null,
           "html": "<p>          <!-- wp:paragraph --></p>\n<p>I just noticed that there was a double intro there. I just edited that part out. Sorry about that.</p>\n<p><!-- /wp:paragraph --></p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-do-you-get-started-with-Blended-Learning-as-a-traditional-classroom-teacher_.mp3",
+        "type": "audio/mpeg",
+        "length": 3831737,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5150,
@@ -12578,7 +12606,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-Digital-Citizenship-Where-do-you-start_.mp3",
+        "type": "audio/mpeg",
+        "length": 3899616,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5152,
@@ -12848,7 +12883,14 @@
           "parent": null,
           "html": "<p>          <!-- wp:paragraph --></p>\n<p>Currently we are nine schools located in USA, Vietnam, Jamaica, Cameroon, Ethiopia, Uganda, Nigeria, Sierra Leone. I am so happy you are interested. What grades do you instruct? I teach 7th grade social studies in Detroit.</p>\n<p><!-- /wp:paragraph --></p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-Should-teachers-post-videos-as-is-or-should-they-edit_produce_polish-them-first_.mp3",
+        "type": "audio/mpeg",
+        "length": 2874402,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5154,
@@ -13038,7 +13080,14 @@
           "parent": null,
           "html": "<p>          <!-- wp:paragraph --></p>\n<p>Great video. We need to share more and I think I am going to dust off my Instagram. Enjoy your trip. </p>\n<p><!-- /wp:paragraph --></p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-do-we-ensure-school-leaders-have-what-they-need-for-their-own-learning_.mp3",
+        "type": "audio/mpeg",
+        "length": 3161117,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5155,
@@ -13828,7 +13877,14 @@
           "parent": null,
           "html": "<p>          <!-- wp:paragraph --></p>\n<p>Thanks for the insight! &nbsp;What about, “Ask a pathway teacher” series???</p>\n<p><!-- /wp:paragraph --></p>"
         }
-      ]
+      ],
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-are-the-best-ways-to-curate-resources_.mp3",
+        "type": "audio/mpeg",
+        "length": 3581134,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5167,
@@ -13890,7 +13946,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-role-should-email-play-in-our-teaching-and-learning-lives_.mp3",
+        "type": "audio/mpeg",
+        "length": 3029030,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5173,
@@ -13952,7 +14015,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-will-you-celebrate-connected-educator-month-this-year_.mp3",
+        "type": "audio/mpeg",
+        "length": 2856408,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5174,
@@ -14014,7 +14084,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-Is-Personalized-Learning-a-Fad-Trend-or-repackaged-idea_.mp3",
+        "type": "audio/mpeg",
+        "length": 3064760,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5175,
@@ -14076,7 +14153,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-Should-teachers-and-academics-move-more_.mp3",
+        "type": "audio/mpeg",
+        "length": 3564203,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5178,
@@ -14138,7 +14222,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-do-you-do-when-the-tech-or-the-activity-doesnt-work_.mp3",
+        "type": "audio/mpeg",
+        "length": 3600377,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5180,
@@ -14200,7 +14291,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-is-one-program_app_strategy-that-you-would-recommend-for-all-teachers_.mp3",
+        "type": "audio/mpeg",
+        "length": 3752111,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5181,
@@ -14262,7 +14360,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-When-Do-You-Find-Time-To-Learn_-Full-Video.mp3",
+        "type": "audio/mpeg",
+        "length": 4703146,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5183,
@@ -14381,7 +14486,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/What-was-one-touchstone-moment-of-your-teaching-career-that-you-carry-with-you_-AskBenW.mp3",
+        "type": "audio/mpeg",
+        "length": 3004594,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5186,
@@ -14507,7 +14619,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-can-we-be-courageous-in-our-professional-learning_.mp3",
+        "type": "audio/mpeg",
+        "length": 3711548,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5189,
@@ -15173,7 +15292,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-When-is-it-okay-to-lecture-in-PD_.mp3",
+        "type": "audio/mpeg",
+        "length": 4131576,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5205,
@@ -15300,7 +15426,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-When-should-we-multi-task-and-when-should-we-single-task_.mp3",
+        "type": "audio/mpeg",
+        "length": 4708593,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5210,
@@ -15362,7 +15495,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-is-the-worst-consequence-of-your-best-idea_.mp3",
+        "type": "audio/mpeg",
+        "length": 2500505,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5212,
@@ -15487,7 +15627,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-myths-should-we-let-go-of-in-education_.mp3",
+        "type": "audio/mpeg",
+        "length": 4198252,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5216,
@@ -15612,7 +15759,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-and-for-what-purpose-should-we-be-educating-our-kids_.mp3",
+        "type": "audio/mpeg",
+        "length": 2493409,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5220,
@@ -16153,7 +16307,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-do-we-measure-and-demonstrate-impact_.mp3",
+        "type": "audio/mpeg",
+        "length": 3475388,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5239,
@@ -16215,7 +16376,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-Shouldnt-we-be-further-along-in-our-progress_.mp3",
+        "type": "audio/mpeg",
+        "length": 2596843,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5242,
@@ -18259,7 +18427,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-are-you-thankful-for_.mp3",
+        "type": "audio/mpeg",
+        "length": 3965221,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5285,
@@ -18321,7 +18496,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-is-your-responsibility-to-speak-up_.mp3",
+        "type": "audio/mpeg",
+        "length": 3794290,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5287,
@@ -18630,7 +18812,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-When-should-we-duplicate-efforts_.mp3",
+        "type": "audio/mpeg",
+        "length": 2795570,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5294,
@@ -18898,7 +19087,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-How-can-we-create-BYOD-equity_.mp3",
+        "type": "audio/mpeg",
+        "length": 2896086,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5300,
@@ -18960,7 +19156,14 @@
           "notes": "Initial database generation"
         }
       ],
-      "_shard": "2015.json"
+      "_shard": "2015.json",
+      "podcast": {
+        "audio": "/wp-content/uploads/2016/03/AskBenW_-What-are-the-teaching-and-learning-trends-of-2015_.mp3",
+        "type": "audio/mpeg",
+        "length": 4501487,
+        "explicit": false,
+        "episode_type": "full"
+      }
     },
     {
       "id": 5303,

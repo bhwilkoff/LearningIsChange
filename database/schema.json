@@ -27,6 +27,7 @@
         "date_modified": "datetime",
         "comments": "comment[]",
         "bluesky": "object — { uri, cid, url, posted_at } from the cross-post (A4)",
+        "podcast": "object — { audio: path, type?, length?, duration?, episode?, season?, episode_type?: full|trailer|bonus, explicit?: boolean, summary? }; a post with one is an episode in feed/podcast/feed.xml (A6)",
         "content_preview": "string",
         "history": "array"
       },
@@ -49,7 +50,8 @@
     "database/pages.json": "page[] | { pages: page[] }",
     "database/taxonomies.json": { "categories": { "count": "integer", "items": "map<slug, term>" }, "tags": { "count": "integer", "items": "map<slug, term>" } },
     "database/page-rules.json": { "redirects": "map<path, path>", "noindex": "path[]" },
-    "database/permalinks.json": { "urls": "path[]", "guids": "map<file, string[]>" }
+    "database/permalinks.json": { "urls": "path[]", "guids": "map<file, string[]>" },
+    "database/podcast.json": { "channel": { "title": "string", "description": "string", "link": "url", "language": "string", "copyright": "string", "author": "string", "owner_name": "string", "owner_email": "string", "image": "path", "category": "string", "explicit": "boolean", "type": "enum:episodic,serial" } }
   },
   "scalars": {
     "slug": "^[a-z0-9]+(?:-[a-z0-9]+)*$ (legacy exceptions tolerated with a warning)",

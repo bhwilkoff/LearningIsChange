@@ -4,10 +4,10 @@
 //   node scripts/index-media.js            dry run (prints the summary)
 //   node scripts/index-media.js --apply    writes database/media.json
 //
-// Referrers scanned: post + page bodies/excerpts in database/ (drafts and
-// tombstones included — a hidden post still "uses" its images), the podcast
-// feed's enclosures/artwork, and the hand-written shell (templates, portfolio,
-// meet, support). Resize variants (name-300x200.jpg) fold into their original.
+// Referrers scanned: post + page bodies/excerpts and `podcast.audio` in
+// database/ (drafts and tombstones included — a hidden post still "uses" its
+// files), the podcast channel artwork, and the hand-written shell (templates,
+// portfolio, meet, support). Resize variants (name-300x200.jpg) fold into their original.
 // Referenced paths with no file in the repo are listed as `missing`.
 // Image dimensions come from the file headers (PNG/GIF/JPEG/WebP), so the
 // whole run is stat + a few KB per file — no full reads of 1.3 GB.
@@ -97,20 +97,16 @@ for (const f of fs.readdirSync(path.join(ROOT, 'database/posts')).filter((n) => 
     const status = p.removed ? 'removed' : p.status === 'draft' ? 'draft' : 'published';
     const ref = { type: 'post', url: String(p.url || '').replace(/^https?:\/\/[^/]+/, ''), title: p.title || 'Untitled', status };
     scan(p.content, ref); scan(p.excerpt, ref);
+    if (p.podcast && p.podcast.audio) record(canonical(String(p.podcast.audio).replace(/^\//, '')), { ...ref, type: 'podcast' });
   }
 }
 {
   const d = readJson('database/pages.json'); const pages = Array.isArray(d) ? d : d.pages || [];
   for (const p of pages) scan(p.content, { type: 'page', url: String(p.url || '').replace(/^https?:\/\/[^/]+/, ''), title: p.title || 'Untitled', status: p.status === 'draft' ? 'draft' : 'published' });
 }
-if (fs.existsSync(path.join(ROOT, 'feed/podcast/feed.xml'))) {
-  const xml = fs.readFileSync(path.join(ROOT, 'feed/podcast/feed.xml'), 'utf8');
-  for (const item of xml.split(/<item>/).slice(1)) {
-    const title = (/<title>(?:<!\[CDATA\[)?([^<\]]*)/.exec(item) || [])[1] || 'Podcast episode';
-    const link = (/<link>([^<]*)<\/link>/.exec(item) || [])[1] || '';
-    scan(item, { type: 'podcast', url: link.replace(/^https?:\/\/[^/]+/, ''), title: title.trim() });
-  }
-  scan(xml.split(/<item>/)[0], { type: 'podcast', url: '/feed/podcast/', title: 'Podcast feed (channel artwork)' });
+if (fs.existsSync(path.join(ROOT, 'database/podcast.json'))) {
+  const c = readJson('database/podcast.json').channel || {};
+  if (c.image) record(canonical(String(c.image).replace(/^\//, '')), { type: 'podcast', url: '/feed/podcast/', title: 'Podcast channel artwork' });
 }
 const SHELL = ['templates', 'portfolio', 'meet', 'css', 'support.html']; // hand-written only; rendered pages inherit from posts
 function walkShell(rel) {
