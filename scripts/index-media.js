@@ -21,7 +21,7 @@ const APPLY = process.argv.includes('--apply');
 const OUT = path.join(ROOT, 'database/media.json');
 
 const KIND = { jpg: 'image', jpeg: 'image', png: 'image', gif: 'image', webp: 'image', svg: 'image', avif: 'image',
-  mp3: 'audio', m4a: 'audio', wav: 'audio', ogg: 'audio', mp4: 'video', mov: 'video', m4v: 'video', webm: 'video',
+  mp3: 'audio', m4a: 'audio', wav: 'audio', ogg: 'audio', mp4: 'video', mov: 'video', m4v: 'video', webm: 'video', flv: 'video',
   pdf: 'doc', doc: 'doc', docx: 'doc', ppt: 'doc', pptx: 'doc', xls: 'doc', xlsx: 'doc', txt: 'doc', xml: 'doc', zip: 'doc' };
 
 // ---- walk the uploads tree ----------------------------------------------

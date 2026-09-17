@@ -795,6 +795,14 @@ appended here as ticks complete.
   (`#/media?use=missing`), and the tag/category pickers
   (`admin/lib/pickers.js`) lost their hard-coded light colours — chips,
   input, and suggestions are token-based and follow dark/light (Ben).
+- **2026-09-17 · Media recovered from backup (Decision 017)** — Ben
+  pointed at his backup drive; the July 2016 site tarball (truncated)
+  held 41 of the 142 broken references and the loose backups one more.
+  Restored the 22 a browser can use: 16 podcast episodes (2014 `.m4a`),
+  an `.m4v`, an `.flv`, two images, a text file, `2007/08/top-5.doc`
+  (+190 MB). Skipped 20 Flash `.swf` screencasts. Broken references
+  142 → 120; the rest exist in no backup. Library summary now 1,052
+  files / 700 used.
 - **Next (blocked on Ben)**: A5 — retire the legacy tools (`/new/
   /edit/ /remove/ /update/ /links/ /podcast-rss/ /admin/regenerate/
   /admin/dedup/ /admin/db-maintenance/`) as redirects into LiC Admin

@@ -488,3 +488,26 @@ unavoidable for real sign-in; a Worker is the smallest possible one.
 **Operational**: Ben authorized the GitHub App and Worker to be created
 through the browser session; the client secret is moved clipboard →
 Worker secret and is never written into chat, docs, or the repo.
+
+## Decision 017 — Restore recovered media from the 2016 site backup (+190 MB)
+*Date: 2026-09-17 · Status: **APPROVED by Ben***
+
+**Context**: the media index (`scripts/index-media.js`, `database/media.json`)
+found 142 paths under `wp-content/uploads/` that posts, pages or the
+podcast feed link to but that do not exist in the repo. Ben pointed at
+`/Volumes/Backup of Backup/Wilkoff Media/Backups`; the July 2016 full-site
+tarball there (truncated, 5,907 upload entries) held 41 of them and the
+loose backups held one more.
+
+**Decision**: restore the 22 files that a browser can still use — 16
+podcast episodes (2014 `.m4a`, 6–19 MB each), one `.m4v`, one `.flv`,
+two images, one text file, and `2007/08/top-5.doc` — into their original
+paths. **Not restored**: 20 `.swf` Flash screencasts (unplayable in any
+current browser; restoring them fixes nothing). The remaining ~100 (2007
+`.doc` attachments and 2007–2016 images) exist in no backup we have; they
+stay listed as broken references in the Media library.
+
+**Size**: +190 MB on a repo already past GitHub's 1 GB guideline. Accepted
+because the files are the actual content the posts and the podcast feed
+point to; every file is under 20 MB (well under the 100 MB per-file cap).
+`index-media.js` runs on every render so the Library reflects the change.

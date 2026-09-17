@@ -1,18 +1,18 @@
 {
- "generated": "2026-09-17T14:56:16.118Z",
+ "generated": "2026-09-17T15:28:43.159Z",
  "root": "wp-content/uploads",
  "summary": {
-  "files": 1030,
-  "originals": 1020,
-  "bytes": 1368920199,
-  "used": 679,
+  "files": 1052,
+  "originals": 1041,
+  "bytes": 1557963037,
+  "used": 700,
   "unused": 341,
-  "missing": 142,
+  "missing": 120,
   "by_kind": {
-   "image": 847,
-   "audio": 161,
-   "video": 5,
-   "doc": 7,
+   "image": 848,
+   "audio": 177,
+   "video": 7,
+   "doc": 9,
    "other": 0
   }
  },
@@ -396,6 +396,22 @@
    "h": 640
   },
   {
+   "path": "wp-content/uploads/2007/08/top-5.doc",
+   "bytes": 32256,
+   "ext": "doc",
+   "kind": "doc",
+   "year": "2007",
+   "month": "08",
+   "used_by": [
+    {
+     "type": "post",
+     "url": "/2007/08/24/082407/",
+     "title": "08.24.07",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2007/12/benhandsout.jpg",
    "bytes": 19499,
    "ext": "jpg",
@@ -683,6 +699,22 @@
    ]
   },
   {
+   "path": "wp-content/uploads/2008/05/iloveyou.flv",
+   "bytes": 812874,
+   "ext": "flv",
+   "kind": "video",
+   "year": "2008",
+   "month": "05",
+   "used_by": [
+    {
+     "type": "post",
+     "url": "/2008/05/02/learninglanguage/",
+     "title": "Learning Language",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2008/07/p-640-427-1b2c9316-173a-4087-9478-b7d3373667c7.jpeg",
    "bytes": 14992,
    "ext": "jpeg",
@@ -699,6 +731,22 @@
    ],
    "w": 427,
    "h": 640
+  },
+  {
+   "path": "wp-content/uploads/2009/01/edtechtalk-tags.txt",
+   "bytes": 18307,
+   "ext": "txt",
+   "kind": "doc",
+   "year": "2009",
+   "month": "01",
+   "used_by": [
+    {
+     "type": "post",
+     "url": "/2009/01/05/a-list-of-tags/",
+     "title": "A list of tags…",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2009/05/img_8866_morguefile.jpg",
@@ -2431,6 +2479,9 @@
      "status": "published"
     }
    ],
+   "variants": [
+    "wp-content/uploads/2013/10/easelly_visual-1-795x1024.jpg"
+   ],
    "w": 1254,
    "h": 1614
   },
@@ -3801,6 +3852,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.m4a",
+   "bytes": 12396826,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "01",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/01/30/what-is-the-moment-in-which-learning-changed-for-you/",
+     "title": "What Is The Moment In Which Learning Changed For You?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/01/30/what-is-the-moment-in-which-learning-changed-for-you/",
+     "title": "What Is The Moment In Which Learning Changed For You?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.jpg",
    "bytes": 96641,
    "ext": "jpg",
@@ -3817,6 +3889,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.m4a",
+   "bytes": 10616671,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "01",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/01/24/what-will-your-learning-legacy-be/",
+     "title": "What Will Your Learning Legacy Be?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/01/24/what-will-your-learning-legacy-be/",
+     "title": "What Will Your Learning Legacy Be?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/01/wpid-Photo-Jan-26-2014-440-PM.jpg",
@@ -4404,6 +4497,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.m4a",
+   "bytes": 13620696,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "02",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/02/06/how-can-we-crowdsource-our-digital-learning/",
+     "title": "How Can We Crowdsource Our Digital Learning?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/06/how-can-we-crowdsource-our-digital-learning/",
+     "title": "How Can We Crowdsource Our Digital Learning?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/02/IMG_0351.jpg",
@@ -5084,6 +5198,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.m4a",
+   "bytes": 17613238,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "02",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/02/25/what-types-of-fear-are-legitimate/",
+     "title": "What Types Of Fear Are Legitimate?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/25/what-types-of-fear-are-legitimate/",
+     "title": "What Types Of Fear Are Legitimate?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/02/What-Will-Arlo-Know.jpg",
    "bytes": 92040,
    "ext": "jpg",
@@ -5100,6 +5235,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/02/What-Will-Arlo-Know.m4a",
+   "bytes": 9178244,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "02",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/02/18/what-will-arlo-know/",
+     "title": "What Will Arlo Know?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/02/18/what-will-arlo-know/",
+     "title": "What Will Arlo Know?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.jpg",
@@ -5120,6 +5276,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.m4a",
+   "bytes": 11451488,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "03",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/03/04/are-we-making-upside-down-investments-in-education/",
+     "title": "Are We Making Upside Down Investments In Education?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/03/04/are-we-making-upside-down-investments-in-education/",
+     "title": "Are We Making Upside Down Investments In Education?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/03/How-Clear-Is-Your-Role.jpg",
    "bytes": 147633,
    "ext": "jpg",
@@ -5136,6 +5313,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/03/How-Clear-Is-Your-Role.m4a",
+   "bytes": 11046920,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "03",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/03/27/how-clear-is-your-role/",
+     "title": "How Clear Is Your Role?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/03/27/how-clear-is-your-role/",
+     "title": "How Clear Is Your Role?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/03/IMG_3494.jpg",
@@ -5208,6 +5406,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.m4a",
+   "bytes": 8633776,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "03",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/03/14/what-if-we-turned-off-email/",
+     "title": "What If We Turned Off Email?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/03/14/what-if-we-turned-off-email/",
+     "title": "What If We Turned Off Email?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/04/20140425_100133_928.jpg",
@@ -5354,6 +5573,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.m4a",
+   "bytes": 15688064,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "04",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/04/07/what-does-your-educational-bat-signal-consist-of/",
+     "title": "What Does Your Educational Bat Signal Consist Of?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/04/07/what-does-your-educational-bat-signal-consist-of/",
+     "title": "What Does Your Educational Bat Signal Consist Of?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.jpg",
    "bytes": 127368,
    "ext": "jpg",
@@ -5370,6 +5610,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.m4a",
+   "bytes": 9456576,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "04",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/04/25/what-is-your-mandate-for-learning/",
+     "title": "What Is Your Mandate For Learning?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/04/25/what-is-your-mandate-for-learning/",
+     "title": "What Is Your Mandate For Learning?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/05/1-1.jpg",
@@ -5462,6 +5723,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.m4a",
+   "bytes": 8587520,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "05",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/05/20/do-you-have-a-tenacious-verve/",
+     "title": "Do You Have A Tenacious Verve?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/05/20/do-you-have-a-tenacious-verve/",
+     "title": "Do You Have A Tenacious Verve?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/05/IMG_3844.gif",
    "bytes": 1833257,
    "ext": "gif",
@@ -5552,6 +5834,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.m4a",
+   "bytes": 13097663,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "06",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/06/04/how-are-you-defending-the-new-and-promoting-the-good/",
+     "title": "How Are You Defending The New And Promoting The Good?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/06/04/how-are-you-defending-the-new-and-promoting-the-good/",
+     "title": "How Are You Defending The New And Promoting The Good?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/06/IMG_4044.jpg",
    "bytes": 777266,
    "ext": "jpg",
@@ -5586,6 +5889,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.m4a",
+   "bytes": 8903380,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "06",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/06/27/is-your-position-public-facing/",
+     "title": "Is Your Position Public-Facing?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/06/27/is-your-position-public-facing/",
+     "title": "Is Your Position Public-Facing?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/06/library.jpg",
@@ -5804,6 +6128,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..m4a",
+   "bytes": 10693872,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "07",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/07/25/any-learning-happening-in-the-21st-century-is-21st-century-learning/",
+     "title": "Any Learning Happening In The 21St-Century IS 21St-Century Learning."
+    },
+    {
+     "type": "post",
+     "url": "/2014/07/25/any-learning-happening-in-the-21st-century-is-21st-century-learning/",
+     "title": "Any Learning Happening In The 21St-Century IS 21St-Century Learning.",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/07/I2BTrust2BTeachers.png",
    "bytes": 6237,
    "ext": "png",
@@ -5900,6 +6245,27 @@
    "h": 600
   },
   {
+   "path": "wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.m4a",
+   "bytes": 5998926,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "08",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/08/14/should-we-remove-the-struggle-from-professional-learning/",
+     "title": "Should We Remove The Struggle From Professional Learning?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/08/14/should-we-remove-the-struggle-from-professional-learning/",
+     "title": "Should We Remove The Struggle From Professional Learning?",
+     "status": "published"
+    }
+   ]
+  },
+  {
    "path": "wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.jpg",
    "bytes": 43645,
    "ext": "jpg",
@@ -5916,6 +6282,27 @@
    ],
    "w": 600,
    "h": 600
+  },
+  {
+   "path": "wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.m4a",
+   "bytes": 18972938,
+   "ext": "m4a",
+   "kind": "audio",
+   "year": "2014",
+   "month": "08",
+   "used_by": [
+    {
+     "type": "podcast",
+     "url": "/2014/08/25/when-robots-start-taking-careers-instead-of-jobs-what-does-career-ready-mean/",
+     "title": "When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?"
+    },
+    {
+     "type": "post",
+     "url": "/2014/08/25/when-robots-start-taking-careers-instead-of-jobs-what-does-career-ready-mean/",
+     "title": "When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?",
+     "status": "published"
+    }
+   ]
   },
   {
    "path": "wp-content/uploads/2014/09/142B-2B1.gif",
@@ -6785,6 +7172,24 @@
    "h": 360
   },
   {
+   "path": "wp-content/uploads/2015/01/tumblr_nhpz95uA4U1sw0wr0o1_1280.jpg",
+   "bytes": 298875,
+   "ext": "jpg",
+   "kind": "image",
+   "year": "2015",
+   "month": "01",
+   "used_by": [
+    {
+     "type": "post",
+     "url": "/2015/01/05/what-im-learning-studyblr-is-possibly-the-best-community-of-students-talking-about-studying-ever/",
+     "title": "What I'm Learning: #studyblr is possibly the best community of students talking about studying. Ever.",
+     "status": "published"
+    }
+   ],
+   "w": 956,
+   "h": 1048
+  },
+  {
    "path": "wp-content/uploads/2015/01/tumblr_nhpzc0oD681u3j0olo1_1280.jpg",
    "bytes": 238624,
    "ext": "jpg",
@@ -7470,6 +7875,22 @@
      "type": "page",
      "url": "/keyboard/",
      "title": "Keyboard",
+     "status": "published"
+    }
+   ]
+  },
+  {
+   "path": "wp-content/uploads/2016/03/342241033-1.m4v",
+   "bytes": 1743422,
+   "ext": "m4v",
+   "kind": "video",
+   "year": "2016",
+   "month": "03",
+   "used_by": [
+    {
+     "type": "page",
+     "url": "/342241033-1/",
+     "title": "342241033 (1)",
      "status": "published"
     }
    ]
@@ -16622,17 +17043,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2007/08/top-5.doc",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2007/08/24/082407/",
-     "title": "08.24.07",
-     "status": "published"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2007/09/090507.doc",
    "used_by": [
     {
@@ -17091,34 +17501,12 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2008/05/iloveyou.flv",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2008/05/02/learninglanguage/",
-     "title": "Learning Language",
-     "status": "published"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2008/07/portal-still-alive.jpg",
    "used_by": [
     {
      "type": "post",
      "url": "/2010/02/07/question-38-of-365-how-does-color-influence-our-actions-online/",
      "title": "Question 38 of 365: How does color influence our actions online?",
-     "status": "published"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2009/01/edtechtalk-tags.txt",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2009/01/05/a-list-of-tags/",
-     "title": "A list of tags…",
      "status": "published"
     }
    ]
@@ -17201,17 +17589,6 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2013/10/easelly_visual-1-795x1024.jpg",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2013/10/16/the-personalized-learning-environment-diagram-and-the-blended-learning-needs-assessment-template/",
-     "title": "The Personalized Learning Environment Diagram and the Blended Learning Needs Assessment Template",
-     "status": "published"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2014/01/Bridging-the-Digital-Divide-Technology-Teachers-Students.jpg",
    "used_by": [
     {
@@ -17219,262 +17596,6 @@
      "url": "/2014/01/12/im-intrigued-by-this-mind-map-envisioning-the-future-of-edtech-if-for-no-other-reason-than-it-is-the-only-visual-i/",
      "title": "I’m intrigued by this mind map envisioning the future of EdTech, if for no other reason than it is the only visual I…",
      "status": "published"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/01/What-Is-The-Moment-In-Which-Learning-Changed-For-You.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/01/30/what-is-the-moment-in-which-learning-changed-for-you/",
-     "title": "What Is The Moment In Which Learning Changed For You?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/01/30/what-is-the-moment-in-which-learning-changed-for-you/",
-     "title": "What Is The Moment In Which Learning Changed For You?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/01/What-Will-Your-Learning-Legacy-Be.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/01/24/what-will-your-learning-legacy-be/",
-     "title": "What Will Your Learning Legacy Be?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/01/24/what-will-your-learning-legacy-be/",
-     "title": "What Will Your Learning Legacy Be?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/02/How-Can-We-Crowdsource-Our-Digital-Learning.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/02/06/how-can-we-crowdsource-our-digital-learning/",
-     "title": "How Can We Crowdsource Our Digital Learning?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/02/06/how-can-we-crowdsource-our-digital-learning/",
-     "title": "How Can We Crowdsource Our Digital Learning?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/02/What-Types-Of-Fear-Are-Legitimate.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/02/25/what-types-of-fear-are-legitimate/",
-     "title": "What Types Of Fear Are Legitimate?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/02/25/what-types-of-fear-are-legitimate/",
-     "title": "What Types Of Fear Are Legitimate?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/02/What-Will-Arlo-Know.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/02/18/what-will-arlo-know/",
-     "title": "What Will Arlo Know?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/02/18/what-will-arlo-know/",
-     "title": "What Will Arlo Know?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/03/Are-We-Making-Upside-Down-Investments-In-Education.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/03/04/are-we-making-upside-down-investments-in-education/",
-     "title": "Are We Making Upside Down Investments In Education?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/03/04/are-we-making-upside-down-investments-in-education/",
-     "title": "Are We Making Upside Down Investments In Education?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/03/How-Clear-Is-Your-Role.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/03/27/how-clear-is-your-role/",
-     "title": "How Clear Is Your Role?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/03/27/how-clear-is-your-role/",
-     "title": "How Clear Is Your Role?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/03/What-If-We-Turned-Off-Email.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/03/14/what-if-we-turned-off-email/",
-     "title": "What If We Turned Off Email?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/03/14/what-if-we-turned-off-email/",
-     "title": "What If We Turned Off Email?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/04/What-Does-Your-Educational-Bat-Signal-Consist-Of.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/04/07/what-does-your-educational-bat-signal-consist-of/",
-     "title": "What Does Your Educational Bat Signal Consist Of?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/04/07/what-does-your-educational-bat-signal-consist-of/",
-     "title": "What Does Your Educational Bat Signal Consist Of?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/04/What-Is-Your-Mandate-For-Learning.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/04/25/what-is-your-mandate-for-learning/",
-     "title": "What Is Your Mandate For Learning?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/04/25/what-is-your-mandate-for-learning/",
-     "title": "What Is Your Mandate For Learning?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/05/Do-You-Have-A-Tenacious-Verve.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/05/20/do-you-have-a-tenacious-verve/",
-     "title": "Do You Have A Tenacious Verve?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/05/20/do-you-have-a-tenacious-verve/",
-     "title": "Do You Have A Tenacious Verve?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/06/How-Are-You-Defending-The-New-And-Promoting-The-Good.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/06/04/how-are-you-defending-the-new-and-promoting-the-good/",
-     "title": "How Are You Defending The New And Promoting The Good?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/06/04/how-are-you-defending-the-new-and-promoting-the-good/",
-     "title": "How Are You Defending The New And Promoting The Good?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/06/Is-Your-Position-Public-Facing.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/06/27/is-your-position-public-facing/",
-     "title": "Is Your Position Public-Facing?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/06/27/is-your-position-public-facing/",
-     "title": "Is Your Position Public-Facing?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/07/Any-Learning-Happening-In-The-21St-Century-IS-21St-Century-Learning..m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/07/25/any-learning-happening-in-the-21st-century-is-21st-century-learning/",
-     "title": "Any Learning Happening In The 21St-Century IS 21St-Century Learning.",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/07/25/any-learning-happening-in-the-21st-century-is-21st-century-learning/",
-     "title": "Any Learning Happening In The 21St-Century IS 21St-Century Learning."
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/08/Should-We-Remove-The-Struggle-From-Professional-Learning.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/08/14/should-we-remove-the-struggle-from-professional-learning/",
-     "title": "Should We Remove The Struggle From Professional Learning?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/08/14/should-we-remove-the-struggle-from-professional-learning/",
-     "title": "Should We Remove The Struggle From Professional Learning?"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2014/08/When-Robots-Start-Taking-Careers-Instead-Of-Jobs-What-Does-Career-Ready-Mean.m4a",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2014/08/25/when-robots-start-taking-careers-instead-of-jobs-what-does-career-ready-mean/",
-     "title": "When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?",
-     "status": "published"
-    },
-    {
-     "type": "podcast",
-     "url": "/2014/08/25/when-robots-start-taking-careers-instead-of-jobs-what-does-career-ready-mean/",
-     "title": "When Robots Start Taking Careers Instead Of Jobs, What Does Career Ready Mean?"
     }
    ]
   },
@@ -17556,34 +17677,12 @@
    ]
   },
   {
-   "path": "wp-content/uploads/2015/01/tumblr_nhpz95uA4U1sw0wr0o1_1280.jpg",
-   "used_by": [
-    {
-     "type": "post",
-     "url": "/2015/01/05/what-im-learning-studyblr-is-possibly-the-best-community-of-students-talking-about-studying-ever/",
-     "title": "What I'm Learning: #studyblr is possibly the best community of students talking about studying. Ever.",
-     "status": "published"
-    }
-   ]
-  },
-  {
    "path": "wp-content/uploads/2015/02/Screen+Shot+2015-02-07+at+6.06.56+AM.png",
    "used_by": [
     {
      "type": "post",
      "url": "/2015/02/12/c4c15-unpacking-powerful-words-teaching-children-well-teach-children-well/",
      "title": "#C4C15: Unpacking Powerful Words: Teaching Children Well | Teach Children Well",
-     "status": "published"
-    }
-   ]
-  },
-  {
-   "path": "wp-content/uploads/2016/03/342241033-1.m4v",
-   "used_by": [
-    {
-     "type": "page",
-     "url": "/342241033-1/",
-     "title": "342241033 (1)",
      "status": "published"
     }
    ]
