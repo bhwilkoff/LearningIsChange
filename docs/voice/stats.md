@@ -1,6 +1,6 @@
 # Voice statistics
 
-Measured over 867 essays (posts of 250+ words; 497,561 words, 27,291 sentences) by `scripts/build-voice-corpus.js` on 2026-09-25. Short link posts and tweets are excluded; typewritten pages count through their transcripts.
+Measured over 867 essays (posts of 250+ words; 497,561 words, 27,291 sentences) by `scripts/build-voice-corpus.js` on 2026-09-26. Short link posts and tweets are excluded; typewritten pages count through their transcripts.
 
 ## Rhythm
 
