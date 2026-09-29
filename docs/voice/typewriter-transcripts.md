@@ -194,7 +194,7 @@ Will the wreckage burn? How many peopke cate i How manit all go down? • catd o
 
 will be lauzhing as they watch
 
-## Learning is Change — 2026-01-14
+## Distraction isn't best. — 2026-01-14
 
 <https://learningischange.com/2026/01/14/distraction-isnt-best/> · OCR (vision)
 
@@ -208,7 +208,7 @@ Bht feeling great is pretty elusive. It requires so much work that it hardly see
 
 So, good better best it is. Good is distraction when I need it. Better is writing and making for myself and others. Best is sitting or walking with my thoughts, #* reaching out to othors and feeling what I can, unburdened by the weight of the past or the future. That is the best. I hope I can visit there again sOor
 
-## Learning is Change — 2026-01-13
+## Father Mother Sister Brother — 2026-01-13
 
 <https://learningischange.com/2026/01/13/father-mother-sister-brother/> · OCR (vision)
 
@@ -226,7 +226,7 @@ Oh, and "bob/s your uncle" wha shared across all of the tatories. Babause #ub he
 
 I en a father. A son. & brother. & partnor. Sonotinos I play these roles well. Somotines not. Soos I will bo none of those. And both my lies and truths will tell my story.
 
-## Learning is Change — 2026-01-12
+## A Karass Built for Two — 2026-01-12
 
 <https://learningischange.com/2026/01/12/a-karass-built-for-two/> · OCR (vision)
 
@@ -240,7 +240,7 @@ Whemerer you ask me who my parents were, I think the simplest and most correct a
 
 undervear in the ###****#*** dishwasheI. Get you a spouse who won't think twice about putting your
 
-## Learning is Change — 2026-01-08
+## Seeing the Real Numbers — 2026-01-08
 
 <https://learningischange.com/2026/01/08/seeing-the-real-numbers/> · OCR (vision)
 
@@ -264,7 +264,7 @@ all of the moments before I wanted to plan for saving and strategizing for what 
 
 were all of the moments when I saw 29500%. // No amount of truth could puncture my brain and make me see the real number. I had to see it for myself and know it to be true. I had to embrace the meaning before I could see the number..
 
-## Learning is Change — 2026-01-05
+## Your Favorite Band at 42 — 2026-01-05
 
 <https://learningischange.com/2026/01/05/your-favorite-band-at-42/> · OCR (vision)
 
