@@ -421,7 +421,8 @@ posts: Cresthill Middle School and the Academy of Discovery (Douglas
 County, from 2004; eighth-grade Language Arts); Edmodo (2010–11, 13th
 employee, first Online Community Manager); Denver Public Schools; Aurora
 Public Schools; the University of Colorado (School of Dental Medicine,
-2019); Minerva University (2022); the University of Denver (arrived
+2018–2019); Minerva University (from December 2019, first as Senior
+Operations Manager for Admissions); the University of Denver (arrived
 2001, from Ohio; Cleveland is home); Littleton and the Kensington Ridge
 HOA (2021 testimony for HB21-1310); "Totally Wired Teacher of 2007";
 ISTE poster-session co-chair (2015–16). Home: Kara; three sons, the
