@@ -12,7 +12,8 @@
 // commit of a regeneration; the GitHub Actions do the same.
 //
 // A "retired" page satisfies the check as long as its index.html still
-// exists (it becomes a redirect page — never deleted).
+// exists (it becomes a redirect page — never deleted), or, for a URL that
+// differs from a live page only in case, through /404.html (Decision 018).
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -85,7 +86,25 @@ if (SNAPSHOT) {
 const list = load();
 if (!list.urls.length) { console.error('No database/permalinks.json — run with --snapshot first.'); process.exit(2); }
 
-const missingUrls = list.urls.filter((u) => !fs.existsSync(urlToFile(u)));
+// Case-exact existence: GitHub Pages is case-sensitive, a macOS checkout is
+// not, so fs.existsSync alone would pass /category/Typewriter/ on a Mac and
+// fail it on the runner.
+const listings = new Map();
+function existsExact(file) {
+  const rel = path.relative(REPO_ROOT, file).split(path.sep);
+  let dir = REPO_ROOT;
+  for (const part of rel) {
+    if (!listings.has(dir)) { try { listings.set(dir, new Set(fs.readdirSync(dir))); } catch { listings.set(dir, new Set()); } }
+    if (!listings.get(dir).has(part)) return false;
+    dir = path.join(dir, part);
+  }
+  return true;
+}
+// A URL with capitals resolves through /404.html's case-fold redirect when its
+// lowercase form is a page (Decision 018).
+const caseFold = existsExact(path.join(REPO_ROOT, '404.html'));
+const resolves = (u) => existsExact(urlToFile(u)) || (caseFold && u !== u.toLowerCase() && existsExact(urlToFile(u.toLowerCase())));
+const missingUrls = list.urls.filter((u) => !resolves(u));
 const now = feedGuids();
 const missingGuids = [];
 // feed/index.xml is a rolling window (newest N), so its GUIDs are not retained —

@@ -55,9 +55,20 @@ for (const p of PAGES) {
   out.set(url, html); pages++;
 }
 
+// /404.html — GitHub Pages serves it for any miss. URLs are case-sensitive
+// there, but a checkout on macOS is not, so two paths differing only in case
+// (/category/Typewriter/ vs /category/typewriter/) cannot both live in the
+// tree (Decision 018). A missed URL with capitals is sent to its lowercase
+// form, which is how every archive path is rendered.
+{
+  const caseFold = `<script>(function(){var p=location.pathname,l=p.toLowerCase();if(l!==p)location.replace(l+location.search+location.hash);})();</script>`;
+  const content = `${caseFold}<p>I couldn't find a page at this address. The archive goes back to 2006, so try <a href="/search/">searching it</a>, browse <a href="/all-posts/">every post by year</a>, or start from <a href="/">the front page</a>.</p>`;
+  out.set('/404.html', renderStaticPage(T_PAGE, { title: 'Page not found', slug: 'not-found' }, { url: '/404.html', content, description: 'This page could not be found on Learning is Change.', noindex: true, shell: SHELL }));
+}
+
 let written = 0, unchanged = 0;
 for (const [u, html] of out) {
-  const f = path.join(REPO_ROOT, u.replace(/^\//, ''), 'index.html');
+  const f = path.join(REPO_ROOT, u.replace(/^\//, ''), u.endsWith('.html') ? '' : 'index.html');
   const prior = fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null;
   if (prior === html) { unchanged++; continue; }
   if (APPLY) { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, html); }

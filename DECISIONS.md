@@ -511,3 +511,30 @@ stay listed as broken references in the Media library.
 because the files are the actual content the posts and the podcast feed
 point to; every file is under 20 MB (well under the 100 MB per-file cap).
 `index-media.js` runs on every render so the Library reflects the change.
+
+---
+
+## Decision 018 — Case-variant URLs resolve through /404.html, not a second folder
+*Date: 2026-09-29 · Status: **APPROVED by Ben***
+
+**Context**: the old `/new/` tool created `/category/Typewriter/` (January
+2026); the renderer writes `/category/typewriter/`, the lowercase slug
+every other term uses. Both paths were tracked in git. On a Mac checkout
+(case-insensitive) they are one folder, so a local commit could only update
+one of them and the other went stale. The capitalized URL is in
+`database/permalinks.json`, so it cannot simply disappear.
+
+**Decision**: `category/typewriter/` is the only folder. `render-pages.js`
+emits `/404.html` (the page GitHub Pages serves for any miss), and its
+first script sends a URL containing capitals to its lowercase form.
+`check-permalinks.js` now checks existence case-exactly (so a Mac run can't
+pass what the Linux runner would fail) and counts a protected URL with
+capitals as resolved when its lowercase page exists and `/404.html` is
+present.
+
+**How to apply**: never add a tracked path that differs from another only
+in case; render lowercase slugs. A capitalized URL that shipped is covered
+by the 404 redirect with no stub. The redirect is client-side and the
+response is a 404 status, so search engines drop the capitalized URL; the
+lowercase page is the one in the sitemap. Tracked `.DS_Store` files were
+removed from the index at the same time (`.gitignore` already listed them).
