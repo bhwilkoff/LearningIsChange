@@ -213,6 +213,9 @@ function coverProtected() {
   let aliases = 0;
   for (const u of PROTECTED) {
     if (!isArchive(u) || pages.has(u)) continue;
+    // differs from a real page only in case: /404.html redirects it (Decision 018); a
+    // second folder would collide with the real one on a case-insensitive checkout
+    if (u !== u.toLowerCase() && pages.has(u.toLowerCase())) continue;
     // nearest real page: strip /page/N/ and walk down; /author/user/ -> bhwilkoff; /type/* -> videos
     let base = u.replace(/page\/\d+\/$/, '');
     if (base.startsWith('/author/')) base = '/author/bhwilkoff/';
@@ -263,6 +266,6 @@ for (const [u, html] of pages) {
   written++;
 }
 console.log(`${APPLY ? 'APPLIED' : 'DRY RUN'} — ${pages.size} listing pages (${Object.entries(counts).map(([k, v]) => `${k} ${v}`).join(', ')}; ${aliases} protected-URL aliases) — ${written} ${APPLY ? 'written' : 'would change'}, ${unchanged} unchanged`);
-const missing = [...PROTECTED].filter((u) => (/^\/page\/|^\/\d{4}\/|^\/(category|tag|author|type)\//.test(u)) && !pages.has(u) && !/^\/\d{4}\/\d{2}\/\d{2}\/[^/]+\/$/.test(u));
+const missing = [...PROTECTED].filter((u) => (/^\/page\/|^\/\d{4}\/|^\/(category|tag|author|type)\//.test(u)) && !pages.has(u) && !(u !== u.toLowerCase() && pages.has(u.toLowerCase())) && !/^\/\d{4}\/\d{2}\/\d{2}\/[^/]+\/$/.test(u));
 if (missing.length) { console.error(`MISSING ${missing.length} protected archive URLs:`); missing.slice(0, 20).forEach((u) => console.error('  ' + u)); process.exitCode = 1; }
 if (!APPLY) console.log('Run again with --apply to write files.');
