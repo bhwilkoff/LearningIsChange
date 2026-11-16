@@ -38,9 +38,9 @@ CONTACT = {
     "linkedin": "https://www.linkedin.com/in/bhwilkoff/",
     "github": "https://github.com/bhwilkoff",
     "bluesky": "https://bsky.app/profile/laserdiscleftist.bsky.social",
-    "note": ("Apps: Archive Watch, Tidbits Trivia, Bsky Dreams, Boba Playbook "
+    "note": ("Apps: Archive Watch, Ear Drama, Bsky Dreams, Tidbits Trivia, Boba Playbook "
              "- learningischange.com/portfolio/apps/ | "
-             "Universal App Template - github.com/bhwilkoff/UniversalAppTemplate"),
+             "Human Shaped - humanshaped.org"),
 }
 
 

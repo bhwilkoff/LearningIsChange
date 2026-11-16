@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Native Apps | Ben Wilkoff</title>
-  <meta name="description" content="The apps I build myself: Archive Watch, Tidbits Trivia, Bsky Dreams, and Boba Playbook, one shared core each, for phones, TVs, desktops, and the web.">
+  <meta name="description" content="The apps I build myself: Archive Watch, Ear Drama, Bsky Dreams, Tidbits Trivia, and Boba Playbook, one shared core each, for phones, TVs, desktops, and the web.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -50,8 +50,10 @@
           <span class="pbadge live">Desktop</span>
           <span class="pbadge live">Web</span>
         </div>
-        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch takes the Internet Archive's ~30,000 public-domain feature films, classic TV, silent cinema, animation, newsreels, and vintage commercials and gives them a proper streaming app: curated, ad-free, free, no account, no tracking, on every screen you own. I wanted these films to be as easy to watch as anything on Netflix. So, I built it.</p>
+        <p style="max-width: 680px;">A cinematheque for the public domain. Archive Watch takes the Internet Archive's public-domain feature films, classic TV, silent cinema, animation, newsreels, and vintage commercials and gives them a proper streaming app: curated, ad-free, free, no account, no tracking, on every screen you own. I wanted these films to be as easy to watch as anything on Netflix. So, I built it.</p>
         <p style="max-width: 680px;">This year I learned to build for the living room: the focus engine and big type of a TV interface, a streaming layer that survives flaky sources without stalling, and a Roku channel in BrightScript that had to run on a 2011 player. That last one meant measuring memory and decode cost instead of guessing. Along the way it gained deterministic <strong>Live Channels</strong> (a TV-guide grid that plays the same on every device), <strong>Watch Together</strong> over SharePlay, offline downloads, live on-device captions, and a <strong>Creation Studio</strong> on the Mac whose supercut engine searches every subtitle line in the archive and cuts the moments you name.</p>
+        <p style="max-width: 680px;">This fall the work has been about two things. The first is honesty about rights. A film being old is not the same as a film being free. So, the catalog now reads the Copyright Office's own renewal records, all the way back to the printed catalogs from before 1950, and hides any title with a claim a reader can open. 765 films came down in one pass, <em>The Killing</em> and <em>Yojimbo</em> among them. Anything else can be taken down on request, through a process that reads the file itself and keeps the name of whoever asked out of the public repository.</p>
+        <p style="max-width: 680px;">The second is watching together. <strong>Watch Together Studio</strong> turns an iPhone, a Mac, or an Android phone into a broadcast booth: the film, your camera, your microphone, and a lower third, going live to YouTube or Twitch straight from the device. No OBS. No server. A broadcast with no camera and no microphone is not watching together, so the host has to be in the show. Friends talk on whatever call they already use, and <strong>Watch Together rooms</strong> keep everyone on the same copy of the same film at the same second. And yes, it is ready for the iPhone Duo.</p>
         <p style="max-width: 680px;">It is the clearest example of how I build. One SQLite catalog published over HTTP. Sync through each ecosystem's own cloud rather than a server of mine. A <a href="https://archivewatch.org/vetting/">published rights audit</a> with real numbers, where every title that fails is hidden and counted rather than quietly kept. And a content pipeline that heals itself and runs entirely on scheduled GitHub Actions, so there is no backend to pay for.</p>
         <div class="app-links">
           <a href="https://apps.apple.com/us/app/archive-watch/id6776697407" class="app-link primary">App Store: iPhone, iPad, Apple&nbsp;TV &amp; Mac</a>
@@ -59,6 +61,47 @@
           <a href="https://www.amazon.com/gp/mas/dl/android?p=com.archivewatch.app" class="app-link">Amazon Appstore: Fire&nbsp;TV</a>
           <a href="https://channelstore.roku.com/details/12a571a872732e40fe8d1d6c59f3849f:5ec8f46dcec2324229c8d096ea23c089/archive-watch" class="app-link">Roku Channel Store</a>
           <a href="https://archivewatch.org/" class="app-link">archivewatch.org</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured: Bsky Dreams -->
+    <section class="section">
+      <div class="app-hero" style="background: linear-gradient(135deg, var(--color-coral-light) 0%, var(--color-surface) 100%);">
+        <span class="card-tag">Featured &middot; Social &middot; Live</span>
+        <h2 style="margin-bottom: var(--space-xs);">Bsky Dreams</h2>
+        <div class="platform-badges" style="margin-top: var(--space-md);">
+          <span class="pbadge live">Phone &amp; tablet</span>
+          <span class="pbadge live">iPhone Duo</span>
+          <span class="pbadge live">Web</span>
+        </div>
+        <p style="max-width: 680px;">I wanted a Bluesky client that made me a better reader instead of a faster scroller. Bsky Dreams is that client. Its Discover feed ranks for conversation instead of virality: replies count for more than likes, reposts count for less, and every post tells you why you are seeing it. It honors your own muted words and labelers. And there is no server in the middle. It talks to Bluesky directly and syncs through your own AT Protocol repo.</p>
+        <p style="max-width: 680px;">This month I rebuilt it for the iPhone Duo, Apple's folding iPhone. Open, it shows two of anything side by side: Search beside Home, Gallery beside Reader, a video beside its conversation, an article beside the folks discussing it. <strong>Stream</strong> became a screen saver you can step into: one post at a time in the largest type that fits, colored by its own pictures, and one tap from the conversation underneath it. The whole app moved to magazine typography, because personality should come from a few rules applied everywhere, not from decoration. That redesign went to App Review this week.</p>
+        <p style="max-width: 680px;">It also taught me a rule I now hold every app to. When Apple builds an interface for a new device, use theirs. I tried a custom navigation rail first, and it drew right over the content. So, I threw it out and rebuilt the shell on the system's own tab bar and sidebar, and the app moved into the Duo's vertical bar by itself.</p>
+        <div class="app-links">
+          <a href="https://apps.apple.com/us/app/bsky-dreams/id6760909675" class="app-link primary">App Store: iPhone, iPad &amp; iPhone&nbsp;Duo</a>
+          <a href="https://bskydreams.com" class="app-link">bskydreams.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured: Ear Drama -->
+    <section class="section">
+      <div class="app-hero" style="background: linear-gradient(135deg, var(--color-warm-light) 0%, var(--color-accent-light) 100%);">
+        <span class="card-tag">Featured &middot; Audio &middot; New</span>
+        <h2 style="margin-bottom: var(--space-xs);">Ear Drama</h2>
+        <div class="platform-badges" style="margin-top: var(--space-md);">
+          <span class="pbadge live">Web</span>
+          <span class="pbadge soon">Phone &amp; tablet</span>
+          <span class="pbadge soon">TV</span>
+          <span class="pbadge soon">Desktop</span>
+          <span class="pbadge soon">Android</span>
+        </div>
+        <p style="max-width: 680px;">Archive Watch's sister app, for your ears. Ear Drama is a free place to listen to old-time radio and radio drama from the Internet Archive: 6,794 series, with their dates, casts, networks, and sponsors, grouped by broadcast season the way folks first heard them. No ads, and no account needed to listen. I built the player for the two places people actually listen to radio drama, at bedtime and in the car. So, the sleep timer never starts the next episode, and volume leveling evens out recordings that are eighty years old.</p>
+        <p style="max-width: 680px;">The <strong>Radio</strong> tab is my favorite part. <strong>Tonight in 19xx</strong> takes today's date in the best-surviving year and rebuilds that evening's broadcast schedule from the newspaper listings of the day, with the gaps shown as gaps. And because radio was always something people made together, Ear Drama lets you record a play with friends, one person to a part, and listen back to the whole thing in order.</p>
+        <p style="max-width: 680px;">It never calls a recording public domain. Most old radio is unclaimed, not free, and those are different things. So, every episode can be taken down on request, and that page is part of the app. Ear Drama started as six days of research inside Archive Watch and moved into its own repository on October 22. It was the first app built from the Universal App Template after I wrote the method down, which made it the template's first real test. The web app is live now. The Apple, Android, and TV apps are built and running on my devices, and they go to the stores once I have heard every one of them work.</p>
+        <div class="app-links">
+          <a href="https://eardrama.org" class="app-link primary">eardrama.org</a>
         </div>
       </div>
     </section>
@@ -91,32 +134,11 @@
     <section class="section">
       <div class="section-header">
         <div class="accent-line"></div>
-        <h2>The App Portfolio</h2>
+        <h2>More Apps</h2>
         <p class="lead">Each app starts from something I actually needed, and ships native wherever it lives: SwiftUI on Apple devices, Jetpack Compose on Android, a zero-dependency PWA on the web, and the native toolkit of each TV and desktop it reaches.</p>
       </div>
 
       <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-
-        <!-- Bsky Dreams -->
-        <div class="app-card card-accent fade-up">
-          <span class="card-tag">Social &middot; Live</span>
-          <h3>Bsky Dreams</h3>
-          <div class="platform-badges">
-            <span class="pbadge live">Phone &amp; tablet</span>
-            <span class="pbadge live">Web</span>
-          </div>
-          <p class="app-oneliner">A custom Bluesky client built for learning and connection over passive scrolling.</p>
-          <ul class="app-features">
-            <li>Force-directed Network Constellation for topic discovery</li>
-            <li>Depth-colored conversation threading &amp; hybrid multi-source feeds</li>
-            <li>Cross-device sync through your own AT Protocol repo, no server</li>
-            <li>Zero-dependency: raw XRPC, Swift 6 / SwiftUI, vanilla JS on the web</li>
-          </ul>
-          <div class="app-links">
-            <a href="https://apps.apple.com/us/app/bsky-dreams/id6760909675" class="app-link primary">App Store</a>
-            <a href="https://bskydreams.com" class="app-link">bskydreams.com</a>
-          </div>
-        </div>
 
         <!-- Boba Playbook -->
         <div class="app-card card-coral fade-up">
@@ -176,6 +198,15 @@
               <td><a href="https://archivewatch.org/">archivewatch.org</a></td>
             </tr>
             <tr>
+              <th scope="row">Ear Drama</th>
+              <td class="store-none">coming</td>
+              <td class="store-none">coming</td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td class="store-none">&mdash;</td>
+              <td><a href="https://eardrama.org">eardrama.org</a></td>
+            </tr>
+            <tr>
               <th scope="row">Tidbits Trivia</th>
               <td><a href="https://apps.apple.com/us/app/tidbits-trivia/id6782202277">iPhone, iPad, Apple&nbsp;TV, Mac</a></td>
               <td><a href="https://play.google.com/store/apps/details?id=com.tidbitstrivia.app">Android</a></td>
@@ -221,9 +252,11 @@
           <span class="card-tag">Open Source &middot; Claude Code&ndash;aware</span>
           <h3>The App Template</h3>
           <p>One template, one method: a shared core with native shells for phones, tablets, desktops, TVs, and the web, from one repository. It carries everything the live apps taught me: the parity matrix, per-platform design docs, the data contract, per-ecosystem sync, resilient streaming, the CI fleet, device harnesses that read the screen back with OCR, and store submission from the command line. All of it is vendored as skills, so a fresh clone already knows how to build this way.</p>
-          <p>It grew one screen at a time (Dual, Tri, Quad, Quint) and is now a single rolling <strong>Universal App Template</strong> that absorbs new findings from Archive Watch and Tidbits Trivia continuously instead of forking a next letter. The earlier generations stay published for anyone who wants a smaller starting point.</p>
+          <p>It grew one screen at a time (Dual, Tri, Quad, Quint) and is now a single rolling <strong>Universal App Template</strong> that absorbs what every app learns as it learns it, instead of forking a next letter. Ear Drama was the first app copied from it, and its first build night sent three fixes straight back. The earlier generations stay published for anyone who wants a smaller starting point.</p>
+          <p>It is also the textbook for <strong>Human Shaped</strong>, a free course I teach on building software with AI that leaves people more capable. The method is written so a learner and their agent can follow it together, one stage at a time. <a href="/portfolio/projects/">More on the Projects page</a>.</p>
           <div class="app-links">
             <a href="https://github.com/bhwilkoff/UniversalAppTemplate" class="app-link primary">Universal App Template</a>
+            <a href="https://humanshaped.org" class="app-link">humanshaped.org</a>
             <a href="https://github.com/bhwilkoff/QuintAppTemplate" class="app-link">Quint</a>
             <a href="https://github.com/bhwilkoff/QuadAppTemplate" class="app-link">Quad</a>
             <a href="https://github.com/bhwilkoff/TriAppTemplate" class="app-link">Tri</a>
@@ -249,7 +282,7 @@
         <div class="feature-banner-text">
           <span class="card-tag">The through line</span>
           <h3>Twenty years of teaching, and now apps</h3>
-          <p>Every app I build carries the same belief as the classroom, the blog, and the district work: technology should serve people and help them understand more. Archive Watch keeps a century of film available and hands you the tools to make with it. Tidbits makes every answer a lesson and gives any bar or classroom a free trivia night. Bsky Dreams is for connection instead of scrolling. I am building different things than I was in 2007, but for the same reasons.</p>
+          <p>Every app I build carries the same belief as the classroom, the blog, and the district work: technology should serve people and help them understand more. Archive Watch keeps a century of film available and hands you the tools to make with it. Ear Drama does the same for radio, and asks you to make some of your own. Tidbits makes every answer a lesson and gives any bar or classroom a free trivia night. Bsky Dreams is for conversation instead of scrolling. I am building different things than I was in 2007, but for the same reasons.</p>
           <a href="/portfolio/about/" class="btn btn-primary mt-md">More about me</a>
         </div>
       </div>

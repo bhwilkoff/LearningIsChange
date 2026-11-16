@@ -141,7 +141,7 @@
       <img class="face" src="/meet/ben.jpg" alt="Ben Wilkoff" width="96" height="96">
       <h1>Ben Wilkoff</h1>
       <div class="role">Educator &middot; Builder &middot; Writer</div>
-      <p class="pitch">Twenty years in education, and now I design and ship native apps by myself: phones, TVs, desktops, and the web from one shared core, with no servers to run. Good to meet you.</p>
+      <p class="pitch">Twenty years in education. Now I design and ship native apps by myself, for every screen you own, and I teach folks to build human-shaped software with AI. Good to meet you.</p>
       <div class="cta-row">
         <a href="/meet/ben-wilkoff.vcf" class="btn btn-primary" id="save-contact" download="Ben Wilkoff.vcf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
@@ -202,12 +202,13 @@
       <p class="device-note" id="device-note">Buttons pick the right store for the phone you're holding. <a href="/portfolio/apps/">Every platform &rarr;</a></p>
     </section>
 
-    <!-- Template -->
+    <!-- Human Shaped -->
     <section class="tile tile-template" aria-labelledby="tpl-h">
-      <h2 id="tpl-h"><span class="card-tag" style="background:var(--color-warm-light);color:#9a7a1e;">Open source</span> Universal App Template</h2>
-      <p>How I ship one app to phones, tablets, TVs, desktops, and the web from a single repo without it turning into five apps: a shared core, native shells, a parity matrix, per-ecosystem sync, device harnesses, and store submission from the command line. It is all vendored as Claude Code skills, so a fresh clone already knows the method.</p>
+      <h2 id="tpl-h"><span class="card-tag" style="background:var(--color-warm-light);color:#9a7a1e;">Teaching</span> Human Shaped</h2>
+      <p>A free course, and an open-source method, for building software with AI that leaves people more capable instead of more passive. Every learner builds one real app for people they can name. The cohorts meet in a Google Meet add-on I built to turn the call into a classroom, and the method is the Universal App Template, written where your agent will read it.</p>
       <div class="app-links">
-        <a href="https://github.com/bhwilkoff/UniversalAppTemplate" class="app-link primary">github.com/bhwilkoff/UniversalAppTemplate</a>
+        <a href="https://humanshaped.org" class="app-link primary">humanshaped.org</a>
+        <a href="https://github.com/bhwilkoff/UniversalAppTemplate" class="app-link">Universal App Template</a>
         <a href="/portfolio/apps/#how-i-build" class="app-link">How I build</a>
       </div>
     </section>
@@ -216,7 +217,8 @@
     <section class="tile tile-about" aria-labelledby="about-h">
       <h2 id="about-h">Me, in thirty seconds</h2>
       <ul class="facts">
-        <li><span><strong>Now:</strong> Associate Director of Admissions Operations at Minerva University, and an independent developer with four native apps (Archive Watch, Tidbits Trivia, Bsky Dreams, and Boba Playbook) on Apple, Android, Windows, Roku, and the web.</span></li>
+        <li><span><strong>Now:</strong> Associate Director of Admissions Operations at Minerva University, and an independent developer with five native apps (Archive Watch, Ear Drama, Bsky Dreams, Tidbits Trivia, and Boba Playbook) on Apple, Android, Windows, Roku, and the web. And I teach Human Shaped, a free course on building with AI.</span></li>
+        <li><span><strong>Lately:</strong> I led social media for Yes on 4A, the $10 million mill levy override for Littleton Public Schools. It passed.</span></li>
         <li><span><strong>Before:</strong> Twenty years in education: middle school English teacher, district blended-learning and VR/AR lead, edtech consultant, and writer of 3,600+ posts at <em>Learning is Change</em> since 2005.</span></li>
         <li><span><strong>How I build:</strong> Native everywhere, no third-party frameworks, no servers, no paid tiers. Sync rides each ecosystem's own cloud, data ships as static files, and everything deploys through free GitHub Actions, including the store submissions.</span></li>
       </ul>
@@ -269,14 +271,16 @@
       var deviceLabel = { ios: 'iPhone & iPad', android: 'Android', mac: 'Mac', windows: 'Windows', web: 'Web' }[device];
 
       var apps = [
-        { name: 'Archive Watch', what: 'A cinematheque for the public domain: ~30,000 films and shows, ad-free, on every screen.',
+        { name: 'Archive Watch', what: 'A cinematheque for the public domain: tens of thousands of rights-checked films and shows, ad-free, on every screen. Watch together, live.',
           ios: 'https://apps.apple.com/us/app/archive-watch/id6776697407', mac: 'https://apps.apple.com/us/app/archive-watch/id6776697407',
           android: 'https://play.google.com/store/apps/details?id=com.archivewatch.app', web: 'https://archivewatch.org/',
           also: [['Fire TV', 'https://www.amazon.com/gp/mas/dl/android?p=com.archivewatch.app'], ['Roku', 'https://channelstore.roku.com/details/12a571a872732e40fe8d1d6c59f3849f:5ec8f46dcec2324229c8d096ea23c089/archive-watch']] },
+        { name: 'Ear Drama', what: 'Old-time radio and radio drama, rebuilt for bedtime and the car. Record a play with friends. Native apps on the way.',
+          web: 'https://eardrama.org', also: [] },
         { name: 'Tidbits Trivia', what: 'Wikipedia as fact-checked trivia; host a free pub-quiz night from a Mac or PC.',
           ios: 'https://apps.apple.com/us/app/tidbits-trivia/id6782202277', mac: 'https://apps.apple.com/us/app/tidbits-trivia/id6782202277',
           android: 'https://play.google.com/store/apps/details?id=com.tidbitstrivia.app', windows: 'https://apps.microsoft.com/detail/9NRKS9LDRCWC', web: 'https://tidbitstrivia.com', also: [] },
-        { name: 'Bsky Dreams', what: 'A Bluesky client built for connection instead of scrolling. Syncs through your own AT Protocol repo.',
+        { name: 'Bsky Dreams', what: 'A Bluesky client built for conversation instead of scrolling. Made for the iPhone Duo, too.',
           ios: 'https://apps.apple.com/us/app/bsky-dreams/id6760909675', web: 'https://bskydreams.com', also: [] },
         { name: 'Boba Playbook', what: 'Companion for the Bo Jackson Battle Arena card game: 31,000+ cards, on-device scanning.',
           android: 'https://play.google.com/store/apps/details?id=com.bobaplaybook.app', web: 'https://bobaplaybook.com',
