@@ -1,6 +1,6 @@
 # Learning is Change
 
-> Ben Wilkoff's blog since 2005: education, technology, and change, 3,600+ posts, plus the native apps he designs and ships himself.
+> Ben Wilkoff's blog since 2005: education, technology, and change, 1,300+ essays, plus the native apps he designs and ships himself.
 
 Every post has a Markdown twin at the same URL plus `index.md`
 (e.g. https://learningischange.com/2024/07/21/on-not-reading-the-news/index.md).
