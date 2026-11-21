@@ -23,7 +23,7 @@ Structured data: BlogPosting on every post, CollectionPage on archives, Person/W
 
 ## Apps and work
 
-- [Native apps](https://learningischange.com/portfolio/apps/): Archive Watch, Tidbits Trivia, Bsky Dreams, Boba Playbook
+- [Native apps](https://learningischange.com/portfolio/apps/): Archive Watch, Ear Drama, Tidbits Trivia, Bsky Dreams (Boba Playbook retired November 2026; post mortem: https://github.com/bhwilkoff/BOBA-Playbook/blob/main/POSTMORTEM.md)
 - [Universal App Template](https://github.com/bhwilkoff/UniversalAppTemplate): one shared core, native shells for phones, TVs, desktops, web
 - [Career](https://learningischange.com/portfolio/career/) · [Projects](https://learningischange.com/portfolio/projects/) · [Writing elsewhere](https://learningischange.com/portfolio/writing/)
 - [Contact card](https://learningischange.com/meet/) · [App support](https://learningischange.com/support.html)
