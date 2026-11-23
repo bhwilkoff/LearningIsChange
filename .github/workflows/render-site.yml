@@ -51,6 +51,9 @@ jobs:
       - name: Validate database (schema gate, Decision 015)
         run: node scripts/validate-database.js
 
+      - name: An unreadable page is not read again every day
+        run: node scripts/test-ocr-retry.js
+
       - name: Render
         run: |
           set -euo pipefail

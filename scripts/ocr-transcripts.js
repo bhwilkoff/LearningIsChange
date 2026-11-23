@@ -14,6 +14,13 @@
 // |'edited', transcript_at }. A transcript someone edited ('edited') is never
 // touched. The renderer shows it under the image, feeds it to descriptions,
 // JSON-LD, the Markdown twin and the search index.
+//
+// A read that fails or finds no words is recorded on the post as
+// { ocr_attempt: { at, tries, reason, engine } } and waits 1, 7, then 30 days
+// before it is tried again; after 4 tries it is given up on and listed, never
+// read again every day (owner 2026-11-23: "fix the re-scan of the exact same
+// failures. We should never build something that does that."). --force, or
+// another engine (Vision locally after tesseract failed), tries it once more.
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
@@ -29,6 +36,13 @@ let ENGINE = (args.find((a) => a.startsWith('--engine=')) || '--engine=auto').sl
 if (ENGINE === 'auto') ENGINE = os.platform() === 'darwin' && spawnSync('xcrun', ['--find', 'swift']).status === 0 ? 'vision' : 'tesseract';
 
 // ---- candidates -------------------------------------------------------------
+const WAIT_DAYS = [1, 7, 30];
+const MAX_TRIES = WAIT_DAYS.length + 1;
+const waiting = (a, now = Date.now()) => {
+  if (!a || FORCE || a.engine !== ENGINE) return false;
+  return a.tries >= MAX_TRIES || now - Date.parse(a.at) < WAIT_DAYS[Math.min(a.tries, WAIT_DAYS.length) - 1] * 86400000;
+};
+const givenUp = [];
 const shards = fs.readdirSync(path.join(ROOT, 'database/posts')).filter((n) => /^\d{4}\.json$/.test(n)).sort();
 const cands = [];
 for (const f of shards) {
@@ -40,12 +54,14 @@ for (const f of shards) {
     if (!imgs.length || plainText(p.content).length >= 40) return;
     if (p.transcript_source === 'edited') return;
     if (p.transcript && !FORCE) return;
+    if (waiting(p.ocr_attempt)) { if (p.ocr_attempt.tries >= MAX_TRIES) givenUp.push(p.url); return; }
     // prefer the largest variant when the img carries a srcset
     const files = imgs.map((u) => { try { return decodeURIComponent(u); } catch { return u; } }).map((u) => u.replace(/-\d+w(\.\w+)$/, '$1')).map((u) => path.join(ROOT, u.slice(1))).filter((fp) => fs.existsSync(fp));
     if (files.length) cands.push({ file: f, index: i, url: p.url, title: p.title, files, data });
   });
 }
 if (COUNT) { console.log(cands.length); process.exit(0); }
+if (givenUp.length) console.log(`Given up after ${MAX_TRIES} tries (--force or another engine to retry): ${givenUp.join(' ')}`);
 if (!cands.length) { console.log('No image-only posts without a transcript.'); process.exit(0); }
 console.log(`${cands.length} post(s) to transcribe with ${ENGINE}`);
 
@@ -90,15 +106,24 @@ function paragraphs(lines) {
 
 // ---- run ----------------------------------------------------------------------
 const touched = new Map();
+const attempt = (c, reason) => {
+  if (!APPLY) return;
+  const p = c.data.posts[c.index];
+  const prev = p.ocr_attempt && p.ocr_attempt.engine === ENGINE ? p.ocr_attempt.tries : 0;
+  p.ocr_attempt = { at: new Date().toISOString(), tries: prev + 1, reason: String(reason).slice(0, 200), engine: ENGINE };
+  touched.set(c.file, c.data);
+};
 for (const c of cands) {
   let results;
-  try { results = ENGINE === 'vision' ? vision(c.files) : tesseract(c.files); } catch (e) { console.error(`  ✗ ${c.url}: ${e.message}`); continue; }
+  try { results = ENGINE === 'vision' ? vision(c.files) : tesseract(c.files); } catch (e) { console.error(`  ✗ ${c.url}: ${e.message}`); attempt(c, e.message); continue; }
   const text = results.map((r) => paragraphs(r.lines)).filter(Boolean).join('\n\n');
+  if (!text) { console.error(`  ✗ ${c.url}: no words read`); attempt(c, 'no words read'); continue; }
   const conf = results.reduce((n, r) => n + (r.confidence || 0), 0) / (results.length || 1);
   console.log(`  ${c.url}  (${c.files.length} image${c.files.length > 1 ? 's' : ''}, ${text.split(/\s+/).filter(Boolean).length} words${conf ? `, confidence ${conf.toFixed(2)}` : ''})`);
   if (!APPLY) { console.log('    ' + text.slice(0, 300).replace(/\n/g, '\n    ') + (text.length > 300 ? '…' : '')); continue; }
   const p = c.data.posts[c.index];
   p.transcript = text; p.transcript_source = ENGINE; p.transcript_at = new Date().toISOString();
+  delete p.ocr_attempt;
   touched.set(c.file, c.data);
 }
 for (const [f, data] of touched) fs.writeFileSync(path.join(ROOT, 'database/posts', f), JSON.stringify(data, null, 2) + '\n');
